@@ -27,8 +27,14 @@ public class UserPage extends BasePage {
     @FindBy(xpath = "//input[@id='InviteUserModal_roles']")
     private WebElement inviteRoles;
 
-//    @FindBy(xpath = "")
+    @FindBy(xpath = "//input[@id='InviteUserModal_employmentId']")
+    private WebElement inviteRolesEmployment;
+
+//    @FindBy(xpath = "//input[@id='InviteUserModal_employmentId']")
 //    private WebElement inviteRolesSearch;
+
+    @FindBy(xpath = "//input[@id='InviteUserModal_employmentId']")
+    private WebElement inviteRoleEmploment;
 
     @FindBy(xpath = "//input[@id='user_email']")
     private WebElement imputEmail;
@@ -114,7 +120,7 @@ public class UserPage extends BasePage {
         return this;
     }
 
-    public UserPage inviteRoles() {
+    public UserPage inviteRolesClick() {
         inviteRoles.click();
         return this;
     }
@@ -148,15 +154,46 @@ public class UserPage extends BasePage {
         return this;
     }
 
-    public UserPage roleEmploment() {
-        imputRolesEmploment.sendKeys("Kir");
+    public UserPage inviteRolesEmploymentClick() {
+        inviteRolesEmployment.click();
         return this;
     }
 
-    public UserPage roleEmplomentClick() {
-        imputRolesEmploment.sendKeys(Keys.ENTER);
+    public UserPage inviteRolesEmploymentArron() {
+        inviteRolesEmployment.sendKeys(Keys.ARROW_DOWN);
         return this;
     }
+
+    public UserPage inviteRolesEmploymentEnter() {
+        inviteRolesEmployment.sendKeys(Keys.ENTER);
+        return this;
+    }
+
+    public UserPage inviteRolesEmploymentAdd() {
+        inviteRoleEmploment.click();
+        return this;
+    }
+
+    public UserPage inviteRoleEmploment() {
+        inviteRoleEmploment.sendKeys("Kir");
+        return this;
+    }
+
+    public UserPage inviteRoleEmplomentClick() {
+        inviteRoleEmploment.sendKeys(Keys.ENTER);
+        return this;
+    }
+
+    public UserPage roleEmploment() {
+            imputRolesEmploment.sendKeys("Kir");
+            return this;
+    }
+
+    public UserPage roleEmplomentClick() {
+            imputRolesEmploment.sendKeys(Keys.ENTER);
+            return this;
+    }
+
     public UserPage userPassword(String password) {
        imputPassword.sendKeys(password);
        return this;
