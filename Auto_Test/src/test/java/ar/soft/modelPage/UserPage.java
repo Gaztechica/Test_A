@@ -51,6 +51,12 @@ public class UserPage extends BasePage {
     @FindBy(xpath = "//input[@id='user_employmentName']")
     private WebElement imputRolesEmploment;
 
+    @FindBy(xpath = "//input[@id='user_employmentId']")
+    private WebElement imputRolesEmplomentClick;
+
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")
+    private WebElement buttonDeleteClick;
+
     public final static String USER_NAME = "123EvgenTest";
 
     public final static String USER_EMAIL = "yevgen@mail.ru";
@@ -149,6 +155,11 @@ public class UserPage extends BasePage {
         return this;
     }
 
+    public UserPage createRoleEmplomentEnter() {
+        imputRolesEmploment.sendKeys(Keys.ENTER);
+        return this;
+    }
+
     public UserPage createRoleEmploment() {
         imputRolesEmploment.click();
         return this;
@@ -161,6 +172,16 @@ public class UserPage extends BasePage {
 
     public UserPage inviteRolesEmploymentArron() {
         inviteRolesEmployment.sendKeys(Keys.ARROW_DOWN);
+        return this;
+    }
+
+    public UserPage imputRolesEmplomentClick() {
+        imputRolesEmplomentClick.click();
+        return this;
+    }
+
+    public UserPage imputRolesEmplomentEnter() {
+        imputRolesEmplomentClick.sendKeys(Keys.ENTER);
         return this;
     }
 
@@ -205,7 +226,7 @@ public class UserPage extends BasePage {
     }
 
     public UserPage buttonDeleteClick() {
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")).click();
+        buttonDeleteClick.click();
         return this;
     }
 
