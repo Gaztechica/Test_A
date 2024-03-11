@@ -15,16 +15,15 @@ import java.time.Duration;
 //@Liisteners({FilterForTests.class})
 public abstract class BaseTest {
 
-<<<<<<< HEAD
 
-=======
+
     public static final String URL = "http:";
     public static final String INPUT_PASSWORD = "//input[@class='ant-input']";
     public static final String INPUT_EMAIL = "//input[@class='ant-input primaryInput  not-entered']";
     public static final String BTN_PASSWORD = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']";
     public static final String EMAIL = "@mail.ru";
     public static final String PASSWORD = "5";
->>>>>>> origin/main
+
 
     //    public static final String DESCRIPTION = "Test description";
 
