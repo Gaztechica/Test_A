@@ -5,8 +5,6 @@ import ar.soft.runner.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class UserTest extends BaseTest {
 
@@ -16,7 +14,7 @@ public class UserTest extends BaseTest {
 
     //     редактирование/удаление
     @Test
-    public void userTestAdmin() throws InterruptedException {
+    public void userCreateAdmin() throws InterruptedException {
 
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
@@ -30,7 +28,7 @@ public class UserTest extends BaseTest {
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("FamilyTest")
-                .userEmail("yevgeniy.gor.91@mail.ru")
+                .userEmail(UserPage.USER_EMAIL)
                 .userEmailClick()
                 .userTimezoneClick()
                 .userTime("UTC + 00:00")
@@ -45,7 +43,7 @@ public class UserTest extends BaseTest {
     }
 
     @Test
-    public void UserTestInspektor() throws InterruptedException {
+    public void userCreateInspektor() throws InterruptedException {
 
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
@@ -59,7 +57,7 @@ public class UserTest extends BaseTest {
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("FamilyTest")
-                .userEmail("yevgeniy.gor.91@mail.ru")
+                .userEmail(UserPage.USER_EMAIL)
                 .userEmailClick()
                 .userTimezoneClick()
                 .userTime("UTC + 00:00")
@@ -79,7 +77,7 @@ public class UserTest extends BaseTest {
     }
 
     @Test
-    public void UserTestPodraydchic() throws InterruptedException {
+    public void userCreatePodraydchic() throws InterruptedException {
 
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
@@ -93,7 +91,7 @@ public class UserTest extends BaseTest {
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("FamilyTest")
-                .userEmail("yevgeniy.gor.91@mail.ru")
+                .userEmail(UserPage.USER_EMAIL)
                 .userEmailClick()
                 .userTimezoneClick()
                 .userTime("UTC + 00:00")
@@ -110,7 +108,7 @@ public class UserTest extends BaseTest {
     }
 
     @Test
-    public void UserTestNabludately() throws InterruptedException {
+    public void userCreateNabludately() throws InterruptedException {
 
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
@@ -124,7 +122,7 @@ public class UserTest extends BaseTest {
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("FamilyTest")
-                .userEmail("yevgeniy.gor.91@mail.ru")
+                .userEmail(UserPage.USER_EMAIL)
                 .userEmailClick()
                 .userTimezoneClick()
                 .userTime("UTC + 00:00")
@@ -142,7 +140,7 @@ public class UserTest extends BaseTest {
     }
 
     @Test
-    public void UserTestPodraydchiAdd() throws InterruptedException {
+    public void userCreatePodraydchiAdd() throws InterruptedException {
 
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
@@ -156,7 +154,7 @@ public class UserTest extends BaseTest {
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("FamilyTest")
-                .userEmail("yevgeniy.gor.91@mail.ru")
+                .userEmail(UserPage.USER_EMAIL)
                 .userEmailClick()
                 .userTimezoneClick()
                 .userTime("UTC + 00:00")
@@ -178,7 +176,7 @@ public class UserTest extends BaseTest {
     }
 
     @Test
-    public void UserTestNabludatelyAdd() throws InterruptedException {
+    public void userCreateNabludatelyAdd() throws InterruptedException {
 
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
@@ -192,7 +190,7 @@ public class UserTest extends BaseTest {
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("FamilyTest")
-                .userEmail("yevgeniy.gor.91@mail.ru")
+                .userEmail(UserPage.USER_EMAIL)
                 .userEmailClick()
                 .userTimezoneClick()
                 .userTime("UTC + 00:00")
@@ -227,7 +225,7 @@ public class UserTest extends BaseTest {
     }
 
     @Test
-    public void UserRemove() throws InterruptedException {
+    public void userCreateRemove() throws InterruptedException {
 
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
@@ -241,7 +239,7 @@ public class UserTest extends BaseTest {
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("FamilyTest")
-                .userEmail("yevgeniy.gor.91@mail.ru")
+                .userEmail(UserPage.USER_EMAIL)
                 .userEmailClick()
                 .userTimezoneClick()
                 .userTime("UTC + 00:00")
@@ -274,7 +272,7 @@ public class UserTest extends BaseTest {
     }
 
     @Test
-    public void UserDelete() throws InterruptedException {
+    public void userCreateDelete() throws InterruptedException {
 
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
@@ -298,9 +296,8 @@ public class UserTest extends BaseTest {
         driver.quit();
     }
 
-    //        не работает сортировка по организациям нет кнопок отменить/пригласить
     @Test
-    public void UserCreateAdmin() throws InterruptedException {
+    public void userCreateAdminSearch() throws InterruptedException {
 
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
@@ -309,28 +306,13 @@ public class UserTest extends BaseTest {
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
         Thread.sleep(9000);
 
-        new UserPage(driver)
-                .createUser()
-                .createUserClick()
-                .userName(UserPage.USER_NAME)
-                .userLastName("FamilyTest")
-                .userEmail("yevgeniy.gor.91@mail.ru")
-                .userEmailClick()
-                .createRoleClick()
-                .userRoles();
-
-        driver.quit();
-    }
-
-    @Test
-    public void UserCreateAdminSearch() throws InterruptedException {
-
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+//        new UserPage(driver)
+//                .createUser()
+//                .inviteUserClick()
+//                .inviteUserEmail(UserPage.USER_NAME)
+//                .inviteRoles()
+//                .inviteRolesEnter()
+//                .buttonDeleteClick();
 
         driver.findElement(By.xpath("//a[@href='/users']")).click();
 
@@ -357,8 +339,30 @@ public class UserTest extends BaseTest {
 //        driver.quit();
     }
 
+    //        не работает сортировка по организациям нет кнопок отменить/пригласить
     @Test
-    public void UserCreateInspektor() throws InterruptedException {
+    public void userInviteAdmin() throws InterruptedException {
+
+        driver.get(URL);
+        driver.manage().window().setSize(new Dimension(1820,1080));
+        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
+        driver.findElement(By.xpath(BTN_PASSWORD)).click();
+        Thread.sleep(9000);
+
+        new UserPage(driver)
+                .createUser()
+                .inviteUserClick()
+                .inviteUserEmail(UserPage.USER_NAME)
+                .inviteRoles()
+                .inviteRolesEnter()
+                .buttonDeleteClick();
+
+        driver.quit();
+    }
+
+    @Test
+    public void userInviteInspektor() throws InterruptedException {
 
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
@@ -372,7 +376,7 @@ public class UserTest extends BaseTest {
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("FamilyTest")
-                .userEmail("yevgeniy.gor.91@mail.ru")
+                .userEmail(UserPage.USER_EMAIL)
                 .userEmailClick()
                 .createRoleClick()
                 .userRolesArron()
@@ -393,7 +397,7 @@ public class UserTest extends BaseTest {
     }
 
     @Test
-    public void UserCreatePodraydchic() throws InterruptedException {
+    public void userInvitePodraydchic() throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
         driver.get(URL);
@@ -424,7 +428,7 @@ public class UserTest extends BaseTest {
     }
 
     @Test
-    public void UserCreateNabludately() throws InterruptedException {
+    public void userInviteNabludately() throws InterruptedException {
 
         WebDriver driver = new ChromeDriver();
         driver.get(URL);
@@ -453,6 +457,10 @@ public class UserTest extends BaseTest {
 //        Thread.sleep(2000);
 //        driver.quit();
     }
+
+
+
+
 
     @Test
     public void UserCreatePodraydchicAdd() throws InterruptedException {
