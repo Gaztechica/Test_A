@@ -302,7 +302,6 @@ public class UserTest extends BaseTest {
     @Test
     public void UserCreateAdmin() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
@@ -310,15 +309,25 @@ public class UserTest extends BaseTest {
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
         Thread.sleep(9000);
 
-        driver.findElement(By.xpath("//a[@href='/users']")).click();
+        new UserPage(driver)
+                .createUser()
+                .createUserClick()
+                .userName(UserPage.USER_NAME)
+                .userLastName("FamilyTest")
+                .userEmail("yevgeniy.gor.91@mail.ru")
+                .userEmailClick()
+                .createRoleClick()
+                .userRoles();
 
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '] ")).click();
-
-        driver.findElement(By.xpath("//input[@id='InviteUserModal_email']")).sendKeys("yevgeniy.gor.91@mail.ru");
-
-        WebElement userRoles = driver.findElement(By.xpath("//input[@id='InviteUserModal_roles']"));
-        userRoles.click();
-        userRoles.sendKeys(Keys.ENTER);
+//        driver.findElement(By.xpath("//a[@href='/users']")).click();
+//
+//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '] ")).click();
+//
+//        driver.findElement(By.xpath("//input[@id='InviteUserModal_email']")).sendKeys("yevgeniy.gor.91@mail.ru");
+//
+//        WebElement userRoles = driver.findElement(By.xpath("//input[@id='InviteUserModal_roles']"));
+//        userRoles.click();
+//        userRoles.sendKeys(Keys.ENTER);
 
 //        Thread.sleep(2000);
         driver.quit();
