@@ -9,8 +9,26 @@ import org.openqa.selenium.support.FindBy;
 
 public class UserPage extends BasePage {
 
+    @FindBy(xpath = "//a[@href='/users']")
+    private WebElement createUser;
+
     @FindBy(xpath = "//input[@id='user_name']")
     private WebElement imputName;
+
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")
+    private WebElement createUserClick;
+
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
+    private WebElement inviteUserClick;
+
+    @FindBy(xpath = "//input[@id='InviteUserModal_email']")
+    private WebElement inviteUserEmail;
+
+    @FindBy(xpath = "//input[@id='InviteUserModal_roles']")
+    private WebElement inviteRoles;
+
+//    @FindBy(xpath = "")
+//    private WebElement inviteRolesSearch;
 
     @FindBy(xpath = "//input[@id='user_email']")
     private WebElement imputEmail;
@@ -29,7 +47,7 @@ public class UserPage extends BasePage {
 
     public final static String USER_NAME = "123EvgenTest";
 
-//    public final static String USER_LAST_NAME = "FamilyTest";
+    public final static String USER_EMAIL = "yevgen@mail.ru";
 
 
     public UserPage(WebDriver driver) {
@@ -37,12 +55,17 @@ public class UserPage extends BasePage {
     }
 
     public UserPage createUser() {
-        getDriver().findElement(By.xpath("//a[@href='/users']")).click();
+        createUser.click();
         return this;
     }
 
     public UserPage createUserClick() {
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")).click();
+       createUserClick.click();
+        return this;
+    }
+
+    public UserPage inviteUserClick() {
+        inviteUserClick.click();
         return this;
     }
 
@@ -57,7 +80,12 @@ public class UserPage extends BasePage {
     }
 
     public UserPage userEmail(String email) {
-        imputEmail.sendKeys(email);
+        imputEmail.sendKeys(USER_EMAIL);
+        return this;
+    }
+
+    public UserPage inviteUserEmail(String email) {
+        inviteUserEmail.sendKeys(USER_EMAIL);
         return this;
     }
 
@@ -86,6 +114,20 @@ public class UserPage extends BasePage {
         return this;
     }
 
+    public UserPage inviteRoles() {
+        inviteRoles.click();
+        return this;
+    }
+
+    public UserPage inviteRolesArron() {
+        inviteRoles.sendKeys(Keys.ARROW_DOWN);
+        return this;
+    }
+
+    public UserPage inviteRolesEnter() {
+        inviteRoles.sendKeys(Keys.ENTER);
+        return this;
+    }
     public UserPage userRolesArron() {
         userRoles.sendKeys(Keys.ARROW_DOWN);
         return this;
