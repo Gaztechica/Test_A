@@ -16,14 +16,17 @@ public class RegaTest extends BaseTest {
     WebDriver driver = new ChromeDriver();
     public static final String NEGA_EMAIL = "dfghjkluytr@mail.ru";
     private By getErrorText = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
-    private By getText = By.xpath("//input[@id='EditProjectForm_name'][@value='1Новый проект']");
+    private By getEmailText = By.xpath("//h2[@class='ant-typography h2_m RestorePassword__sendSuccess-text']");
+    private By newProgect = By.xpath("//input[@id='EditProjectForm_name']");
+
+//    private By newProgect = By.xpath("//input[@id='EditProjectForm_name'][@value='1Новый проект']");
 
     @BeforeMethod
     @AfterMethod
 
     //=============================== смена пароля ====================================
     @Test
-    public void PassworTest () throws InterruptedException {
+    public void passwordTest () throws InterruptedException {
 
         driver.get(URL);
         Thread.sleep(2000);
@@ -45,7 +48,7 @@ public class RegaTest extends BaseTest {
 
 //  рамдомные почтовые ящ создавать/удалять пользователей
     @Test
-    public void AutorisationTest () throws InterruptedException {
+    public void autorisationTest () throws InterruptedException {
 
         driver.get(URL);
         Thread.sleep(2000);
@@ -53,12 +56,15 @@ public class RegaTest extends BaseTest {
         Thread.sleep(1000);
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
+        Thread.sleep(2000);
 
+        String emailText = driver.findElement(getEmailText).getText();
+        Assert.assertEquals(emailText, "Мы отправили по адресу n-k-65@list.ru ссылку для восстановления доступа");
         driver.quit();
     }
 
     @Test
-    public void RandomAutorisationTest () throws InterruptedException {
+    public void randomAutorisationTest () throws InterruptedException {
 
         driver.get(URL);
         Thread.sleep(1000);
@@ -92,7 +98,7 @@ public class RegaTest extends BaseTest {
     }
 
     @Test
-    public void RegNegaTest() throws InterruptedException {
+    public void regNegaTest() throws InterruptedException {
 
         driver.get(URL);
         Thread.sleep(1000);
@@ -168,23 +174,18 @@ public class RegaTest extends BaseTest {
 //        WebElement textBoxAside = driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']"));
 //        textBoxAside.click();
 
-//        Thread.sleep(9000);
+        Thread.sleep(2000);
 
         WebElement textSection = driver.findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')]"));
         textSection.click();
 
-//        =========================== свернутый сайтбар ===============================
-
-//        WebElement textSectionInput = driver.findElement(By.xpath("//input[@value='1Новый проект']"));
-//        textSectionInput.click();
-//        Thread.sleep(4000);
-//        String getErr = driver.findElement(getText).getText();
-//
-//        Assert.assertEquals("1Новый проект", getErr);
+        Thread.sleep(2000);
+        String newProg = driver.findElement(newProgect).getText();
+        String text = driver.findElement(By.xpath("//input[@id='EditProjectForm_name'][@value='1Новый проект']")).getText();
+        Thread.sleep(5000);
+        Assert.assertEquals(newProg, text);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
-
-//      ======  добавить проверку проекта===
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
         driver.quit();
@@ -219,9 +220,9 @@ public class RegaTest extends BaseTest {
 //        WebElement elemPage = driver.findElement(By.xpath("//input[@class='ant-select-selection-search-input']"));
 
         WebElement elemPage = driver.findElement(By.xpath("//span[@class='ant-select-selection-item']"));
-
         elemPage.click();
         Thread.sleep(3000);
+
 //        elemPage.sendKeys(Keys.ARROW_DOWN);
         elemPage.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
         elemPage.sendKeys(Keys.ENTER);
