@@ -577,7 +577,7 @@ public class UserTest extends BaseTest {
         cearchR.sendKeys("Наблюдатель");
         Thread.sleep(1000);
 
-        new UserPage(driver)
+//        new UserPage(driver)
 
 //        buttonUserCreate.click();
 //        createEmail.sendKeys("yevgeniy.gor.91@mail.ru");
