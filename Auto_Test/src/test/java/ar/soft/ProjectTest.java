@@ -7,6 +7,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class ProjectTest extends BaseTest {
 
@@ -802,7 +803,6 @@ public class ProjectTest extends BaseTest {
     @Test
     public void ProjectTest() throws InterruptedException{
 
-        WebDriver driver = new ChromeDriver();
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
@@ -839,8 +839,12 @@ public class ProjectTest extends BaseTest {
 //        WebElement elemPage = driver.findElement(By.xpath("//input[@class='ant-select-selection-search-input']"));
 
         WebElement elemPage = driver.findElement(By.xpath("//span[@class='ant-select-selection-item']"));
-
         elemPage.click();
+
+//        Select simpl = new Select(selectWithoutMultiple);
+//        simpl.selectByValue("two");
+//        String newValue = selectWithoutMultiple.getAttribute("value");
+
         Thread.sleep(3000);
 //        elemPage.sendKeys(Keys.ARROW_DOWN);
         elemPage.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
