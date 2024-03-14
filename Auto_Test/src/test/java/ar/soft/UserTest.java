@@ -27,9 +27,9 @@ public class UserTest extends BaseTest {
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
-                .userName(UserPage.USER_NAME)
+                .userName("админ проекта")
                 .userLastName("FamilyTest")
-                .userEmail(UserPage.USER_EMAIL)
+                .userEmail("mikha-g@bk.ru")
                 .userEmailClick()
                 .userTimezoneClick()
                 .userTime("UTC + 00:00")
@@ -38,8 +38,8 @@ public class UserTest extends BaseTest {
                 .userRoles()
                 .userPassword("zxcvbnm123")
                 .userPasswordClick()
-                .buttonDeleteClick();
-
+                .buttonSave();
+        Thread.sleep(5000);
         driver.quit();
     }
 
@@ -68,7 +68,7 @@ public class UserTest extends BaseTest {
                 .userRoles()
                 .userPassword("zxcvbnm123")
                 .userPasswordClick()
-                .buttonDeleteClick();
+                .buttonSave();
 
 
 //        WebElement buttonPassword = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']"));
@@ -212,7 +212,7 @@ public class UserTest extends BaseTest {
                 .userRoles()
                 .userPassword("zxcvbnm123")
                 .userPasswordClick()
-                .buttonDeleteClick();
+                .buttonSave();
 
         driver.quit();
     }
@@ -401,7 +401,7 @@ public class UserTest extends BaseTest {
                 .inviteRolesEnter()
 
                 .inviteRolesEmploymentClick()
-                .inviteRoleEmploment()
+                .roleEmploment()
                 .inviteRolesEmploymentEnter()
                 .buttonDeleteClick();
 
@@ -433,7 +433,7 @@ public class UserTest extends BaseTest {
                 .inviteRolesArron()
                 .inviteRolesEnter()
                 .inviteRolesEmploymentClick()
-                .inviteRoleEmploment()
+                .roleEmploment()
                 .inviteRolesEmploymentEnter()
                 .buttonDeleteClick();
 
@@ -551,47 +551,31 @@ public class UserTest extends BaseTest {
         Thread.sleep(9000);
 
         new UserPage(driver)
-                .createUser();
+                .createUser()
+                .searchInputClick()
+                .searchClick()
+                .searchInputSent("леха")
+                .searchInputDelete()
+                .searchInputSent("игнат")
+                .searchInputDelete()
+                .searchInputSent("FASDAS")
+                .searchInputDelete()
+                .searchInputSent("Наблюдатель")
+                .searchInputDelete()
+                .searchInputSent("yevgeniy.gor.91@mail.ru")
+                .searchInputDelete()
+                .searchInputClick();
 
-        driver.findElement(By.xpath("//span[@class='ant-input-affix-wrapper searchBoxInput  not-entered']")).click();
 
-        WebElement cearch = driver.findElement(By.xpath("//div[@class='FilterUsers__search']"));
-        cearch.click();
-        Thread.sleep(1000);
 
-        driver.findElement(By.xpath("//input[@class='ant-input']")).sendKeys("леха");
-        Thread.sleep(1000);
-
-        WebElement cearchS = driver.findElement(By.xpath("//input[@class='ant-input']"));
-        cearchS.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);
-        cearchS.sendKeys("игнат");
-        Thread.sleep(1000);
-
-        WebElement cearchP = driver.findElement(By.xpath("//input[@class='ant-input']"));
-        cearchP.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);
-        cearchP.sendKeys("FASDAS");
-        Thread.sleep(1000);
-
-        WebElement cearchR = driver.findElement(By.xpath("//input[@class='ant-input']"));
-        cearchR.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);
-        cearchR.sendKeys("Наблюдатель");
-        Thread.sleep(1000);
-
-//        new UserPage(driver)
-
-//        buttonUserCreate.click();
-//        createEmail.sendKeys("yevgeniy.gor.91@mail.ru");
-//        WebElement createEmailn = driver.findElement(By.xpath("//span[@class='ant-input-affix-wrapper searchBoxInput  entered']"));
-//        buttonUserCreate.click();
 //
-//        buttonUserCreate.sendKeys("yevgeniy.gor.91@mail.ru");
-        WebElement createEmail = driver.findElement(By.xpath("//span[@class='ant-input-affix-wrapper searchBoxInput  not-entered']"));
-
-        createEmail.sendKeys("yevgeniy.gor.91@mail.ru");
-
-        WebElement userRoles = driver.findElement(By.xpath("//input[@id='InviteUserModal_roles']"));
-        userRoles.click();
-        userRoles.sendKeys(Keys.ENTER);
+//        WebElement createEmail = driver.findElement(By.xpath("//span[@class='ant-input-affix-wrapper searchBoxInput  not-entered']"));
+//
+//        createEmail.sendKeys("yevgeniy.gor.91@mail.ru");
+//
+//        WebElement userRoles = driver.findElement(By.xpath("//input[@id='InviteUserModal_roles']"));
+//        userRoles.click();
+//        userRoles.sendKeys(Keys.ENTER);
 
 //        не работает сортировка по организациям
 
@@ -602,13 +586,13 @@ public class UserTest extends BaseTest {
 //        WebElement userRoles = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'Все организации')]"));
 //        WebElement userRoles = driver.findElement(By.xpath("//*[@id=\"root\"]/section/main/div/div/div[1]/div[1]/div[1]/div/div/span[2]"));
 //        WebElement userRoles = driver.findElement(By.xpath("//span[@title='Все организации']"));
-        userRoles.click();
-        Thread.sleep(1000);
-        userRoles.sendKeys(Keys.ARROW_DOWN);
-        userRoles.sendKeys(Keys.ARROW_DOWN);
-        userRoles.sendKeys(Keys.ENTER);
-        userRoles.sendKeys(Keys.ARROW_DOWN);
-        userRoles.sendKeys(Keys.ENTER);
+//        userRoles.click();
+//        Thread.sleep(1000);
+//        userRoles.sendKeys(Keys.ARROW_DOWN);
+//        userRoles.sendKeys(Keys.ARROW_DOWN);
+//        userRoles.sendKeys(Keys.ENTER);
+//        userRoles.sendKeys(Keys.ARROW_DOWN);
+//        userRoles.sendKeys(Keys.ENTER);
 //        WebElement userRolesc = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'Все организации')]"));
 //        userRolesc.click();
 

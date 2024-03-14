@@ -30,11 +30,11 @@ public class UserPage extends BasePage {
     @FindBy(xpath = "//input[@id='InviteUserModal_employmentId']")
     private WebElement inviteRolesEmployment;
 
-//    @FindBy(xpath = "//input[@id='InviteUserModal_employmentId']")
-//    private WebElement inviteRolesSearch;
+    @FindBy(xpath = "//input[@id='user_last_name']")
+    private WebElement userLastName;
 
-    @FindBy(xpath = "//input[@id='InviteUserModal_employmentId']")
-    private WebElement inviteRoleEmploment;
+//    @FindBy(xpath = "//input[@id='InviteUserModal_employmentId']")
+//    private WebElement inviteRoleEmploment;
 
     @FindBy(xpath = "//input[@id='user_email']")
     private WebElement imputEmail;
@@ -56,6 +56,12 @@ public class UserPage extends BasePage {
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")
     private WebElement buttonDeleteClick;
+
+    @FindBy(xpath = "//input[@class='ant-input']")
+    private WebElement searchInput;
+
+    @FindBy(xpath = "//span[@class='ant-input-affix-wrapper searchBoxInput  not-entered']")
+    private WebElement searchInputClick;
 
     public final static String USER_NAME = "123EvgenTest";
 
@@ -87,7 +93,7 @@ public class UserPage extends BasePage {
     }
 
     public UserPage userLastName(String lastName) {
-        getDriver().findElement(By.xpath("//input[@id='user_last_name']")).sendKeys(lastName);
+        userLastName.sendKeys(lastName);
         return this;
     }
 
@@ -191,17 +197,17 @@ public class UserPage extends BasePage {
     }
 
     public UserPage inviteRolesEmploymentAdd() {
-        inviteRoleEmploment.click();
+        inviteRolesEmployment.click();
         return this;
     }
 
-    public UserPage inviteRoleEmploment() {
-        inviteRoleEmploment.sendKeys("Kir");
-        return this;
-    }
+//    public UserPage inviteRoleEmploment() {
+//        inviteRolesEmployment.sendKeys("Kir");
+//        return this;
+//    }
 
     public UserPage inviteRoleEmplomentClick() {
-        inviteRoleEmploment.sendKeys(Keys.ENTER);
+        inviteRolesEmployment.sendKeys(Keys.ENTER);
         return this;
     }
 
@@ -230,6 +236,38 @@ public class UserPage extends BasePage {
         return this;
     }
 
+    public UserPage searchInputSent(String string) {
+        searchInput.sendKeys(string);
+        return this;
+    }
+
+    public UserPage search() {
+        searchInput.clear();
+        return this;
+    }
+
+    public UserPage searchInputEnter() {
+        searchInput.sendKeys(Keys.ENTER);
+        return this;
+    }
+
+
+
+    public UserPage searchInput() {
+        searchInput.click();
+        return this;
+    }
+
+    public UserPage searchInputClick() {
+        searchInputClick.click();
+        return this;
+    }
+
+    public UserPage searchClick() {
+        getDriver().findElement(By.xpath("//div[@class='FilterUsers__search']")).click();
+        return this;
+    }
+
     public UserPage buttonRemove() {
         getDriver().findElement(By.xpath("//img[@class='ant-dropdown-trigger ContentUsers__iconBlock-img']")).click();
         return this;
@@ -243,6 +281,12 @@ public class UserPage extends BasePage {
     public UserPage userNameClear() {
         imputName.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE,
         Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);
+        return this;
+    }
+
+    public UserPage searchInputDelete() {
+        searchInput.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE,
+                Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);
         return this;
     }
 
