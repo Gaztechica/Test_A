@@ -30,11 +30,13 @@ public class UserPage extends BasePage {
     @FindBy(xpath = "//input[@id='InviteUserModal_employmentId']")
     private WebElement inviteRolesEmployment;
 
+    @FindBy(xpath = "//input[@id='InviteUserModal_employmentName']")
+    private WebElement createRolesEmploment;
     @FindBy(xpath = "//input[@id='user_last_name']")
     private WebElement userLastName;
 
-//    @FindBy(xpath = "//input[@id='InviteUserModal_employmentId']")
-//    private WebElement inviteRoleEmploment;
+    @FindBy(xpath = "//img[@src='/static/media/AddButton.48ed616f99340e2467c9c2a6d8a8b67e.svg']")
+    private WebElement createRole;
 
     @FindBy(xpath = "//input[@id='user_email']")
     private WebElement imputEmail;
@@ -53,6 +55,7 @@ public class UserPage extends BasePage {
 
     @FindBy(xpath = "//input[@id='user_employmentId']")
     private WebElement imputRolesEmplomentClick;
+
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")
     private WebElement buttonDeleteClick;
@@ -157,7 +160,7 @@ public class UserPage extends BasePage {
     }
 
     public UserPage createRoleClick() {
-        getDriver().findElement(By.xpath("//img[@src='/static/media/AddButton.48ed616f99340e2467c9c2a6d8a8b67e.svg']")).click();
+        createRole.click();
         return this;
     }
 
@@ -171,10 +174,10 @@ public class UserPage extends BasePage {
         return this;
     }
 
-    public UserPage inviteRolesEmploymentClick() {
-        inviteRolesEmployment.click();
-        return this;
-    }
+//    public UserPage inviteRolesEmploymentClick() {
+//        inviteRolesEmployment.click();
+//        return this;
+//    }
 
     public UserPage inviteRolesEmploymentArron() {
         inviteRolesEmployment.sendKeys(Keys.ARROW_DOWN);
@@ -196,24 +199,34 @@ public class UserPage extends BasePage {
         return this;
     }
 
-    public UserPage inviteRolesEmploymentAdd() {
+    public UserPage inviteRolesEmploymentClick() {
         inviteRolesEmployment.click();
         return this;
     }
 
-//    public UserPage inviteRoleEmploment() {
-//        inviteRolesEmployment.sendKeys("Kir");
-//        return this;
-//    }
+    public UserPage createRolesEmplomentClick() {
+        createRolesEmploment.click();
+        return this;
+    }
 
-    public UserPage inviteRoleEmplomentClick() {
-        inviteRolesEmployment.sendKeys(Keys.ENTER);
+    public UserPage createRolesEmplomentSent() {
+        createRolesEmploment.sendKeys("Kir");
+        return this;
+    }
+
+    public UserPage inviteRoleEmplomentEnter() {
+        createRolesEmploment.sendKeys(Keys.ENTER);
         return this;
     }
 
     public UserPage roleEmploment() {
             imputRolesEmploment.sendKeys("Kir");
             return this;
+    }
+
+    public UserPage inviteRoleEmplomentArro() {
+        inviteRolesEmployment.sendKeys(Keys.ARROW_DOWN);
+        return this;
     }
 
     public UserPage roleEmplomentClick() {
