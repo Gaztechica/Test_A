@@ -5,7 +5,6 @@ import ar.soft.runner.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
 
 public class UserTest extends BaseTest {
 
@@ -289,6 +288,7 @@ public class UserTest extends BaseTest {
         driver.quit();
     }
 
+    //        не работает сортировка по организациям     смена страниц
     @Test
     public void userCreateAdminSearch() throws InterruptedException {
 
@@ -299,22 +299,25 @@ public class UserTest extends BaseTest {
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
         Thread.sleep(9000);
 
-//        new UserPage(driver)
-//                .createUser()
-//                .inviteUserClick()
-//                .inviteUserEmail(UserPage.USER_NAME)
-//                .inviteRoles()
-//                .inviteRolesEnter()
+        new UserPage(driver)
+                .createUser()
+                .inviteUserClick()
+                .inviteUserEmail(UserPage.USER_NAME)
+                .inviteRolesClick()
+                .inviteRolesEnter();
 //                .buttonDeleteClick();
 
-        driver.findElement(By.xpath("//a[@href='/users']")).click();
-
+//        driver.findElement(By.xpath("//a[@href='/users']")).click();
+//
         Thread.sleep(3000);
 //        не работает сортировка по организациям
-        WebElement userRolesx = driver.findElement(By.xpath("//span[@class='ant-select-selection-item']"));
 
-        userRolesx.click();
-        userRolesx.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+//        смена страниц
+//        WebElement userRolesx = driver.findElement(By.xpath("//span[@class='ant-select-selection-item']"));
+//        Thread.sleep(3000);
+//        userRolesx.click();
+//        Thread.sleep(3000);
+//        userRolesx.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
         WebElement userRoles = driver.findElement(By.xpath("//span[@title='Все организации']"));
         userRoles.click();
         Thread.sleep(3000);
@@ -401,7 +404,7 @@ public class UserTest extends BaseTest {
                 .inviteRolesEnter()
 
                 .inviteRolesEmploymentClick()
-                .roleEmploment()
+                .inviteRoleEmplomentArro()
                 .inviteRolesEmploymentEnter()
                 .buttonDeleteClick();
 
@@ -433,7 +436,7 @@ public class UserTest extends BaseTest {
                 .inviteRolesArron()
                 .inviteRolesEnter()
                 .inviteRolesEmploymentClick()
-                .roleEmploment()
+                .inviteRoleEmplomentArro()
                 .inviteRolesEmploymentEnter()
                 .buttonDeleteClick();
 
@@ -450,55 +453,19 @@ public class UserTest extends BaseTest {
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
         Thread.sleep(9000);
 
-//        new UserPage(driver)
-//                .createUser()
-//                .inviteUserClick()
-//                .inviteUserEmail(UserPage.USER_NAME)
-//                .inviteRolesClick()
-//        Thread.sleep(1000);
-//        new UserPage(driver)
-//                .inviteRolesArron()
-
-//        Thread.sleep(1000);
-//        new UserPage(driver)
-//                .inviteRolesArron()
-//                .inviteRolesEnter()
-//                .inviteRoleEmplomentClick()
-//                .createRoleEmploment()
-//                .roleEmploment()
-//                .roleEmplomentClick()
-//                .userRoles()
-//                .imputRolesEmplomentEnter()
-
-//                .inviteRolesEmploymentAdd();
-//                .buttonDeleteClick();
-
-
-//        WebElement createRole = driver.findElement(By.xpath("//input[@id='InviteUserModal_employmentId']"));
-//
-//        createRole.click();
-//        createRole.sendKeys("Kir", Keys.ENTER);
-
-
-        driver.findElement(By.xpath("//a[@href='/users']")).click();
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '] ")).click();
-
-        driver.findElement(By.xpath("//input[@id='InviteUserModal_email']")).sendKeys("yevgeniy.gor.91@mail.ru");
-
-        WebElement userRoles = driver.findElement(By.xpath("//input[@id='InviteUserModal_roles']"));
-        userRoles.click();
-        userRoles.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-
-        WebElement createRole = driver.findElement(By.xpath("//img[@src='/static/media/AddButton.48ed616f99340e2467c9c2a6d8a8b67e.svg']"));
-
-        createRole.click();
-
-        WebElement createRoles = driver.findElement(By.xpath("//input[@id='InviteUserModal_employmentName']"));
-
-        createRoles.click();
-        createRoles.sendKeys("Kir", Keys.ENTER);
         new UserPage(driver)
+                .createUser()
+                .inviteUserClick()
+                .inviteUserEmail(UserPage.USER_NAME)
+                .inviteRolesClick()
+                .inviteRolesArron()
+                .inviteRolesArron()
+                .inviteRolesEnter()
+                .inviteRolesEmploymentClick()
+                .createRoleClick()
+                .createRolesEmplomentClick()
+                .createRolesEmplomentSent()
+                .inviteRoleEmplomentEnter()
                 .buttonDeleteClick();
 
         driver.quit();
@@ -514,26 +481,20 @@ public class UserTest extends BaseTest {
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
         Thread.sleep(9000);
 
-        driver.findElement(By.xpath("//a[@href='/users']")).click();
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '] ")).click();
-
-        driver.findElement(By.xpath("//input[@id='InviteUserModal_email']")).sendKeys("yevgeniy.gor.91@mail.ru");
-
-        WebElement userRoles = driver.findElement(By.xpath("//input[@id='InviteUserModal_roles']"));
-        userRoles.click();
-        userRoles.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-
-        WebElement createRole = driver.findElement(By.xpath("//img[@src='/static/media/AddButton.48ed616f99340e2467c9c2a6d8a8b67e.svg']"));
-
-        createRole.click();
-
-        WebElement createRoles = driver.findElement(By.xpath("//input[@id='InviteUserModal_employmentName']"));
-
-        createRoles.click();
-        createRoles.sendKeys("Kir", Keys.ENTER);
-
         new UserPage(driver)
+                .createUser()
+                .inviteUserClick()
+                .inviteUserEmail(UserPage.USER_NAME)
+                .inviteRolesClick()
+                .inviteRolesArron()
+                .inviteRolesArron()
+                .inviteRolesArron()
+                .inviteRolesEnter()
+                .inviteRolesEmploymentClick()
+                .createRoleClick()
+                .createRolesEmplomentClick()
+                .createRolesEmplomentSent()
+                .inviteRoleEmplomentEnter()
                 .buttonDeleteClick();
 
         driver.quit();
