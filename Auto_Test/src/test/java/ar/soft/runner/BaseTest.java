@@ -4,6 +4,7 @@ package ar.soft.runner;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -23,7 +24,7 @@ public abstract class BaseTest {
     public static final String EMAIL = "n-k-65@list.ru";
     public static final String PASSWORD = "qwe135";
 
-    //    public static final String DESCRIPTION = "Test description";
+        public static final String DESCRIPTION = "Test description";
 
     private static WebDriver driver;
 
@@ -34,7 +35,7 @@ public abstract class BaseTest {
 
 private void startDriver() {
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//    driver.manage().timeouts().getPageLoadTimeout();
+    driver.manage().timeouts().getPageLoadTimeout();
 }
       static void login() {
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
@@ -42,18 +43,18 @@ private void startDriver() {
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
     }
 
-//    private void closeDriver() {
-//        if (driver != null) {
-//            driver.quit();
-//
-//            driver = null;
-//            wait2 = null;
-//            wait5 = null;
-//            wait10 = null;
-//
-//            ProjectUtils.log("Browser closed");
-//        }
-//    }
+    private void closeDriver() {
+        if (driver != null) {
+            driver.quit();
+
+            driver = null;
+            wait2 = null;
+            wait5 = null;
+            wait10 = null;
+
+            ProjectUtils.log("Browser closed");
+        }
+    }
 
 
     @BeforeMethod
