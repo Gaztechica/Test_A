@@ -26,11 +26,29 @@ public class LibraryPage extends BasePage {
     @FindBy(xpath = "//div[@class='createCategoryModal__buttonsPanel']//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
     private WebElement primaryButtonChecListCreateClick;
 
-//    @FindBy(xpath = "//a[@href='/library']")
-//    private WebElement ;
-//
-//    @FindBy(xpath = "//a[@href='/library']")
-//    private WebElement libraryClick;
+    @FindBy(xpath = "//button[@class='CreateChecklist__addCategoryButton']")
+    private WebElement buttonChecklistAddCategory;
+
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
+    private WebElement buttonChecklistAdd;
+
+    @FindBy(xpath = "//button[@class='CreateChecklist__addSubcategoryButton']")
+    private WebElement buttonChecklistSubcategory;
+
+    @FindBy(xpath = "//textarea[@class='ant-input primaryInput  not-entered']")
+    private WebElement inputChecklistSubcateName;
+
+    @FindBy(xpath = "//textarea[@class='ant-input primaryInput createCategoryModal__input not-entered']")
+    private WebElement inputChecklistCategorySubcateName;
+
+    @FindBy(xpath = "//div[@class='createCategoryModal__buttonsPanel']//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
+    private WebElement buttonChecklistCategory;
+
+    @FindBy(xpath = "//button[@class='CreateChecklist__categoryItemButton']")
+    private WebElement buttonChecklistCategoryDelete;
+
+    @FindBy(xpath = "//div[@class='DeleteModal__buttonsPanel']//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
+    private WebElement buttonChecklistCategoryDeleteClick;
 
     public final static String USER_NAME = "123EvgenTest";
 
@@ -96,45 +114,54 @@ public class LibraryPage extends BasePage {
         return this;
     }
 
-//    public LibraryPage () {
-//
-//        return this;
-//    }
-//
-//    public LibraryPage () {
-//
-//        return this;
-//    }
-//
-//    public LibraryPage () {
-//
-//        return this;
-//    }
+    public LibraryPage buttonChecklistAddCategory() {
+        buttonChecklistAddCategory.click();
+        return this;
+    }
 
-//    public LibraryPage () {
-//
-//        return this;
-//    }
-//
-//    public LibraryPage () {
-//
-//        return this;
-//    }
-//
-//    public LibraryPage () {
-//
-//        return this;
-//    }
-//
-//    public LibraryPage () {
-//
-//        return this;
-//    }
-//
-//    public LibraryPage () {
-//
-//        return this;
-//    }
+    public LibraryPage buttonChecklistAdd() {
+        buttonChecklistAdd.click();
+        return this;
+    }
 
+    public LibraryPage buttonChecklistSubcategory() {
+        buttonChecklistSubcategory.click();
+        return this;
+    }
+
+    public LibraryPage inputChecklistSubcateName() {
+        inputChecklistSubcateName.click();
+        return this;
+    }
+
+    public LibraryPage inputChecklistSubcateSent() {
+        inputChecklistSubcateName.sendKeys("ChecklistSubcateName");
+        return this;
+    }
+
+    public LibraryPage inputChecklistCategorySubcateNameSent() {
+        inputChecklistCategorySubcateName.sendKeys("ChecklistCategorySubcateName");
+        return this;
+    }
+
+    public LibraryPage inputChecklistCategorySubcateClick() {
+        inputChecklistCategorySubcateName.click();
+        return this;
+    }
+
+    public LibraryPage buttonChecklistCategory() {
+        buttonChecklistCategory.click();
+        return this;
+    }
+
+    public LibraryPage buttonChecklistCategoryDelete() {
+        buttonChecklistCategoryDelete.click();
+        return this;
+    }
+
+    public LibraryPage buttonChecklistCategoryDeleteClick() {
+        buttonChecklistCategoryDeleteClick.click();
+        return this;
+    }
 
 }
