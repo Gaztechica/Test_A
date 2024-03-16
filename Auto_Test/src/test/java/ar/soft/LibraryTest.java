@@ -22,7 +22,7 @@ public class LibraryTest extends BaseTest {
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
         Thread.sleep(9000);
 
-//        кнопка подкатегории
+//        кнопка подкатегории!!!
         new LibraryPage(driver)
                 .libraryClick()
                 .buttonChecListCreateClick()
