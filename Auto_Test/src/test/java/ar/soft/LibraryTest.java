@@ -1,15 +1,12 @@
 package ar.soft;
 
 import ar.soft.modelPage.LibraryPage;
-import ar.soft.modelPage.UserPage;
 import ar.soft.runner.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.FindBy;
 
 public class LibraryTest extends BaseTest {
 
@@ -23,10 +20,19 @@ public class LibraryTest extends BaseTest {
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(5000);
+        Thread.sleep(9000);
 
+//        кнопка подкатегории
         new LibraryPage(driver)
-                .libraryClick();
+                .libraryClick()
+                .buttonChecListCreateClick()
+                .inputChecListNameClick()
+                .inputChecListNameSent()
+                .inputChecListPrimaryClick()
+                .inputChecListPrimarySent()
+                .createCategoryChecList()
+                .createCategoryChecListSent()
+                .primaryButtonChecListCreateClick();
 
 //                .createUserClick()
 //                .userName("админ проекта")

@@ -5,6 +5,7 @@ import ar.soft.runner.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterMethod;
 
 public class UserTest extends BaseTest {
 
@@ -15,7 +16,8 @@ public class UserTest extends BaseTest {
     //     редактирование/удаление
     @Test
     public void userCreateAdmin() throws InterruptedException {
-
+//        new UserPage(driver)
+//                .URL();
         driver.get(URL);
         driver.manage().window().setSize(new Dimension(1820,1080));
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
@@ -472,6 +474,7 @@ public class UserTest extends BaseTest {
     }
 
     @Test
+
     public void UserCreateNabludatelyAdd() throws InterruptedException {
 
         driver.get(URL);
