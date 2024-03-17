@@ -50,6 +50,9 @@ public class LibraryPage extends BasePage {
     @FindBy(xpath = "//div[@class='DeleteModal__buttonsPanel']//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
     private WebElement buttonChecklistCategoryDeleteClick;
 
+    @FindBy(xpath = "//tr[@data-row-key='1025']//img[@src='/static/media/Elipsis.f20471af64bc8c8f7914cf572c37ee72.svg']")
+    private WebElement buttonChecklistRemove;
+
     public final static String USER_NAME = "123EvgenTest";
 
     public final static String USER_EMAIL = "yevgen@mail.ru";
@@ -161,6 +164,11 @@ public class LibraryPage extends BasePage {
 
     public LibraryPage buttonChecklistCategoryDeleteClick() {
         buttonChecklistCategoryDeleteClick.click();
+        return this;
+    }
+
+    public LibraryPage buttonChecklistRemove() {
+        buttonChecklistRemove.click();
         return this;
     }
 
