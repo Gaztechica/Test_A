@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" />
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,46 +55,46 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.LibraryTest.libraryChecListDelete.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListRemovt.executor": "Run",
-    "JUnit.LibraryTest.libraryClick.executor": "Run",
-    "JUnit.ProjectTest.ProjectTest.executor": "Run",
-    "JUnit.RegaTest.RegasTest.executor": "Run",
-    "JUnit.RegaTest.autorisationTest.executor": "Run",
-    "JUnit.RegaTest.regNegaTest.executor": "Run",
-    "JUnit.UserTest.UserCreateAdmin.executor": "Run",
-    "JUnit.UserTest.UserCreateNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.UserCreatePodraydchicAdd.executor": "Run",
-    "JUnit.UserTest.UserInviteAdmin.executor": "Run",
-    "JUnit.UserTest.UserRemove.executor": "Run",
-    "JUnit.UserTest.UserSearchTest.executor": "Run",
-    "JUnit.UserTest.UserTestInspektor.executor": "Run",
-    "JUnit.UserTest.UserTestNabludately.executor": "Run",
-    "JUnit.UserTest.UserTestNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.UserTestPodraydchic.executor": "Run",
-    "JUnit.UserTest.executor": "Run",
-    "JUnit.UserTest.userCreateAdmin.executor": "Run",
-    "JUnit.UserTest.userCreateAdminSearch.executor": "Run",
-    "JUnit.UserTest.userCreateInspektor.executor": "Run",
-    "JUnit.UserTest.userCreateNabludately.executor": "Run",
-    "JUnit.UserTest.userCreateNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.userCreatePodraydchiAdd.executor": "Run",
-    "JUnit.UserTest.userCreatePodraydchic.executor": "Run",
-    "JUnit.UserTest.userCreateRemove.executor": "Run",
-    "JUnit.UserTest.userInviteAdmin.executor": "Run",
-    "JUnit.UserTest.userInviteInspektor.executor": "Run",
-    "JUnit.UserTest.userInviteNabludately.executor": "Run",
-    "JUnit.UserTest.userInvitePodraydchic.executor": "Run",
-    "JUnit.UserTest.userTestAdmin.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main22",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.LibraryTest.libraryChecListDelete.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryChecListRemovt.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryClick.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.ProjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RegaTest.RegasTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RegaTest.autorisationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RegaTest.regNegaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserCreateAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserCreateNabludatelyAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserCreatePodraydchicAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserInviteAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserRemove.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserSearchTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserTestInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserTestNabludately.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserTestNabludatelyAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserTestPodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateAdminSearch.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateNabludately.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateNabludatelyAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreatePodraydchiAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreatePodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateRemove.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userInviteAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userInviteInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userInviteNabludately.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userInvitePodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userTestAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main22&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Test_Ar/Auto_Test&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
@@ -389,7 +391,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710703638665</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
+      <option name="closed" value="true" />
+      <created>1710703753927</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1710703753927</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
