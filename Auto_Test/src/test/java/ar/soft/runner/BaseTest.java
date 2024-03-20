@@ -24,7 +24,7 @@ public abstract class BaseTest {
     public static final String EMAIL = "n-k-65@list.ru";
     public static final String PASSWORD = "qwe135";
 
-        public static final String DESCRIPTION = "Test description";
+    public static final String DESCRIPTION = "Test description";
 
     private static WebDriver driver;
 
@@ -37,11 +37,11 @@ private void startDriver() {
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     driver.manage().timeouts().getPageLoadTimeout();
 }
-      static void login() {
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-    }
+//      static void login() {
+//        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+//        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
+//        driver.findElement(By.xpath(BTN_PASSWORD)).click();
+//    }
 
     private void closeDriver() {
         if (driver != null) {

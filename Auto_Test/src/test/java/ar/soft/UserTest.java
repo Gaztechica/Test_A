@@ -16,15 +16,8 @@ public class UserTest extends BaseTest {
     //     редактирование/удаление
     @Test
     public void userCreateAdmin() throws InterruptedException {
-//        new UserPage(driver)
-//                .URL();
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(5000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -47,13 +40,8 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreateInspektor() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -81,13 +69,8 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreatePodraydchic() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -114,13 +97,8 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreateNabludately() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -148,13 +126,8 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreatePodraydchiAdd() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -184,13 +157,8 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreateNabludatelyAdd() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -221,13 +189,8 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreateRemove() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -268,13 +231,8 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreateDelete() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser();
         Thread.sleep(1000);
@@ -294,13 +252,8 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreateAdminSearch() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -341,13 +294,8 @@ public class UserTest extends BaseTest {
     @Test
     public void userInviteAdmin() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -362,13 +310,8 @@ public class UserTest extends BaseTest {
     @Test
     public void userInviteInspektor() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -384,13 +327,8 @@ public class UserTest extends BaseTest {
     @Test
     public void userInvitePodraydchic() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -416,13 +354,8 @@ public class UserTest extends BaseTest {
     @Test
     public void userInviteNabludately() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -448,13 +381,8 @@ public class UserTest extends BaseTest {
     @Test
     public void UserCreatePodraydchicAdd() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -477,13 +405,8 @@ public class UserTest extends BaseTest {
 
     public void UserCreateNabludatelyAdd() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -507,13 +430,8 @@ public class UserTest extends BaseTest {
     @Test
     public void UserSearchTest() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new UserPage(driver)
+                .URL();
         new UserPage(driver)
                 .createUser()
                 .searchInputClick()

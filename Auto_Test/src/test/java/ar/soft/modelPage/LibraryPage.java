@@ -1,10 +1,11 @@
 package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+
+import static ar.soft.runner.BaseTest.*;
+import static ar.soft.runner.BaseTest.BTN_PASSWORD;
 
 public class LibraryPage extends BasePage {
 
@@ -172,4 +173,14 @@ public class LibraryPage extends BasePage {
         return this;
     }
 
+//    public LibraryPage URL() throws InterruptedException {
+//        getDriver().get(URL);
+//        Thread.sleep(2000);
+//        getDriver().manage().window().setSize(new Dimension(1820, 1080));
+//        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+//        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
+//        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
+//        Thread.sleep(11500);
+//        return this;
+//    }
 }
