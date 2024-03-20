@@ -46,12 +46,12 @@ public abstract class BasePage extends BaseModel {
 //        INPUT_PASSWORD.sendKeys(PASSWORD);
 //        BTN_PASSWORD.click();
         getDriver().get(URL);
-        Thread.sleep(1000);
+        Thread.sleep(2000);
         getDriver().manage().window().setSize(new Dimension(1820,1080));
         getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
         getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(5000);
+        Thread.sleep(9000);
         return this;
     }
 }

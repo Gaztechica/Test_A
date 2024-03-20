@@ -18,6 +18,8 @@ public class UserTest extends BaseTest {
     public void userCreateAdmin() throws InterruptedException {
         new UserPage(driver)
                 .URL();
+        Thread.sleep(1000);
+
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -333,16 +335,15 @@ public class UserTest extends BaseTest {
                 .createUser()
                 .inviteUserClick()
                 .inviteUserEmail(UserPage.USER_NAME)
-                .inviteRolesClick()
-//        Thread.sleep(2000);
-//        new UserPage(driver)
-                .inviteRolesArron()
+                .inviteRolesClick();
+        Thread.sleep(4000);
+        new UserPage(driver)
+                .inviteRolesArron();
 
-//        Thread.sleep(2000);
-//        new UserPage(driver)
+        Thread.sleep(2000);
+        new UserPage(driver)
                 .inviteRolesArron()
                 .inviteRolesEnter()
-
                 .inviteRolesEmploymentClick()
                 .inviteRoleEmplomentArro()
                 .inviteRolesEmploymentEnter()
