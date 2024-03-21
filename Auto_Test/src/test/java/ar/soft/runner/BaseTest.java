@@ -1,7 +1,9 @@
 package ar.soft.runner;
 
 //import arSoft.runner.FilterForTest.FilterForTests;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Wait;
@@ -10,6 +12,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import javax.security.auth.login.Configuration;
 import java.lang.reflect.Method;
 import java.time.Duration;
 
@@ -33,6 +36,13 @@ public abstract class BaseTest {
     private WebDriverWait wait5;
     private WebDriverWait wait10;
 
+    public void login() {
+        WebDriverManager.chromedriver().setup();
+        getDriver().get(URL);
+        getDriver().manage().window().setSize(new Dimension(1820,1080));
+
+//        Configuration.browserSize = "1920*1080";
+    }
 private void startDriver() {
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     driver.manage().timeouts().getPageLoadTimeout();
@@ -58,16 +68,24 @@ private void startDriver() {
 
 
     @BeforeMethod
-    protected void beforeMethod(Method method) {
-        driver = new ChromeDriver(ProjectUtils.chromeOptions);
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+    public void auto() {
+        login();
 
+
+//    protected void beforeMethod(Method method) {
+//        driver = new ChromeDriver(ProjectUtils.chromeOptions);
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//}
     }
 
     @AfterMethod
-    protected void afterMethod(Method method, ITestResult testResult) {
+
+    public void into() {
         driver.quit();
     }
+//    protected void afterMethod(Method method, ITestResult testResult) {
+//        driver.quit();
+//    }
 
 
     protected WebDriver getDriver() {

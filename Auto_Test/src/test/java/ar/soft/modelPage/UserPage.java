@@ -174,15 +174,7 @@ public class UserPage extends BasePage {
         return this;
     }
 
-//    public UserPage inviteRolesEmploymentClick() {
-//        inviteRolesEmployment.click();
-//        return this;
-//    }
 
-    public UserPage inviteRolesEmploymentArron() {
-        inviteRolesEmployment.sendKeys(Keys.ARROW_DOWN);
-        return this;
-    }
 
     public UserPage imputRolesEmplomentClick() {
         imputRolesEmplomentClick.click();
@@ -199,10 +191,10 @@ public class UserPage extends BasePage {
         return this;
     }
 
-    public UserPage inviteRolesEmploymentClick() {
-        inviteRolesEmployment.click();
-        return this;
-    }
+//    public UserPage inviteRolesEmploymentClick() {
+//        inviteRolesEmployment.click();
+//        return this;
+//    }
 
     public UserPage createRolesEmplomentClick() {
         createRolesEmploment.click();
@@ -317,4 +309,15 @@ public class UserPage extends BasePage {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
         return this;
     }
+
+        public UserPage inviteRolesEmploymentClick() {
+        inviteRolesEmployment.click();
+        return this;
+    }
+
+        public UserPage inviteRolesEmploymentArron() {
+            inviteRolesEmployment.sendKeys(Keys.ARROW_DOWN);
+            return this;
+        }
 }
+

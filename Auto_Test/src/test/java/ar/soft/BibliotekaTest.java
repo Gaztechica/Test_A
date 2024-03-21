@@ -19,7 +19,7 @@ public class BibliotekaTest extends BaseTest {
     // ================================== библиотека =====================================================
     @Test
     public void BibliotekaTest() throws InterruptedException {
-        Wait<WebDriver> wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+//        Wait<WebDriver> wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 
 
         driver.get(URL);
