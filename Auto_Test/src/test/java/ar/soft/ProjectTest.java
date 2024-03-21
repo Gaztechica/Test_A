@@ -1,5 +1,6 @@
 package ar.soft;
 
+import ar.soft.modelPage.HomePage;
 import ar.soft.modelPage.ProgectPage;
 import ar.soft.modelPage.UserPage;
 import ar.soft.runner.BaseTest;
@@ -22,16 +23,10 @@ public class ProjectTest extends BaseTest {
     @Test
     public void createProgect() throws InterruptedException {
 
-        driver.get(URL);
-        Thread.sleep(2000);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         new ProgectPage(driver)
-
                 .buttonCreateProgect();
 
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
@@ -91,6 +86,7 @@ public class ProjectTest extends BaseTest {
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
 
 //      ======  добавить проверку проекта===
+        Thread.sleep(1000);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
         driver.quit();
@@ -103,23 +99,18 @@ public class ProjectTest extends BaseTest {
     @Test
     public void projectTest() throws InterruptedException {
 
-        driver.get(URL);
-        Thread.sleep(2000);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
-
+        new ProgectPage(driver)
+                .URL();
 //=============================================================
 
-        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
 
-        driver.findElement(By.xpath("//button[@class='ant-pagination-item-link']/span[@aria-label='left']")).click();
-
-        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
-
-        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'1')]")).click();
+//        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
+//
+//        driver.findElement(By.xpath("//button[@class='ant-pagination-item-link']/span[@aria-label='left']")).click();
+//
+//        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
+//
+//        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'1')]")).click();
 
 //====================================================================================
 //        WebElement elemPage = driver.findElement(By.xpath("//input[@class='ant-select-selection-search-input']"));
@@ -194,13 +185,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void HrefPolitic() throws InterruptedException {
 
-        driver.get(URL);
-        Thread.sleep(2000);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
 
@@ -210,29 +196,19 @@ public class ProjectTest extends BaseTest {
     @Test
     public void HrefPoliticUser() throws InterruptedException {
 
-        driver.get(URL);
-        Thread.sleep(2000);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/user-agreement-armobail/']")).click();
 
-        driver.quit();
+//        driver.quit();
     }
 
     @Test
     public void hrefBot() throws InterruptedException {
 
-        driver.get(URL);
-        Thread.sleep(2000);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         driver.findElement(By.xpath("//a[@href='https://t.me/arsoft_support_bot']")).click();
 
@@ -240,13 +216,13 @@ public class ProjectTest extends BaseTest {
     }
     @Test
     public void RegNegaTest() throws InterruptedException {
-        WebDriver driver = new ChromeDriver();
+
         driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
+
+        Thread.sleep(2000);
+        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys("erty@ru.");
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        Thread.sleep(2000);
 
         String getError = driver.findElement(getErrorText).getText();
 
@@ -258,13 +234,8 @@ public class ProjectTest extends BaseTest {
     @Test
      public void RegasTest() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
 
@@ -315,9 +286,9 @@ public class ProjectTest extends BaseTest {
 
 //        =========================== свернутый сайтбар ===============================
 
-        WebElement textSectionInput = driver.findElement(By.xpath("//input[@value='1Новый проект']"));
-        textSectionInput.click();
-        Thread.sleep(4000);
+//        WebElement textSectionInput = driver.findElement(By.xpath("//input[@value='1Новый проект']"));
+//        textSectionInput.click();
+//        Thread.sleep(4000);
 //        String getErr = driver.findElement(getText).getText();
 
 //        Assert.assertEquals("1Новый проект", getErr);
@@ -337,13 +308,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void userTestAdmin() throws InterruptedException {
 
-        driver.get(URL);
-//        Thread.sleep(2000);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(5000);
+        new ProgectPage(driver)
+                .URL();
 
         new UserPage(driver)
                 .createUser()
@@ -360,9 +326,6 @@ public class ProjectTest extends BaseTest {
                 .userPassword("zxcvbnm123")
                 .userPasswordClick()
                 .buttonDeleteClick();
-
-        UserPage userPage1 = new UserPage(driver);
-        Assert.assertEquals(driver.findElement(By.xpath(UserPage.USER_NAME)).getText(), UserPage.USER_NAME);
 
 
         driver.findElement(By.xpath("//a[@href='/users']")).click();
@@ -391,7 +354,8 @@ public class ProjectTest extends BaseTest {
 
         buttonPasswordDel.click();
         WebElement buttonPassword = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']"));
-      buttonPasswordDel.click();
+        buttonPassword.click();
+        Assert.assertEquals(driver.findElement(By.xpath(UserPage.USER_NAME)).getText(), UserPage.USER_NAME);
 
         driver.quit();
     }
@@ -399,13 +363,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void UserTestInspektor() throws InterruptedException {
 
-        driver.get(URL);
-        Thread.sleep(2000);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         WebElement user = driver.findElement(By.xpath("//a[@href='/users']"));
 
@@ -455,13 +414,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void UserTestPodraydchic() throws InterruptedException {
 
-        driver.get(URL);
-        Thread.sleep(2000);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         driver.findElement(By.xpath("//a[@href='/users']")).click();
 
@@ -504,13 +458,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void UserTestNabludately() throws InterruptedException {
 
-        driver.get(URL);
-        Thread.sleep(2000);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(10000);
+        new ProgectPage(driver)
+                .URL();
 
         driver.findElement(By.xpath("//a[@href='/users']")).click();
 
@@ -582,13 +531,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void UserTestPodraydchiAdd() throws InterruptedException {
 
-        driver.get(URL);
-        Thread.sleep(2000);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         driver.findElement(By.xpath("//a[@href='/users']")).click();
 
@@ -634,13 +578,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void UserTestNabludatelyAdd() throws InterruptedException {
 
-        driver.get(URL);
-        Thread.sleep(2000);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         driver.findElement(By.xpath("//a[@href='/users']")).click();
 
@@ -689,13 +628,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void UserRemove() throws InterruptedException {
 
-        driver.get(URL);
-        Thread.sleep(2000);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         driver.findElement(By.xpath("//a[@href='/users']")).click();
 
@@ -777,12 +711,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void UserDelete() throws InterruptedException {
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(11000);
+        new ProgectPage(driver)
+                .URL();
 
         driver.findElement(By.xpath("//a[@href='/users']")).click();
 
@@ -805,12 +735,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void ProjectTest() throws InterruptedException{
 
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
 
 //=============================================================
@@ -914,13 +840,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void hrefPolitic() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         WebElement elemPage01 = driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"));
 
@@ -932,13 +853,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void hrefPoliticUser() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         WebElement elemPage02 = driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/user-agreement-armobail/']"));
 
@@ -950,18 +866,13 @@ public class ProjectTest extends BaseTest {
     @Test
     public void HrefBot() throws InterruptedException {
 
-        WebDriver driver = new ChromeDriver();
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+        new ProgectPage(driver)
+                .URL();
 
         WebElement elemPage03 = driver.findElement(By.xpath("//a[@href='https://t.me/arsoft_support_bot']"));
 
         elemPage03.click();
-//        Thread.sleep(2000);
+
         driver.quit();
     }
 
