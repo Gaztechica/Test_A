@@ -10,11 +10,17 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
+
 public class ProjectTest extends BaseTest {
 
     WebDriver driver = new ChromeDriver();
+    private By newProgectNameText = By.xpath("//input[@class='ant-input primaryInput  not-entered']");
     public static final String NEGA_EMAIL = "dfghjkluytr@mail.ru";
     private By getErrorText = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
+    private By getPoliticaText = By.xpath("//h1[@class='page-header-title clr']");
+    private By getPoliticaUserText = By.xpath("//span[@style='font-size: 19px;'][contains(.,'Предмет пользовательского соглашения')]");
+    private By getBotText = By.xpath("//span[@dir='auto']");
 
     // ============================== Проект создание/удаление ==================================
 
@@ -74,18 +80,14 @@ public class ProjectTest extends BaseTest {
         WebElement textSection = driver.findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')]"));
         textSection.click();
 
-//        =========================== свернутый сайтбар ===============================
 
-//        WebElement textSectionInput = driver.findElement(By.xpath("//input[@value='1Новый проект']"));
-//        textSectionInput.click();
-//        Thread.sleep(4000);
-//        String getErr = driver.findElement(getText).getText();
-//
-//        Assert.assertEquals("1Новый проект", getErr);
+        String newProgectName = driver.findElement(newProgectNameText).getText();
+
+        Assert.assertEquals("1Новый проект", newProgectName);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
 
-//      ======  добавить проверку проекта===
+
         Thread.sleep(1000);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
@@ -97,7 +99,7 @@ public class ProjectTest extends BaseTest {
 
     // нет изменения кол-ва строк на странице
     @Test
-    public void projectTest() throws InterruptedException {
+    public void poginacyaTest() throws InterruptedException {
 
         new ProgectPage(driver)
                 .URL();
@@ -189,7 +191,14 @@ public class ProjectTest extends BaseTest {
                 .URL();
 
         driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
+        Thread.sleep(2000);
 
+
+        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(newTab.get(1));
+        String getErr = driver.findElement(getPoliticaText).getText();
+
+        Assert.assertEquals("Политика обработки персональных данных", getErr);
         driver.quit();
     }
 
@@ -201,7 +210,13 @@ public class ProjectTest extends BaseTest {
 
         driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/user-agreement-armobail/']")).click();
 
-//        driver.quit();
+        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(newTab.get(1));
+
+        String getPoliticaUser = driver.findElement(getPoliticaUserText).getText();
+
+        Assert.assertEquals("Предмет пользовательского соглашения", getPoliticaUser);
+        driver.quit();
     }
 
     @Test
@@ -212,8 +227,15 @@ public class ProjectTest extends BaseTest {
 
         driver.findElement(By.xpath("//a[@href='https://t.me/arsoft_support_bot']")).click();
 
+        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(newTab.get(1));
+        String getBot = driver.findElement(getBotText).getText();
+
+        Assert.assertEquals("AR SOFT support", getBot);
         driver.quit();
     }
+
+//    =================================================
     @Test
     public void RegNegaTest() throws InterruptedException {
 
@@ -227,7 +249,7 @@ public class ProjectTest extends BaseTest {
         String getError = driver.findElement(getErrorText).getText();
 
         Assert.assertEquals(getError,"Неправильный логин или пароль");
-        driver.quit();
+//        driver.quit();
     }
 
     //      ======  добавить проверку проекта===
