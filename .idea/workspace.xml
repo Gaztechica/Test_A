@@ -7,6 +7,11 @@
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/base/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/base/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,10 +77,13 @@
     "JUnit.ProjectTest.HrefPoliticUser.executor": "Run",
     "JUnit.ProjectTest.ProjectTest.executor": "Run",
     "JUnit.ProjectTest.RegNegaTest.executor": "Run",
+    "JUnit.ProjectTest.RegasTest.executor": "Run",
     "JUnit.ProjectTest.UserTestPodraydchic.executor": "Run",
     "JUnit.ProjectTest.createProgect.executor": "Run",
     "JUnit.ProjectTest.executor": "Run",
     "JUnit.ProjectTest.hrefBot.executor": "Run",
+    "JUnit.ProjectTest.hrefPolitic.executor": "Run",
+    "JUnit.ProjectTest.poginacyaTest.executor": "Run",
     "JUnit.ProjectTest.projectTest.executor": "Run",
     "JUnit.ProjectTest.userTestAdmin.executor": "Run",
     "JUnit.RegaTest.RegasTest.executor": "Run",
@@ -107,7 +115,7 @@
     "JUnit.UserTest.userTestAdmin.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main6",
+    "git-widget-placeholder": "main8",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
@@ -133,22 +141,6 @@
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
       <option name="METHOD_NAME" value="HrefPolitic" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProjectTest.HrefPoliticUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="METHOD_NAME" value="HrefPoliticUser" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -186,7 +178,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProjectTest.hrefBot" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectTest.hrefPolitic" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -196,7 +188,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="METHOD_NAME" value="hrefBot" />
+      <option name="METHOD_NAME" value="hrefPolitic" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTest.poginacyaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
+      <option name="METHOD_NAME" value="poginacyaTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -205,10 +213,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.ProjectTest.RegasTest" />
-        <item itemvalue="JUnit.ProjectTest.createProgect" />
-        <item itemvalue="JUnit.ProjectTest.hrefBot" />
-        <item itemvalue="JUnit.ProjectTest.HrefPoliticUser" />
+        <item itemvalue="JUnit.ProjectTest.hrefPolitic" />
+        <item itemvalue="JUnit.ProjectTest.poginacyaTest" />
         <item itemvalue="JUnit.ProjectTest.HrefPolitic" />
+        <item itemvalue="JUnit.ProjectTest.createProgect" />
       </list>
     </recent_temporary>
   </component>

@@ -1,12 +1,15 @@
 package ar.soft.modelPage.base;
 
 import ar.soft.modelPage.UserPage;
+import org.junit.After;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.FindBy;
+
+import java.util.concurrent.TimeUnit;
 
 import static ar.soft.runner.BaseTest.*;
 
@@ -46,12 +49,17 @@ public abstract class BasePage extends BaseModel {
 //        INPUT_PASSWORD.sendKeys(PASSWORD);
 //        BTN_PASSWORD.click();
         getDriver().get(URL);
-        Thread.sleep(2000);
+        getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         getDriver().manage().window().setSize(new Dimension(1820,1080));
         getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
         getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+//        Thread.sleep(9000);
         return this;
+    }
+    @After
+    public void into() {
+        getDriver().quit();
     }
 }
