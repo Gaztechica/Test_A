@@ -15,7 +15,7 @@ import java.util.ArrayList;
 public class ProjectTest extends BaseTest {
 
     WebDriver driver = new ChromeDriver();
-    private By newProgectNameText = By.xpath("//input[@class='ant-input primaryInput  not-entered']");
+    private By newProgectNameText = By.xpath("//div[@class='Sidebar__project-name'][contains(.,'1Новый проект')]");
     public static final String NEGA_EMAIL = "dfghjkluytr@mail.ru";
     private By getErrorText = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
     private By getPoliticaText = By.xpath("//h1[@class='page-header-title clr']");
@@ -24,8 +24,6 @@ public class ProjectTest extends BaseTest {
 
     // ============================== Проект создание/удаление ==================================
 
-
-    //      ======  добавить проверку проекта===
     @Test
     public void createProgect() throws InterruptedException {
 
@@ -34,61 +32,39 @@ public class ProjectTest extends BaseTest {
 
         new ProgectPage(driver)
                 .buttonCreateProgect();
-
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_country']")).sendKeys("РФ");
-
         driver.findElement(By.xpath("//textarea[@id='CreateProjectForm_street']")).sendKeys("Победы");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_postalCode']")).sendKeys("444444");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_code']")).sendKeys("123");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_building']")).sendKeys("121");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_office']")).sendKeys("117");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_startDate']")).click();
 
         WebElement NewData = driver.findElement(By.xpath("//a[@class='ant-picker-today-btn']"));
-
-        Thread.sleep(2000);
         NewData.click();
 
         WebElement EndData = driver.findElement(By.xpath("//input[@id='CreateProjectForm_endDate']"));
-
-//        Thread.sleep(1000);
         EndData.sendKeys("26-03-2024");
-//        Thread.sleep(1000);
         EndData.sendKeys(Keys.ENTER);
+
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
 
-        Thread.sleep(2000);
-
         driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
-        Thread.sleep(2000);
 
 //       кнопка отмены
 //        WebElement textBoxAside = driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']"));
 //        textBoxAside.click();
 
-//        Thread.sleep(9000);
-
         WebElement textSection = driver.findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')]"));
         textSection.click();
-
 
         String newProgectName = driver.findElement(newProgectNameText).getText();
 
         Assert.assertEquals("1Новый проект", newProgectName);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
-
-
-        Thread.sleep(1000);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
         driver.quit();
@@ -105,14 +81,10 @@ public class ProjectTest extends BaseTest {
                 .URL();
 //=============================================================
 
-
-//        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
-//
-//        driver.findElement(By.xpath("//button[@class='ant-pagination-item-link']/span[@aria-label='left']")).click();
-//
-//        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
-//
-//        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'1')]")).click();
+        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
+        driver.findElement(By.xpath("//button[@class='ant-pagination-item-link']/span[@aria-label='left']")).click();
+        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
+        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'1')]")).click();
 
 //====================================================================================
 //        WebElement elemPage = driver.findElement(By.xpath("//input[@class='ant-select-selection-search-input']"));
@@ -185,14 +157,12 @@ public class ProjectTest extends BaseTest {
     // ================================== ссылки =====================================================
 
     @Test
-    public void HrefPolitic() throws InterruptedException {
+    public void hrefPolitic() throws InterruptedException {
 
         new ProgectPage(driver)
                 .URL();
 
         driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
-        Thread.sleep(2000);
-
 
         ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(newTab.get(1));
@@ -203,7 +173,7 @@ public class ProjectTest extends BaseTest {
     }
 
     @Test
-    public void HrefPoliticUser() throws InterruptedException {
+    public void hrefPoliticUser() throws InterruptedException {
 
         new ProgectPage(driver)
                 .URL();
@@ -237,90 +207,58 @@ public class ProjectTest extends BaseTest {
 
 //    =================================================
     @Test
-    public void RegNegaTest() throws InterruptedException {
+    public void regNegaTest() throws InterruptedException {
 
         driver.get(URL);
 
         Thread.sleep(2000);
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys("erty@ru.");
+        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
         Thread.sleep(2000);
 
         String getError = driver.findElement(getErrorText).getText();
 
         Assert.assertEquals(getError,"Неправильный логин или пароль");
-//        driver.quit();
+        driver.quit();
     }
 
     //      ======  добавить проверку проекта===
     @Test
-     public void RegasTest() throws InterruptedException {
+     public void cancelRegaTest() throws InterruptedException {
 
         new ProgectPage(driver)
                 .URL();
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
-
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_country']")).sendKeys("РФ");
-
         driver.findElement(By.xpath("//textarea[@id='CreateProjectForm_street']")).sendKeys("Победы");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_postalCode']")).sendKeys("444444");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_code']")).sendKeys("123");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_building']")).sendKeys("121");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_office']")).sendKeys("117");
-
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_startDate']")).click();
 
         WebElement NewData = driver.findElement(By.xpath("//a[@class='ant-picker-today-btn']"));
 
-        Thread.sleep(2000);
         NewData.click();
 
         WebElement EndData = driver.findElement(By.xpath("//input[@id='CreateProjectForm_endDate']"));
 
-//        Thread.sleep(1000);
         EndData.sendKeys("26-03-2024");
-//        Thread.sleep(1000);
+
         EndData.sendKeys(Keys.ENTER);
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
 
-        Thread.sleep(2000);
 
-        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
-        Thread.sleep(2000);
+//        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
 
 //       кнопка отмены
         WebElement textBoxAside = driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']"));
         textBoxAside.click();
 
-        Thread.sleep(9000);
-
-        WebElement textSection = driver.findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')]"));
-        textSection.click();
-
-//        =========================== свернутый сайтбар ===============================
-
-//        WebElement textSectionInput = driver.findElement(By.xpath("//input[@value='1Новый проект']"));
-//        textSectionInput.click();
-//        Thread.sleep(4000);
-//        String getErr = driver.findElement(getText).getText();
-
-//        Assert.assertEquals("1Новый проект", getErr);
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
-
-//      ======  добавить проверку проекта===
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
-        driver.quit();
+//        driver.quit();
 
     }
 
@@ -857,45 +795,6 @@ public class ProjectTest extends BaseTest {
 //         Thread.sleep(5000);
     }
 
-    // ================================== ссылки =====================================================
 
-    @Test
-    public void hrefPolitic() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .URL();
-
-        WebElement elemPage01 = driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"));
-
-        elemPage01.click();
-//        Thread.sleep(2000);
-        driver.quit();
-    }
-
-    @Test
-    public void hrefPoliticUser() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .URL();
-
-        WebElement elemPage02 = driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/user-agreement-armobail/']"));
-
-        elemPage02.click();
-//        Thread.sleep(2000);
-        driver.quit();
-    }
-
-    @Test
-    public void HrefBot() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .URL();
-
-        WebElement elemPage03 = driver.findElement(By.xpath("//a[@href='https://t.me/arsoft_support_bot']"));
-
-        elemPage03.click();
-
-        driver.quit();
-    }
 
 }
