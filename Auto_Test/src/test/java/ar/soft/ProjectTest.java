@@ -16,9 +16,7 @@ public class ProjectTest extends BaseTest {
 
     WebDriver driver = new ChromeDriver();
     private By newProgectNameText = By.xpath("//div[@class='Sidebar__project-name'][contains(.,'1Новый проект')]");
-    public static final String NEGA_EMAIL = "dfghjkluytr@mail.ru";
-    private By getErrorText = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
-    private By getPoliticaText = By.xpath("//h1[@class='page-header-title clr']");
+       private By getPoliticaText = By.xpath("//h1[@class='page-header-title clr']");
     private By getPoliticaUserText = By.xpath("//span[@style='font-size: 19px;'][contains(.,'Предмет пользовательского соглашения')]");
     private By getBotText = By.xpath("//span[@dir='auto']");
 
@@ -68,6 +66,45 @@ public class ProjectTest extends BaseTest {
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
         driver.quit();
+
+    }
+
+    @Test
+    public void cancelProgectTest() throws InterruptedException {
+
+        new ProgectPage(driver)
+                .URL();
+
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
+        driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
+        driver.findElement(By.xpath("//input[@id='CreateProjectForm_country']")).sendKeys("РФ");
+        driver.findElement(By.xpath("//textarea[@id='CreateProjectForm_street']")).sendKeys("Победы");
+        driver.findElement(By.xpath("//input[@id='CreateProjectForm_postalCode']")).sendKeys("444444");
+        driver.findElement(By.xpath("//input[@id='CreateProjectForm_code']")).sendKeys("123");
+        driver.findElement(By.xpath("//input[@id='CreateProjectForm_building']")).sendKeys("121");
+        driver.findElement(By.xpath("//input[@id='CreateProjectForm_office']")).sendKeys("117");
+        driver.findElement(By.xpath("//input[@id='CreateProjectForm_startDate']")).click();
+
+        WebElement NewData = driver.findElement(By.xpath("//a[@class='ant-picker-today-btn']"));
+
+        NewData.click();
+
+        WebElement EndData = driver.findElement(By.xpath("//input[@id='CreateProjectForm_endDate']"));
+
+        EndData.sendKeys("26-03-2024");
+
+        EndData.sendKeys(Keys.ENTER);
+//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+
+
+//        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
+
+//       кнопка отмены
+        WebElement textBoxAside = driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']"));
+        textBoxAside.click();
+
+//        driver.quit();
 
     }
 
@@ -206,494 +243,16 @@ public class ProjectTest extends BaseTest {
     }
 
 //    =================================================
-    @Test
-    public void regNegaTest() throws InterruptedException {
-
-        driver.get(URL);
-
-        Thread.sleep(2000);
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(2000);
-
-        String getError = driver.findElement(getErrorText).getText();
-
-        Assert.assertEquals(getError,"Неправильный логин или пароль");
-        driver.quit();
-    }
-
-    //      ======  добавить проверку проекта===
-    @Test
-     public void cancelRegaTest() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .URL();
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
-        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
-        driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
-        driver.findElement(By.xpath("//input[@id='CreateProjectForm_country']")).sendKeys("РФ");
-        driver.findElement(By.xpath("//textarea[@id='CreateProjectForm_street']")).sendKeys("Победы");
-        driver.findElement(By.xpath("//input[@id='CreateProjectForm_postalCode']")).sendKeys("444444");
-        driver.findElement(By.xpath("//input[@id='CreateProjectForm_code']")).sendKeys("123");
-        driver.findElement(By.xpath("//input[@id='CreateProjectForm_building']")).sendKeys("121");
-        driver.findElement(By.xpath("//input[@id='CreateProjectForm_office']")).sendKeys("117");
-        driver.findElement(By.xpath("//input[@id='CreateProjectForm_startDate']")).click();
-
-        WebElement NewData = driver.findElement(By.xpath("//a[@class='ant-picker-today-btn']"));
-
-        NewData.click();
-
-        WebElement EndData = driver.findElement(By.xpath("//input[@id='CreateProjectForm_endDate']"));
-
-        EndData.sendKeys("26-03-2024");
-
-        EndData.sendKeys(Keys.ENTER);
-//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
-
-
-//        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
-
-//       кнопка отмены
-        WebElement textBoxAside = driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']"));
-        textBoxAside.click();
-
-//        driver.quit();
-
-    }
-
 
 
     //     редактирование/удаление
-    @Test
-    public void userTestAdmin() throws InterruptedException {
 
-        new ProgectPage(driver)
-                .URL();
-
-        new UserPage(driver)
-                .createUser()
-                .createUserClick()
-                .userName(UserPage.USER_NAME)
-                .userLastName("FamilyTest")
-                .userEmail("yevgeniy.gor.91@mail.ru")
-                .userEmailClick()
-                .userTimezoneClick()
-                .userTime("UTC + 00:00")
-                .userTimeEnter()
-                .userRolesClick()
-                .userRoles()
-                .userPassword("zxcvbnm123")
-                .userPasswordClick()
-                .buttonDeleteClick();
-
-
-        driver.findElement(By.xpath("//a[@href='/users']")).click();
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")).click();
-//        new UserPage(getDriver()).CreateUserClick();
-
-        driver.findElement(By.xpath("//input[@id='user_name']")).sendKeys("123EvgenTest");
-
-        driver.findElement(By.xpath("//input[@id='user_last_name']")).sendKeys("FamilyTest");
-
-        driver.findElement(By.xpath("//input[@id='user_email']")).sendKeys("yevgeniy.gor.91@mail.ru");
-
-        WebElement userTimezone = driver.findElement(By.xpath("//input[@id='user_timezone']"));
-        userTimezone.click();
-
-        userTimezone.sendKeys("UTC + 00:00", Keys.ENTER);
-
-        WebElement pagiBoxi = driver.findElement(By.xpath("//input[@id='user_roles']"));
-        pagiBoxi.click();
-        pagiBoxi.sendKeys(Keys.ENTER);
-
-        WebElement elemPage02 = driver.findElement(By.xpath("//input[@id='user_password']"));
-        elemPage02.sendKeys("zxcvbnm123");
-        elemPage02.click();
-        WebElement buttonPasswordDel = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']"));
-
-        buttonPasswordDel.click();
-        WebElement buttonPassword = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']"));
-        buttonPassword.click();
-        Assert.assertEquals(driver.findElement(By.xpath(UserPage.USER_NAME)).getText(), UserPage.USER_NAME);
-
-        driver.quit();
-    }
-
-    @Test
-    public void UserTestInspektor() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .URL();
-
-        WebElement user = driver.findElement(By.xpath("//a[@href='/users']"));
-
-        user.click();
-
-        WebElement buttonUser = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']"));
-
-        buttonUser.click();
-
-        WebElement userName = driver.findElement(By.xpath("//input[@id='user_name']"));
-
-        userName.sendKeys("123EvgenTest");
-
-        WebElement userNameLast = driver.findElement(By.xpath("//input[@id='user_last_name']"));
-
-        userNameLast.sendKeys("FamilyTest");
-
-        WebElement userEmail = driver.findElement(By.xpath("//input[@id='user_email']"));
-
-        userEmail.sendKeys("yevgeniy.gor.91@mail.ru");
-
-        WebElement userTimezone = driver.findElement(By.xpath("//input[@id='user_timezone']"));
-
-        userTimezone.click();
-
-        userTimezone.sendKeys("UTC + 00:00", Keys.ENTER);
-
-        WebElement createBoxi = driver.findElement(By.xpath("//input[@id='user_roles']"));
-
-        createBoxi.click();
-        createBoxi.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
-
-        WebElement elemPage02 = driver.findElement(By.xpath("//input[@id='user_password']"));
-
-        elemPage02.sendKeys("zxcvbnm123");
-        elemPage02.click();
-        WebElement buttonPasswordDel = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']"));
-
-        buttonPasswordDel.click();
-        WebElement buttonPassword = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']"));
-
-//        buttonPassword.click();
-
-        driver.quit();
-    }
-
-    @Test
-    public void UserTestPodraydchic() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .URL();
-
-        driver.findElement(By.xpath("//a[@href='/users']")).click();
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")).click();
-
-        driver.findElement(By.xpath("//input[@id='user_name']")).sendKeys("123EvgenTest");
-
-        driver.findElement(By.xpath("//input[@id='user_last_name']")).sendKeys("FamilyTest");
-
-        driver.findElement(By.xpath("//input[@id='user_email']")).sendKeys("yevgeniy.gor.91@mail.ru");
-
-        WebElement userTimezone = driver.findElement(By.xpath("//input[@id='user_timezone']"));
-
-        userTimezone.click();
-
-        userTimezone.sendKeys("UTC + 00:00", Keys.ENTER);
-
-        WebElement createBoxi = driver.findElement(By.xpath("//input[@id='user_roles']"));
-
-        createBoxi.click();
-        createBoxi.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-
-        WebElement createRole = driver.findElement(By.xpath("//input[@id='user_employmentId']"));
-
-        createRole.click();
-        createRole.sendKeys("Kir", Keys.ENTER);
-
-        WebElement elemPage02 = driver.findElement(By.xpath("//input[@id='user_password']"));
-
-        elemPage02.sendKeys("zxcvbnm123");
-        elemPage02.click();
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")).click();
-        WebElement buttonPassword = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']"));
-
-//        buttonPassword.click();
-
-        driver.quit();
-    }
-
-    @Test
-    public void UserTestNabludately() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .URL();
-
-        driver.findElement(By.xpath("//a[@href='/users']")).click();
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")).click();
-
-        driver.findElement(By.xpath("//input[@id='user_name']")).sendKeys("123EvgenTest");
-
-        driver.findElement(By.xpath("//input[@id='user_last_name']")).sendKeys("FamilyTest");
-
-        driver.findElement(By.xpath("//input[@id='user_email']")).sendKeys("yevgeniy.gor.91@mail.ru");
-
-        WebElement userTimezone = driver.findElement(By.xpath("//input[@id='user_timezone']"));
-
-        userTimezone.click();
-
-        userTimezone.sendKeys("UTC + 00:00", Keys.ENTER);
-
-        WebElement createBoxi = driver.findElement(By.xpath("//input[@id='user_roles']"));
-
-        createBoxi.click();
-        createBoxi.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-
-        WebElement createRole = driver.findElement(By.xpath("//input[@id='user_employmentId']"));
-
-        createRole.click();
-        createRole.sendKeys("Kir", Keys.ENTER);
-
-        WebElement elemPage02 = driver.findElement(By.xpath("//input[@id='user_password']"));
-
-        elemPage02.sendKeys("zxcvbnm123");
-        elemPage02.click();
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")).click();
-        Thread.sleep(1000);
-        driver.findElement(By.xpath("//a[@href='/users']")).click();
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")).click();
-
-        driver.findElement(By.xpath("//input[@id='user_name']")).sendKeys("123EvgenTest");
-
-        driver.findElement(By.xpath("//input[@id='user_last_name']")).sendKeys("FamilyTest");
-
-        driver.findElement(By.xpath("//input[@id='user_email']")).sendKeys("yevgeniy.gor.91@mail.ru");
-
-        WebElement userTimezon = driver.findElement(By.xpath("//input[@id='user_timezone']"));
-
-        userTimezon.click();
-
-        userTimezon.sendKeys("UTC + 00:00", Keys.ENTER);
-
-        WebElement createBox = driver.findElement(By.xpath("//input[@id='user_roles']"));
-
-        createBox.click();
-        createBox.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-
-        WebElement createRol = driver.findElement(By.xpath("//input[@id='user_employmentId']"));
-
-        createRol.click();
-        createRol.sendKeys("Kir", Keys.ENTER);
-
-        WebElement elemPage0 = driver.findElement(By.xpath("//input[@id='user_password']"));
-
-        elemPage0.sendKeys("zxcvbnm123");
-        elemPage0.click();
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']"));
-
-        driver.quit();
-    }
-
-    @Test
-    public void UserTestPodraydchiAdd() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .URL();
-
-        driver.findElement(By.xpath("//a[@href='/users']")).click();
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")).click();
-
-        driver.findElement(By.xpath("//input[@id='user_name']")).sendKeys("123EvgenTest");
-
-        driver.findElement(By.xpath("//input[@id='user_last_name']")).sendKeys("FamilyTest");
-
-        driver.findElement(By.xpath("//input[@id='user_email']")).sendKeys("yevgeniy.gor.91@mail.ru");
-
-        WebElement userTimezone = driver.findElement(By.xpath("//input[@id='user_timezone']"));
-
-        userTimezone.click();
-
-        userTimezone.sendKeys("UTC + 00:00", Keys.ENTER);
-
-        WebElement createBoxi = driver.findElement(By.xpath("//input[@id='user_roles']"));
-
-        createBoxi.click();
-        createBoxi.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-
-        WebElement createRole = driver.findElement(By.xpath("//img[@src='/static/media/AddButton.48ed616f99340e2467c9c2a6d8a8b67e.svg']"));
-
-        createRole.click();
-
-        WebElement createRoles = driver.findElement(By.xpath("//input[@id='user_employmentName']"));
-
-        createRoles.click();
-        createRoles.sendKeys("Kir", Keys.ENTER);
-
-        WebElement elemPage02 = driver.findElement(By.xpath("//input[@id='user_password']"));
-
-        elemPage02.sendKeys("zxcvbnm123");
-        elemPage02.click();
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")).click();
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
-
-        driver.quit();
-    }
-
-    @Test
-    public void UserTestNabludatelyAdd() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .URL();
-
-        driver.findElement(By.xpath("//a[@href='/users']")).click();
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")).click();
-
-        driver.findElement(By.xpath("//input[@id='user_name']")).sendKeys("123EvgenTest");
-
-        driver.findElement(By.xpath("//input[@id='user_last_name']")).sendKeys("FamilyTest");
-
-        driver.findElement(By.xpath("//input[@id='user_email']")).sendKeys("yevgeniy.gor.91@mail.ru");
-
-        WebElement userTimezone = driver.findElement(By.xpath("//input[@id='user_timezone']"));
-
-        userTimezone.click();
-
-        userTimezone.sendKeys("UTC + 00:00", Keys.ENTER);
-
-        WebElement createBoxi = driver.findElement(By.xpath("//input[@id='user_roles']"));
-
-        createBoxi.click();
-        createBoxi.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-
-        WebElement createRole = driver.findElement(By.xpath("//img[@src='/static/media/AddButton.48ed616f99340e2467c9c2a6d8a8b67e.svg']"));
-
-        createRole.click();
-
-        WebElement createRoles = driver.findElement(By.xpath("//input[@id='user_employmentName']"));
-
-        createRoles.click();
-        createRoles.sendKeys("Kir", Keys.ENTER);
-
-        WebElement elemPage02 = driver.findElement(By.xpath("//input[@id='user_password']"));
-
-        elemPage02.sendKeys("zxcvbnm123");
-        elemPage02.click();
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")).click();
-
-//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
-
-        WebElement userRen = driver.findElement(By.xpath("//img[@class='ant-dropdown-trigger ContentUsers__iconBlock-img']"));
-        userRen.click();
-
-        driver.quit();
-    }
-
-    @Test
-    public void UserRemove() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .URL();
-
-        driver.findElement(By.xpath("//a[@href='/users']")).click();
-
-        WebElement buttonUser = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']"));
-
-        buttonUser.click();
-
-        WebElement userName = driver.findElement(By.xpath("//input[@id='user_name']"));
-
-        userName.sendKeys("123EvgenTest");
-
-        WebElement userNameLast = driver.findElement(By.xpath("//input[@id='user_last_name']"));
-
-        userNameLast.sendKeys("FamilyTest");
-
-        WebElement userEmail = driver.findElement(By.xpath("//input[@id='user_email']"));
-
-        userEmail.sendKeys("yevgeniy.gor.91@mail.ru");
-
-        WebElement userTimezone = driver.findElement(By.xpath("//input[@id='user_timezone']"));
-
-        userTimezone.click();
-
-        userTimezone.sendKeys("UTC + 00:00", Keys.ENTER);
-
-        WebElement createBoxi = driver.findElement(By.xpath("//input[@id='user_roles']"));
-
-        createBoxi.click();
-        createBoxi.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-
-        WebElement createRole = driver.findElement(By.xpath("//input[@id='user_employmentId']"));
-
-        createRole.click();
-        createRole.sendKeys("Kir", Keys.ENTER);
-
-        WebElement elemPage02 = driver.findElement(By.xpath("//input[@id='user_password']"));
-
-        elemPage02.sendKeys("zxcvbnm123");
-        elemPage02.click();
-        WebElement buttonPasswordDel = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']"));
-
-        buttonPasswordDel.click();
-        WebElement buttonPassword = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']"));
-
-
-//        ================================ НЕ снимать комент ===========================================================
-//        buttonPassword.click();
-//        ================================ НЕ снимать комент ===========================================================
-
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("//img[@class='ant-dropdown-trigger ContentUsers__iconBlock-img']")).click();
-
-        WebElement userRen = driver.findElement(By.xpath("//div[@class='ant-typography p_r'][contains(.,'Редактировать')]"));
-        Thread.sleep(1000);
-        userRen.click();
-
-        WebElement cearchS = driver.findElement(By.xpath("//input[@id='user_name']"));
-        cearchS.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);
-        cearchS.sendKeys("РедактироваL");
-        Thread.sleep(1000);
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
-
-        driver.findElement(By.xpath("//img[@class='ant-dropdown-trigger ContentUsers__iconBlock-img']")).click();
-
-        WebElement userRens = driver.findElement(By.xpath("//div[@class='ant-typography p_r'][contains(.,'Редактировать')]"));
-        Thread.sleep(1000);
-        userRens.click();
-
-        WebElement cearch = driver.findElement(By.xpath("//input[@id='user_name']"));
-        cearch.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);
-        cearch.sendKeys("Отменить");
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
-
-        driver.quit();
-    }
-
-    @Test
-    public void UserDelete() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .URL();
-
-        driver.findElement(By.xpath("//a[@href='/users']")).click();
-
-
-        Thread.sleep(3000);
-        driver.findElement(By.xpath("//img[@class='ant-dropdown-trigger ContentUsers__iconBlock-img']")).click();
-
-        WebElement userRen = driver.findElement(By.xpath("//span[@class='ant-dropdown-menu-title-content'][contains(.,'Удалить')]"));
-        Thread.sleep(1000);
-        userRen.click();
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
-
-        driver.quit();
-    }
 
     // ================================== пагинация=====================================================
 
     // нет изменения кол-ва строк на странице
     @Test
-    public void ProjectTest() throws InterruptedException{
+    public void projectTest() throws InterruptedException{
 
         new ProgectPage(driver)
                 .URL();

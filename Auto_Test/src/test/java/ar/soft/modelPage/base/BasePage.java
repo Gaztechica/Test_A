@@ -55,7 +55,7 @@ public abstract class BasePage extends BaseModel {
         getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
         getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
-//        Thread.sleep(9000);
+
         return this;
     }
     @After
