@@ -174,7 +174,10 @@ public class UserPage extends BasePage {
         return this;
     }
 
-
+    public UserPage inputRolesEmplomentArro() {
+        imputRolesEmplomentClick.sendKeys(Keys.ARROW_DOWN);
+        return this;
+    }
 
     public UserPage imputRolesEmplomentClick() {
         imputRolesEmplomentClick.click();
@@ -300,7 +303,7 @@ public class UserPage extends BasePage {
         return this;
     }
 
-    public UserPage buttonRemoOtmena() {
+    public UserPage buttonRemoCancel() {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
         return this;
     }
