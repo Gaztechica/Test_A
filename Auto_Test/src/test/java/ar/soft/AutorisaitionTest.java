@@ -53,21 +53,21 @@ public class AutorisaitionTest extends BaseTest {
         driver.quit();
     }
 
-//    @Test
-//    public void removePaswordTest() throws InterruptedException {
-//
-//        driver.get(URL);
-//
-//        Thread.sleep(2000);
-//        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-//        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-//        Thread.sleep(2000);
+    @Test
+    public void removePaswordTest() throws InterruptedException {
 
-//        String getError = driver.findElement(getErrorText).getText();
-//
-//        Assert.assertEquals(getError,"Неправильный логин или пароль");
-//        driver.quit();
-//    }
+        driver.get(URL);
+
+        Thread.sleep(2000);
+        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+        driver.findElement(By.xpath(BTN_PASSWORD)).click();
+        Thread.sleep(2000);
+
+        String getError = driver.findElement(getErrorText).getText();
+
+        Assert.assertEquals(getError,"Неправильный логин или пароль");
+        driver.quit();
+    }
 
 
 //    добавить куки почты и вводить полученное письмо для замены пароля
@@ -90,5 +90,24 @@ public class AutorisaitionTest extends BaseTest {
 
     //      ======  добавить проверку ===
 
+//    WebDriver driver = new ChromeDriver();
+//
+//    private final By getErrorText = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
 
+//    @Test
+//    public void removePaswordTest() throws InterruptedException {
+//
+//        driver.get("http://23.105.246.172:5000/login");
+//
+//        Thread.sleep(1000);
+//        WebElement inputMail = driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']"));
+//        inputMail.sendKeys("yyyyyyyyyy@mail.xx");
+//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']")).click();
+//        Thread.sleep(1000);
+//
+//        String getError = driver.findElement(getErrorText).getText();
+//
+//        org.testng.Assert.assertEquals(getError,"Неправильный логин или пароль");
+//        driver.quit();
+//    }
 }
