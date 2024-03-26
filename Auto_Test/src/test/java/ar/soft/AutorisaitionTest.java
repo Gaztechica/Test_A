@@ -78,14 +78,14 @@ public class AutorisaitionTest extends BaseTest {
 
         Thread.sleep(2000);
         Cookie getCookie = new Cookie("_ga", "GA1.2");
-//        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
-//        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-//        Thread.sleep(2000);
-//
-//        String getError = driver.findElement(getErrorText).getText();
-//
-//        Assert.assertEquals(getError,"Неправильный логин или пароль");
-//        driver.quit();
+        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
+        driver.findElement(By.xpath(BTN_PASSWORD)).click();
+        Thread.sleep(2000);
+
+        String getError = driver.findElement(getErrorText).getText();
+
+        Assert.assertEquals(getError,"Неправильный логин или пароль");
+        driver.quit();
     }
 
     //      ======  добавить проверку ===
