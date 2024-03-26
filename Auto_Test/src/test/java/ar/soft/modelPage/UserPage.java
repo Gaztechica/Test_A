@@ -66,9 +66,9 @@ public class UserPage extends BasePage {
     @FindBy(xpath = "//span[@class='ant-input-affix-wrapper searchBoxInput  not-entered']")
     private WebElement searchInputClick;
 
-    public final static String USER_NAME = "123EvgenTest";
+    public final static String USER_NAME = "12EvgenTest";
 
-    public final static String USER_EMAIL = "yevgen@mail.ru";
+    public final static String USER_EMAIL = "ye2vtcvgen@mail.ru";
 
 
     public UserPage(WebDriver driver) {
