@@ -64,13 +64,12 @@ public class ProjectTest extends BaseTest {
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
 
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
         driver.quit();
 
     }
 
     @Test
-    public void cancelProgectTest() throws InterruptedException {
+    public void cancelCreateProgectTest() throws InterruptedException {
 
         new ProgectPage(driver)
                 .URL();
