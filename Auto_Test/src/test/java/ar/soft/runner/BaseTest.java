@@ -16,6 +16,7 @@ import org.testng.annotations.BeforeMethod;
 import javax.security.auth.login.Configuration;
 import java.lang.reflect.Method;
 import java.time.Duration;
+import java.util.concurrent.TimeUnit;
 
 //@Liisteners({FilterForTests.class})
 public abstract class BaseTest {
@@ -70,8 +71,14 @@ private void startDriver() {
 
     @BeforeMethod
     public void auto() {
-        login();
-
+        driver = new ChromeDriver();
+        getDriver().get(URL);
+        getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        getDriver().manage().window().setSize(new Dimension(1820,1080));
+        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
+        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
 
 //    protected void beforeMethod(Method method) {
 //        driver = new ChromeDriver(ProjectUtils.chromeOptions);
