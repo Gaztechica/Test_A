@@ -1,0 +1,111 @@
+Index: Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ar.soft;\r\n\r\nimport ar.soft.modelPage.HomePage;\r\nimport ar.soft.runner.BaseTest;\r\nimport org.junit.Assert;\r\nimport org.junit.Test;\r\nimport org.openqa.selenium.*;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\n\r\npublic class AutorisaitionTest extends BaseTest {\r\n\r\n    WebDriver driver = new ChromeDriver();\r\n\r\n    private final By getErrorText = By.xpath(\"//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']\");\r\n    private final By getPaswordText = By.xpath(\"//h2[@class='ant-typography h2_m RestorePassword__sendSuccess-text'][contains(.,'Мы отправили по адресу')]\");\r\n    public static final String NEGA_EMAIL = \"dfghjkluytr@mail.ru\";\r\n\r\n//=============================== регистрация нового пользователя ====================================\r\n\r\n//  рамдомные почтовые ящ и создавать/удалять пользователей?  регистрация\r\n    @Test\r\n    public void restorePasswordTest () throws InterruptedException {\r\n\r\n        driver.get(URL);\r\n        Thread.sleep(2000);\r\n\r\n//        driver.findElement(By.xpath(\"//h2[@class='ant-typography h2_m Login__restore-text']\")).click();\r\n        new HomePage(driver).clickRega();\r\n        Thread.sleep(2000);\r\n        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);\r\n        driver.findElement(By.xpath(BTN_PASSWORD)).click();\r\n        Thread.sleep(2000);\r\n\r\n        String getPasError = driver.findElement(getPaswordText).getText();\r\n\r\n        Assert.assertEquals(getPasError,\"Мы отправили по адресу n-k-65@list.ru ссылку для восстановления доступа\");\r\n        driver.quit();\r\n    }\r\n\r\n    @Test\r\n    public void regNegaTest() throws InterruptedException {\r\n\r\n        driver.get(URL);\r\n\r\n        Thread.sleep(2000);\r\n        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);\r\n        driver.findElement(By.xpath(BTN_PASSWORD)).click();\r\n        Thread.sleep(2000);\r\n\r\n        String getError = driver.findElement(getErrorText).getText();\r\n\r\n        Assert.assertEquals(getError,\"Неправильный логин или пароль\");\r\n        driver.quit();\r\n    }\r\n\r\n    @Test\r\n    public void removePaswordTest() throws InterruptedException {\r\n\r\n        driver.get(URL);\r\n\r\n        Thread.sleep(2000);\r\n        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);\r\n        driver.findElement(By.xpath(BTN_PASSWORD)).click();\r\n        Thread.sleep(2000);\r\n\r\n        String getError = driver.findElement(getErrorText).getText();\r\n\r\n        Assert.assertEquals(getError,\"Неправильный логин или пароль\");\r\n        driver.quit();\r\n    }\r\n\r\n\r\n//    добавить куки почты и вводить полученное письмо для замены пароля\r\n    @Test\r\n    public void regCoogiTest() throws InterruptedException {\r\n\r\n        driver.get(URL);\r\n\r\n        Thread.sleep(2000);\r\n        Cookie getCookie = new Cookie(\"_ga\", \"GA1.2\");\r\n        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);\r\n        driver.findElement(By.xpath(BTN_PASSWORD)).click();\r\n        Thread.sleep(2000);\r\n\r\n        String getError = driver.findElement(getErrorText).getText();\r\n\r\n        Assert.assertEquals(getError,\"Неправильный логин или пароль\");\r\n        driver.quit();\r\n    }\r\n\r\n    //      ======  добавить проверку ===\r\n\r\n//    WebDriver driver = new ChromeDriver();\r\n//\r\n//    private final By getErrorText = By.xpath(\"//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']\");\r\n\r\n//    @Test\r\n//    public void removePaswordTest() throws InterruptedException {\r\n//\r\n//        driver.get(\"http://23.105.246.172:5000/login\");\r\n//\r\n//        Thread.sleep(1000);\r\n//        WebElement inputMail = driver.findElement(By.xpath(\"//input[@class='ant-input primaryInput  not-entered']\"));\r\n//        inputMail.sendKeys(\"yyyyyyyyyy@mail.xx\");\r\n//        driver.findElement(By.xpath(\"//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']\")).click();\r\n//        Thread.sleep(1000);\r\n//\r\n//        String getError = driver.findElement(getErrorText).getText();\r\n//\r\n//        org.testng.Assert.assertEquals(getError,\"Неправильный логин или пароль\");\r\n//        driver.quit();\r\n//    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java b/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java
+--- a/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java	(revision c933b1052322c2b01c78dbcf787f1e023d7e92f1)
++++ b/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java	(date 1711556924902)
+@@ -13,7 +13,7 @@
+ 
+     private final By getErrorText = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
+     private final By getPaswordText = By.xpath("//h2[@class='ant-typography h2_m RestorePassword__sendSuccess-text'][contains(.,'Мы отправили по адресу')]");
+-    public static final String NEGA_EMAIL = "dfghjkluytr@mail.ru";
++    public static final String NEGA_EMAIL = "yyyyyyyyyyyyyy@mail.ru";
+ 
+ //=============================== регистрация нового пользователя ====================================
+ 
+@@ -22,14 +22,14 @@
+     public void restorePasswordTest () throws InterruptedException {
+ 
+         driver.get(URL);
+-        Thread.sleep(2000);
++//        Thread.sleep(2000);
+ 
+ //        driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
+         new HomePage(driver).clickRega();
+         Thread.sleep(2000);
+         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+         driver.findElement(By.xpath(BTN_PASSWORD)).click();
+-        Thread.sleep(2000);
++//        Thread.sleep(2000);
+ 
+         String getPasError = driver.findElement(getPaswordText).getText();
+ 
+@@ -42,10 +42,10 @@
+ 
+         driver.get(URL);
+ 
+-        Thread.sleep(2000);
++//        Thread.sleep(2000);
+         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
+         driver.findElement(By.xpath(BTN_PASSWORD)).click();
+-        Thread.sleep(2000);
++//        Thread.sleep(2000);
+ 
+         String getError = driver.findElement(getErrorText).getText();
+ 
+@@ -58,10 +58,10 @@
+ 
+         driver.get(URL);
+ 
+-        Thread.sleep(2000);
++//        Thread.sleep(2000);
+         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+         driver.findElement(By.xpath(BTN_PASSWORD)).click();
+-        Thread.sleep(2000);
++//        Thread.sleep(2000);
+ 
+         String getError = driver.findElement(getErrorText).getText();
+ 
+@@ -76,11 +76,11 @@
+ 
+         driver.get(URL);
+ 
+-        Thread.sleep(2000);
++//        Thread.sleep(2000);
+         Cookie getCookie = new Cookie("_ga", "GA1.2");
+         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
+         driver.findElement(By.xpath(BTN_PASSWORD)).click();
+-        Thread.sleep(2000);
++//        Thread.sleep(2000);
+ 
+         String getError = driver.findElement(getErrorText).getText();
+ 
+Index: Auto_Test/src/test/java/ar/soft/runner/BaseTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ar.soft.runner;\r\n\r\n//import arSoft.runner.FilterForTest.FilterForTests;\r\nimport io.github.bonigarcia.wdm.WebDriverManager;\r\nimport org.junit.After;\r\nimport org.openqa.selenium.By;\r\nimport org.openqa.selenium.Dimension;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.openqa.selenium.support.ui.Wait;\r\nimport org.openqa.selenium.support.ui.WebDriverWait;\r\nimport org.testng.ITestResult;\r\nimport org.testng.annotations.AfterMethod;\r\nimport org.testng.annotations.BeforeMethod;\r\n\r\nimport javax.security.auth.login.Configuration;\r\nimport java.lang.reflect.Method;\r\nimport java.time.Duration;\r\n\r\n//@Liisteners({FilterForTests.class})\r\npublic abstract class BaseTest {\r\n\r\n\r\n    public static final String URL = \"http://23.105.246.172:5000/login\";\r\n    public static final String INPUT_PASSWORD = \"//input[@class='ant-input']\";\r\n    public static final String INPUT_EMAIL = \"//input[@class='ant-input primaryInput  not-entered']\";\r\n    public static final String BTN_PASSWORD = \"//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']\";\r\n    public static final String EMAIL = \"n-k-65@list.ru\";\r\n    public static final String PASSWORD = \"qwe13567\";\r\n\r\n    public static final String DESCRIPTION = \"Test description\";\r\n\r\n    private static WebDriver driver;\r\n\r\n//    private Wait<WebDriver> wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));\r\n    private WebDriverWait wait2;\r\n    private WebDriverWait wait5;\r\n    private WebDriverWait wait10;\r\n\r\n    public void login() {\r\n        WebDriverManager.chromedriver().setup();\r\n        getDriver().get(URL);\r\n        getDriver().manage().window().setSize(new Dimension(1820,1080));\r\n\r\n//        Configuration.browserSize = \"1920*1080\";\r\n    }\r\nprivate void startDriver() {\r\n    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));\r\n    driver.manage().timeouts().getPageLoadTimeout();\r\n}\r\n//      static void login() {\r\n//        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);\r\n//        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);\r\n//        driver.findElement(By.xpath(BTN_PASSWORD)).click();\r\n//    }\r\n\r\n    private void closeDriver() {\r\n        if (driver != null) {\r\n            driver.quit();\r\n\r\n            driver = null;\r\n            wait2 = null;\r\n            wait5 = null;\r\n            wait10 = null;\r\n\r\n            ProjectUtils.log(\"Browser closed\");\r\n        }\r\n    }\r\n\r\n\r\n    @BeforeMethod\r\n    public void auto() {\r\n        login();\r\n\r\n\r\n//    protected void beforeMethod(Method method) {\r\n//        driver = new ChromeDriver(ProjectUtils.chromeOptions);\r\n//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));\r\n//}\r\n    }\r\n\r\n\r\n    @AfterMethod\r\n\r\n    public void into() {\r\n        driver.quit();\r\n    }\r\n//    protected void afterMethod(Method method, ITestResult testResult) {\r\n//        driver.quit();\r\n//    }\r\n\r\n\r\n    protected WebDriver getDriver() {\r\n        return driver;\r\n    }\r\n\r\n    protected WebDriverWait getWait2() {\r\n        if (wait2 == null) {\r\n            wait2 = new WebDriverWait(getDriver(), Duration.ofSeconds(2));\r\n        }\r\n\r\n        return wait2;\r\n    }\r\n\r\n    protected WebDriverWait getWait5() {\r\n        if (wait5 == null) {\r\n            wait5 = new WebDriverWait(getDriver(), Duration.ofSeconds(5));\r\n        }\r\n\r\n        return wait5;\r\n    }\r\n\r\n    protected WebDriverWait getWait10() {\r\n        if (wait10 == null) {\r\n            wait10 = new WebDriverWait(getDriver(), Duration.ofSeconds(10));\r\n        }\r\n\r\n        return wait10;\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java b/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java
+--- a/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java	(revision c933b1052322c2b01c78dbcf787f1e023d7e92f1)
++++ b/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java	(date 1711557466271)
+@@ -16,6 +16,7 @@
+ import javax.security.auth.login.Configuration;
+ import java.lang.reflect.Method;
+ import java.time.Duration;
++import java.util.concurrent.TimeUnit;
+ 
+ //@Liisteners({FilterForTests.class})
+ public abstract class BaseTest {
+@@ -70,8 +71,14 @@
+ 
+     @BeforeMethod
+     public void auto() {
+-        login();
+-
++        driver = new ChromeDriver();
++        getDriver().get(URL);
++        getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
++        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
++        getDriver().manage().window().setSize(new Dimension(1820,1080));
++        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
++        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
++        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
+ 
+ //    protected void beforeMethod(Method method) {
+ //        driver = new ChromeDriver(ProjectUtils.chromeOptions);
