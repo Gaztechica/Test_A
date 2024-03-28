@@ -1,0 +1,19 @@
+<changelist name="Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44_[Changes]" date="1711558005929" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 27.03.2024 027 20:44 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" value="Auto_Test/target/test-classes/ar/soft/modelPage/base/BasePage.class" />
+    <option name="AFTER_PATH" value="Auto_Test/target/test-classes/ar/soft/modelPage/base/BasePage.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44_[Changes]/BasePage.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Auto_Test/target/test-classes/ar/soft/AutorisaitionTest.class" />
+    <option name="AFTER_PATH" value="Auto_Test/target/test-classes/ar/soft/AutorisaitionTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44_[Changes]/AutorisaitionTest.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" />
+    <option name="AFTER_PATH" value="Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44_[Changes]/BaseTest.class" />
+  </binary>
+</changelist>
