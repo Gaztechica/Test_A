@@ -28,7 +28,7 @@ public abstract class BaseTest {
 
     private static WebDriver driver;
 
-//    private Wait<WebDriver> wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+    //    private Wait<WebDriver> wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
     private WebDriverWait wait2;
     private WebDriverWait wait5;
     private WebDriverWait wait10;
@@ -40,10 +40,10 @@ public abstract class BaseTest {
 
 //        Configuration.browserSize = "1920*1080";
     }
-private void startDriver() {
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    driver.manage().timeouts().getPageLoadTimeout();
-}
+    private void startDriver() {
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.manage().timeouts().getPageLoadTimeout();
+    }
 //      static void login() {
 //        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
 //        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
