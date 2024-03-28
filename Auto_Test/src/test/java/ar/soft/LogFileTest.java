@@ -16,4 +16,11 @@ public class LogFileTest extends BaseTest {
         new UserPage(driver)
                 .URL();
     }
+
+    @Test
+    public void fghjkl() throws InterruptedException {
+
+        new UserPage(driver)
+                .URL();
+    }
 }
