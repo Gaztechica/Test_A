@@ -16,12 +16,22 @@ public class LogFileTest extends BaseTest {
     WebDriver driver = new ChromeDriver();
 
     @Test
+    public void fghjkl()throws InterruptedException {
+
+        new UserPage(driver)
+                .URL();
+
+
+    }
+
+
+    @Test
     public void logDeleteTest()throws InterruptedException {
 
         new UserPage(driver)
                 .URL();
 
-                driver.quit();
+        driver.quit();
     }
 
     public static final String URL = "http://23.105.246.172:5000/login";
