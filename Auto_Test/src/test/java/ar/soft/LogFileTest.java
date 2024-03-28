@@ -17,10 +17,5 @@ public class LogFileTest extends BaseTest {
                 .URL();
     }
 
-    @Test
-    public void fghjkl() throws InterruptedException {
 
-        new UserPage(driver)
-                .URL();
-    }
 }
