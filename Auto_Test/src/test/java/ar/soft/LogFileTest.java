@@ -26,7 +26,7 @@ public class LogFileTest extends BaseTest {
 
 
     @Test
-    public void logDeleteTest()throws InterruptedException {
+    public void logDelTest()throws InterruptedException {
 
         new UserPage(driver)
                 .URL();
