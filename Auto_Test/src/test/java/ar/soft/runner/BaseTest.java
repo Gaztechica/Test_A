@@ -36,7 +36,7 @@ public abstract class BaseTest {
     public void login() {
         WebDriverManager.chromedriver().setup();
         getDriver().get(URL);
-        getDriver().manage().window().setSize(new Dimension(1820,1080));
+        getDriver().manage().window().setSize(new Dimension(1920,1080));
 
 //        Configuration.browserSize = "1920*1080";
     }
@@ -70,7 +70,7 @@ private void startDriver() {
         getDriver().get(URL);
         getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        getDriver().manage().window().setSize(new Dimension(1820,1080));
+        getDriver().manage().window().setSize(new Dimension(1920,1080));
         getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
         getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
