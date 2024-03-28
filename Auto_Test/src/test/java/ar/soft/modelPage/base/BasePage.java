@@ -61,5 +61,6 @@ public abstract class BasePage extends BaseModel {
     @After
     public void into() {
         getDriver().quit();
+
     }
 }

@@ -2,19 +2,14 @@ package ar.soft.runner;
 
 //import arSoft.runner.FilterForTest.FilterForTests;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.After;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
-import javax.security.auth.login.Configuration;
-import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
@@ -41,7 +36,7 @@ public abstract class BaseTest {
     public void login() {
         WebDriverManager.chromedriver().setup();
         getDriver().get(URL);
-        getDriver().manage().window().setSize(new Dimension(1820,1080));
+        getDriver().manage().window().setSize(new Dimension(1920,1080));
 
 //        Configuration.browserSize = "1920*1080";
     }
@@ -70,12 +65,12 @@ private void startDriver() {
 
 
     @BeforeMethod
-    public void auto() {
+    public void initDriver() {
         driver = new ChromeDriver();
         getDriver().get(URL);
         getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
         getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        getDriver().manage().window().setSize(new Dimension(1820,1080));
+        getDriver().manage().window().setSize(new Dimension(1920,1080));
         getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
         getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
@@ -87,12 +82,12 @@ private void startDriver() {
     }
 
 
-    @AfterMethod
-
-    public void into() {
-        driver.quit();
-    }
-//    protected void afterMethod(Method method, ITestResult testResult) {
+//    @AfterMethod
+//
+//    public void closDriver() {
+//        driver.quit();
+//    }
+////    protected void afterMethod(Method method, ITestResult testResult) {
 //        driver.quit();
 //    }
 
