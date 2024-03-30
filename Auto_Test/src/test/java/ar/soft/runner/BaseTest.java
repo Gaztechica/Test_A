@@ -28,22 +28,22 @@ public abstract class BaseTest {
 
     private static WebDriver driver;
 
-//    private Wait<WebDriver> wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
+    //    private Wait<WebDriver> wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
     private WebDriverWait wait2;
     private WebDriverWait wait5;
     private WebDriverWait wait10;
 
-    public void login() {
-        WebDriverManager.chromedriver().setup();
-        getDriver().get(URL);
-        getDriver().manage().window().setSize(new Dimension(1920,1080));
-
-//        Configuration.browserSize = "1920*1080";
-    }
-private void startDriver() {
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    driver.manage().timeouts().getPageLoadTimeout();
-}
+//    public void login() {
+//        WebDriverManager.chromedriver().setup();
+//        getDriver().get(URL);
+//        getDriver().manage().window().setSize(new Dimension(1920,1080));
+//
+////        Configuration.browserSize = "1920*1080";
+//    }
+//    private void startDriver() {
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+//        driver.manage().timeouts().getPageLoadTimeout();
+//    }
 //      static void login() {
 //        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
 //        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
@@ -64,22 +64,22 @@ private void startDriver() {
     }
 
 
-    @BeforeMethod
-    public void initDriver() {
-        driver = new ChromeDriver();
-        getDriver().get(URL);
-        getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        getDriver().manage().window().setSize(new Dimension(1920,1080));
-        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
-
-//    protected void beforeMethod(Method method) {
-//        driver = new ChromeDriver(ProjectUtils.chromeOptions);
-//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-//}
-    }
+//    @BeforeMethod
+//    public void initDriver() {
+//        driver = new ChromeDriver();
+//        getDriver().get(URL);
+//        getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+//        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+//        getDriver().manage().window().setSize(new Dimension(1920,1080));
+//        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+//        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
+//        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
+//
+////    protected void beforeMethod(Method method) {
+////        driver = new ChromeDriver(ProjectUtils.chromeOptions);
+////        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+////}
+//    }
 
 
 //    @AfterMethod

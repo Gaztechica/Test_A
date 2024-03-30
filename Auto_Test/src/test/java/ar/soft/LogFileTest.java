@@ -19,7 +19,7 @@ public class LogFileTest extends BaseTest {
     public void fghjkl()throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
 
 
     }
@@ -29,7 +29,7 @@ public class LogFileTest extends BaseTest {
     public void logDelTest()throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
 
         driver.quit();
     }
@@ -55,7 +55,7 @@ public class LogFileTest extends BaseTest {
     public void closeWebDriver() {
         driver.quit();
     }
-    @org.testng.annotations.Test
+    @Test
     public void removePaswordTest() throws InterruptedException {
 
         driver.get(URL);
@@ -73,7 +73,7 @@ public class LogFileTest extends BaseTest {
 
     }
 
-    @org.testng.annotations.Test
+    @Test
     public void regaTest() throws InterruptedException {
 
         driver.get(URL);

@@ -1,7 +1,6 @@
 package ar.soft;
 
 import ar.soft.modelPage.LibraryPage;
-import ar.soft.modelPage.base.BasePage;
 import ar.soft.runner.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.*;
@@ -15,7 +14,7 @@ public class LibraryTest extends BaseTest {
     public void libraryChecListCreate() throws InterruptedException {
 
         new LibraryPage(driver)
-                .URL();
+                .login();
         new LibraryPage(driver)
                 .libraryClick()
                 .buttonChecListCreateClick()
@@ -42,7 +41,7 @@ public class LibraryTest extends BaseTest {
     public void libraryChecListDelete() throws InterruptedException {
 
         new LibraryPage(driver)
-                .URL();
+                .login();
         new LibraryPage(driver)
                 .libraryClick()
                 .buttonChecListCreateClick()
@@ -69,7 +68,7 @@ public class LibraryTest extends BaseTest {
     public void libraryChecListRemove() throws InterruptedException {
 
         new LibraryPage(driver)
-                .URL();
+                .login();
         new LibraryPage(driver)
                 .libraryClick();
         Thread.sleep(5000);
@@ -121,7 +120,7 @@ public class LibraryTest extends BaseTest {
     public void libraryChecListImport() throws InterruptedException {
 
         new LibraryPage(driver)
-                .URL();
+                .login();
 //      Thread.sleep(11500);
 
         new LibraryPage(driver)

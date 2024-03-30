@@ -1,6 +1,5 @@
 package ar.soft;
 
-import ar.soft.modelPage.ProgectPage;
 import ar.soft.modelPage.UserPage;
 import ar.soft.runner.BaseTest;
 import org.junit.Test;
@@ -17,9 +16,9 @@ public class UserTest extends BaseTest {
 
     @Test
     public void userCreateAdmin() throws InterruptedException {
-        new UserPage(driver)
-                .URL();
 
+        new UserPage(driver)
+                .login();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -33,8 +32,8 @@ public class UserTest extends BaseTest {
                 .userRolesClick()
                 .userRoles()
                 .userPassword("zxcvbnm123")
-                .userPasswordClick();
-//                .buttonSave();
+                .userPasswordClick()
+                .buttonSave();
 
 //        driver.quit();
     }
@@ -43,7 +42,7 @@ public class UserTest extends BaseTest {
     public void userCreateInspektor() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -72,7 +71,7 @@ public class UserTest extends BaseTest {
     public void userCreatePodraydchic() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -101,7 +100,7 @@ public class UserTest extends BaseTest {
     public void userCreateNabludately() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -131,7 +130,7 @@ public class UserTest extends BaseTest {
     public void userCreatePodraydchiAdd() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -161,7 +160,7 @@ public class UserTest extends BaseTest {
     public void userCreateNabludatelyAdd() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -193,7 +192,7 @@ public class UserTest extends BaseTest {
     public void userCreateRemove() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -233,7 +232,7 @@ public class UserTest extends BaseTest {
     public void userCreateDelete() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .buttonRemove()
@@ -248,7 +247,7 @@ public class UserTest extends BaseTest {
     public void userCreateAdminSearch() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -290,7 +289,7 @@ public class UserTest extends BaseTest {
     public void userInviteAdmin() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -306,7 +305,7 @@ public class UserTest extends BaseTest {
     public void userInviteInspektor() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -323,7 +322,7 @@ public class UserTest extends BaseTest {
     public void userInvitePodraydchic() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -349,7 +348,7 @@ public class UserTest extends BaseTest {
     public void userInviteNabludately() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -376,7 +375,7 @@ public class UserTest extends BaseTest {
     public void userCreatePodraydchicAdd() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -400,7 +399,7 @@ public class UserTest extends BaseTest {
     public void userCreaNabludatelyAdd() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -425,7 +424,7 @@ public class UserTest extends BaseTest {
     public void userSearchTest() throws InterruptedException {
 
         new UserPage(driver)
-                .URL();
+                .login();
         new UserPage(driver)
                 .createUser()
                 .searchInputClick()
