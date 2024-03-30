@@ -1,14 +1,11 @@
 package ar.soft;
 
-import ar.soft.modelPage.HomePage;
 import ar.soft.modelPage.ProgectPage;
-import ar.soft.modelPage.UserPage;
 import ar.soft.runner.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.Select;
 
 import java.util.ArrayList;
 
@@ -26,7 +23,7 @@ public class ProjectTest extends BaseTest {
     public void createProgect() throws InterruptedException {
 
         new ProgectPage(driver)
-                .URL();
+                .login();
 
         new ProgectPage(driver)
                 .buttonCreateProgect();
@@ -72,7 +69,7 @@ public class ProjectTest extends BaseTest {
     public void cancelCreateProgectTest() throws InterruptedException {
 
         new ProgectPage(driver)
-                .URL();
+                .login();
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
@@ -114,7 +111,7 @@ public class ProjectTest extends BaseTest {
     public void poginacyaTest() throws InterruptedException {
 
         new ProgectPage(driver)
-                .URL();
+                .login();
 //=============================================================
 
         driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
@@ -196,7 +193,7 @@ public class ProjectTest extends BaseTest {
     public void hrefPolitic() throws InterruptedException {
 
         new ProgectPage(driver)
-                .URL();
+                .login();
 
         driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
 
@@ -212,7 +209,7 @@ public class ProjectTest extends BaseTest {
     public void hrefPoliticUser() throws InterruptedException {
 
         new ProgectPage(driver)
-                .URL();
+                .login();
 
         driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/user-agreement-armobail/']")).click();
 
@@ -229,7 +226,7 @@ public class ProjectTest extends BaseTest {
     public void hrefBot() throws InterruptedException {
 
         new ProgectPage(driver)
-                .URL();
+                .login();
 
         driver.findElement(By.xpath("//a[@href='https://t.me/arsoft_support_bot']")).click();
 
@@ -254,7 +251,7 @@ public class ProjectTest extends BaseTest {
     public void projectTest() throws InterruptedException{
 
         new ProgectPage(driver)
-                .URL();
+                .login();
 
 
 //=============================================================
