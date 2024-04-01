@@ -240,6 +240,18 @@ public class UserTest extends BaseTest {
 
         driver.quit();
     }
+//    @Test
+//    public void userCreateDelete() throws InterruptedException {
+//        new UserPage(driver)
+//                .login();
+//        new UserPage(driver)
+//                .createUser()
+//                .buttonRemove()
+//                .userNameDel()
+//                .buttonRemoCancel();
+//
+//        driver.quit();
+//    }
 
     //        не работает сортировка по организациям     смена страниц
     @Test
