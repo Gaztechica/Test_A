@@ -1,11 +1,14 @@
 package ar.soft;
 
 import ar.soft.modelPage.HomePage;
+import ar.soft.modelPage.ProgectPage;
+import ar.soft.modelPage.base.BasePage;
 import ar.soft.runner.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Ignore;
 
 public class AutorisaitionTest extends BaseTest {
 
@@ -19,33 +22,32 @@ public class AutorisaitionTest extends BaseTest {
 
 //  рамдомные почтовые ящ и создавать/удалять пользователей?  регистрация
     @Test
-    public void restorePasswordTest () throws InterruptedException {
+    public void restorePasswordTest () {
 
-        driver.get(URL);
-//        Thread.sleep(2000);
+        new ProgectPage(driver)
+                .url();
 
 //        driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
         new HomePage(driver).clickRega();
-        Thread.sleep(2000);
+
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
-//        Thread.sleep(2000);
+
 
         String getPasError = driver.findElement(getPaswordText).getText();
 
-        Assert.assertEquals(getPasError,"Мы отправили по адресу n-k-65@list.ru ссылку для восстановления доступа");
+        Assert.assertEquals(getPasError,"Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");
         driver.quit();
     }
 
     @Test
-    public void regNegaTest() throws InterruptedException {
+    public void regNegaTest() {
 
-        driver.get(URL);
+        new ProgectPage(driver)
+                .url();
 
-//        Thread.sleep(2000);
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
-//        Thread.sleep(2000);
 
         String getError = driver.findElement(getErrorText).getText();
 
@@ -53,15 +55,16 @@ public class AutorisaitionTest extends BaseTest {
         driver.quit();
     }
 
+
+
     @Test
-    public void removePaswordTest() throws InterruptedException {
+    public void removePaswordTest() {
 
-        driver.get(URL);
+        new ProgectPage(driver)
+                .url();
 
-//        Thread.sleep(2000);
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
-//        Thread.sleep(2000);
 
         String getError = driver.findElement(getErrorText).getText();
 
@@ -71,17 +74,17 @@ public class AutorisaitionTest extends BaseTest {
 
 
 //    добавить куки почты и вводить полученное письмо для замены пароля
+   @Ignore
     @Test
-    public void regCoogiTest() throws InterruptedException {
+    public void regCoogiTest() {
 
-        driver.get(URL);
+        new ProgectPage(driver)
+                .url();
 
-//        Thread.sleep(2000);
         Cookie getCookie = new Cookie("_ga", "GA1.2");
 //        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
 //        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-//        Thread.sleep(2000);
-//
+
 //        String getError = driver.findElement(getErrorText).getText();
 //
 //        Assert.assertEquals(getError,"Неправильный логин или пароль");
@@ -90,24 +93,6 @@ public class AutorisaitionTest extends BaseTest {
 
     //      ======  добавить проверку ===
 
-//    WebDriver driver = new ChromeDriver();
-//
-//    private final By getErrorText = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
 
-//    @Test
-//    public void removePaswordTest() throws InterruptedException {
-//
-//        driver.get("http://23.105.246.172:5000/login");
-//
-//        Thread.sleep(1000);
-//        WebElement inputMail = driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']"));
-//        inputMail.sendKeys("yyyyyyyyyy@mail.xx");
-//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']")).click();
-//        Thread.sleep(1000);
-//
-//        String getError = driver.findElement(getErrorText).getText();
-//
-//        org.testng.Assert.assertEquals(getError,"Неправильный логин или пароль");
-//        driver.quit();
-//    }
+
 }
