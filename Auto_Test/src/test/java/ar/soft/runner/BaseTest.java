@@ -10,12 +10,12 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import java.lang.reflect.Method;
 import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 
 //@Liisteners({FilterForTests.class})
 public abstract class BaseTest {
-
 
     public static final String URL = "http://23.105.246.172:5000/login";
     public static final String INPUT_PASSWORD = "//input[@class='ant-input']";
@@ -24,9 +24,34 @@ public abstract class BaseTest {
     public static final String EMAIL = "f.ff.1980@list.ru";
     public static final String PASSWORD = "012345678";
 
-    public static final String DESCRIPTION = "Test description";
+//    public static final String DESCRIPTION = "Test description";
 
-    private static WebDriver driver;
+//    private static WebDriver driver;
+    private WebDriver driver;
+
+    @BeforeMethod
+    protected void beforeMethod(Method method) {
+        driver = new ChromeDriver();
+        getDriver().get(URL);
+        getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        getDriver().manage().window().setSize(new Dimension(1820,1080));
+    }
+
+    public void log() {
+        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
+        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
+    }
+
+    @AfterMethod
+    protected void afterMethod(Method method) {
+        driver.quit();
+    }
+
+    protected WebDriver getDriver() {
+        return driver;
+    }
 
     //    private Wait<WebDriver> wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
     private WebDriverWait wait2;
@@ -91,10 +116,6 @@ public abstract class BaseTest {
 //        driver.quit();
 //    }
 
-
-    protected WebDriver getDriver() {
-        return driver;
-    }
 
     protected WebDriverWait getWait2() {
         if (wait2 == null) {

@@ -1,6 +1,7 @@
 package ar.soft;
 
 import ar.soft.modelPage.UserPage;
+import ar.soft.modelPage.base.BasePage;
 import ar.soft.runner.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.*;
@@ -59,7 +60,6 @@ public class UserTest extends BaseTest {
                 .userPassword("zxcvbnm123")
                 .userPasswordClick()
                 .buttonSave();
-
 
 //        WebElement buttonPassword = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']"));
 

@@ -1,5 +1,6 @@
 package ar.soft;
 
+import ar.soft.modelPage.UserPage;
 import ar.soft.runner.BaseTest;
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -21,12 +22,13 @@ public class BibliotekaTest extends BaseTest {
     public void BibliotekaTest() throws InterruptedException {
 //        Wait<WebDriver> wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));
 
-
-        driver.get(URL);
-        driver.manage().window().setSize(new Dimension(1820,1080));
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
+        new UserPage(driver)
+                .login();
+//        driver.get(URL);
+//        driver.manage().window().setSize(new Dimension(1820,1080));
+//        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+//        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
+//        driver.findElement(By.xpath(BTN_PASSWORD)).click();
         Thread.sleep(9000);
 
 //        getWait5().until(ExpectedCondition.visibilityOfElementLocated(By.xpath("//a[@href='/library']"))).click();

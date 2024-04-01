@@ -12,8 +12,9 @@ import java.util.ArrayList;
 public class ProjectTest extends BaseTest {
 
     WebDriver driver = new ChromeDriver();
+
     private By newProgectNameText = By.xpath("//div[@class='Sidebar__project-name'][contains(.,'1Новый проект')]");
-       private By getPoliticaText = By.xpath("//h1[@class='page-header-title clr']");
+    private By getPoliticaText = By.xpath("//h1[@class='page-header-title clr']");
     private By getPoliticaUserText = By.xpath("//span[@style='font-size: 19px;'][contains(.,'Предмет пользовательского соглашения')]");
     private By getBotText = By.xpath("//span[@dir='auto']");
 

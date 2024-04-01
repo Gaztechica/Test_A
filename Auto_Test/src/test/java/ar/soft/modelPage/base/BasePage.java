@@ -49,6 +49,8 @@ public abstract class BasePage extends BaseModel {
 
         return this;
     }
+
+
     public BasePage login()throws InterruptedException {
 //        URL.click();
 //        INPUT_EMAIL.sendKeys(EMAIL);
