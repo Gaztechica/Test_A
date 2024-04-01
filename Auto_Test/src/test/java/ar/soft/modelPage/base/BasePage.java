@@ -41,6 +41,14 @@ public abstract class BasePage extends BaseModel {
 //
 //    }
 
+    public BasePage url() {
+        getDriver().get(URL);
+        getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        getDriver().manage().window().setSize(new Dimension(1820,1080));
+
+        return this;
+    }
     public BasePage login()throws InterruptedException {
 //        URL.click();
 //        INPUT_EMAIL.sendKeys(EMAIL);
