@@ -56,7 +56,6 @@ public class UserPage extends BasePage {
     @FindBy(xpath = "//input[@id='user_employmentId']")
     private WebElement imputRolesEmplomentClick;
 
-
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")
     private WebElement buttonDeleteClick;
 

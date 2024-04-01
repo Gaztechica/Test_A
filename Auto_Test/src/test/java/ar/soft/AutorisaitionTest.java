@@ -21,6 +21,8 @@ public class AutorisaitionTest extends BaseTest {
 //=============================== регистрация нового пользователя ====================================
 
 //  рамдомные почтовые ящ и создавать/удалять пользователей?  регистрация
+
+
     @Test
     public void restorePasswordTest () {
 
@@ -32,7 +34,6 @@ public class AutorisaitionTest extends BaseTest {
 
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
-
 
         String getPasError = driver.findElement(getPaswordText).getText();
 

@@ -5,11 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RemarcTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/BibliotekaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/BibliotekaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/UserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/UserPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/AutorisaitionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/AutorisaitionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/BibliotekaTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/BibliotekaTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/UserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/UserPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/UserPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/base/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/base/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +75,7 @@
     "JUnit.ApiTest.executor": "Run",
     "JUnit.AutorisaitionTest.AutorisationTest.executor": "Run",
     "JUnit.AutorisaitionTest.executor": "Run",
+    "JUnit.AutorisaitionTest.jhgf.executor": "Run",
     "JUnit.AutorisaitionTest.regCoogiTest.executor": "Run",
     "JUnit.AutorisaitionTest.regNegaTest.executor": "Run",
     "JUnit.AutorisaitionTest.removePaswordTest.executor": "Run",
@@ -123,7 +135,8 @@
     "JUnit.UserTest.userTestInspektor.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "22",
+    "TestNG.remarcTest.remarcTest.executor": "Run",
+    "git-widget-placeholder": "23",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
@@ -137,38 +150,7 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProjectTest.createProgect">
-    <configuration name="AutorisaitionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AutorisaitionTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AutorisaitionTest.regNegaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AutorisaitionTest" />
-      <option name="METHOD_NAME" value="regNegaTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="JUnit.AutorisaitionTest.restorePasswordTest">
     <configuration name="AutorisaitionTest.restorePasswordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -185,7 +167,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProjectTest.cancelCreateProgectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BibliotekaTest.BibliotekaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -194,8 +176,24 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="METHOD_NAME" value="cancelCreateProgectTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.BibliotekaTest" />
+      <option name="METHOD_NAME" value="BibliotekaTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest.libraryChecListCreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.LibraryTest" />
+      <option name="METHOD_NAME" value="libraryChecListCreate" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -217,13 +215,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserTest.userCreateInspektor" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
+      <option name="METHOD_NAME" value="userCreateInspektor" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProjectTest.createProgect" />
-        <item itemvalue="JUnit.AutorisaitionTest" />
         <item itemvalue="JUnit.AutorisaitionTest.restorePasswordTest" />
-        <item itemvalue="JUnit.AutorisaitionTest.regNegaTest" />
-        <item itemvalue="JUnit.ProjectTest.cancelCreateProgectTest" />
+        <item itemvalue="JUnit.ProjectTest.createProgect" />
+        <item itemvalue="JUnit.LibraryTest.libraryChecListCreate" />
+        <item itemvalue="JUnit.BibliotekaTest.BibliotekaTest" />
+        <item itemvalue="JUnit.UserTest.userCreateInspektor" />
       </list>
     </recent_temporary>
   </component>
@@ -587,7 +601,15 @@
       <option name="project" value="LOCAL" />
       <updated>1711558081979</updated>
     </task>
-    <option name="localTasksCounter" value="44" />
+    <task id="LOCAL-00044" summary="Merge remote-tracking branch 'origin/main4' into main4">
+      <option name="closed" value="true" />
+      <created>1711995517368</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1711995517368</updated>
+    </task>
+    <option name="localTasksCounter" value="45" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
