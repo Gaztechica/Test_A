@@ -12,7 +12,6 @@ public class LibraryTest extends BaseTest {
 
     @Test
     public void libraryChecListCreate() throws InterruptedException {
-
         new LibraryPage(driver)
                 .login();
         new LibraryPage(driver)
@@ -57,8 +56,6 @@ public class LibraryTest extends BaseTest {
                 .buttonChecklistCategoryDeleteClick();
 //                .buttonChecklistSubcategory();
 
-
-
 //                .buttonChecklistAdd();
 
 //        driver.quit();
@@ -70,16 +67,16 @@ public class LibraryTest extends BaseTest {
         new LibraryPage(driver)
                 .login();
         new LibraryPage(driver)
-                .libraryClick();
-        Thread.sleep(5000);
-        new  LibraryPage(driver)
+                .libraryClick()
+//        Thread.sleep(5000);
+//        new  LibraryPage(driver)
                 .buttonChecklistRemove();
-        Thread.sleep(5000);
+//        Thread.sleep(5000);
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton " +
                 "big colorPrimary Checklists__extraButtonChecklict-import']")).click();
 
 //
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
 
         WebElement input = driver.findElement(By.id("title"));
         input.click();
@@ -91,7 +88,7 @@ public class LibraryTest extends BaseTest {
         inputCategory.sendKeys("inputCategory");
 //        inputCategory.sendKeys(Keys.ENTER);
 
-        Thread.sleep(3000);
+//        Thread.sleep(3000);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
 
