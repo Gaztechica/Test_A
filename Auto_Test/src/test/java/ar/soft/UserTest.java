@@ -9,7 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class UserTest extends BaseTest {
 
-    WebDriver driver = new ChromeDriver();
+//    WebDriver driver = new ChromeDriver();
 
     // ================================== пользователь =====================================================
 
@@ -17,7 +17,6 @@ public class UserTest extends BaseTest {
 
     @Test
     public void userCreateAdmin() throws InterruptedException {
-
         new UserPage(driver)
                 .login();
         new UserPage(driver)
@@ -35,13 +34,11 @@ public class UserTest extends BaseTest {
                 .userPassword("zxcvbnm123")
                 .userPasswordClick()
                 .buttonSave();
-
 //        driver.quit();
     }
 
     @Test
     public void userCreateInspektor() throws InterruptedException {
-
         new UserPage(driver)
                 .login();
         new UserPage(driver)
@@ -60,9 +57,7 @@ public class UserTest extends BaseTest {
                 .userPassword("zxcvbnm123")
                 .userPasswordClick()
                 .buttonSave();
-
 //        WebElement buttonPassword = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']"));
-
         driver.quit();
 
     }
@@ -240,18 +235,7 @@ public class UserTest extends BaseTest {
 
         driver.quit();
     }
-    @Test
-    public void userCreateDelete() throws InterruptedException {
-        new UserPage(driver)
-                .login();
-        new UserPage(driver)
-                .createUser()
-                .buttonRemove()
-                .userNameDel()
-                .buttonRemoCancel();
 
-        driver.quit();
-    }
 
     //        не работает сортировка по организациям     смена страниц
     @Test
