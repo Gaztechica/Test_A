@@ -7,6 +7,7 @@ import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Wait;
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -202,11 +203,26 @@ public class ProjectTest extends BaseTest {
 
         ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(newTab.get(1));
-        String getErr = driver.findElement(getPoliticaText).getText();
 
-        Assert.assertEquals("Политика обработки персональных данных", getErr);
+        Assert.assertEquals("Политика обработки персональных данных", driver.findElement(getPoliticaText).getText());
         driver.quit();
     }
+
+    @Test
+    public void testHrefPolitiCopi() throws InterruptedException{
+        new ProgectPage(driver)
+                .login();
+
+//        getWait15().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"))).click();
+        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
+
+        Set<String> handles = getDriver().getWindowHandles();
+        handles.remove(getDriver().getWindowHandle());
+        getDriver().switchTo().window(handles.iterator().next());
+
+        org.testng.Assert.assertEquals(getDriver().findElement(getPoliticaText).getText(), "Политика обработки персональных данных");
+    }
+
 
     @Test
     public void hrefPoliticUser() throws InterruptedException {
@@ -225,17 +241,6 @@ public class ProjectTest extends BaseTest {
         driver.quit();
     }
 
-//    public void testHrefPolitic() {
-//        getDriver().get(URL_MOB);
-//
-//        getWait15().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"))).click();
-//
-//        Set<String> handles = getDriver().getWindowHandles();
-//        handles.remove(getDriver().getWindowHandle());
-//        getDriver().switchTo().window(handles.iterator().next());
-//
-//        org.testng.Assert.assertEquals(getDriver().findElement(GET_POLITICA).getText(), "Политика обработки персональных данных");
-//    }
 
     @Test
     public void hrefBot() throws InterruptedException {
