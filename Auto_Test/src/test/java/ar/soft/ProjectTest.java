@@ -195,10 +195,8 @@ public class ProjectTest extends BaseTest {
 
     @Test
     public void hrefPolitic() throws InterruptedException {
-
         new ProgectPage(driver)
                 .login();
-
         driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
 
         ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
@@ -220,7 +218,7 @@ public class ProjectTest extends BaseTest {
         handles.remove(getDriver().getWindowHandle());
         getDriver().switchTo().window(handles.iterator().next());
 
-        org.testng.Assert.assertEquals(getDriver().findElement(getPoliticaText).getText(), "Политика обработки персональных данных");
+        Assert.assertEquals(getDriver().findElement(getPoliticaText).getText(), "Политика обработки персональных данных");
     }
 
 

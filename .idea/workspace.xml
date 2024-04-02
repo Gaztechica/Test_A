@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,79 +58,79 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.ApiTest.executor": "Run",
-    "JUnit.AutorisaitionTest.AutorisationTest.executor": "Run",
-    "JUnit.AutorisaitionTest.executor": "Run",
-    "JUnit.AutorisaitionTest.jhgf.executor": "Run",
-    "JUnit.AutorisaitionTest.regCoogiTest.executor": "Run",
-    "JUnit.AutorisaitionTest.regNegaTest.executor": "Run",
-    "JUnit.AutorisaitionTest.removePaswordTest.executor": "Run",
-    "JUnit.AutorisaitionTest.restorePasswordTest.executor": "Run",
-    "JUnit.BibliotekaTest.BibliotekaTest.executor": "Run",
-    "JUnit.LibraryTest.HrefPolitic.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListCreate.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListDelete.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListImport.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListRemove.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListRemovt.executor": "Run",
-    "JUnit.LibraryTest.libraryClick.executor": "Run",
-    "JUnit.ProjectTest.HrefBot.executor": "Run",
-    "JUnit.ProjectTest.HrefPolitic.executor": "Run",
-    "JUnit.ProjectTest.HrefPoliticUser.executor": "Run",
-    "JUnit.ProjectTest.ProjectTest.executor": "Run",
-    "JUnit.ProjectTest.RegNegaTest.executor": "Run",
-    "JUnit.ProjectTest.RegasTest.executor": "Run",
-    "JUnit.ProjectTest.UserTestPodraydchic.executor": "Run",
-    "JUnit.ProjectTest.cancelCreateProgectTest.executor": "Run",
-    "JUnit.ProjectTest.createProgect.executor": "Run",
-    "JUnit.ProjectTest.executor": "Run",
-    "JUnit.ProjectTest.hrefBot.executor": "Run",
-    "JUnit.ProjectTest.hrefPolitic.executor": "Run",
-    "JUnit.ProjectTest.poginacyaTest.executor": "Run",
-    "JUnit.ProjectTest.projectTest.executor": "Run",
-    "JUnit.ProjectTest.testHrefPolitiCopi.executor": "Run",
-    "JUnit.ProjectTest.userTestAdmin.executor": "Run",
-    "JUnit.RegaTest.RegasTest.executor": "Run",
-    "JUnit.RegaTest.autorisationTest.executor": "Run",
-    "JUnit.RegaTest.regNegaTest.executor": "Run",
-    "JUnit.UserTest.UserCreateAdmin.executor": "Run",
-    "JUnit.UserTest.UserCreateNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.UserCreatePodraydchicAdd.executor": "Run",
-    "JUnit.UserTest.UserInviteAdmin.executor": "Run",
-    "JUnit.UserTest.UserRemove.executor": "Run",
-    "JUnit.UserTest.UserSearchTest.executor": "Run",
-    "JUnit.UserTest.UserTestInspektor.executor": "Run",
-    "JUnit.UserTest.UserTestNabludately.executor": "Run",
-    "JUnit.UserTest.UserTestNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.UserTestPodraydchic.executor": "Run",
-    "JUnit.UserTest.executor": "Run",
-    "JUnit.UserTest.userCreateAdmin.executor": "Run",
-    "JUnit.UserTest.userCreateAdminSearch.executor": "Run",
-    "JUnit.UserTest.userCreateDelete.executor": "Run",
-    "JUnit.UserTest.userCreateInspektor.executor": "Run",
-    "JUnit.UserTest.userCreateNabludately.executor": "Run",
-    "JUnit.UserTest.userCreateNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.userCreatePodraydchiAdd.executor": "Run",
-    "JUnit.UserTest.userCreatePodraydchic.executor": "Run",
-    "JUnit.UserTest.userCreatePodraydchicAdd.executor": "Run",
-    "JUnit.UserTest.userCreateRemove.executor": "Run",
-    "JUnit.UserTest.userInviteAdmin.executor": "Run",
-    "JUnit.UserTest.userInviteInspektor.executor": "Run",
-    "JUnit.UserTest.userInviteNabludately.executor": "Run",
-    "JUnit.UserTest.userInvitePodraydchic.executor": "Run",
-    "JUnit.UserTest.userTestAdmin.executor": "Run",
-    "JUnit.UserTest.userTestInspektor.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "27",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.ApiTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.AutorisationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.jhgf.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.regCoogiTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.regNegaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.removePaswordTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.restorePasswordTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BibliotekaTest.BibliotekaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.HrefPolitic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryChecListCreate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryChecListDelete.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryChecListImport.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryChecListRemove.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryChecListRemovt.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryClick.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.HrefBot.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.HrefPolitic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.HrefPoliticUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.ProjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.RegNegaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.RegasTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.UserTestPodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.cancelCreateProgectTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.createProgect.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.hrefBot.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.hrefPolitic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.poginacyaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.projectTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.testHrefPolitiCopi.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.userTestAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RegaTest.RegasTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RegaTest.autorisationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RegaTest.regNegaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserCreateAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserCreateNabludatelyAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserCreatePodraydchicAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserInviteAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserRemove.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserSearchTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserTestInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserTestNabludately.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserTestNabludatelyAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserTestPodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateAdminSearch.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateDelete.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateNabludately.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateNabludatelyAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreatePodraydchiAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreatePodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreatePodraydchicAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateRemove.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userInviteAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userInviteInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userInviteNabludately.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userInvitePodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userTestAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userTestInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.remarcTest.remarcTest.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;27&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Test_Ar/Auto_Test&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ar.soft" />
@@ -136,7 +139,23 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ProjectTest.hrefPolitic">
+  <component name="RunManager" selected="JUnit.AutorisaitionTest.restorePasswordTest">
+    <configuration name="AutorisaitionTest.regNegaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AutorisaitionTest" />
+      <option name="METHOD_NAME" value="regNegaTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AutorisaitionTest.restorePasswordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -201,29 +220,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.userCreateAdminSearch" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="userCreateAdminSearch" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ProjectTest.hrefPolitic" />
-        <item itemvalue="JUnit.ProjectTest.testHrefPolitiCopi" />
-        <item itemvalue="JUnit.UserTest.userCreateAdmin" />
         <item itemvalue="JUnit.AutorisaitionTest.restorePasswordTest" />
-        <item itemvalue="JUnit.UserTest.userCreateAdminSearch" />
+        <item itemvalue="JUnit.AutorisaitionTest.regNegaTest" />
+        <item itemvalue="JUnit.ProjectTest.testHrefPolitiCopi" />
+        <item itemvalue="JUnit.ProjectTest.hrefPolitic" />
+        <item itemvalue="JUnit.UserTest.userCreateAdmin" />
       </list>
     </recent_temporary>
   </component>
