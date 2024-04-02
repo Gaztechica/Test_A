@@ -2,7 +2,6 @@ package ar.soft;
 
 import ar.soft.modelPage.HomePage;
 import ar.soft.modelPage.ProgectPage;
-import ar.soft.modelPage.base.BasePage;
 import ar.soft.runner.BaseTest;
 import org.junit.Assert;
 import org.junit.Test;
@@ -80,7 +79,21 @@ public class AutorisaitionTest extends BaseTest {
 //
 //        Assert.assertEquals(driver.findElement(getEmailText).getText(),"Пользователь не найден, попробуйте снова");
 //    }
-
+//
+//    @Test(dataProvider = "randomEmail")
+//    public void regEmailNegaTest(String name) {
+//
+//        new ProgectPage(driver)
+//                .url();
+//
+//        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
+//        driver.findElement(By.xpath(BTN_PASSWORD)).click();
+//
+//        String getError = driver.findElement(getErrorText).getText();
+//
+//        Assert.assertEquals(getError,"Неправильный логин или пароль");
+////        driver.quit();
+//    }
     @Test
     public void removePasswordTest() {
 
