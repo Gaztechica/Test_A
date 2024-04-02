@@ -27,8 +27,9 @@ public abstract class BaseTest {
 //    public static final String DESCRIPTION = "Test description";
 
 //    private static WebDriver driver;
-    private WebDriver driver;
+//    private WebDriver driver;
 
+    public WebDriver driver = new ChromeDriver();
     @BeforeMethod
     protected void beforeMethod(Method method) {
         driver = new ChromeDriver();
