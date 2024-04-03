@@ -130,6 +130,23 @@ public class AutorisaitionTest extends BaseTest {
 
     //      ======  добавить проверку ===
 
+    @Test
+    public void regaTest() throws InterruptedException {
 
+        driver.get(URL);
+        Thread.sleep(1000);
+
+        driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
+
+        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+
+        driver.findElement(By.xpath(BTN_PASSWORD)).click();
+        Thread.sleep(1000);
+
+        String getPasError = driver.findElement(getPaswordText).getText();
+
+        org.testng.Assert.assertEquals(getPasError,"Мы отправили по адресу n-k-65@list.ru ссылку для восстановления доступа");
+
+    }
 
 }
