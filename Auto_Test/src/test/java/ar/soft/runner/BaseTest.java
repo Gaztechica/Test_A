@@ -45,10 +45,10 @@ public abstract class BaseTest {
         getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
     }
 
-    @AfterMethod
-    protected void afterMethod(Method method) {
-        driver.quit();
-    }
+//    @AfterMethod
+//    protected void afterMethod(Method method) {
+//        driver.quit();
+//    }
 
     protected WebDriver getDriver() {
         return driver;

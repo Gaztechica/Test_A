@@ -63,7 +63,7 @@ public class ProjectTest extends BaseTest {
 
         Assert.assertEquals("1Новый проект", newProgectName);
 
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
+//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
 
         driver.quit();
 

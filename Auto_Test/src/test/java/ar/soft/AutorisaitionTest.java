@@ -189,15 +189,15 @@ public class AutorisaitionTest extends BaseTest {
 
     }
 
-    //    @Test(dataProvider = "randomEmail")
-//    public void testRandomRega(String name) {
-//        openBrowser();
-//        getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
-//
-//        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
-//        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
-//
+        @Test(dataProvider = "randomEmail")
+        public void testRandomRega(String name) {
+
+        getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
+
+        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
+        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
+
 //        Assert.assertEquals(getDriver().findElement(GET_PASWORD).getText(),"Мы отправили по адресу /" + name + "/ ссылку для восстановления доступа");
-//    }
+    }
 
 }
