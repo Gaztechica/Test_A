@@ -5,8 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/LogFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/LogFileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/BibliotekaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/BibliotekaTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/AutorisaitionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/AutorisaitionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +32,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="28" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,6 +69,7 @@
     "JUnit.AutorisaitionTest.regCoogiTest.executor": "Run",
     "JUnit.AutorisaitionTest.regEmailNegaTest.executor": "Run",
     "JUnit.AutorisaitionTest.regNegaTest.executor": "Run",
+    "JUnit.AutorisaitionTest.regaTest.executor": "Run",
     "JUnit.AutorisaitionTest.removePaswordTest.executor": "Run",
     "JUnit.AutorisaitionTest.restorePasswordTest.executor": "Run",
     "JUnit.BibliotekaTest.BibliotekaTest.executor": "Run",
@@ -88,12 +93,14 @@
     "JUnit.ProjectTest.executor": "Run",
     "JUnit.ProjectTest.hrefBot.executor": "Run",
     "JUnit.ProjectTest.hrefPolitic.executor": "Run",
+    "JUnit.ProjectTest.hrefPoliticUser.executor": "Run",
     "JUnit.ProjectTest.poginacyaTest.executor": "Run",
     "JUnit.ProjectTest.projectTest.executor": "Run",
     "JUnit.ProjectTest.testHrefPolitiCopi.executor": "Run",
     "JUnit.ProjectTest.userTestAdmin.executor": "Run",
     "JUnit.RegaTest.RegasTest.executor": "Run",
     "JUnit.RegaTest.autorisationTest.executor": "Run",
+    "JUnit.RegaTest.randomAutorisationTest.executor": "Run",
     "JUnit.RegaTest.regNegaTest.executor": "Run",
     "JUnit.UserTest.UserCreateAdmin.executor": "Run",
     "JUnit.UserTest.UserCreateNabludatelyAdd.executor": "Run",
@@ -120,12 +127,14 @@
     "JUnit.UserTest.userInviteInspektor.executor": "Run",
     "JUnit.UserTest.userInviteNabludately.executor": "Run",
     "JUnit.UserTest.userInvitePodraydchic.executor": "Run",
+    "JUnit.UserTest.userSearchTest.executor": "Run",
     "JUnit.UserTest.userTestAdmin.executor": "Run",
     "JUnit.UserTest.userTestInspektor.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.AutorisaitionTest.testUserRole.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "30",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
@@ -139,8 +148,8 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.LogFileTest.logDelTest">
-    <configuration name="AutorisaitionTest.regEmailNegaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AutorisaitionTest.testUserRole">
+    <configuration name="BibliotekaTest.BibliotekaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -149,62 +158,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AutorisaitionTest" />
-      <option name="METHOD_NAME" value="regEmailNegaTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.BibliotekaTest" />
+      <option name="METHOD_NAME" value="BibliotekaTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AutorisaitionTest.regNegaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AutorisaitionTest" />
-      <option name="METHOD_NAME" value="regNegaTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AutorisaitionTest.restorePasswordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AutorisaitionTest" />
-      <option name="METHOD_NAME" value="restorePasswordTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LogFileTest.logDelTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
-      <option name="METHOD_NAME" value="logDelTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProjectTest.testHrefPolitiCopi" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectTest.hrefPoliticUser" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -214,19 +175,69 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="METHOD_NAME" value="testHrefPolitiCopi" />
+      <option name="METHOD_NAME" value="hrefPoliticUser" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTest.projectTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
+      <option name="METHOD_NAME" value="projectTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegaTest.randomAutorisationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.RegaTest" />
+      <option name="METHOD_NAME" value="randomAutorisationTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AutorisaitionTest.testUserRole" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AutorisaitionTest" />
+      <option name="METHOD_NAME" value="testUserRole" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.LogFileTest.logDelTest" />
-        <item itemvalue="JUnit.AutorisaitionTest.regEmailNegaTest" />
-        <item itemvalue="JUnit.AutorisaitionTest.restorePasswordTest" />
-        <item itemvalue="JUnit.AutorisaitionTest.regNegaTest" />
-        <item itemvalue="JUnit.ProjectTest.testHrefPolitiCopi" />
+        <item itemvalue="TestNG.AutorisaitionTest.testUserRole" />
+        <item itemvalue="JUnit.BibliotekaTest.BibliotekaTest" />
+        <item itemvalue="JUnit.RegaTest.randomAutorisationTest" />
+        <item itemvalue="JUnit.ProjectTest.projectTest" />
+        <item itemvalue="JUnit.ProjectTest.hrefPoliticUser" />
       </list>
     </recent_temporary>
   </component>
