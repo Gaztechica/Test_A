@@ -29,7 +29,7 @@ public class BibliotekaTest extends BaseTest {
 //        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
 //        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
 //        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(9000);
+
 
 //        getWait5().until(ExpectedCondition.visibilityOfElementLocated(By.xpath("//a[@href='/library']"))).click();
 //        WebElement actualdMessageText =  wait.until(ExpectedCondition.visi ((By.xpath("//a[@href='/library']")).click();
@@ -43,37 +43,34 @@ public class BibliotekaTest extends BaseTest {
         driver.findElement(By.xpath("//div[@class='CheckboxComponent__round-check']")).click();
         driver.findElement(By.xpath("//button[@class='CreateChecklist__addCategoryButton']")).click();
 
-        Thread.sleep(2000);
+
 
         driver.findElement(By.xpath("//textarea[@class='ant-input primaryInput  not-entered']")).sendKeys("Все организации");
 
-        Thread.sleep(2000);
+
         driver.findElement(By.xpath("//textarea[@class='ant-input primaryInput createCategoryModal__input not-entered']")).sendKeys("Все организации2");
-        Thread.sleep(2000);
+
         WebElement userRolesc2 = driver.findElement(By.xpath("//div[@class='createCategoryModal__buttonsPanel']//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]"));
         userRolesc2.click();
-        Thread.sleep(2000);
+
 //        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("Название чеклиста");
 //
 //        driver.findElement(By.xpath("//div[@class='CheckboxComponent__round-check']")).click();
          driver.findElement(By.xpath("//button[@class='CreateChecklist__addCategoryButton']")).click();
 
-        Thread.sleep(2000);
+
 
         driver.findElement(By.xpath("//textarea[@class='ant-input primaryInput  not-entered']")).sendKeys("Все организации3");
 
-        Thread.sleep(2000);
+
         driver.findElement(By.xpath("//textarea[@class='ant-input primaryInput createCategoryModal__input not-entered']")).sendKeys("Все организации4");
 
-        Thread.sleep(2000);
+
 //        WebElement userR2 = driver.findElement(By.xpath("//textarea[@class='ant-input primaryInput createCategoryModal__input not-entered']"));
 //        userR2.click();
-        Thread.sleep(2000);
+
         driver.findElement(By.xpath("//div[@class='createCategoryModal__buttonsPanel']//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Добавить')]")).click();
 
-
-
-//        Thread.sleep(2000);
         driver.quit();
     }
 }
