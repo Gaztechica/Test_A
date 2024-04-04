@@ -1,0 +1,46 @@
+Index: Auto_Test/src/test/java/ar/soft/runner/BaseTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package ar.soft.runner;\r\n\r\n//import arSoft.runner.FilterForTest.FilterForTests;\r\nimport io.github.bonigarcia.wdm.WebDriverManager;\r\nimport org.openqa.selenium.By;\r\nimport org.openqa.selenium.Dimension;\r\nimport org.openqa.selenium.WebDriver;\r\nimport org.openqa.selenium.chrome.ChromeDriver;\r\nimport org.openqa.selenium.support.ui.WebDriverWait;\r\nimport org.testng.annotations.AfterMethod;\r\nimport org.testng.annotations.BeforeMethod;\r\n\r\nimport java.lang.reflect.Method;\r\nimport java.time.Duration;\r\nimport java.util.concurrent.TimeUnit;\r\n\r\n//@Liisteners({FilterForTests.class})\r\npublic abstract class BaseTest {\r\n\r\n    public static final String URL = \"http://23.105.246.172:5000/login\";\r\n    public static final String INPUT_PASSWORD = \"//input[@class='ant-input']\";\r\n    public static final String INPUT_EMAIL = \"//input[@class='ant-input primaryInput  not-entered']\";\r\n    public static final String BTN_PASSWORD = \"//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']\";\r\n    public static final String EMAIL = \"f.ff.1980@list.ru\";\r\n    public static final String PASSWORD = \"012345678\";\r\n\r\n//    public static final String DESCRIPTION = \"Test description\";\r\n\r\n//    private static WebDriver driver;\r\n//    private WebDriver driver;\r\n\r\n    public WebDriver driver = new ChromeDriver();\r\n    @BeforeMethod\r\n    protected void beforeMethod(Method method) {\r\n        driver = new ChromeDriver();\r\n        getDriver().get(URL);\r\n        getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);\r\n        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);\r\n        getDriver().manage().window().setSize(new Dimension(1820,1080));\r\n    }\r\n\r\n    public void log() {\r\n        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);\r\n        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);\r\n        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();\r\n    }\r\n\r\n    @AfterMethod\r\n    protected void afterMethod(Method method) {\r\n        driver.quit();\r\n    }\r\n\r\n    protected WebDriver getDriver() {\r\n        return driver;\r\n    }\r\n\r\n    //    private Wait<WebDriver> wait = new WebDriverWait(getDriver(), Duration.ofSeconds(10));\r\n    private WebDriverWait wait2;\r\n    private WebDriverWait wait5;\r\n    private WebDriverWait wait10;\r\n\r\n//    public void login() {\r\n//        WebDriverManager.chromedriver().setup();\r\n//        getDriver().get(URL);\r\n//        getDriver().manage().window().setSize(new Dimension(1920,1080));\r\n//\r\n////        Configuration.browserSize = \"1920*1080\";\r\n//    }\r\n//    private void startDriver() {\r\n//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));\r\n//        driver.manage().timeouts().getPageLoadTimeout();\r\n//    }\r\n//      static void login() {\r\n//        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);\r\n//        driver.findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);\r\n//        driver.findElement(By.xpath(BTN_PASSWORD)).click();\r\n//    }\r\n\r\n    private void closeDriver() {\r\n        if (driver != null) {\r\n            driver.quit();\r\n\r\n            driver = null;\r\n            wait2 = null;\r\n            wait5 = null;\r\n            wait10 = null;\r\n\r\n            ProjectUtils.log(\"Browser closed\");\r\n        }\r\n    }\r\n\r\n\r\n//    @BeforeMethod\r\n//    public void initDriver() {\r\n//        driver = new ChromeDriver();\r\n//        getDriver().get(URL);\r\n//        getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);\r\n//        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);\r\n//        getDriver().manage().window().setSize(new Dimension(1920,1080));\r\n//        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);\r\n//        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);\r\n//        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();\r\n//\r\n////    protected void beforeMethod(Method method) {\r\n////        driver = new ChromeDriver(ProjectUtils.chromeOptions);\r\n////        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));\r\n////}\r\n//    }\r\n\r\n\r\n//    @AfterMethod\r\n//\r\n//    public void closDriver() {\r\n//        driver.quit();\r\n//    }\r\n////    protected void afterMethod(Method method, ITestResult testResult) {\r\n//        driver.quit();\r\n//    }\r\n\r\n\r\n    protected WebDriverWait getWait2() {\r\n        if (wait2 == null) {\r\n            wait2 = new WebDriverWait(getDriver(), Duration.ofSeconds(2));\r\n        }\r\n\r\n        return wait2;\r\n    }\r\n\r\n    protected WebDriverWait getWait5() {\r\n        if (wait5 == null) {\r\n            wait5 = new WebDriverWait(getDriver(), Duration.ofSeconds(5));\r\n        }\r\n\r\n        return wait5;\r\n    }\r\n\r\n    protected WebDriverWait getWait10() {\r\n        if (wait10 == null) {\r\n            wait10 = new WebDriverWait(getDriver(), Duration.ofSeconds(10));\r\n        }\r\n\r\n        return wait10;\r\n\r\n    }\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java b/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java
+--- a/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java	
++++ b/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java	
+@@ -47,7 +47,7 @@
+ 
+     @AfterMethod
+     protected void afterMethod(Method method) {
+-        driver.quit();
++//        driver.quit();
+     }
+ 
+     protected WebDriver getDriver() {
+Index: .idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44__Changes_.xml
+===================================================================
+diff --git a/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44__Changes_.xml b/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44__Changes_.xml
+deleted file mode 100644
+--- a/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44__Changes_.xml	
++++ /dev/null	
+@@ -1,19 +0,0 @@
+-<changelist name="Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44_[Changes]" date="1711558005929" recycled="true" deleted="true">
+-  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44_[Changes]/shelved.patch" />
+-  <option name="DESCRIPTION" value="Uncommitted changes before Checkout at 27.03.2024 027 20:44 [Changes]" />
+-  <binary>
+-    <option name="BEFORE_PATH" value="Auto_Test/target/test-classes/ar/soft/modelPage/base/BasePage.class" />
+-    <option name="AFTER_PATH" value="Auto_Test/target/test-classes/ar/soft/modelPage/base/BasePage.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44_[Changes]/BasePage.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="Auto_Test/target/test-classes/ar/soft/AutorisaitionTest.class" />
+-    <option name="AFTER_PATH" value="Auto_Test/target/test-classes/ar/soft/AutorisaitionTest.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44_[Changes]/AutorisaitionTest.class" />
+-  </binary>
+-  <binary>
+-    <option name="BEFORE_PATH" value="Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" />
+-    <option name="AFTER_PATH" value="Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" />
+-    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_03_2024_027_20_44_[Changes]/BaseTest.class" />
+-  </binary>
+-</changelist>
+\ No newline at end of file
