@@ -47,7 +47,7 @@ public abstract class BaseTest {
 
     @AfterMethod
     protected void afterMethod(Method method) {
-        driver.quit();
+//        driver.quit();
     }
 
     protected WebDriver getDriver() {
