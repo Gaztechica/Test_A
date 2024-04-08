@@ -16,8 +16,7 @@ public class LogFileTest extends BaseTest {
 
 
     @Test
-    public void fghjkl()throws InterruptedException {
-
+    public void cancelLogDelTest()throws InterruptedException {
         new UserPage(driver)
                 .login();
 
@@ -27,11 +26,10 @@ public class LogFileTest extends BaseTest {
 
     @Test
     public void logDelTest()throws InterruptedException {
-
         new UserPage(driver)
                 .login();
+        driver.findElement(By.xpath("//img[@src='/static/media/Basket.8774715cc0eccb962b78054dc111a9a8.svg']")).click();
 
-        driver.quit();
     }
 
 
