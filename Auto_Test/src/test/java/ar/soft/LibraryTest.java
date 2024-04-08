@@ -9,8 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LibraryTest extends BaseTest {
 
-    WebDriver driver = new ChromeDriver();
-
     private By normativeDocText = By.xpath("//div[@class='ant-dropdown-trigger'][contains(.,'Не задано')]");
 
     @Test

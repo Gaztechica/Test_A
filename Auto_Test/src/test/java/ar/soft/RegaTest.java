@@ -537,7 +537,7 @@ public class RegaTest extends BaseTest {
 
         driver.findElement(By.xpath("//input[@id='user_last_name']")).sendKeys("FamilyTest");
 
-        driver.findElement(By.xpath("//input[@id='user_email']")).sendKeys("yevgeniy.gor.91@mail.ru");
+        driver.findElement(By.xpath("//input[@id='user_email']")).sendKeys("yevgeniy@mail.ru");
 
         WebElement userTimezon = driver.findElement(By.xpath("//input[@id='user_timezone']"));
 

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 public class AutorisaitionTest extends BaseTest {
 
-    WebDriver driver = new ChromeDriver();
+//    WebDriver driver = new ChromeDriver();
 
     private final By getErrorText = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
     private final By getEmailText = By.xpath("//div[@class='ant-typography p_r RestorePassword__form-userNotFound']");

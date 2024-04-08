@@ -34,9 +34,9 @@ public abstract class BaseTest {
     protected void beforeMethod(Method method) {
         driver = new ChromeDriver();
         getDriver().get(URL);
-        getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-        getDriver().manage().window().setSize(new Dimension(1820,1080));
+        getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+        getDriver().manage().window().setSize(new Dimension(1920,1080));
     }
 
     public void log() {

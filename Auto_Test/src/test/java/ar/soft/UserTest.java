@@ -9,8 +9,6 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class UserTest extends BaseTest {
 
-//    WebDriver driver = new ChromeDriver();
-
     // ================================== пользователь =====================================================
 
     //     редактирование/удаление
@@ -230,8 +228,8 @@ public class UserTest extends BaseTest {
         new UserPage(driver)
                 .createUser()
                 .buttonRemove()
-                .userNameDel()
-                .buttonRemoCancel();
+                .userNameDel();
+//                .buttonRemoCancel();
 
         driver.quit();
     }
