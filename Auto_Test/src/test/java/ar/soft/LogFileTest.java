@@ -28,8 +28,9 @@ public class LogFileTest extends BaseTest {
     public void logDelTest()throws InterruptedException {
         new UserPage(driver)
                 .login();
+        driver.findElement(By.xpath("//a[@href='/logfiles']")).click();
         driver.findElement(By.xpath("//img[@src='/static/media/Basket.8774715cc0eccb962b78054dc111a9a8.svg']")).click();
-
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
     }
 
 
