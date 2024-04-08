@@ -3,18 +3,17 @@ package ar.soft;
 import ar.soft.modelPage.LibraryPage;
 import ar.soft.runner.BaseTest;
 import org.junit.Assert;
-import org.junit.Test;
+//import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class LibraryTest extends BaseTest {
 
     private By normativeDocText = By.xpath("//div[@class='ant-dropdown-trigger'][contains(.,'Не задано')]");
 
     @Test
-    public void normativeDocDeleteTest() throws InterruptedException {
-        new LibraryPage(driver)
-                .login();
+    public void normativeDocDeleteTest() {
         new LibraryPage(driver)
                 .libraryClick();
         driver.findElement(By.xpath("//div[@id='rc-tabs-0-tab-3']")).click();
@@ -25,12 +24,10 @@ public class LibraryTest extends BaseTest {
 
         Assert.assertEquals("Не задано", normativeDoc);
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
-
     }
+
     @Test
-    public void libraryChecListCreate() throws InterruptedException {
-        new LibraryPage(driver)
-                .login();
+    public void libraryChecListCreate() {
         new LibraryPage(driver)
                 .libraryClick()
                 .buttonChecListCreateClick()
@@ -49,8 +46,6 @@ public class LibraryTest extends BaseTest {
                 .inputChecklistCategorySubcateNameSent()
                 .buttonChecklistCategory()
                 .buttonChecklistAdd();
-
-        driver.quit();
     }
 
     @Test

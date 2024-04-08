@@ -3,11 +3,12 @@ package ar.soft;
 import ar.soft.modelPage.ProgectPage;
 import ar.soft.runner.BaseTest;
 import org.junit.Assert;
-import org.junit.Test;
+//import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Wait;
+import org.testng.annotations.Test;
 
 import java.util.ArrayList;
 import java.util.Set;
@@ -24,8 +25,8 @@ public class ProjectTest extends BaseTest {
     @Test
     public void createProgect() throws InterruptedException {
 
-        new ProgectPage(driver)
-                .login();
+//        new ProgectPage(driver)
+//                .login();
 
         new ProgectPage(driver)
                 .buttonCreateProgect();
@@ -68,10 +69,7 @@ public class ProjectTest extends BaseTest {
     }
 
     @Test
-    public void cancelCreateProgectTest() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .login();
+    public void cancelCreateProgectTest() {
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
@@ -192,22 +190,17 @@ public class ProjectTest extends BaseTest {
     // ================================== ссылки =====================================================
 
     @Test
-    public void hrefPolitic() throws InterruptedException {
-        new ProgectPage(driver)
-                .login();
+    public void hrefPolitic() {
         driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
 
         ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(newTab.get(1));
 
         Assert.assertEquals("Политика обработки персональных данных", driver.findElement(getPoliticaText).getText());
-        driver.quit();
     }
 
     @Test
-    public void testHrefPolitiCopi() throws InterruptedException{
-        new ProgectPage(driver)
-                .login();
+    public void testHrefPolitiCopi() {
 
 //        getWait15().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"))).click();
         driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
@@ -221,11 +214,7 @@ public class ProjectTest extends BaseTest {
 
 
     @Test
-    public void hrefPoliticUser() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .login();
-
+    public void hrefPoliticUser() {
         driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/user-agreement-armobail/']")).click();
 
         ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
@@ -234,16 +223,11 @@ public class ProjectTest extends BaseTest {
         String getPoliticaUser = driver.findElement(getPoliticaUserText).getText();
 
         Assert.assertEquals("Предмет пользовательского соглашения", getPoliticaUser);
-        driver.quit();
     }
 
 
     @Test
-    public void hrefBot() throws InterruptedException {
-
-        new ProgectPage(driver)
-                .login();
-
+    public void hrefBot() {
         driver.findElement(By.xpath("//a[@href='https://t.me/arsoft_support_bot']")).click();
 
         ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
@@ -251,7 +235,6 @@ public class ProjectTest extends BaseTest {
         String getBot = driver.findElement(getBotText).getText();
 
         Assert.assertEquals("AR SOFT support", getBot);
-        driver.quit();
     }
 
 //    =================================================
@@ -264,11 +247,7 @@ public class ProjectTest extends BaseTest {
 
     // нет изменения кол-ва строк на странице
     @Test
-    public void projectTest() throws InterruptedException{
-
-        new ProgectPage(driver)
-                .login();
-
+    public void projectTest() {
 
 //=============================================================
 
@@ -304,12 +283,12 @@ public class ProjectTest extends BaseTest {
 //        simpl.selectByValue("two");
 //        String newValue = selectWithoutMultiple.getAttribute("value");
 
-        Thread.sleep(3000);
+
 //        elemPage.sendKeys(Keys.ARROW_DOWN);
         elemPage.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
         elemPage.sendKeys(Keys.ENTER);
 
-        Thread.sleep(1000);
+
 
 //         WebElement elemPage2 = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='50']"));
 //
