@@ -3,9 +3,10 @@ package ar.soft;
 import ar.soft.modelPage.UserPage;
 import ar.soft.modelPage.base.BasePage;
 import ar.soft.runner.BaseTest;
-import org.junit.Test;
+//import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.Test;
 
 public class UserTest extends BaseTest {
 
@@ -14,9 +15,7 @@ public class UserTest extends BaseTest {
     //     редактирование/удаление
 
     @Test
-    public void userCreateAdmin() throws InterruptedException {
-        new UserPage(driver)
-                .login();
+    public void userCreateAdmin() {
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -32,13 +31,10 @@ public class UserTest extends BaseTest {
                 .userPassword("zxcvbnm123")
                 .userPasswordClick()
                 .buttonSave();
-//        driver.quit();
     }
 
     @Test
-    public void userCreateInspektor() throws InterruptedException {
-        new UserPage(driver)
-                .login();
+    public void userCreateInspektor() {
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -56,15 +52,10 @@ public class UserTest extends BaseTest {
                 .userPasswordClick()
                 .buttonSave();
 //        WebElement buttonPassword = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']"));
-        driver.quit();
-
     }
 
     @Test
-    public void userCreatePodraydchic() throws InterruptedException {
-
-        new UserPage(driver)
-                .login();
+    public void userCreatePodraydchic() {
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -85,15 +76,10 @@ public class UserTest extends BaseTest {
                 .userPassword("zxcvbnm123")
                 .userPasswordClick()
                 .buttonDeleteClick();
-
-        driver.quit();
     }
 
     @Test
-    public void userCreateNabludately() throws InterruptedException {
-
-        new UserPage(driver)
-                .login();
+    public void userCreateNabludately() {
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -115,15 +101,10 @@ public class UserTest extends BaseTest {
                 .userPassword("zxcvbnm123")
                 .userPasswordClick()
                 .buttonDeleteClick();
-
-        driver.quit();
     }
 
     @Test
-    public void userCreatePodraydchiAdd() throws InterruptedException {
-
-        new UserPage(driver)
-                .login();
+    public void userCreatePodraydchiAdd() {
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -145,15 +126,10 @@ public class UserTest extends BaseTest {
                 .userPassword("zxcvbnm123")
                 .userPasswordClick()
                 .buttonDeleteClick();
-
-        driver.quit();
     }
 
     @Test
-    public void userCreateNabludatelyAdd() throws InterruptedException {
-
-        new UserPage(driver)
-                .login();
+    public void userCreateNabludatelyAdd() {
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -177,15 +153,10 @@ public class UserTest extends BaseTest {
                 .userPassword("zxcvbnm123")
                 .userPasswordClick()
                 .buttonSave();
-
-        driver.quit();
     }
 
     @Test
-    public void userCreateRemove() throws InterruptedException {
-
-        new UserPage(driver)
-                .login();
+    public void userCreateRemove() {
         new UserPage(driver)
                 .createUser()
                 .createUserClick()
@@ -217,29 +188,21 @@ public class UserTest extends BaseTest {
                 .userNameClear()
                 .userName("Отменить");
 //                .buttonSave();
-
-//        driver.quit();
     }
 
     @Test
-    public void userCreateDelete() throws InterruptedException {
-        new UserPage(driver)
-                .login();
+    public void userCreateDelete() {
         new UserPage(driver)
                 .createUser()
                 .buttonRemove()
                 .userNameDel();
 //                .buttonRemoCancel();
-
-        driver.quit();
     }
 
 
     //        не работает сортировка по организациям     смена страниц
     @Test
-    public void userCreateAdminSearch() throws InterruptedException {
-        new UserPage(driver)
-                .login();
+    public void userCreateAdminSearch() {
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -276,9 +239,7 @@ public class UserTest extends BaseTest {
 
     //        не работает сортировка по организациям нет кнопок отменить/пригласить
     @Test
-    public void userInviteAdmin() throws InterruptedException {
-        new UserPage(driver)
-                .login();
+    public void userInviteAdmin() {
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -286,13 +247,10 @@ public class UserTest extends BaseTest {
                 .inviteRolesClick()
                 .inviteRolesEnter()
                 .buttonDeleteClick();
-        driver.quit();
     }
 
     @Test
-    public void userInviteInspektor() throws InterruptedException {
-        new UserPage(driver)
-                .login();
+    public void userInviteInspektor() {
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -301,48 +259,15 @@ public class UserTest extends BaseTest {
                 .inviteRolesArron()
                 .inviteRolesEnter()
                 .buttonDeleteClick();
-        driver.quit();
     }
 
     @Test
-    public void userInvitePodraydchic() throws InterruptedException {
-        new UserPage(driver)
-                .login();
+    public void userInvitePodraydchic() {
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
                 .inviteUserEmail(UserPage.USER_NAME)
                 .inviteRolesClick()
-//        Thread.sleep(4000);
-//        new UserPage(driver)
-                .inviteRolesArron()
-
-//        Thread.sleep(2000);
-//        new UserPage(driver)
-                .inviteRolesArron()
-                .inviteRolesEnter()
-                .inviteRolesEmploymentClick()
-                .inviteRoleEmplomentArro()
-                .inviteRolesEmploymentEnter()
-                .buttonDeleteClick();
-        driver.quit();
-    }
-
-    @Test
-    public void userInviteNabludately() throws InterruptedException {
-        new UserPage(driver)
-                .login();
-        new UserPage(driver)
-                .createUser()
-                .inviteUserClick()
-                .inviteUserEmail(UserPage.USER_NAME)
-                .inviteRolesClick()
-//        Thread.sleep(2000);
-//        new UserPage(driver)
-                .inviteRolesArron()
-
-//        Thread.sleep(2000);
-//        new UserPage(driver)
                 .inviteRolesArron()
                 .inviteRolesArron()
                 .inviteRolesEnter()
@@ -350,13 +275,27 @@ public class UserTest extends BaseTest {
                 .inviteRoleEmplomentArro()
                 .inviteRolesEmploymentEnter()
                 .buttonDeleteClick();
-        driver.quit();
     }
 
     @Test
-    public void userCreatePodraydchicAdd() throws InterruptedException {
+    public void userInviteNabludately() {
         new UserPage(driver)
-                .login();
+                .createUser()
+                .inviteUserClick()
+                .inviteUserEmail(UserPage.USER_NAME)
+                .inviteRolesClick()
+                .inviteRolesArron()
+                .inviteRolesArron()
+                .inviteRolesArron()
+                .inviteRolesEnter()
+                .inviteRolesEmploymentClick()
+                .inviteRoleEmplomentArro()
+                .inviteRolesEmploymentEnter()
+                .buttonDeleteClick();
+    }
+
+    @Test
+    public void userCreatePodraydchicAdd() {
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -371,14 +310,10 @@ public class UserTest extends BaseTest {
                 .createRolesEmplomentSent()
                 .inviteRoleEmplomentEnter()
                 .buttonDeleteClick();
-        driver.quit();
     }
 
     @Test
-
-    public void userCreaNabludatelyAdd() throws InterruptedException {
-        new UserPage(driver)
-                .login();
+    public void userCreaNabludatelyAdd() {
         new UserPage(driver)
                 .createUser()
                 .inviteUserClick()
@@ -394,14 +329,11 @@ public class UserTest extends BaseTest {
                 .createRolesEmplomentSent()
                 .inviteRoleEmplomentEnter()
                 .buttonDeleteClick();
-        driver.quit();
     }
 
     //        не работает сортировка по организациям
     @Test
-    public void userSearchTest() throws InterruptedException {
-        new UserPage(driver)
-                .login();
+    public void userSearchTest() {
         new UserPage(driver)
                 .createUser()
                 .searchInputClick()
@@ -431,7 +363,7 @@ public class UserTest extends BaseTest {
         WebElement userRolesx = driver.findElement(By.xpath("//span[@class='ant-select-selection-item']"));
         userRolesx.click();
         userRolesx.sendKeys(Keys.ARROW_DOWN);
-        Thread.sleep(2000);
+
 //        WebElement userRoles = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'Все организации')]"));
 //        WebElement userRoles = driver.findElement(By.xpath("//*[@id=\"root\"]/section/main/div/div/div[1]/div[1]/div[1]/div/div/span[2]"));
 //        WebElement userRoles = driver.findElement(By.xpath("//span[@title='Все организации']"));
@@ -447,7 +379,5 @@ public class UserTest extends BaseTest {
 
         new UserPage(driver)
                 .buttonDeleteClick();
-
-//        driver.quit();
     }
 }

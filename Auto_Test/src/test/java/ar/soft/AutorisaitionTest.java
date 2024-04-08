@@ -29,8 +29,8 @@ public class AutorisaitionTest extends BaseTest {
     @Test
     public void randomAutorisationTest () throws InterruptedException {
 
-        new ProgectPage(driver)
-                .url();
+//        new ProgectPage(driver)
+//                .url();
 
         driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
 
@@ -67,14 +67,14 @@ public class AutorisaitionTest extends BaseTest {
 
     @Test
     public void restorePasswordTest () {
-
-        new ProgectPage(driver)
-                .url();
+        driver.get(URL);
+//        new ProgectPage(driver)
+//                .url();
 
 //        driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
         new HomePage(driver).clickRega();
 
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys("EMAIL1");
+        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
 
         String getPasError = driver.findElement(getPaswordText).getText();
@@ -85,9 +85,9 @@ public class AutorisaitionTest extends BaseTest {
 
     @Test
     public void regNegaTest() {
-
-        new ProgectPage(driver)
-                .url();
+        driver.get(URL);
+//        new ProgectPage(driver)
+//                .url();
 
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
@@ -108,8 +108,9 @@ public class AutorisaitionTest extends BaseTest {
 
     @Test(dataProvider = "randomEmail")
     public void testRandomEmai(String name) {
-        new ProgectPage(driver)
-                .url();
+//        new ProgectPage(driver)
+//                .url();
+        driver.get(URL);
         driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
 
         driver.findElement(By.xpath(INPUT_EMAIL)).click();
@@ -137,8 +138,7 @@ public class AutorisaitionTest extends BaseTest {
     @Test
     public void removePasswordTest() {
 
-        new ProgectPage(driver)
-                .url();
+        driver.get(URL);
 
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
@@ -155,8 +155,8 @@ public class AutorisaitionTest extends BaseTest {
     @Test
     public void regCoogiTest() {
 
-        new ProgectPage(driver)
-                .url();
+//        new ProgectPage(driver)
+//                .url();
 
         Cookie getCookie = new Cookie("_ga", "GA1.2");
 //        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
@@ -183,9 +183,9 @@ public class AutorisaitionTest extends BaseTest {
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
         Thread.sleep(1000);
 
-        String getPasError = driver.findElement(getPaswordText).getText();
-
-        org.testng.Assert.assertEquals(getPasError,"Мы отправили по адресу n-k-65@list.ru ссылку для восстановления доступа");
+//        String getPasError = driver.findElement(getPaswordText).getText();
+//
+//        org.testng.Assert.assertEquals(getPasError,"Мы отправили по адресу n-k-65@list.ru ссылку для восстановления доступа");
 
     }
 

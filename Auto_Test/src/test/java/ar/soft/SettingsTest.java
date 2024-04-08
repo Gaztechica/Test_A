@@ -10,9 +10,7 @@ import org.testng.annotations.Test;
 public class SettingsTest extends BaseTest {
 
     @Test
-    public void settingsTest() throws InterruptedException {
-        new UserPage(driver)
-                .login();
+    public void settingsTest() {
         driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")).click();
         driver.findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')]")).click();
         driver.findElement(By.xpath("//div[@class='Sidebar__project-name'][contains(.,'1Новый проект')]")).click();
