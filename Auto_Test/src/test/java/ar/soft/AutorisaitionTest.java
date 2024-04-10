@@ -139,18 +139,17 @@ public class AutorisaitionTest extends BaseTest {
 
 //    добавить куки почты и вводить полученное письмо для замены пароля
    @Ignore
-    @Test
-    public void regCoogiTest() {
-
-        Cookie getCookie = new Cookie("_ga", "GA1.2");
+   @Test
+   public void CookieTest() {
+       Cookie getCookie = new Cookie("_ga", "GA1.2");
 //        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
 //        driver.findElement(By.xpath(BTN_PASSWORD)).click();
 
 //        String getError = driver.findElement(getErrorText).getText();
 //
 //        Assert.assertEquals(getError,"Неправильный логин или пароль");
-//        driver.quit();
-    }
+   }
+
 
     //      ======  добавить проверку ===
 
