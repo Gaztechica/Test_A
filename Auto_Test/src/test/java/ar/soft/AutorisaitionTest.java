@@ -151,7 +151,18 @@ public class AutorisaitionTest extends BaseTest {
    }
 
 
-    //      ======  добавить проверку ===
+    @Test
+    public void cookieTest() {
+        Cookie getCookie = new Cookie("_ga", "GA1.2");
+//        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
+//        driver.findElement(By.xpath(BTN_PASSWORD)).click();
+
+//        String getError = driver.findElement(getErrorText).getText();
+//
+//        Assert.assertEquals(getError,"Неправильный логин или пароль");
+        //      ======  добавить проверку ===
+    }
+
 
     @Test
     public void regaTest() throws InterruptedException {
