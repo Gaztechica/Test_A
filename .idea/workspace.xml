@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserSidebarTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/BibliotekaTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/DashboardsTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/LibraryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/LibraryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/LogFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/LogFileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/BibliotekaTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/LibraryTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/LibraryTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/LogFileTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/LogFileTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,6 +107,7 @@
     "JUnit.ProjectTest.userTestAdmin.executor": "Run",
     "JUnit.RegaTest.RegasTest.executor": "Run",
     "JUnit.RegaTest.autorisationTest.executor": "Run",
+    "JUnit.RegaTest.passwordTest.executor": "Run",
     "JUnit.RegaTest.randomAutorisationTest.executor": "Run",
     "JUnit.RegaTest.regNegaTest.executor": "Run",
     "JUnit.UserTest.UserCreateAdmin.executor": "Run",
@@ -154,6 +151,7 @@
     "TestNG.DashboardsTest.cumulativeTest.executor": "Run",
     "TestNG.DashboardsTest.dashboardsTest.executor": "Run",
     "TestNG.LogFileTest.cancelLogDelTest.executor": "Run",
+    "TestNG.LogFileTest.localizTest.executor": "Run",
     "TestNG.LogFileTest.logSerchTest.executor": "Run",
     "TestNG.ProjectTest.cancelCreateProgectTest.executor": "Run",
     "TestNG.ProjectTest.createProgect.executor": "Run",
@@ -161,10 +159,11 @@
     "TestNG.ProjectTest.poginacyaTest.executor": "Run",
     "TestNG.RemarcTest.КemarcTest.executor": "Run",
     "TestNG.SettingsTest.settingsTest.executor": "Run",
+    "TestNG.UserSidebarTest.addUserTest.executor": "Run",
     "TestNG.UserTest.userCreateAdmin.executor": "Run",
     "TestNG.UserTest.userInvitePodraydchic.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "36",
+    "git-widget-placeholder": "37",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
@@ -178,8 +177,8 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DashboardsTest.cumulativeTest">
-    <configuration name="DashboardsTest.BibliotekaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LogFileTest.localizTest">
+    <configuration name="RegaTest.passwordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -188,8 +187,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.DashboardsTest" />
-      <option name="METHOD_NAME" value="BibliotekaTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.RegaTest" />
+      <option name="METHOD_NAME" value="passwordTest" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -213,25 +212,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DashboardsTest.dashboardsTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.DashboardsTest" />
-      <option name="METHOD_NAME" value="dashboardsTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LogFileTest.logSerchTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="LogFileTest.localizTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -241,7 +222,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
-      <option name="METHOD_NAME" value="logSerchTest" />
+      <option name="METHOD_NAME" value="localizTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -249,7 +230,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SettingsTest.settingsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserSidebarTest.addUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -258,8 +239,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.SettingsTest" />
-      <option name="METHOD_NAME" value="settingsTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
+      <option name="METHOD_NAME" value="addUserTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.userCreateAdmin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
+      <option name="METHOD_NAME" value="userCreateAdmin" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -269,11 +268,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LogFileTest.localizTest" />
+        <item itemvalue="JUnit.RegaTest.passwordTest" />
+        <item itemvalue="TestNG.UserTest.userCreateAdmin" />
+        <item itemvalue="TestNG.UserSidebarTest.addUserTest" />
         <item itemvalue="TestNG.DashboardsTest.cumulativeTest" />
-        <item itemvalue="TestNG.DashboardsTest.dashboardsTest" />
-        <item itemvalue="TestNG.SettingsTest.settingsTest" />
-        <item itemvalue="TestNG.LogFileTest.logSerchTest" />
-        <item itemvalue="JUnit.DashboardsTest.BibliotekaTest" />
       </list>
     </recent_temporary>
   </component>

@@ -34,4 +34,13 @@ public class LogFileTest extends BaseTest {
         driver.findElement(By.xpath("//a[@href='/logfiles']")).click();
         driver.findElement(By.xpath("//input[@id='rc_select_2']")).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
     }
+
+    @Test
+    public void localizTest() {
+        driver.findElement(By.xpath("//h2[@class='ant-typography h2_sb']")).click();
+        driver.findElement(By.xpath("//div[@class='ant-typography p_r Profile__item'][contains(.,'Профиль')]")).click();
+        driver.findElement(By.xpath("//input[@id='editedUser_lang']")).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+        driver.findElement(By.xpath("//div[@class='ant-typography p_r Profile__item'][contains(.,'Профиль')]")).click();
+
+    }
 }
