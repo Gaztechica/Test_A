@@ -4,6 +4,7 @@ package ar.soft.runner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,17 +18,20 @@ import java.util.concurrent.TimeUnit;
 //@Liisteners({FilterForTests.class})
 public abstract class BaseTest {
 
+//    public void XRBP() {
+//        String URL = "http://31.129.103.215:3000/login";
+//
+//    }
+//
+//    public void Armw() {
+//    final String URL = "http://23.105.246.172:5000/login";
+//    }
     public static final String URL = "http://23.105.246.172:5000/login";
     public static final String INPUT_PASSWORD = "//input[@class='ant-input']";
     public static final String INPUT_EMAIL = "//input[@class='ant-input primaryInput  not-entered']";
     public static final String BTN_PASSWORD = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']";
     public static final String EMAIL = "f.ff.1980@list.ru";
     public static final String PASSWORD = "012345678";
-
-//    public static final String DESCRIPTION = "Test description";
-
-//    private static WebDriver driver;
-//    private WebDriver driver;
 
     public WebDriver driver = new ChromeDriver();
 //    @BeforeMethod
@@ -100,6 +104,12 @@ public abstract class BaseTest {
         getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
         getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
+
+//         ===================== смена языка ===================
+//        driver.findElement(By.xpath("//h2[@class='ant-typography h2_sb']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-typography p_r Profile__item'][contains(.,'Профиль')]")).click();
+//        driver.findElement(By.xpath("//input[@id='editedUser_lang']")).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+//        driver.findElement(By.xpath("//h1[@class='ant-typography h1_sb HeaderMain__link']")).click();
     }
 ////    protected void beforeMethod(Method method) {
 ////        driver = new ChromeDriver(ProjectUtils.chromeOptions);
@@ -110,9 +120,7 @@ public abstract class BaseTest {
 
 //    @AfterMethod
 //
-//    public void closDriver() {
-//        driver.quit();
-//    }
+//
 ////    protected void afterMethod(Method method, ITestResult testResult) {
 //        driver.quit();
 //    }
