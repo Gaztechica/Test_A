@@ -25,9 +25,6 @@ public class ProjectTest extends BaseTest {
     @Test
     public void createProgect() throws InterruptedException {
 
-//        new ProgectPage(driver)
-//                .login();
-
         new ProgectPage(driver)
                 .buttonCreateProgect();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");

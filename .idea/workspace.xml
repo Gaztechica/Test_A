@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,6 +148,7 @@
     "TestNG.AutorisaitionTest.testUserRole.executor": "Run",
     "TestNG.DashboardsTest.cumulativeTest.executor": "Run",
     "TestNG.DashboardsTest.dashboardsTest.executor": "Run",
+    "TestNG.LibraryTest.normativeDocDeleteTest.executor": "Run",
     "TestNG.LogFileTest.cancelLogDelTest.executor": "Run",
     "TestNG.LogFileTest.localizTest.executor": "Run",
     "TestNG.LogFileTest.logSerchTest.executor": "Run",
@@ -160,7 +162,7 @@
     "TestNG.UserTest.userCreateAdmin.executor": "Run",
     "TestNG.UserTest.userInvitePodraydchic.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "38",
+    "git-widget-placeholder": "40",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
@@ -174,23 +176,7 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserTest.userCreateAdmin">
-    <configuration name="RegaTest.passwordTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.RegaTest" />
-      <option name="METHOD_NAME" value="passwordTest" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.LibraryTest.normativeDocDeleteTest">
     <configuration name="AutorisaitionTest.regaTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -220,6 +206,24 @@
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AutorisaitionTest" />
       <option name="METHOD_NAME" value="removePasswordTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LibraryTest.normativeDocDeleteTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.LibraryTest" />
+      <option name="METHOD_NAME" value="normativeDocDeleteTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -265,11 +269,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LibraryTest.normativeDocDeleteTest" />
         <item itemvalue="TestNG.UserTest.userCreateAdmin" />
         <item itemvalue="TestNG.AutorisaitionTest.regaTest" />
         <item itemvalue="TestNG.AutorisaitionTest.removePasswordTest" />
         <item itemvalue="TestNG.LogFileTest.localizTest" />
-        <item itemvalue="JUnit.RegaTest.passwordTest" />
       </list>
     </recent_temporary>
   </component>
