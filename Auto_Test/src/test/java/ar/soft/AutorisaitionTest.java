@@ -14,8 +14,6 @@ import java.util.ArrayList;
 
 public class AutorisaitionTest extends BaseTest {
 
-//    WebDriver driver = new ChromeDriver();
-
     private final By getErrorText = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
     private final By getEmailText = By.xpath("//div[@class='ant-typography p_r RestorePassword__form-userNotFound']");
 
@@ -28,9 +26,6 @@ public class AutorisaitionTest extends BaseTest {
 
     @Test
     public void randomAutorisationTest () throws InterruptedException {
-
-//        new ProgectPage(driver)
-//                .url();
 
         driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
 
@@ -68,8 +63,7 @@ public class AutorisaitionTest extends BaseTest {
     @Test
     public void restorePasswordTest () {
         driver.get(URL);
-//        new ProgectPage(driver)
-//                .url();
+
 
 //        driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
         new HomePage(driver).clickRega();
@@ -86,16 +80,12 @@ public class AutorisaitionTest extends BaseTest {
     @Test
     public void regNegaTest() {
         driver.get(URL);
-//        new ProgectPage(driver)
-//                .url();
-
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
 
         String getError = driver.findElement(getErrorText).getText();
 
         Assert.assertEquals(getError,"Неправильный логин или пароль");
-//        driver.quit();
     }
 
     @DataProvider(name = "randomEmail")
@@ -108,8 +98,6 @@ public class AutorisaitionTest extends BaseTest {
 
     @Test(dataProvider = "randomEmail")
     public void testRandomEmai(String name) {
-//        new ProgectPage(driver)
-//                .url();
         driver.get(URL);
         driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
 
@@ -120,21 +108,20 @@ public class AutorisaitionTest extends BaseTest {
 
         Assert.assertEquals(driver.findElement(getEmailText).getText(),"Пользователь не найден, попробуйте снова");
     }
-//
-//    @Test(dataProvider = "randomEmail")
-//    public void regEmailNegaTest(String name) {
-//
-//        new ProgectPage(driver)
-//                .url();
-//
-//        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
-//        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-//
-//        String getError = driver.findElement(getErrorText).getText();
-//
-//        Assert.assertEquals(getError,"Неправильный логин или пароль");
-////        driver.quit();
-//    }
+
+    @Test(dataProvider = "randomEmail")
+    public void regEmailNegaTest(String name) {
+
+        driver.get(URL);
+
+        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
+        driver.findElement(By.xpath(BTN_PASSWORD)).click();
+
+        String getError = driver.findElement(getErrorText).getText();
+
+        Assert.assertEquals(getError,"Неправильный логин или пароль");
+
+    }
     @Test
     public void removePasswordTest() {
 
@@ -152,21 +139,17 @@ public class AutorisaitionTest extends BaseTest {
 
 //    добавить куки почты и вводить полученное письмо для замены пароля
    @Ignore
-    @Test
-    public void regCoogiTest() {
-
-//        new ProgectPage(driver)
-//                .url();
-
-        Cookie getCookie = new Cookie("_ga", "GA1.2");
+   @Test
+   public void CookieTest() {
+       Cookie getCookie = new Cookie("_ga", "GA1.2");
 //        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
 //        driver.findElement(By.xpath(BTN_PASSWORD)).click();
 
 //        String getError = driver.findElement(getErrorText).getText();
 //
 //        Assert.assertEquals(getError,"Неправильный логин или пароль");
-//        driver.quit();
-    }
+   }
+
 
     //      ======  добавить проверку ===
 
@@ -174,18 +157,18 @@ public class AutorisaitionTest extends BaseTest {
     public void regaTest() throws InterruptedException {
 
         driver.get(URL);
-        Thread.sleep(1000);
+
 
         driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
 
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
 
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
-        Thread.sleep(1000);
+
 
 //        String getPasError = driver.findElement(getPaswordText).getText();
 //
-//        org.testng.Assert.assertEquals(getPasError,"Мы отправили по адресу n-k-65@list.ru ссылку для восстановления доступа");
+//        Assert.assertEquals(getPasError,"Мы отправили по адресу n-k-65@list.ru ссылку для восстановления доступа");
 
     }
 
