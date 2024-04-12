@@ -36,6 +36,7 @@ public abstract class BaseTest {
     public static final String PASSWORD = "012345678";
 
     public WebDriver driver = new ChromeDriver();
+
 //    @BeforeMethod
 //    protected void beforeMethod(Method method) {
 //        driver = new ChromeDriver();

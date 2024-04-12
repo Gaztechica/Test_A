@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4" />
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/RemarcSidebarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RemarcSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RemarcSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/RemarcSidebarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/RemarcSidebarTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -145,6 +152,7 @@
     "TestNG.AutorisaitionTest.testRandomRega.executor": "Run",
     "TestNG.AutorisaitionTest.testUserRole.executor": "Run",
     "TestNG.DashboardsSidebarTest.cumulativeTest.executor": "Run",
+    "TestNG.DashboardsSidebarTest.dashboardsTest.executor": "Run",
     "TestNG.DashboardsTest.cumulativeTest.executor": "Run",
     "TestNG.DashboardsTest.dashboardsTest.executor": "Run",
     "TestNG.LibraryTest.normativeDocDeleteTest.executor": "Run",
@@ -155,6 +163,7 @@
     "TestNG.ProjectTest.createProgect.executor": "Run",
     "TestNG.ProjectTest.hrefPolitic.executor": "Run",
     "TestNG.ProjectTest.poginacyaTest.executor": "Run",
+    "TestNG.RemarcSidebarTest.КemarcTest.executor": "Run",
     "TestNG.RemarcTest.КemarcTest.executor": "Run",
     "TestNG.SettingsTest.settingsTest.executor": "Run",
     "TestNG.UserSidebarTest.addUserTest.executor": "Run",
@@ -179,7 +188,7 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DashboardsSidebarTest.dashboardsTest">
+  <component name="RunManager" selected="TestNG.RemarcSidebarTest.КemarcTest">
     <configuration name="DashboardsSidebarTest.cumulativeTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -209,6 +218,24 @@
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.DashboardsSidebarTest" />
       <option name="METHOD_NAME" value="dashboardsTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RemarcSidebarTest.КemarcTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.RemarcSidebarTest" />
+      <option name="METHOD_NAME" value="КemarcTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -252,31 +279,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.userCreateAdmin" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="userCreateAdmin" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RemarcSidebarTest.КemarcTest" />
         <item itemvalue="TestNG.DashboardsSidebarTest.dashboardsTest" />
         <item itemvalue="TestNG.DashboardsSidebarTest.cumulativeTest" />
         <item itemvalue="TestNG.UserSidebarTest.deleteUserTest" />
         <item itemvalue="TestNG.UserSidebarTest.addUserTest" />
-        <item itemvalue="TestNG.UserTest.userCreateAdmin" />
       </list>
     </recent_temporary>
   </component>
@@ -295,14 +304,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
-      <option name="closed" value="true" />
-      <created>1710138114203</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1710138114203</updated>
     </task>
     <task id="LOCAL-00013" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
       <option name="closed" value="true" />
@@ -688,7 +689,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712910187850</updated>
     </task>
-    <option name="localTasksCounter" value="61" />
+    <task id="LOCAL-00061" summary="Merge remote-tracking branch 'origin/main4' into main4">
+      <option name="closed" value="true" />
+      <created>1712912528889</created>
+      <option name="number" value="00061" />
+      <option name="presentableId" value="LOCAL-00061" />
+      <option name="project" value="LOCAL" />
+      <updated>1712912528889</updated>
+    </task>
+    <option name="localTasksCounter" value="62" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -729,6 +738,11 @@
           <url>file://$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserTest.java</url>
           <line>316</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/UserPage.java</url>
+          <line>73</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
