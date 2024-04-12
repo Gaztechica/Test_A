@@ -3,11 +3,9 @@ package ar.soft;
 import ar.soft.runner.BaseTest;
 //import org.junit.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
-public class DashboardsTest extends BaseTest {
+public class DashboardsSidebarTest extends BaseTest {
 
     // ================================== Дашборды =====================================================
     @Test

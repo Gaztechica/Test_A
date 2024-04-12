@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/local.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/local.properties.TEMPLATE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/DashboardsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/DashboardsSidebarTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RemarcTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RemarcSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/SettingsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/SettingsSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/AutorisaitionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/AutorisaitionTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/DashboardsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/RemarcTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/SettingsTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/UserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,6 +161,7 @@
     "TestNG.AutorisaitionTest.removePasswordTest.executor": "Run",
     "TestNG.AutorisaitionTest.restorePasswordTest.executor": "Run",
     "TestNG.AutorisaitionTest.testRandomEmai.executor": "Run",
+    "TestNG.AutorisaitionTest.testRandomRega.executor": "Run",
     "TestNG.AutorisaitionTest.testUserRole.executor": "Run",
     "TestNG.DashboardsTest.cumulativeTest.executor": "Run",
     "TestNG.DashboardsTest.dashboardsTest.executor": "Run",
@@ -159,12 +176,15 @@
     "TestNG.RemarcTest.КemarcTest.executor": "Run",
     "TestNG.SettingsTest.settingsTest.executor": "Run",
     "TestNG.UserSidebarTest.addUserTest.executor": "Run",
+    "TestNG.UserSidebarTest.deleteUserTest.executor": "Run",
     "TestNG.UserTest.userCreateAdmin.executor": "Run",
+    "TestNG.UserTest.userCreateDelete.executor": "Run",
+    "TestNG.UserTest.userInviteAdmin.executor": "Run",
     "TestNG.UserTest.userInvitePodraydchic.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "40",
+    "git-widget-placeholder": "41",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   }
 }]]></component>
@@ -173,11 +193,12 @@
       <recent name="ar.soft" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test" />
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LibraryTest.normativeDocDeleteTest">
-    <configuration name="AutorisaitionTest.regaTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.UserSidebarTest.deleteUserTest">
+    <configuration name="AutorisaitionTest.testRandomRega" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -187,7 +208,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AutorisaitionTest" />
-      <option name="METHOD_NAME" value="regaTest" />
+      <option name="METHOD_NAME" value="testRandomRega" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -195,7 +216,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AutorisaitionTest.removePasswordTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserSidebarTest.addUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -204,8 +225,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AutorisaitionTest" />
-      <option name="METHOD_NAME" value="removePasswordTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
+      <option name="METHOD_NAME" value="addUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -213,7 +234,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest.normativeDocDeleteTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserSidebarTest.deleteUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -222,26 +243,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.LibraryTest" />
-      <option name="METHOD_NAME" value="normativeDocDeleteTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LogFileTest.localizTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
-      <option name="METHOD_NAME" value="localizTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
+      <option name="METHOD_NAME" value="deleteUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -267,13 +270,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserTest.userInviteAdmin" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
+      <option name="METHOD_NAME" value="userInviteAdmin" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LibraryTest.normativeDocDeleteTest" />
+        <item itemvalue="TestNG.UserSidebarTest.deleteUserTest" />
+        <item itemvalue="TestNG.UserSidebarTest.addUserTest" />
         <item itemvalue="TestNG.UserTest.userCreateAdmin" />
-        <item itemvalue="TestNG.AutorisaitionTest.regaTest" />
-        <item itemvalue="TestNG.AutorisaitionTest.removePasswordTest" />
-        <item itemvalue="TestNG.LogFileTest.localizTest" />
+        <item itemvalue="TestNG.UserTest.userInviteAdmin" />
+        <item itemvalue="TestNG.AutorisaitionTest.testRandomRega" />
       </list>
     </recent_temporary>
   </component>
@@ -292,14 +313,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Merge remote-tracking branch 'origin/main'">
-      <option name="closed" value="true" />
-      <created>1710137540127</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1710137540127</updated>
     </task>
     <task id="LOCAL-00009" summary="Merge remote-tracking branch 'origin/main'">
       <option name="closed" value="true" />
@@ -685,7 +698,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712743575984</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="Merge remote-tracking branch 'origin/main4' into main4">
+      <option name="closed" value="true" />
+      <created>1712747713883</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1712747713883</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -699,7 +720,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/31" />
+                        <option value="origin/main" />
                       </list>
                     </value>
                   </entry>
@@ -718,5 +739,16 @@
     <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main4' into main4" />
     <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main4' into main4" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserTest.java</url>
+          <line>316</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

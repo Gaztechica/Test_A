@@ -194,8 +194,8 @@ public class UserTest extends BaseTest {
     public void userCreateDelete() {
         new UserPage(driver)
                 .createUser()
-                .buttonRemove()
-                .userNameDel();
+                .buttonRemove();
+//                .userNameDel();
 //                .buttonRemoCancel();
     }
 
@@ -245,8 +245,8 @@ public class UserTest extends BaseTest {
                 .inviteUserClick()
                 .inviteUserEmail(UserPage.USER_NAME)
                 .inviteRolesClick()
-                .inviteRolesEnter()
-                .buttonDeleteClick();
+                .inviteRolesEnter();
+//                .buttonDeleteClick();
     }
 
     @Test

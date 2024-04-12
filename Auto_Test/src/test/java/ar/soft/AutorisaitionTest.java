@@ -64,7 +64,6 @@ public class AutorisaitionTest extends BaseTest {
     public void restorePasswordTest () {
         driver.get(URL);
 
-
 //        driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
         new HomePage(driver).clickRega();
 
@@ -74,7 +73,6 @@ public class AutorisaitionTest extends BaseTest {
         String getPasError = driver.findElement(getPaswordText).getText();
 
         Assert.assertEquals(getPasError,"Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");
-        driver.quit();
     }
 
     @Test
@@ -111,7 +109,6 @@ public class AutorisaitionTest extends BaseTest {
 
     @Test(dataProvider = "randomEmail")
     public void regEmailNegaTest(String name) {
-
         driver.get(URL);
 
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
@@ -124,7 +121,6 @@ public class AutorisaitionTest extends BaseTest {
     }
     @Test
     public void removePasswordTest() {
-
         driver.get(URL);
 
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
@@ -155,32 +151,27 @@ public class AutorisaitionTest extends BaseTest {
 
     @Test
     public void regaTest() throws InterruptedException {
-
         driver.get(URL);
-
 
         driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
 
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-
         driver.findElement(By.xpath(BTN_PASSWORD)).click();
-
 
 //        String getPasError = driver.findElement(getPaswordText).getText();
 //
 //        Assert.assertEquals(getPasError,"Мы отправили по адресу n-k-65@list.ru ссылку для восстановления доступа");
-
     }
 
-    //    @Test(dataProvider = "randomEmail")
-//    public void testRandomRega(String name) {
-//        openBrowser();
+    @Test(dataProvider = "randomEmail")
+    public void testRandomRega(String name) {
+        driver.get(URL);
 //        getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
 //
 //        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
 //        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
 //
-//        Assert.assertEquals(getDriver().findElement(GET_PASWORD).getText(),"Мы отправили по адресу /" + name + "/ ссылку для восстановления доступа");
-//    }
+//        Assert.assertEquals(getDriver().findElement(getPaswordText).getText(),"Мы отправили по адресу /" + name + "/ ссылку для восстановления доступа");
+    }
 
 }

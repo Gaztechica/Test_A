@@ -1,13 +1,12 @@
 package ar.soft;
 
-import ar.soft.modelPage.UserPage;
 import ar.soft.runner.BaseTest;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class SettingsTest extends BaseTest {
+public class SettingsSidebarTest extends BaseTest {
 
     @Test
     public void settingsTest() {

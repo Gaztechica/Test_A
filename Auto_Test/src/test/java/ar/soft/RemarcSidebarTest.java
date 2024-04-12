@@ -2,10 +2,9 @@ package ar.soft;
 
 import ar.soft.runner.BaseTest;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class RemarcTest extends BaseTest {
+public class RemarcSidebarTest extends BaseTest {
 
     private static final By GET_ERROR = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
 
