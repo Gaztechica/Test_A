@@ -4,28 +4,25 @@ import ar.soft.modelPage.base.BasePage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
-import static ar.soft.runner.BaseTest.*;
-import static ar.soft.runner.BaseTest.BTN_PASSWORD;
-
 public class LibraryPage extends BasePage {
 
     @FindBy(xpath = "//a[@href='/library']")
     private WebElement libraryClick;
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary Checklists__extraButtonChecklict-create']")
-    private WebElement buttonChecListCreate;
+    private WebElement buttonCheckListCreate;
 
     @FindBy(xpath = "//input[@class='ant-input primaryInput  not-entered']")
-    private WebElement inputChecListName;
+    private WebElement inputCheckListName;
 
     @FindBy(xpath = "//textarea[@class='ant-input primaryInput  not-entered']")
-    private WebElement inputChecListPrimary;
+    private WebElement inputCheckListPrimary;
 
     @FindBy(xpath = "//textarea[@class='ant-input primaryInput createCategoryModal__input not-entered']")
-    private WebElement createCategoryChecList;
+    private WebElement createCategoryCheckList;
 
     @FindBy(xpath = "//div[@class='createCategoryModal__buttonsPanel']//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
-    private WebElement primaryButtonChecListCreateClick;
+    private WebElement primaryButtonCheckListCreateClick;
 
     @FindBy(xpath = "//button[@class='CreateChecklist__addCategoryButton']")
     private WebElement buttonChecklistAddCategory;
@@ -69,52 +66,52 @@ public class LibraryPage extends BasePage {
     }
 
     public LibraryPage buttonChecListCreateClick() {
-        buttonChecListCreate.click();
+        buttonCheckListCreate.click();
         return this;
     }
 
     public LibraryPage inputChecListNameClick() {
-        inputChecListName.click();
+        inputCheckListName.click();
         return this;
     }
 
     public LibraryPage inputChecListNameSent() {
-        inputChecListName.sendKeys("ChecListName");
+        inputCheckListName.sendKeys("ChecListName");
         return this;
     }
 
     public LibraryPage inputChecListNameEnter() {
-        inputChecListName.sendKeys(Keys.ENTER);
+        inputCheckListName.sendKeys(Keys.ENTER);
         return this;
     }
 
     public LibraryPage inputChecListPrimaryClick() {
-        inputChecListPrimary.click();
+        inputCheckListPrimary.click();
         return this;
     }
 
     public LibraryPage inputChecListPrimarySent() {
-        inputChecListPrimary.sendKeys("ChecListPrimary");
+        inputCheckListPrimary.sendKeys("ChecListPrimary");
         return this;
     }
 
     public LibraryPage inputChecListPrimaryEnter() {
-        inputChecListPrimary.click();
+        inputCheckListPrimary.click();
         return this;
     }
 
     public LibraryPage createCategoryChecList() {
-        createCategoryChecList.click();
+        createCategoryCheckList.click();
         return this;
     }
 
     public LibraryPage createCategoryChecListSent() {
-        createCategoryChecList.sendKeys("createCategoryChecList");
+        createCategoryCheckList.sendKeys("createCategoryChecList");
         return this;
     }
 
     public LibraryPage primaryButtonChecListCreateClick() {
-        primaryButtonChecListCreateClick.click();
+        primaryButtonCheckListCreateClick.click();
         return this;
     }
 
