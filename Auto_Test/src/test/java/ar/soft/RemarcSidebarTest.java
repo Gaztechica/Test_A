@@ -22,6 +22,7 @@ public class RemarcSidebarTest extends BaseTest {
                 .btnAddRemark()
                 .inputNameRemark()
                 .btnAddNameRemark();
+
 //        String getError = driver.findElement(By.xpath(NEW_REMARK)).getText();
         Assert.assertEquals(NEW_REMARK, "Замечаниe");
     }
@@ -31,6 +32,10 @@ public class RemarcSidebarTest extends BaseTest {
         new RemarkSidebarPage(driver)
                 .progect()
                 .remark()
-                .newRemark();
+                .newRemark()
+                .btnDescription()
+                .inputDescription()
+                .btnSaveDescription();
+
     }
 }
