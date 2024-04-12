@@ -6,31 +6,31 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static ar.soft.modelPage.RemarkSidebarPage.NEW_REMARK;
+
 public class RemarcSidebarTest extends BaseTest {
 
-    private static final By GET_ERROR = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
+//    public static final By NEW_REMARK = By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'Замечания')]");
 
 
 
     @Test
-    public void remarkTest() {
+    public void addRemarkTest() {
         new RemarkSidebarPage(driver)
                 .progect()
                 .remark()
                 .btnAddRemark()
                 .inputNameRemark()
                 .btnAddNameRemark();
-
-//        String getError = getDriver().findElement(By.xpath(
-//        "//div[@class='ant-typography ant-typography-ellipsis
-//        ant-typography-single-line ant-typography-ellipsis-single-line
-//        p_r']")).getText();
-
-        Assert.assertEquals(getDriver().
-                findElement(By.xpath("//div[@class='ant-typography " +
-                        "ant-typography-ellipsis ant-typography-single-line " +
-                        "ant-typography-ellipsis-single-line p_r']")).getText(),"Замечаниe");
+//        String getError = driver.findElement(By.xpath(NEW_REMARK)).getText();
+        Assert.assertEquals(NEW_REMARK, "Замечаниe");
     }
 
-
+    @Test
+    public void remarkTest() {
+        new RemarkSidebarPage(driver)
+                .progect()
+                .remark()
+                .newRemark();
+    }
 }
