@@ -12,7 +12,7 @@ public class RemarcSidebarTest extends BaseTest {
 
 
     @Test
-    public void remarcTest() {
+    public void remarkTest() {
         new RemarkSidebarPage(driver)
                 .homePage();
         driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")).click();
