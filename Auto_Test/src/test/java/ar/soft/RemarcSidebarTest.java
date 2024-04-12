@@ -1,9 +1,8 @@
 package ar.soft;
 
+import ar.soft.modelPage.RemarkSidebarPage;
 import ar.soft.runner.BaseTest;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RemarcSidebarTest extends BaseTest {
@@ -14,8 +13,8 @@ public class RemarcSidebarTest extends BaseTest {
 
     @Test
     public void remarcTest() {
-        new RemarcSidebarTest(getDriver())
-                .
+        new RemarkSidebarPage(driver)
+                .homePage();
         driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")).click();
         driver.findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Замечания')]")).click();
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
