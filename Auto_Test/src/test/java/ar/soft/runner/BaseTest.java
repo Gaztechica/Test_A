@@ -27,6 +27,8 @@ public abstract class BaseTest {
 //    final String URL = "http://23.105.246.172:5000/login";
 //    }
     public static final String URL = "http://23.105.246.172:5000/login";
+    public static final String URL_XRBP = "http://31.129.103.215:3000/login";
+
     public static final String INPUT_PASSWORD = "//input[@class='ant-input']";
     public static final String INPUT_EMAIL = "//input[@class='ant-input primaryInput  not-entered']";
     public static final String BTN_PASSWORD = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']";
@@ -34,6 +36,7 @@ public abstract class BaseTest {
     public static final String PASSWORD = "012345678";
 
     public WebDriver driver = new ChromeDriver();
+
 //    @BeforeMethod
 //    protected void beforeMethod(Method method) {
 //        driver = new ChromeDriver();

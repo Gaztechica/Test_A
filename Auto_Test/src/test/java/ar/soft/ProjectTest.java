@@ -23,8 +23,7 @@ public class ProjectTest extends BaseTest {
     // ============================== Проект создание/удаление ==================================
 
     @Test
-    public void createProgect() throws InterruptedException {
-
+    public void createProgect() {
         new ProgectPage(driver)
                 .buttonCreateProgect();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
@@ -60,9 +59,6 @@ public class ProjectTest extends BaseTest {
         Assert.assertEquals("1Новый проект", newProgectName);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
-
-        driver.quit();
-
     }
 
     @Test
@@ -240,7 +236,7 @@ public class ProjectTest extends BaseTest {
     //     редактирование/удаление
 
 
-    // ================================== пагинация=====================================================
+    // ================================== пагинация =====================================================
 
     // нет изменения кол-ва строк на странице
     @Test

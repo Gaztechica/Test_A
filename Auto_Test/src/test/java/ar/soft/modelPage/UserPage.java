@@ -13,7 +13,7 @@ public class UserPage extends BasePage {
     private WebElement createUser;
 
     @FindBy(xpath = "//input[@id='user_name']")
-    private WebElement imputName;
+    private WebElement inputName;
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")
     private WebElement createUserClick;
@@ -31,7 +31,7 @@ public class UserPage extends BasePage {
     private WebElement inviteRolesEmployment;
 
     @FindBy(xpath = "//input[@id='InviteUserModal_employmentName']")
-    private WebElement createRolesEmploment;
+    private WebElement createRolesEmployment;
     @FindBy(xpath = "//input[@id='user_last_name']")
     private WebElement userLastName;
 
@@ -39,7 +39,7 @@ public class UserPage extends BasePage {
     private WebElement createRole;
 
     @FindBy(xpath = "//input[@id='user_email']")
-    private WebElement imputEmail;
+    private WebElement inputEmail;
 
     @FindBy(xpath = "//input[@id='user_timezone']")
     private WebElement userTimezone;
@@ -48,13 +48,13 @@ public class UserPage extends BasePage {
     private WebElement userRoles;
 
     @FindBy(xpath = "//input[@id='user_password']")
-    private WebElement imputPassword;
+    private WebElement inputPassword;
 
     @FindBy(xpath = "//input[@id='user_employmentName']")
-    private WebElement imputRolesEmploment;
+    private WebElement inputRolesEmployment;
 
     @FindBy(xpath = "//input[@id='user_employmentId']")
-    private WebElement imputRolesEmplomentClick;
+    private WebElement inputRolesEmploymentClick;
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")
     private WebElement buttonDeleteClick;
@@ -90,7 +90,7 @@ public class UserPage extends BasePage {
     }
 
     public UserPage userName(String name) {
-        imputName.sendKeys(name);
+        inputName.sendKeys(name);
         return this;
     }
 
@@ -100,7 +100,7 @@ public class UserPage extends BasePage {
     }
 
     public UserPage userEmail(String email) {
-        imputEmail.sendKeys(USER_EMAIL);
+        inputEmail.sendKeys(USER_EMAIL);
         return this;
     }
 
@@ -110,7 +110,7 @@ public class UserPage extends BasePage {
     }
 
     public UserPage userEmailClick() {
-        imputEmail.click();
+        inputEmail.click();
         return this;
     }
 
@@ -164,27 +164,27 @@ public class UserPage extends BasePage {
     }
 
     public UserPage createRoleEmplomentEnter() {
-        imputRolesEmploment.sendKeys(Keys.ENTER);
+        inputRolesEmployment.sendKeys(Keys.ENTER);
         return this;
     }
 
     public UserPage createRoleEmploment() {
-        imputRolesEmploment.click();
+        inputRolesEmployment.click();
         return this;
     }
 
     public UserPage inputRolesEmplomentArro() {
-        imputRolesEmplomentClick.sendKeys(Keys.ARROW_DOWN);
+        inputRolesEmploymentClick.sendKeys(Keys.ARROW_DOWN);
         return this;
     }
 
     public UserPage imputRolesEmplomentClick() {
-        imputRolesEmplomentClick.click();
+        inputRolesEmploymentClick.click();
         return this;
     }
 
     public UserPage imputRolesEmplomentEnter() {
-        imputRolesEmplomentClick.sendKeys(Keys.ENTER);
+        inputRolesEmploymentClick.sendKeys(Keys.ENTER);
         return this;
     }
 
@@ -199,22 +199,22 @@ public class UserPage extends BasePage {
 //    }
 
     public UserPage createRolesEmplomentClick() {
-        createRolesEmploment.click();
+        createRolesEmployment.click();
         return this;
     }
 
     public UserPage createRolesEmplomentSent() {
-        createRolesEmploment.sendKeys("Kir");
+        createRolesEmployment.sendKeys("Kir");
         return this;
     }
 
     public UserPage inviteRoleEmplomentEnter() {
-        createRolesEmploment.sendKeys(Keys.ENTER);
+        createRolesEmployment.sendKeys(Keys.ENTER);
         return this;
     }
 
     public UserPage roleEmploment() {
-            imputRolesEmploment.sendKeys("Kir");
+            inputRolesEmployment.sendKeys("Kir");
             return this;
     }
 
@@ -224,17 +224,17 @@ public class UserPage extends BasePage {
     }
 
     public UserPage roleEmplomentClick() {
-            imputRolesEmploment.sendKeys(Keys.ENTER);
+            inputRolesEmployment.sendKeys(Keys.ENTER);
             return this;
     }
 
     public UserPage userPassword(String password) {
-       imputPassword.sendKeys(password);
+       inputPassword.sendKeys(password);
        return this;
     }
 
     public UserPage userPasswordClick() {
-       imputPassword.click();
+       inputPassword.click();
         return this;
     }
 
@@ -286,7 +286,7 @@ public class UserPage extends BasePage {
     }
 
     public UserPage userNameClear() {
-        imputName.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE,
+        inputName.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE,
         Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);
         return this;
     }
