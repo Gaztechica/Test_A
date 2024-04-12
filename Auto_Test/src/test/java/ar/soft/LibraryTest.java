@@ -12,19 +12,7 @@ public class LibraryTest extends BaseTest {
 
     private By normativeDocText = By.xpath("//div[@class='ant-dropdown-trigger'][contains(.,'Не задано')]");
 
-    @Test
-    public void normativeDocDeleteTest() {
-        new LibraryPage(driver)
-                .libraryClick();
-        driver.findElement(By.xpath("//div[@id='rc-tabs-0-tab-3']")).click();
-        driver.findElement(By.xpath("//img[@class='ant-dropdown-trigger Documentation__info-dropdownImg']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-typography p_r'][contains(.,'Удалить')]")).click();
 
-        String normativeDoc = driver.findElement(normativeDocText).getText();
-
-        Assert.assertEquals("Не задано", normativeDoc);
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
-    }
 
     @Test
     public void libraryChecListCreate() {
@@ -203,5 +191,19 @@ public class LibraryTest extends BaseTest {
 //        userR2.click();
 
         driver.findElement(By.xpath("//div[@class='createCategoryModal__buttonsPanel']//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Добавить')]")).click();
+    }
+
+    @Test
+    public void normativeDocDeleteTest() {
+        new LibraryPage(driver)
+                .libraryClick();
+        driver.findElement(By.xpath("//div[@id='rc-tabs-0-tab-3']")).click();
+        driver.findElement(By.xpath("//img[@class='ant-dropdown-trigger Documentation__info-dropdownImg']")).click();
+        driver.findElement(By.xpath("//div[@class='ant-typography p_r'][contains(.,'Удалить')]")).click();
+
+        String normativeDoc = driver.findElement(normativeDocText).getText();
+
+        Assert.assertEquals("Не задано", normativeDoc);
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
     }
 }

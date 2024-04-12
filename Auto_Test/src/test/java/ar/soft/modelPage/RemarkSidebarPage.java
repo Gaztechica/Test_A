@@ -11,6 +11,8 @@ public class RemarkSidebarPage extends BasePage {
         super(driver);
     }
 
+    public static final String NEW_REMARK = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'Замечаниe')]";
+
     @FindBy(xpath = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")
     private WebElement progect;
 
@@ -25,6 +27,35 @@ public class RemarkSidebarPage extends BasePage {
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary '][contains(.,'Создать')]")
     private WebElement btnAddNameRemark;
+
+    @FindBy(xpath = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")
+    private WebElement newRemark;
+
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default iconButton small colorPrimary RemarkDrawer__desc-btn']")
+    private WebElement btnDescription;
+
+    @FindBy(xpath = "//textarea[@class='ant-input TextArea__input RemarkDrawer__editInput-desc']")
+    private WebElement inputDescription;
+
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary '][contains(.,'Сохранить')]")
+    private WebElement btnSaveDescription;
+
+
+    @FindBy(xpath = "//input[@id='rc_select_10']")
+    private WebElement inputWork;
+
+//    @FindBy(xpath = "")
+//    private WebElement ;
+//
+//    @FindBy(xpath = "")
+//    private WebElement ;
+//
+//    @FindBy(xpath = "")
+//    private WebElement ;
+
+//    @FindBy(xpath = "")
+//    private WebElement ;
+
 
     public RemarkSidebarPage progect() {
         progect.click();
@@ -51,8 +82,48 @@ public class RemarkSidebarPage extends BasePage {
         return this;
     }
 
+    public RemarkSidebarPage newRemark() {
+        newRemark.click();
+        return this;
+    }
 
+    public RemarkSidebarPage btnDescription() {
+        btnDescription.click();
+        return this;
+    }
 
+    public RemarkSidebarPage inputDescription() {
+        inputDescription.sendKeys("inputDescription");
+        return this;
+    }
 
+    public RemarkSidebarPage btnSaveDescription() {
+        btnSaveDescription.click();
+        return this;
+    }
 
+    public RemarkSidebarPage inputWork() {
+        inputWork.sendKeys("inputWork");
+        return this;
+    }
+
+//    public RemarkSidebarPage inputDescription() {
+//        inputDescription.sendKeys("inputDescription");
+//        return this;
+//    }
+
+//    public RemarkSidebarPage inputDescription() {
+//        inputDescription.sendKeys("inputDescription");
+//        return this;
+//    }
+//
+//    public RemarkSidebarPage inputDescription() {
+//        inputDescription.sendKeys("inputDescription");
+//        return this;
+//    }
+//
+//    public RemarkSidebarPage inputDescription() {
+//        inputDescription.sendKeys("inputDescription");
+//        return this;
+//    }
 }
