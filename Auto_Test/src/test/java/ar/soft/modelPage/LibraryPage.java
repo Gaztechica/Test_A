@@ -5,8 +5,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
 public class LibraryPage extends BasePage {
-
-    @FindBy(xpath = "//span[@class='ant-menu-title-content'][contains(.,'Библиотека')]")
+//============== чек-лист ===================================================
+    @FindBy(xpath = "//span[@class='ant-menu-title-content'][contains(.,'Библиотека')]") //a[@href='/library']
     private WebElement libraryClick;
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary Checklists__extraButtonChecklict-create']")
@@ -45,6 +45,11 @@ public class LibraryPage extends BasePage {
     @FindBy(xpath = "//button[@class='CreateChecklist__categoryItemButton']")
     private WebElement buttonChecklistCategoryDelete;
 
+//============================ нормативная док. ===================================
+
+
+// ============================ отчеты ===================================
+
     @FindBy(xpath = "//div[@class='DeleteModal__buttonsPanel']//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
     private WebElement buttonChecklistCategoryDeleteClick;
 
@@ -59,6 +64,8 @@ public class LibraryPage extends BasePage {
     public LibraryPage(WebDriver driver) {
         super(driver);
     }
+
+    //============== чек-лист ===================================================
 
     public LibraryPage libraryClick() {
         libraryClick.click();
@@ -169,6 +176,11 @@ public class LibraryPage extends BasePage {
         buttonChecklistRemove.click();
         return this;
     }
+//============================ нормативная док. ===================================
+
+
+// ============================ отчеты ===================================
+
 
 //    public LibraryPage URL() throws InterruptedException {
 //        getDriver().get(URL);

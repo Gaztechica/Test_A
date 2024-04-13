@@ -13,7 +13,6 @@ public class LibraryTest extends BaseTest {
     private By normativeDocText = By.xpath("//div[@class='ant-dropdown-trigger'][contains(.,'Не задано')]");
 
 
-
     @Test
     public void libraryChecListCreate() {
         new LibraryPage(driver)
@@ -37,10 +36,7 @@ public class LibraryTest extends BaseTest {
     }
 
     @Test
-    public void libraryChecListDelete() throws InterruptedException {
-
-        new LibraryPage(driver)
-                .login();
+    public void libraryChecListDelete() {
         new LibraryPage(driver)
                 .libraryClick()
                 .buttonChecListCreateClick()
@@ -58,11 +54,10 @@ public class LibraryTest extends BaseTest {
 
 //                .buttonChecklistAdd();
 
-//        driver.quit();
     }
 
     @Test
-    public void libraryChecListRemove() throws InterruptedException {
+    public void libraryChecListRemove() {
         new LibraryPage(driver)
                 .libraryClick();
 //                .buttonChecklistRemove();
@@ -80,7 +75,6 @@ public class LibraryTest extends BaseTest {
         inputCategory.click();
         inputCategory.sendKeys("inputCategory");
 //        inputCategory.sendKeys(Keys.ENTER);
-
 
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
@@ -103,7 +97,6 @@ public class LibraryTest extends BaseTest {
 //                .buttonChecklistCategory()
 //                .buttonChecklistAdd();
 
-//        driver.quit();
     }
 
     @Test
@@ -127,10 +120,6 @@ public class LibraryTest extends BaseTest {
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
         driver.findElement(By.xpath("//div[@class='ant-typography p_r'][contains(.,'Редактировать')]")).click();
 
-
-//
-
-//        driver.quit();
     }
 
     @Test
