@@ -102,47 +102,7 @@ public class LibraryTest extends BaseTest {
 //                .buttonChecklistCategory()
 //                .buttonChecklistAdd();
 }
-    @Test
-    public void libraryChecLis() {
-        new LibraryPage(driver)
-                .libraryClick();
-//                .buttonChecklistRemove();
 
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton " +
-                "big colorPrimary Checklists__extraButtonChecklict-import']")).click();
-
-
-        WebElement input = driver.findElement(By.id("title"));
-        input.click();
-        input.sendKeys("id=title");
-        input.sendKeys(Keys.ENTER);
-
-        WebElement inputCategory = driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']"));
-        inputCategory.click();
-        inputCategory.sendKeys("inputCategory");
-//        inputCategory.sendKeys(Keys.ENTER);
-
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
-
-
-//                .buttonChecListCreateClick()
-//                .inputChecListNameClick()
-//                .inputChecListNameSent()
-//                .buttonChecklistAddCategory()
-//                .inputChecListPrimaryClick()
-//                .inputChecListPrimarySent()
-//                .createCategoryChecList()
-//                .createCategoryChecListSent()
-//                .primaryButtonChecListCreateClick()
-//                .buttonChecklistSubcategory()
-//                .inputChecklistSubcateName()
-//                .inputChecklistSubcateSent()
-//                .inputChecklistCategorySubcateClick()
-//                .inputChecklistCategorySubcateNameSent()
-//                .buttonChecklistCategory()
-//                .buttonChecklistAdd();
-    }
     @Test
     public void libraryChecListImport() {
             new LibraryPage(driver)
