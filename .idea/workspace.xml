@@ -158,6 +158,7 @@
     "TestNG.LibraryTest.libraryChecListCreate.executor": "Run",
     "TestNG.LibraryTest.libraryChecListDelete.executor": "Run",
     "TestNG.LibraryTest.libraryChecListImport.executor": "Run",
+    "TestNG.LibraryTest.libraryChecListRemove.executor": "Run",
     "TestNG.LibraryTest.normativeDocDeleteTest.executor": "Run",
     "TestNG.LogFileTest.cancelLogDelTest.executor": "Run",
     "TestNG.LogFileTest.localizTest.executor": "Run",
@@ -182,7 +183,7 @@
     "git-widget-placeholder": "47",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "settings.editor.selected.configurable": "MavenSettings"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -194,7 +195,25 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LibraryTest.libraryChecListRemove">
+  <component name="RunManager" selected="TestNG.LibraryTest.dashboardsTest">
+    <configuration name="LibraryTest.dashboardsTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.LibraryTest" />
+      <option name="METHOD_NAME" value="dashboardsTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="LibraryTest.libraryChecListCreate" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -267,31 +286,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LibraryTest.normativeDocDeleteTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.LibraryTest" />
-      <option name="METHOD_NAME" value="normativeDocDeleteTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.LibraryTest.dashboardsTest" />
         <item itemvalue="TestNG.LibraryTest.libraryChecListRemove" />
-        <item itemvalue="TestNG.LibraryTest.libraryChecListCreate" />
         <item itemvalue="TestNG.LibraryTest.libraryChecListDelete" />
         <item itemvalue="TestNG.LibraryTest.libraryChecListImport" />
-        <item itemvalue="TestNG.LibraryTest.normativeDocDeleteTest" />
+        <item itemvalue="TestNG.LibraryTest.libraryChecListCreate" />
       </list>
     </recent_temporary>
   </component>
@@ -310,46 +311,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00020" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
-      <option name="closed" value="true" />
-      <created>1710527046873</created>
-      <option name="number" value="00020" />
-      <option name="presentableId" value="LOCAL-00020" />
-      <option name="project" value="LOCAL" />
-      <updated>1710527046873</updated>
-    </task>
-    <task id="LOCAL-00021" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
-      <option name="closed" value="true" />
-      <created>1710566081084</created>
-      <option name="number" value="00021" />
-      <option name="presentableId" value="LOCAL-00021" />
-      <option name="project" value="LOCAL" />
-      <updated>1710566081084</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
-      <option name="closed" value="true" />
-      <created>1710573142263</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1710573142263</updated>
-    </task>
-    <task id="LOCAL-00023" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
-      <option name="closed" value="true" />
-      <created>1710703638665</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1710703638665</updated>
-    </task>
-    <task id="LOCAL-00024" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
-      <option name="closed" value="true" />
-      <created>1710703753927</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1710703753927</updated>
     </task>
     <task id="LOCAL-00025" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
       <option name="closed" value="true" />
@@ -703,7 +664,47 @@
       <option name="project" value="LOCAL" />
       <updated>1712927397166</updated>
     </task>
-    <option name="localTasksCounter" value="69" />
+    <task id="LOCAL-00069" summary="Merge remote-tracking branch 'origin/main4' into main4">
+      <option name="closed" value="true" />
+      <created>1713009656154</created>
+      <option name="number" value="00069" />
+      <option name="presentableId" value="LOCAL-00069" />
+      <option name="project" value="LOCAL" />
+      <updated>1713009656155</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Merge remote-tracking branch 'origin/main4' into main4">
+      <option name="closed" value="true" />
+      <created>1713009752421</created>
+      <option name="number" value="00070" />
+      <option name="presentableId" value="LOCAL-00070" />
+      <option name="project" value="LOCAL" />
+      <updated>1713009752421</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Merge remote-tracking branch 'origin/main4' into main4">
+      <option name="closed" value="true" />
+      <created>1713009942152</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1713009942153</updated>
+    </task>
+    <task id="LOCAL-00072" summary="Merge remote-tracking branch 'origin/main4' into main4">
+      <option name="closed" value="true" />
+      <created>1713009985382</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1713009985382</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Merge remote-tracking branch 'origin/main4' into main4">
+      <option name="closed" value="true" />
+      <created>1713010004482</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1713010004482</updated>
+    </task>
+    <option name="localTasksCounter" value="74" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

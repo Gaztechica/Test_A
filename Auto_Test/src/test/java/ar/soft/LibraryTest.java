@@ -36,6 +36,24 @@ public class LibraryTest extends BaseTest {
     }
 
     @Test
+    public void libraryChecListImport() {
+            new LibraryPage(driver)
+                .libraryClick()
+                .btnImportCheckList();
+//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary Checklists__extraButtonChecklict-import']")).click();
+
+        WebElement input = driver.findElement(By.id("title"));
+        input.click();
+        input.sendKeys("id=title");
+        input.sendKeys(Keys.ENTER);
+
+        WebElement inputCategory = driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']"));
+        inputCategory.click();
+        inputCategory.sendKeys("inputCategory");
+        inputCategory.sendKeys(Keys.ENTER);
+    }
+
+    @Test
     public void libraryChecListDelete() {
         new LibraryPage(driver)
                 .libraryClick()
@@ -50,8 +68,7 @@ public class LibraryTest extends BaseTest {
                 .primaryButtonChecListCreateClick()
                 .buttonChecklistCategoryDelete()
                 .buttonChecklistCategoryDeleteClick();
-//                .buttonChecklistSubcategory();
-
+//                .buttonChecklistSubcategory()
 //                .buttonChecklistAdd();
 
     }
@@ -60,32 +77,27 @@ public class LibraryTest extends BaseTest {
     public void libraryChecListRemove() {
         new LibraryPage(driver)
                 .libraryClick();
+        driver.findElement(By.xpath("//img[@class='ant-dropdown-trigger checklists__image']")).click();
 
+        driver.findElement(By.xpath("//div[@class='ant-typography p_r'][contains(.,'Редактировать')]")).click();
+
+//        new LibraryPage(driver)
 //                .buttonChecklistRemove();
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton "+
-                "big colorPrimary Checklists__extraButtonChecklict-import']")).
-
-    click();
-
-
-    WebElement input = driver.findElement(By.id("title"));
+        WebElement input = driver.findElement(By.id("title"));
         input.click();
         input.sendKeys("id=title");
         input.sendKeys(Keys.ENTER);
 
-    WebElement inputCategory = driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']"));
+        WebElement inputCategory = driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']"));
         inputCategory.click();
         inputCategory.sendKeys("inputCategory");
-//        inputCategory.sendKeys(Keys.ENTER);
+        inputCategory.sendKeys(Keys.ENTER);
 
 
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).
-
-    click();
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
 
 
-    //                .buttonChecListCreateClick()
+        //                .buttonChecListCreateClick()
 //                .inputChecListNameClick()
 //                .inputChecListNameSent()
 //                .buttonChecklistAddCategory()
@@ -101,29 +113,6 @@ public class LibraryTest extends BaseTest {
 //                .inputChecklistCategorySubcateNameSent()
 //                .buttonChecklistCategory()
 //                .buttonChecklistAdd();
-}
-
-    @Test
-    public void libraryChecListImport() {
-            new LibraryPage(driver)
-                .libraryClick()
-                .buttonChecklistRemove();
-
-        WebElement input = driver.findElement(By.id("title"));
-        input.click();
-        input.sendKeys("id=title");
-        input.sendKeys(Keys.ENTER);
-
-        WebElement inputCategory = driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']"));
-        inputCategory.click();
-        inputCategory.sendKeys("inputCategory");
-//        inputCategory.sendKeys(Keys.ENTER);
-
-
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-typography p_r'][contains(.,'Редактировать')]")).click();
-
     }
 
     @Test

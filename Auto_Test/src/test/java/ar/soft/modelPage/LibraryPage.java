@@ -45,6 +45,9 @@ public class LibraryPage extends BasePage {
     @FindBy(xpath = "//button[@class='CreateChecklist__categoryItemButton']")
     private WebElement buttonChecklistCategoryDelete;
 
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary Checklists__extraButtonChecklict-import']")
+    private WebElement btnImportCheckList;
+
 //============================ нормативная док. ===================================
 
 
@@ -174,6 +177,11 @@ public class LibraryPage extends BasePage {
 
     public LibraryPage buttonChecklistRemove() {
         buttonChecklistRemove.click();
+        return this;
+    }
+
+    public LibraryPage btnImportCheckList() {
+        btnImportCheckList.click();
         return this;
     }
 //============================ нормативная док. ===================================
