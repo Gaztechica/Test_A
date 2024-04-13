@@ -37,6 +37,33 @@ public class LibraryTest extends BaseTest {
     }
 
     @Test
+    public void libraryChecListImport() {
+        new LibraryPage(driver)
+                .libraryClick()
+                .buttonChecklistRemove();
+
+        WebElement input = driver.findElement(By.id("title"));
+        input.click();
+        input.sendKeys("id=title");
+        input.sendKeys(Keys.ENTER);
+
+        WebElement inputCategory = driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']"));
+        inputCategory.click();
+        inputCategory.sendKeys("inputCategory");
+//        inputCategory.sendKeys(Keys.ENTER);
+
+
+
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
+        driver.findElement(By.xpath("//div[@class='ant-typography p_r'][contains(.,'Редактировать')]")).click();
+
+
+//
+
+//        driver.quit();
+    }
+
+    @Test
     public void libraryChecListDelete() throws InterruptedException {
 
         new LibraryPage(driver)
@@ -62,7 +89,50 @@ public class LibraryTest extends BaseTest {
     }
 
     @Test
-    public void libraryChecListRemove() throws InterruptedException {
+    public void libraryChecListRemove() {
+        new LibraryPage(driver)
+                .libraryClick();
+//                .buttonChecklistRemove();
+
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton " +
+                "big colorPrimary Checklists__extraButtonChecklict-import']")).click();
+
+
+        WebElement input = driver.findElement(By.id("title"));
+        input.click();
+        input.sendKeys("id=title");
+        input.sendKeys(Keys.ENTER);
+
+        WebElement inputCategory = driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']"));
+        inputCategory.click();
+        inputCategory.sendKeys("inputCategory");
+//        inputCategory.sendKeys(Keys.ENTER);
+
+
+
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
+
+
+        //                .buttonChecListCreateClick()
+//                .inputChecListNameClick()
+//                .inputChecListNameSent()
+//                .buttonChecklistAddCategory()
+//                .inputChecListPrimaryClick()
+//                .inputChecListPrimarySent()
+//                .createCategoryChecList()
+//                .createCategoryChecListSent()
+//                .primaryButtonChecListCreateClick()
+//                .buttonChecklistSubcategory()
+//                .inputChecklistSubcateName()
+//                .inputChecklistSubcateSent()
+//                .inputChecklistCategorySubcateClick()
+//                .inputChecklistCategorySubcateNameSent()
+//                .buttonChecklistCategory()
+//                .buttonChecklistAdd();
+    }
+
+    @Test
+    public void libraryChecListRemo() {
         new LibraryPage(driver)
                 .libraryClick();
 //                .buttonChecklistRemove();
@@ -106,32 +176,7 @@ public class LibraryTest extends BaseTest {
 //        driver.quit();
     }
 
-    @Test
-    public void libraryChecListImport() {
-            new LibraryPage(driver)
-                .libraryClick()
-                .buttonChecklistRemove();
 
-        WebElement input = driver.findElement(By.id("title"));
-        input.click();
-        input.sendKeys("id=title");
-        input.sendKeys(Keys.ENTER);
-
-        WebElement inputCategory = driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']"));
-        inputCategory.click();
-        inputCategory.sendKeys("inputCategory");
-//        inputCategory.sendKeys(Keys.ENTER);
-
-
-
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-typography p_r'][contains(.,'Редактировать')]")).click();
-
-
-//
-
-//        driver.quit();
-    }
 
     @Test
     public void dashboardsTest() {
