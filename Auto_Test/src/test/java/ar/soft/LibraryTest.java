@@ -96,9 +96,7 @@ public class LibraryTest extends BaseTest {
 //                .inputChecklistCategorySubcateNameSent()
 //                .buttonChecklistCategory()
 //                .buttonChecklistAdd();
-
     }
-
     @Test
     public void libraryChecListImport() {
             new LibraryPage(driver)
