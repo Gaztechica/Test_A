@@ -57,7 +57,7 @@ public class LibraryTest extends BaseTest {
     }
 
     @Test
-    public void libraryChecLis() {
+    public void libraryChecListRemove() {
         new LibraryPage(driver)
                 .libraryClick();
 
@@ -103,7 +103,7 @@ public class LibraryTest extends BaseTest {
 //                .buttonChecklistAdd();
 }
     @Test
-    public void libraryChecListRemove() {
+    public void libraryChecLis() {
         new LibraryPage(driver)
                 .libraryClick();
 //                .buttonChecklistRemove();
