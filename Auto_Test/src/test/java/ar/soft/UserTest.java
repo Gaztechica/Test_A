@@ -224,17 +224,15 @@ public class UserTest extends BaseTest {
 //        userRolesx.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
         WebElement userRoles = driver.findElement(By.xpath("//span[@title='Все организации']"));
         userRoles.click();
-//        Thread.sleep(3000);
+
         userRoles.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-//        Thread.sleep(3000);
+
 //        userRoles.sendKeys(Keys.ARROW_DOWN);
 //        Thread.sleep(1000);
 //        userRoles.sendKeys(Keys.ENTER);
 //        WebElement userRolesc = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'Все организации')]"));
 //        userRolesc.click();
 
-//        Thread.sleep(2000);
-        driver.quit();
     }
 
     //        не работает сортировка по организациям нет кнопок отменить/пригласить
@@ -338,15 +336,15 @@ public class UserTest extends BaseTest {
                 .createUser()
                 .searchInputClick()
                 .searchClick()
-                .searchInputSent("леха")
+                .searchInputSent("Леха")
                 .searchInputDelete()
-                .searchInputSent("игнат")
+                .searchInputSent("Игнат")
                 .searchInputDelete()
-                .searchInputSent("FASDAS")
+                .searchInputSent("Kirov")
                 .searchInputDelete()
                 .searchInputSent("Наблюдатель")
                 .searchInputDelete()
-                .searchInputSent("yevgeniy.gor.91@mail.ru")
+                .searchInputSent("callean34087@7wwa.cashbenties.com")
                 .searchInputDelete()
                 .searchInputClick();
 

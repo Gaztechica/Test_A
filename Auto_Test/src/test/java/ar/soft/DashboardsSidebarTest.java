@@ -38,7 +38,6 @@ public class DashboardsSidebarTest extends BaseTest {
 
         driver.findElement(By.xpath("//label[@class='ant-radio-button-wrapper RadioButton__button MapDiagramRemarks__filterDates-item'][contains(.,'Все время')]")).click();
 
-
 //        driver.findElement(By.xpath("//input[@id='rc_select_7']")).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
     }
 }

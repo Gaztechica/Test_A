@@ -64,10 +64,7 @@ public class LibraryTest extends BaseTest {
     }
 
     @Test
-    public void libraryChecListDelete() throws InterruptedException {
-
-        new LibraryPage(driver)
-                .login();
+    public void libraryChecListDelete() {
         new LibraryPage(driver)
                 .libraryClick()
                 .buttonChecListCreateClick()
@@ -84,8 +81,6 @@ public class LibraryTest extends BaseTest {
 //                .buttonChecklistSubcategory();
 
 //                .buttonChecklistAdd();
-
-//        driver.quit();
     }
 
 
