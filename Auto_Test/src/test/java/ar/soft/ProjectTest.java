@@ -5,9 +5,6 @@ import ar.soft.runner.BaseTest;
 import org.junit.Assert;
 //import org.junit.Test;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Wait;
 import org.testng.annotations.Test;
 
 import java.util.ArrayList;
@@ -25,7 +22,7 @@ public class ProjectTest extends BaseTest {
     @Test
     public void createProgect() {
         new ProgectPage(driver)
-                .buttonCreateProgect();
+                .btnCreateProgect();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_country']")).sendKeys("РФ");
@@ -103,8 +100,6 @@ public class ProjectTest extends BaseTest {
     @Test
     public void poginacyaTest() throws InterruptedException {
 
-        new ProgectPage(driver)
-                .login();
 //=============================================================
 
         driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
@@ -116,68 +111,22 @@ public class ProjectTest extends BaseTest {
 //        WebElement elemPage = driver.findElement(By.xpath("//input[@class='ant-select-selection-search-input']"));
 
         WebElement elemPage = driver.findElement(By.xpath("//span[@class='ant-select-selection-item']"));
-
         elemPage.click();
-        Thread.sleep(3000);
+
 //        elemPage.sendKeys(Keys.ARROW_DOWN);
         elemPage.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
         elemPage.sendKeys(Keys.ENTER);
 
-        Thread.sleep(1000);
-
-        WebElement elemPage2 = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='50']"));
-
-        elemPage2.click();
-
-        Thread.sleep(1000);
-
-        WebElement elemPagve = driver.findElement(By.xpath("//span[@class='ant-select-selection-search']"));
-
-        elemPagve.click();
-
-        Thread.sleep(1000);
-
-        WebElement elemPageFift = driver.findElement(By.xpath("//span[@class='ant-select-arrow']"));
-
-        elemPageFift.click();
-
-        Thread.sleep(1000);
-
-        WebElement elemPageFifty = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'10')]"));
-
-        elemPageFifty.click();
-
-        Thread.sleep(8000);
-
-        WebElement elemPageOne = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'50')]"));
-
-        elemPageOne.click();
-
-        Thread.sleep(1000);
-
-        WebElement elemPageOneN = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'10')]"));
-
-        elemPageOneN.click();
-
-        Thread.sleep(1000);
-        WebElement textBoxCountry = driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_country\"]"));
-
-        textBoxCountry.sendKeys("РФ");
-
-
-        WebElement textBoxStreet = driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_street\"]"));
-
-        textBoxStreet.sendKeys("Победы");
-
-        WebElement textBoxPostalCode = driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_postalCode\"]"));
-
-        textBoxPostalCode.sendKeys("444444");
-
-        WebElement submitButtonCreateProject = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']"));
-
-        submitButtonCreateProject.click();
-        driver.quit();
-
+        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='50']")).click();
+        driver.findElement(By.xpath("//span[@class='ant-select-selection-search']")).click();
+        driver.findElement(By.xpath("//span[@class='ant-select-arrow']")).click();
+        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'10')]")).click();
+        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'50')]")).click();
+        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'10')]")).click();
+        driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_country\"]")).sendKeys("РФ");
+        driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_street\"]")).sendKeys("Победы");
+        driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_postalCode\"]")).sendKeys("444444");
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
     }
 
     // ================================== ссылки =====================================================
@@ -281,8 +230,6 @@ public class ProjectTest extends BaseTest {
         elemPage.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
         elemPage.sendKeys(Keys.ENTER);
 
-
-
 //         WebElement elemPage2 = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='50']"));
 //
 //         elemPage2.click();
@@ -337,7 +284,5 @@ public class ProjectTest extends BaseTest {
 //         driver.quit();
 //         Thread.sleep(5000);
     }
-
-
 
 }

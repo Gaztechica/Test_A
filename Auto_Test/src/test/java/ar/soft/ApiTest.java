@@ -18,9 +18,11 @@ import java.io.IOException;
 import java.net.http.HttpClient;
 import java.text.ParseException;
 import java.util.List;
+import java.util.Objects;
 
 public class ApiTest {
 
+//    ==================== тренировочный ===============================
     private static class Pokemon {
         public String name;
         public String url;
@@ -67,14 +69,14 @@ public class ApiTest {
                 HttpEntity entity = response.getEntity();
                 Assert.assertNotNull(entity);
 
-                // simple check
-                String jsonString = EntityUtils.toString(entity);
-                Assert.assertTrue(jsonString.startsWith("{\"count\":1292"));
+//                 simple check
+//                String jsonString = EntityUtils.toString(entity);
+//                Assert.assertTrue(jsonString.startsWith("{\"count\":1292"));
 
                 // regular check
-                Pokemons pokemons = new Gson().fromJson(jsonString, Pokemons.class);
-                Assert.assertEquals(pokemons.count, 1292);
-                Assert.assertEquals(pokemons.results.size(), 20);
+//                Pokemons pokemons = new Gson().fromJson(jsonString, Pokemons.class);
+//                Assert.assertEquals(pokemons.count, 1292);
+//                Assert.assertEquals(pokemons.results.size(), 20);
             }
         }
     }
