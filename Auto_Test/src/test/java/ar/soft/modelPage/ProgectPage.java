@@ -15,6 +15,8 @@ public class ProgectPage extends BasePage {
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
     private WebElement btnCreateProgect;
 
-    public void btnCreateProgect() {
-        btnCreateProgect.click();    }
+    public ProgectPage btnCreateProgect() {
+        btnCreateProgect.click();
+        return this;
+    }
 }
