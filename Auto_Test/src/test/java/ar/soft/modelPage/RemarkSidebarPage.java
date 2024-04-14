@@ -40,7 +40,6 @@ public class RemarkSidebarPage extends BasePage {
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary '][contains(.,'Сохранить')]")
     private WebElement btnSaveDescription;
 
-
     @FindBy(xpath = "//input[@id='rc_select_10']")
     private WebElement inputWork;
 
