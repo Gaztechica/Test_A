@@ -12,10 +12,10 @@ import java.util.Set;
 
 public class ProjectTest extends BaseTest {
 
-    private By newProgectNameText = By.xpath("//div[@class='Sidebar__project-name'][contains(.,'1Новый проект')]");
-    private By getPoliticaText = By.xpath("//h1[@class='page-header-title clr']");
-    private By getPoliticaUserText = By.xpath("//span[@style='font-size: 19px;'][contains(.,'Предмет пользовательского соглашения')]");
-    private By getBotText = By.xpath("//span[@dir='auto']");
+    private final By NEW_PROGEKT_NAME_TEXT = By.xpath("//div[@class='Sidebar__project-name'][contains(.,'1Новый проект')]");
+    private final By GET_POLITIC = By.xpath("//h1[@class='page-header-title clr']");
+    private final By GET_POLITIC_USER = By.xpath("//span[@style='font-size: 19px;'][contains(.,'Предмет пользовательского соглашения')]");
+    private final By GET_BOT = By.xpath("//span[@dir='auto']");
 
     // ============================== Проект создание/удаление ==================================
 
@@ -51,7 +51,7 @@ public class ProjectTest extends BaseTest {
         WebElement textSection = driver.findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')]"));
         textSection.click();
 
-        String newProgectName = driver.findElement(newProgectNameText).getText();
+        String newProgectName = driver.findElement(NEW_PROGEKT_NAME_TEXT).getText();
 
         Assert.assertEquals("1Новый проект", newProgectName);
 
@@ -138,7 +138,7 @@ public class ProjectTest extends BaseTest {
         ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(newTab.get(1));
 
-        Assert.assertEquals("Политика обработки персональных данных", driver.findElement(getPoliticaText).getText());
+        Assert.assertEquals("Политика обработки персональных данных", driver.findElement(GET_POLITIC).getText());
     }
 
     @Test
@@ -151,7 +151,7 @@ public class ProjectTest extends BaseTest {
         handles.remove(getDriver().getWindowHandle());
         getDriver().switchTo().window(handles.iterator().next());
 
-        Assert.assertEquals(getDriver().findElement(getPoliticaText).getText(), "Политика обработки персональных данных");
+        Assert.assertEquals(getDriver().findElement(GET_POLITIC).getText(), "Политика обработки персональных данных");
     }
 
 
@@ -162,7 +162,7 @@ public class ProjectTest extends BaseTest {
         ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(newTab.get(1));
 
-        String getPoliticaUser = driver.findElement(getPoliticaUserText).getText();
+        String getPoliticaUser = driver.findElement(GET_POLITIC_USER).getText();
 
         Assert.assertEquals("Предмет пользовательского соглашения", getPoliticaUser);
     }
@@ -174,7 +174,7 @@ public class ProjectTest extends BaseTest {
 
         ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
         driver.switchTo().window(newTab.get(1));
-        String getBot = driver.findElement(getBotText).getText();
+        String getBot = driver.findElement(GET_BOT).getText();
 
         Assert.assertEquals("AR SOFT support", getBot);
     }
