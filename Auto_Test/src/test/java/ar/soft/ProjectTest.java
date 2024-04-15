@@ -12,7 +12,7 @@ import java.util.Set;
 
 public class ProjectTest extends BaseTest {
 
-    private final By NEW_PROGEKT_NAME_TEXT = By.xpath("//div[@class='Sidebar__project-name'][contains(.,'1Новый проект')]");
+    private final By NEW_PROJEСT_NAME_TEXT = By.xpath("//div[@class='Sidebar__project-name'][contains(.,'1Новый проект')]");
     private final By GET_POLITIC = By.xpath("//h1[@class='page-header-title clr']");
     private final By GET_POLITIC_USER = By.xpath("//span[@style='font-size: 19px;'][contains(.,'Предмет пользовательского соглашения')]");
     private final By GET_BOT = By.xpath("//span[@dir='auto']");
@@ -51,7 +51,7 @@ public class ProjectTest extends BaseTest {
         WebElement textSection = driver.findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')]"));
         textSection.click();
 
-        String newProgectName = driver.findElement(NEW_PROGEKT_NAME_TEXT).getText();
+        String newProgectName = driver.findElement(NEW_PROJEСT_NAME_TEXT).getText();
 
         Assert.assertEquals("1Новый проект", newProgectName);
 
