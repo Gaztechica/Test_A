@@ -30,5 +30,15 @@ public class UserSidebarTest extends BaseTest {
 
     }
 
+    @Test
+    public void deleteTest() {
+        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")).click();
+        driver.findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Пользователи')]")).click();
+        driver.findElement(By.xpath("//td[@class='ant-table-cell'][contains(.,'a123EvgenTest')]")).click();
 
+        driver.findElement(By.xpath("//div[@class='ContentProjectUsers__iconBlock']")).click();
+
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
+
+    }
 }
