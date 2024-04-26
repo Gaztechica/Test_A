@@ -14,8 +14,8 @@ public class InspectSidebarPage extends BasePage {
     @FindBy(xpath = "")
     private WebElement createI;
 
-    public InspectSidebarPage createUser() {
-        createUser.click();
-        return this;
-    }
+//    public InspectSidebarPage createUser() {
+//        createUser.click();
+//        return this;
+//    }
 }
