@@ -34,6 +34,7 @@ public abstract class BaseTest {
     public static final String BTN_PASSWORD = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']";
     public static final String EMAIL = "f.ff.1980@list.ru";
     public static final String PASSWORD = "012345678";
+    public static final String CHECKBOX = "//div[@id='CheckboxComponent']";
 
     public WebDriver driver = new ChromeDriver();
 
@@ -54,7 +55,7 @@ public abstract class BaseTest {
 
     @AfterMethod
     protected void afterMethod(Method method) {
-        driver.quit();
+//        driver.quit();
     }
 
     protected WebDriver getDriver() {
@@ -106,6 +107,7 @@ public abstract class BaseTest {
         getDriver().manage().window().setSize(new Dimension(1920, 1080));
         getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
+        getDriver().findElement(By.xpath(CHECKBOX)).click();
         getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
 
 //         ===================== смена языка ===================
