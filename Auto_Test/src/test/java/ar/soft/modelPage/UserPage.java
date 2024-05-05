@@ -65,7 +65,10 @@ public class UserPage extends BasePage {
     @FindBy(xpath = "//span[@class='ant-input-affix-wrapper searchBoxInput  not-entered']")
     private WebElement searchInputClick;
 
+    @FindBy(xpath = "//input[@class='ant-input']")
+    private WebElement btnRequestUser;
     public final static String USER_NAME = "123EvgenTest";
+
 
     public final static String USER_EMAIL = "ye2vtcmvgen@mail.ru";
 
@@ -312,14 +315,22 @@ public class UserPage extends BasePage {
         return this;
     }
 
-        public UserPage inviteRolesEmploymentClick() {
+    public UserPage inviteRolesEmploymentClick() {
         inviteRolesEmployment.click();
         return this;
     }
 
-        public UserPage inviteRolesEmploymentArron() {
-            inviteRolesEmployment.sendKeys(Keys.ARROW_DOWN);
-            return this;
-        }
+    public UserPage btnRequestUser() {
+        btnRequestUser.click();
+        return this;
+    }
+    public UserPage inviteRolesEmploymentArron() {
+        inviteRolesEmployment.sendKeys(Keys.ARROW_DOWN);
+        return this;
+    }
+
+    public void btnAddUser() {
+
+    }
 }
 

@@ -34,6 +34,8 @@ public abstract class BaseTest {
     public static final String BTN_PASSWORD = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']";
     public static final String EMAIL = "f.ff.1980@list.ru";
     public static final String PASSWORD = "012345678";
+
+    public final static String USER = "//input[@class='ant-input']";
     public static final String CHECKBOX = "//div[@id='CheckboxComponent']";
 
     public WebDriver driver = new ChromeDriver();
