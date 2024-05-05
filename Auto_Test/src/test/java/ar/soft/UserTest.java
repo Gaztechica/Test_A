@@ -6,6 +6,9 @@ import ar.soft.runner.BaseTest;
 //import org.junit.Test;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
 
 public class UserTest extends BaseTest {
@@ -197,6 +200,21 @@ public class UserTest extends BaseTest {
                 .buttonRemove();
 //                .userNameDel();
 //                .buttonRemoCancel();
+    }
+
+    @Test
+    public void requestUser() {
+        new UserPage(driver)
+                .createUser()
+                .btnRequestUser();
+
+        WebElement targetElementStatus = getWait10().until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("")));
+        new Actions(getDriver())
+                .moveToElement(targetElementStatus)
+                .perform();
+
+getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Добавить')]")).click();
     }
 
 
