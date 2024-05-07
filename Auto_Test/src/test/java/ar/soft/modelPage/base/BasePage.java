@@ -1,18 +1,21 @@
 package ar.soft.modelPage.base;
 
 import org.junit.After;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
-import org.openqa.selenium.WebDriver;
+import org.junit.Assert;
+import org.openqa.selenium.*;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
+import java.util.ArrayList;
+import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import static ar.soft.runner.BaseTest.*;
 
 public abstract class BasePage extends BaseModel {
-//    private final WebDriver driver;
+
+    private WebDriver driver;
 
     public BasePage(WebDriver driver) {
         super(driver);
@@ -21,9 +24,8 @@ public abstract class BasePage extends BaseModel {
 //        return driver;
 //    }
 
-
 //    @FindBy(xpath = "http://23.105.246.172:5000/login")
-//    private WebElement URL;
+//    private WebElement URL_Amr;
 //
 //    @FindBy(xpath = "//input[@class='ant-input']")
 //    private WebElement INPUT_EMAIL;
@@ -41,14 +43,7 @@ public abstract class BasePage extends BaseModel {
 //
 //    }
 
-//    public BasePage url() {
-//        getDriver().get(URL);
-//        getDriver().manage().timeouts().pageLoadTimeout(10, TimeUnit.SECONDS);
-//        getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//        getDriver().manage().window().setSize(new Dimension(1820,1080));
-//
-//        return this;
-//    }
+
 
 
     public BasePage login()throws InterruptedException {
@@ -70,6 +65,7 @@ public abstract class BasePage extends BaseModel {
     @AfterMethod
     public void into() {
         getDriver().quit();
-
     }
+
+
 }
