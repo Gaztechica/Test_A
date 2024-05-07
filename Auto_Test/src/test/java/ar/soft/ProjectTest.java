@@ -96,6 +96,28 @@ public class ProjectTest extends BaseTest {
         driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
         driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']")).click();
         driver.findElement(By.xpath("//div[@class='Sidebar__project']//button[@class='ant-btn ant-btn-default iconButton small colorPrimary ']")).click();
+        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
+        driver.findElement(By.xpath("//div[@class='CustomLogo']")).click();
+
+    }
+
+    @Test
+    public void RemoveProgect() {
+//        new ProgectPage(driver)
+//                .btnCreateProgect();
+//        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
+//        driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
+//
+//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
+
+        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
+
+        driver.findElement(By.xpath("//div[@class='CustomLogo']")).click();
+
+//        driver.findElement(By.xpath("//div[@class='Sidebar__admin']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
+//        driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']")).click();
+//        driver.findElement(By.xpath("//div[@class='Sidebar__project']//button[@class='ant-btn ant-btn-default iconButton small colorPrimary ']")).click();
     }
 
     // ================================== пользователь пагинация =====================================================

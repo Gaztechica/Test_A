@@ -6,11 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/LogFileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/LogFileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/UserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/UserPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/UserPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,6 +161,8 @@
     "TestNG.LogFileTest.logDelTest.executor": "Run",
     "TestNG.LogFileTest.logSearchTest.executor": "Run",
     "TestNG.LogFileTest.logSerchTest.executor": "Run",
+    "TestNG.ProjectTest.ConstructorProgect.executor": "Run",
+    "TestNG.ProjectTest.RemoveProgect.executor": "Run",
     "TestNG.ProjectTest.SidebarProgect.executor": "Run",
     "TestNG.ProjectTest.cancelCreateProgectTest.executor": "Run",
     "TestNG.ProjectTest.createCancelProgect.executor": "Run",
@@ -202,7 +201,7 @@
     </key>
   </component>
   <component name="RunManager" selected="TestNG.ProjectTest.SidebarProgect">
-    <configuration name="ProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectTest.ConstructorProgect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -212,7 +211,26 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="ConstructorProgect" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTest.RemoveProgect" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
+      <option name="METHOD_NAME" value="RemoveProgect" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -255,24 +273,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProjectTest.createCancelProgect" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="METHOD_NAME" value="createCancelProgect" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ProjectTest.createProgect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -294,10 +294,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.ProjectTest.SidebarProgect" />
-        <item itemvalue="TestNG.ProjectTest.cancelCreateProgectTest" />
-        <item itemvalue="TestNG.ProjectTest.createCancelProgect" />
+        <item itemvalue="TestNG.ProjectTest.RemoveProgect" />
+        <item itemvalue="TestNG.ProjectTest.ConstructorProgect" />
         <item itemvalue="TestNG.ProjectTest.createProgect" />
-        <item itemvalue="TestNG.ProjectTest" />
+        <item itemvalue="TestNG.ProjectTest.cancelCreateProgectTest" />
       </list>
     </recent_temporary>
   </component>
@@ -723,7 +723,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/main" />
+                        <option value="origin/57" />
                       </list>
                     </value>
                   </entry>
