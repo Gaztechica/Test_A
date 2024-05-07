@@ -207,18 +207,18 @@ public abstract class BaseTest {
         Assert.assertEquals("Политика обработки персональных данных", driver.findElement(GET_POLITIC).getText());
     }
 
-    @Test
-    public void testHrefPolitiCopi() {
-
-//        getWait15().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"))).click();
-        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
-
-        Set<String> handles = getDriver().getWindowHandles();
-        handles.remove(getDriver().getWindowHandle());
-        getDriver().switchTo().window(handles.iterator().next());
-
-        Assert.assertEquals(getDriver().findElement(GET_POLITIC).getText(), "Политика обработки персональных данных");
-    }
+//    @Test
+//    public void testHrefPolitiCopi() {
+//
+////        getWait15().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"))).click();
+//        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
+//
+//        Set<String> handles = getDriver().getWindowHandles();
+//        handles.remove(getDriver().getWindowHandle());
+//        getDriver().switchTo().window(handles.iterator().next());
+//
+//        Assert.assertEquals(getDriver().findElement(GET_POLITIC).getText(), "Политика обработки персональных данных");
+//    }
 
 
     @Test
@@ -245,5 +245,5 @@ public abstract class BaseTest {
         Assert.assertEquals("AR SOFT support", getBot);
     }
 
-//    =================================================
+
 }
