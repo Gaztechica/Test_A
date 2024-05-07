@@ -56,11 +56,11 @@ public class ProjectTest extends BaseTest {
         Assert.assertEquals("1Новый проект", newProgectName);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
     }
 
     @Test
     public void cancelCreateProgectTest() {
-
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
@@ -71,27 +71,31 @@ public class ProjectTest extends BaseTest {
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_building']")).sendKeys("121");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_office']")).sendKeys("117");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_startDate']")).click();
-
-        WebElement NewData = driver.findElement(By.xpath("//a[@class='ant-picker-today-btn']"));
-
-        NewData.click();
+        driver.findElement(By.xpath("//a[@class='ant-picker-today-btn']")).click();
 
         WebElement EndData = driver.findElement(By.xpath("//input[@id='CreateProjectForm_endDate']"));
-
         EndData.sendKeys("26-06-2024");
-
         EndData.sendKeys(Keys.ENTER);
-//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
+    }
 
+    @Test
+    public void SidebarProgect() {
+        new ProgectPage(driver)
+                .btnCreateProgect();
+        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
+        driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
 
-//        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
 
-//       кнопка отмены
-        WebElement textBoxAside = driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']"));
-        textBoxAside.click();
+        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
 
-//        driver.quit();
+        driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']")).click();
 
+        driver.findElement(By.xpath("//div[@class='Sidebar__admin']")).click();
+        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
+        driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']")).click();
+        driver.findElement(By.xpath("//div[@class='Sidebar__project']//button[@class='ant-btn ant-btn-default iconButton small colorPrimary ']")).click();
     }
 
     // ================================== пользователь пагинация =====================================================

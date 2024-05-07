@@ -39,5 +39,5 @@ public class LogFileTest extends BaseTest {
                 .searchLogFile();
     }
 
-
+// провeрка добавления записи на страницу, количество элементов, пагинация
 }
