@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/SettingsSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/SettingsSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AutorisaitionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/UserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/UserPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/SettingsSidebarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/SettingsSidebarTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/AutorisaitionTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/AutorisaitionTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -177,6 +177,7 @@
     "TestNG.ProjectTest.poginacyaTest.executor": "Run",
     "TestNG.ProjectTest.removeProgect.executor": "Run",
     "TestNG.ProjectTest.sidebarProgect.executor": "Run",
+    "TestNG.ProjectTest.testHrefPolitiCopi.executor": "Run",
     "TestNG.RemarcSidebarTest.addRemarkTest.executor": "Run",
     "TestNG.RemarcSidebarTest.remarkTest.executor": "Run",
     "TestNG.RemarcSidebarTest.КemarcTest.executor": "Run",
@@ -189,17 +190,21 @@
     "TestNG.UserSidebarTest.addUserTest.executor": "Run",
     "TestNG.UserSidebarTest.deleteUserTest.executor": "Run",
     "TestNG.UserTest.elementPageTest.executor": "Run",
+    "TestNG.UserTest.executor": "Run",
     "TestNG.UserTest.poginacyaTest.executor": "Run",
     "TestNG.UserTest.requestUser.executor": "Run",
     "TestNG.UserTest.userCreateAdmin.executor": "Run",
     "TestNG.UserTest.userCreateDelete.executor": "Run",
+    "TestNG.UserTest.userCreateInspektor.executor": "Run",
+    "TestNG.UserTest.userCreateNabludately.executor": "Run",
     "TestNG.UserTest.userCreatePodraydchiAdd.executor": "Run",
+    "TestNG.UserTest.userCreatePodraydchic.executor": "Run",
     "TestNG.UserTest.userInviteAdmin.executor": "Run",
     "TestNG.UserTest.userInvitePodraydchic.executor": "Run",
     "TestNG.UserTest.userSearchTest.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 9 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "71",
+    "git-widget-placeholder": "72",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
@@ -215,26 +220,8 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SettingsSidebarTest.deleteProgectTest">
-    <configuration name="ProjectTest.hrefPolitic" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.runner.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="METHOD_NAME" value="hrefPolitic" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ProjectTest.removeProgect" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.UserTest.userCreateAdmin">
+    <configuration name="UserTest.userCreateAdmin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -243,8 +230,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="METHOD_NAME" value="removeProgect" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
+      <option name="METHOD_NAME" value="userCreateAdmin" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -252,7 +239,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SettingsSidebarTest.cancelDeleteProgectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.userCreateInspektor" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -261,8 +248,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.SettingsSidebarTest" />
-      <option name="METHOD_NAME" value="cancelDeleteProgectTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
+      <option name="METHOD_NAME" value="userCreateInspektor" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -270,7 +257,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SettingsSidebarTest.deleteProgectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.userCreateNabludately" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -279,8 +266,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.SettingsSidebarTest" />
-      <option name="METHOD_NAME" value="deleteProgectTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
+      <option name="METHOD_NAME" value="userCreateNabludately" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -288,7 +275,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SettingsSidebarTest.removeProgectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.userCreatePodraydchiAdd" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -297,8 +284,26 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.SettingsSidebarTest" />
-      <option name="METHOD_NAME" value="removeProgectTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
+      <option name="METHOD_NAME" value="userCreatePodraydchiAdd" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTest.userCreatePodraydchic" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
+      <option name="METHOD_NAME" value="userCreatePodraydchic" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -308,11 +313,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SettingsSidebarTest.deleteProgectTest" />
-        <item itemvalue="TestNG.SettingsSidebarTest.cancelDeleteProgectTest" />
-        <item itemvalue="TestNG.SettingsSidebarTest.removeProgectTest" />
-        <item itemvalue="TestNG.ProjectTest.hrefPolitic" />
-        <item itemvalue="TestNG.ProjectTest.removeProgect" />
+        <item itemvalue="TestNG.UserTest.userCreateAdmin" />
+        <item itemvalue="TestNG.UserTest.userCreatePodraydchiAdd" />
+        <item itemvalue="TestNG.UserTest.userCreateNabludately" />
+        <item itemvalue="TestNG.UserTest.userCreatePodraydchic" />
+        <item itemvalue="TestNG.UserTest.userCreateInspektor" />
       </list>
     </recent_temporary>
   </component>

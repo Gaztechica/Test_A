@@ -67,11 +67,11 @@ public class UserPage extends BasePage {
 
     @FindBy(xpath = "//input[@class='ant-input']")
     private WebElement btnRequestUser;
-    public final static String USER_NAME = "123EvgenTest";
+    public final static String USER_NAME = "123ETest";
 
+    public final static String USER_EMAIL = "ye2vtcmvg@mail.ru";
 
-    public final static String USER_EMAIL = "ye2vtcmvgen@mail.ru";
-
+    public final static String USER_PASSWORD = "password";
 
     public UserPage(WebDriver driver) {
         super(driver);
@@ -102,12 +102,12 @@ public class UserPage extends BasePage {
         return this;
     }
 
-    public UserPage userEmail(String email) {
+    public UserPage userEmail() {
         inputEmail.sendKeys(USER_EMAIL);
         return this;
     }
 
-    public UserPage inviteUserEmail(String email) {
+    public UserPage inviteUserEmail() {
         inviteUserEmail.sendKeys(USER_EMAIL);
         return this;
     }
@@ -122,8 +122,8 @@ public class UserPage extends BasePage {
         return this;
     }
 
-    public UserPage userTime(String time) {
-        userTimezone.sendKeys(time);
+    public UserPage userTime() {
+        userTimezone.sendKeys("UTC + 00:00");
         return this;
     }
 
@@ -231,8 +231,8 @@ public class UserPage extends BasePage {
             return this;
     }
 
-    public UserPage userPassword(String password) {
-       inputPassword.sendKeys(password);
+    public UserPage userPassword() {
+       inputPassword.sendKeys(USER_PASSWORD);
        return this;
     }
 
