@@ -78,7 +78,7 @@ public class ProjectTest extends BaseTest {
     }
 
     @Test
-    public void SidebarProgect() {
+    public void sidebarProgect() {
         new ProgectPage(driver)
                 .btnCreateProgect();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
@@ -100,7 +100,7 @@ public class ProjectTest extends BaseTest {
     }
 
     @Test
-    public void RemoveProgect() {
+    public void removeProgect() {
 //        new ProgectPage(driver)
 //                .btnCreateProgect();
 //        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
@@ -129,44 +129,14 @@ public class ProjectTest extends BaseTest {
     @Test
     public void projectTest() {
 
-//=============================================================
-
-//         WebElement pagiSimvol = driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]"));
-//
-//         pagiSimvol.click();
-//
-//         Thread.sleep(1000);
-//
-//         WebElement pgiLeft = driver.findElement(By.xpath("//button[@class='ant-pagination-item-link']/span[@aria-label='left']"));
-//
-//         pgiLeft.click();
-//
-//         Thread.sleep(1000);
-//
-//         WebElement pagiLeft = driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]"));
-//
-//         pagiLeft.click();
-//
-//         Thread.sleep(1000);
-
-//         WebElement pagiSimvolRetern = driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'1')]"));
-//
-//         pagiSimvolRetern.click();
-
-//====================================================================================
-//        WebElement elemPage = driver.findElement(By.xpath("//input[@class='ant-select-selection-search-input']"));
-
-        WebElement elemPage = driver.findElement(By.xpath("//span[@class='ant-select-selection-item']"));
-        elemPage.click();
-
 //        Select simpl = new Select(selectWithoutMultiple);
 //        simpl.selectByValue("two");
 //        String newValue = selectWithoutMultiple.getAttribute("value");
 
 
 //        elemPage.sendKeys(Keys.ARROW_DOWN);
-        elemPage.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
-        elemPage.sendKeys(Keys.ENTER);
+//        elemPage.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+//        elemPage.sendKeys(Keys.ENTER);
 
 //         WebElement elemPage2 = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='50']"));
 //
@@ -222,5 +192,17 @@ public class ProjectTest extends BaseTest {
 //         driver.quit();
 //         Thread.sleep(5000);
     }
+
+
+
+//=============================================================
+
+
+
+//    ========================================   =======================================
+//
+
+//
+
 
 }

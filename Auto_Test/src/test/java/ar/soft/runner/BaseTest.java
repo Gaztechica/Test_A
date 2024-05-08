@@ -162,38 +162,36 @@ public abstract class BaseTest {
 
     // ================================== пользователь пагинация =====================================================
 
-    // нет изменения кол-ва строк на странице
     @Test
-    public void poginacyaTest() throws InterruptedException {
-
-//=============================================================
-
+    public void poginacyaTest() {
         driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
         driver.findElement(By.xpath("//button[@class='ant-pagination-item-link']/span[@aria-label='left']")).click();
         driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
         driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'1')]")).click();
+    }
+
+    @Test
+    public void elementPageTest() {
+        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='10']")).click();
+        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'50')]")).click();
+        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='50']")).click();
+        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'40')]")).click();
+        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='40']")).click();
+        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'30')]")).click();
+        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='30']")).click();
+        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'20')]")).click();
+        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='20']")).click();
+        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'10')]")).click();
+    }
 
 //====================================================================================
-//        WebElement elemPage = driver.findElement(By.xpath("//input[@class='ant-select-selection-search-input']"));
 
-        WebElement elemPage = driver.findElement(By.xpath("//span[@class='ant-select-selection-item']"));
-        elemPage.click();
 
-//        elemPage.sendKeys(Keys.ARROW_DOWN);
-        elemPage.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-        elemPage.sendKeys(Keys.ENTER);
-
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='50']")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-search']")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-arrow']")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'10')]")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'50')]")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'10')]")).click();
-        driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_country\"]")).sendKeys("РФ");
-        driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_street\"]")).sendKeys("Победы");
-        driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_postalCode\"]")).sendKeys("444444");
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
-    }
+//        driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_country\"]")).sendKeys("РФ");
+//        driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_street\"]")).sendKeys("Победы");
+//        driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_postalCode\"]")).sendKeys("444444");
+//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+//    }
 
     // ================================== ссылки =====================================================
 
