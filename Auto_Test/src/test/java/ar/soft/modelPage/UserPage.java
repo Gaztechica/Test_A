@@ -5,12 +5,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class UserPage extends BasePage {
 
     @FindBy(xpath = "//a[@href='/users']")
-    private WebElement createUser;
+    private WebElement UserPage;
 
     @FindBy(xpath = "//input[@id='user_name']")
     private WebElement inputName;
@@ -65,7 +67,7 @@ public class UserPage extends BasePage {
     @FindBy(xpath = "//span[@class='ant-input-affix-wrapper searchBoxInput  not-entered']")
     private WebElement searchInputClick;
 
-    @FindBy(xpath = "//input[@class='ant-input']")
+    @FindBy(xpath = "//div[@class='ContentUsers__requestTitle']")
     private WebElement btnRequestUser;
 
     public final static String USER_NAME = "123ETest";
@@ -78,8 +80,8 @@ public class UserPage extends BasePage {
         super(driver);
     }
 
-    public UserPage createUser() {
-        createUser.click();
+    public UserPage userPage() {
+        UserPage.click();
         return this;
     }
 
@@ -280,7 +282,7 @@ public class UserPage extends BasePage {
     }
 
     public UserPage buttonRemove() {
-        getDriver().findElement(By.xpath("//img[@class='ant-dropdown-trigger ContentUsers__iconBlock-img']")).click();
+        getDriver().findElement(By.xpath("//img[@class='ant-dropdown-trigger AllUsers__iconBlock-img']")).click();
         return this;
     }
 
@@ -323,6 +325,15 @@ public class UserPage extends BasePage {
 
     public UserPage btnRequestUser() {
         btnRequestUser.click();
+        return this;
+    }
+
+    public UserPage hoverRequestUser() {
+        WebElement targetElementStatus = getWait10().until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//tr[@class='ant-table-row ant-table-row-level-0'][contains(.,'Отклонить')]")));
+        new Actions(getDriver())
+                .moveToElement(targetElementStatus)
+                .perform();
         return this;
     }
     public UserPage inviteRolesEmploymentArron() {

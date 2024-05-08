@@ -1,12 +1,9 @@
 package ar.soft;
 
 import ar.soft.modelPage.UserPage;
-import ar.soft.modelPage.base.BasePage;
 import ar.soft.runner.BaseTest;
 //import org.junit.Test;
 import org.openqa.selenium.*;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.Test;
@@ -16,11 +13,13 @@ public class UserTest extends BaseTest {
     // ================================== пользователь =====================================================
 
     //     редактирование/удаление
+    //
+    //     асерт
 
     @Test
     public void userCreateAdmin() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("Леха")
@@ -39,7 +38,7 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreateInspektor() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("Игнат")
@@ -60,7 +59,7 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreatePodraydchic() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("Kirov")
@@ -84,7 +83,7 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreateNabludately() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("Наблюдатель")
@@ -109,7 +108,7 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreatePodraydchiAdd() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("FamilyTest")
@@ -134,7 +133,7 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreateNabludatelyAdd() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("Наблюдатель")
@@ -161,7 +160,7 @@ public class UserTest extends BaseTest {
     @Test
     public void userCreateRemove() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
                 .userLastName("FamilyTest")
@@ -194,27 +193,28 @@ public class UserTest extends BaseTest {
     }
 
     @Test
-    public void userCreateDelete() {
+    public void userCancelDelete() {
         new UserPage(driver)
-                .createUser()
-                .buttonRemove();
-//                .userNameDel();
-//                .buttonRemoCancel();
+                .userPage()
+                .buttonRemove()
+                .userNameDel()
+                .buttonRemoCancel();
     }
 
     @Test
     public void requestUser() {
         new UserPage(driver)
-                .createUser()
-                .btnRequestUser();
+                .userPage()
+                .btnRequestUser()
+                .hoverRequestUser();
 
-        WebElement targetElementStatus = getWait10().until(ExpectedConditions.visibilityOfElementLocated(
-                By.xpath("")));
-        new Actions(getDriver())
-                .moveToElement(targetElementStatus)
-                .perform();
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed '][contains(.,'Отклонить')]")).click();
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
+        new UserPage(driver)
+                  .hoverRequestUser();
 
-getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Добавить')]")).click();
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Добавить')]")).click();
+        getDriver().findElement(By.xpath("//div[@class='InviteUserModal__buttons']//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
     }
 
 
@@ -222,7 +222,7 @@ getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default prima
     @Test
     public void userCreateAdminSearch() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
@@ -257,7 +257,7 @@ getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default prima
     @Test
     public void userInviteAdmin() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
@@ -268,7 +268,7 @@ getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default prima
     @Test
     public void userInviteInspektor() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
@@ -280,7 +280,7 @@ getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default prima
     @Test
     public void userInvitePodraydchic() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
@@ -296,7 +296,7 @@ getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default prima
     @Test
     public void userInviteNabludately() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
@@ -313,7 +313,7 @@ getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default prima
     @Test
     public void userCreatePodraydchicAdd() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
@@ -331,7 +331,7 @@ getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default prima
     @Test
     public void userCreaNabludatelyAdd() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
@@ -351,18 +351,24 @@ getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default prima
     @Test
     public void userSearchTest() {
         new UserPage(driver)
-                .createUser()
+                .userPage()
                 .searchInputClick()
                 .searchClick()
                 .searchInputSent("Леха")
+
+//      ===========================асерт ==================================
                 .searchInputDelete()
                 .searchInputSent("Игнат")
+
                 .searchInputDelete()
                 .searchInputSent("Kirov")
+
                 .searchInputDelete()
                 .searchInputSent("Наблюдатель")
+
                 .searchInputDelete()
                 .searchInputSent("ye2vtcmvg@mail.ru")
+
                 .searchInputDelete()
                 .searchInputClick();
 
