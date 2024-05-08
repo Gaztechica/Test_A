@@ -83,34 +83,38 @@ public class ProjectTest extends BaseTest {
                 .btnCreateProgect();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
-
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
 
         driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
-
         driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']")).click();
 
         driver.findElement(By.xpath("//div[@class='Sidebar__admin']")).click();
         driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
         driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']")).click();
+
         driver.findElement(By.xpath("//div[@class='Sidebar__project']//button[@class='ant-btn ant-btn-default iconButton small colorPrimary ']")).click();
         driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
         driver.findElement(By.xpath("//div[@class='CustomLogo']")).click();
-
     }
 
     @Test
     public void removeProgect() {
 //        new ProgectPage(driver)
 //                .btnCreateProgect();
-//        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
+//        driver.findElement(By.xpath()).sendKeys("1Новый проект");
 //        driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
 //
 //        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
 
         driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
+        driver.findElement(NEW_PROJEСT_NAME_TEXT).click();
+//        driver.findElement(By.xpath("//div[@class='CustomLogo']")).click();
 
-        driver.findElement(By.xpath("//div[@class='CustomLogo']")).click();
+
+        driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_country\"]")).sendKeys("РФ");
+        driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_street\"]")).sendKeys("Победы");
+        driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_postalCode\"]")).sendKeys("444444");
+        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
 
 //        driver.findElement(By.xpath("//div[@class='Sidebar__admin']")).click();
 //        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();

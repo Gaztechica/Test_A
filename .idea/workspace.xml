@@ -7,8 +7,10 @@
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/SettingsSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/SettingsSidebarTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/SettingsSidebarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/SettingsSidebarTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,13 +175,20 @@
     "TestNG.ProjectTest.executor": "Run",
     "TestNG.ProjectTest.hrefPolitic.executor": "Run",
     "TestNG.ProjectTest.poginacyaTest.executor": "Run",
+    "TestNG.ProjectTest.removeProgect.executor": "Run",
+    "TestNG.ProjectTest.sidebarProgect.executor": "Run",
     "TestNG.RemarcSidebarTest.addRemarkTest.executor": "Run",
     "TestNG.RemarcSidebarTest.remarkTest.executor": "Run",
     "TestNG.RemarcSidebarTest.КemarcTest.executor": "Run",
     "TestNG.RemarcTest.КemarcTest.executor": "Run",
+    "TestNG.SettingsSidebarTest.cancelDeleteProgectTest.executor": "Run",
+    "TestNG.SettingsSidebarTest.deleteProgectTest.executor": "Run",
+    "TestNG.SettingsSidebarTest.removeProgectTest.executor": "Run",
+    "TestNG.SettingsSidebarTest.settingsTest.executor": "Run",
     "TestNG.SettingsTest.settingsTest.executor": "Run",
     "TestNG.UserSidebarTest.addUserTest.executor": "Run",
     "TestNG.UserSidebarTest.deleteUserTest.executor": "Run",
+    "TestNG.UserTest.elementPageTest.executor": "Run",
     "TestNG.UserTest.poginacyaTest.executor": "Run",
     "TestNG.UserTest.requestUser.executor": "Run",
     "TestNG.UserTest.userCreateAdmin.executor": "Run",
@@ -206,25 +215,7 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserTest.elementPageTest">
-    <configuration name="LogFileTest.hrefBot" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.runner.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
-      <option name="METHOD_NAME" value="hrefBot" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.SettingsSidebarTest.deleteProgectTest">
     <configuration name="ProjectTest.hrefPolitic" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -243,17 +234,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProjectTest.poginacyaTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectTest.removeProgect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.runner.*" />
+          <option name="PATTERN" value="ar.soft.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="METHOD_NAME" value="poginacyaTest" />
+      <option name="METHOD_NAME" value="removeProgect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -261,17 +252,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.elementPageTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SettingsSidebarTest.cancelDeleteProgectTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.runner.*" />
+          <option name="PATTERN" value="ar.soft.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="elementPageTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.SettingsSidebarTest" />
+      <option name="METHOD_NAME" value="cancelDeleteProgectTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -279,17 +270,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.poginacyaTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SettingsSidebarTest.deleteProgectTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.runner.*" />
+          <option name="PATTERN" value="ar.soft.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="poginacyaTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.SettingsSidebarTest" />
+      <option name="METHOD_NAME" value="deleteProgectTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SettingsSidebarTest.removeProgectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.SettingsSidebarTest" />
+      <option name="METHOD_NAME" value="removeProgectTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -299,11 +308,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserTest.elementPageTest" />
-        <item itemvalue="TestNG.UserTest.poginacyaTest" />
-        <item itemvalue="TestNG.ProjectTest.poginacyaTest" />
+        <item itemvalue="TestNG.SettingsSidebarTest.deleteProgectTest" />
+        <item itemvalue="TestNG.SettingsSidebarTest.cancelDeleteProgectTest" />
+        <item itemvalue="TestNG.SettingsSidebarTest.removeProgectTest" />
         <item itemvalue="TestNG.ProjectTest.hrefPolitic" />
-        <item itemvalue="TestNG.LogFileTest.hrefBot" />
+        <item itemvalue="TestNG.ProjectTest.removeProgect" />
       </list>
     </recent_temporary>
   </component>
@@ -322,14 +331,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00030" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
-      <option name="closed" value="true" />
-      <created>1710956532785</created>
-      <option name="number" value="00030" />
-      <option name="presentableId" value="LOCAL-00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1710956532785</updated>
     </task>
     <task id="LOCAL-00031" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
       <option name="closed" value="true" />
@@ -715,7 +716,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715105194964</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Merge remote-tracking branch 'origin/main4' into main4">
+      <option name="closed" value="true" />
+      <created>1715160293933</created>
+      <option name="number" value="00079" />
+      <option name="presentableId" value="LOCAL-00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1715160293934</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
