@@ -67,6 +67,7 @@ public class UserPage extends BasePage {
 
     @FindBy(xpath = "//input[@class='ant-input']")
     private WebElement btnRequestUser;
+
     public final static String USER_NAME = "123ETest";
 
     public final static String USER_EMAIL = "ye2vtcmvg@mail.ru";
