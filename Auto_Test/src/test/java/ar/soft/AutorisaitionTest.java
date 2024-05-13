@@ -63,7 +63,8 @@ public class AutorisaitionTest extends BaseTest {
         driver.get(URL);
 
 //        driver.findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
-        new HomePage(driver).clickRega();
+        new HomePage(driver)
+                .clickRega();
 
         driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
         driver.findElement(By.xpath(BTN_PASSWORD)).click();

@@ -6,7 +6,10 @@ import ar.soft.runner.BaseTest;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class UserTest extends BaseTest {
 
@@ -211,7 +214,7 @@ public class UserTest extends BaseTest {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed '][contains(.,'Отклонить')]")).click();
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
         new UserPage(driver)
-                  .hoverRequestUser();
+                .hoverRequestUser();
 
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Добавить')]")).click();
         getDriver().findElement(By.xpath("//div[@class='InviteUserModal__buttons']//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
@@ -371,20 +374,18 @@ public class UserTest extends BaseTest {
 
                 .searchInputDelete()
                 .searchInputClick();
+    }
 
-//        WebElement createEmail = driver.findElement(By.xpath("//span[@class='ant-input-affix-wrapper searchBoxInput  not-entered']"));
-//
-//        createEmail.sendKeys("yevgeniy.gor.91@mail.ru");
-//
-//        WebElement userRoles = driver.findElement(By.xpath("//input[@id='InviteUserModal_roles']"));
-//        userRoles.click();
-//        userRoles.sendKeys(Keys.ENTER);
+    @Test
+    public void organisationSearchTest() {
+        new UserPage(driver)
+                .userPage();
+        driver.findElement(By.xpath("//div[@class='FilterUsers__employments']//span[@class='ant-select-selection-search']")).click();
+        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'Kir')]")).click();
 
 //        не работает сортировка по организациям
 
-        WebElement userRolesx = driver.findElement(By.xpath("//span[@class='ant-select-selection-item']"));
-        userRolesx.click();
-        userRolesx.sendKeys(Keys.ARROW_DOWN);
+
 
 //        WebElement userRoles = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'Все организации')]"));
 //        WebElement userRoles = driver.findElement(By.xpath("//*[@id=\"root\"]/section/main/div/div/div[1]/div[1]/div[1]/div/div/span[2]"));
@@ -402,4 +403,70 @@ public class UserTest extends BaseTest {
         new UserPage(driver)
                 .buttonDeleteClick();
     }
+
+//    public String randomString() {
+//        return UUID.randomUUID()
+//                .toString()
+//                .substring(0, 7);
+//    }
+
+    @DataProvider(name = "userAddProvider")
+    public Object[][] userAddProvider() {
+        return new Object[][]{
+                {"Gleb", "Password", "Full name", "E-mail@com"},
+                {"Ignat", "Password", "Full name", "E-mail@com"},
+                {"Lion", "Password", "Full name", "E-mail@com"},
+                {"Oleg", "Password", "Full name", "E-mail@com"},
+                {"Den", "Password", "Full name", "E-mail@com"},
+        };
+    }
+
+    @Test(dataProvider = "userAddProvider")
+    public void testCheckPeople(String Username, String Password, String Fullname, String Email) {
+
+//        List<String> showNam =
+                new UserPage(driver)
+                .userPage()
+                .inviteUserClick()
+                .inviteUserEmail()
+                .inviteRolesClick()
+                .inviteRolesEnter();
+//        Assert.assertTrue(showNames.contains(username));
+
+    }
+
+
+//    public String randomEmail() {
+//        return randomString() + "@" + randomString() + ".com";
+//    }
+
+//    @DataProvider(name = "usersCreateDataProvider")
+//    public Object[][] usersCreateDataProvider() {
+//        return new Object[][] {
+////                {"Username", "Password", "Full name", "E-mail address"},
+//                {"Ivan", randomString(), randomString(), randomEmail()},
+//                {"Maria", randomString(), randomString(), randomEmail()},
+//                {"Sofia", randomString(), randomString(), randomEmail()},
+//                {"Irina", randomString(), randomString(), randomEmail()}
+//        };
+//    }
+
+//    @Test(dataProvider = "usersCreateDataProvider")
+//    public void testCreateUsers(String username, String password, String fullName, String email) {
+//
+//        List<String> showNames = new UserPage((getDriver())
+//                .;;
+//
+//        Assert.assertTrue(showNames.contains(username));
+//    }
+
+//    @Test(dependsOnMethods = "testCreateUsers")
+//    public void testRedirectToUserPage() {
+//        new HomePage(getDriver())
+//                .clickPeopleButton();
+////                .getUserIDListWebElement()
+//
+//        TestUtils.sleep(this,3);
+//
+//    }
 }

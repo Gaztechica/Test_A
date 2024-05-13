@@ -8,6 +8,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.testng.Assert;
+import org.testng.annotations.Ignore;
+import org.testng.annotations.Test;
 
 public class UserPage extends BasePage {
 
@@ -336,6 +339,7 @@ public class UserPage extends BasePage {
                 .perform();
         return this;
     }
+
     public UserPage inviteRolesEmploymentArron() {
         inviteRolesEmployment.sendKeys(Keys.ARROW_DOWN);
         return this;
@@ -345,4 +349,9 @@ public class UserPage extends BasePage {
 
     }
 }
+
+
+
+
+
 

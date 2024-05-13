@@ -9,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/UserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/UserPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/UserTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/UserPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/UserPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,9 +188,12 @@
     "TestNG.UserSidebarTest.deleteUserTest.executor": "Run",
     "TestNG.UserTest.elementPageTest.executor": "Run",
     "TestNG.UserTest.executor": "Run",
+    "TestNG.UserTest.organisationSearchTest.executor": "Run",
     "TestNG.UserTest.poginacyaTest.executor": "Run",
     "TestNG.UserTest.requestUser.executor": "Run",
+    "TestNG.UserTest.testCheckPeople.executor": "Run",
     "TestNG.UserTest.userCancelDelete.executor": "Run",
+    "TestNG.UserTest.userCreaNabludatelyAdd.executor": "Run",
     "TestNG.UserTest.userCreateAdmin.executor": "Run",
     "TestNG.UserTest.userCreateDelete.executor": "Run",
     "TestNG.UserTest.userCreateInspektor.executor": "Run",
@@ -219,7 +221,25 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserTest.requestUser">
+  <component name="RunManager" selected="TestNG.UserTest.userCreaNabludatelyAdd">
+    <configuration name="UserTest.organisationSearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
+      <option name="METHOD_NAME" value="organisationSearchTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserTest.requestUser" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -238,7 +258,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.userCancelDelete" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.testCheckPeople" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -248,7 +268,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="userCancelDelete" />
+      <option name="METHOD_NAME" value="testCheckPeople" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -256,7 +276,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.userCreateDelete" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.userCreaNabludatelyAdd" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -266,25 +286,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="userCreateDelete" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserTest.userInvitePodraydchic" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="userInvitePodraydchic" />
+      <option name="METHOD_NAME" value="userCreaNabludatelyAdd" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -312,11 +314,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserTest.requestUser" />
-        <item itemvalue="TestNG.UserTest.userCancelDelete" />
-        <item itemvalue="TestNG.UserTest.userCreateDelete" />
+        <item itemvalue="TestNG.UserTest.userCreaNabludatelyAdd" />
+        <item itemvalue="TestNG.UserTest.organisationSearchTest" />
         <item itemvalue="TestNG.UserTest.userSearchTest" />
-        <item itemvalue="TestNG.UserTest.userInvitePodraydchic" />
+        <item itemvalue="TestNG.UserTest.testCheckPeople" />
+        <item itemvalue="TestNG.UserTest.requestUser" />
       </list>
     </recent_temporary>
   </component>
@@ -335,14 +337,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00032" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
-      <option name="closed" value="true" />
-      <created>1710957122753</created>
-      <option name="number" value="00032" />
-      <option name="presentableId" value="LOCAL-00032" />
-      <option name="project" value="LOCAL" />
-      <updated>1710957122753</updated>
     </task>
     <task id="LOCAL-00033" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
       <option name="closed" value="true" />
@@ -728,7 +722,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715195889085</updated>
     </task>
-    <option name="localTasksCounter" value="81" />
+    <task id="LOCAL-00081" summary="Merge remote-tracking branch 'origin/main4' into main4">
+      <option name="closed" value="true" />
+      <created>1715202130692</created>
+      <option name="number" value="00081" />
+      <option name="presentableId" value="LOCAL-00081" />
+      <option name="project" value="LOCAL" />
+      <updated>1715202130692</updated>
+    </task>
+    <option name="localTasksCounter" value="82" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
