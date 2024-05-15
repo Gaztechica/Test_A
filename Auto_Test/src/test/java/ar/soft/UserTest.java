@@ -372,8 +372,8 @@ public class UserTest extends BaseTest {
                 .searchInputDelete()
                 .searchInputSent("ye2vtcmvg@mail.ru")
 
-                .searchInputDelete()
-                .searchInputClick();
+                .searchInputDelete();
+
     }
 
     @Test

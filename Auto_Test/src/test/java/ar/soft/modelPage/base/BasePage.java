@@ -62,10 +62,10 @@ public abstract class BasePage extends BaseModel {
         return this;
     }
 
-    @AfterMethod
-    public void into() {
-        getDriver().quit();
-    }
+//    @AfterMethod
+//    public void into() {
+//        getDriver().quit();
+//    }
 
 
 }

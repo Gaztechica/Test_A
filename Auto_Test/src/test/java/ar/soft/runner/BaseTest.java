@@ -44,14 +44,14 @@ public abstract class BaseTest {
 
     public WebDriver driver = new ChromeDriver();
 
-//    @BeforeMethod
-//    protected void beforeMethod(Method method) {
-//        driver = new ChromeDriver();
-//        getDriver().get(URL);
-//        getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
-//        getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-//        getDriver().manage().window().setSize(new Dimension(1920,1080));
-//    }
+    @BeforeMethod
+    protected void beforeMethod(Method method) {
+        driver = new ChromeDriver();
+        getDriver().get(URL);
+        getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+        getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+        getDriver().manage().window().setSize(new Dimension(1920,1080));
+    }
 
 //    public void log() {
 //        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
@@ -61,7 +61,7 @@ public abstract class BaseTest {
 
     @AfterMethod
     protected void afterMethod(Method method) {
-//        driver.quit();
+        driver.quit();
     }
 
     protected WebDriver getDriver() {
@@ -115,7 +115,7 @@ public abstract class BaseTest {
         getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
         getDriver().findElement(By.xpath(CHECKBOX)).click();
         getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
-
+//        driver.quit();
 //         ===================== смена языка ===================
 //        driver.findElement(By.xpath("//h2[@class='ant-typography h2_sb']")).click();
 //        driver.findElement(By.xpath("//div[@class='ant-typography p_r Profile__item'][contains(.,'Профиль')]")).click();
