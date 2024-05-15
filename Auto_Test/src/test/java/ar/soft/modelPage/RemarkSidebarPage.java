@@ -62,36 +62,43 @@ public class RemarkSidebarPage extends BasePage {
 
     public RemarkSidebarPage btnAddRemark() {
         btnAddRemark.click();
+
         return this;
     }
 
     public RemarkSidebarPage inputNameRemark() {
         inputNameRemark.sendKeys("Замечаниe");
+
         return this;
     }
 
     public RemarkSidebarPage btnAddNameRemark() {
         btnAddNameRemark.click();
+
         return this;
     }
 
     public RemarkSidebarPage newRemark() {
         newRemark.click();
+
         return this;
     }
 
     public RemarkSidebarPage btnDescription() {
         btnDescription.click();
+
         return this;
     }
 
     public RemarkSidebarPage inputDescription() {
         inputDescription.sendKeys("inputDescription");
+
         return this;
     }
 
     public RemarkSidebarPage btnSaveDescription() {
         btnSaveDescription.click();
+
         return this;
     }
 
@@ -108,29 +115,31 @@ public class RemarkSidebarPage extends BasePage {
         getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_2_list_0']")).click();
 
 //        getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_2_list_0']")).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+
         return this;
     }
 
     public RemarkSidebarPage inspection() {
         getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_4_list_0']")).sendKeys(Keys.ENTER);
 
-
-
         return this;
     }
 
     public RemarkSidebarPage priority() {
         getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_5_list_0']")).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+
         return this;
     }
 
     public RemarkSidebarPage executor() {
         getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_5_list_0']")).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+
         return this;
     }
 
     public RemarkSidebarPage basis() {
         getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_5_list_0']")).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+
         return this;
     }
 }

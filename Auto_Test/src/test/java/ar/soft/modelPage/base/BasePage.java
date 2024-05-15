@@ -4,9 +4,7 @@ import ar.soft.modelPage.InspectSidebarPage;
 import ar.soft.modelPage.RemarkSidebarPage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
-
 import java.util.concurrent.TimeUnit;
-
 import static ar.soft.runner.BaseTest.*;
 
 public class BasePage extends BaseModel {
@@ -40,6 +38,20 @@ public class BasePage extends BaseModel {
 
         return new InspectSidebarPage(getDriver());
     }
+
+    public BasePage dashboardsSidebarClick() {
+        getDriver().findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Дашборды')]")).click();
+
+        return this;
+    }
+
+    public BasePage settingsSidebarClick() {
+        getDriver().findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')]")).click();
+
+        return this;
+    }
+
+
 //    protected WebDriver getDriver() {
 //        return driver;
 //    }
