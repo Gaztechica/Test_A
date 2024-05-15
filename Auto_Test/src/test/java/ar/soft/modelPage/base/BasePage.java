@@ -1,24 +1,44 @@
 package ar.soft.modelPage.base;
 
-import org.junit.After;
-import org.junit.Assert;
+import ar.soft.modelPage.InspectSidebarPage;
+import ar.soft.modelPage.RemarkSidebarPage;
 import org.openqa.selenium.*;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.openqa.selenium.support.FindBy;
 
-import java.util.ArrayList;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 import static ar.soft.runner.BaseTest.*;
 
-public abstract class BasePage extends BaseModel {
+public class BasePage extends BaseModel {
 
     private WebDriver driver;
 
     public BasePage(WebDriver driver) {
         super(driver);
+    }
+
+    @FindBy(xpath = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")
+    private WebElement progect;
+
+    @FindBy(xpath = "//span[@class='ant-menu-title-content'][contains(.,'Замечания')]")
+    private WebElement remark;
+
+    public BasePage progect() {
+        progect.click();
+
+        return this;
+    }
+
+    public RemarkSidebarPage remarkSidebarClick() {
+        remark.click();
+
+        return new RemarkSidebarPage(getDriver());
+    }
+
+    public InspectSidebarPage inspectSidebarClick() {
+        getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Инспекции')]")).click();
+
+        return new InspectSidebarPage(getDriver());
     }
 //    protected WebDriver getDriver() {
 //        return driver;
