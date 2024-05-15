@@ -1,9 +1,13 @@
 package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+
+import java.security.Key;
 
 public class RemarkSidebarPage extends BasePage {
 
@@ -13,11 +17,7 @@ public class RemarkSidebarPage extends BasePage {
 
     public static final String NEW_REMARK = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'Замечаниe')]";
 
-    @FindBy(xpath = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")
-    private WebElement progect;
 
-    @FindBy(xpath = "//span[@class='ant-menu-title-content'][contains(.,'Замечания')]")
-    private WebElement remark;
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
     private WebElement btnAddRemark;
@@ -40,8 +40,8 @@ public class RemarkSidebarPage extends BasePage {
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary '][contains(.,'Сохранить')]")
     private WebElement btnSaveDescription;
 
-    @FindBy(xpath = "//input[@id='rc_select_10']")
-    private WebElement inputWork;
+//    @FindBy(xpath = "//input[@aria-activedescendant='rc_select_1_list_0']")
+//    private WebElement inputWork;
 
 //    @FindBy(xpath = "")
 //    private WebElement ;
@@ -56,15 +56,9 @@ public class RemarkSidebarPage extends BasePage {
 //    private WebElement ;
 
 
-    public RemarkSidebarPage progect() {
-        progect.click();
-        return this;
-    }
 
-    public RemarkSidebarPage remark() {
-        remark.click();
-        return this;
-    }
+
+
 
     public RemarkSidebarPage btnAddRemark() {
         btnAddRemark.click();
@@ -102,27 +96,41 @@ public class RemarkSidebarPage extends BasePage {
     }
 
     public RemarkSidebarPage inputWork() {
-        inputWork.sendKeys("inputWork");
+        getDriver().findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'4')]")).click();
+
+//        getDriver().findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'4')]")).click();
+
+//        inputWork.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
         return this;
     }
 
-//    public RemarkSidebarPage inputDescription() {
-//        inputDescription.sendKeys("inputDescription");
-//        return this;
-//    }
+    public RemarkSidebarPage control() {
+        getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_2_list_0']")).click();
 
-//    public RemarkSidebarPage inputDescription() {
-//        inputDescription.sendKeys("inputDescription");
-//        return this;
-//    }
-//
-//    public RemarkSidebarPage inputDescription() {
-//        inputDescription.sendKeys("inputDescription");
-//        return this;
-//    }
-//
-//    public RemarkSidebarPage inputDescription() {
-//        inputDescription.sendKeys("inputDescription");
-//        return this;
-//    }
+//        getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_2_list_0']")).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+        return this;
+    }
+
+    public RemarkSidebarPage inspection() {
+        getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_4_list_0']")).sendKeys(Keys.ENTER);
+
+
+
+        return this;
+    }
+
+    public RemarkSidebarPage priority() {
+        getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_5_list_0']")).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+        return this;
+    }
+
+    public RemarkSidebarPage executor() {
+        getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_5_list_0']")).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+        return this;
+    }
+
+    public RemarkSidebarPage basis() {
+        getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_5_list_0']")).sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
+        return this;
+    }
 }
