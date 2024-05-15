@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/UserPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/UserPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/UserTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/UserTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RemarcSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RemarcSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,12 +142,16 @@
     "JUnit.UserTest.userTestInspektor.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.AutorisaitionTest.executor": "Run",
     "TestNG.AutorisaitionTest.hrefPolitic.executor": "Run",
+    "TestNG.AutorisaitionTest.localizTest.executor": "Run",
     "TestNG.AutorisaitionTest.randomAutorisationTest.executor": "Run",
+    "TestNG.AutorisaitionTest.regEmailNegaTest.executor": "Run",
     "TestNG.AutorisaitionTest.regNegaTest.executor": "Run",
     "TestNG.AutorisaitionTest.regaTest.executor": "Run",
     "TestNG.AutorisaitionTest.removePasswordTest.executor": "Run",
     "TestNG.AutorisaitionTest.restorePasswordTest.executor": "Run",
+    "TestNG.AutorisaitionTest.testHrefPolitiCopi.executor": "Run",
     "TestNG.AutorisaitionTest.testRandomEmai.executor": "Run",
     "TestNG.AutorisaitionTest.testRandomRega.executor": "Run",
     "TestNG.AutorisaitionTest.testUserRole.executor": "Run",
@@ -155,10 +159,14 @@
     "TestNG.DashboardsSidebarTest.dashboardsTest.executor": "Run",
     "TestNG.DashboardsTest.cumulativeTest.executor": "Run",
     "TestNG.DashboardsTest.dashboardsTest.executor": "Run",
+    "TestNG.LibraryTest.dashboardsTest.executor": "Run",
     "TestNG.LibraryTest.libraryChecListCreate.executor": "Run",
     "TestNG.LibraryTest.libraryChecListDelete.executor": "Run",
+    "TestNG.LibraryTest.libraryChecListImport.executor": "Run",
+    "TestNG.LibraryTest.libraryChecListRemove.executor": "Run",
     "TestNG.LibraryTest.normativeDocDeleteTest.executor": "Run",
     "TestNG.LogFileTest.cancelLogDelTest.executor": "Run",
+    "TestNG.LogFileTest.executor": "Run",
     "TestNG.LogFileTest.localizTest.executor": "Run",
     "TestNG.LogFileTest.logDelTest.executor": "Run",
     "TestNG.LogFileTest.logSearchTest.executor": "Run",
@@ -176,15 +184,18 @@
     "TestNG.ProjectTest.sidebarProgect.executor": "Run",
     "TestNG.ProjectTest.testHrefPolitiCopi.executor": "Run",
     "TestNG.RemarcSidebarTest.addRemarkTest.executor": "Run",
+    "TestNG.RemarcSidebarTest.executor": "Run",
     "TestNG.RemarcSidebarTest.remarkTest.executor": "Run",
     "TestNG.RemarcSidebarTest.КemarcTest.executor": "Run",
     "TestNG.RemarcTest.КemarcTest.executor": "Run",
     "TestNG.SettingsSidebarTest.cancelDeleteProgectTest.executor": "Run",
     "TestNG.SettingsSidebarTest.deleteProgectTest.executor": "Run",
+    "TestNG.SettingsSidebarTest.executor": "Run",
     "TestNG.SettingsSidebarTest.removeProgectTest.executor": "Run",
     "TestNG.SettingsSidebarTest.settingsTest.executor": "Run",
     "TestNG.SettingsTest.settingsTest.executor": "Run",
     "TestNG.UserSidebarTest.addUserTest.executor": "Run",
+    "TestNG.UserSidebarTest.deleteTest.executor": "Run",
     "TestNG.UserSidebarTest.deleteUserTest.executor": "Run",
     "TestNG.UserTest.elementPageTest.executor": "Run",
     "TestNG.UserTest.executor": "Run",
@@ -195,17 +206,25 @@
     "TestNG.UserTest.userCancelDelete.executor": "Run",
     "TestNG.UserTest.userCreaNabludatelyAdd.executor": "Run",
     "TestNG.UserTest.userCreateAdmin.executor": "Run",
+    "TestNG.UserTest.userCreateAdminSearch.executor": "Run",
     "TestNG.UserTest.userCreateDelete.executor": "Run",
     "TestNG.UserTest.userCreateInspektor.executor": "Run",
     "TestNG.UserTest.userCreateNabludately.executor": "Run",
+    "TestNG.UserTest.userCreateNabludatelyAdd.executor": "Run",
     "TestNG.UserTest.userCreatePodraydchiAdd.executor": "Run",
     "TestNG.UserTest.userCreatePodraydchic.executor": "Run",
+    "TestNG.UserTest.userCreatePodraydchicAdd.executor": "Run",
+    "TestNG.UserTest.userCreateRemove.executor": "Run",
     "TestNG.UserTest.userInviteAdmin.executor": "Run",
+    "TestNG.UserTest.userInviteInspektor.executor": "Run",
+    "TestNG.UserTest.userInviteNabludately.executor": "Run",
     "TestNG.UserTest.userInvitePodraydchic.executor": "Run",
     "TestNG.UserTest.userSearchTest.executor": "Run",
+    "TestNG.ar.soft.AutorisaitionTest,elementPageTest and 9 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 9 more.executor": "Run",
+    "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 9 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "73",
+    "git-widget-placeholder": "74",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
@@ -221,8 +240,8 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserTest.userCreaNabludatelyAdd">
-    <configuration name="UserTest.organisationSearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.RemarcSidebarTest.addRemarkTest">
+    <configuration name="LogFileTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -231,8 +250,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="organisationSearchTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogFileTest.cancelLogDelTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
+      <option name="METHOD_NAME" value="cancelLogDelTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -240,7 +276,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.requestUser" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -249,8 +285,25 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="requestUser" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTest.createProgect" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
+      <option name="METHOD_NAME" value="createProgect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -258,7 +311,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.testCheckPeople" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RemarcSidebarTest.addRemarkTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -267,44 +320,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="testCheckPeople" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserTest.userCreaNabludatelyAdd" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="userCreaNabludatelyAdd" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserTest.userSearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="userSearchTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.RemarcSidebarTest" />
+      <option name="METHOD_NAME" value="addRemarkTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -314,11 +331,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.UserTest.userCreaNabludatelyAdd" />
-        <item itemvalue="TestNG.UserTest.organisationSearchTest" />
-        <item itemvalue="TestNG.UserTest.userSearchTest" />
-        <item itemvalue="TestNG.UserTest.testCheckPeople" />
-        <item itemvalue="TestNG.UserTest.requestUser" />
+        <item itemvalue="TestNG.RemarcSidebarTest.addRemarkTest" />
+        <item itemvalue="TestNG.LogFileTest" />
+        <item itemvalue="TestNG.ProjectTest" />
+        <item itemvalue="TestNG.ProjectTest.createProgect" />
+        <item itemvalue="TestNG.LogFileTest.cancelLogDelTest" />
       </list>
     </recent_temporary>
   </component>
@@ -337,14 +354,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00033" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
-      <option name="closed" value="true" />
-      <created>1710957165286</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1710957165286</updated>
     </task>
     <task id="LOCAL-00034" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
       <option name="closed" value="true" />
@@ -730,7 +739,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715202130692</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="Merge remote-tracking branch 'origin/main4' into main4">
+      <option name="closed" value="true" />
+      <created>1715777007362</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1715777007362</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

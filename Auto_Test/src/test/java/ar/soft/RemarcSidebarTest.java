@@ -10,6 +10,7 @@ import static ar.soft.modelPage.RemarkSidebarPage.NEW_REMARK;
 
 public class RemarcSidebarTest extends BaseTest {
 
+    public static final By NEW_REMARK = By.xpath("//div[@data-testid='Text'][contains(.,'Замечаниe')]");
 //    public static final By NEW_REMARK = By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'Замечания')]");
 
 
@@ -24,7 +25,7 @@ public class RemarcSidebarTest extends BaseTest {
                 .btnAddNameRemark();
 
 //        String getError = driver.findElement(By.xpath(NEW_REMARK)).getText();
-        Assert.assertEquals(NEW_REMARK, "Замечаниe");
+        Assert.assertEquals(NEW_REMARK,"Замечаниe");
     }
 
     @Test
