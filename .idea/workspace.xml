@@ -5,13 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge remote-tracking branch 'origin/main4' into main4">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/SettingsSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/SettingsSidebarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/RemarkSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/RemarkSidebarPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/SettingsSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/SettingsSidebarPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/SettingsSidebarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/SettingsSidebarTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/RemarkSidebarPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/RemarkSidebarPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/SettingsSidebarPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/SettingsSidebarPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/ApiTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/AutorisaitionTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/DashboardsSidebarTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/DraftTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/InspectSidebarTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/LibraryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/LogFileTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/ProjectTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/RemarcSidebarTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/SettingsSidebarTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/UserSidebarTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/UserTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/modelPage/HomePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/modelPage/InspectSidebarPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/modelPage/LibraryPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/modelPage/LogFilePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/modelPage/ProgectPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/modelPage/RemarkSidebarPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/modelPage/UserPage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/modelPage/base/BaseModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/modelPage/base/BasePage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/runner/BaseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/runner/FilterForTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/XRBP/runner/ProjectUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -230,7 +248,7 @@
     "TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 9 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 9 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "77",
+    "git-widget-placeholder": "78",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
@@ -362,14 +380,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00039" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java">
-      <option name="closed" value="true" />
-      <created>1710969803821</created>
-      <option name="number" value="00039" />
-      <option name="presentableId" value="LOCAL-00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1710969803821</updated>
     </task>
     <task id="LOCAL-00040" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -755,7 +765,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715838096678</updated>
     </task>
-    <option name="localTasksCounter" value="88" />
+    <task id="LOCAL-00088" summary="Merge remote-tracking branch 'origin/main4' into main4">
+      <option name="closed" value="true" />
+      <created>1715865767686</created>
+      <option name="number" value="00088" />
+      <option name="presentableId" value="LOCAL-00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1715865767686</updated>
+    </task>
+    <option name="localTasksCounter" value="89" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

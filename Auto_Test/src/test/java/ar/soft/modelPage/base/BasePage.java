@@ -68,8 +68,8 @@ public class BasePage extends BaseModel {
 //
 //    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']")
 //    private WebElement BTN_PASSWORD;
-//    public static final String EMAIL = "n-k-65@list.ru";
-//    public static final String PASSWORD = "qwe135";
+//    public static final String EMAIL = "n@list.ru";
+//    public static final String PASSWORD = "    ";
 
 //    public void goHome() {
 //        getDriver().findElement(By.xpath("//img[@scr='http://23.105.246.172:5000/ac5efbd8-e0c6-4eae-acb2-85d8ac88a3e5']"));
