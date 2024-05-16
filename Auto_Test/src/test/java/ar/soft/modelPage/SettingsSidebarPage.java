@@ -17,12 +17,7 @@ public class SettingsSidebarPage extends BasePage {
     }
 
     public SettingsSidebarPage inputNameProjectSettings() {
-//        getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).sendKeys(Keys.CLEAR);
-        getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).click();
-
-        getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).clear();
-
-        getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).sendKeys(  "Настр");
+        getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).sendKeys(Keys.CONTROL + "a" + Keys.DELETE, "1Новый проект");
 
         return this;
     }
@@ -35,21 +30,39 @@ public class SettingsSidebarPage extends BasePage {
     }
 
     public SettingsSidebarPage inputNameStritProjectSettings() {
-        getDriver().findElement(By.xpath("//textarea[@id='EditProjectForm_street']")).sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE,
-                Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, "Настройки");
+        getDriver().findElement(By.xpath("//textarea[@id='EditProjectForm_street']")).sendKeys(Keys.CONTROL + "a" + Keys.DELETE, "Настройки");
 
         return this;
     }
 
-    public SettingsSidebarPage btnlDeleteSettingsClick() {
+    public SettingsSidebarPage btnlSaveSettingsClick() {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
 
         return this;
     }
 
-    public SettingsSidebarPage btnCancelDeleteSettingsClick() {
-        getDriver().findElement(By.xpath("//div[@class='DeleteModal__buttonsPanel'][contains(.,'Отменить')]")).click();
+    public SettingsSidebarPage DeleteSettingsClick() {
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
 
         return this;
+    }
+
+    public SettingsSidebarPage btnDeleteSettingsClick() {
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
+
+        return this;
+    }
+    public SettingsSidebarPage btnCancelDeleteSettingsClick() {
+        getDriver().findElement(By.xpath("//div[@class='DeleteModal__buttonsPanel']//button[@type='button'][contains(.,'Отменить')]")).click();
+
+        return this;
+    }
+
+    public String getMessageAddNoticeText() {
+        return getDriver().findElement(By.xpath("//div[@class='ant-message-notice-content'][contains(.,'Проект успешно изменен')]")).getText();
+    }
+
+    public String getMessageDeleteNoticeText() {
+        return getDriver().findElement(By.xpath("//div[@class='ant-message-notice-content'][contains(.,'Проект успешно удален')]")).getText();
     }
 }
