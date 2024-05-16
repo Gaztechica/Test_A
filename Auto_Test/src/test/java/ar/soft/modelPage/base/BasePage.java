@@ -3,6 +3,7 @@ package ar.soft.modelPage.base;
 import ar.soft.modelPage.InspectSidebarPage;
 import ar.soft.modelPage.RemarkSidebarPage;
 import ar.soft.modelPage.SettingsSidebarPage;
+import ar.soft.modelPage.TypesWorkSidebarPage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import java.util.concurrent.TimeUnit;
@@ -38,6 +39,12 @@ public class BasePage extends BaseModel {
         getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Инспекции')]")).click();
 
         return new InspectSidebarPage(getDriver());
+    }
+
+    public TypesWorkSidebarPage TypesWorkClick() {
+        getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Инспекции')]")).click();
+
+        return new TypesWorkSidebarPage(getDriver());
     }
 
     public BasePage dashboardsSidebarClick() {

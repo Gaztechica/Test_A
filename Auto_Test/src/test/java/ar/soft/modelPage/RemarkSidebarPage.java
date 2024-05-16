@@ -103,9 +103,9 @@ public class RemarkSidebarPage extends BasePage {
     }
 
     public RemarkSidebarPage inputWork() {
-        getDriver().findElement(By.xpath("(//div[@class='RemarkDrawer__itemEdit'])[1]")).click();
+//        getDriver().findElement(By.xpath("(//div[@class='RemarkDrawer__itemEdit'])[1]")).click();
 
-//        getDriver().findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'4')]")).click();
+        getDriver().findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[2]")).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
 
 //        inputWork.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
         return this;
