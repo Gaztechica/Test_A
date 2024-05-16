@@ -1,14 +1,11 @@
 package ar.soft;
 
-import ar.soft.modelPage.ProgectPage;
+import ar.soft.modelPage.ProgjctPage;
 import ar.soft.runner.BaseTest;
 import org.junit.Assert;
 //import org.junit.Test;
 import org.openqa.selenium.*;
 import org.testng.annotations.Test;
-
-import java.util.ArrayList;
-import java.util.Set;
 
 public class ProjectTest extends BaseTest {
 
@@ -19,7 +16,7 @@ public class ProjectTest extends BaseTest {
 
     @Test
     public void createProgect() {
-        new ProgectPage(driver)
+        new ProgjctPage(driver)
                 .btnCreateProgect();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
@@ -79,7 +76,7 @@ public class ProjectTest extends BaseTest {
 
     @Test
     public void sidebarProgect() {
-        new ProgectPage(driver)
+        new ProgjctPage(driver)
                 .btnCreateProgect();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");

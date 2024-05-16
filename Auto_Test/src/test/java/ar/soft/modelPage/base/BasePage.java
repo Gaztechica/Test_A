@@ -2,6 +2,7 @@ package ar.soft.modelPage.base;
 
 import ar.soft.modelPage.InspectSidebarPage;
 import ar.soft.modelPage.RemarkSidebarPage;
+import ar.soft.modelPage.SettingsSidebarPage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import java.util.concurrent.TimeUnit;
@@ -48,7 +49,7 @@ public class BasePage extends BaseModel {
     public BasePage settingsSidebarClick() {
         getDriver().findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')]")).click();
 
-        return this;
+        return new SettingsSidebarPage(getDriver());
     }
 
 
