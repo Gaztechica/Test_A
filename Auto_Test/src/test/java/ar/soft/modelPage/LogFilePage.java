@@ -35,29 +35,35 @@ public class LogFilePage extends BasePage {
 
     public LogFilePage btnLogFile() {
         btnLogFile.click();
+
         return this;
     }
 
     public LogFilePage iconDeleteLogFile() {
         iconDeleteLogFile.click();
+
         return this;
     }
 
     public LogFilePage btnCanselDeleteLogFile() {
         btnCanselDeleteLogFile.click();
+
         return this;
     }
 
     public LogFilePage btnDeleteLogFile() {
         btnDeleteLogFile.click();
+
         return this;
     }
 
     public LogFilePage searchLogFile() {
         searchLogFile.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN,
                 Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+
         return this;
     }
+
 //
 //    public void btnLogFile() {
 //        btnLogFile.click();

@@ -17,16 +17,19 @@ public class InspectSidebarPage extends BasePage {
 
     public InspectSidebarPage createInspectClick() {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+
         return this;
     }
 
     public InspectSidebarPage inspectName() {
         getDriver().findElement(By.xpath("//input[@id='CreateDraftInspectionModal_name']")).sendKeys("inspectName");
+
         return this;
     }
 
     public InspectSidebarPage btncreateInspectClick() {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
+
         return this;
     }
 
