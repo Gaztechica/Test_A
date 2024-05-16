@@ -3,6 +3,7 @@ package ar.soft.modelPage.base;
 import ar.soft.modelPage.InspectSidebarPage;
 import ar.soft.modelPage.RemarkSidebarPage;
 import ar.soft.modelPage.SettingsSidebarPage;
+import ar.soft.modelPage.TypesWorkSidebarPage;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import java.util.concurrent.TimeUnit;
@@ -40,6 +41,12 @@ public class BasePage extends BaseModel {
         return new InspectSidebarPage(getDriver());
     }
 
+    public TypesWorkSidebarPage typesWorkSidebarClick() {
+        getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Виды работ')]")).click();
+
+        return new TypesWorkSidebarPage(getDriver());
+    }
+
     public BasePage dashboardsSidebarClick() {
         getDriver().findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Дашборды')]")).click();
 
@@ -68,8 +75,8 @@ public class BasePage extends BaseModel {
 //
 //    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']")
 //    private WebElement BTN_PASSWORD;
-//    public static final String EMAIL = "n-k-65@list.ru";
-//    public static final String PASSWORD = "qwe135";
+//    public static final String EMAIL = "n@list.ru";
+//    public static final String PASSWORD = "    ";
 
 //    public void goHome() {
 //        getDriver().findElement(By.xpath("//img[@scr='http://23.105.246.172:5000/ac5efbd8-e0c6-4eae-acb2-85d8ac88a3e5']"));
