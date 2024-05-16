@@ -46,7 +46,7 @@ public class BasePage extends BaseModel {
         return this;
     }
 
-    public BasePage settingsSidebarClick() {
+    public SettingsSidebarPage settingsSidebarClick() {
         getDriver().findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')]")).click();
 
         return new SettingsSidebarPage(getDriver());

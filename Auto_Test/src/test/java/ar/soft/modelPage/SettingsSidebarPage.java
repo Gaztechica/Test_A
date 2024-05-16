@@ -11,33 +11,44 @@ public class SettingsSidebarPage extends BasePage {
     }
 
     public SettingsSidebarPage openProjectSettings() {
-        getDriver().findElement(By.xpath("//div[@class='Sidebar__project-name'][contains(.,'1Новый проект')]")).sendKeys(Keys.ENTER);
+        getDriver().findElement(By.xpath("//div[@class='Sidebar__project-name'][contains(.,'1Новый проект')]")).click();
 
         return this;
     }
 
     public SettingsSidebarPage inputNameProjectSettings() {
-        getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE,
-                Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, "Настройки");
+//        getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).sendKeys(Keys.CLEAR);
+        getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).click();
+
+        getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).clear();
+
+        getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).sendKeys(  "Настр");
 
         return this;
     }
 
-    public SettingsSidebarPage btnSaveSettingsClick() {
+    public SettingsSidebarPage btnCancelSettingsClick() {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")).click();
 
 
         return this;
     }
 
-    public SettingsSidebarPage inspecton() {
-        getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_4_list_0']")).sendKeys(Keys.ENTER);
+    public SettingsSidebarPage inputNameStritProjectSettings() {
+        getDriver().findElement(By.xpath("//textarea[@id='EditProjectForm_street']")).sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE,
+                Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, "Настройки");
 
         return this;
     }
 
-    public SettingsSidebarPage inspetion() {
-        getDriver().findElement(By.xpath("//input[@aria-activedescendant='rc_select_4_list_0']")).sendKeys(Keys.ENTER);
+    public SettingsSidebarPage btnlDeleteSettingsClick() {
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+
+        return this;
+    }
+
+    public SettingsSidebarPage btnCancelDeleteSettingsClick() {
+        getDriver().findElement(By.xpath("//div[@class='DeleteModal__buttonsPanel'][contains(.,'Отменить')]")).click();
 
         return this;
     }
