@@ -41,8 +41,8 @@ public class BasePage extends BaseModel {
         return new InspectSidebarPage(getDriver());
     }
 
-    public TypesWorkSidebarPage TypesWorkClick() {
-        getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Инспекции')]")).click();
+    public TypesWorkSidebarPage typesWorkSidebarClick() {
+        getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Виды работ')]")).click();
 
         return new TypesWorkSidebarPage(getDriver());
     }
