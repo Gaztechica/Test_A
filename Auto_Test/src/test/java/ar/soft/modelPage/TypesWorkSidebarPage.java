@@ -11,7 +11,7 @@ public class TypesWorkSidebarPage extends BasePage {
         super(driver);
     }
 
-    public TypesWorkSidebarPage btnTypesWorkClick() {
+    public TypesWorkSidebarPage btnCreateTypesWorkClick() {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
 
         return this;
@@ -35,21 +35,26 @@ public class TypesWorkSidebarPage extends BasePage {
         return this;
     }
 
-//    public TypesWorkSidebarPage btnTypesWorkClick() {
-//        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).sendKeys(Keys.ENTER);
-//
-//        return this;
-//    }
-//
-//    public TypesWorkSidebarPage btnTypesWorkClick() {
-//        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).sendKeys(Keys.ENTER);
-//
-//        return this;
-//    }
-//
-//    public TypesWorkSidebarPage btnTypesWorkClick() {
-//        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).sendKeys(Keys.ENTER);
-//
-//        return this;
-//    }
+
+    public TypesWorkSidebarPage btnAddTypesWorkClick() {
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")).click();
+
+        return this;
+    }
+
+    public TypesWorkSidebarPage btnCheckboxTypesWorkClick() {
+        getDriver().findElement(By.xpath("(//div[@id='CheckboxComponent-check'])[2]")).click();
+
+        return this;
+    }
+
+    public TypesWorkSidebarPage btnAddWorkClick() {
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
+
+        return this;
+    }
+
+    public String getNewWorkText() {
+        return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])[2]")).getText();
+    }
 }
