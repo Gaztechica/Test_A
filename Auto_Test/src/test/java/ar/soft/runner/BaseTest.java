@@ -46,7 +46,8 @@ public abstract class BaseTest {
 
     @BeforeMethod
     protected void beforeMethod(Method method) {
-        driver = new ChromeDriver();
+//        для пакетноготпрогона тестов
+//        driver = new ChromeDriver();
         getDriver().get(URL);
         getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);

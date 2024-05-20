@@ -1,9 +1,6 @@
 package ar.soft.modelPage.base;
 
-import ar.soft.modelPage.InspectSidebarPage;
-import ar.soft.modelPage.RemarkSidebarPage;
-import ar.soft.modelPage.SettingsSidebarPage;
-import ar.soft.modelPage.TypesWorkSidebarPage;
+import ar.soft.modelPage.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 import java.util.concurrent.TimeUnit;
@@ -45,6 +42,12 @@ public class BasePage extends BaseModel {
         getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Виды работ')]")).click();
 
         return new TypesWorkSidebarPage(getDriver());
+    }
+
+    public UserSidebarPage userSidebarClick() {
+        getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Пользователи')]")).click();
+
+        return new UserSidebarPage(getDriver());
     }
 
     public BasePage dashboardsSidebarClick() {

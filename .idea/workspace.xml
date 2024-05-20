@@ -6,8 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TypesWorkSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TypesWorkSidebarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/UserSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/RemarkSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/RemarkSidebarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/RemarkSidebarPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/RemarkSidebarPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,6 +201,7 @@
     "TestNG.TypesWorkSidebarTest.AddTypesWork.executor": "Run",
     "TestNG.TypesWorkSidebarTest.CreateTypesWork.executor": "Run",
     "TestNG.UserSidebarTest.addUserTest.executor": "Run",
+    "TestNG.UserSidebarTest.btnCancelDeleteUserTest.executor": "Run",
     "TestNG.UserSidebarTest.deleteTest.executor": "Run",
     "TestNG.UserSidebarTest.deleteUserTest.executor": "Run",
     "TestNG.UserTest.elementPageTest.executor": "Run",
@@ -228,7 +231,7 @@
     "TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 9 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 9 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "79",
+    "git-widget-placeholder": "80",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
@@ -244,7 +247,7 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TypesWorkSidebarTest.AddTypesWork">
+  <component name="RunManager" selected="TestNG.UserSidebarTest.deleteUserTest">
     <configuration name="RemarcSidebarTest.remarkTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -263,7 +266,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SettingsSidebarTest.cancelDeleteProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserSidebarTest.addUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -272,8 +275,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.SettingsSidebarTest" />
-      <option name="METHOD_NAME" value="cancelDeleteProjectTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
+      <option name="METHOD_NAME" value="addUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -281,7 +284,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SettingsSidebarTest.deleteProgectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserSidebarTest.btnCancelDeleteUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -290,8 +293,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.SettingsSidebarTest" />
-      <option name="METHOD_NAME" value="deleteProgectTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
+      <option name="METHOD_NAME" value="btnCancelDeleteUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -299,7 +302,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypesWorkSidebarTest.AddTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserSidebarTest.deleteTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -308,8 +311,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
-      <option name="METHOD_NAME" value="AddTypesWork" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
+      <option name="METHOD_NAME" value="deleteTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -317,7 +320,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypesWorkSidebarTest.CreateTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserSidebarTest.deleteUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -326,8 +329,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
-      <option name="METHOD_NAME" value="CreateTypesWork" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
+      <option name="METHOD_NAME" value="deleteUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -337,11 +340,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TypesWorkSidebarTest.AddTypesWork" />
-        <item itemvalue="TestNG.TypesWorkSidebarTest.CreateTypesWork" />
+        <item itemvalue="TestNG.UserSidebarTest.deleteUserTest" />
+        <item itemvalue="TestNG.UserSidebarTest.btnCancelDeleteUserTest" />
+        <item itemvalue="TestNG.UserSidebarTest.deleteTest" />
+        <item itemvalue="TestNG.UserSidebarTest.addUserTest" />
         <item itemvalue="TestNG.RemarcSidebarTest.remarkTest" />
-        <item itemvalue="TestNG.SettingsSidebarTest.deleteProgectTest" />
-        <item itemvalue="TestNG.SettingsSidebarTest.cancelDeleteProjectTest" />
       </list>
     </recent_temporary>
   </component>
@@ -767,7 +770,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/57" />
+                        <option value="main" />
                       </list>
                     </value>
                   </entry>
