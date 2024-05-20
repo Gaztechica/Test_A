@@ -17,8 +17,6 @@ public class RemarkSidebarPage extends BasePage {
 
     public static final String NEW_REMARK = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'Замечаниe')]";
 
-
-
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
     private WebElement btnAddRemark;
 
@@ -105,7 +103,7 @@ public class RemarkSidebarPage extends BasePage {
     public RemarkSidebarPage inputWork() {
 //        getDriver().findElement(By.xpath("(//div[@class='RemarkDrawer__itemEdit'])[1]")).click();
 
-        getDriver().findElement(By.xpath("(//input[@class='ant-select-selection-search-input'])[2]")).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+        getDriver().findElement(By.xpath("(//span[@class='ant-select-arrow'])[2]")).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
 
 //        inputWork.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
         return this;
