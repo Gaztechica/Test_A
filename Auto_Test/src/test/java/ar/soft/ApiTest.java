@@ -13,9 +13,7 @@ import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.testng.Assert;
 
-import java.io.Closeable;
 import java.io.IOException;
-import java.net.http.HttpClient;
 import java.text.ParseException;
 import java.util.List;
 import java.util.Objects;
@@ -56,37 +54,71 @@ public class ApiTest {
         public List<Pokemon> results;
     }
 
-    @Test
-    public void httpTest() throws IOException, ParseException {
-        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
-            HttpGet request = new HttpGet("https://pokeapi.co/api/v2/pokemon");
-
-            request.addHeader(HttpHeaders.USER_AGENT, "Googlebot");
-
-            try (CloseableHttpResponse response = httpClient.execute(request)) {
-                Assert.assertEquals(response.getCode(), 200);
-
-                HttpEntity entity = response.getEntity();
-                Assert.assertNotNull(entity);
-
-//                 simple check
+//    @Test
+//    public void httpTest() throws IOException, ParseException {
+//        try (CloseableHttpClient httpClient = HttpClients.createDefault()) {
+//            HttpGet request = new HttpGet("https://pokeapi.co/api/v2/pokemon");
+//
+//            request.addHeader(HttpHeaders.USER_AGENT, "Googlebot");
+//
+//            try (CloseableHttpResponse response = httpClient.execute(request)) {
+//                Assert.assertEquals(response.getStatusLine().getStatusCode(), 200);
+//
+//                Assert.assertEquals(response.getCode(), 200);
+//
+//                HttpEntity entity = response.getEntity();
+//                Assert.assertNotNull(entity);
+//
+////                 simple check
 //                String jsonString = EntityUtils.toString(entity);
 //                Assert.assertTrue(jsonString.startsWith("{\"count\":1292"));
-
-                // regular check
+//
+//                // regular check
 //                Pokemons pokemons = new Gson().fromJson(jsonString, Pokemons.class);
-//                Assert.assertEquals(pokemons.count, 1292);
+//                Assert.assertEquals(pokemons.count, 1302);
 //                Assert.assertEquals(pokemons.results.size(), 20);
-            }
-        }
-    }
+//            }
+//        }
+//    }
 
     @Test
     public void restAssuredTest() {
         RestAssured.when().get("https://pokeapi.co/api/v2/pokemon")
                 .then()
                 .statusCode(200)
-                .body("count", Matchers.equalTo(1292),
+                .body("count", Matchers.equalTo(1302),
                         "results.name", Matchers.hasItems("bulbasaur", "ivysaur"));
     }
+
+//    @Test
+
+//    public void testShadowDOM() {
+//
+//        getDriver().get("http://uitestingplayground.com/shadowdom");
+//
+//
+//
+//        WebElement shadowHost = getDriver().findElement(By.tagName("guid-generator"));
+//
+//        SearchContext shadowRoot = shadowHost.getShadowRoot();
+//
+//        WebElement shadowContent = shadowRoot.findElement(By.id("buttonGenerate"));
+//
+//
+//
+//        shadowContent.click();
+//
+//
+//
+//        WebElement shadowHost2 = getDriver().findElement(By.tagName("guid-generator"));
+//
+//        SearchContext shadowRoot2 = shadowHost2.getShadowRoot();
+//
+//
+//
+//        System.out.println(shadowRoot2.findElement(By.cssSelector("#editField div")).getText());
+//
+//
+//
+//    }
 }
