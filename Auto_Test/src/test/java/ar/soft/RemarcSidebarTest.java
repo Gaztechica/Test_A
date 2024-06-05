@@ -3,6 +3,7 @@ package ar.soft;
 import ar.soft.modelPage.RemarkSidebarPage;
 import ar.soft.runner.BaseTest;
 import org.openqa.selenium.By;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RemarcSidebarTest extends BaseTest {
