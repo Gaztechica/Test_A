@@ -3,7 +3,6 @@ package ar.soft;
 import ar.soft.modelPage.RemarkSidebarPage;
 import ar.soft.runner.BaseTest;
 import org.openqa.selenium.By;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RemarcSidebarTest extends BaseTest {
@@ -16,7 +15,7 @@ public class RemarcSidebarTest extends BaseTest {
     @Test
     public void addRemarkTest() {
         new RemarkSidebarPage(getDriver())
-                .progect()
+                .project()
                 .remarkSidebarClick()
                 .btnAddRemark()
                 .inputNameRemark()
@@ -29,7 +28,7 @@ public class RemarcSidebarTest extends BaseTest {
     @Test
     public void remarkTest() {
         new RemarkSidebarPage(getDriver())
-                .progect()
+                .project()
                 .remarkSidebarClick()
                 .newRemark()
                 .btnDescription()

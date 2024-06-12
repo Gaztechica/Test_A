@@ -9,7 +9,7 @@ public class InspectSidebarTest extends BaseTest {
     @Test
     public void createInspect() {
          new InspectSidebarPage(getDriver())
-                 .progect()
+                 .project()
                  .inspectSidebarClick()
                  .createInspectClick()
                  .inspectName()

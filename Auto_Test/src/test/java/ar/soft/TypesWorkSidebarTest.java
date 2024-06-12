@@ -10,7 +10,7 @@ public class TypesWorkSidebarTest extends BaseTest {
     @Test
     public void CreateTypesWork() {
         String Work = new TypesWorkSidebarPage(getDriver())
-                .progect()
+                .project()
                 .typesWorkSidebarClick()
                 .btnCreateTypesWorkClick()
                 .inputNameTypesWorkClick()
@@ -25,7 +25,7 @@ public class TypesWorkSidebarTest extends BaseTest {
     public void AddTypesWork() {
 //        String AddWork =
         new TypesWorkSidebarPage(getDriver())
-                .progect()
+                .project()
                 .typesWorkSidebarClick()
                 .btnAddTypesWorkClick()
                 .btnCheckboxTypesWorkClick()
