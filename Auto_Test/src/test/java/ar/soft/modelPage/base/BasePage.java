@@ -15,13 +15,13 @@ public class BasePage extends BaseModel {
     }
 
     @FindBy(xpath = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")
-    private WebElement progect;
+    private WebElement project;
 
     @FindBy(xpath = "//span[@class='ant-menu-title-content'][contains(.,'Замечания')]")
     private WebElement remark;
 
-    public BasePage progect() {
-        progect.click();
+    public BasePage project() {
+        project.click();
 
         return this;
     }

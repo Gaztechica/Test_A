@@ -12,7 +12,7 @@ public class SettingsSidebarTest extends BaseTest {
     @Test
     public void removeProjectTest() {
        String messege = new SettingsSidebarPage(getDriver())
-                .progect()
+                .project()
                 .settingsSidebarClick()
                 .openProjectSettings()
                 .inputNameProjectSettings()
@@ -26,7 +26,7 @@ public class SettingsSidebarTest extends BaseTest {
     @Test
     public void cancelDeleteProjectTest() {
         new BasePage(getDriver())
-                .progect()
+                .project()
                 .settingsSidebarClick()
                 .openProjectSettings()
                 .inputNameProjectSettings()
@@ -38,7 +38,7 @@ public class SettingsSidebarTest extends BaseTest {
     @Test
     public void deleteProgectTest() {
        String getMessageDelete = new BasePage(getDriver())
-                .progect()
+                .project()
                 .settingsSidebarClick()
                 .openProjectSettings()
                 .btnDeleteSettingsClick()

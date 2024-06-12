@@ -4,39 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RemarcSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RemarcSidebarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/cucumber/FreestyleSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/cucumber/FreestyleSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/ApiTest$Pokemon.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/ApiTest$Pokemons.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/ApiTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/AutorisaitionTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/DashboardsSidebarTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/InspectSidebarTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/LibraryTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/LogFileTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/ProjectTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/RemarcSidebarTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/SettingsSidebarTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/UserSidebarTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/UserTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/modelPage/HomePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/modelPage/InspectSidebarPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/modelPage/LibraryPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/modelPage/LogFilePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/modelPage/ProgectPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/modelPage/RemarkSidebarPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/modelPage/UserPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/modelPage/base/BaseModel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/modelPage/base/BasePage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/runner/BaseTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/XRBP/runner/ProjectUtils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ApiTest$Pokemon.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ApiTest$Pokemon.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ApiTest$Pokemons.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ApiTest$Pokemons.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ApiTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ApiTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/RemarcSidebarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/RemarcSidebarTest.class" afterDir="false" />
-    </list>
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge pull request #79 from Gaztechica/78&#10;&#10;78" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +31,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="82" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -261,7 +229,7 @@
     &quot;TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 9 more.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.ar.soft.AutorisaitionTest,testHrefPolitiCopi and 10 more.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.remarcTest.remarcTest.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;88&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
@@ -277,7 +245,7 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.UserTest.testHrefPolitiCopi">
+  <component name="RunManager" selected="TestNG.UserSidebarTest.addUserTest">
     <configuration name="ProjectTest.hrefPolitic" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -289,6 +257,24 @@
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
       <option name="METHOD_NAME" value="hrefPolitic" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserSidebarTest.addUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
+      <option name="METHOD_NAME" value="addUserTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -332,24 +318,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.userCreatePodraydchicAdd" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="userCreatePodraydchicAdd" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="ar.soft.AutorisaitionTest,testHrefPolitiCopi and 10 more" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -383,11 +351,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.UserSidebarTest.addUserTest" />
         <item itemvalue="TestNG.UserTest.testHrefPolitiCopi" />
         <item itemvalue="TestNG.ar.soft.AutorisaitionTest,testHrefPolitiCopi and 10 more" />
         <item itemvalue="TestNG.ProjectTest.hrefPolitic" />
         <item itemvalue="TestNG.UserTest.userCreateAdminSearch" />
-        <item itemvalue="TestNG.UserTest.userCreatePodraydchicAdd" />
       </list>
     </recent_temporary>
   </component>
@@ -406,22 +374,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00042" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1711558022515</created>
-      <option name="number" value="00042" />
-      <option name="presentableId" value="LOCAL-00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1711558022515</updated>
-    </task>
-    <task id="LOCAL-00043" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1711558081979</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1711558081979</updated>
     </task>
     <task id="LOCAL-00044" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -799,7 +751,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715885049373</updated>
     </task>
-    <option name="localTasksCounter" value="91" />
+    <task id="LOCAL-00091" summary="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
+      <option name="closed" value="true" />
+      <created>1717560547949</created>
+      <option name="number" value="00091" />
+      <option name="presentableId" value="LOCAL-00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1717560547949</updated>
+    </task>
+    <task id="LOCAL-00092" summary="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
+      <option name="closed" value="true" />
+      <created>1718174945396</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1718174945397</updated>
+    </task>
+    <option name="localTasksCounter" value="93" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

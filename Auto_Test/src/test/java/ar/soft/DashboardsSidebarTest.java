@@ -12,7 +12,7 @@ public class DashboardsSidebarTest extends BaseTest {
     @Test
     public void dashboardsTest() {
         new BasePage(getDriver())
-                .progect()
+                .project()
                 .dashboardsSidebarClick();
 //        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")).click();
 //        driver.findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Дашборды')]")).click();
@@ -24,7 +24,7 @@ public class DashboardsSidebarTest extends BaseTest {
     @Test
     public void cumulativeTest() throws InterruptedException{
         new BasePage(getDriver())
-                .progect()
+                .project()
                 .dashboardsSidebarClick();
 //        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")).click();
 //        driver.findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Дашборды')]")).click();
