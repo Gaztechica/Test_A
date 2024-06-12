@@ -27,8 +27,11 @@ public class UserSidebarTest extends BaseTest {
 //    === сделать сортровку по организациям и удалить ================================
     @Test
     public void deleteUserFromProjectTest() {
-        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")).click();
-        driver.findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Пользователи')]")).click();
+        new UserSidebarPage(getDriver())
+                .project()
+                .userSidebarClick();
+//        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")).click();
+//        driver.findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Пользователи')]")).click();
         driver.findElement(By.xpath("//td[@class='ant-table-cell'][contains(.,'a123EvgenTest')]")).click();
 
         driver.findElement(By.xpath("//div[@class='ContentProjectUsers__iconBlock']")).click();
@@ -39,9 +42,17 @@ public class UserSidebarTest extends BaseTest {
 
     @Test
     public void cancelDeleteUserFromProjectTest() {
-        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")).click();
-        driver.findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Пользователи')]")).click();
-        driver.findElement(By.xpath("//td[@class='ant-table-cell'][contains(.,'a123EvgenTest')]")).click();
+        new UserSidebarPage(getDriver())
+                .project()
+                .userSidebarClick();
+
+        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='10']")).click();
+        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'50')]")).click();
+
+
+//        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")).click();
+//        driver.findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Пользователи')]")).click();
+        driver.findElement(By.xpath("//td[@class='ant-table-cell'][contains(.,'aaa123EvgenTest')]")).click();
 
         driver.findElement(By.xpath("//div[@class='ContentProjectUsers__iconBlock']")).click();
 
