@@ -32,7 +32,7 @@ public class ProjectTest extends BaseTest {
         NewData.click();
 
         WebElement EndData = driver.findElement(By.xpath("//input[@id='CreateProjectForm_endDate']"));
-        EndData.sendKeys("26-06-2024");
+        EndData.sendKeys("26-09-2024");
         EndData.sendKeys(Keys.ENTER);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
@@ -69,7 +69,7 @@ public class ProjectTest extends BaseTest {
         driver.findElement(By.xpath("//a[@class='ant-picker-today-btn']")).click();
 
         WebElement EndData = driver.findElement(By.xpath("//input[@id='CreateProjectForm_endDate']"));
-        EndData.sendKeys("26-06-2024");
+        EndData.sendKeys("26-09-2024");
         EndData.sendKeys(Keys.ENTER);
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
     }
