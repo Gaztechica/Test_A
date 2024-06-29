@@ -23,13 +23,16 @@ public class TypesWorkSidebarTest extends BaseTest {
 
     @Test
     public void AddTypesWork() {
-//        String AddWork =
+//        String AddWork = new TypesWorkSidebarPage(getDriver())
         new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
                 .btnAddTypesWorkClick()
                 .btnCheckboxTypesWorkClick()
                 .btnAddWorkClick();
+
+//        Assert.assertEquals(AddWork, "CreateTypeOfWorkModal_name");
+
     }
 
 //    удалить редактиров поиск при добавление

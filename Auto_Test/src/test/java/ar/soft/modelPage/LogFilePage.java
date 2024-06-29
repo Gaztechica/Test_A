@@ -15,7 +15,8 @@ public class LogFilePage extends BasePage {
     @FindBy(xpath = "//a[@href='/logfiles']")
     private WebElement btnLogFile;
 
-    @FindBy(xpath = "//img[@src='/static/media/Basket.8774715cc0eccb962b78054dc111a9a8.svg']")
+    @FindBy(xpath = "//img[@class='project__image']") // заменил 29.06.24 не удалял
+//    @FindBy(xpath = "//img[@src='/static/media/Basket.8774715cc0eccb962b78054dc111a9a8.svg']")
     private WebElement iconDeleteLogFile;
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")

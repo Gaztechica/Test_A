@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/LogFilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/LogFilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,11 +204,13 @@
     "TestNG.TypesWorkSidebarTest.AddTypesWork.executor": "Run",
     "TestNG.TypesWorkSidebarTest.CreateTypesWork.executor": "Run",
     "TestNG.UserSidebarTest.addUserTest.executor": "Run",
+    "TestNG.UserSidebarTest.addUserToProjectTest.executor": "Run",
     "TestNG.UserSidebarTest.btnCancelDeleteUserTest.executor": "Run",
     "TestNG.UserSidebarTest.cancelDeleteUserFromProjectTest.executor": "Run",
     "TestNG.UserSidebarTest.deleteTest.executor": "Run",
     "TestNG.UserSidebarTest.deleteUserFromProjectTest.executor": "Run",
     "TestNG.UserSidebarTest.deleteUserTest.executor": "Run",
+    "TestNG.UserSidebarTest.executor": "Run",
     "TestNG.UserTest.elementPageTest.executor": "Run",
     "TestNG.UserTest.executor": "Run",
     "TestNG.UserTest.organisationSearchTest.executor": "Run",
@@ -229,14 +236,18 @@
     "TestNG.UserTest.userInvitePodraydchic.executor": "Run",
     "TestNG.UserTest.userSearchTest.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,elementPageTest and 9 more.executor": "Run",
+    "TestNG.ar.soft.AutorisaitionTest,hrefBot and 10 more.executor": "Run",
+    "TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 10 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 9 more.executor": "Run",
+    "TestNG.ar.soft.AutorisaitionTest,hrefPoliticUser and 10 more.executor": "Run",
+    "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 10 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 9 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,testHrefPolitiCopi and 10 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "87",
+    "git-widget-placeholder": "регресс-от-27.06.24",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/javaProjects/work/platform-1-new-master",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
+    "settings.editor.selected.configurable": "settings.sync"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -249,8 +260,44 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ProjectTest.sidebarProgect">
-    <configuration name="ProjectTest.sidebarProgect" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.LogFileTest.cancelLogDelTest">
+    <configuration name="LibraryTest.normativeDocDeleteTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.LibraryTest" />
+      <option name="METHOD_NAME" value="normativeDocDeleteTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="LogFileTest.cancelLogDelTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
+      <option name="METHOD_NAME" value="cancelLogDelTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTest.createProgect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -260,7 +307,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="METHOD_NAME" value="sidebarProgect" />
+      <option name="METHOD_NAME" value="createProgect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -268,7 +315,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserSidebarTest.addUserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TypesWorkSidebarTest.AddTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -277,8 +324,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
-      <option name="METHOD_NAME" value="addUserTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
+      <option name="METHOD_NAME" value="AddTypesWork" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -286,7 +333,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserSidebarTest.cancelDeleteUserFromProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TypesWorkSidebarTest.CreateTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -295,44 +342,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
-      <option name="METHOD_NAME" value="cancelDeleteUserFromProjectTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserSidebarTest.deleteUserFromProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
-      <option name="METHOD_NAME" value="deleteUserFromProjectTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserTest.testHrefPolitiCopi" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.runner.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="testHrefPolitiCopi" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
+      <option name="METHOD_NAME" value="CreateTypesWork" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -342,11 +353,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ProjectTest.sidebarProgect" />
-        <item itemvalue="TestNG.UserSidebarTest.cancelDeleteUserFromProjectTest" />
-        <item itemvalue="TestNG.UserSidebarTest.deleteUserFromProjectTest" />
-        <item itemvalue="TestNG.UserSidebarTest.addUserTest" />
-        <item itemvalue="TestNG.UserTest.testHrefPolitiCopi" />
+        <item itemvalue="TestNG.LogFileTest.cancelLogDelTest" />
+        <item itemvalue="TestNG.ProjectTest.createProgect" />
+        <item itemvalue="TestNG.TypesWorkSidebarTest.CreateTypesWork" />
+        <item itemvalue="TestNG.TypesWorkSidebarTest.AddTypesWork" />
+        <item itemvalue="TestNG.LibraryTest.normativeDocDeleteTest" />
       </list>
     </recent_temporary>
   </component>
@@ -365,14 +376,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00044" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1711995517368</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1711995517368</updated>
     </task>
     <task id="LOCAL-00045" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -758,7 +761,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718174945397</updated>
     </task>
-    <option name="localTasksCounter" value="93" />
+    <task id="LOCAL-00093" summary="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
+      <option name="closed" value="true" />
+      <created>1719503728636</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1719503728639</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
