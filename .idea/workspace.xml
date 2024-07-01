@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/LogFilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/LogFilePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/TypesWorkSidebarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/TypesWorkSidebarTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/LogFilePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/LogFilePage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +35,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="регресс-от-27.06.24" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -244,7 +241,7 @@
     "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 9 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,testHrefPolitiCopi and 10 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "регресс-от-27.06.24",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/javaProjects/work/platform-1-new-master",
     "settings.editor.selected.configurable": "settings.sync"
@@ -353,10 +350,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LogFileTest.cancelLogDelTest" />
-        <item itemvalue="TestNG.ProjectTest.createProgect" />
         <item itemvalue="TestNG.TypesWorkSidebarTest.CreateTypesWork" />
         <item itemvalue="TestNG.TypesWorkSidebarTest.AddTypesWork" />
+        <item itemvalue="TestNG.ProjectTest.createProgect" />
+        <item itemvalue="TestNG.LogFileTest.cancelLogDelTest" />
         <item itemvalue="TestNG.LibraryTest.normativeDocDeleteTest" />
       </list>
     </recent_temporary>
