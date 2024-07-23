@@ -25,7 +25,7 @@ public class UserTest extends BaseTest {
                 .userPage()
                 .createUserClick()
                 .userName(UserPage.USER_NAME)
-                .userLastName("Леха")
+                .userLastName("ЛехаYJ")
                 .userEmail()
                 .userEmailClick()
                 .userTimezoneClick()
