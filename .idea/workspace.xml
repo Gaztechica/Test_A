@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +35,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="регресс-от-27.06.24" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -167,6 +169,7 @@
     &quot;TestNG.LibraryTest.normativeDocDeleteTest.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.LogFileTest.cancelLogDelTest.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.LogFileTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LogFileTest.hrefPolitic.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.LogFileTest.localizTest.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.LogFileTest.logDelTest.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.LogFileTest.logSearchTest.executor&quot;: &quot;Run&quot;,
@@ -198,6 +201,7 @@
     &quot;TestNG.SettingsTest.settingsTest.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.TypesWorkSidebarTest.AddTypesWork.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.TypesWorkSidebarTest.CreateTypesWork.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TypesWorkSidebarTest.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.UserSidebarTest.addUserTest.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.UserSidebarTest.addUserToProjectTest.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.UserSidebarTest.btnCancelDeleteUserTest.executor&quot;: &quot;Run&quot;,
@@ -239,7 +243,7 @@
     &quot;TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 9 more.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.ar.soft.AutorisaitionTest,testHrefPolitiCopi and 10 more.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.remarcTest.remarcTest.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main-1&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/javaProjects/work/platform-1-new-master&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
@@ -255,8 +259,8 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LogFileTest.cancelLogDelTest">
-    <configuration name="LogFileTest.cancelLogDelTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.TypesWorkSidebarTest">
+    <configuration name="TypesWorkSidebarTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -265,45 +269,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
-      <option name="METHOD_NAME" value="cancelLogDelTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LogFileTest.logDelTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
-      <option name="METHOD_NAME" value="logDelTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LogFileTest.logSearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
-      <option name="METHOD_NAME" value="logSearchTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -346,13 +313,49 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="UserSidebarTest.cancelDeleteUserFromProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
+      <option name="METHOD_NAME" value="cancelDeleteUserFromProjectTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserSidebarTest.deleteUserFromProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
+      <option name="METHOD_NAME" value="deleteUserFromProjectTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LogFileTest.cancelLogDelTest" />
-        <item itemvalue="TestNG.LogFileTest.logDelTest" />
-        <item itemvalue="TestNG.LogFileTest.logSearchTest" />
-        <item itemvalue="TestNG.TypesWorkSidebarTest.CreateTypesWork" />
+        <item itemvalue="TestNG.TypesWorkSidebarTest" />
         <item itemvalue="TestNG.TypesWorkSidebarTest.AddTypesWork" />
+        <item itemvalue="TestNG.TypesWorkSidebarTest.CreateTypesWork" />
+        <item itemvalue="TestNG.UserSidebarTest.cancelDeleteUserFromProjectTest" />
+        <item itemvalue="TestNG.UserSidebarTest.deleteUserFromProjectTest" />
       </list>
     </recent_temporary>
   </component>
@@ -371,14 +374,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00046" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1712006054372</created>
-      <option name="number" value="00046" />
-      <option name="presentableId" value="LOCAL-00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1712006054372</updated>
     </task>
     <task id="LOCAL-00047" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -764,7 +759,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719808218698</updated>
     </task>
-    <option name="localTasksCounter" value="95" />
+    <task id="LOCAL-00095" summary="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
+      <option name="closed" value="true" />
+      <created>1721733485578</created>
+      <option name="number" value="00095" />
+      <option name="presentableId" value="LOCAL-00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1721733485578</updated>
+    </task>
+    <option name="localTasksCounter" value="96" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
