@@ -16,7 +16,8 @@ import org.testng.annotations.Test;
 
 public class LogFileTest extends BaseTest {
 
-    @Test
+    @Test(priority = 1,
+            description = "Лог файл - отмена удаления")
     public void cancelLogDelTest() {
         new LogFilePage(driver)
                 .btnLogFile()
@@ -24,7 +25,8 @@ public class LogFileTest extends BaseTest {
                 .btnCanselDeleteLogFile();
     }
 
-    @Test
+    @Test(priority = 2,
+            description = "Лог файл - удаление")
     public void logDelTest() {
         new LogFilePage(driver)
                 .btnLogFile()
@@ -32,7 +34,8 @@ public class LogFileTest extends BaseTest {
                 .btnDeleteLogFile();
     }
 
-    @Test
+    @Test(priority = 3,
+            description = "Лог файл - поиск")
     public void logSearchTest() {
         new LogFilePage(driver)
                 .btnLogFile()

@@ -19,7 +19,8 @@ public class UserTest extends BaseTest {
     //
     //     асерт
 
-    @Test
+    @Test( priority = 6,
+            description = "IChart1. Нажать на значение графика 'красный - 16")
     public void userCreateAdmin() {
         new UserPage(driver)
                 .userPage()

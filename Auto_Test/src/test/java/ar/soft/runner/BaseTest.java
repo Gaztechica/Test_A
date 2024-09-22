@@ -41,6 +41,7 @@ public abstract class BaseTest {
     private final By GET_POLITIC = By.xpath("//h1[@class='page-header-title clr']");
     private final By GET_POLITIC_USER = By.xpath("//span[@style='font-size: 19px;'][contains(.,'Предмет пользовательского соглашения')]");
     private final By GET_BOT = By.xpath("//span[@dir='auto']");
+    private final By GET_SUPPORT = By.xpath("//h1[@variant='display-3']");
 
     public WebDriver driver = new ChromeDriver();
 
@@ -196,17 +197,17 @@ public abstract class BaseTest {
 
     // ================================== ссылки =====================================================
 
-    @Test
-    public void hrefPolitic() {
-        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
-
-        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(newTab.get(1));
-
-        Assert.assertEquals("Политика обработки персональных данных", driver.findElement(GET_POLITIC).getText());
-    }
-
 //    @Test
+//    public void hrefPolitic() {
+//        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
+//
+//        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+//        driver.switchTo().window(newTab.get(1));
+//
+//        Assert.assertEquals("Политика обработки персональных данных", driver.findElement(GET_POLITIC).getText());
+//    }
+
+//    @Test  2 вариант
 //    public void testHrefPolitiCopi() {
 //
 ////        getWait15().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"))).click();
@@ -220,7 +221,8 @@ public abstract class BaseTest {
 //    }
 
 
-    @Test
+    @Test(priority = 5,
+            description = "Предмет пользовательского соглашения")
     public void hrefPoliticUser() {
         driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/user-agreement-armobail/']")).click();
 
@@ -233,8 +235,10 @@ public abstract class BaseTest {
     }
 
 
-    @Test
+    @Test(priority = 7,
+            description = "телеграм бот")
     public void hrefBot() {
+        driver.findElement(By.xpath("//span[@class='ant-typography span_r ant-dropdown-trigger Footer__links-text TabLink']")).click();
         driver.findElement(By.xpath("//a[@href='https://t.me/arsoft_support_bot']")).click();
 
         ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
@@ -244,5 +248,16 @@ public abstract class BaseTest {
         Assert.assertEquals("AR SOFT support", getBot);
     }
 
+    @Test(priority = 6,
+            description = "Техническая поддержка АР СОФТ")
+    public void hrefSupport() {
+        driver.findElement(By.xpath("//span[@class='ant-typography span_r ant-dropdown-trigger Footer__links-text TabLink']")).click();
+        driver.findElement(By.xpath("//a[@href='https://forms.yandex.ru/cloud/66d960a043f74ffb1efdbae2/']")).click();
 
+        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+        driver.switchTo().window(newTab.get(1));
+        String getSupport = driver.findElement(GET_SUPPORT).getText();
+
+        Assert.assertEquals("Техническая поддержка АР СОФТ", getSupport);
+    }
 }
