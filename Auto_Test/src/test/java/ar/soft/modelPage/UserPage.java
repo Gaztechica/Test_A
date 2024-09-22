@@ -1,6 +1,7 @@
 package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
+import jdk.jfr.Name;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -17,7 +18,7 @@ public class UserPage extends BasePage {
     @FindBy(xpath = "//a[@href='/users']")
     private WebElement UserPage;
 
-    @FindBy(xpath = "//input[@id='user_name']")
+    @FindBy(xpath = "//input[@id='InviteUserModal_email']")
     private WebElement inputName;
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")
@@ -83,6 +84,7 @@ public class UserPage extends BasePage {
         super(driver);
     }
 
+    @Name("splitter")
     public UserPage userPage() {
         UserPage.click();
         return this;
@@ -98,6 +100,7 @@ public class UserPage extends BasePage {
         return this;
     }
 
+    @Name("splitter")
     public UserPage userName(String name) {
         inputName.sendKeys(name);
         return this;

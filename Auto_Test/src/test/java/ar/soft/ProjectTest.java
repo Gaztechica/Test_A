@@ -1,6 +1,6 @@
 package ar.soft;
 
-import ar.soft.modelPage.ProgjctPage;
+import ar.soft.modelPage.ProjctPage;
 import ar.soft.runner.BaseTest;
 import org.junit.Assert;
 //import org.junit.Test;
@@ -14,9 +14,10 @@ public class ProjectTest extends BaseTest {
 
     // ============================== Проект создание/удаление ==================================
 
-    @Test
+    @Test(priority = 1,
+            description = "Проект - создание")
     public void createProgect() {
-        new ProgjctPage(driver)
+        new ProjctPage(driver)
                 .btnCreateProgect();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
@@ -54,7 +55,8 @@ public class ProjectTest extends BaseTest {
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
     }
 
-    @Test
+    @Test(priority = 2,
+            description = "Проект - отмена создания")
     public void cancelCreateProgectTest() {
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
@@ -74,9 +76,10 @@ public class ProjectTest extends BaseTest {
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
     }
 
-    @Test
+    @Test(priority = 3,
+            description = "Проект - создание")
     public void sidebarProgect() {
-        new ProgjctPage(driver)
+        new ProjctPage(driver)
                 .btnCreateProgect();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
@@ -94,17 +97,19 @@ public class ProjectTest extends BaseTest {
         driver.findElement(By.xpath("//div[@class='CustomLogo']")).click();
     }
 
-    @Test
+    @Test(priority = 4,
+            description = "Проект - переименование проекта")
     public void removeProgect() {
-//        new ProgectPage(driver)
-//                .btnCreateProgect();
-//        driver.findElement(By.xpath()).sendKeys("1Новый проект");
-//        driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
+        new ProjctPage(driver)
+                .btnCreateProgect();
+        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
+        driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
 //
 //        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
 
-        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
-        driver.findElement(NEW_PROJEСT_NAME_TEXT).click();
+//        driver.findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])[2]")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
+//        driver.findElement(NEW_PROJEСT_NAME_TEXT).click();
 //        driver.findElement(By.xpath("//div[@class='CustomLogo']")).click();
 
 
@@ -127,8 +132,8 @@ public class ProjectTest extends BaseTest {
     // ================================== пагинация =====================================================
 
     // нет изменения кол-ва строк на странице
-    @Test
-    public void projectTest() {
+//    @Test
+//    public void projectTest() {
 
 //        Select simpl = new Select(selectWithoutMultiple);
 //        simpl.selectByValue("two");
@@ -192,7 +197,7 @@ public class ProjectTest extends BaseTest {
 //         submitButtonCreateProject.click();
 //         driver.quit();
 //         Thread.sleep(5000);
-    }
+//    }
 
 
 
