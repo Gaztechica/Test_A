@@ -9,24 +9,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.testng.Assert;
-import org.testng.annotations.Ignore;
-import org.testng.annotations.Test;
 
 public class UserPage extends BasePage {
 
+    @Name("пользователи")
     @FindBy(xpath = "//a[@href='/users']")
     private WebElement UserPage;
 
-    @FindBy(xpath = "//input[@id='InviteUserModal_email']")
-    private WebElement inputName;
+    @Name("создать ввод email")
+    @FindBy(xpath = "//input[@id='user_email']")
+    private WebElement inputEmail;
 
-    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")
+    @Name("кнопка создать")
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
     private WebElement createUserClick;
 
-    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
+    @Name("кнопка Пригласить")
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")
     private WebElement inviteUserClick;
 
+    @Name("ввод email")
     @FindBy(xpath = "//input[@id='InviteUserModal_email']")
     private WebElement inviteUserEmail;
 
@@ -41,11 +43,47 @@ public class UserPage extends BasePage {
     @FindBy(xpath = "//input[@id='user_last_name']")
     private WebElement userLastName;
 
+    @Name("создание выбор роли")
+    @FindBy(xpath = "//input[@id='user_roles']")
+    private WebElement userCreateRole;
+
+    @Name("пригласить выбор роли")
+    @FindBy(xpath = "//input[@id='InviteUserModal_roles']")
+    private WebElement userRole;
+
+    @Name("роль админа")
+    @FindBy(xpath = "//div[@class='ant-select-item-option-content']")
+    private WebElement userRoleAdmin;
+
+    @Name("роль инспектора")
+    @FindBy(xpath = "(//div[@class='ant-select-item-option-content'])[2]")
+    private WebElement userRoleInspect;
+
+    @Name("роль подрядчика")
+    @FindBy(xpath = "(//div[@class='ant-select-item-option-content'])[3]")
+    private WebElement userRolePodr;
+
+    @Name("роль наблюдателя")
+    @FindBy(xpath = "(//div[@class='ant-select-item-option-content'])[4]")
+    private WebElement userRoleNabl;
+
+    @Name("кнопка пригласить")
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")
+    private WebElement btnSubmit;
+
+    @Name("ввод имени")
+    @FindBy(xpath = "//input[@id='user_name']")
+    private WebElement inputName;
+
+    @Name("созд")
+    @FindBy(xpath = "//input[")
+    private WebElement userCrea;
+
     @FindBy(xpath = "//img[@src='/static/media/AddButton.48ed616f99340e2467c9c2a6d8a8b67e.svg']")
     private WebElement createRole;
 
-    @FindBy(xpath = "//input[@id='user_email']")
-    private WebElement inputEmail;
+//    @FindBy(xpath = "//input[@id='user_email']")
+//    private WebElement inputEmail;
 
     @FindBy(xpath = "//input[@id='user_timezone']")
     private WebElement userTimezone;
@@ -74,7 +112,8 @@ public class UserPage extends BasePage {
     @FindBy(xpath = "//div[@class='ContentUsers__requestTitle']")
     private WebElement btnRequestUser;
 
-    public final static String USER_NAME = "123ETest";
+    public final static String USER_NAME = "Алексей";
+    public final static String LAST_NAME = "Новиков";
 
     public final static String USER_EMAIL = "ye2vtcmvg@mail.ru";
 
@@ -84,47 +123,92 @@ public class UserPage extends BasePage {
         super(driver);
     }
 
-    @Name("splitter")
+    @Name("пользователи")
     public UserPage userPage() {
         UserPage.click();
         return this;
     }
 
+    @Name("кнопка создать")
     public UserPage createUserClick() {
        createUserClick.click();
         return this;
     }
 
+    @Name("кнопка Пригласить")
     public UserPage inviteUserClick() {
         inviteUserClick.click();
         return this;
     }
 
-    @Name("splitter")
-    public UserPage userName(String name) {
-        inputName.sendKeys(name);
+    @Name("создать-ввод имени")
+    public UserPage inputName() {
+        inputName.sendKeys(USER_NAME);
         return this;
     }
 
-    public UserPage userLastName(String lastName) {
-        userLastName.sendKeys(lastName);
+    @Name("выбор роли")
+    public UserPage userRole() {
+        userRole.click();
         return this;
     }
 
-    public UserPage userEmail() {
+    @Name("роль админа")
+    public UserPage userRoleAdmin() {
+        userRoleAdmin.click();
+        return this;
+    }
+
+    @Name("роль инспектора")
+    public UserPage userRoleInspect() {
+        userRoleInspect.click();
+        return this;
+    }
+
+    @Name("роль подрядчика")
+    public UserPage userRolePodr() {
+        userRolePodr.click();
+        return this;
+    }
+
+    @Name("роль наблюдателя")
+    public UserPage userRoleNabl() {
+        userRoleNabl.click();
+        return this;
+    }
+
+    @Name("кнопка пригласить")
+    public UserPage btnSubmit() {
+        btnSubmit.click();
+        return this;
+    }
+
+    @Name("создать-ввод фамилии")
+    public UserPage userLastName() {
+        userLastName.sendKeys(LAST_NAME);
+        return this;
+    }
+
+    @Name("ввод email")
+    public UserPage inputEmail() {
         inputEmail.sendKeys(USER_EMAIL);
         return this;
     }
 
+    @Name("ввод email")
     public UserPage inviteUserEmail() {
         inviteUserEmail.sendKeys(USER_EMAIL);
         return this;
     }
 
-    public UserPage userEmailClick() {
-        inputEmail.click();
+    public UserPage userCreateRole() {
+        userCreateRole.click();
         return this;
     }
+//    public UserPage userEmailClick() {
+//        inputEmail.click();
+//        return this;
+//    }
 
     public UserPage userTimezoneClick() {
         userTimezone.click();
@@ -271,7 +355,6 @@ public class UserPage extends BasePage {
     }
 
 
-
     public UserPage searchInput() {
         searchInput.click();
         return this;
@@ -287,6 +370,7 @@ public class UserPage extends BasePage {
         return this;
     }
 
+    @Name("кнопка троеточие")
     public UserPage buttonRemove() {
         getDriver().findElement(By.xpath("//img[@class='ant-dropdown-trigger AllUsers__iconBlock-img']")).click();
         return this;
@@ -297,11 +381,11 @@ public class UserPage extends BasePage {
         return this;
     }
 
-    public UserPage userNameClear() {
-        inputName.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE,
-        Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);
-        return this;
-    }
+//    public UserPage userNameClear() {
+//        inputName.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE,
+//        Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE);
+//        return this;
+//    }
 
     public UserPage searchInputDelete() {
         searchInput.sendKeys(Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE, Keys.BACK_SPACE,
@@ -309,13 +393,39 @@ public class UserPage extends BasePage {
         return this;
     }
 
-    public UserPage userNameDel() {
-        getDriver().findElement(By.xpath("//span[@class='ant-dropdown-menu-title-content'][contains(.,'Удалить')]")).click();
+    @Name("кнопка Удалить")
+        public UserPage userNameDel() {
+        getDriver().findElement(By.xpath("//li[@class='ant-dropdown-menu-item ant-dropdown-menu-item-only-child'][contains(.,'Удалить')]")).click();
         return this;
     }
 
-    public UserPage buttonRemoCancel() {
+    @Name("кнопка отменить")
+        public UserPage buttonRemoCancel() {
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).sendKeys(Keys.ENTER);
+        return this;
+    }
+
+    @Name("запрос на вступление в организацию отклонить Отклонить")
+    public UserPage buttonRequestUser() {
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed '][contains(.,'Отклонить')]")).sendKeys(Keys.ENTER);
+        return this;
+    }
+
+    @Name("запрос на вступление в организацию отклонить Отменить")
+    public UserPage buttonRequestUserCancel() {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
+        return this;
+    }
+
+    @Name("запрос на вступление в организацию отклонить Добавить")
+    public UserPage buttonAddRequestUser() {
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Добавить')]")).click();
+        return this;
+    }
+
+    @Name("запрос на вступление в организацию отклонить Отменить")
+    public UserPage buttonAddRequestUserCancel() {
+        getDriver().findElement(By.xpath("//div[@class='InviteUserModal__buttons']//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
         return this;
     }
 
@@ -334,6 +444,7 @@ public class UserPage extends BasePage {
         return this;
     }
 
+    @Name("запрос на вхождение в организацию отклонить")
     public UserPage hoverRequestUser() {
         WebElement targetElementStatus = getWait10().until(ExpectedConditions.visibilityOfElementLocated(
                 By.xpath("//tr[@class='ant-table-row ant-table-row-level-0'][contains(.,'Отклонить')]")));

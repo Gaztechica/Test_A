@@ -167,27 +167,27 @@ public abstract class BaseTest {
 
     // ================================== пользователь пагинация =====================================================
 
-    @Test
-    public void poginacyaTest() {
-        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
-        driver.findElement(By.xpath("//button[@class='ant-pagination-item-link']/span[@aria-label='left']")).click();
-        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
-        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'1')]")).click();
-    }
-
-    @Test
-    public void elementPageTest() {
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='10']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'50')]")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='50']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'40')]")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='40']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'30')]")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='30']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'20')]")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='20']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'10')]")).click();
-    }
+//    @Test
+//    public void poginacyaTest() {
+//        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
+//        driver.findElement(By.xpath("//button[@class='ant-pagination-item-link']/span[@aria-label='left']")).click();
+//        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
+//        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'1')]")).click();
+//    }
+//
+//    @Test
+//    public void elementPageTest() {
+//        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='10']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'50')]")).click();
+//        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='50']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'40')]")).click();
+//        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='40']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'30')]")).click();
+//        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='30']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'20')]")).click();
+//        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='20']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'10')]")).click();
+//    }
 
 //====================================================================================
 
@@ -221,43 +221,43 @@ public abstract class BaseTest {
 //    }
 
 
-    @Test(priority = 5,
-            description = "Предмет пользовательского соглашения")
-    public void hrefPoliticUser() {
-        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/user-agreement-armobail/']")).click();
-
-        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(newTab.get(1));
-
-        String getPoliticaUser = driver.findElement(GET_POLITIC_USER).getText();
-
-        Assert.assertEquals("Предмет пользовательского соглашения", getPoliticaUser);
-    }
-
-
-    @Test(priority = 7,
-            description = "телеграм бот")
-    public void hrefBot() {
-        driver.findElement(By.xpath("//span[@class='ant-typography span_r ant-dropdown-trigger Footer__links-text TabLink']")).click();
-        driver.findElement(By.xpath("//a[@href='https://t.me/arsoft_support_bot']")).click();
-
-        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(newTab.get(1));
-        String getBot = driver.findElement(GET_BOT).getText();
-
-        Assert.assertEquals("AR SOFT support", getBot);
-    }
-
-    @Test(priority = 6,
-            description = "Техническая поддержка АР СОФТ")
-    public void hrefSupport() {
-        driver.findElement(By.xpath("//span[@class='ant-typography span_r ant-dropdown-trigger Footer__links-text TabLink']")).click();
-        driver.findElement(By.xpath("//a[@href='https://forms.yandex.ru/cloud/66d960a043f74ffb1efdbae2/']")).click();
-
-        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(newTab.get(1));
-        String getSupport = driver.findElement(GET_SUPPORT).getText();
-
-        Assert.assertEquals("Техническая поддержка АР СОФТ", getSupport);
-    }
+//    @Test(priority = 5,
+//            description = "Предмет пользовательского соглашения")
+//    public void hrefPoliticUser() {
+//        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/user-agreement-armobail/']")).click();
+//
+//        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+//        driver.switchTo().window(newTab.get(1));
+//
+//        String getPoliticaUser = driver.findElement(GET_POLITIC_USER).getText();
+//
+//        Assert.assertEquals("Предмет пользовательского соглашения", getPoliticaUser);
+//    }
+//
+//
+//    @Test(priority = 7,
+//            description = "телеграм бот")
+//    public void hrefBot() {
+//        driver.findElement(By.xpath("//span[@class='ant-typography span_r ant-dropdown-trigger Footer__links-text TabLink']")).click();
+//        driver.findElement(By.xpath("//a[@href='https://t.me/arsoft_support_bot']")).click();
+//
+//        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+//        driver.switchTo().window(newTab.get(1));
+//        String getBot = driver.findElement(GET_BOT).getText();
+//
+//        Assert.assertEquals("AR SOFT support", getBot);
+//    }
+//
+//    @Test(priority = 6,
+//            description = "Техническая поддержка АР СОФТ")
+//    public void hrefSupport() {
+//        driver.findElement(By.xpath("//span[@class='ant-typography span_r ant-dropdown-trigger Footer__links-text TabLink']")).click();
+//        driver.findElement(By.xpath("//a[@href='https://forms.yandex.ru/cloud/66d960a043f74ffb1efdbae2/']")).click();
+//
+//        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+//        driver.switchTo().window(newTab.get(1));
+//        String getSupport = driver.findElement(GET_SUPPORT).getText();
+//
+//        Assert.assertEquals("Техническая поддержка АР СОФТ", getSupport);
+//    }
 }

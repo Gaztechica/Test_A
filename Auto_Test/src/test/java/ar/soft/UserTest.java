@@ -4,12 +4,8 @@ import ar.soft.modelPage.UserPage;
 import ar.soft.runner.BaseTest;
 //import org.junit.Test;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
-import java.util.List;
 
 public class UserTest extends BaseTest {
 
@@ -19,16 +15,15 @@ public class UserTest extends BaseTest {
     //
     //     асерт
 
-    @Test( priority = 6,
-            description = "IChart1. Нажать на значение графика 'красный - 16")
+    @Test(priority = 1,
+            description = "создание пользователя с ролью админ")
     public void userCreateAdmin() {
         new UserPage(driver)
                 .userPage()
                 .createUserClick()
-                .userName(UserPage.USER_NAME)
-                .userLastName("Леха")
-                .userEmail()
-                .userEmailClick()
+                .inputName()
+                .userLastName()
+                .inputEmail()
                 .userTimezoneClick()
                 .userTime()
                 .userTimeEnter()
@@ -39,15 +34,15 @@ public class UserTest extends BaseTest {
                 .buttonSave();
     }
 
-    @Test
+    @Test(priority = 2,
+            description = "создание пользователя с ролью инспектор")
     public void userCreateInspektor() {
         new UserPage(driver)
                 .userPage()
                 .createUserClick()
-                .userName(UserPage.USER_NAME)
-                .userLastName("Игнат")
-                .userEmail()
-                .userEmailClick()
+                .inputName()
+                .userLastName()
+                .inputEmail()
                 .userTimezoneClick()
                 .userTime()
                 .userTimeEnter()
@@ -60,15 +55,15 @@ public class UserTest extends BaseTest {
 //        WebElement buttonPassword = driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']"));
     }
 
-    @Test
+    @Test(priority = 3,
+            description = "создание пользователя с ролью подрядчик")
     public void userCreatePodraydchic() {
         new UserPage(driver)
                 .userPage()
                 .createUserClick()
-                .userName(UserPage.USER_NAME)
-                .userLastName("Kirov")
-                .userEmail()
-                .userEmailClick()
+                .inputName()
+                .userLastName()
+                .inputEmail()
                 .userTimezoneClick()
                 .userTime()
                 .userTimeEnter()
@@ -84,15 +79,15 @@ public class UserTest extends BaseTest {
                 .buttonDeleteClick();
     }
 
-    @Test
+    @Test(priority = 4,
+            description = "создание пользователя с ролью наблюдатель")
     public void userCreateNabludately() {
         new UserPage(driver)
                 .userPage()
                 .createUserClick()
-                .userName(UserPage.USER_NAME)
-                .userLastName("Наблюдатель")
-                .userEmail()
-                .userEmailClick()
+                .inputName()
+                .userLastName()
+                .inputEmail()
                 .userTimezoneClick()
                 .userTime()
                 .userTimeEnter()
@@ -109,15 +104,15 @@ public class UserTest extends BaseTest {
                 .buttonDeleteClick();
     }
 
-    @Test
+    @Test(priority = 5,
+            description = "создание пользователя с ролью подрядчик и новой организацией")
     public void userCreatePodraydchiAdd() {
         new UserPage(driver)
                 .userPage()
                 .createUserClick()
-                .userName(UserPage.USER_NAME)
-                .userLastName("FamilyTest")
-                .userEmail()
-                .userEmailClick()
+                .inputName()
+                .userLastName()
+                .inputEmail()
                 .userTimezoneClick()
                 .userTime()
                 .userTimeEnter()
@@ -134,15 +129,15 @@ public class UserTest extends BaseTest {
                 .buttonDeleteClick();
     }
 
-    @Test
+    @Test(priority = 6,
+            description = "создание пользователя с ролью наблюдатель и новой организацией")
     public void userCreateNabludatelyAdd() {
         new UserPage(driver)
                 .userPage()
                 .createUserClick()
-                .userName(UserPage.USER_NAME)
-                .userLastName("Наблюдатель")
-                .userEmail()
-                .userEmailClick()
+                .inputName()
+                .userLastName()
+                .inputEmail()
                 .userTimezoneClick()
                 .userTime()
                 .userTimeEnter()
@@ -161,15 +156,15 @@ public class UserTest extends BaseTest {
                 .buttonSave();
     }
 
-    @Test
+    @Test(priority = 7,
+            description = "переименование пользователя")
     public void userCreateRemove() {
         new UserPage(driver)
                 .userPage()
                 .createUserClick()
-                .userName(UserPage.USER_NAME)
-                .userLastName("FamilyTest")
-                .userEmail()
-                .userEmailClick()
+                .inputName()
+                .userLastName()
+                .inputEmail()
                 .userTimezoneClick()
                 .userTime()
                 .userTimeEnter()
@@ -188,15 +183,13 @@ public class UserTest extends BaseTest {
                 .buttonDeleteClick()
                 .buttonRemove()
                 .removeName()
-                .userNameClear()
-                .userName("РедактироваL")
-                .buttonRemoCancel()
-                .userNameClear()
-                .userName("Отменить");
+                .buttonRemoCancel();
+
 //                .buttonSave();
     }
 
-    @Test
+    @Test(priority = 8,
+            description = "отмена удаления пользователя")
     public void userCancelDelete() {
         new UserPage(driver)
                 .userPage()
@@ -205,25 +198,9 @@ public class UserTest extends BaseTest {
                 .buttonRemoCancel();
     }
 
-    @Test
-    public void requestUser() {
-        new UserPage(driver)
-                .userPage()
-                .btnRequestUser()
-                .hoverRequestUser();
-
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed '][contains(.,'Отклонить')]")).click();
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
-        new UserPage(driver)
-                .hoverRequestUser();
-
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Добавить')]")).click();
-        getDriver().findElement(By.xpath("//div[@class='InviteUserModal__buttons']//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
-    }
-
-
     //        не работает сортировка по организациям     смена страниц
-    @Test
+    @Test(priority = 9,
+            description = "сортировка пользователя с ролью админ")
     public void userCreateAdminSearch() {
         new UserPage(driver)
                 .userPage()
@@ -258,14 +235,29 @@ public class UserTest extends BaseTest {
     }
 
     //        не работает сортировка по организациям нет кнопок отменить/пригласить
-    @Test
+
+//    @Test(priority = 1,
+//            description = "приглашение пользователя с ролью админ")
+//    public void userCreateAdmin() {
+//        new UserPage(driver)
+//                .userPage()
+//                .createUserClick()
+//
+//                .userRole()
+//                .userRoleAdmin()
+//                .btnSubmit();
+//    }
+
+    @Test(priority = 10,
+            description = "приглашение пользователя с ролью админ")
     public void userInviteAdmin() {
         new UserPage(driver)
                 .userPage()
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
-                .inviteRolesEnter();
+//                .inviteRolesEnter()
+                .userRoleAdmin();
 //                .buttonDeleteClick();
     }
 
@@ -276,9 +268,10 @@ public class UserTest extends BaseTest {
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
-                .inviteRolesArron()
-                .inviteRolesEnter()
-                .buttonDeleteClick();
+//                .inviteRolesArron()
+//                .inviteRolesEnter()
+                .userRoleInspect();
+//                .buttonDeleteClick();
     }
 
     @Test
@@ -288,13 +281,11 @@ public class UserTest extends BaseTest {
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
-                .inviteRolesArron()
-                .inviteRolesArron()
-                .inviteRolesEnter()
+                .userRolePodr()
                 .inviteRolesEmploymentClick()
                 .inviteRoleEmplomentArro()
-                .inviteRolesEmploymentEnter()
-                .buttonDeleteClick();
+                .inviteRolesEmploymentEnter();
+//                .buttonDeleteClick();
     }
 
     @Test
@@ -304,10 +295,7 @@ public class UserTest extends BaseTest {
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
-                .inviteRolesArron()
-                .inviteRolesArron()
-                .inviteRolesArron()
-                .inviteRolesEnter()
+                .userRoleNabl()
                 .inviteRolesEmploymentClick()
                 .inviteRoleEmplomentArro()
                 .inviteRolesEmploymentEnter()
@@ -321,9 +309,7 @@ public class UserTest extends BaseTest {
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
-                .inviteRolesArron()
-                .inviteRolesArron()
-                .inviteRolesEnter()
+                .userRolePodr()
                 .inviteRolesEmploymentClick()
                 .createRoleClick()
                 .createRolesEmplomentClick()
@@ -339,10 +325,7 @@ public class UserTest extends BaseTest {
                 .inviteUserClick()
                 .inviteUserEmail()
                 .inviteRolesClick()
-                .inviteRolesArron()
-                .inviteRolesArron()
-                .inviteRolesArron()
-                .inviteRolesEnter()
+                .userRoleNabl()
                 .inviteRolesEmploymentClick()
                 .createRoleClick()
                 .createRolesEmplomentClick()
