@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class ProjectTest extends BaseTest {
 
-    private final By NEW_PROJEСT_NAME_TEXT = By.xpath("//div[@class='Sidebar__project-name'][contains(.,'1Новый проект')]");
+    private final By NEW_PROJEСT_NAME_TEXT = By.xpath("//div[@class='Sidebar__project-name'][contains(.,'11AAНовый проект')]");
 
 
     // ============================== Проект создание/удаление ==================================
@@ -19,7 +19,7 @@ public class ProjectTest extends BaseTest {
     public void createProgect() {
         new ProjctPage(driver)
                 .btnCreateProgect();
-        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
+        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("11AAНовый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_country']")).sendKeys("РФ");
         driver.findElement(By.xpath("//textarea[@id='CreateProjectForm_street']")).sendKeys("Победы");
@@ -49,7 +49,7 @@ public class ProjectTest extends BaseTest {
 
         String newProgectName = driver.findElement(NEW_PROJEСT_NAME_TEXT).getText();
 
-        Assert.assertEquals("1Новый проект", newProgectName);
+        Assert.assertEquals("11AAНовый проект", newProgectName);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
@@ -59,7 +59,7 @@ public class ProjectTest extends BaseTest {
             description = "Проект - отмена создания")
     public void cancelCreateProgectTest() {
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
-        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
+        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("11AAНовый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_country']")).sendKeys("РФ");
         driver.findElement(By.xpath("//textarea[@id='CreateProjectForm_street']")).sendKeys("Победы");
@@ -81,7 +81,7 @@ public class ProjectTest extends BaseTest {
     public void sidebarProgect() {
         new ProjctPage(driver)
                 .btnCreateProgect();
-        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
+        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("11AAНовый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
 
@@ -102,7 +102,7 @@ public class ProjectTest extends BaseTest {
     public void removeProgect() {
         new ProjctPage(driver)
                 .btnCreateProgect();
-        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
+        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("11AAНовый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
 //
 //        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();

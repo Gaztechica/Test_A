@@ -6,7 +6,8 @@ import org.testng.annotations.Test;
 
 public class InspectSidebarTest extends BaseTest {
 
-    @Test
+    @Test(priority = 1,
+            description = "создание пользователя с ролью админ")
     public void createInspect() {
          new InspectSidebarPage(getDriver())
                  .project()

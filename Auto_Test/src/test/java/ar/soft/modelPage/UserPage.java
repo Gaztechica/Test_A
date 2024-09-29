@@ -113,9 +113,9 @@ public class UserPage extends BasePage {
     private WebElement btnRequestUser;
 
     public final static String USER_NAME = "Алексей";
-    public final static String LAST_NAME = "Новиков";
+    public final static String LAST_NAME = "Адд";
 
-    public final static String USER_EMAIL = "ye2vtcmvg@mail.ru";
+    public final static String USER_EMAIL = "1аye21vtcmvg@mail.ru";
 
     public final static String USER_PASSWORD = "password";
 

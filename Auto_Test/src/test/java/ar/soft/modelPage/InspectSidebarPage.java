@@ -1,6 +1,7 @@
 package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
+import jdk.jfr.Name;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -15,23 +16,27 @@ public class InspectSidebarPage extends BasePage {
     @FindBy(xpath = "")
     private WebElement createI;
 
-    public InspectSidebarPage createInspectClick() {
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+    @Name("кнопка создать новую инспекцию")
+    @FindBy(xpath="//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
+    private WebElement createInspectClick;
 
-        return this;
-    }
-
+    @Name("название инспекции")
     public InspectSidebarPage inspectName() {
         getDriver().findElement(By.xpath("//input[@id='CreateDraftInspectionModal_name']")).sendKeys("inspectName");
 
         return this;
     }
 
+    @Name("кнопка создать инспекцию")
     public InspectSidebarPage btncreateInspectClick() {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
 
         return this;
     }
 
-
+    @Name("кнопка создать новую инспекцию")
+    public InspectSidebarPage createInspectClick() {
+        createInspectClick.click();
+        return this;
+    }
 }
