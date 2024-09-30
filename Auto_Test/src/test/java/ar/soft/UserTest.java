@@ -76,7 +76,7 @@ public class UserTest extends BaseTest {
                 .imputRolesEmplomentEnter()
                 .userPassword()
                 .userPasswordClick()
-                .buttonDeleteClick();
+                .buttonSave();
     }
 
     @Test(priority = 4,
@@ -101,7 +101,7 @@ public class UserTest extends BaseTest {
                 .imputRolesEmplomentEnter()
                 .userPassword()
                 .userPasswordClick()
-                .buttonDeleteClick();
+                .buttonSave();
     }
 
     @Test(priority = 5,
@@ -126,7 +126,7 @@ public class UserTest extends BaseTest {
                 .roleEmplomentClick()
                 .userPassword()
                 .userPasswordClick()
-                .buttonDeleteClick();
+                .buttonSave();
     }
 
     @Test(priority = 6,
@@ -183,9 +183,9 @@ public class UserTest extends BaseTest {
                 .buttonDeleteClick()
                 .buttonRemove()
                 .removeName()
-                .buttonRemoCancel();
+                .buttonRemoCancel()
 
-//                .buttonSave();
+                .buttonSave();
     }
 
     @Test(priority = 8,

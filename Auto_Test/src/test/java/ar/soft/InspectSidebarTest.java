@@ -6,15 +6,25 @@ import org.testng.annotations.Test;
 
 public class InspectSidebarTest extends BaseTest {
 
-    @Test
+    @Test(priority = 1,
+            description = "создать новую инспекцию")
     public void createInspect() {
          new InspectSidebarPage(getDriver())
                  .project()
                  .inspectSidebarClick()
                  .createInspectClick()
                  .inspectName()
-                 .btncreateInspectClick();
+                 .btncreateInspectClick()
+                 .inspectInput();
     }
 
+    @Test(priority = 2,
+            description = "переименовать инспекцию")
+    public void renameInspect() {
+        new InspectSidebarPage(getDriver())
+                .project()
+                .inspectSidebarClick()
+                .inspectRename();
 
+    }
 }
