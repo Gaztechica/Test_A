@@ -15,8 +15,8 @@ public class BasePage extends BaseModel {
         super(driver);
     }
 
-    @Name("открыть проект-1Новый проект")
-    @FindBy(xpath = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")
+    @Name("открыть проект-11AAНовый проект")
+    @FindBy(xpath = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'11AAНовый проект')]")
     private WebElement project;
 
     @Name("открыть Замечания")

@@ -15,7 +15,7 @@ public class InspectSidebarTest extends BaseTest {
                  .createInspectClick()
                  .inspectName()
                  .btncreateInspectClick()
-                 .inspectInput();
+                 .inspectTypesWork();
     }
 
     @Test(priority = 2,

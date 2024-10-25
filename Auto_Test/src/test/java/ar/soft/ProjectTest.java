@@ -33,7 +33,7 @@ public class ProjectTest extends BaseTest {
         NewData.click();
 
         WebElement EndData = driver.findElement(By.xpath("//input[@id='CreateProjectForm_endDate']"));
-        EndData.sendKeys("26-09-2024");
+        EndData.sendKeys("26-11-2024");
         EndData.sendKeys(Keys.ENTER);
 
         driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
@@ -102,7 +102,7 @@ public class ProjectTest extends BaseTest {
     public void removeProgect() {
         new ProjctPage(driver)
                 .btnCreateProgect();
-        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("11AAНовый проект");
+        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
 //
 //        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();

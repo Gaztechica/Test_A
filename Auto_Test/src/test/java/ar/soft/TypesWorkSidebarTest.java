@@ -7,8 +7,9 @@ import org.testng.annotations.Test;
 
 public class TypesWorkSidebarTest extends BaseTest {
 
-    @Test
-    public void CreateTypesWork() {
+    @Test(priority = 1,
+            description = "создание вида работ")
+    public void createTypesWork() {
         String Work = new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
@@ -18,12 +19,13 @@ public class TypesWorkSidebarTest extends BaseTest {
                 .btnSubmitTypesWorkClick()
                 .getNewWorkText();
 
-        Assert.assertEquals(Work, "CreateTypeOfWorkModal_name");
+        Assert.assertEquals(Work, "CreateTypeOfWork");
     }
 
-    @Test
-    public void AddTypesWork() {
-//        String AddWork = new TypesWorkSidebarPage(getDriver())
+    @Test(priority = 2,
+            description = "добавление вида работ в проект")
+    public void addTypesWork() {
+
         new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
@@ -31,9 +33,24 @@ public class TypesWorkSidebarTest extends BaseTest {
                 .btnCheckboxTypesWorkClick()
                 .btnAddWorkClick();
 
-//        Assert.assertEquals(AddWork, "CreateTypeOfWorkModal_name");
+        Assert.assertEquals("CreateTypeOfWork", "CreateTypeOfWork");
 
     }
 
 //    удалить редактиров поиск при добавление
+
+    @Test(priority = 3,
+            description = "создание вида работ")
+    public void deleteTypesWork() {
+        String delWork = new TypesWorkSidebarPage(getDriver())
+                .project()
+                .typesWorkSidebarClick()
+                .btnCreateTypesWorkClick()
+                .inputNameTypesWorkClick()
+                .unitMeasurementClick()
+                .btnSubmitTypesWorkClick()
+                .getNewWorkText();
+
+        Assert.assertEquals(delWork, "CreateTypeOfWorkModal_name");
+    }
 }

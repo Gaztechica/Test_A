@@ -1,6 +1,7 @@
 package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
+import jdk.jfr.Name;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -11,6 +12,7 @@ public class TypesWorkSidebarPage extends BasePage {
         super(driver);
     }
 
+    @Name("")
     public TypesWorkSidebarPage btnCreateTypesWorkClick() {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
 
@@ -18,7 +20,7 @@ public class TypesWorkSidebarPage extends BasePage {
     }
 
     public TypesWorkSidebarPage inputNameTypesWorkClick() {
-        getDriver().findElement(By.id("CreateTypeOfWorkModal_name")).sendKeys("CreateTypeOfWorkModal_name");
+        getDriver().findElement(By.id("CreateTypeOfWorkModal_name")).sendKeys("CreateTypeOfWork");
 
         return this;
     }

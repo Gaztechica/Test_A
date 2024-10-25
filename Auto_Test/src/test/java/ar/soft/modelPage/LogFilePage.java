@@ -1,6 +1,7 @@
 package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,8 +29,8 @@ public class LogFilePage extends BasePage {
     @FindBy(xpath = "//input[@id='rc_select_3']")
     private WebElement searchLogFile;
 
-//    @FindBy(xpath = "//a[@href='/logfiles']")
-//    private WebElement btnLogFile;
+//    @FindBy(xpath = "")).getText();
+//    private WebElement logName;
 //
 //    @FindBy(xpath = "//a[@href='/logfiles']")
 //    private WebElement btnLogFile;
@@ -60,14 +61,20 @@ public class LogFilePage extends BasePage {
 
     public LogFilePage searchLogFile() {
         searchLogFile.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN,
-                Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+                Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN,
+                Keys.ARROW_DOWN, Keys.ENTER);
 
         return this;
     }
 
+    public String logNameText() {
+        return getDriver().findElement(By.xpath("(//td[@class='ant-table-cell'])[3]//div")).getText();
+    }
+
+//    public LogFilePage logName() {
+//        logName.click();
 //
-//    public void btnLogFile() {
-//        btnLogFile.click();
+//        return this;
 //    }
 //
 //    public void btnLogFile() {

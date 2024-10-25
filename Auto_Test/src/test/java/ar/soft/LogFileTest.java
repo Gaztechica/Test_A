@@ -37,9 +37,12 @@ public class LogFileTest extends BaseTest {
     @Test(priority = 3,
             description = "Лог файл - поиск")
     public void logSearchTest() {
-        new LogFilePage(driver)
+        String logSearch = new LogFilePage(driver)
                 .btnLogFile()
-                .searchLogFile();
+                .searchLogFile()
+                .logNameText();
+
+        Assert.assertEquals(logSearch, "d8q2s@fthcapital.com");
     }
 
 // провeрка добавления записи на страницу, по времени

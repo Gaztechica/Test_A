@@ -142,8 +142,8 @@ public class UserPage extends BasePage {
     }
 
     @Name("создать-ввод имени")
-    public UserPage inputName() {
-        inputName.sendKeys(USER_NAME);
+    public UserPage inputName(String name) {
+        inputName.sendKeys(name);
         return this;
     }
 
@@ -190,8 +190,8 @@ public class UserPage extends BasePage {
     }
 
     @Name("ввод email")
-    public UserPage inputEmail() {
-        inputEmail.sendKeys(USER_EMAIL);
+    public UserPage inputEmail(String mail) {
+        inputEmail.sendKeys(mail);
         return this;
     }
 

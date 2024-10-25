@@ -140,7 +140,7 @@ public class AutorisaitionTest extends BaseTest {
 
 //    @Test
 //    public void cookieTest() {
-        Cookie getCookie = new Cookie("_ga", "GA1.2");
+//        Cookie getCookie = new Cookie("_ga", "GA1.2");
 //        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(NEGA_EMAIL);
 //        driver.findElement(By.xpath(BTN_PASSWORD)).click();
 
