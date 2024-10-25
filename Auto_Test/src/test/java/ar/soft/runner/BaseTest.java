@@ -42,6 +42,7 @@ public abstract class BaseTest {
     public final static String USER = "//input[@class='ant-input']";
     public static final String CHECKBOX = "//div[@id='CheckboxComponent']";
     private final By GET_POLITIC = By.xpath("//h1[@class='page-header-title clr']");
+    private final By LOGO = By.xpath("//div[@class='ant-typography p_m AdminMenu__link']");
     private final By GET_POLITIC_USER = By.xpath("//span[@style='font-size: 19px;'][contains(.,'Предмет пользовательского соглашения')]");
     private final By GET_BOT = By.xpath("//span[@dir='auto']");
     private final By GET_SUPPORT = By.xpath("//h1[@variant='display-3']");
@@ -168,9 +169,17 @@ public abstract class BaseTest {
     }
 
 
-    // ================================== пользователь пагинация =====================================================
+    // ================================== общие тесты =====================================================
 
-//    @Test
+    @Test(priority = 1,
+            description = "клик по лого")
+    public void logoTest() {
+        driver.findElement(By.xpath("//div[@class='Logo__container']")).click();
+        Assert.assertEquals("Проекты", driver.findElement(LOGO).getText());
+    }
+
+//    @Test(priority = 2,
+//            description = "пагинация")
 //    public void poginacyaTest() {
 //        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
 //        driver.findElement(By.xpath("//button[@class='ant-pagination-item-link']/span[@aria-label='left']")).click();
@@ -178,7 +187,8 @@ public abstract class BaseTest {
 //        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'1')]")).click();
 //    }
 //
-//    @Test
+//    @Test(priority = 3,
+//            description = "элементов на странице")
 //    public void elementPageTest() {
 //        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='10']")).click();
 //        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'50')]")).click();
@@ -192,15 +202,11 @@ public abstract class BaseTest {
 //        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'10')]")).click();
 //    }
 
-//====================================================================================
-
-
-//
-//    }
 
     // ================================== ссылки =====================================================
 
-//    @Test
+//    @Test(priority = 4,
+//            description = "Политика обработки персональных данных")
 //    public void hrefPolitic() {
 //        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
 //
@@ -210,7 +216,8 @@ public abstract class BaseTest {
 //        Assert.assertEquals("Политика обработки персональных данных", driver.findElement(GET_POLITIC).getText());
 //    }
 
-//    @Test  2 вариант
+//    @Test(priority = 4,
+////            description = "Политика обработки персональных данных")  2 вариант
 //    public void testHrefPolitiCopi() {
 //
 ////        getWait15().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"))).click();
@@ -238,7 +245,7 @@ public abstract class BaseTest {
 //    }
 //
 //
-//    @Test(priority = 7,
+//    @Test(priority = 6,
 //            description = "телеграм бот")
 //    public void hrefBot() {
 //        driver.findElement(By.xpath("//span[@class='ant-typography span_r ant-dropdown-trigger Footer__links-text TabLink']")).click();
@@ -251,7 +258,7 @@ public abstract class BaseTest {
 //        Assert.assertEquals("AR SOFT support", getBot);
 //    }
 //
-//    @Test(priority = 6,
+//    @Test(priority = 7,
 //            description = "Техническая поддержка АР СОФТ")
 //    public void hrefSupport() {
 //        driver.findElement(By.xpath("//span[@class='ant-typography span_r ant-dropdown-trigger Footer__links-text TabLink']")).click();
