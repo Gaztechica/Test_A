@@ -72,6 +72,12 @@ public class BasePage extends BaseModel {
         return new SettingsSidebarPage(getDriver());
     }
 
+    @Name("название Проекта - в сайтбаре")
+    public ProjectPage sidebarProject() {
+        getDriver().findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_m']"));
+
+        return new ProjectPage(getDriver());
+    }
 
 //    protected WebDriver getDriver() {
 //        return driver;

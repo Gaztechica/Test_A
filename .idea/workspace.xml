@@ -4,17 +4,73 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="Merge pull request #79 from Gaztechica&#10;InspectSidebarTest">
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/212a866b-2e5b-414e-b0a9-bb4eac839311-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/3708dd7d-365f-4e90-82ea-28044778a4e5-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/921fb1e6-a156-426a-9c3c-a2b4d8c5f88e-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/d5739622-5504-43d0-80a7-b8d4be4b58b1-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/d8eddef8-14b5-40fc-b3ce-bc64117453db-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/e0d0b1ed-c7e2-4bab-8aa5-51617ca5b911-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/f5239d0e-03cc-40ca-9b33-fc0dd2c862d2-container.json" afterDir="false" />
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="LogFileTest_logSearchTest">
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/017bc352-6457-42be-89d1-643dbcebdfc0-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/0225b22e-c5d3-4490-8746-a018980d5b75-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/0aa812da-9567-465e-bda3-6eb59b0f1b2e-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/12ef6d91-97c5-4d0e-b11e-408407114015-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/13532b97-eaaf-40b5-9d5a-125a0a657c5b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/24fd0ea3-83a8-4dec-9163-41990434fe4f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/250a4ae7-2f72-4cc3-80c0-0a6c7b4a2dcc-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/26c2aadb-f766-4e3b-badb-0b1c41948308-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2a2c1b6f-e69f-472d-bddf-bde2d329ae80-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2aadb29f-f24e-43c2-a384-7aea981941d1-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2b124792-8b2a-4f7a-8a27-875ba11a4366-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/37402dd8-5178-4290-8dce-ab4c5e2f04ca-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/3acf741a-6292-4780-a7a0-31ea70517f97-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/3ae1b185-627b-4857-ba41-0afcfc79d202-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/3fd94557-7e18-4997-adae-4df894f08a7f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/41b4552a-8835-4b30-97bb-329b836e6b26-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/42dcd1ce-c1e2-417e-843e-b815e7acd35e-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/45b3435b-4ad8-4ec7-8e5b-a9d5f60a0861-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/462a35ba-d7d4-461e-a82a-5cabc44f8451-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/4d0f5eed-56c1-42ab-9b65-12b1e62a195a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/50509a48-3acb-4d8e-b78b-b0898899c8b0-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/52a439c4-45db-45a6-94b4-4a48cbfea1e6-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/5d850de4-98c3-40cb-964e-3bca57e50869-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/5fb305fe-616f-488b-930c-65b8b5412b9a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/674b337d-64ff-4630-a5ec-daafe7c74d71-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/6c482c4f-e9d0-49b0-8251-fd8d66230975-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/6d5a48ca-2ca7-4ecb-8673-8524e123378f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/77730242-fd4f-4aab-9280-a67fedd83d49-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/839daf2f-f259-4e99-aae2-30c31ab73d64-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/8bb64c16-0bc0-4087-a111-eaa9da7ee942-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/9081f5df-fd43-4fd2-a9d4-df4c0a3c6f37-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/95cd98c0-3eba-468a-ab1d-3fa9e2665019-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/9a032b33-2c30-4362-ae3b-1cf7a6ba9f2e-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/9b57de11-5ca3-4a24-8548-2666f1fb2a2a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/a1f0b10e-fff6-4b41-badc-14f20ce80ec1-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/abc00ed2-22de-4f19-a3ce-3d5ca42c57d6-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ae57f630-16b9-41b1-9cda-75d48c9304b0-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/b3574224-fd3a-41ac-923b-ebc9dc1047cf-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/b6485f02-6fd8-4312-a70b-a6bae68cc364-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/bec1a9bc-35a5-4b93-99d4-ad7c1a2c8dd1-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/c059346b-1239-4437-b937-9aed8251be59-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/c365b029-095e-4561-9e94-e58b5c0ed96f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/c607fd0b-89bb-4385-a09d-93eb2d1dce62-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/d2534e10-9b54-4ac2-9b4c-20058666d9ec-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/d67a5387-9b7c-43f8-ab22-39f499384a27-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/dfb65601-274c-49ab-a99d-c3f16f1fabaa-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/e13b9ad0-2973-4412-9fab-91a964f53873-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/e281fd6d-5907-46b4-bc8d-786dde53998d-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/e75b1ac7-444b-4804-ba67-0ccaf2fb1453-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/eaa88841-41dc-44ca-9787-d28b7787a0dd-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ec7d10f5-7dd1-438d-b1b8-5533c7302b46-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/f3d73f45-14e2-4fb4-a54e-c0a15a5fd109-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/f644c62e-8b4f-4a37-a370-2a1727ed2b00-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/f93fdafc-911a-482e-ab79-a1854363fa0b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/fe555f33-8330-4a0f-bd17-29fde39638de-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ff05123e-1223-4eb5-87fe-3af5064c4fdb-container.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/runner/BaseTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjctPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TypesWorkSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TypesWorkSidebarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/TypesWorkSidebarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/TypesWorkSidebarTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/ProjctPage.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/base/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/base/BasePage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,10 +247,13 @@
     "TestNG.ProjectTest.RemoveProgect.executor": "Run",
     "TestNG.ProjectTest.SidebarProgect.executor": "Run",
     "TestNG.ProjectTest.cancelCreateProgectTest.executor": "Run",
+    "TestNG.ProjectTest.cancelCreateProjectTest.executor": "Run",
     "TestNG.ProjectTest.createCancelProgect.executor": "Run",
     "TestNG.ProjectTest.createProgect.executor": "Run",
+    "TestNG.ProjectTest.createProject.executor": "Run",
     "TestNG.ProjectTest.executor": "Run",
     "TestNG.ProjectTest.hrefPolitic.executor": "Run",
+    "TestNG.ProjectTest.openProject.executor": "Run",
     "TestNG.ProjectTest.poginacyaTest.executor": "Run",
     "TestNG.ProjectTest.removeProgect.executor": "Run",
     "TestNG.ProjectTest.sidebarProgect.executor": "Run",
@@ -278,8 +337,8 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.LogFileTest.logoTest">
-    <configuration name="LogFileTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.TypesWorkSidebarTest.addTypesWork">
+    <configuration name="ProjectTest.cancelCreateProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -288,25 +347,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="LogFileTest.logSearchTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
-      <option name="METHOD_NAME" value="logSearchTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
+      <option name="METHOD_NAME" value="cancelCreateProjectTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -314,17 +356,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LogFileTest.logoTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectTest.createProject" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.runner.*" />
+          <option name="PATTERN" value="ar.soft.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.LogFileTest" />
-      <option name="METHOD_NAME" value="logoTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
+      <option name="METHOD_NAME" value="createProject" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TypesWorkSidebarTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TypesWorkSidebarTest.addTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
+      <option name="METHOD_NAME" value="addTypesWork" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -350,30 +427,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.LogFileTest.logoTest" />
-        <item itemvalue="TestNG.LogFileTest.logSearchTest" />
+        <item itemvalue="TestNG.TypesWorkSidebarTest.addTypesWork" />
+        <item itemvalue="TestNG.TypesWorkSidebarTest" />
         <item itemvalue="TestNG.TypesWorkSidebarTest.deleteTypesWork" />
-        <item itemvalue="TestNG.LogFileTest" />
-        <item itemvalue="TestNG.UserTest" />
+        <item itemvalue="TestNG.ProjectTest.cancelCreateProjectTest" />
+        <item itemvalue="TestNG.ProjectTest.createProject" />
       </list>
     </recent_temporary>
   </component>
@@ -392,14 +452,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00050" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1712088274793</created>
-      <option name="number" value="00050" />
-      <option name="presentableId" value="LOCAL-00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1712088274793</updated>
     </task>
     <task id="LOCAL-00051" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -785,7 +837,15 @@
       <option name="project" value="LOCAL" />
       <updated>1729889441344</updated>
     </task>
-    <option name="localTasksCounter" value="99" />
+    <task id="LOCAL-00099" summary="LogFileTest_logSearchTest">
+      <option name="closed" value="true" />
+      <created>1729891057967</created>
+      <option name="number" value="00099" />
+      <option name="presentableId" value="LOCAL-00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1729891057967</updated>
+    </task>
+    <option name="localTasksCounter" value="100" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

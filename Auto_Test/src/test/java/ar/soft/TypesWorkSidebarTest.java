@@ -23,34 +23,37 @@ public class TypesWorkSidebarTest extends BaseTest {
     }
 
     @Test(priority = 2,
-            description = "добавление вида работ в проект")
+            description = "добавление вида работ в проект через поиск")
     public void addTypesWork() {
 
         new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
                 .btnAddTypesWorkClick()
+                .searchWorkText()
                 .btnCheckboxTypesWorkClick()
-                .btnAddWorkClick();
+                .btnAddWorkClick()
+                .getNewWorkText();;
 
-        Assert.assertEquals("CreateTypeOfWork", "CreateTypeOfWork");
+        Assert.assertEquals("владимир", "владимир");
 
     }
 
 //    удалить редактиров поиск при добавление
 
     @Test(priority = 3,
-            description = "создание вида работ")
+            description = "удалить вид работ")
     public void deleteTypesWork() {
         String delWork = new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
+
                 .btnCreateTypesWorkClick()
                 .inputNameTypesWorkClick()
                 .unitMeasurementClick()
                 .btnSubmitTypesWorkClick()
                 .getNewWorkText();
 
-        Assert.assertEquals(delWork, "CreateTypeOfWorkModal_name");
+        Assert.assertEquals(delWork, "владимир");
     }
 }
