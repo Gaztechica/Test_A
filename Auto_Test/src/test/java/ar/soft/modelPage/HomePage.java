@@ -10,9 +10,9 @@ public class HomePage extends BasePage {
         super(driver);
     }
 
-    public void clickRega() {
-        getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
-    }
+//    public void clickRega() {
+//        getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
+//    }
 
 //    public List<String> getJobList() {
 //           List<WebElement> elementsList = getDriver().findElements(By.xpath());
