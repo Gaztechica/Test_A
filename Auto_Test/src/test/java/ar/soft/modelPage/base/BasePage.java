@@ -54,6 +54,8 @@ public class BasePage extends BaseModel {
         return new AuthorizationPege(getDriver());
     }
 
+
+
     @Name("открыть Инспекции")
     public InspectSidebarPage inspectSidebarClick() {
         getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Инспекции')]")).click();

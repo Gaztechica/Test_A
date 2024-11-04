@@ -74,4 +74,34 @@ public class AuthorizationPege extends BasePage {
     public String getError() {
         return getDriver().findElement(By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']")).getText();
     }
+
+    @Name("GET_ERROR_TEXT")
+    public String getEmailError() {
+        return getDriver().findElement(By.xpath("//input[@style='border-color: rgb(255, 0, 0);']")).getAttribute("style");
+    }
+
+    @Name("администратора, который не добавлен в проект")
+    public String notProjectsError() {
+        return getDriver().findElement(By.xpath("//p[@class='NotProjects__content-title']")).getText();
+    }
+
+    @Name("Пароль *********")
+    public String passwordError() {
+        return getDriver().findElement(By.xpath("//input[@type='password']")).getText();
+    }
+
+    @Name("Поле “Электронная почта” подсвечено красной обводкой")
+    public String inputMailError() {
+        return getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getAttribute("border-color");
+//        return getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getAttribute("value style");
+    }
+
+    @Name("Электронная почта")
+    public AuthorizationPege eMail() {
+//    public BasePage inputMail() {
+        getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getAttribute("border-color");
+
+//        return new AutorisaitionPege(getDriver());
+        return this;
+    }
 }

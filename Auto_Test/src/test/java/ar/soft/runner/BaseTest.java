@@ -35,8 +35,10 @@ public abstract class BaseTest {
     public static final String INPUT_EMAIL = "//input[@class='ant-input primaryInput  not-entered']";
     public static final String BTN_PASSWORD = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']";
     public static final String EMAIL = "f.ff.1980@list.ru";                          // test
+    public static final String NOT_EMAIL = "";
 //    public static final String EMAIL = "akhilgov@spgr.ru";                          // stage
-    public static final String PASSWORD = "012345678";                                // test
+    public static final String PASSWORD = "012345678";                                 // test
+    public static final String NOT_PASSWORD = "";
 //    public static final String PASSWORD = "qwerty123";                                // stage
 
     public final static String USER = "//input[@class='ant-input']";

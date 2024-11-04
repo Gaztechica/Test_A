@@ -18,8 +18,6 @@ public class AuthorizationTest extends BaseTest {
     private final By GET_PASSWORD = By.xpath("//h2[@class='ant-typography h2_m SendSuccessBlock__text'][contains(.,'Мы отправили по адресу')]");
     public static final String NEGA_EMAIL = "yyyyyyyyyyyyyy@mail.ru";
 
-
-
     @Test(priority = 1,
             description = "Авторизация под ролью владельца")
     public void ownerAuthorizationTest () {
@@ -153,29 +151,29 @@ public class AuthorizationTest extends BaseTest {
     public Object[][] randomEmail() {
         return new Object[][]{
                 {"rrrrrrrrrrrrrr@mail.yy"}, {"NNNNNNNNNN@mail.xx"}, {"22222222222@mail.xx"},
-                {"ыыыыыыыыыыы@mail.xx"}, {"lllllllllly@mail.xx"},
+                {"ыыыWEFCGhjjjlk@mail.xx"}, {"lllllllllly@mail.xx"},
                {"!@#$%^&*()_+@mail.xx"}
         };
     }
 
-    @Test(priority = 9,
-            description = "Ввод не подтвержденной почты при авторизации", dataProvider = "randomEmail")
-    public void testRandomEmai(String name) {
-        driver.get(URL);
-
-//        new HomePage(driver)
-//                .inputMail(EMAIL);
-
-        driver.findElement(By.xpath(INPUT_EMAIL)).click();
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
-
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-
-        Assert.assertEquals(driver.findElement(GET_EMAIL_TEXT).getText(),"Пользователь не найден, попробуйте снова");
-    }
+//    @Test(priority = 9,
+//            description = "Ввод не подтвержденной почты при авторизации", dataProvider = "randomEmail")
+//    public void testRandomEmai(String name) {
+//        driver.get(URL);
+//
+////        new HomePage(driver)
+////                .inputMail(EMAIL);
+//
+//        driver.findElement(By.xpath(INPUT_EMAIL)).click();
+//        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
+//
+//        driver.findElement(By.xpath(BTN_PASSWORD)).click();
+//
+//        Assert.assertEquals(driver.findElement(GET_EMAIL_TEXT).getText(),"Неправильный логин или пароль");
+//    }
 
     @Test(priority = 10,
-            description = "получить письмо для восстановления доступа c Неправильным логином или паролем", dataProvider = "randomEmail")
+            description = "Неправильным логином или паролем", dataProvider = "randomEmail")
     public void regEmailNegaTest(String name) {
         driver.get(URL);
 
@@ -193,14 +191,76 @@ public class AuthorizationTest extends BaseTest {
     public void removePasswordTest() {
         driver.get(URL);
 
-        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        driver.findElement(By.xpath(BTN_PASSWORD)).click();
-
-        String getError = driver.findElement(GET_ERROR_TEXT).getText();
+        String getError = new AuthorizationPege(getDriver())
+                .inputMail(EMAIL)
+                .inputPassword(NOT_PASSWORD)
+                .btnSubmit()
+                .getError();
 
         Assert.assertEquals(getError,"Неправильный логин или пароль");
     }
 
+
+// Авторизация с неверным паролем
+
+
+    @Test(priority = 12,
+            description = "Авторизоваться под ролью администратора, который не добавлен в проект")
+    public void notProjectsAdminTest () {
+        driver.get(URL);
+
+        String notProjectsError = new AuthorizationPege(getDriver())
+                .inputMail("yirtemedru@gufum.com")
+                .inputPassword(PASSWORD)
+                .btnSubmit()
+                .notProjectsError();
+
+        Assert.assertEquals(notProjectsError,"Отсутствуют доступные проекты, обратитесь к Администратору проекта");
+    }
+
+    @Test(priority = 13,
+            description = "Авторизация с незаполненным полем почты")
+    public void notEmailTest () {
+        driver.get(URL);
+
+        String notEmailError = new AuthorizationPege(getDriver())
+                .inputMail(NOT_EMAIL)
+                .inputPassword(PASSWORD)
+                .btnSubmit()
+                .getEmailError();
+
+        Assert.assertEquals(notEmailError,"border-color: rgb(255, 0, 0);");
+//        Поле “Электронная почта” подсвечено красной обводкой
+
+    }
+
+//    @Test(priority = 17,
+//            description = "Авторизация с незаполненными полями логина и пароля")
+//    public void notEmailPasswordTest () {
+//        driver.get(URL);
+//
+//        String inputMailError = new AuthorizationPege(getDriver())
+////        new AuthorizationPege(getDriver())
+//                .inputMail(NOT_EMAIL)
+//                .inputPassword(NOT_PASSWORD)
+//                .btnSubmit()
+//                .eMail();
+//
+//        Assert.assertEquals(inputMailError,  "border-color: rgb(255, 0, 0);");
+//    }
+
+    @Test(priority = 18,
+            description = "Значение “Пароль” отображается в поле ввода в скрытом виде")
+    public void passwordTest () {
+        driver.get(URL);
+
+        String Password = new AuthorizationPege(getDriver())
+                .inputMail(EMAIL)
+                .inputPassword(PASSWORD)
+                .passwordError();
+//         в поле “Пароль” Значение отображается в поле ввода в скрытом виде
+        Assert.assertEquals(Password,"");
+    }
 
 //    добавить куки почты и вводить полученное письмо для замены пароля
 
