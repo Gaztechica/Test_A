@@ -9,7 +9,8 @@ import org.testng.annotations.Test;
 
 public class SettingsSidebarTest extends BaseTest {
 
-    @Test
+    @Test(priority = 1,
+            description = "изменить проект")
     public void removeProjectTest() {
        String messege = new SettingsSidebarPage(getDriver())
                 .project()
@@ -23,7 +24,8 @@ public class SettingsSidebarTest extends BaseTest {
 
         Assert.assertEquals(messege, "Проект успешно изменен");
     }
-    @Test
+    @Test(priority = 2,
+            description = "отмена удалить проект")
     public void cancelDeleteProjectTest() {
         new BasePage(getDriver())
                 .project()
@@ -35,7 +37,8 @@ public class SettingsSidebarTest extends BaseTest {
                 .btnCancelDeleteSettingsClick();
     }
 
-    @Test
+    @Test(priority = 3,
+            description = "удалить проект")
     public void deleteProgectTest() {
        String getMessageDelete = new BasePage(getDriver())
                 .project()

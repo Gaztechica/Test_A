@@ -11,7 +11,7 @@ public class SettingsSidebarPage extends BasePage {
     }
 
     public SettingsSidebarPage openProjectSettings() {
-        getDriver().findElement(By.xpath("//div[@class='Sidebar__project-name'][contains(.,'1Новый проект')]")).click();
+        getDriver().findElement(By.xpath("//div[@class='Sidebar__project-name'][contains(.,'11AAНовый проект')]")).click();
 
         return this;
     }
@@ -30,7 +30,7 @@ public class SettingsSidebarPage extends BasePage {
     }
 
     public SettingsSidebarPage inputNameStritProjectSettings() {
-        getDriver().findElement(By.xpath("//textarea[@id='EditProjectForm_street']")).sendKeys(Keys.CONTROL + "a" + Keys.DELETE, "Настройки");
+        getDriver().findElement(By.xpath("//textarea[@id='EditProjectForm_street']")).sendKeys(Keys.CONTROL + "a" + Keys.DELETE, "Гагарина");
 
         return this;
     }
@@ -59,10 +59,12 @@ public class SettingsSidebarPage extends BasePage {
     }
 
     public String getMessageAddNoticeText() {
-        return getDriver().findElement(By.xpath("//div[@class='ant-message-notice-content'][contains(.,'Проект успешно изменен')]")).getText();
+        return getDriver().findElement(By.xpath("//div[@class='ant-message-notice-content']//span[contains(.,'Проект успешно изменен')] | //div[@class='ant-message-notice-content'][contains(.,'Проект успешно изменен')]")).getText();
+//        return getDriver().findElement(By.xpath("//div[@class='ant-message-notice-content'][contains(.,'Проект успешно изменен')]")).getText();
     }
 
     public String getMessageDeleteNoticeText() {
-        return getDriver().findElement(By.xpath("//div[@class='ant-message-notice-content'][contains(.,'Проект успешно удален')]")).getText();
+        return getDriver().findElement(By.xpath("//div[@class='ant-message-notice-content']//span[contains(.,'Проект успешно удален')] |//div[@class='ant-message-notice-content'][contains(.,'Проект успешно удален')]")).getText();
+//        return getDriver().findElement(By.xpath("//div[@class='ant-message-notice-content'][contains(.,'Проект успешно удален')]")).getText();
     }
 }

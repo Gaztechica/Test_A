@@ -43,17 +43,66 @@ public class TypesWorkSidebarTest extends BaseTest {
 
     @Test(priority = 3,
             description = "удалить вид работ")
-    public void deleteTypesWork() {
-        String delWork = new TypesWorkSidebarPage(getDriver())
+    public void cancelDeleteTypesWork() {
+       new TypesWorkSidebarPage(getDriver())
+//        String delWork = new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
 
-                .btnCreateTypesWorkClick()
-                .inputNameTypesWorkClick()
-                .unitMeasurementClick()
+                .btnRemoveTypesWorkClick()
+                .dropDeleteTypesWorkClick()
+                .btnCancelDeleteTypesWorkClick();
+
+//        Assert.assertEquals(delWork, "владимир");
+    }
+
+    @Test(priority = 4,
+            description = "редактировать вид работ")
+    public void removeTypesWork() {
+        String newNameWork = new TypesWorkSidebarPage(getDriver())
+                .project()
+                .typesWorkSidebarClick()
+
+                .btnRemoveTypesWorkClick()
+                .dropRemoveTypesWorkClick()
+
+                .clerNameTypesWorkClick()
+                .inputNewNameTypesWorkClick()
+                .unitRemoveMeasurementClick()
                 .btnSubmitTypesWorkClick()
+
                 .getNewWorkText();
 
-        Assert.assertEquals(delWork, "владимир");
+        Assert.assertEquals(newNameWork, "владимир Remove Name");
+    }
+
+    @Test(priority = 5,
+            description = "удалить вид работ")
+    public void deleteTypesWork() {
+        new TypesWorkSidebarPage(getDriver())
+//        String delWork = new TypesWorkSidebarPage(getDriver())
+                .project()
+                .typesWorkSidebarClick()
+
+                .btnRemoveTypesWorkClick()
+                .dropDeleteTypesWorkClick()
+                .btnSetDeleteTypesWorkClick();
+
+//        Assert.assertEquals(delWork, "владимир");
+    }
+
+    @Test(priority = 6,
+            description = "удалить ПКМ вид работ")
+    public void deletePKMTypesWork() {
+        new TypesWorkSidebarPage(getDriver())
+//        String delWork = new TypesWorkSidebarPage(getDriver())
+                .project()
+                .typesWorkSidebarClick()
+
+                .btnRemovePRMTypesWorkClick()
+                .dropDeleteTypesWorkClick()
+                .btnSetDeleteTypesWorkClick();
+
+//        Assert.assertEquals(delWork, "владимир");
     }
 }

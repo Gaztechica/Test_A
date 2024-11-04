@@ -37,6 +37,23 @@ public class BasePage extends BaseModel {
         return new RemarkSidebarPage(getDriver());
     }
 
+    @Name("Электронная почта")
+    public BasePage inputMail(String mail) {
+//    public BasePage inputMail() {
+        getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys(mail);
+
+//        return new AutorisaitionPege(getDriver());
+        return this;
+    }
+
+    @Name("Пароль")
+    public AuthorizationPege inputPassword(String password) {
+//    public AuthorizationPege inputPassword() {
+        getDriver().findElement(By.xpath("//input[@type='password']")).sendKeys(password);
+
+        return new AuthorizationPege(getDriver());
+    }
+
     @Name("открыть Инспекции")
     public InspectSidebarPage inspectSidebarClick() {
         getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Инспекции')]")).click();
