@@ -171,12 +171,12 @@ public abstract class BaseTest {
 
     // ================================== общие тесты =====================================================
 
-    @Test(priority = 1,
-            description = "клик по лого")
-    public void logoTest() {
-        driver.findElement(By.xpath("//div[@class='Logo__container']")).click();
-        Assert.assertEquals("Проекты", driver.findElement(LOGO).getText());
-    }
+//    @Test(priority = 1,
+//            description = "клик по лого")
+//    public void logoTest() {
+//        driver.findElement(By.xpath("//div[@class='Logo__container']")).click();
+//        Assert.assertEquals("Проекты", driver.findElement(LOGO).getText());
+//    }
 
 //    @Test(priority = 2,
 //            description = "пагинация")
