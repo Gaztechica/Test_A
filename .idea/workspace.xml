@@ -4,73 +4,111 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="LogFileTest_logSearchTest">
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/017bc352-6457-42be-89d1-643dbcebdfc0-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/0225b22e-c5d3-4490-8746-a018980d5b75-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/0aa812da-9567-465e-bda3-6eb59b0f1b2e-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/12ef6d91-97c5-4d0e-b11e-408407114015-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/13532b97-eaaf-40b5-9d5a-125a0a657c5b-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/24fd0ea3-83a8-4dec-9163-41990434fe4f-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/250a4ae7-2f72-4cc3-80c0-0a6c7b4a2dcc-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/26c2aadb-f766-4e3b-badb-0b1c41948308-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2a2c1b6f-e69f-472d-bddf-bde2d329ae80-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2aadb29f-f24e-43c2-a384-7aea981941d1-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2b124792-8b2a-4f7a-8a27-875ba11a4366-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/37402dd8-5178-4290-8dce-ab4c5e2f04ca-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/3acf741a-6292-4780-a7a0-31ea70517f97-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/3ae1b185-627b-4857-ba41-0afcfc79d202-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/3fd94557-7e18-4997-adae-4df894f08a7f-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/41b4552a-8835-4b30-97bb-329b836e6b26-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/42dcd1ce-c1e2-417e-843e-b815e7acd35e-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/45b3435b-4ad8-4ec7-8e5b-a9d5f60a0861-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/462a35ba-d7d4-461e-a82a-5cabc44f8451-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/4d0f5eed-56c1-42ab-9b65-12b1e62a195a-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/50509a48-3acb-4d8e-b78b-b0898899c8b0-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/52a439c4-45db-45a6-94b4-4a48cbfea1e6-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/5d850de4-98c3-40cb-964e-3bca57e50869-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/5fb305fe-616f-488b-930c-65b8b5412b9a-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/674b337d-64ff-4630-a5ec-daafe7c74d71-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/6c482c4f-e9d0-49b0-8251-fd8d66230975-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/6d5a48ca-2ca7-4ecb-8673-8524e123378f-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/77730242-fd4f-4aab-9280-a67fedd83d49-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/839daf2f-f259-4e99-aae2-30c31ab73d64-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/8bb64c16-0bc0-4087-a111-eaa9da7ee942-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/9081f5df-fd43-4fd2-a9d4-df4c0a3c6f37-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/95cd98c0-3eba-468a-ab1d-3fa9e2665019-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/9a032b33-2c30-4362-ae3b-1cf7a6ba9f2e-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/9b57de11-5ca3-4a24-8548-2666f1fb2a2a-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/a1f0b10e-fff6-4b41-badc-14f20ce80ec1-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/abc00ed2-22de-4f19-a3ce-3d5ca42c57d6-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ae57f630-16b9-41b1-9cda-75d48c9304b0-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/b3574224-fd3a-41ac-923b-ebc9dc1047cf-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/b6485f02-6fd8-4312-a70b-a6bae68cc364-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/bec1a9bc-35a5-4b93-99d4-ad7c1a2c8dd1-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/c059346b-1239-4437-b937-9aed8251be59-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/c365b029-095e-4561-9e94-e58b5c0ed96f-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/c607fd0b-89bb-4385-a09d-93eb2d1dce62-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/d2534e10-9b54-4ac2-9b4c-20058666d9ec-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/d67a5387-9b7c-43f8-ab22-39f499384a27-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/dfb65601-274c-49ab-a99d-c3f16f1fabaa-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/e13b9ad0-2973-4412-9fab-91a964f53873-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/e281fd6d-5907-46b4-bc8d-786dde53998d-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/e75b1ac7-444b-4804-ba67-0ccaf2fb1453-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/eaa88841-41dc-44ca-9787-d28b7787a0dd-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ec7d10f5-7dd1-438d-b1b8-5533c7302b46-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/f3d73f45-14e2-4fb4-a54e-c0a15a5fd109-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/f644c62e-8b4f-4a37-a370-2a1727ed2b00-result.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/f93fdafc-911a-482e-ab79-a1854363fa0b-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/fe555f33-8330-4a0f-bd17-29fde39638de-container.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ff05123e-1223-4eb5-87fe-3af5064c4fdb-container.json" afterDir="false" />
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="TypesWorkSidebarTest">
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/008ccdfd-4dfe-4ebf-aaf9-c42c3046c553-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/01227788-2756-49c5-a5b8-eac81f768744-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/013d0d93-ee99-401b-bd24-a71742cd926b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/02f0d6ad-e98c-423e-a67a-90f2b34bebb9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/058ad7d3-e53a-4f03-91a1-fa7ea961dbbb-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/07bfbe66-1b6e-468e-b9c5-faea66f63c23-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/0df482fd-9048-49d1-b36f-b061cfcd6359-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/113743e7-a257-452f-83c3-b64e958baf5e-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/11815126-1e22-4b6b-99e1-a8ce8b2d080c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/11a25044-e059-4a8a-98d6-a1557059a47a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/11b3b01d-cccc-49e8-942e-8c99ae5cd174-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/146d6bbf-8e6b-4f46-89db-d7bd7696a2f3-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/15ac8931-e9b7-4ae2-94ee-77ead2b5cd3e-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/17dda1de-2015-448d-b325-05f1f702d7d2-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/1c9960f9-d8bf-4c52-95db-5189adb7505c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/1ec7e422-537b-467f-aeaf-8818976f57ff-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/220e449c-edd0-4ac9-8a2a-69cc0b753dca-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/233bfc3e-4af4-49fd-8b69-54f89bacbe78-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/267d69a0-dda3-48ee-be40-cfd42ffc23a8-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2836e79f-c905-4e2c-9579-e615658c8350-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/29b5a22d-4cf8-4c62-af61-e2134d039256-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2a61e435-a309-4fa8-880a-f01a8ca6924a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2a88c4c2-d81f-496c-911f-be89980a27a9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2ace81fc-f07b-4bfe-9055-8e77e65c39a9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2b90fbdf-4d7d-404b-b769-0257f3be1103-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2c207445-f66e-4d32-a419-d260daacd139-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2cf6cf05-a6e8-4425-adce-ee5fbd64240a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2d3e3540-98b8-41d1-8987-ec754cb2ee74-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/2d6d4996-5085-41bc-aaf0-3a0dbcb29f88-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/32788df3-30a0-45ae-a4e5-9d0dc31a8772-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/3669fd51-5f98-4d82-9fc2-15dbb3cd9ea7-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/3a366fec-8364-4251-8926-c3c944e94864-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/3dc237bf-afb3-4441-85a6-96ceaf1cf7b7-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/3ec6881f-aac1-469b-af7c-99f001b5cfbb-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/401623f1-e87f-4b6c-adbf-867b530baaf6-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/414c868a-5cb1-45a8-807d-484c2c947c8a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/45a67801-19df-4a91-a9e4-81f4054caf31-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/493b4d13-d669-4a30-9a73-b1f9206d3789-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/4ceebc44-d6b9-4f55-a759-6d566cf5b894-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/5198d922-699c-4f9d-ae7a-fc025d71541c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/5475f4eb-1fce-4286-bd09-1075dfd4e2d4-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/55302ae3-b687-4799-9e5b-af71862d518f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/598036cf-084d-4588-9c59-ece54ddac677-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/5cd32a02-71f4-48bf-a6c1-4e10226d2ed3-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/6cf9baff-193a-4a42-8581-be5ab50bef6f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/735d808c-7145-468f-9c8c-8b27620a2db0-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/753bfbb1-9178-4e0c-82db-fb38f8658203-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/771fe190-2d72-45e0-94f1-b8192b1d38a7-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/79c30dd3-2e45-4423-9b19-6510e3d2c536-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/7a0819c9-9a63-46a8-a532-ea82351548ed-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/7a73f1e4-b849-41a5-8de2-2b246aaca648-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/7c2796b6-82ea-4472-9b5c-0a56f260098b-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/7f3464a4-4ec8-41c2-b006-6c720cfb8157-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/803f3ded-fe28-4d82-a7e9-2b7d1b0beb1c-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/80ced58c-078e-4a47-8e9b-08ccec6c1154-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/80d2c29f-9a8b-42d5-b575-92bb4305a593-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/8231758c-009d-4226-91d6-388e25a86dcf-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/8282be79-a30a-4b0f-bce0-b10ac107ca50-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/837f0c45-1739-4e73-8ca1-e35583bd5b2f-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/86ae627c-aabb-40e3-8843-5f60010e76f4-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/8d27039c-8b18-48ff-a136-c2664f4aaf3a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/963a7875-587f-4ed5-b645-b00ea49cc2d9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/99df1eb3-5db4-4ddf-b218-79ab69344395-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/9bdc28c4-9beb-4d89-9dd5-6fadc4b64a07-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/a0ab1ef4-a576-44b0-bbed-a378794af5a9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ad1efaa7-c687-4dad-bb34-a225317b79b9-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ae233bab-e9d2-4daf-81ea-d4ad6a031f85-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/b0cd1284-8808-4d13-a1bd-fe82f48241ae-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/b212c75c-d36d-4058-85c6-fbb30d6c3038-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/b4c22b7e-40f3-4262-ba73-fa9cd5457f72-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/bc37da35-c897-4cad-8b49-299ab0aeb832-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/bd14a812-c3be-48b1-a6d0-eebcd9fd6eda-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/c9416a77-c418-4c61-9208-48278922a532-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/c9c2a40a-e13e-4293-856f-4c5f41e92a11-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ca190a13-f909-410b-897f-c4b2fd492c7a-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/cc768455-e203-4033-a893-8059399d41fb-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/d02ca448-0ac5-4f8a-9d8f-e8cfdfe99b60-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/d25c9607-7ad6-4d5d-a765-0a8f12f93500-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/d3189b03-54d2-47d6-bad2-0ea21ef29615-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/d4dc8283-1786-4040-ad16-787dc875e361-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/d592ee10-4525-4d42-9809-2d6218710cfc-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/de5f746d-76a7-492c-9414-4d2d4e9ec282-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/de648664-acd4-453d-aeb0-e879ca380489-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/de6f6ce5-8cbf-4056-aecf-b9019b0caae3-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/e1619824-80eb-4104-978f-af17e742ebfb-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/e2e47af1-af15-45ac-9957-78ea2260f543-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/e3080276-640f-4b2b-a4cd-4a4cfa4120fe-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/e4d2a253-e396-44c0-879c-cd84b3135617-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/e5ad7688-69d6-42a5-8a36-eef1120a4bf0-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ece3889d-1976-4362-88af-5efa3b9ea8c1-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ed190d98-9b50-4e6f-8315-2c4c9de06f61-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ee59dcb3-8800-4099-907d-a4c2a2352bd5-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/eff927e9-aad6-4a73-88bb-f8983d05baf1-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/f1c128c9-c7f1-453f-9595-2e4a39c73ef0-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/f31937e8-7191-4806-ba81-067b6ca552b2-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/fa4c90cd-8c0d-4c01-a9ed-5f5357a94a07-container.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/fe54e6a4-bba7-48a9-a6ed-d7dd6b408e2c-result.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/allure-results/ffad6943-7a26-422b-adb5-efaa1ecb4b05-result.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjctPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TypesWorkSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TypesWorkSidebarPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/ProjectTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/SettingsSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/SettingsSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/SettingsSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/SettingsSidebarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/SettingsSidebarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/SettingsSidebarTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/TypesWorkSidebarTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/TypesWorkSidebarTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/ProjctPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/base/BasePage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/base/BasePage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/SettingsSidebarPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/target/test-classes/ar/soft/modelPage/SettingsSidebarPage.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +136,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="main_20241026" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -128,205 +166,205 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "JUnit.ApiTest.executor": "Run",
-    "JUnit.ApiTest.restAssuredTest.executor": "Run",
-    "JUnit.AutorisaitionTest.AutorisationTest.executor": "Run",
-    "JUnit.AutorisaitionTest.executor": "Run",
-    "JUnit.AutorisaitionTest.jhgf.executor": "Run",
-    "JUnit.AutorisaitionTest.regCoogiTest.executor": "Run",
-    "JUnit.AutorisaitionTest.regEmailNegaTest.executor": "Run",
-    "JUnit.AutorisaitionTest.regNegaTest.executor": "Run",
-    "JUnit.AutorisaitionTest.regaTest.executor": "Run",
-    "JUnit.AutorisaitionTest.removePaswordTest.executor": "Run",
-    "JUnit.AutorisaitionTest.restorePasswordTest.executor": "Run",
-    "JUnit.BibliotekaTest.BibliotekaTest.executor": "Run",
-    "JUnit.DraftTest.passwordTest.executor": "Run",
-    "JUnit.LibraryTest.HrefPolitic.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListCreate.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListDelete.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListImport.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListRemove.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListRemovt.executor": "Run",
-    "JUnit.LibraryTest.libraryClick.executor": "Run",
-    "JUnit.LibraryTest.normativeDocDeleteTest.executor": "Run",
-    "JUnit.LogFileTest.cancelLogDelTest.executor": "Run",
-    "JUnit.LogFileTest.logDelTest.executor": "Run",
-    "JUnit.LogFileTest.logSerchTest.executor": "Run",
-    "JUnit.ProjectTest.HrefBot.executor": "Run",
-    "JUnit.ProjectTest.HrefPolitic.executor": "Run",
-    "JUnit.ProjectTest.HrefPoliticUser.executor": "Run",
-    "JUnit.ProjectTest.ProjectTest.executor": "Run",
-    "JUnit.ProjectTest.RegNegaTest.executor": "Run",
-    "JUnit.ProjectTest.RegasTest.executor": "Run",
-    "JUnit.ProjectTest.UserTestPodraydchic.executor": "Run",
-    "JUnit.ProjectTest.cancelCreateProgectTest.executor": "Run",
-    "JUnit.ProjectTest.createProgect.executor": "Run",
-    "JUnit.ProjectTest.executor": "Run",
-    "JUnit.ProjectTest.hrefBot.executor": "Run",
-    "JUnit.ProjectTest.hrefPolitic.executor": "Run",
-    "JUnit.ProjectTest.hrefPoliticUser.executor": "Run",
-    "JUnit.ProjectTest.poginacyaTest.executor": "Run",
-    "JUnit.ProjectTest.projectTest.executor": "Run",
-    "JUnit.ProjectTest.testHrefPolitiCopi.executor": "Run",
-    "JUnit.ProjectTest.userTestAdmin.executor": "Run",
-    "JUnit.RegaTest.RegasTest.executor": "Run",
-    "JUnit.RegaTest.autorisationTest.executor": "Run",
-    "JUnit.RegaTest.passwordTest.executor": "Run",
-    "JUnit.RegaTest.randomAutorisationTest.executor": "Run",
-    "JUnit.RegaTest.regNegaTest.executor": "Run",
-    "JUnit.UserTest.UserCreateAdmin.executor": "Run",
-    "JUnit.UserTest.UserCreateNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.UserCreatePodraydchicAdd.executor": "Run",
-    "JUnit.UserTest.UserInviteAdmin.executor": "Run",
-    "JUnit.UserTest.UserRemove.executor": "Run",
-    "JUnit.UserTest.UserSearchTest.executor": "Run",
-    "JUnit.UserTest.UserTestInspektor.executor": "Run",
-    "JUnit.UserTest.UserTestNabludately.executor": "Run",
-    "JUnit.UserTest.UserTestNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.UserTestPodraydchic.executor": "Run",
-    "JUnit.UserTest.executor": "Run",
-    "JUnit.UserTest.userCreaNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.userCreateAdmin.executor": "Run",
-    "JUnit.UserTest.userCreateAdminSearch.executor": "Run",
-    "JUnit.UserTest.userCreateDelete.executor": "Run",
-    "JUnit.UserTest.userCreateInspektor.executor": "Run",
-    "JUnit.UserTest.userCreateNabludately.executor": "Run",
-    "JUnit.UserTest.userCreateNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.userCreatePodraydchiAdd.executor": "Run",
-    "JUnit.UserTest.userCreatePodraydchic.executor": "Run",
-    "JUnit.UserTest.userCreatePodraydchicAdd.executor": "Run",
-    "JUnit.UserTest.userCreateRemove.executor": "Run",
-    "JUnit.UserTest.userInviteAdmin.executor": "Run",
-    "JUnit.UserTest.userInviteInspektor.executor": "Run",
-    "JUnit.UserTest.userInviteNabludately.executor": "Run",
-    "JUnit.UserTest.userInvitePodraydchic.executor": "Run",
-    "JUnit.UserTest.userSearchTest.executor": "Run",
-    "JUnit.UserTest.userTestAdmin.executor": "Run",
-    "JUnit.UserTest.userTestInspektor.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.ApiTest.httpTest.executor": "Run",
-    "TestNG.AutorisaitionTest.executor": "Run",
-    "TestNG.AutorisaitionTest.hrefPolitic.executor": "Run",
-    "TestNG.AutorisaitionTest.localizTest.executor": "Run",
-    "TestNG.AutorisaitionTest.randomAutorisationTest.executor": "Run",
-    "TestNG.AutorisaitionTest.regEmailNegaTest.executor": "Run",
-    "TestNG.AutorisaitionTest.regNegaTest.executor": "Run",
-    "TestNG.AutorisaitionTest.regaTest.executor": "Run",
-    "TestNG.AutorisaitionTest.removePasswordTest.executor": "Run",
-    "TestNG.AutorisaitionTest.restorePasswordTest.executor": "Run",
-    "TestNG.AutorisaitionTest.testHrefPolitiCopi.executor": "Run",
-    "TestNG.AutorisaitionTest.testRandomEmai.executor": "Run",
-    "TestNG.AutorisaitionTest.testRandomRega.executor": "Run",
-    "TestNG.AutorisaitionTest.testUserRole.executor": "Run",
-    "TestNG.DashboardsSidebarTest.cumulativeTest.executor": "Run",
-    "TestNG.DashboardsSidebarTest.dashboardsTest.executor": "Run",
-    "TestNG.DashboardsTest.cumulativeTest.executor": "Run",
-    "TestNG.DashboardsTest.dashboardsTest.executor": "Run",
-    "TestNG.InspectSidebarTest.createInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.executor": "Run",
-    "TestNG.InspectSidebarTest.renameInspect.executor": "Run",
-    "TestNG.LibraryTest.dashboardsTest.executor": "Run",
-    "TestNG.LibraryTest.libraryChecListCreate.executor": "Run",
-    "TestNG.LibraryTest.libraryChecListDelete.executor": "Run",
-    "TestNG.LibraryTest.libraryChecListImport.executor": "Run",
-    "TestNG.LibraryTest.libraryChecListRemove.executor": "Run",
-    "TestNG.LibraryTest.normativeDocDeleteTest.executor": "Run",
-    "TestNG.LogFileTest.cancelLogDelTest.executor": "Run",
-    "TestNG.LogFileTest.executor": "Run",
-    "TestNG.LogFileTest.hrefPolitic.executor": "Run",
-    "TestNG.LogFileTest.localizTest.executor": "Run",
-    "TestNG.LogFileTest.logDelTest.executor": "Run",
-    "TestNG.LogFileTest.logSearchTest.executor": "Run",
-    "TestNG.LogFileTest.logSerchTest.executor": "Run",
-    "TestNG.LogFileTest.logoTest.executor": "Run",
-    "TestNG.ProjectTest.ConstructorProgect.executor": "Run",
-    "TestNG.ProjectTest.RemoveProgect.executor": "Run",
-    "TestNG.ProjectTest.SidebarProgect.executor": "Run",
-    "TestNG.ProjectTest.cancelCreateProgectTest.executor": "Run",
-    "TestNG.ProjectTest.cancelCreateProjectTest.executor": "Run",
-    "TestNG.ProjectTest.createCancelProgect.executor": "Run",
-    "TestNG.ProjectTest.createProgect.executor": "Run",
-    "TestNG.ProjectTest.createProject.executor": "Run",
-    "TestNG.ProjectTest.executor": "Run",
-    "TestNG.ProjectTest.hrefPolitic.executor": "Run",
-    "TestNG.ProjectTest.openProject.executor": "Run",
-    "TestNG.ProjectTest.poginacyaTest.executor": "Run",
-    "TestNG.ProjectTest.removeProgect.executor": "Run",
-    "TestNG.ProjectTest.sidebarProgect.executor": "Run",
-    "TestNG.ProjectTest.testHrefPolitiCopi.executor": "Run",
-    "TestNG.RemarcSidebarTest.addRemarkTest.executor": "Run",
-    "TestNG.RemarcSidebarTest.executor": "Run",
-    "TestNG.RemarcSidebarTest.remarkTest.executor": "Run",
-    "TestNG.RemarcSidebarTest.КemarcTest.executor": "Run",
-    "TestNG.RemarcTest.КemarcTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.cancelDeleteProgectTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.cancelDeleteProjectTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.deleteProgectTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.removeProgectTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.removeProjectTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.settingsTest.executor": "Run",
-    "TestNG.SettingsTest.settingsTest.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.AddTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.CreateTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.addTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.deleteTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.executor": "Run",
-    "TestNG.UserJoiningRequestsTest.executor": "Run",
-    "TestNG.UserJoiningRequestsTest.requestAddUser.executor": "Run",
-    "TestNG.UserJoiningRequestsTest.requestUser.executor": "Run",
-    "TestNG.UserSidebarTest.addUserTest.executor": "Run",
-    "TestNG.UserSidebarTest.addUserToProjectTest.executor": "Run",
-    "TestNG.UserSidebarTest.btnCancelDeleteUserTest.executor": "Run",
-    "TestNG.UserSidebarTest.cancelDeleteUserFromProjectTest.executor": "Run",
-    "TestNG.UserSidebarTest.deleteTest.executor": "Run",
-    "TestNG.UserSidebarTest.deleteUserFromProjectTest.executor": "Run",
-    "TestNG.UserSidebarTest.deleteUserTest.executor": "Run",
-    "TestNG.UserSidebarTest.executor": "Run",
-    "TestNG.UserTest.elementPageTest.executor": "Run",
-    "TestNG.UserTest.executor": "Run",
-    "TestNG.UserTest.organisationSearchTest.executor": "Run",
-    "TestNG.UserTest.poginacyaTest.executor": "Run",
-    "TestNG.UserTest.requestUser.executor": "Run",
-    "TestNG.UserTest.testCheckPeople.executor": "Run",
-    "TestNG.UserTest.testHrefPolitiCopi.executor": "Run",
-    "TestNG.UserTest.userCancelDelete.executor": "Run",
-    "TestNG.UserTest.userCreaNabludatelyAdd.executor": "Run",
-    "TestNG.UserTest.userCreateAdmi.executor": "Run",
-    "TestNG.UserTest.userCreateAdmin.executor": "Run",
-    "TestNG.UserTest.userCreateAdminSearch.executor": "Run",
-    "TestNG.UserTest.userCreateDelete.executor": "Run",
-    "TestNG.UserTest.userCreateInspektor.executor": "Run",
-    "TestNG.UserTest.userCreateNabludately.executor": "Run",
-    "TestNG.UserTest.userCreateNabludatelyAdd.executor": "Run",
-    "TestNG.UserTest.userCreatePodraydchiAdd.executor": "Run",
-    "TestNG.UserTest.userCreatePodraydchic.executor": "Run",
-    "TestNG.UserTest.userCreatePodraydchicAdd.executor": "Run",
-    "TestNG.UserTest.userCreateRemove.executor": "Run",
-    "TestNG.UserTest.userInviteAdmin.executor": "Run",
-    "TestNG.UserTest.userInviteInspektor.executor": "Run",
-    "TestNG.UserTest.userInviteNabludately.executor": "Run",
-    "TestNG.UserTest.userInvitePodraydchic.executor": "Run",
-    "TestNG.UserTest.userSearchTest.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,elementPageTest and 9 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,hrefBot and 10 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 10 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 9 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,hrefPoliticUser and 10 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 10 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 9 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,testHrefPolitiCopi and 10 more.executor": "Run",
-    "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "main__20241026",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/javaProjects/work/черновики/ARW-stress-testing",
-    "settings.editor.selected.configurable": "settings.sync"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;JUnit.ApiTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ApiTest.restAssuredTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.AutorisationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.jhgf.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.regCoogiTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.regEmailNegaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.regNegaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.regaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.removePaswordTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.AutorisaitionTest.restorePasswordTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BibliotekaTest.BibliotekaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.DraftTest.passwordTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.HrefPolitic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryChecListCreate.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryChecListDelete.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryChecListImport.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryChecListRemove.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryChecListRemovt.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.libraryClick.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LibraryTest.normativeDocDeleteTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LogFileTest.cancelLogDelTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LogFileTest.logDelTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.LogFileTest.logSerchTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.HrefBot.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.HrefPolitic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.HrefPoliticUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.ProjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.RegNegaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.RegasTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.UserTestPodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.cancelCreateProgectTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.createProgect.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.hrefBot.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.hrefPolitic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.hrefPoliticUser.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.poginacyaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.projectTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.testHrefPolitiCopi.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ProjectTest.userTestAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RegaTest.RegasTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RegaTest.autorisationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RegaTest.passwordTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RegaTest.randomAutorisationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.RegaTest.regNegaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserCreateAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserCreateNabludatelyAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserCreatePodraydchicAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserInviteAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserRemove.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserSearchTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserTestInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserTestNabludately.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserTestNabludatelyAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.UserTestPodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreaNabludatelyAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateAdminSearch.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateDelete.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateNabludately.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateNabludatelyAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreatePodraydchiAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreatePodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreatePodraydchicAdd.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userCreateRemove.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userInviteAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userInviteInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userInviteNabludately.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userInvitePodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userSearchTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userTestAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserTest.userTestInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;TestNG.ApiTest.httpTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.hrefPolitic.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.localizTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.randomAutorisationTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.regEmailNegaTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.regNegaTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.regaTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.removePasswordTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.restorePasswordTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.testHrefPolitiCopi.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.testRandomEmai.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.testRandomRega.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.AutorisaitionTest.testUserRole.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.DashboardsSidebarTest.cumulativeTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.DashboardsSidebarTest.dashboardsTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.DashboardsTest.cumulativeTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.DashboardsTest.dashboardsTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.InspectSidebarTest.createInspect.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.InspectSidebarTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.InspectSidebarTest.renameInspect.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LibraryTest.dashboardsTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LibraryTest.libraryChecListCreate.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LibraryTest.libraryChecListDelete.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LibraryTest.libraryChecListImport.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LibraryTest.libraryChecListRemove.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LibraryTest.normativeDocDeleteTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LogFileTest.cancelLogDelTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LogFileTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LogFileTest.hrefPolitic.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LogFileTest.localizTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LogFileTest.logDelTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LogFileTest.logSearchTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LogFileTest.logSerchTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.LogFileTest.logoTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.ConstructorProgect.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.RemoveProgect.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.SidebarProgect.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.cancelCreateProgectTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.cancelCreateProjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.createCancelProgect.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.createProgect.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.createProject.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.hrefPolitic.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.openProject.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.poginacyaTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.removeProgect.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.sidebarProgect.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ProjectTest.testHrefPolitiCopi.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RemarcSidebarTest.addRemarkTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RemarcSidebarTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RemarcSidebarTest.remarkTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RemarcSidebarTest.КemarcTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.RemarcTest.КemarcTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SettingsSidebarTest.cancelDeleteProgectTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SettingsSidebarTest.cancelDeleteProjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SettingsSidebarTest.deleteProgectTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SettingsSidebarTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SettingsSidebarTest.removeProgectTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SettingsSidebarTest.removeProjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SettingsSidebarTest.settingsTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.SettingsTest.settingsTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TypesWorkSidebarTest.AddTypesWork.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TypesWorkSidebarTest.CreateTypesWork.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TypesWorkSidebarTest.addTypesWork.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TypesWorkSidebarTest.deleteTypesWork.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.TypesWorkSidebarTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserJoiningRequestsTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserJoiningRequestsTest.requestAddUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserJoiningRequestsTest.requestUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserSidebarTest.addUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserSidebarTest.addUserToProjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserSidebarTest.btnCancelDeleteUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserSidebarTest.cancelDeleteUserFromProjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserSidebarTest.deleteTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserSidebarTest.deleteUserFromProjectTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserSidebarTest.deleteUserTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserSidebarTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.elementPageTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.organisationSearchTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.poginacyaTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.requestUser.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.testCheckPeople.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.testHrefPolitiCopi.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCancelDelete.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCreaNabludatelyAdd.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCreateAdmi.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCreateAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCreateAdminSearch.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCreateDelete.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCreateInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCreateNabludately.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCreateNabludatelyAdd.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCreatePodraydchiAdd.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCreatePodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCreatePodraydchicAdd.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userCreateRemove.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userInviteAdmin.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userInviteInspektor.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userInviteNabludately.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userInvitePodraydchic.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.UserTest.userSearchTest.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ar.soft.AutorisaitionTest,elementPageTest and 9 more.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ar.soft.AutorisaitionTest,hrefBot and 10 more.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 10 more.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 9 more.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ar.soft.AutorisaitionTest,hrefPoliticUser and 10 more.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 10 more.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 9 more.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.ar.soft.AutorisaitionTest,testHrefPolitiCopi and 10 more.executor&quot;: &quot;Run&quot;,
+    &quot;TestNG.remarcTest.remarcTest.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/javaProjects/work/черновики/ARW-stress-testing&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.sync&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="ar.soft" />
@@ -337,8 +375,8 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TypesWorkSidebarTest.addTypesWork">
-    <configuration name="ProjectTest.cancelCreateProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.SettingsSidebarTest.removeProjectTest">
+    <configuration name="SettingsSidebarTest.cancelDeleteProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -347,8 +385,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="METHOD_NAME" value="cancelCreateProjectTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.SettingsSidebarTest" />
+      <option name="METHOD_NAME" value="cancelDeleteProjectTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -356,7 +394,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ProjectTest.createProject" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SettingsSidebarTest.deleteProgectTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -365,8 +403,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="METHOD_NAME" value="createProject" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.SettingsSidebarTest" />
+      <option name="METHOD_NAME" value="deleteProgectTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -374,7 +412,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypesWorkSidebarTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SettingsSidebarTest.removeProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -383,8 +421,9 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.SettingsSidebarTest" />
+      <option name="METHOD_NAME" value="removeProjectTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -429,11 +468,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TypesWorkSidebarTest.addTypesWork" />
-        <item itemvalue="TestNG.TypesWorkSidebarTest" />
+        <item itemvalue="TestNG.SettingsSidebarTest.removeProjectTest" />
+        <item itemvalue="TestNG.SettingsSidebarTest.deleteProgectTest" />
+        <item itemvalue="TestNG.SettingsSidebarTest.cancelDeleteProjectTest" />
         <item itemvalue="TestNG.TypesWorkSidebarTest.deleteTypesWork" />
-        <item itemvalue="TestNG.ProjectTest.cancelCreateProjectTest" />
-        <item itemvalue="TestNG.ProjectTest.createProject" />
+        <item itemvalue="TestNG.TypesWorkSidebarTest.addTypesWork" />
       </list>
     </recent_temporary>
   </component>
