@@ -12,27 +12,47 @@ public class AuthorizationPege extends BasePage {
         super(driver);
     }
 
-    @Name("кнопка Новый вид работ")
+    @Name("кнопка войти")
     public AuthorizationPege btnSubmit() {
         getDriver().findElement(By.xpath("//button[@type='submit']")).click();
 
         return this;
     }
 
-    @Name("кнопка ")
+    @Name("кнопка Продолжить")
+    public AuthorizationPege btnContinue() {
+        getDriver().findElement(By.xpath("//button[@type='submit'][contains(.,'Продолжить')]")).click();
+
+        return this;
+    }
+    @Name("кнопка профиль")
     public AuthorizationPege btnProfile() {
         getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_sb']")).click();
 
         return this;
     }
 
-    @Name("кнопка ")
+    @Name("выбрать профиль ")
     public AuthorizationPege selectProfile() {
         getDriver().findElement(By.xpath("//div[@class='ant-typography p_r Profile__item']")).click();
 
         return this;
     }
 
+    @Name("забыли пароль?")
+    public AuthorizationPege forgotYourPassword() {
+        getDriver().findElement(By.xpath("//div[@class='Login__restore']")).click();
+
+        return this;
+    }
+
+    @Name("Электронная почта")
+    public AuthorizationPege inputMailRestore(String mail) {
+//    public BasePage inputMail() {
+        getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys(mail);
+
+        return this;
+    }
 //    @Name("кнопка ")
 //    public AuthorizationPege roleProfile() {
 //        getDriver().findElement(By.xpath("//h3[@class='ant-typography h3_m']")).getText();
@@ -40,10 +60,18 @@ public class AuthorizationPege extends BasePage {
 //        return this;
 //    }
 
-    @Name("созданный вид р")
+    @Name("название профиля")
     public String roleProfile() {
         return getDriver().findElement(By.xpath("//h3[@class='ant-typography h3_m']")).getText();
     }
 
+    @Name("Мы отправили по адресу")
+    public String getEmailPas() {
+        return getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_m SendSuccessBlock__text'][contains(.,'Мы отправили по адресу')]")).getText();
+    }
 
+    @Name("GET_ERROR_TEXT")
+    public String getError() {
+        return getDriver().findElement(By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']")).getText();
+    }
 }
