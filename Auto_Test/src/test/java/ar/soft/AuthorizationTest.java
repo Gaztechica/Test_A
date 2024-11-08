@@ -20,7 +20,7 @@ public class AuthorizationTest extends BaseTest {
 
     @Test(priority = 1,
             description = "Авторизация под ролью владельца")
-    public void ownerAuthorizationTest () {
+    public void ownerAuthorizationTest() {
         driver.get(URL);
 
         String role = new AuthorizationPege(getDriver())
@@ -31,12 +31,12 @@ public class AuthorizationTest extends BaseTest {
                 .selectProfile()
                 .roleProfile();
 
-        Assert.assertEquals(role,"Владелец");
+        Assert.assertEquals(role, "Владелец");
     }
 
     @Test(priority = 2,
             description = "Авторизация под ролью admin")
-    public void adminAuthorizationTest () {
+    public void adminAuthorizationTest() {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
@@ -47,12 +47,12 @@ public class AuthorizationTest extends BaseTest {
                 .selectProfile()
                 .roleProfile();
 
-        Assert.assertEquals(roleAdmin,"Администратор проекта");
+        Assert.assertEquals(roleAdmin, "Администратор проекта");
     }
 
     @Test(priority = 3,
             description = "Авторизация под ролью Инспектор")
-    public void inspectorAuthorizationTest () {
+    public void inspectorAuthorizationTest() {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
@@ -63,12 +63,12 @@ public class AuthorizationTest extends BaseTest {
                 .selectProfile()
                 .roleProfile();
 
-        Assert.assertEquals(roleAdmin,"Инспектор");
+        Assert.assertEquals(roleAdmin, "Инспектор");
     }
 
     @Test(priority = 4,
             description = "Авторизация под ролью Подрядчик")
-    public void subcontractorAuthorizationTest () {
+    public void subcontractorAuthorizationTest() {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
@@ -79,12 +79,12 @@ public class AuthorizationTest extends BaseTest {
                 .selectProfile()
                 .roleProfile();
 
-        Assert.assertEquals(roleAdmin,"Подрядчик");
+        Assert.assertEquals(roleAdmin, "Подрядчик");
     }
 
     @Test(priority = 5,
             description = "Авторизация под ролью Наблюдатель")
-    public void observerAuthorizationTest () {
+    public void observerAuthorizationTest() {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
@@ -95,13 +95,13 @@ public class AuthorizationTest extends BaseTest {
                 .selectProfile()
                 .roleProfile();
 
-        Assert.assertEquals(roleAdmin,"Наблюдатель");
+        Assert.assertEquals(roleAdmin, "Наблюдатель");
     }
 
 
     @Test(priority = 6,
             description = "получить письмо для восстановления доступа")
-    public void restorePasswordTest () {
+    public void restorePasswordTest() {
         driver.get(URL);
 
         String getEmail = new AuthorizationPege(getDriver())
@@ -112,7 +112,7 @@ public class AuthorizationTest extends BaseTest {
                 .btnContinue()
                 .getEmailPas();
 
-        Assert.assertEquals(getEmail,"Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");
+        Assert.assertEquals(getEmail, "Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");
     }
 
     @Test(priority = 7,
@@ -126,7 +126,7 @@ public class AuthorizationTest extends BaseTest {
                 .btnSubmit()
                 .getError();
 
-        Assert.assertEquals(getError,"Неправильный логин или пароль");
+        Assert.assertEquals(getError, "Неправильный логин или пароль");
     }
 
     @DataProvider(name = "restoreEmail")
@@ -136,6 +136,7 @@ public class AuthorizationTest extends BaseTest {
                 {"cecily16432@lu1f.cse445.com"}
         };
     }
+
     @Test(priority = 8,
             description = "получить письмо для восстановления доступа", dataProvider = "restoreEmail")
     public void testRandomRega(String name) {
@@ -145,14 +146,15 @@ public class AuthorizationTest extends BaseTest {
         getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
         getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
 
-        Assert.assertEquals(getDriver().findElement(GET_PASSWORD).getText(),"Мы отправили по адресу " + name + " ссылку для восстановления доступа");
+        Assert.assertEquals(getDriver().findElement(GET_PASSWORD).getText(), "Мы отправили по адресу " + name + " ссылку для восстановления доступа");
     }
+
     @DataProvider(name = "randomEmail")
     public Object[][] randomEmail() {
         return new Object[][]{
                 {"rrrrrrrrrrrrrr@mail.yy"}, {"NNNNNNNNNN@mail.xx"}, {"22222222222@mail.xx"},
                 {"ыыыWEFCGhjjjlk@mail.xx"}, {"lllllllllly@mail.xx"},
-               {"!@#$%^&*()_+@mail.xx"}
+                {"!@#$%^&*()_+@mail.xx"}
         };
     }
 
@@ -182,7 +184,7 @@ public class AuthorizationTest extends BaseTest {
 
         String getError = driver.findElement(GET_ERROR_TEXT).getText();
 
-        Assert.assertEquals(getError,"Неправильный логин или пароль");
+        Assert.assertEquals(getError, "Неправильный логин или пароль");
 
     }
 
@@ -197,7 +199,7 @@ public class AuthorizationTest extends BaseTest {
                 .btnSubmit()
                 .getError();
 
-        Assert.assertEquals(getError,"Неправильный логин или пароль");
+        Assert.assertEquals(getError, "Неправильный логин или пароль");
     }
 
 
@@ -206,7 +208,7 @@ public class AuthorizationTest extends BaseTest {
 
     @Test(priority = 12,
             description = "Авторизоваться под ролью администратора, который не добавлен в проект")
-    public void notProjectsAdminTest () {
+    public void notProjectsAdminTest() {
         driver.get(URL);
 
         String notProjectsError = new AuthorizationPege(getDriver())
@@ -215,12 +217,12 @@ public class AuthorizationTest extends BaseTest {
                 .btnSubmit()
                 .notProjectsError();
 
-        Assert.assertEquals(notProjectsError,"Отсутствуют доступные проекты, обратитесь к Администратору проекта");
+        Assert.assertEquals(notProjectsError, "Отсутствуют доступные проекты, обратитесь к Администратору проекта");
     }
 
     @Test(priority = 13,
             description = "Авторизация с незаполненным полем почты")
-    public void notEmailTest () {
+    public void notEmailTest() {
         driver.get(URL);
 
         String notEmailError = new AuthorizationPege(getDriver())
@@ -229,10 +231,111 @@ public class AuthorizationTest extends BaseTest {
                 .btnSubmit()
                 .getEmailError();
 
-        Assert.assertEquals(notEmailError,"border-color: rgb(255, 0, 0);");
+        Assert.assertEquals(notEmailError, "border-color: rgb(255, 0, 0);");
 //        Поле “Электронная почта” подсвечено красной обводкой
 
     }
+
+    @Test(priority = 14,
+            description = "повторно получить письмо для восстановления доступа")
+    public void againRestorePasswordTest() throws InterruptedException {
+        driver.get(URL);
+
+        String getEmail = new AuthorizationPege(getDriver())
+                .inputMail(EMAIL)
+                .inputPassword("PASSWORD")
+                .forgotYourPassword()
+                .inputMailRestore(EMAIL)
+                .btnContinue()
+                .getEmailPas();
+
+        Assert.assertEquals(getEmail, "Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");
+        Thread.sleep(60000);
+        String againGetEmail = new AuthorizationPege(getDriver())
+                .againRestorePassword()
+                .againGetEmailPas();
+
+        Assert.assertEquals(againGetEmail, "Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");
+    }
+
+    @Test(priority = 15,
+            description = "Авторизация с незарегистрированной в приложении почтой")
+    public void notRegisteredEmailTest() {
+        driver.get(URL);
+
+        String getError = new AuthorizationPege(getDriver())
+                .inputMail("asfasfasww@yarkv.qm")
+                .inputPassword("qwerty123")
+                .btnSubmit()
+                .getError();
+
+        Assert.assertEquals(getError, "Неправильный логин или пароль");
+    }
+
+    @Test(priority = 16,
+            description = "Ввод некорректного значения email при восстановлении пароля")
+    public void badEmailTest() {
+        driver.get(URL);
+
+        String badEmailError = new AuthorizationPege(getDriver())
+                .inputMail(NEGA_EMAIL)
+                .inputPassword("PASSWORD")
+                .forgotYourPassword()
+                .inputMailRestore(NEGA_EMAIL)
+                .btnContinue()
+                .getEmailError();
+        String getRestoreEmailError = new AuthorizationPege(getDriver())
+                .getRestoreEmailError();
+
+        Assert.assertEquals(badEmailError, "border-color: rgb(255, 0, 0);");
+        Assert.assertEquals(getRestoreEmailError, "Пользователь не найден, попробуйте снова");
+    }
+
+    @Test(priority = 17,
+            description = "иконка ARMobile")
+    public void iconARMobileTest() {
+        driver.get(URL_REGISTRATION);
+
+        String iconRegistration = new AuthorizationPege(getDriver())
+                .iconRegistrationClick()
+                .getRegistrationText();
+
+        Assert.assertEquals(iconRegistration, "Войдите в аккаунт");
+    }
+
+    @Test(priority = 18,
+            description = "Ввод некорректного значения email при восстановлении пароля")
+    public void trialTextTest() {
+        driver.get(URL_REGISTRATION);
+
+        String trialText = new AuthorizationPege(getDriver())
+                .trialText();
+
+        Assert.assertEquals(trialText, "Попробуйте бесплатно в течении 7 дней");
+    }
+
+    @Test(priority = 19,
+            description = "Нажать ссылку “Загрузите в appstore”")
+    public void appstoreTest() {
+        driver.get(URL_REGISTRATION);
+
+        String trialText = new AuthorizationPege(getDriver())
+                .trialText();
+
+        Assert.assertEquals(trialText, "Попробуйте бесплатно в течении 7 дней");
+    }
+
+    @Test(priority = 20,
+            description = "Нажать ссылку “Загрузите на Google Play”")
+    public void GooglePlayTest() {
+        driver.get(URL_REGISTRATION);
+
+        String trialText = new AuthorizationPege(getDriver())
+                .trialText();
+
+        Assert.assertEquals(trialText, "Попробуйте бесплатно в течении 7 дней");
+    }
+
 
 //    @Test(priority = 17,
 //            description = "Авторизация с незаполненными полями логина и пароля")
@@ -251,7 +354,7 @@ public class AuthorizationTest extends BaseTest {
 
     @Test(priority = 18,
             description = "Значение “Пароль” отображается в поле ввода в скрытом виде")
-    public void passwordTest () {
+    public void passwordTest() {
         driver.get(URL);
 
         String Password = new AuthorizationPege(getDriver())
@@ -259,7 +362,7 @@ public class AuthorizationTest extends BaseTest {
                 .inputPassword(PASSWORD)
                 .passwordError();
 //         в поле “Пароль” Значение отображается в поле ввода в скрытом виде
-        Assert.assertEquals(Password,"");
+        Assert.assertEquals(Password, "");
     }
 
 //    добавить куки почты и вводить полученное письмо для замены пароля
@@ -273,7 +376,7 @@ public class AuthorizationTest extends BaseTest {
 //        String getError = driver.findElement(getErrorText).getText();
 //
 //        Assert.assertEquals(getError,"Неправильный логин или пароль");
-        //      ======  добавить проверку ===
+    //      ======  добавить проверку ===
 //    }
 
 
@@ -293,7 +396,6 @@ public class AuthorizationTest extends BaseTest {
 //    }
 
     //      ======  добавить Test ===============================
-
 
 
 //    ===================== смена языка ============================
