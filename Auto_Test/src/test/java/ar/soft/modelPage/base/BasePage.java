@@ -46,6 +46,27 @@ public class BasePage extends BaseModel {
         return this;
     }
 
+    @Name("иконка ARMobile")
+    public BasePage iconRegistrationClick() {
+        getDriver().findElement(By.xpath("//div[@class='AuthLayout__preview-logoBlock']")).click();
+
+        return this;
+    }
+
+    @Name("Нажать ссылку “Загрузите в appstore”")
+    public BasePage appstoreClick() {
+        getDriver().findElement(By.xpath("(//div[@class='DownloadAppLink__content'])[3]")).click();
+
+        return this;
+    }
+
+    @Name("Нажать ссылку “Загрузите на Google Play”")
+    public BasePage googlePlayClick() {
+        getDriver().findElement(By.xpath("(//div[@class='DownloadAppLink__content'])[4]")).click();
+
+        return this;
+    }
+
     @Name("Пароль")
     public AuthorizationPege inputPassword(String password) {
 //    public AuthorizationPege inputPassword() {
@@ -97,6 +118,17 @@ public class BasePage extends BaseModel {
 
         return new ProjectPage(getDriver());
     }
+
+    @Name("Пользователь не найден, попробуйте снова")
+    public String getRegistrationText() {
+        return getDriver().findElement(By.xpath("//h3[@class='ant-typography h3_sb Login__title-text']")).getText();
+    }
+
+    @Name("Попробуйте бесплатно в течении 7 дней")
+    public String trialText() {
+        return getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_m Registration__title-subtitleText']")).getText();
+    }
+
 
 //    protected WebDriver getDriver() {
 //        return driver;

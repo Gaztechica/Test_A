@@ -29,6 +29,7 @@ public abstract class BaseTest {
 //    }
 //    public static final String URL = "http://23.105.246.201:5000/login";                 //stage
     public static final String URL = "http://23.105.246.172:5000/login";               // test
+    public static final String URL_REGISTRATION = "http://23.105.246.172:5000/registration";               // test
 //    public static final String URL_XRBP = "http://31.129.103.215:3000/login";
 
     public static final String INPUT_PASSWORD = "//input[@class='ant-input']";
@@ -54,7 +55,7 @@ public abstract class BaseTest {
     @BeforeMethod
     protected void beforeMethod(Method method) {
 //        для пакетного прогона тестов
-       driver = new ChromeDriver();
+//       driver = new ChromeDriver();
         getDriver().get(URL);
         getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);

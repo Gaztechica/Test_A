@@ -25,6 +25,14 @@ public class AuthorizationPege extends BasePage {
 
         return this;
     }
+
+    @Name("кнопка Отправить еще раз")
+    public AuthorizationPege againRestorePassword() {
+        getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_sb RestorePassword__bottom-textThree activeLink']")).click();
+
+        return this;
+    }
+
     @Name("кнопка профиль")
     public AuthorizationPege btnProfile() {
         getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_sb']")).click();
@@ -70,6 +78,11 @@ public class AuthorizationPege extends BasePage {
         return getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_m SendSuccessBlock__text'][contains(.,'Мы отправили по адресу')]")).getText();
     }
 
+    @Name("Мы повторно отправили по адресу")
+    public String againGetEmailPas() {
+        return getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_m SendSuccessBlock__text'][contains(.,'Мы отправили по адресу')]")).getText();
+    }
+
     @Name("GET_ERROR_TEXT")
     public String getError() {
         return getDriver().findElement(By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']")).getText();
@@ -78,6 +91,11 @@ public class AuthorizationPege extends BasePage {
     @Name("GET_ERROR_TEXT")
     public String getEmailError() {
         return getDriver().findElement(By.xpath("//input[@style='border-color: rgb(255, 0, 0);']")).getAttribute("style");
+    }
+
+    @Name("Пользователь не найден, попробуйте снова")
+    public String getRestoreEmailError() {
+        return getDriver().findElement(By.xpath("//div[@class='ant-typography p_r RestorePassword__form-userNotFound']")).getText();
     }
 
     @Name("администратора, который не добавлен в проект")
