@@ -1,5 +1,6 @@
 package ar.soft.element;
 
+import ar.soft.driver.TestBase;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.slf4j.Logger;
@@ -7,7 +8,9 @@ import org.slf4j.LoggerFactory;
 
 import java.util.List;
 
-public class MethodT {
+import static ar.soft.driver.WebDriverSetup.getDriverInstance;
+
+public class MethodT extends TestBase {
 
     private static final Logger log = LoggerFactory.getLogger(MethodT.class);
 

@@ -8,6 +8,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Настройки запуска вебдрайвера
+ */
 public abstract class WebDriverSetup {
 
     private static final Logger log = LoggerFactory.getLogger(WebDriverSetup.class);
