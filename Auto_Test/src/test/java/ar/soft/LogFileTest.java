@@ -42,7 +42,7 @@ public class LogFileTest extends BaseTest {
                 .searchLogFile()
                 .logNameText();
 
-        Assert.assertEquals(logSearch, "d8q2s@fthcapital.com");
+        Assert.assertEquals(logSearch, EMAIL);
     }
 
 // провeрка добавления записи на страницу, по времени

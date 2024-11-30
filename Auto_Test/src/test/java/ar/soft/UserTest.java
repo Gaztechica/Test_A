@@ -3,6 +3,7 @@ package ar.soft;
 import ar.soft.modelPage.UserPage;
 import ar.soft.runner.BaseTest;
 //import org.junit.Test;
+import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -343,6 +344,8 @@ public class UserTest extends BaseTest {
                 .searchClick()
                 .searchInputSent("Леха")
 
+
+
 //      ===========================асерт ==================================
                 .searchInputDelete()
                 .searchInputSent("Игнат")
@@ -354,9 +357,15 @@ public class UserTest extends BaseTest {
                 .searchInputSent("Наблюдатель")
 
                 .searchInputDelete()
-                .searchInputSent("ye2vtcmvg@mail.ru")
+                .searchInputSent("ye2vtcmvg@mail.ru");
 
-                .searchInputDelete();
+        Assert.assertEquals("Леха", "Леха");
+        Assert.assertEquals("Игнат", "Игнат");
+        Assert.assertEquals("Kirov", "Kirov");
+        Assert.assertEquals("Наблюдатель", "Наблюдатель");
+        Assert.assertEquals("Наблюдатель", "Наблюдатель");
+
+//                .searchInputDelete();
 
     }
 

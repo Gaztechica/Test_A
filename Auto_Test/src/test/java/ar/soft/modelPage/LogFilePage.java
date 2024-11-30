@@ -62,7 +62,7 @@ public class LogFilePage extends BasePage {
     public LogFilePage searchLogFile() {
         searchLogFile.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN,
                 Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN,
-                Keys.ARROW_DOWN, Keys.ENTER);
+                Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
 
         return this;
     }
