@@ -11,6 +11,8 @@ import org.openqa.selenium.*;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import java.util.ArrayList;
+
 public class AuthorizationTest extends BaseTest {
 
     private final By GET_ERROR_TEXT = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
@@ -40,7 +42,8 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
-                .inputMail("batrayilto@gufum.com")
+//                .inputMail("batrayilto@gufum.com")     //test
+                .inputMail("armtset18@bk.ru")
                 .inputPassword(PASSWORD)
                 .btnSubmit()
                 .btnProfile()
@@ -56,7 +59,8 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
-                .inputMail("cil2e@mailtub.com")
+//                .inputMail("cil2e@mailtub.com")     //test
+                .inputMail("testlinka@rambler.ru")
                 .inputPassword(PASSWORD)
                 .btnSubmit()
                 .btnProfile()
@@ -72,7 +76,8 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
-                .inputMail("d8q2s@fthcapital.com")
+                .inputMail("d8q2s@fthcapital.com")          //test
+//                .inputMail("aeroportsk1@mail.ru")
                 .inputPassword(PASSWORD)
                 .btnSubmit()
                 .btnProfile()
@@ -88,7 +93,8 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
-                .inputMail("cecily16432@lu1f.cse445.com")
+                .inputMail("cecily16432@lu1f.cse445.com")               //test
+//                .inputMail("dzyuban@spgr.ru")
                 .inputPassword(PASSWORD)
                 .btnSubmit()
                 .btnProfile()
@@ -112,7 +118,8 @@ public class AuthorizationTest extends BaseTest {
                 .btnContinue()
                 .getEmailPas();
 
-        Assert.assertEquals(getEmail, "Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");
+//        Assert.assertEquals(getEmail, "Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");
+        Assert.assertEquals(getEmail, "Мы отправили по адресу " + EMAIL + " ссылку для восстановления доступа");
     }
 
     @Test(priority = 7,
@@ -132,8 +139,10 @@ public class AuthorizationTest extends BaseTest {
     @DataProvider(name = "restoreEmail")
     public Object[][] restoreEmail() {
         return new Object[][]{
-                {"batrayilto@gufum.com"}, {"cil2e@mailtub.com"}, {"d8q2s@fthcapital.com"},
-                {"cecily16432@lu1f.cse445.com"}
+//                {"batrayilto@gufum.com"}, {"cil2e@mailtub.com"},                        //test
+//                {"d8q2s@fthcapital.com"}, {"cecily16432@lu1f.cse445.com"},               //test
+                {"jartestaw@bk.ru"}, {"armtset18@bk.ru"},                                //stage
+                {"testlinka@rambler.ru"}, {"dzyuban@spgr.ru"}                            //stage
         };
     }
 
@@ -212,7 +221,8 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String notProjectsError = new AuthorizationPege(getDriver())
-                .inputMail("yirtemedru@gufum.com")
+//                .inputMail("yirtemedru@gufum.com")
+                .inputMail("degnusamlo@gufum.com")              //stage
                 .inputPassword(PASSWORD)
                 .btnSubmit()
                 .notProjectsError();
@@ -249,13 +259,15 @@ public class AuthorizationTest extends BaseTest {
                 .btnContinue()
                 .getEmailPas();
 
-        Assert.assertEquals(getEmail, "Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");
+//        Assert.assertEquals(getEmail, "Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");            //test
+        Assert.assertEquals(getEmail, "Мы отправили по адресу " + EMAIL + " ссылку для восстановления доступа");          //stage
         Thread.sleep(60000);
         String againGetEmail = new AuthorizationPege(getDriver())
                 .againRestorePassword()
                 .againGetEmailPas();
 
-        Assert.assertEquals(againGetEmail, "Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");
+//        Assert.assertEquals(againGetEmail, "Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");           //test
+        Assert.assertEquals(againGetEmail, "Мы отправили по адресу " + EMAIL + " ссылку для восстановления доступа");             //stage
     }
 
     @Test(priority = 15,
@@ -314,16 +326,23 @@ public class AuthorizationTest extends BaseTest {
         Assert.assertEquals(trialText, "Попробуйте бесплатно в течении 7 дней");
     }
 
-    @Test(priority = 19,
-            description = "Нажать ссылку “Загрузите в appstore”")
-    public void appstoreTest() {
-        driver.get(URL_REGISTRATION);
-
-        String trialText = new AuthorizationPege(getDriver())
-                .trialText();
-
-        Assert.assertEquals(trialText, "Попробуйте бесплатно в течении 7 дней");
-    }
+//    @Test(priority = 19,
+//            description = "Нажать ссылку “Загрузите в appstore”")
+//    public void appstoreTest() {
+//        driver.get(URL_REGISTRATION);
+//
+//        String trialText = new AuthorizationPege(getDriver())
+//                .trialText();
+//
+//            driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
+//
+//            ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+//            driver.switchTo().window(newTab.get(1));
+//
+//            Assert.assertEquals("Политика обработки персональных данных", driver.findElement(GET_POLITIC).getText());
+//
+//        Assert.assertEquals(trialText, "Попробуйте бесплатно в течении 7 дней");
+//    }
 
     @Test(priority = 20,
             description = "Нажать ссылку “Загрузите на Google Play”")

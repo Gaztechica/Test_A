@@ -112,7 +112,7 @@ public class ProjectTest extends BaseTest {
         org.testng.Assert.assertEquals(proj, "11AAНовый проект");
     }
 
-    //     редактирование/удаление
+    //     редактирование/удаление\цвет кнопки \ цвет строки при наведении \
 
 //    driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
 //        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();

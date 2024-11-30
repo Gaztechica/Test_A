@@ -27,8 +27,9 @@ public abstract class BaseTest {
 //    public void Armw() {
 //    final String URL = "http://23.105.246.172:5000/login";
 //    }
-//    public static final String URL = "http://23.105.246.201:5000/login";                 //stage
-    public static final String URL = "http://23.105.246.172:5000/login";               // test
+    public static final String URL = "http://23.105.246.201:5000/login";                 //stage
+//    public static final String URL_REGISTRATION = "http://23.105.246.201:5000/registration";                 //stage
+//    public static final String URL = "http://23.105.246.172:5000/login";               // test
     public static final String URL_REGISTRATION = "http://23.105.246.172:5000/registration";               // test
 //    public static final String URL_XRBP = "http://31.129.103.215:3000/login";
 
@@ -36,6 +37,7 @@ public abstract class BaseTest {
     public static final String INPUT_EMAIL = "//input[@class='ant-input primaryInput  not-entered']";
     public static final String BTN_PASSWORD = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']";
     public static final String EMAIL = "f.ff.1980@list.ru";                          // test
+//    public static final String EMAIL = "jartestaw@bk.ru";                          // stage
     public static final String NOT_EMAIL = "";
 //    public static final String EMAIL = "akhilgov@spgr.ru";                          // stage
     public static final String PASSWORD = "012345678";                                 // test
@@ -70,7 +72,7 @@ public abstract class BaseTest {
 
     @AfterMethod
     protected void afterMethod(Method method) {
-        //        для пакетноготпрогона тестов
+        //        для пакетного прогона тестов
 
 //        driver.quit();
     }
@@ -180,7 +182,7 @@ public abstract class BaseTest {
 //        driver.findElement(By.xpath("//div[@class='Logo__container']")).click();
 //        Assert.assertEquals("Проекты", driver.findElement(LOGO).getText());
 //    }
-
+//
 //    @Test(priority = 2,
 //            description = "пагинация")
 //    public void poginacyaTest() {
@@ -204,10 +206,10 @@ public abstract class BaseTest {
 //        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='20']")).click();
 //        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'10')]")).click();
 //    }
-
-
-    // ================================== ссылки =====================================================
-
+//
+//
+//    // ================================== ссылки =====================================================
+//
 //    @Test(priority = 4,
 //            description = "Политика обработки персональных данных")
 //    public void hrefPolitic() {
@@ -223,7 +225,7 @@ public abstract class BaseTest {
 ////            description = "Политика обработки персональных данных")  2 вариант
 //    public void testHrefPolitiCopi() {
 //
-////        getWait15().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"))).click();
+//        getWait15().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"))).click();
 //        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
 //
 //        Set<String> handles = getDriver().getWindowHandles();
