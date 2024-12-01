@@ -15,10 +15,16 @@ public class SettingsSidebarTest extends BaseTest {
        String messege = new SettingsSidebarPage(getDriver())
                 .project()
                 .settingsSidebarClick()
-                .openProjectSettings()
                 .inputNameProjectSettings()
-                .btnCancelSettingsClick()
-                .inputNameStritProjectSettings()
+                .inputCityProjectSettings()
+                .inputCountryProjectSettings()
+                .inputBuildingProjectSettings()
+                .inputCodeProjectSettings()
+                .inputOfficeProjectSettings()
+                .inputStreetProjectSettings()
+                .inputEndDateProjectSettings()
+                .inputStartDateProjectSettings()
+                .inputPostalCodeProjectSettings()
                 .btnlSaveSettingsClick()
                 .getMessageAddNoticeText();
 
@@ -32,7 +38,7 @@ public class SettingsSidebarTest extends BaseTest {
                 .settingsSidebarClick()
                 .openProjectSettings()
                 .inputNameProjectSettings()
-                .inputNameStritProjectSettings()
+                .inputStreetProjectSettings()
                 .btnDeleteSettingsClick()
                 .btnCancelDeleteSettingsClick();
     }
