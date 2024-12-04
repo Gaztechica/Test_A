@@ -48,7 +48,6 @@ public class TypesWorkSidebarTest extends BaseTest {
 //        String delWork = new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
-
                 .btnRemoveTypesWorkClick()
                 .dropDeleteTypesWorkClick()
                 .btnCancelDeleteTypesWorkClick();
@@ -62,15 +61,12 @@ public class TypesWorkSidebarTest extends BaseTest {
         String newNameWork = new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
-
                 .btnRemoveTypesWorkClick()
                 .dropRemoveTypesWorkClick()
-
                 .clerNameTypesWorkClick()
                 .inputNewNameTypesWorkClick()
                 .unitRemoveMeasurementClick()
                 .btnSubmitTypesWorkClick()
-
                 .getNewWorkText();
 
         Assert.assertEquals(newNameWork, "владимир Remove Name");
@@ -83,7 +79,6 @@ public class TypesWorkSidebarTest extends BaseTest {
 //        String delWork = new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
-
                 .btnRemoveTypesWorkClick()
                 .dropDeleteTypesWorkClick()
                 .btnSetDeleteTypesWorkClick();
@@ -98,7 +93,6 @@ public class TypesWorkSidebarTest extends BaseTest {
 //        String delWork = new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
-
                 .btnRemovePRMTypesWorkClick()
                 .dropDeleteTypesWorkClick()
                 .btnSetDeleteTypesWorkClick();

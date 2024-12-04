@@ -136,7 +136,6 @@ public class ProjectTest extends BaseTest {
 //        simpl.selectByValue("two");
 //        String newValue = selectWithoutMultiple.getAttribute("value");
 
-
 //        elemPage.sendKeys(Keys.ARROW_DOWN);
 //        elemPage.sendKeys(Keys.ARROW_DOWN, Keys.ENTER);
 //        elemPage.sendKeys(Keys.ENTER);
@@ -180,7 +179,6 @@ public class ProjectTest extends BaseTest {
 //
 //         textBoxCountry.sendKeys("РФ");
 //
-//
 //         WebElement textBoxStreet = driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_street\"]"));
 //
 //         textBoxStreet.sendKeys("Победы");
@@ -196,14 +194,6 @@ public class ProjectTest extends BaseTest {
 //         Thread.sleep(5000);
 //    }
 
-
-//=============================================================
-
-
-//    ========================================   =======================================
-//
-
-//
 
 
 }

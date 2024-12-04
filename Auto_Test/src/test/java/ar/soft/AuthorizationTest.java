@@ -371,7 +371,7 @@ public class AuthorizationTest extends BaseTest {
 //        Assert.assertEquals(inputMailError,  "border-color: rgb(255, 0, 0);");
 //    }
 
-    @Test(priority = 18,
+    @Test(priority = 21,
             description = "Значение “Пароль” отображается в поле ввода в скрытом виде")
     public void passwordTest() {
         driver.get(URL);
