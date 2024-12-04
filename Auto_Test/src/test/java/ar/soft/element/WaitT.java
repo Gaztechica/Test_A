@@ -102,7 +102,7 @@ public class WaitT {
         try {
             Thread.sleep(ms);
         } catch (InterruptedException  e) {
-            ActionT.log.error("Явно указанное ожидание завершилось аварийно!");
+//            ActionT.log.error("Явно указанное ожидание завершилось аварийно!");
         }
     }
 }

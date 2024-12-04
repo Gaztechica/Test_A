@@ -1,7 +1,7 @@
 package ar.soft.driver;
 
 import ar.soft.browsers.Browsers;
-import ar.soft.element.ActionT;
+//import ar.soft.element.ActionT;
 import ar.soft.element.JavaScriptT;
 import ar.soft.element.WaitT;
 import io.qameta.allure.Step;
@@ -59,7 +59,7 @@ abstract public class TestBase {
         log.info("Запуск тестов на локальной машине!");
 
         WaitT.initWait(DURATION_TIMEOUT, DURATION_SLEEP);
-        ActionT.initActions();
+//        ActionT.initActions();
         JavaScriptT.initJS();
     }
 

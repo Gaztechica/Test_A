@@ -8,7 +8,8 @@ import org.testng.annotations.Test;
 public class UserSidebarTest extends BaseTest {
 
 // удаление, отмена add, выбор организации выбор организации в адд поиск в адд
-    @Test
+@Test(priority = 1,
+        description = "создание пользователя с ролью наблюдатель и новой организацией")
     public void addUserToProjectTest() {
         new UserSidebarPage(getDriver())
                 .project()

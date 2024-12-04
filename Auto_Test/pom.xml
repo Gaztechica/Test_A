@@ -89,7 +89,34 @@
             <version>5.3.1</version>
             <scope>test</scope>
         </dependency>
+<!--        <dependency>-->
+<!--            &lt;!&ndash; плагин для запуска тестов-->
+<!--            на версии старше 7.4.0 не работает прикрепрелие скриншотов в allure &ndash;&gt;-->
+<!--            <groupId>org.testng</groupId>-->
+<!--            <artifactId>testng</artifactId>-->
+<!--&lt;!&ndash;            <version>${testng.version}</version>&ndash;&gt;-->
+<!--        </dependency>-->
 
+<!--        <dependency>-->
+<!--            &lt;!&ndash; работы с браузером chrome (отсутствует в selenium-support) &ndash;&gt;-->
+<!--            <groupId>org.seleniumhq.selenium</groupId>-->
+<!--            <artifactId>selenium-chrome-driver</artifactId>-->
+<!--&lt;!&ndash;            <version>${selenium.version}</version>&ndash;&gt;-->
+<!--        </dependency>-->
+
+        <dependency>
+            <!-- плагин для отчетов allure  -->
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-testng</artifactId>
+<!--            <version>${allure-testng.version}</version>-->
+        </dependency>
+
+<!--        <dependency>-->
+<!--            &lt;!&ndash; плагин для использования ассертов  &ndash;&gt;-->
+<!--            <groupId>org.assertj</groupId>-->
+<!--            <artifactId>assertj-core</artifactId>-->
+<!--&lt;!&ndash;            <version>${assertj-core}</version>&ndash;&gt;-->
+<!--        </dependency>-->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>

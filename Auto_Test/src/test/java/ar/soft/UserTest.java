@@ -364,6 +364,7 @@ public class UserTest extends BaseTest {
         Assert.assertEquals("Kirov", "Kirov");
         Assert.assertEquals("Наблюдатель", "Наблюдатель");
         Assert.assertEquals("Наблюдатель", "Наблюдатель");
+//        AssertionT.Element.elementPresentOnPageAndContainText(iCardFilePage.textBoxClose, "Леха");
 
 //                .searchInputDelete();
 
