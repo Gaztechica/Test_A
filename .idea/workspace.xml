@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="allure">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AuthorizationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,7 +35,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main_3" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -281,6 +281,7 @@
     "TestNG.UserTest.userInviteNabludately.executor": "Run",
     "TestNG.UserTest.userInvitePodraydchic.executor": "Run",
     "TestNG.UserTest.userSearchTest.executor": "Run",
+    "TestNG.ar.soft.AuthorizationTest and 11 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,elementPageTest and 9 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,hrefBot and 10 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 10 more.executor": "Run",
@@ -289,8 +290,10 @@
     "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 10 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 9 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,testHrefPolitiCopi and 10 more.executor": "Run",
+    "TestNG.ar.soft.InspectSidebarTest and 9 more.executor": "Coverage",
+    "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "__11",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/resources",
     "settings.editor.selected.configurable": "settings.sync"
@@ -307,8 +310,8 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TypesWorkSidebarTest">
-    <configuration name="ProjectTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ar.soft.InspectSidebarTest and 9 more">
+    <configuration name="AuthorizationTest.adminAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -317,42 +320,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TypesWorkSidebarTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TypesWorkSidebarTest.createTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
-      <option name="METHOD_NAME" value="createTypesWork" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
+      <option name="METHOD_NAME" value="adminAuthorizationTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -360,24 +329,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserSidebarTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserSidebarTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTest.userCreateAdmin" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -387,20 +339,79 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="METHOD_NAME" value="userCreateAdmin" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ar.soft.AuthorizationTest and 11 more" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <option name="TEST_OBJECT" value="PATTERN" />
+      <properties />
+      <listeners />
+      <patterns>
+        <pattern testClass="ar.soft.AuthorizationTest" />
+        <pattern testClass="ar.soft.DashboardsSidebarTest" />
+        <pattern testClass="ar.soft.InspectSidebarTest" />
+        <pattern testClass="ar.soft.LibraryTest" />
+        <pattern testClass="ar.soft.LogFileTest" />
+        <pattern testClass="ar.soft.ProjectTest" />
+        <pattern testClass="ar.soft.RemarcSidebarTest" />
+        <pattern testClass="ar.soft.SettingsSidebarTest" />
+        <pattern testClass="ar.soft.TypesWorkSidebarTest" />
+        <pattern testClass="ar.soft.UserJoiningRequestsTest" />
+        <pattern testClass="ar.soft.UserSidebarTest" />
+        <pattern testClass="ar.soft.UserTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ar.soft.InspectSidebarTest and 9 more" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <option name="TEST_OBJECT" value="PATTERN" />
+      <properties />
+      <listeners />
+      <patterns>
+        <pattern testClass="ar.soft.InspectSidebarTest" />
+        <pattern testClass="ar.soft.LibraryTest" />
+        <pattern testClass="ar.soft.LogFileTest" />
+        <pattern testClass="ar.soft.ProjectTest" />
+        <pattern testClass="ar.soft.RemarcSidebarTest" />
+        <pattern testClass="ar.soft.SettingsSidebarTest" />
+        <pattern testClass="ar.soft.TypesWorkSidebarTest" />
+        <pattern testClass="ar.soft.UserJoiningRequestsTest" />
+        <pattern testClass="ar.soft.UserSidebarTest" />
+        <pattern testClass="ar.soft.UserTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ar.soft.UserJoiningRequestsTest and 2 more" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <option name="TEST_OBJECT" value="PATTERN" />
+      <properties />
+      <listeners />
+      <patterns>
+        <pattern testClass="ar.soft.UserJoiningRequestsTest" />
+        <pattern testClass="ar.soft.UserSidebarTest" />
+        <pattern testClass="ar.soft.UserTest" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.TypesWorkSidebarTest" />
-        <item itemvalue="TestNG.TypesWorkSidebarTest.createTypesWork" />
-        <item itemvalue="TestNG.ProjectTest" />
-        <item itemvalue="TestNG.UserSidebarTest" />
-        <item itemvalue="TestNG.UserTest" />
+        <item itemvalue="TestNG.ar.soft.InspectSidebarTest and 9 more" />
+        <item itemvalue="TestNG.ar.soft.UserJoiningRequestsTest and 2 more" />
+        <item itemvalue="TestNG.UserTest.userCreateAdmin" />
+        <item itemvalue="TestNG.ar.soft.AuthorizationTest and 11 more" />
+        <item itemvalue="TestNG.AuthorizationTest.adminAuthorizationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -419,14 +430,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00062" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1712919783130</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1712919783130</updated>
     </task>
     <task id="LOCAL-00063" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -812,7 +815,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733339963175</updated>
     </task>
-    <option name="localTasksCounter" value="111" />
+    <task id="LOCAL-00111" summary="allure">
+      <option name="closed" value="true" />
+      <created>1733341765749</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1733341765749</updated>
+    </task>
+    <option name="localTasksCounter" value="112" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

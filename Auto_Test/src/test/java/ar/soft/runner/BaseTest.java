@@ -57,7 +57,7 @@ public abstract class BaseTest {
     @BeforeMethod
     protected void beforeMethod(Method method) {
 //        для пакетного прогона тестов
-//       driver = new ChromeDriver();
+       driver = new ChromeDriver();
         getDriver().get(URL);
         getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
@@ -74,7 +74,7 @@ public abstract class BaseTest {
     protected void afterMethod(Method method) {
         //        для пакетного прогона тестов
 
-//        driver.quit();
+        driver.quit();
     }
 
     protected WebDriver getDriver() {

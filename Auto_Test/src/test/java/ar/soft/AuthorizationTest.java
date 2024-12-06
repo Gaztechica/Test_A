@@ -42,8 +42,8 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
-//                .inputMail("batrayilto@gufum.com")     //test
-                .inputMail("armtset18@bk.ru")
+                .inputMail("batrayilto@gufum.com")     //test
+//                .inputMail("armtset18@bk.ru")
                 .inputPassword(PASSWORD)
                 .btnSubmit()
                 .btnProfile()
@@ -59,8 +59,8 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
-//                .inputMail("cil2e@mailtub.com")     //test
-                .inputMail("testlinka@rambler.ru")
+                .inputMail("cil2e@mailtub.com")     //test
+//                .inputMail("testlinka@rambler.ru")
                 .inputPassword(PASSWORD)
                 .btnSubmit()
                 .btnProfile()
