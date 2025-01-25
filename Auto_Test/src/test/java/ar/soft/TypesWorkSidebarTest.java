@@ -2,6 +2,9 @@ package ar.soft;
 
 import ar.soft.modelPage.TypesWorkSidebarPage;
 import ar.soft.runner.BaseTest;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -42,7 +45,7 @@ public class TypesWorkSidebarTest extends BaseTest {
 //    удалить редактиров поиск при добавление
 
     @Test(priority = 3,
-            description = "удалить вид работ")
+            description = "отменить удалить вид работ")
     public void cancelDeleteTypesWork() {
        new TypesWorkSidebarPage(getDriver())
 //        String delWork = new TypesWorkSidebarPage(getDriver())
@@ -92,9 +95,14 @@ public class TypesWorkSidebarTest extends BaseTest {
         new TypesWorkSidebarPage(getDriver())
 //        String delWork = new TypesWorkSidebarPage(getDriver())
                 .project()
-                .typesWorkSidebarClick()
-                .btnRemovePRMTypesWorkClick()
-                .dropDeleteTypesWorkClick()
+                .typesWorkSidebarClick();
+//                .btnRemovePRMTypesWorkClick();
+//        actions.contextClick(btnElement).perform();
+        new Actions(getDriver()).contextClick((WebElement) By.xpath("//div[@class='ant-dropdown-trigger'][contains(., '1')]")).perform();
+
+//        new Actions(driver).contextClick(driver.findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., '1')]"));
+        new TypesWorkSidebarPage(getDriver())
+                .dropDeletePKMTypesWorkClick()
                 .btnSetDeleteTypesWorkClick();
 
 //        Assert.assertEquals(delWork, "владимир");

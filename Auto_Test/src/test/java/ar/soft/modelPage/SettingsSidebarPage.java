@@ -19,7 +19,7 @@ public class SettingsSidebarPage extends BasePage {
 
     public SettingsSidebarPage inputNameProjectSettings() {
         getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).sendKeys(Keys.CONTROL + "a" + Keys.DELETE);
-        getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).sendKeys( "1Новый проект");
+        getDriver().findElement(By.xpath("//input[@id='EditProjectForm_name']")).sendKeys( "11AAНовый проект");
 
         return this;
     }

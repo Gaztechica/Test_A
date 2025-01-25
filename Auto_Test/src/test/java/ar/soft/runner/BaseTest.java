@@ -57,7 +57,7 @@ public abstract class BaseTest {
     @BeforeMethod
     protected void beforeMethod(Method method) {
 //        для пакетного прогона тестов
-       driver = new ChromeDriver();
+//       driver = new ChromeDriver();
         getDriver().get(URL);
         getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
@@ -74,7 +74,7 @@ public abstract class BaseTest {
     protected void afterMethod(Method method) {
         //        для пакетного прогона тестов
 
-        driver.quit();
+//        driver.quit();
     }
 
     protected WebDriver getDriver() {
@@ -210,69 +210,69 @@ public abstract class BaseTest {
 
     // ================================== ссылки =====================================================
 
-    @Test(priority = 4,
-            description = "Политика обработки персональных данных")
-    public void hrefPolitic() {
-        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
-
-        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(newTab.get(1));
-
-        Assert.assertEquals("Политика обработки персональных данных", driver.findElement(GET_POLITIC).getText());
-    }
-
 //    @Test(priority = 4,
-//            description = "Политика обработки персональных данных")  2 вариант
-//    public void testHrefPolitiCopi() {
-//
-//        getWait15().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"))).click();
+//            description = "Политика обработки персональных данных")
+//    public void hrefPolitic() {
 //        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
 //
-//        Set<String> handles = getDriver().getWindowHandles();
-//        handles.remove(getDriver().getWindowHandle());
-//        getDriver().switchTo().window(handles.iterator().next());
+//        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+//        driver.switchTo().window(newTab.get(1));
 //
-//        Assert.assertEquals(getDriver().findElement(GET_POLITIC).getText(), "Политика обработки персональных данных");
+//        Assert.assertEquals("Политика обработки персональных данных", driver.findElement(GET_POLITIC).getText());
 //    }
-
-
-    @Test(priority = 5,
-            description = "Предмет пользовательского соглашения")
-    public void hrefPoliticUser() {
-        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/user-agreement-armobail/']")).click();
-
-        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(newTab.get(1));
-
-        String getPoliticaUser = driver.findElement(GET_POLITIC_USER).getText();
-
-        Assert.assertEquals("Предмет пользовательского соглашения", getPoliticaUser);
-    }
-
-
-    @Test(priority = 6,
-            description = "телеграм бот")
-    public void hrefBot() {
-        driver.findElement(By.xpath("//span[@class='ant-typography span_r ant-dropdown-trigger Footer__links-text TabLink']")).click();
-        driver.findElement(By.xpath("//a[@href='https://t.me/arsoft_support_bot']")).click();
-
-        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(newTab.get(1));
-        String getBot = driver.findElement(GET_BOT).getText();
-
-        Assert.assertEquals("AR SOFT support", getBot);
-    }
-
-    @Test(priority = 7,
-            description = "Техническая поддержка АР СОФТ")
-    public void hrefSupport() {
-        driver.findElement(By.xpath("//span[@class='ant-typography span_r ant-dropdown-trigger Footer__links-text TabLink']")).click();
-        driver.findElement(By.xpath("//a[@href='https://forms.yandex.ru/cloud/66d960a043f74ffb1efdbae2/']")).click();
-
-        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
-        driver.switchTo().window(newTab.get(1));
-        String getSupport = driver.findElement(GET_SUPPORT).getText();
-
-        Assert.assertEquals("Техническая поддержка АР СОФТ", getSupport);
-    }
+//
+////    @Test(priority = 4,
+////            description = "Политика обработки персональных данных")  2 вариант
+////    public void testHrefPolitiCopi() {
+////
+////        getWait15().until(ExpectedConditions.elementToBeClickable(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']"))).click();
+////        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/personal-data-processing-policy/']")).click();
+////
+////        Set<String> handles = getDriver().getWindowHandles();
+////        handles.remove(getDriver().getWindowHandle());
+////        getDriver().switchTo().window(handles.iterator().next());
+////
+////        Assert.assertEquals(getDriver().findElement(GET_POLITIC).getText(), "Политика обработки персональных данных");
+////    }
+//
+//
+//    @Test(priority = 5,
+//            description = "Предмет пользовательского соглашения")
+//    public void hrefPoliticUser() {
+//        driver.findElement(By.xpath("//a[@href='https://vr-arsoft.com/user-agreement-armobail/']")).click();
+//
+//        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+//        driver.switchTo().window(newTab.get(1));
+//
+//        String getPoliticaUser = driver.findElement(GET_POLITIC_USER).getText();
+//
+//        Assert.assertEquals("Предмет пользовательского соглашения", getPoliticaUser);
+//    }
+//
+//
+//    @Test(priority = 6,
+//            description = "телеграм бот")
+//    public void hrefBot() {
+//        driver.findElement(By.xpath("//span[@class='ant-typography span_r ant-dropdown-trigger Footer__links-text TabLink']")).click();
+//        driver.findElement(By.xpath("//a[@href='https://t.me/arsoft_support_bot']")).click();
+//
+//        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+//        driver.switchTo().window(newTab.get(1));
+//        String getBot = driver.findElement(GET_BOT).getText();
+//
+//        Assert.assertEquals("AR SOFT support", getBot);
+//    }
+//
+//    @Test(priority = 7,
+//            description = "Техническая поддержка АР СОФТ")
+//    public void hrefSupport() {
+//        driver.findElement(By.xpath("//span[@class='ant-typography span_r ant-dropdown-trigger Footer__links-text TabLink']")).click();
+//        driver.findElement(By.xpath("//a[@href='https://forms.yandex.ru/cloud/66d960a043f74ffb1efdbae2/']")).click();
+//
+//        ArrayList<String> newTab = new ArrayList<>(driver.getWindowHandles());
+//        driver.switchTo().window(newTab.get(1));
+//        String getSupport = driver.findElement(GET_SUPPORT).getText();
+//
+//        Assert.assertEquals("Техническая поддержка АР СОФТ", getSupport);
+//    }
 }

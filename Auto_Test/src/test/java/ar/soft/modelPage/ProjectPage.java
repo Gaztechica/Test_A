@@ -16,13 +16,25 @@ public class ProjectPage extends BasePage {
         super(driver);
     }
 
-    @Name("кнопка создать Проект")
-    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
-    private WebElement btnCreateProject;
+//    @Name("кнопка создать Проект")
+//    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
+//    private WebElement btnCreateProject;
+//
+//    @Name("кнопка создать Проект")
+//    public ProjectPage btnCreateProject() {
+//        btnCreateProject.click();
+//        return this;
+//    }
 
     @Name("кнопка создать Проект")
     public ProjectPage btnCreateProject() {
-        btnCreateProject.click();
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+        return this;
+    }
+
+    @Name("logo")
+    public ProjectPage logoProject() {
+        getDriver().findElement(By.xpath("//*[@class='Logo']")).click();
         return this;
     }
 

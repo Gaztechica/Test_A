@@ -5,6 +5,8 @@ import jdk.jfr.Name;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class TypesWorkSidebarPage extends BasePage {
 
@@ -12,9 +14,9 @@ public class TypesWorkSidebarPage extends BasePage {
         super(driver);
     }
 
-    @Name("кнопка Новый вид работ")
+    @Name("кнопка создать")
     public TypesWorkSidebarPage btnCreateTypesWorkClick() {
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")).click();
 
         return this;
     }
@@ -28,13 +30,25 @@ public class TypesWorkSidebarPage extends BasePage {
 
     @Name("кнопка редактировать PKM вид работ")
     public TypesWorkSidebarPage btnRemovePRMTypesWorkClick() {
-        getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger']")).click();
+        getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., '1')]")).click();
+//        actions.contextClick(btnElement).perform();
+        Actions actions = new Actions(getDriver());
 
+        WebElement btnElement = getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., '1')]"));
+
+        actions.contextClick(btnElement).perform();
         return this;
     }
     @Name("drop удалить")
     public TypesWorkSidebarPage dropDeleteTypesWorkClick() {
         getDriver().findElement(By.xpath("//div[@class='ant-dropdown Dropdown undefined ant-dropdown-placement-leftTop ']//div[contains(.,'Удалить')]")).click();
+
+        return this;
+    }
+
+    @Name("drop PKM удалить")
+    public TypesWorkSidebarPage dropDeletePKMTypesWorkClick() {
+        getDriver().findElement(By.xpath("//*[@class='ant-typography p_r'][contains(.,'Удалить')]")).click();
 
         return this;
     }
@@ -102,7 +116,7 @@ public class TypesWorkSidebarPage extends BasePage {
 
     @Name("кнопка добавить вид работ в проект")
     public TypesWorkSidebarPage btnAddTypesWorkClick() {
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")).click();
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
 
         return this;
     }
@@ -125,7 +139,7 @@ public class TypesWorkSidebarPage extends BasePage {
 
     @Name("ввод в поиск вид работ")
     public TypesWorkSidebarPage searchWorkText() {
-        getDriver().findElement(By.xpath("//input[@class='ant-input']")).sendKeys("владимир");
+        getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).sendKeys("владимир");
         return this;
     }
 }
