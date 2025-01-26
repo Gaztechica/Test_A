@@ -6,8 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="allure">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AuthorizationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/DraftTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/cucumber/DraftTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ProjectTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -222,7 +223,10 @@
     "TestNG.ProjectTest.openProject.executor": "Run",
     "TestNG.ProjectTest.poginacyaTest.executor": "Run",
     "TestNG.ProjectTest.removeProgect.executor": "Run",
+    "TestNG.ProjectTest.removeProject.executor": "Run",
+    "TestNG.ProjectTest.searcherProject.executor": "Run",
     "TestNG.ProjectTest.sidebarProgect.executor": "Run",
+    "TestNG.ProjectTest.sidebarProject.executor": "Run",
     "TestNG.ProjectTest.testHrefPolitiCopi.executor": "Run",
     "TestNG.RemarcSidebarTest.addRemarkTest.executor": "Run",
     "TestNG.RemarcSidebarTest.executor": "Run",
@@ -240,6 +244,7 @@
     "TestNG.TypesWorkSidebarTest.AddTypesWork.executor": "Run",
     "TestNG.TypesWorkSidebarTest.CreateTypesWork.executor": "Run",
     "TestNG.TypesWorkSidebarTest.addTypesWork.executor": "Run",
+    "TestNG.TypesWorkSidebarTest.cancelDeleteTypesWork.executor": "Run",
     "TestNG.TypesWorkSidebarTest.createTypesWork.executor": "Run",
     "TestNG.TypesWorkSidebarTest.deletePKMTypesWork.executor": "Run",
     "TestNG.TypesWorkSidebarTest.deleteTypesWork.executor": "Run",
@@ -290,7 +295,9 @@
     "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 10 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 9 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,testHrefPolitiCopi and 10 more.executor": "Run",
-    "TestNG.ar.soft.InspectSidebarTest and 9 more.executor": "Coverage",
+    "TestNG.ar.soft.InspectSidebarTest and 9 more.executor": "Run",
+    "TestNG.ar.soft.LogFileTest and 1 more.executor": "Run",
+    "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
     "git-widget-placeholder": "__11",
@@ -309,9 +316,12 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test" />
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\cucumber" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.ar.soft.InspectSidebarTest and 9 more">
-    <configuration name="AuthorizationTest.adminAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.ProjectTest.searcherProject">
+    <configuration name="ProjectTest.searcherProject" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -320,8 +330,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
-      <option name="METHOD_NAME" value="adminAuthorizationTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
+      <option name="METHOD_NAME" value="searcherProject" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -329,7 +339,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTest.userCreateAdmin" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TypesWorkSidebarTest.cancelDeleteTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -338,8 +348,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.UserTest" />
-      <option name="METHOD_NAME" value="userCreateAdmin" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
+      <option name="METHOD_NAME" value="cancelDeleteTypesWork" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -347,71 +357,67 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ar.soft.AuthorizationTest and 11 more" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TypesWorkSidebarTest.deletePKMTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
-      <option name="TEST_OBJECT" value="PATTERN" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
+      <option name="METHOD_NAME" value="deletePKMTypesWork" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
-      <patterns>
-        <pattern testClass="ar.soft.AuthorizationTest" />
-        <pattern testClass="ar.soft.DashboardsSidebarTest" />
-        <pattern testClass="ar.soft.InspectSidebarTest" />
-        <pattern testClass="ar.soft.LibraryTest" />
-        <pattern testClass="ar.soft.LogFileTest" />
-        <pattern testClass="ar.soft.ProjectTest" />
-        <pattern testClass="ar.soft.RemarcSidebarTest" />
-        <pattern testClass="ar.soft.SettingsSidebarTest" />
-        <pattern testClass="ar.soft.TypesWorkSidebarTest" />
-        <pattern testClass="ar.soft.UserJoiningRequestsTest" />
-        <pattern testClass="ar.soft.UserSidebarTest" />
-        <pattern testClass="ar.soft.UserTest" />
-      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ar.soft.InspectSidebarTest and 9 more" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TypesWorkSidebarTest.deleteTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
-      <option name="TEST_OBJECT" value="PATTERN" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
+      <option name="METHOD_NAME" value="deleteTypesWork" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
-      <patterns>
-        <pattern testClass="ar.soft.InspectSidebarTest" />
-        <pattern testClass="ar.soft.LibraryTest" />
-        <pattern testClass="ar.soft.LogFileTest" />
-        <pattern testClass="ar.soft.ProjectTest" />
-        <pattern testClass="ar.soft.RemarcSidebarTest" />
-        <pattern testClass="ar.soft.SettingsSidebarTest" />
-        <pattern testClass="ar.soft.TypesWorkSidebarTest" />
-        <pattern testClass="ar.soft.UserJoiningRequestsTest" />
-        <pattern testClass="ar.soft.UserSidebarTest" />
-        <pattern testClass="ar.soft.UserTest" />
-      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ar.soft.UserJoiningRequestsTest and 2 more" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="TypesWorkSidebarTest.removeTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
-      <option name="TEST_OBJECT" value="PATTERN" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
+      <option name="METHOD_NAME" value="removeTypesWork" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
-      <patterns>
-        <pattern testClass="ar.soft.UserJoiningRequestsTest" />
-        <pattern testClass="ar.soft.UserSidebarTest" />
-        <pattern testClass="ar.soft.UserTest" />
-      </patterns>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ar.soft.InspectSidebarTest and 9 more" />
-        <item itemvalue="TestNG.ar.soft.UserJoiningRequestsTest and 2 more" />
-        <item itemvalue="TestNG.UserTest.userCreateAdmin" />
-        <item itemvalue="TestNG.ar.soft.AuthorizationTest and 11 more" />
-        <item itemvalue="TestNG.AuthorizationTest.adminAuthorizationTest" />
+        <item itemvalue="TestNG.ProjectTest.searcherProject" />
+        <item itemvalue="TestNG.TypesWorkSidebarTest.deletePKMTypesWork" />
+        <item itemvalue="TestNG.TypesWorkSidebarTest.deleteTypesWork" />
+        <item itemvalue="TestNG.TypesWorkSidebarTest.removeTypesWork" />
+        <item itemvalue="TestNG.TypesWorkSidebarTest.cancelDeleteTypesWork" />
       </list>
     </recent_temporary>
   </component>
@@ -430,14 +436,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1712919867606</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1712919867606</updated>
     </task>
     <task id="LOCAL-00064" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -823,7 +821,15 @@
       <option name="project" value="LOCAL" />
       <updated>1733341765749</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="allure">
+      <option name="closed" value="true" />
+      <created>1737816276170</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1737816276170</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
