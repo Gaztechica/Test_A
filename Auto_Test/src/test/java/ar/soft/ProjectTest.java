@@ -15,6 +15,7 @@ public class ProjectTest extends BaseTest {
             description = "Проект - создание")
     public void createProject() {
         String newProgectName = new ProjectPage(driver)
+                .logoProject()
                 .btnCreateProject()
                 .inputNameProject()
                 .inputCityProject()
@@ -32,10 +33,12 @@ public class ProjectTest extends BaseTest {
         Assert.assertEquals("Проект успешно создан", newProgectName);
     }
 
-    @Test(priority = 2,
+    @Test(//retryAnalyzer = RetryAnalyzer.class,
+            priority = 2,
             description = "Проект - отмена создания")
     public void cancelCreateProjectTest() {
         new ProjectPage(driver)
+                .logoProject()
                 .btnCreateProject()
                 .inputNameProject()
                 .inputCityProject()
@@ -57,6 +60,7 @@ public class ProjectTest extends BaseTest {
             description = "Проект - создание")
     public void sidebarProject() {
         new ProjectPage(driver)
+                .logoProject()
                 .btnCreateProject();
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("11AAНовый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
@@ -112,6 +116,17 @@ public class ProjectTest extends BaseTest {
         org.testng.Assert.assertEquals(proj, "11AAНовый проект");
     }
 
+    @Test(priority = 6,
+            description = "Проект - поиск проекта")
+    public void searcherProject() {
+        String projl = new ProjectPage(getDriver())
+                .logoProject()
+                .searchProject()
+                .inputSearchNameProject()
+                .searchProjectText();
+
+        Assert.assertEquals(projl, "админ");
+    }
     //     редактирование/удаление\цвет кнопки \ цвет строки при наведении \
 
 //    driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();

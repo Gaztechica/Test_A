@@ -16,19 +16,43 @@ public class ProjectPage extends BasePage {
         super(driver);
     }
 
-    @Name("кнопка создать Проект")
-    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
-    private WebElement btnCreateProject;
+//    @Name("кнопка создать Проект")
+//    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
+//    private WebElement btnCreateProject;
+//
+//    @Name("кнопка создать Проект")
+//    public ProjectPage btnCreateProject() {
+//        btnCreateProject.click();
+//        return this;
+//    }
 
     @Name("кнопка создать Проект")
     public ProjectPage btnCreateProject() {
-        btnCreateProject.click();
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+        return this;
+    }
+
+    @Name("logo")
+    public ProjectPage logoProject() {
+        getDriver().findElement(By.xpath("//*[@class='Logo']")).click();
+        return this;
+    }
+
+    @Name("кнопка поиска")
+    public ProjectPage searchProject() {
+        getDriver().findElement(By.xpath("//div[@class='Checklists__extraButtonChecklict-search']")).click();
         return this;
     }
 
     @Name("название Проекта")
     public ProjectPage inputNameProject() {
         getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("11AAНовый проект");
+        return this;
+    }
+
+    @Name("Поле ввода названия Проекта")
+    public ProjectPage inputSearchNameProject() {
+        getDriver().findElement(By.xpath("//*[@class='ant-input']")).sendKeys("админ");
         return this;
     }
 
@@ -89,6 +113,11 @@ public class ProjectPage extends BasePage {
     @Name("название Проекта - в сайтбаре")
     public String sidebarProjectText() {
         return getDriver().findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_m']")).getText();
+    }
+
+    @Name("название Проекта - ")
+    public String searchProjectText() {
+        return getDriver().findElement(By.xpath("//*[contains(@class, 'ant-typography-ellipsis-single-line p_r')][contains(., 'админ')]")).getText();
     }
 
     @Name("уведомление - Проект успешно создан")

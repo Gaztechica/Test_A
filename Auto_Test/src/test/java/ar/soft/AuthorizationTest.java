@@ -6,6 +6,8 @@ import ar.soft.modelPage.base.BasePage;
 import ar.soft.runner.BaseTest;
 //import org.junit.Assert;
 //import org.junit.Test;
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import org.jetbrains.annotations.NotNull;
 import org.openqa.selenium.*;
 import org.testng.Assert;
@@ -20,6 +22,8 @@ public class AuthorizationTest extends BaseTest {
     private final By GET_PASSWORD = By.xpath("//h2[@class='ant-typography h2_m SendSuccessBlock__text'][contains(.,'Мы отправили по адресу')]");
     public static final String NEGA_EMAIL = "yyyyyyyyyyyyyy@mail.ru";
 
+    @Story("Проверка заполнения ключа при выборе значения EnumFormat из выпадающего списка")
+    @Description("Проверка заполнения ключа при выборе значения EnumFormat из выпадающего списка")
     @Test(priority = 1,
             description = "Авторизация под ролью владельца")
     public void ownerAuthorizationTest() {
@@ -61,6 +65,7 @@ public class AuthorizationTest extends BaseTest {
         String roleAdmin = new AuthorizationPege(getDriver())
                 .inputMail("cil2e@mailtub.com")     //test
 //                .inputMail("testlinka@rambler.ru")
+//                .inputMail("e4lya@belgianairways.com")
                 .inputPassword(PASSWORD)
                 .btnSubmit()
                 .btnProfile()
@@ -77,7 +82,8 @@ public class AuthorizationTest extends BaseTest {
 
         String roleAdmin = new AuthorizationPege(getDriver())
                 .inputMail("d8q2s@fthcapital.com")          //test
-//                .inputMail("aeroportsk1@mail.ru")
+//                .inputMail("armtset9@bk.ru")
+//                .inputMail("hrpup@rustyload.com")
                 .inputPassword(PASSWORD)
                 .btnSubmit()
                 .btnProfile()
@@ -94,7 +100,7 @@ public class AuthorizationTest extends BaseTest {
 
         String roleAdmin = new AuthorizationPege(getDriver())
                 .inputMail("cecily16432@lu1f.cse445.com")               //test
-//                .inputMail("dzyuban@spgr.ru")
+//                .inputMail("armtset52@bk.ru")
                 .inputPassword(PASSWORD)
                 .btnSubmit()
                 .btnProfile()
