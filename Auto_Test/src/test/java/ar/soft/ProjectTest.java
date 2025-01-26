@@ -116,6 +116,17 @@ public class ProjectTest extends BaseTest {
         org.testng.Assert.assertEquals(proj, "11AAНовый проект");
     }
 
+    @Test(priority = 6,
+            description = "Проект - поиск проекта")
+    public void searcherProject() {
+        String projl = new ProjectPage(getDriver())
+                .logoProject()
+                .searchProject()
+                .inputSearchNameProject()
+                .searchProjectText();
+
+        Assert.assertEquals(projl, "админ");
+    }
     //     редактирование/удаление\цвет кнопки \ цвет строки при наведении \
 
 //    driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
