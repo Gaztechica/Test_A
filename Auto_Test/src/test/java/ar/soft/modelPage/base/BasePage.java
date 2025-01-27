@@ -84,6 +84,13 @@ public class BasePage extends BaseModel {
         return new InspectSidebarPage(getDriver());
     }
 
+    @Name("открыть Чек-листы")
+    public ChecklistsSidebarPage ChecklistsClick() {
+        getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Чек-листы')]")).click();
+
+        return new ChecklistsSidebarPage(getDriver());
+    }
+
     @Name("открыть Виды работ")
     public TypesWorkSidebarPage typesWorkSidebarClick() {
         getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Виды работ')]")).click();
