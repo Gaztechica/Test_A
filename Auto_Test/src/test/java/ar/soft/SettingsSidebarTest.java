@@ -11,7 +11,7 @@ public class SettingsSidebarTest extends BaseTest {
 
     @Test(priority = 1,
             description = "изменить проект")
-    public void removeProjectTest() {
+    public void removeProjectTest() throws InterruptedException {
        String messege = new SettingsSidebarPage(getDriver())
                 .project()
                 .settingsSidebarClick()

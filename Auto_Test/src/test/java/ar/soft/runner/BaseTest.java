@@ -1,6 +1,7 @@
 package ar.soft.runner;
 
 //import arSoft.runner.FilterForTest.FilterForTests;
+import ar.soft.modelPage.AuthorizationPege;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
 import org.openqa.selenium.*;
@@ -54,15 +55,15 @@ public abstract class BaseTest {
 
     public WebDriver driver = new ChromeDriver();
 
-    @BeforeMethod
-    protected void beforeMethod(Method method) {
-//        для пакетного прогона тестов
-//       driver = new ChromeDriver();
-        getDriver().get(URL);
-        getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
-        getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-        getDriver().manage().window().setSize(new Dimension(1920,1080));
-    }
+//    @BeforeMethod
+//    protected void beforeMethod(Method method) {
+////        для пакетного прогона тестов
+////       driver = new ChromeDriver();
+//        getDriver().get(URL);
+//        getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+//        getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+//        getDriver().manage().window().setSize(new Dimension(1920,1080));
+//    }
 
 //    public void log() {
 //        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
@@ -73,7 +74,6 @@ public abstract class BaseTest {
     @AfterMethod
     protected void afterMethod(Method method) {
         //        для пакетного прогона тестов
-
 //        driver.quit();
     }
 
@@ -119,7 +119,8 @@ public abstract class BaseTest {
 
     @BeforeMethod
     public void initDriver() {
-//        driver = new ChromeDriver();
+        driver = new ChromeDriver();                    // для пакетного прогона тестов
+
         getDriver().get(URL);
         getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
@@ -128,6 +129,11 @@ public abstract class BaseTest {
         getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
         getDriver().findElement(By.xpath(CHECKBOX)).click();
         getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
+        new AuthorizationPege(getDriver())
+                .inputMail(EMAIL)
+                .inputPassword(PASSWORD)
+                .btnCheckbox()
+                .btnSubmit();
 //        driver.quit();
 //         ===================== смена языка ===================
 //        driver.findElement(By.xpath("//h2[@class='ant-typography h2_sb']")).click();

@@ -27,7 +27,7 @@ public class LogFileTest extends BaseTest {
 
     @Test(priority = 2,
             description = "Лог файл - удаление")
-    public void logDelTest() {
+    public void logDelTest() throws InterruptedException {
         new LogFilePage(driver)
                 .btnLogFile()
                 .iconDeleteLogFile()

@@ -20,13 +20,14 @@ public class LogFilePage extends BasePage {
 //    @FindBy(xpath = "//img[@src='/static/media/Basket.8774715cc0eccb962b78054dc111a9a8.svg']")
     private WebElement iconDeleteLogFile;
 
-    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']//span")
     private WebElement btnCanselDeleteLogFile;
 
-    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']//span")
     private WebElement btnDeleteLogFile;
 
-    @FindBy(xpath = "//input[@id='rc_select_3']")
+//    @FindBy(xpath = "//input[@id='rc_select_3']")
+    @FindBy(xpath = "//input[@class='ant-select-selection-search-input']")
     private WebElement searchLogFile;
 
 //    @FindBy(xpath = "")).getText();
@@ -53,7 +54,8 @@ public class LogFilePage extends BasePage {
         return this;
     }
 
-    public LogFilePage btnDeleteLogFile() {
+    public LogFilePage btnDeleteLogFile() throws InterruptedException {
+        Thread.sleep(100);
         btnDeleteLogFile.click();
 
         return this;
@@ -68,7 +70,7 @@ public class LogFilePage extends BasePage {
     }
 
     public String logNameText() {
-        return getDriver().findElement(By.xpath("(//td[@class='ant-table-cell'])[3]//div")).getText();
+        return getDriver().findElement(By.xpath("//*[@data-testid='Text'][contains(., 'f.ff.1980@list.ru')]")).getText();
     }
 
 //    public LogFilePage logName() {

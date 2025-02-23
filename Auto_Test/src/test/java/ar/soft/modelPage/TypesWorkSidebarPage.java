@@ -61,7 +61,8 @@ public class TypesWorkSidebarPage extends BasePage {
     }
 
     @Name("кнопка отменить удалить вид работ")
-    public TypesWorkSidebarPage btnCancelDeleteTypesWorkClick() {
+    public TypesWorkSidebarPage btnCancelDeleteTypesWorkClick() throws InterruptedException {
+        Thread.sleep(100);
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']/span[contains(.,'Отменить')]")).click();
 
         return this;
@@ -122,11 +123,11 @@ public class TypesWorkSidebarPage extends BasePage {
     }
     @Name("чек бокс вид работ")
     public TypesWorkSidebarPage btnCheckboxTypesWorkClick() {
-        getDriver().findElement(By.xpath("(//div[@id='CheckboxComponent-check'])[2]")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-table-tbody']/*[contains(.,'владимир')]/.//*[@id='CheckboxComponent']")).click();
 
         return this;
     }
-    @Name("")
+    @Name("кнопка добавить")
     public TypesWorkSidebarPage btnAddWorkClick() {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
 
@@ -134,11 +135,12 @@ public class TypesWorkSidebarPage extends BasePage {
     }
     @Name("созданный вид работ")
     public String getNewWorkText() {
-        return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])[2]")).getText();
+        return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])")).getText();
     }
 
     @Name("ввод в поиск вид работ")
     public TypesWorkSidebarPage searchWorkText() {
+        getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).click();
         getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).sendKeys("владимир");
         return this;
     }

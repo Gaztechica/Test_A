@@ -116,7 +116,8 @@ public class SettingsSidebarPage extends BasePage {
         return this;
     }
 
-    public String getMessageAddNoticeText() {
+    public String getMessageAddNoticeText() throws InterruptedException {
+        Thread.sleep(100);
         return getDriver().findElement(By.xpath("//div[@class='ant-message-notice-content']//span[contains(.,'Проект успешно изменен')] | //div[@class='ant-message-notice-content'][contains(.,'Проект успешно изменен')]")).getText();
 //        return getDriver().findElement(By.xpath("//div[@class='ant-message-notice-content'][contains(.,'Проект успешно изменен')]")).getText();
     }
