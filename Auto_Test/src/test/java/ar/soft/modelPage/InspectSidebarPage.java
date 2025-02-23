@@ -1,12 +1,21 @@
 package ar.soft.modelPage;
 
+import ar.soft.element.WaitT;
 import ar.soft.modelPage.base.BasePage;
+import io.qameta.allure.Step;
 import jdk.jfr.Name;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.testng.Assert;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import static ar.soft.driver.WebDriverSetup.getDriverInstance;
 
 public class InspectSidebarPage extends BasePage {
 
@@ -60,5 +69,21 @@ public class InspectSidebarPage extends BasePage {
     public InspectSidebarPage createInspectClick() {
         createInspectClick.click();
         return this;
+    }
+
+    @Step("Проверка выпадающего списка на эквивалентность эталону")
+    public static void checkList2(List<String> elementsList) {
+        WaitT.littleWait(1000); //проскакивает пустая строка
+        WaitT.visibilityOfElementLocated(By.xpath("//button[@class='ant-btn ant-btn-default iconButton big colorPrimary FilterUsers__filter-btn']"));
+        WaitT.visibilityOfElementLocated(By.xpath("//div[contains(@class, 'ScrollbarsCustom')]//li//p"));
+        String listLocator = "//div[contains(@class, 'ScrollbarsCustom')]//li//p";
+        List<WebElement> listMonthW = getDriverInstance().findElements(By.xpath(listLocator));
+        List<String> listMonthS = new ArrayList<>();
+        for (WebElement webElement : listMonthW) {
+            Actions act = new Actions(getDriverInstance());
+            act.moveToElement(webElement).perform();
+            listMonthS.add(webElement.getText());
+        }
+        Assert.assertEquals(elementsList, listMonthS, "Выпадающий список эквивалентен эталону");
     }
 }

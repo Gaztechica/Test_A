@@ -46,7 +46,7 @@ public class TypesWorkSidebarTest extends BaseTest {
 
     @Test(priority = 3,
             description = "отменить удалить вид работ")
-    public void cancelDeleteTypesWork() {
+    public void cancelDeleteTypesWork() throws InterruptedException {
        new TypesWorkSidebarPage(getDriver())
 //        String delWork = new TypesWorkSidebarPage(getDriver())
                 .project()

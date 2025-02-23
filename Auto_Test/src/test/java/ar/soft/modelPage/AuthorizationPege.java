@@ -19,6 +19,13 @@ public class AuthorizationPege extends BasePage {
         return this;
     }
 
+    @Name("кнопка Checkbox")
+    public AuthorizationPege btnCheckbox() {
+        getDriver().findElement(By.xpath("//*[@id='CheckboxComponent-check']")).click();
+
+        return this;
+    }
+
     @Name("кнопка Продолжить")
     public AuthorizationPege btnContinue() {
         getDriver().findElement(By.xpath("//button[@type='submit'][contains(.,'Продолжить')]")).click();
@@ -70,7 +77,7 @@ public class AuthorizationPege extends BasePage {
 
     @Name("название профиля")
     public String roleProfile() {
-        return getDriver().findElement(By.xpath("//h3[@class='ant-typography h3_m']")).getText();
+        return getDriver().findElement(By.xpath("//div[@class='ant-typography p_r InformationProfile__info-role']")).getText();
     }
 
     @Name("Мы отправили по адресу")
