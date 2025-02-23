@@ -9,148 +9,19 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <!-- PROJECT -->
-        <java.version>17</java.version>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <cucumber.version>7.12.1</cucumber.version>
         <allure.version>2.27.0</allure.version>
-
-        <!-- MAVEN -->
-        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>
-        <allure-maven.version>2.21.0</allure-maven.version>
-        <allure-maven-reporter.version>2.17.3</allure-maven-reporter.version>
-        <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>
-        <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>
-        <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>
-
-        <!-- DEPENDENCIES -->
-        <!-- selenium -->
-        <selenium.version>4.12.1</selenium.version>
-        <webdrivermanager.version>5.9.2</webdrivermanager.version>
-
-        <!-- asserts -->
-        <assertj-core>3.23.1</assertj-core>
-
-        <!-- tests -->
-        <testng.version>7.4.0</testng.version>
-
-        <!-- logging -->
-        <logback.version>1.2.11</logback.version>
-
-        <!-- report -->
-        <allure-testng.version>2.18.1</allure-testng.version>
-        <allure-testng-adaptor.version>2.7.0</allure-testng-adaptor.version>
-        <aspectj.version>1.9.7</aspectj.version>
-        <allure-maven.version>2.10.0</allure-maven.version>
-
     </properties>
 
     <dependencies>
+
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
-<!--            <version>${selenium.version}</version>-->
             <version>4.21.0</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.codeborne/selenide -->
-        <dependency>
-            <groupId>com.codeborne</groupId>
-            <artifactId>selenide</artifactId>
-            <version>6.19.0</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/io.qameta.allure/allure-selenide -->
-        <dependency>
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-selenide</artifactId>
-            <version>2.20.1</version>
-        </dependency>
-
-        <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
-        <dependency>
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>3.24.2</version>
-            <scope>test</scope>
-        </dependency>
-
-        <dependency>
-            <!-- плагин для автоматической загрузки нужной версии вебдрайвера  -->
-            <groupId>io.github.bonigarcia</groupId>
-            <artifactId>webdrivermanager</artifactId>
-            <version>${webdrivermanager.version}</version>
-        </dependency>
-
-        <dependency>
-            <!-- плагин для запуска тестов
-            на версии старше 7.4.0 не работает прикрепрелие скриншотов в allure -->
-            <groupId>org.testng</groupId>
-            <artifactId>testng</artifactId>
-            <version>${testng.version}</version>
-        </dependency>
-
-        <dependency>
-            <!-- работы с браузером chrome (отсутствует в selenium-support) -->
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-chrome-driver</artifactId>
-            <version>${selenium.version}</version>
-        </dependency>
-
-        <dependency>
-            <!-- плагин для отчетов allure  -->
-            <groupId>io.qameta.allure</groupId>
-            <artifactId>allure-testng</artifactId>
-            <version>${allure-testng.version}</version>
-        </dependency>
-
-        <dependency>
-            <!-- плагин для использования ассертов  -->
-            <groupId>org.assertj</groupId>
-            <artifactId>assertj-core</artifactId>
-            <version>${assertj-core}</version>
-        </dependency>
-        <dependency>
-            <!-- плагин для логирования  -->
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>${logback.version}</version>
-        </dependency>
-
-        <dependency>
-            <!-- работы с браузером edge (отсутствует в selenium-support) -->
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-edge-driver</artifactId>
-            <version>${selenium.version}</version>
-        </dependency>
-        <dependency>
-            <!-- работы с браузером firefox (отсутствует в selenium-support) -->
-            <groupId>org.seleniumhq.selenium</groupId>
-            <artifactId>selenium-firefox-driver</artifactId>
-            <version>${selenium.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>ru.yandex.qatools.ashot</groupId>
-            <artifactId>ashot</artifactId>
-            <version>1.5.4</version>
-        </dependency>
-
-        <dependency>
-            <groupId>ru.sbtqa.htmlelements</groupId>
-            <artifactId>htmlelements-java</artifactId>
-            <version>1.21.5</version>
-        </dependency>
-
-        <dependency>
-            <groupId>io.qameta.atlas</groupId>
-            <artifactId>atlas-core</artifactId>
-            <version>1.8.0</version>
         </dependency>
 
         <dependency>
@@ -218,34 +89,34 @@
             <version>5.3.1</version>
             <scope>test</scope>
         </dependency>
-<!--        <dependency>-->
-<!--            &lt;!&ndash; плагин для запуска тестов-->
-<!--            на версии старше 7.4.0 не работает прикрепрелие скриншотов в allure &ndash;&gt;-->
-<!--            <groupId>org.testng</groupId>-->
-<!--            <artifactId>testng</artifactId>-->
-<!--&lt;!&ndash;            <version>${testng.version}</version>&ndash;&gt;-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            &lt;!&ndash; плагин для запуска тестов-->
+        <!--            на версии старше 7.4.0 не работает прикрепрелие скриншотов в allure &ndash;&gt;-->
+        <!--            <groupId>org.testng</groupId>-->
+        <!--            <artifactId>testng</artifactId>-->
+        <!--&lt;!&ndash;            <version>${testng.version}</version>&ndash;&gt;-->
+        <!--        </dependency>-->
 
-<!--        <dependency>-->
-<!--            &lt;!&ndash; работы с браузером chrome (отсутствует в selenium-support) &ndash;&gt;-->
-<!--            <groupId>org.seleniumhq.selenium</groupId>-->
-<!--            <artifactId>selenium-chrome-driver</artifactId>-->
-<!--&lt;!&ndash;            <version>${selenium.version}</version>&ndash;&gt;-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            &lt;!&ndash; работы с браузером chrome (отсутствует в selenium-support) &ndash;&gt;-->
+        <!--            <groupId>org.seleniumhq.selenium</groupId>-->
+        <!--            <artifactId>selenium-chrome-driver</artifactId>-->
+        <!--&lt;!&ndash;            <version>${selenium.version}</version>&ndash;&gt;-->
+        <!--        </dependency>-->
 
         <dependency>
             <!-- плагин для отчетов allure  -->
             <groupId>io.qameta.allure</groupId>
             <artifactId>allure-testng</artifactId>
-<!--            <version>${allure-testng.version}</version>-->
+            <!--            <version>${allure-testng.version}</version>-->
         </dependency>
 
-<!--        <dependency>-->
-<!--            &lt;!&ndash; плагин для использования ассертов  &ndash;&gt;-->
-<!--            <groupId>org.assertj</groupId>-->
-<!--            <artifactId>assertj-core</artifactId>-->
-<!--&lt;!&ndash;            <version>${assertj-core}</version>&ndash;&gt;-->
-<!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            &lt;!&ndash; плагин для использования ассертов  &ndash;&gt;-->
+        <!--            <groupId>org.assertj</groupId>-->
+        <!--            <artifactId>assertj-core</artifactId>-->
+        <!--&lt;!&ndash;            <version>${assertj-core}</version>&ndash;&gt;-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
@@ -280,82 +151,370 @@
     <build>
         <plugins>
             <plugin>
-                    <groupId>io.qameta.allure</groupId>
-                    <artifactId>allure-maven</artifactId>
-                    <version>2.12.0</version>
-                    <configuration>
-                          <reportVersion>2.29.0</reportVersion>
-<!--                        <allureDownloadUrl>-->
-<!--                            https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/%s/allure-commandline-%s.zip-->
-<!--                        </allureDownloadUrl>-->
-                    </configuration>
-             </plugin>
-
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-resources-plugin</artifactId>-->
-<!--                <version>${maven-resources-plugin.version}</version>-->
-<!--                <configuration>-->
-<!--                    <encoding>UTF-8</encoding>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-clean-plugin</artifactId>-->
-<!--                <version>${maven-clean-plugin.version}</version>-->
-<!--            </plugin>-->
-
-<!--            <plugin>-->
-<!--                &lt;!&ndash; плагин для генерации отчетов/параметризованного запуска maven &ndash;&gt;-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-surefire-plugin</artifactId>-->
-<!--                <version>3.0.0-M7</version>-->
-<!--                <configuration>-->
-<!--                    <argLine>-->
-<!--                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"-->
-<!--                    </argLine>-->
-<!--                    <systemPropertyVariables>-->
-<!--                        &lt;!&ndash; подтягивает переменные окружения по имени в теге (stand, user) &ndash;&gt;-->
-<!--                        <stand>${run.stand}</stand>-->
-<!--                        <user>${user.set}</user>-->
-<!--                        <remote>${user.remote}</remote>-->
-<!--                        <browser>${run.browser}</browser>-->
-<!--                    </systemPropertyVariables>-->
-<!--                </configuration>-->
-<!--                <dependencies>-->
-<!--                    <dependency>-->
-<!--                        &lt;!&ndash; используется для возможности указания аннотаций в allure &ndash;&gt;-->
-<!--                        <groupId>org.aspectj</groupId>-->
-<!--                        <artifactId>aspectjweaver</artifactId>-->
-<!--                        <version>${aspectj.version}</version>-->
-<!--                    </dependency>-->
-<!--                </dependencies>-->
-<!--            </plugin>-->
-
-<!--            <plugin>-->
-<!--                <groupId>org.apache.maven.plugins</groupId>-->
-<!--                <artifactId>maven-compiler-plugin</artifactId>-->
-<!--                <version>${maven-compiler-plugin.version}</version>-->
-<!--                <configuration>-->
-<!--                    &lt;!&ndash; для переезда на java 11 поставить тег release и указать 11, при наличии java 11 на стороне jenkins &ndash;&gt;-->
-<!--                    <source>${java.version}</source>-->
-<!--                    <target>${java.version}</target>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
-<!--            <plugin>-->
-<!--                &lt;!&ndash; плагин для сборки отчета allure &ndash;&gt;-->
-<!--                <groupId>io.qameta.allure</groupId>-->
-<!--                <artifactId>allure-maven</artifactId>-->
-<!--                <version>${allure-maven.version}</version>-->
-<!--                <configuration>-->
-<!--                    <propertiesFilePath>resources/allure.properties</propertiesFilePath>-->
-<!--                    <reportVersion>${allure-maven-reporter.version}</reportVersion>-->
-<!--                </configuration>-->
-<!--            </plugin>-->
-
+                <groupId>io.qameta.allure</groupId>
+                <artifactId>allure-maven</artifactId>
+                <version>2.12.0</version>
+                <configuration>
+                    <reportVersion>2.29.0</reportVersion>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
-
 </project>
+
+
+
+
+
+
+<!--    <properties>-->
+<!--        &lt;!&ndash; PROJECT &ndash;&gt;-->
+<!--        <java.version>17</java.version>-->
+<!--        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>-->
+<!--        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>-->
+
+<!--        <maven.compiler.source>17</maven.compiler.source>-->
+<!--        <maven.compiler.target>17</maven.compiler.target>-->
+<!--&lt;!&ndash;        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>&ndash;&gt;-->
+<!--        <cucumber.version>7.12.1</cucumber.version>-->
+<!--        <allure.version>2.27.0</allure.version>-->
+
+<!--        &lt;!&ndash; MAVEN &ndash;&gt;-->
+<!--        <maven-compiler-plugin.version>3.8.0</maven-compiler-plugin.version>-->
+<!--        <allure-maven.version>2.21.0</allure-maven.version>-->
+<!--        <allure-maven-reporter.version>2.17.3</allure-maven-reporter.version>-->
+<!--        <maven-clean-plugin.version>3.1.0</maven-clean-plugin.version>-->
+<!--        <maven-resources-plugin.version>3.0.2</maven-resources-plugin.version>-->
+<!--        <maven-surefire-plugin.version>3.0.0-M7</maven-surefire-plugin.version>-->
+
+<!--        &lt;!&ndash; DEPENDENCIES &ndash;&gt;-->
+<!--        &lt;!&ndash; selenium &ndash;&gt;-->
+<!--        <selenium.version>4.12.1</selenium.version>-->
+<!--        <webdrivermanager.version>5.9.2</webdrivermanager.version>-->
+
+<!--        &lt;!&ndash; asserts &ndash;&gt;-->
+<!--        <assertj-core>3.23.1</assertj-core>-->
+
+<!--        &lt;!&ndash; tests &ndash;&gt;-->
+<!--        <testng.version>7.4.0</testng.version>-->
+
+<!--        &lt;!&ndash; logging &ndash;&gt;-->
+<!--        <logback.version>1.2.11</logback.version>-->
+
+<!--        &lt;!&ndash; report &ndash;&gt;-->
+<!--        <allure-testng.version>2.18.1</allure-testng.version>-->
+<!--        <allure-testng-adaptor.version>2.7.0</allure-testng-adaptor.version>-->
+<!--        <aspectj.version>1.9.7</aspectj.version>-->
+<!--        <allure-maven.version>2.10.0</allure-maven.version>-->
+
+<!--    </properties>-->
+
+<!--    <dependencies>-->
+<!--        <dependency>-->
+<!--            <groupId>org.seleniumhq.selenium</groupId>-->
+<!--            <artifactId>selenium-java</artifactId>-->
+<!--&lt;!&ndash;            <version>${selenium.version}</version>&ndash;&gt;-->
+<!--            <version>4.21.0</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.codeborne/selenide &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>com.codeborne</groupId>-->
+<!--            <artifactId>selenide</artifactId>-->
+<!--            <version>6.19.0</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/io.qameta.allure/allure-selenide &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>io.qameta.allure</groupId>-->
+<!--            <artifactId>allure-selenide</artifactId>-->
+<!--            <version>2.20.1</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.assertj/assertj-core &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.assertj</groupId>-->
+<!--            <artifactId>assertj-core</artifactId>-->
+<!--            <version>3.24.2</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            &lt;!&ndash; плагин для автоматической загрузки нужной версии вебдрайвера  &ndash;&gt;-->
+<!--            <groupId>io.github.bonigarcia</groupId>-->
+<!--            <artifactId>webdrivermanager</artifactId>-->
+<!--            <version>${webdrivermanager.version}</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            &lt;!&ndash; плагин для запуска тестов-->
+<!--            на версии старше 7.4.0 не работает прикрепрелие скриншотов в allure &ndash;&gt;-->
+<!--            <groupId>org.testng</groupId>-->
+<!--            <artifactId>testng</artifactId>-->
+<!--            <version>${testng.version}</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            &lt;!&ndash; работы с браузером chrome (отсутствует в selenium-support) &ndash;&gt;-->
+<!--            <groupId>org.seleniumhq.selenium</groupId>-->
+<!--            <artifactId>selenium-chrome-driver</artifactId>-->
+<!--            <version>${selenium.version}</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            &lt;!&ndash; плагин для отчетов allure  &ndash;&gt;-->
+<!--            <groupId>io.qameta.allure</groupId>-->
+<!--            <artifactId>allure-testng</artifactId>-->
+<!--            <version>${allure-testng.version}</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            &lt;!&ndash; плагин для использования ассертов  &ndash;&gt;-->
+<!--            <groupId>org.assertj</groupId>-->
+<!--            <artifactId>assertj-core</artifactId>-->
+<!--            <version>${assertj-core}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            &lt;!&ndash; плагин для логирования  &ndash;&gt;-->
+<!--            <groupId>ch.qos.logback</groupId>-->
+<!--            <artifactId>logback-classic</artifactId>-->
+<!--            <version>${logback.version}</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            &lt;!&ndash; работы с браузером edge (отсутствует в selenium-support) &ndash;&gt;-->
+<!--            <groupId>org.seleniumhq.selenium</groupId>-->
+<!--            <artifactId>selenium-edge-driver</artifactId>-->
+<!--            <version>${selenium.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            &lt;!&ndash; работы с браузером firefox (отсутствует в selenium-support) &ndash;&gt;-->
+<!--            <groupId>org.seleniumhq.selenium</groupId>-->
+<!--            <artifactId>selenium-firefox-driver</artifactId>-->
+<!--            <version>${selenium.version}</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>ru.yandex.qatools.ashot</groupId>-->
+<!--            <artifactId>ashot</artifactId>-->
+<!--            <version>1.5.4</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>ru.sbtqa.htmlelements</groupId>-->
+<!--            <artifactId>htmlelements-java</artifactId>-->
+<!--            <version>1.21.5</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>io.qameta.atlas</groupId>-->
+<!--            <artifactId>atlas-core</artifactId>-->
+<!--            <version>1.8.0</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.testng</groupId>-->
+<!--            <artifactId>testng</artifactId>-->
+<!--            <version>7.9.0</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>commons-io</groupId>-->
+<!--            <artifactId>commons-io</artifactId>-->
+<!--            <version>2.15.1</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.apache.commons</groupId>-->
+<!--            <artifactId>commons-lang3</artifactId>-->
+<!--            <version>3.14.0</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.jetbrains</groupId>-->
+<!--            <artifactId>annotations</artifactId>-->
+<!--            <version>RELEASE</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>junit</groupId>-->
+<!--            <artifactId>junit</artifactId>-->
+<!--            <version>4.13.2</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>org.junit.jupiter</groupId>-->
+<!--            <artifactId>junit-jupiter</artifactId>-->
+<!--            <version>RELEASE</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>junit</groupId>-->
+<!--            <artifactId>junit</artifactId>-->
+<!--            <version>4.13.2</version>-->
+<!--            <scope>compile</scope>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>io.github.bonigarcia</groupId>-->
+<!--            <artifactId>webdrivermanager</artifactId>-->
+<!--            <version>5.5.3</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>com.google.code.gson</groupId>-->
+<!--            <artifactId>gson</artifactId>-->
+<!--            <version>2.11.0</version>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>io.rest-assured</groupId>-->
+<!--            <artifactId>rest-assured</artifactId>-->
+<!--            <version>5.3.1</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash; плагин для запуска тестов&ndash;&gt;-->
+<!--&lt;!&ndash;            на версии старше 7.4.0 не работает прикрепрелие скриншотов в allure &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>org.testng</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>testng</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <version>${testng.version}</version>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash; работы с браузером chrome (отсутствует в selenium-support) &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>org.seleniumhq.selenium</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>selenium-chrome-driver</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <version>${selenium.version}</version>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+
+<!--        <dependency>-->
+<!--            &lt;!&ndash; плагин для отчетов allure  &ndash;&gt;-->
+<!--            <groupId>io.qameta.allure</groupId>-->
+<!--            <artifactId>allure-testng</artifactId>-->
+<!--&lt;!&ndash;            <version>${allure-testng.version}</version>&ndash;&gt;-->
+<!--        </dependency>-->
+
+<!--&lt;!&ndash;        <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;            &lt;!&ndash; плагин для использования ассертов  &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;            <groupId>org.assertj</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;            <artifactId>assertj-core</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;            <version>${assertj-core}</version>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;        </dependency>&ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>io.cucumber</groupId>-->
+<!--            <artifactId>cucumber-java</artifactId>-->
+<!--            <version>${cucumber.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
+<!--        <dependency>-->
+<!--            <groupId>io.cucumber</groupId>-->
+<!--            <artifactId>cucumber-testng</artifactId>-->
+<!--            <version>${cucumber.version}</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/io.qameta.allure/allure-testng &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>io.qameta.allure</groupId>-->
+<!--            <artifactId>allure-testng</artifactId>-->
+<!--            <version>${allure.version}</version>-->
+<!--        </dependency>-->
+
+<!--        &lt;!&ndash; https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl &ndash;&gt;-->
+<!--        <dependency>-->
+<!--            <groupId>org.apache.logging.log4j</groupId>-->
+<!--            <artifactId>log4j-slf4j-impl</artifactId>-->
+<!--            <version>2.23.1</version>-->
+<!--            <scope>test</scope>-->
+<!--        </dependency>-->
+
+<!--    </dependencies>-->
+
+<!--    <build>-->
+<!--        <plugins>-->
+<!--            <plugin>-->
+<!--                    <groupId>io.qameta.allure</groupId>-->
+<!--                    <artifactId>allure-maven</artifactId>-->
+<!--                    <version>2.12.0</version>-->
+<!--                    <configuration>-->
+<!--                          <reportVersion>2.29.0</reportVersion>-->
+<!--&lt;!&ndash;                        <allureDownloadUrl>&ndash;&gt;-->
+<!--&lt;!&ndash;                            https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline/%s/allure-commandline-%s.zip&ndash;&gt;-->
+<!--&lt;!&ndash;                        </allureDownloadUrl>&ndash;&gt;-->
+<!--                    </configuration>-->
+<!--             </plugin>-->
+
+<!--&lt;!&ndash;            <plugin>&ndash;&gt;-->
+<!--&lt;!&ndash;                <groupId>org.apache.maven.plugins</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <artifactId>maven-resources-plugin</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <version>${maven-resources-plugin.version}</version>&ndash;&gt;-->
+<!--&lt;!&ndash;                <configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <encoding>UTF-8</encoding>&ndash;&gt;-->
+<!--&lt;!&ndash;                </configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;            </plugin>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <plugin>&ndash;&gt;-->
+<!--&lt;!&ndash;                <groupId>org.apache.maven.plugins</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <artifactId>maven-clean-plugin</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <version>${maven-clean-plugin.version}</version>&ndash;&gt;-->
+<!--&lt;!&ndash;            </plugin>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <plugin>&ndash;&gt;-->
+<!--&lt;!&ndash;                &lt;!&ndash; плагин для генерации отчетов/параметризованного запуска maven &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                <groupId>org.apache.maven.plugins</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <artifactId>maven-surefire-plugin</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <version>3.0.0-M7</version>&ndash;&gt;-->
+<!--&lt;!&ndash;                <configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <argLine>&ndash;&gt;-->
+<!--&lt;!&ndash;                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"&ndash;&gt;-->
+<!--&lt;!&ndash;                    </argLine>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <systemPropertyVariables>&ndash;&gt;-->
+<!--&lt;!&ndash;                        &lt;!&ndash; подтягивает переменные окружения по имени в теге (stand, user) &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                        <stand>${run.stand}</stand>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <user>${user.set}</user>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <remote>${user.remote}</remote>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <browser>${run.browser}</browser>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </systemPropertyVariables>&ndash;&gt;-->
+<!--&lt;!&ndash;                </configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;                <dependencies>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                        &lt;!&ndash; используется для возможности указания аннотаций в allure &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                        <groupId>org.aspectj</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <artifactId>aspectjweaver</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                        <version>${aspectj.version}</version>&ndash;&gt;-->
+<!--&lt;!&ndash;                    </dependency>&ndash;&gt;-->
+<!--&lt;!&ndash;                </dependencies>&ndash;&gt;-->
+<!--&lt;!&ndash;            </plugin>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <plugin>&ndash;&gt;-->
+<!--&lt;!&ndash;                <groupId>org.apache.maven.plugins</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <artifactId>maven-compiler-plugin</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <version>${maven-compiler-plugin.version}</version>&ndash;&gt;-->
+<!--&lt;!&ndash;                <configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;                    &lt;!&ndash; для переезда на java 11 поставить тег release и указать 11, при наличии java 11 на стороне jenkins &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                    <source>${java.version}</source>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <target>${java.version}</target>&ndash;&gt;-->
+<!--&lt;!&ndash;                </configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;            </plugin>&ndash;&gt;-->
+
+<!--&lt;!&ndash;            <plugin>&ndash;&gt;-->
+<!--&lt;!&ndash;                &lt;!&ndash; плагин для сборки отчета allure &ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;                <groupId>io.qameta.allure</groupId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <artifactId>allure-maven</artifactId>&ndash;&gt;-->
+<!--&lt;!&ndash;                <version>${allure-maven.version}</version>&ndash;&gt;-->
+<!--&lt;!&ndash;                <configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <propertiesFilePath>resources/allure.properties</propertiesFilePath>&ndash;&gt;-->
+<!--&lt;!&ndash;                    <reportVersion>${allure-maven-reporter.version}</reportVersion>&ndash;&gt;-->
+<!--&lt;!&ndash;                </configuration>&ndash;&gt;-->
+<!--&lt;!&ndash;            </plugin>&ndash;&gt;-->
+
+<!--        </plugins>-->
+<!--    </build>-->
+
+<!--</project>-->
