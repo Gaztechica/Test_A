@@ -122,8 +122,8 @@ public class ProjectTest extends BaseTest {
         String projl = new ProjectPage(getDriver())
                 .logoProject()
                 .searchProject()
-                .inputSearchNameProject()
-                .searchProjectText();
+                .inputSearchNameProject().searchProjectText();
+
 
         Assert.assertEquals(projl, "админ");
     }
