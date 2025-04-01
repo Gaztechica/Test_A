@@ -124,6 +124,7 @@ public class ProjectTest extends BaseTest {
                 .searchProject()
                 .inputSearchNameProject().searchProjectText();
 
+
         Assert.assertEquals(projl, "админ");
     }
     //     редактирование/удаление\цвет кнопки \ цвет строки при наведении \
