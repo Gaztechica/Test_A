@@ -20,7 +20,7 @@ public class LogFilePage extends BasePage {
 //    @FindBy(xpath = "//img[@src='/static/media/Basket.8774715cc0eccb962b78054dc111a9a8.svg']")
     private WebElement iconDeleteLogFile;
 
-    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']//span")
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")
     private WebElement btnCanselDeleteLogFile;
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']//span")
