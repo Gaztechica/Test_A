@@ -82,6 +82,7 @@ public class AuthorizationTest extends BaseTest {
 
         String roleAdmin = new AuthorizationPege(getDriver())
                 .inputMail("d8q2s@fthcapital.com")          //test
+//                .inputMail("murkegotri@gufum.com")
 //                .inputMail("armtset9@bk.ru")
 //                .inputMail("hrpup@rustyload.com")
                 .inputPassword(PASSWORD)
@@ -110,8 +111,23 @@ public class AuthorizationTest extends BaseTest {
         Assert.assertEquals(roleAdmin, "Наблюдатель");
     }
 
-
     @Test(priority = 6,
+            description = "Авторизация под ролью Супервизор")
+    public void visorAuthorizationTest() {
+        driver.get(URL);
+
+        String roleAdmin = new AuthorizationPege(getDriver())
+                .inputMail("3hgsi@belgianairways.com")     //test
+//                .inputMail("armtset18@bk.ru")
+                .inputPassword(PASSWORD)
+                .btnSubmit()
+                .btnProfile()
+                .selectProfile()
+                .roleProfile();
+
+        Assert.assertEquals(roleAdmin, "Супервизор");
+    }
+    @Test(priority = 9,
             description = "получить письмо для восстановления доступа")
     public void restorePasswordTest() {
         driver.get(URL);
@@ -329,7 +345,7 @@ public class AuthorizationTest extends BaseTest {
         String trialText = new AuthorizationPege(getDriver())
                 .trialText();
 
-        Assert.assertEquals(trialText, "Попробуйте бесплатно в течении 7 дней");
+        Assert.assertEquals(trialText, "Попробуйте бесплатно в течение 14 дней");
     }
 
 //    @Test(priority = 19,
@@ -358,7 +374,7 @@ public class AuthorizationTest extends BaseTest {
         String trialText = new AuthorizationPege(getDriver())
                 .trialText();
 
-        Assert.assertEquals(trialText, "Попробуйте бесплатно в течении 7 дней");
+        Assert.assertEquals(trialText, "Попробуйте бесплатно в течение 14 дней");
     }
 
 
