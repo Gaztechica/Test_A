@@ -28,15 +28,12 @@ public class TypesWorkSidebarPage extends BasePage {
         return this;
     }
 
-    @Name("кнопка редактировать PKM вид работ")
+    @Name("кнопка редактировать ПKM вид работ")
     public TypesWorkSidebarPage btnRemovePRMTypesWorkClick() {
-        getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., '1')]")).click();
-//        actions.contextClick(btnElement).perform();
         Actions actions = new Actions(getDriver());
-
-        WebElement btnElement = getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., '1')]"));
-
-        actions.contextClick(btnElement).perform();
+        WebElement btnElement = getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., 'владимир Remove Name')]"));
+        actions.contextClick(btnElement)
+                .perform();
         return this;
     }
     @Name("drop удалить")
@@ -46,16 +43,27 @@ public class TypesWorkSidebarPage extends BasePage {
         return this;
     }
 
-    @Name("drop PKM удалить")
+    @Name("drop ПKM удалить")
     public TypesWorkSidebarPage dropDeletePKMTypesWorkClick() {
-        getDriver().findElement(By.xpath("//*[@class='ant-typography p_r'][contains(.,'Удалить')]")).click();
+        Actions actions = new Actions(getDriver());
+        WebElement btnElement = getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., 'CreateTypeOfWork')]"));
+        actions.contextClick(btnElement)
+                .perform();
+
+        return this;
+    }
+
+    @Name("select удалить")
+    public TypesWorkSidebarPage selectDeleteTypesWorkClick() {
+        getDriver().findElement(By.xpath("(//*[@class='ant-dropdown-menu-item ant-dropdown-menu-item-only-child'])[2]")).click();
 
         return this;
     }
 
     @Name("drop редактировать")
     public TypesWorkSidebarPage dropRemoveTypesWorkClick() {
-        getDriver().findElement(By.xpath("//div[@class='ant-dropdown Dropdown undefined ant-dropdown-placement-leftTop ']//div[contains(.,'Редактировать')]")).click();
+        getDriver().findElement(By.xpath("//li[@class='ant-dropdown-menu-item ant-dropdown-menu-item-only-child']")).click();
+//        getDriver().findElement(By.xpath("(//*[@class='ant-typography p_r'][contains(.,'Редактировать')])[2]")).click();
 
         return this;
     }
@@ -70,7 +78,7 @@ public class TypesWorkSidebarPage extends BasePage {
 
     @Name("кнопка подтвердить удалить вид работ")
     public TypesWorkSidebarPage btnSetDeleteTypesWorkClick() {
-        getDriver().findElement(By.xpath("//button[@type='button']/span[contains(.,'Подтвердить')]")).click();
+        getDriver().findElement(By.xpath("//button[@type='button']/span[contains(.,'Подтвердить')]/..")).click();
 
         return this;
     }
@@ -84,6 +92,15 @@ public class TypesWorkSidebarPage extends BasePage {
     @Name("поле ввода названия вида работ")
     public TypesWorkSidebarPage clerNameTypesWorkClick() {
         getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).clear();
+
+        return this;
+    }
+
+    @Name("поле ввода названия вида работ")
+    public TypesWorkSidebarPage newNameTypesWorkClick() {
+        getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).sendKeys(Keys.CONTROL + "A");
+        getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).sendKeys("владимир");
+        getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).sendKeys(Keys.ENTER);
 
         return this;
     }
@@ -134,8 +151,17 @@ public class TypesWorkSidebarPage extends BasePage {
         return this;
     }
     @Name("созданный вид работ")
-    public String getNewWorkText() {
+    public String getNewWorkText() throws InterruptedException {
+        Thread.sleep(300);
         return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])")).getText();
+
+    }
+
+    @Name("message удалить вид работ")
+    public String getMessageDeleteWorkText() throws InterruptedException {
+        Thread.sleep(300);
+        return getDriver().findElement(By.xpath("//*[@class='ant-message-custom-content ant-message-success']")).getText();
+
     }
 
     @Name("ввод в поиск вид работ")
