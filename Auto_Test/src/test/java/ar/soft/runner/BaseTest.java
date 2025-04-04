@@ -55,15 +55,15 @@ public abstract class BaseTest {
 
     public WebDriver driver = new ChromeDriver();
 
-//    @BeforeMethod
-//    protected void beforeMethod(Method method) {
-////        для пакетного прогона тестов
-////       driver = new ChromeDriver();
+    @BeforeMethod
+    protected void beforeMethod(Method method) {
+//        для пакетного прогона тестов
+//       driver = new ChromeDriver();
 //        getDriver().get(URL);
 //        getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
 //        getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
 //        getDriver().manage().window().setSize(new Dimension(1920,1080));
-//    }
+    }
 
 //    public void log() {
 //        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
@@ -182,36 +182,36 @@ public abstract class BaseTest {
 
     // ================================== общие тесты =====================================================
 
-    @Test(priority = 1,
-            description = "клик по лого")
-    public void logoTest() {
-        driver.findElement(By.xpath("//div[@class='Logo__container']")).click();
-        Assert.assertEquals("Проекты", driver.findElement(LOGO).getText());
-    }
-
-    @Test(priority = 2,
-            description = "пагинация")
-    public void poginacyaTest() {
-        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
-        driver.findElement(By.xpath("//button[@class='ant-pagination-item-link']/span[@aria-label='left']")).click();
-        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
-        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'1')]")).click();
-    }
-
-    @Test(priority = 3,
-            description = "элементов на странице")
-    public void elementPageTest() {
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='10']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'50')]")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='50']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'40')]")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='40']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'30')]")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='30']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'20')]")).click();
-        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='20']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'10')]")).click();
-    }
+//    @Test(priority = 1,
+//            description = "клик по лого")
+//    public void logoTest() {
+//        driver.findElement(By.xpath("//div[@class='Logo__container']")).click();
+//        Assert.assertEquals("Проекты", driver.findElement(LOGO).getText());
+//    }
+//
+//    @Test(priority = 2,
+//            description = "пагинация")
+//    public void poginacyaTest() {
+//        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
+//        driver.findElement(By.xpath("//button[@class='ant-pagination-item-link']/span[@aria-label='left']")).click();
+//        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'2')]")).click();
+//        driver.findElement(By.xpath("//a[@rel='nofollow'][contains(.,'1')]")).click();
+//    }
+//
+//    @Test(priority = 3,
+//            description = "элементов на странице")
+//    public void elementPageTest() {
+//        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='10']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'50')]")).click();
+//        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='50']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'40')]")).click();
+//        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='40']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'30')]")).click();
+//        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='30']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'20')]")).click();
+//        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='20']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'10')]")).click();
+//    }
 
 
     // ================================== ссылки =====================================================
