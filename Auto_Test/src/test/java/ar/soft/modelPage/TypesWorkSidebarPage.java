@@ -10,7 +10,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class TypesWorkSidebarPage extends BasePage {
 
-    String nameTypesWork = "CreateTypeOfWork";
+    String nameTypesWork = "новый вид работ";
 
     public TypesWorkSidebarPage(WebDriver driver) {
         super(driver);
@@ -33,7 +33,7 @@ public class TypesWorkSidebarPage extends BasePage {
     @Name("кнопка редактировать ПKM вид работ")
     public TypesWorkSidebarPage btnRemovePRMTypesWorkClick() {
         Actions actions = new Actions(getDriver());
-        WebElement btnElement = getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., 'владимир Remove Name')]"));
+        WebElement btnElement = getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., '"+ nameTypesWork +" Remove Name')]"));
         actions.contextClick(btnElement)
                 .perform();
         return this;
@@ -108,8 +108,8 @@ public class TypesWorkSidebarPage extends BasePage {
 //    }
 
     @Name("поле ввода названия вида работ")
-    public TypesWorkSidebarPage inputNameTypesWorkClick() {
-        getDriver().findElement(By.id("CreateTypeOfWorkModal_name")).sendKeys("CreateTypeOfWork");
+    public TypesWorkSidebarPage inputNameTypesWorkClick(String name) {
+        getDriver().findElement(By.id("CreateTypeOfWorkModal_name")).sendKeys(name);
 
         return this;
     }
@@ -122,9 +122,9 @@ public class TypesWorkSidebarPage extends BasePage {
     }
 
     @Name("поле ввода названия вида работ")
-    public TypesWorkSidebarPage newNameTypesWorkClick() {
+    public TypesWorkSidebarPage newNameTypesWorkClick(String text) {
         getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).sendKeys(Keys.CONTROL + "A");
-        getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).sendKeys("владимир");
+        getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).sendKeys(text);
         getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).sendKeys(Keys.ENTER);
 
         return this;
@@ -164,8 +164,9 @@ public class TypesWorkSidebarPage extends BasePage {
         return this;
     }
     @Name("чек бокс вид работ")
-    public TypesWorkSidebarPage btnCheckboxTypesWorkClick() {
-        getDriver().findElement(By.xpath("//*[@class='ant-table-tbody']/*[contains(.,'CreateTypeOfWork')]/.//*[@id='CheckboxComponent']")).click();
+    public TypesWorkSidebarPage btnCheckboxTypesWorkClick() throws InterruptedException {
+        Thread.sleep(300);
+        getDriver().findElement(By.xpath("//*[@class='ant-table-tbody']/*[contains(.,'" + nameTypesWork + "')]/.//*[@id='CheckboxComponent'] | (//*[@class='ant-table-tbody']/*[contains(.,'" + nameTypesWork + "')]/.//*[@id='CheckboxComponent'])[2] | (//*[@class='ant-table-tbody']/*[contains(.,'" + nameTypesWork + "')]/.//*[@id='CheckboxComponent'])[3]")).click();
 
         return this;
     }
@@ -190,9 +191,9 @@ public class TypesWorkSidebarPage extends BasePage {
     }
 
     @Name("ввод в поиск вид работ")
-    public TypesWorkSidebarPage searchWorkText() {
+    public TypesWorkSidebarPage searchWorkText(String name) {
         getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).click();
-        getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).sendKeys("владимир");
+        getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).sendKeys(nameTypesWork);
         return this;
     }
 }
