@@ -8,8 +8,9 @@ import org.testng.annotations.Test;
 public class TypesWorkSidebarTest extends BaseTest {
 
     //добавить тесты вид работ создан, изменен ..... удаление через иконку корзина
-//         сортировка смена цвета стрелки и смена значений       поиск на странице общий для всех страниц
+//         сортировка смена цвета стрелки и смена значений
 
+    String nameTypesWork = "CreateTypeOfWork";
     @Test(priority = 1,
             description = "создание вида работ")
     public void createTypesWork() throws InterruptedException {
@@ -22,7 +23,7 @@ public class TypesWorkSidebarTest extends BaseTest {
                 .btnSubmitTypesWorkClick()
                 .getNewWorkText();
 
-        Assert.assertEquals(Work, "CreateTypeOfWork");
+        Assert.assertEquals(Work, nameTypesWork);
     }
 
     @Test(priority = 4,
@@ -66,7 +67,7 @@ public class TypesWorkSidebarTest extends BaseTest {
                 .typesWorkSidebarClick()
                 .btnRemoveTypesWorkClick()
                 .dropRemoveTypesWorkClick()
-                .clerNameTypesWorkClick()
+                .clearNameTypesWorkClick()
                 .inputNewNameTypesWorkClick()
                 .unitRemoveMeasurementClick()
                 .btnSubmitTypesWorkClick()
@@ -118,5 +119,33 @@ public class TypesWorkSidebarTest extends BaseTest {
                 .getMessageDeleteWorkText();
 
         Assert.assertEquals(delWork, "Вид работ успешно удален из проекта");
+    }
+
+    @Test(priority = 8,
+            description = "удалить через кнопку корзина вид работ")
+    public void deleteBasketTypesWork() throws InterruptedException {
+//        new TypesWorkSidebarPage(getDriver())
+        String delWork = new TypesWorkSidebarPage(getDriver())
+                .project()
+                .typesWorkSidebarClick()
+                .btnCheckboxTypesWorkClick()
+                .deleteBasketTypesWorkClick()
+                .btnSetDeleteTypesWorkClick()
+                .getMessageDeleteWorkText();
+
+        Assert.assertEquals(delWork, "Вид работ успешно удален из проекта");
+    }
+
+    @Test(priority = 9,
+            description = "удалить через кнопку корзина вид работ")
+    public void searchTypesWork() throws InterruptedException {
+//        new TypesWorkSidebarPage(getDriver())
+        String Work = new TypesWorkSidebarPage(getDriver())
+                .project()
+                .typesWorkSidebarClick()
+                .search(nameTypesWork)
+                .getNewWorkText();
+
+        Assert.assertEquals(Work, nameTypesWork);
     }
 }

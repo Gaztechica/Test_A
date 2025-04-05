@@ -556,6 +556,15 @@ public class ActionT {
             }
         }
 
+//@Step("Изменить фоновый цвет")
+//public static void changeBackgroundColor(WebElement webElement) {
+//    click(webElement);
+////            actions.click(webElement);
+//    actions.sendKeys("255");
+//            .sendKeys(TAB)
+//            .sendKeys("255")
+//            .sendKeys(TAB)
+//            .sendKeys("0");
 //    }
 
 //    public static class Window {

@@ -10,6 +10,8 @@ import org.openqa.selenium.interactions.Actions;
 
 public class TypesWorkSidebarPage extends BasePage {
 
+    String nameTypesWork = "CreateTypeOfWork";
+
     public TypesWorkSidebarPage(WebDriver driver) {
         super(driver);
     }
@@ -60,6 +62,13 @@ public class TypesWorkSidebarPage extends BasePage {
         return this;
     }
 
+    @Name("кнопка удалить корзина")
+    public TypesWorkSidebarPage deleteBasketTypesWorkClick() {
+        getDriver().findElement(By.xpath("//*[@class='buttonSimple  scheduleSettings__btn']")).click();
+
+        return this;
+    }
+
     @Name("drop редактировать")
     public TypesWorkSidebarPage dropRemoveTypesWorkClick() {
         getDriver().findElement(By.xpath("//li[@class='ant-dropdown-menu-item ant-dropdown-menu-item-only-child']")).click();
@@ -77,11 +86,27 @@ public class TypesWorkSidebarPage extends BasePage {
     }
 
     @Name("кнопка подтвердить удалить вид работ")
-    public TypesWorkSidebarPage btnSetDeleteTypesWorkClick() {
+    public TypesWorkSidebarPage btnSetDeleteTypesWorkClick() throws InterruptedException {
+        Thread.sleep(300);
         getDriver().findElement(By.xpath("//button[@type='button']/span[contains(.,'Подтвердить')]/..")).click();
 
         return this;
     }
+
+    @Name("кнопка поиска вида работ")
+    public TypesWorkSidebarPage search(String text) {
+        getDriver().findElement(By.xpath("//*[@class='ant-input-prefix']")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-input']")).sendKeys(text);
+        return this;
+    }
+
+//    @Name("поле ввода поиска вида работ")
+//    public TypesWorkSidebarPage searchInput() {
+//
+//
+//        return this;
+//    }
+
     @Name("поле ввода названия вида работ")
     public TypesWorkSidebarPage inputNameTypesWorkClick() {
         getDriver().findElement(By.id("CreateTypeOfWorkModal_name")).sendKeys("CreateTypeOfWork");
@@ -89,8 +114,8 @@ public class TypesWorkSidebarPage extends BasePage {
         return this;
     }
 
-    @Name("поле ввода названия вида работ")
-    public TypesWorkSidebarPage clerNameTypesWorkClick() {
+    @Name("очистка поля ввода названия вида работ")
+    public TypesWorkSidebarPage clearNameTypesWorkClick() {
         getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).clear();
 
         return this;
@@ -140,7 +165,7 @@ public class TypesWorkSidebarPage extends BasePage {
     }
     @Name("чек бокс вид работ")
     public TypesWorkSidebarPage btnCheckboxTypesWorkClick() {
-        getDriver().findElement(By.xpath("//*[@class='ant-table-tbody']/*[contains(.,'владимир')]/.//*[@id='CheckboxComponent']")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-table-tbody']/*[contains(.,'CreateTypeOfWork')]/.//*[@id='CheckboxComponent']")).click();
 
         return this;
     }
@@ -153,7 +178,7 @@ public class TypesWorkSidebarPage extends BasePage {
     @Name("созданный вид работ")
     public String getNewWorkText() throws InterruptedException {
         Thread.sleep(300);
-        return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])")).getText();
+        return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])[contains(., '" + nameTypesWork + "')]")).getText();
 
     }
 
