@@ -86,7 +86,7 @@ public class BasePage extends BaseModel {
     }
 
     @Name("открыть Чек-листы")
-    public ChecklistsSidebarPage ChecklistsClick() {
+    public ChecklistsSidebarPage сhecklistsClick() {
         getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Чек-листы')]")).click();
 
         return new ChecklistsSidebarPage(getDriver());
