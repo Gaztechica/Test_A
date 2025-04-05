@@ -42,7 +42,6 @@ public class TypesWorkSidebarTest extends BaseTest {
         Assert.assertEquals(Work, nameTypesWork);
     }
 
-
     @Test(priority = 3,
             description = "отменить удалить вид работ")
     public void cancelDeleteTypesWork() throws InterruptedException {
@@ -89,6 +88,21 @@ public class TypesWorkSidebarTest extends BaseTest {
         Assert.assertEquals(delWork, "Вид работ успешно удален из проекта");
     }
 
+    @Test(priority = 6,
+            description = "множественное добавление вида работ в проект через поиск")
+    public void pluralTypesWork() throws InterruptedException {
+//        new TypesWorkSidebarPage(getDriver())
+        String Work = new TypesWorkSidebarPage(getDriver())
+                .project()
+                .typesWorkSidebarClick()
+                .btnAddTypesWorkClick()
+                .pluralTypesWorkClick()
+                .btnAddWorkClick()
+                .getNewWorkText();
+
+        Assert.assertEquals(Work, nameTypesWork);
+    }
+
     @Test(priority = 5,
             description = "редактировать ПКМ вид работ")
     public void removePKMTypesWork() throws InterruptedException {
@@ -104,7 +118,7 @@ public class TypesWorkSidebarTest extends BaseTest {
         Assert.assertEquals(delWork, nameTypesWork);
     }
 
-    @Test(priority = 8,
+    @Test(priority = 10,
             description = "удалить ПКМ вид работ")
     public void deletePKMTypesWork() throws InterruptedException {
 //        new TypesWorkSidebarPage(getDriver())
@@ -120,21 +134,21 @@ public class TypesWorkSidebarTest extends BaseTest {
     }
 
     @Test(priority = 9,
-            description = "удалить через кнопку корзина вид работ")
+            description = "множественное удаление через кнопку корзина вид работ")
     public void deleteBasketTypesWork() throws InterruptedException {
 //        new TypesWorkSidebarPage(getDriver())
         String delWork = new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
-                .btnCheckboxTypesWorkClick()
+                .pluralTypesWorkClick()
                 .deleteBasketTypesWorkClick()
                 .btnSetDeleteTypesWorkClick()
                 .getMessageDeleteWorkText();
 
-        Assert.assertEquals(delWork, "Вид работ успешно удален из проекта");
+        Assert.assertEquals(delWork, "Вид работ успешно удалены из проекта");
     }
 
-    @Test(priority = 6,
+    @Test(priority = 7,
             description = "поиск вида работ")
     public void searchTypesWork() throws InterruptedException {
 //        new TypesWorkSidebarPage(getDriver())
@@ -146,4 +160,6 @@ public class TypesWorkSidebarTest extends BaseTest {
 
         Assert.assertEquals(Work, nameTypesWork);
     }
+
+
 }

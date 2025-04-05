@@ -48,7 +48,7 @@ public class TypesWorkSidebarPage extends BasePage {
     @Name("drop ПKM удалить")
     public TypesWorkSidebarPage dropDeletePKMTypesWorkClick() {
         Actions actions = new Actions(getDriver());
-        WebElement btnElement = getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., 'CreateTypeOfWork')]"));
+        WebElement btnElement = getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., '" + nameTypesWork + "')]"));
         actions.contextClick(btnElement)
                 .perform();
 
@@ -170,6 +170,16 @@ public class TypesWorkSidebarPage extends BasePage {
 
         return this;
     }
+
+    @Name("чек бокс множественное добавление вид работ")
+    public TypesWorkSidebarPage pluralTypesWorkClick() throws InterruptedException {
+        Thread.sleep(300);
+        getDriver().findElement(By.xpath("(//*[@class='ant-table-tbody']/.//*[@id='CheckboxComponent'])[3]")).click();
+        getDriver().findElement(By.xpath("(//*[@class='ant-table-tbody']/.//*[@id='CheckboxComponent'])[4]")).click();
+
+        return this;
+    }
+
     @Name("кнопка добавить")
     public TypesWorkSidebarPage btnAddWorkClick() {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
@@ -193,7 +203,7 @@ public class TypesWorkSidebarPage extends BasePage {
     @Name("ввод в поиск вид работ")
     public TypesWorkSidebarPage searchWorkText(String name) {
         getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).click();
-        getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).sendKeys(nameTypesWork);
+        getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).sendKeys(name);
         return this;
     }
 }
