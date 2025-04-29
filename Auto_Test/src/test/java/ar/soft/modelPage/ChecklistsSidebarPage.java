@@ -1,14 +1,17 @@
 package ar.soft.modelPage;
 
+import ar.soft.ChecklistsSidebarTest;
 import ar.soft.element.WaitT;
 import ar.soft.modelPage.base.BasePage;
 import io.qameta.allure.Allure;
+import io.qameta.allure.Step;
 import jdk.jfr.Name;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 
 import static java.lang.Character.getName;
 
@@ -27,8 +30,11 @@ public class ChecklistsSidebarPage extends BasePage {
     }
 
     @Name("ввод имени чек-листа")
-    public ChecklistsSidebarPage inputNameChecklists() {
+    public ChecklistsSidebarPage inputNameChecklists() throws InterruptedException {
+        Thread.sleep(200);
         getDriver().findElement(By.xpath("//*[@class='ant-input-affix-wrapper primaryInput  not-entered']/input")).sendKeys(" Система отопления");
+        Thread.sleep(400);
+
         return this;
     }
 
@@ -82,7 +88,8 @@ public class ChecklistsSidebarPage extends BasePage {
     }
 
     @Name("название чек-листа в Проекте")
-    public String newChecklistsText() {
+    public String newChecklistsText() throws InterruptedException {
+        Thread.sleep(200);
         return getDriver().findElement(By.xpath("//*[@class='ant-dropdown-trigger']")).getText();
     }
 
@@ -200,23 +207,20 @@ public class ChecklistsSidebarPage extends BasePage {
         return this;
     }
 
+    @Name("referenceField")
+    @FindBy(xpath = "//input[@class='ant-input']")
+    public WebElement newNameChecklistsClick2;
+
     @Name("поле ввода названия вида работ")
-    public ChecklistsSidebarPage newNameChecklistsClick(String text) {
-//        getDriver().findElement(By.xpath("//input[@class='ant-input']")).getAttribute("value"), text;
-//        getDriver().findElement(By.xpath("//input[@class='ant-input']")).sendKeys(Keys.CONTROL + "A");
-//        getDriver().findElement(By.xpath("//input[@class='ant-input']")).sendKeys(text);
-//        getDriver().findElement(By.xpath("//input[@class='ant-input']")).sendKeys(Keys.ENTER);
+    public ChecklistsSidebarPage newNameChecklistsClick() {
+        getDriver().findElement(By.xpath("//input[@class='ant-input']")).getAttribute("value");
+        getDriver().findElement(By.xpath("//input[@class='ant-input']")).sendKeys(Keys.CONTROL + "A");
+        getDriver().findElement(By.xpath("//input[@class='ant-input']")).sendKeys();
+        getDriver().findElement(By.xpath("//input[@class='ant-input']")).sendKeys(Keys.ENTER);
+        getDriver().findElement(By.xpath("//input[@class='ant-input']")).click();
 
         return this;
     }
-
-//    public ChecklistsSidebarPage  enterTextFromTextBox(String value) {
-//        Allure.step("Ввод значения  '"  + value + "' в текстовое поле " + getName());
-//        WaitT.elementToBeClickable(this.getWrappedElement());
-//        WaitT.littleWait(1000);
-//        this.getWrappedElement().sendKeys(value);
-//        return this;
-//    }
 
     @Name("поле ввода названия вида работ")
     public ChecklistsSidebarPage inputNewNameChecklistsClick() {
@@ -266,7 +270,7 @@ public class ChecklistsSidebarPage extends BasePage {
     public ChecklistsSidebarPage pluralChecklistsClick() throws InterruptedException {
         Thread.sleep(300);
         getDriver().findElement(By.xpath("(//*[@class='ant-table-tbody']/.//*[@id='CheckboxComponent'])[3]")).click();
-        getDriver().findElement(By.xpath("(//*[@class='ant-table-tbody']/.//*[@id='CheckboxComponent'])[4]")).click();
+        getDriver().findElement(By.xpath("(//*[@class='ant-table-tbody']/.//*[@id='CheckboxComponent'])[2]")).click();
 
         return this;
     }
@@ -280,13 +284,13 @@ public class ChecklistsSidebarPage extends BasePage {
     @Name("созданный вид работ")
     public String getNewChecklistsText() throws InterruptedException {
         Thread.sleep(300);
-        return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])[contains(., '" + nameChecklists + "')]")).getText();
+        return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])[contains(., '" + nameChecklists + " Remove Name')]")).getText();
 
     }
 
     @Name("message удалить вид работ")
     public String getMessageDeleteChecklistsText() throws InterruptedException {
-        Thread.sleep(300);
+        Thread.sleep(500);
         return getDriver().findElement(By.xpath("//*[@class='ant-message-custom-content ant-message-success']")).getText();
 
     }
@@ -297,4 +301,21 @@ public class ChecklistsSidebarPage extends BasePage {
         getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).sendKeys(name);
         return this;
     }
+
+    @Step("Клик на элементе, очистка поля и ввод текста value")
+    public ChecklistsSidebarPage enterTextFromTextValue(WebElement webElement, String value) {
+        Allure.step("Ввод значения  '" + value + "' в текстовое поле ");
+        WaitT.elementToBeClickable(webElement);
+        webElement.click();
+        webElement.clear();
+        webElement.sendKeys(value);
+        return this;
+    }
+
+//    @Step("Создаём новую запись")
+//    public ICardFileWithDifferentTypesOfFieldsPage clickCreateNewLine() {
+//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
+//        createNewLine.should(visible).click();
+//        return page(ICardFileWithDifferentTypesOfFieldsPage.class);
+//    }
 }

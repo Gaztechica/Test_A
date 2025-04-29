@@ -117,7 +117,7 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
-                .inputMail("3hgsi@belgianairways.com")     //test
+                .inputMail("vognofurdu@gufum.com")     //test
 //                .inputMail("armtset18@bk.ru")
                 .inputPassword(PASSWORD)
                 .btnSubmit()
@@ -489,4 +489,7 @@ public class AuthorizationTest extends BaseTest {
 //    public void testUserRole(@Optional("Admin") @NotNull String role, @Optional("true") Boolean isActive) {
 //        Assert.assertTrue(role.equals("Admin") && isActive);
 //    }
+
+
+//    пауза    window.setTimeout(() =>{debugger},4000)
 }
