@@ -28,10 +28,10 @@ public abstract class BaseTest {
 //    public void Armw() {
 //    final String URL = "http://23.105.246.172:5000/login";
 //    }
-//    public static final String URL = "http://23.105.246.201:5000/login";                 //stage
-//    public static final String URL_REGISTRATION = "http://23.105.246.201:5000/registration";                 //stage
-    public static final String URL = "http://23.105.246.172:5000/login";               // test
-    public static final String URL_REGISTRATION = "http://23.105.246.172:5000/registration";               // test
+    public static final String URL = "http://23.105.246.201:5000/login";                 //stage
+    public static final String URL_REGISTRATION = "http://23.105.246.201:5000/registration";                 //stage
+//    public static final String URL = "http://23.105.246.172:5000/login";               // test
+//    public static final String URL_REGISTRATION = "http://23.105.246.172:5000/registration";               // test
 //    public static final String URL_XRBP = "http://31.129.103.215:3000/login";
 
     public static final String INPUT_PASSWORD = "//input[@class='ant-input']";
@@ -41,9 +41,9 @@ public abstract class BaseTest {
 //    public static final String EMAIL = "jartestaw@bk.ru";                          // stage
     public static final String NOT_EMAIL = "";
 //    public static final String EMAIL = "akhilgov@spgr.ru";                          // stage
-    public static final String PASSWORD = "012345678";                                 // test
+    public static final String PASSWORD = "012345678";                                 // test/
     public static final String NOT_PASSWORD = "";
-//    public static final String PASSWORD = "qwerty123";                                // stage
+    public static final String PASSWORD_N = "qwerty123";                                // stage
 
     public final static String USER = "//input[@class='ant-input']";
     public static final String CHECKBOX = "//div[@id='CheckboxComponent']";
@@ -130,8 +130,8 @@ public abstract class BaseTest {
         getDriver().findElement(By.xpath(CHECKBOX)).click();
         getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
         new AuthorizationPege(getDriver())
-                .inputMail(EMAIL)
-                .inputPassword(PASSWORD)
+//                .inputMail(EMAIL)
+//                .inputPassword(PASSWORD)
                 .btnCheckbox()
                 .btnSubmit();
 //        driver.quit();

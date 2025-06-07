@@ -10,23 +10,24 @@ public class TypesWorkSidebarTest extends BaseTest {
     //добавить тесты вид работ создан, изменен .....
 //         сортировка смена цвета стрелки и смена значений
 
-    String nameTypesWork = "новый вид работ";
-    @Test(priority = 2,
+    public final static String NAME_TYPES_WORK = "новый вид работ";
+
+    @Test(priority = 1,
             description = "создание вида работ")
     public void createTypesWork() throws InterruptedException {
         String Work = new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
                 .btnCreateTypesWorkClick()
-                .inputNameTypesWorkClick(nameTypesWork)
+                .inputNameTypesWorkClick(NAME_TYPES_WORK)
                 .unitMeasurementClick()
                 .btnSubmitTypesWorkClick()
                 .getNewWorkText();
 
-        Assert.assertEquals(Work, nameTypesWork);
+        Assert.assertEquals(Work, NAME_TYPES_WORK);
     }
 
-    @Test(priority = 1,
+    @Test(priority = 2,
             description = "добавление вида работ в проект через поиск")
     public void addTypesWork() throws InterruptedException {
 
@@ -34,12 +35,12 @@ public class TypesWorkSidebarTest extends BaseTest {
                 .project()
                 .typesWorkSidebarClick()
                 .btnAddTypesWorkClick()
-                .searchWorkText(nameTypesWork)
+                .searchWorkText(NAME_TYPES_WORK)
                 .btnCheckboxTypesWorkClick()
                 .btnAddWorkClick()
                 .getNewWorkText();
 
-        Assert.assertEquals(Work, nameTypesWork);
+        Assert.assertEquals(Work, NAME_TYPES_WORK);
     }
 
     @Test(priority = 3,
@@ -70,7 +71,7 @@ public class TypesWorkSidebarTest extends BaseTest {
                 .btnSubmitTypesWorkClick()
                 .getNewWorkText();
 
-        Assert.assertEquals(newNameWork, nameTypesWork + " Remove Name");
+        Assert.assertEquals(newNameWork, NAME_TYPES_WORK + " Remove Name");
     }
 
     @Test(priority = 7,
@@ -100,7 +101,7 @@ public class TypesWorkSidebarTest extends BaseTest {
                 .btnAddWorkClick()
                 .getNewWorkText();
 
-        Assert.assertEquals(Work, nameTypesWork);
+        Assert.assertEquals(Work, NAME_TYPES_WORK);
     }
 
     @Test(priority = 5,
@@ -112,10 +113,10 @@ public class TypesWorkSidebarTest extends BaseTest {
                 .typesWorkSidebarClick()
                 .btnRemovePRMTypesWorkClick()
                 .dropRemoveTypesWorkClick()
-                .newNameTypesWorkClick(nameTypesWork)
+                .newNameTypesWorkClick(NAME_TYPES_WORK)
                 .getNewWorkText();
 
-        Assert.assertEquals(delWork, nameTypesWork);
+        Assert.assertEquals(delWork, NAME_TYPES_WORK);
     }
 
     @Test(priority = 10,
@@ -155,10 +156,10 @@ public class TypesWorkSidebarTest extends BaseTest {
         String Work = new TypesWorkSidebarPage(getDriver())
                 .project()
                 .typesWorkSidebarClick()
-                .search(nameTypesWork)
+                .search(NAME_TYPES_WORK)
                 .getNewWorkText();
 
-        Assert.assertEquals(Work, nameTypesWork);
+        Assert.assertEquals(Work, NAME_TYPES_WORK);
     }
 
 

@@ -90,6 +90,15 @@ public class ApiTest {
                         "results.name", Matchers.hasItems("bulbasaur", "ivysaur"));
     }
 
+    @Test
+    public void restAssured2Test() {
+        RestAssured.when().post("http://23.105.246.172:5000/login")
+                .then()
+                .statusCode(200)
+                .body("count", Matchers.equalTo(1302),
+                        "results.name", Matchers.hasItems("bulbasaur", "ivysaur"));
+    }
+
 //    @Test
 
 //    public void testShadowDOM() {
