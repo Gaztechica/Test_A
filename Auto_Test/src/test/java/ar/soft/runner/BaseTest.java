@@ -298,7 +298,6 @@ public abstract class BaseTest {
         driver.switchTo().window(newTab.get(1));
 
         String getPoliticaUser = driver.findElement(GET_USER_MANUAL).getText();
-
         Assert.assertEquals("Руководство пользователя", getPoliticaUser);
     }
 }
