@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="fix TypesWorkSidebarTest">
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TypesWorkLibraryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/SettingsSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/SettingsSidebarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkAdminTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkAdminTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/LibraryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/LibraryPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TypesWorkSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TypesWorkSidebarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RegistrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/AuthorizationPege.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/AuthorizationPege.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -293,7 +288,10 @@
     "TestNG.ProjectTest.sidebarProgect.executor": "Run",
     "TestNG.ProjectTest.sidebarProject.executor": "Run",
     "TestNG.ProjectTest.testHrefPolitiCopi.executor": "Run",
+    "TestNG.RegistrationTest.executor": "Run",
     "TestNG.RegistrationTest.restorePasswordTest.executor": "Run",
+    "TestNG.RegistrationTest.ппbadEmailTest.executor": "Run",
+    "TestNG.RegistrationTest.ррbadEmailTest.executor": "Run",
     "TestNG.RemarcSidebarTest.addRemarkTest.executor": "Run",
     "TestNG.RemarcSidebarTest.executor": "Run",
     "TestNG.RemarcSidebarTest.remarkTest.executor": "Run",
@@ -382,7 +380,7 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "160825",
+    "git-widget-placeholder": "17082025",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test",
     "project.structure.last.edited": "Modules",
@@ -405,7 +403,7 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\cucumber" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TypesWorkSidebarTest">
+  <component name="RunManager" selected="TestNG.RegistrationTest.ррbadEmailTest">
     <configuration name="Dialogs" type="TestNG" nameIsGenerated="true">
       <module name="AutoTest" />
       <shortenClasspath name="NONE" />
@@ -481,6 +479,77 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="RegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.RegistrationTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest.ррbadEmailTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.RegistrationTest" />
+      <option name="METHOD_NAME" value="ррbadEmailTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest.ппbadEmailTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.RegistrationTest" />
+      <option name="METHOD_NAME" value="ппbadEmailTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="RegistrationTest.restorePasswordTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.RegistrationTest" />
+      <option name="METHOD_NAME" value="restorePasswordTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TypesWorkSidebarTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -498,85 +567,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TypesWorkSidebarTest.addCheckboxTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
-      <option name="METHOD_NAME" value="addCheckboxTypesWork" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TypesWorkSidebarTest.addTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
-      <option name="METHOD_NAME" value="addTypesWork" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TypesWorkSidebarTest.deleteBasketTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
-      <option name="METHOD_NAME" value="deleteBasketTypesWork" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="TypesWorkSidebarTest.deleteTypesWork" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.TypesWorkSidebarTest" />
-      <option name="METHOD_NAME" value="deleteTypesWork" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.RegistrationTest.ррbadEmailTest" />
+        <item itemvalue="TestNG.RegistrationTest.restorePasswordTest" />
+        <item itemvalue="TestNG.RegistrationTest.ппbadEmailTest" />
+        <item itemvalue="TestNG.RegistrationTest" />
         <item itemvalue="TestNG.TypesWorkSidebarTest" />
-        <item itemvalue="TestNG.TypesWorkSidebarTest.deleteBasketTypesWork" />
-        <item itemvalue="TestNG.TypesWorkSidebarTest.deleteTypesWork" />
-        <item itemvalue="TestNG.TypesWorkSidebarTest.addTypesWork" />
-        <item itemvalue="TestNG.TypesWorkSidebarTest.addCheckboxTypesWork" />
       </list>
     </recent_temporary>
   </component>
@@ -595,14 +592,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00072" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1713088711606</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1713088711606</updated>
     </task>
     <task id="LOCAL-00073" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -988,7 +977,15 @@
       <option name="project" value="LOCAL" />
       <updated>1755333541341</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="fix TypesWorkSidebarTest + new TypesWork">
+      <option name="closed" value="true" />
+      <created>1755415267912</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1755415267913</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1034,7 +1031,9 @@
     <MESSAGE value="allure" />
     <MESSAGE value="fix LogFilePage" />
     <MESSAGE value="fix TypesWorkSidebarTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix TypesWorkSidebarTest" />
+    <MESSAGE value="Merge pull request #114 from Gaztechica/07062025&#10;&#10;i" />
+    <MESSAGE value="fix TypesWorkSidebarTest + new TypesWork" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix TypesWorkSidebarTest + new TypesWork" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

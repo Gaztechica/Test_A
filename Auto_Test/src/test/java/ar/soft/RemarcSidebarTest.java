@@ -12,7 +12,8 @@ public class RemarcSidebarTest extends BaseTest {
 
 
 
-    @Test
+    @Test(priority = 1,
+            description = "создать новое Замечаниe")
     public void addRemarkTest() {
         new RemarkSidebarPage(getDriver())
                 .project()

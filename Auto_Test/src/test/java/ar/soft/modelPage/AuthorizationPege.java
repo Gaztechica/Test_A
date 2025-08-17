@@ -26,8 +26,15 @@ public class AuthorizationPege extends BasePage {
         return this;
     }
 
-    @Name("кнопка Продолжить")
+    @Name("кнопка Зарегистрироваться")
     public AuthorizationPege btnContinue() {
+        getDriver().findElement(By.xpath("//button[@type='submit'][contains(.,'Зарегистрироваться')]")).click();
+
+        return this;
+    }
+
+    @Name("кнопка Продолжить")
+    public AuthorizationPege btnContinueR() {
         getDriver().findElement(By.xpath("//button[@type='submit'][contains(.,'Продолжить')]")).click();
 
         return this;
@@ -97,12 +104,12 @@ public class AuthorizationPege extends BasePage {
 
     @Name("GET_ERROR_TEXT")
     public String getEmailError() {
-        return getDriver().findElement(By.xpath("//input[@style='border-color: rgb(255, 0, 0);']")).getAttribute("style");
+        return getDriver().findElement(By.xpath("//input[@id='basic_email']")).getAttribute("border-color: #ff4d4f;");
     }
 
     @Name("Пользователь не найден, попробуйте снова")
     public String getRestoreEmailError() {
-        return getDriver().findElement(By.xpath("//div[@class='ant-typography p_r RestorePassword__form-userNotFound']")).getText();
+        return getDriver().findElement(By.xpath("//div[@class='ant-message-custom-content ant-message-error']")).getText();
     }
 
     @Name("администратора, который не добавлен в проект")
