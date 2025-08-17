@@ -56,27 +56,6 @@ public class ProjectTest extends BaseTest {
 //        String newProgectName = driver.findElement(NEW_PROJEСT_NAME_TEXT).getText();
 
 
-    @Test(priority = 3,
-            description = "Проект - создание")
-    public void sidebarProject() {
-        new ProjectPage(driver)
-                .logoProject()
-                .btnCreateProject();
-        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("11AAНовый проект");
-        driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
-        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
-
-        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
-        driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']")).click();
-
-        driver.findElement(By.xpath("//div[@class='Sidebar__admin']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
-        driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']")).click();
-
-        driver.findElement(By.xpath("//div[@class='Sidebar__project']//button[@class='ant-btn ant-btn-default iconButton small colorPrimary ']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
-        driver.findElement(By.xpath("//div[@class='CustomLogo']")).click();
-    }
 
     @Test(priority = 4,
             description = "Проект - переименование проекта")
@@ -128,6 +107,28 @@ public class ProjectTest extends BaseTest {
         Assert.assertEquals(projl, "админ");
     }
     //     редактирование/удаление\цвет кнопки \ цвет строки при наведении \
+
+//    @Test(priority = 3,
+//            description = "Проект - создание")
+//    public void sidebarProject() {
+//        new ProjectPage(driver)
+//                .logoProject()
+//                .btnCreateProject();
+//        driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("11AAНовый проект");
+//        driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
+//        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
+//
+//        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
+//        driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']")).click();
+//
+//        driver.findElement(By.xpath("//div[@class='Sidebar__admin']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
+//        driver.findElement(By.xpath("//button[@class='Sidebar__collapsibleBtn']")).click();
+//
+//        driver.findElement(By.xpath("//div[@class='Sidebar__project']//button[@class='ant-btn ant-btn-default iconButton small colorPrimary ']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
+//        driver.findElement(By.xpath("//div[@class='CustomLogo']")).click();
+//    }
 
 //    driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
 //        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();

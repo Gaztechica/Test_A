@@ -38,13 +38,26 @@ public class BasePage extends BaseModel {
         return new RemarkSidebarPage(getDriver());
     }
 
+    /**
+     * поменял из-за пароля
+     */
+
+//    @Name("Электронная почта")
+//    public BasePage inputMail(String mail) {
+////    public BasePage inputMail() {
+//        getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys(mail);
+//
+////        return new AutorisaitionPege(getDriver());
+//        return this;
+//    }
+
     @Name("Электронная почта")
-    public BasePage inputMail(String mail) {
+    public AuthorizationPege inputMail(String mail) {
 //    public BasePage inputMail() {
         getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys(mail);
 
 //        return new AutorisaitionPege(getDriver());
-        return this;
+        return new AuthorizationPege(getDriver());
     }
 
     @Name("иконка ARMobile")
