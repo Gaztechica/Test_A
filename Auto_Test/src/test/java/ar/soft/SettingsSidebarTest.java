@@ -32,7 +32,7 @@ public class SettingsSidebarTest extends BaseTest {
     }
     @Test(priority = 2,
             description = "отмена удалить проект")
-    public void cancelDeleteProjectTest() {
+    public void cancelDeleteProjectTest() throws InterruptedException {
         new BasePage(getDriver())
                 .project()
                 .settingsSidebarClick()
@@ -45,7 +45,7 @@ public class SettingsSidebarTest extends BaseTest {
 
     @Test(priority = 3,
             description = "удалить проект")
-    public void deleteProgectTest() {
+    public void deleteProgectTest() throws InterruptedException {
        String getMessageDelete = new BasePage(getDriver())
                 .project()
                 .settingsSidebarClick()
