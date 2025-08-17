@@ -6,8 +6,8 @@ import org.openqa.selenium.support.FindBy;
 
 public class LibraryPage extends BasePage {
 
-    @FindBy(xpath = "//span[@class='ant-menu-title-content'][contains(.,'Библиотека')]")
-    private WebElement libraryClick;
+//    @FindBy(xpath = "//span[@class='ant-menu-title-content'][contains(.,'Библиотека')]")
+//    private WebElement libraryClick;
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary Checklists__extraButtonChecklict-create']")
     private WebElement buttonCheckListCreate;
@@ -60,10 +60,10 @@ public class LibraryPage extends BasePage {
         super(driver);
     }
 
-    public LibraryPage libraryClick() {
-        libraryClick.click();
-        return this;
-    }
+//    public LibraryPage libraryClick() {
+//        libraryClick.click();
+//        return this;
+//    }
 
     public LibraryPage buttonChecListCreateClick() {
         buttonCheckListCreate.click();

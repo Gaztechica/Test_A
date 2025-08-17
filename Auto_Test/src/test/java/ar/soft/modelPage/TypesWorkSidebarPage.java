@@ -2,11 +2,10 @@ package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
 import jdk.jfr.Name;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
+
+import static ar.soft.TypesWorkSidebarTest.NAME_TYPES_WORK3;
 
 public class TypesWorkSidebarPage extends BasePage {
 
@@ -16,9 +15,9 @@ public class TypesWorkSidebarPage extends BasePage {
         super(driver);
     }
 
-    @Name("кнопка создать")
-    public TypesWorkSidebarPage btnCreateTypesWorkClick() {
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default secondaryButton big colorPrimary ']")).click();
+    @Name("чек бокс добавление вида работ")
+    public TypesWorkSidebarPage btnCheckboxAddTypesWorkClick() {
+        getDriver().findElement(By.xpath("//*[@class='ant-table-row ant-table-row-level-0'][contains(., '" + nameTypesWork + "')]//*[@id='CheckboxComponent-check']")).click();
 
         return this;
     }
@@ -33,7 +32,8 @@ public class TypesWorkSidebarPage extends BasePage {
     @Name("кнопка редактировать ПKM вид работ")
     public TypesWorkSidebarPage btnRemovePRMTypesWorkClick() {
         Actions actions = new Actions(getDriver());
-        WebElement btnElement = getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., '"+ nameTypesWork +" Remove Name')]"));
+        WebElement btnElement = getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., '"+ NAME_TYPES_WORK3 +"')]"));
+//        WebElement btnElement = getDriver().findElement(By.xpath("//div[@class='ant-dropdown-trigger'][contains(., '"+ nameTypesWork +" Remove Name')]"));
         actions.contextClick(btnElement)
                 .perform();
         return this;
@@ -80,7 +80,8 @@ public class TypesWorkSidebarPage extends BasePage {
     @Name("кнопка отменить удалить вид работ")
     public TypesWorkSidebarPage btnCancelDeleteTypesWorkClick() throws InterruptedException {
         Thread.sleep(100);
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']/span[contains(.,'Отменить')]")).click();
+//        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']/span[contains(.,'Отменить')]")).click();
+        getDriver().findElement(By.xpath("(//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']/span[contains(.,'Отменить')])[2]")).click();
 
         return this;
     }
@@ -152,7 +153,48 @@ public class TypesWorkSidebarPage extends BasePage {
     }
     @Name("кнопка Добавить")
     public TypesWorkSidebarPage btnSubmitTypesWorkClick() {
-        getDriver().findElement(By.xpath("//button[@type='submit']")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-btn ant-btn-primary primaryButton big colorPrimary '][contains(., 'Добавить')]")).click();
+//        getDriver().findElement(By.xpath("//*[@class='AddTypesOfWorkModal__buttons'][contains(., 'Добавить')]")).click();
+
+        return this;
+    }
+
+    @Name("кнопка Добавить")
+    public TypesWorkSidebarPage btnSubmitSaveTypesWorkClick() {
+        getDriver().findElement(By.xpath("//*[@class='ant-btn ant-btn-primary primaryButton big colorPrimary '][contains(., 'Сохранить')]")).click();
+//        getDriver().findElement(By.xpath("//*[@class='AddTypesOfWorkModal__buttons'][contains(., 'Добавить')]")).click();
+
+        return this;
+    }
+
+//    @Name("кнопка Добавить")
+//    public TypesWorkSidebarPage btnSubmitTypeWorkClick() {
+//        // Находим элемент кнопки "submit"
+//        WebElement submitButton = getDriver().findElement(By.xpath("//button[@type='submit']//*[contains(., 'Добавить')]"));
+//
+//        // Используем JavascriptExecutor для клика по элементу
+//        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+//        js.executeScript("arguments[0].click();", submitButton);
+//
+//        // Находим элемент "Добавить" и также нажимаем на него с помощью JavascriptExecutor
+//        WebElement addButton = getDriver().findElement(By.xpath("//*[@class='AddTypesOfWorkModal__buttons'][contains(., 'Добавить')]"));
+//        js.executeScript("arguments[0].click();", addButton);
+//
+//        return this;
+//    }
+
+    @Name("кнопка Добавить")
+    public TypesWorkSidebarPage btnSubmitTypeWorkClick() {
+        // Находим элемент кнопки "submit"
+        WebElement submitButton = getDriver().findElement(By.xpath("//*[@class='AddTypesOfWorkModal__buttons']//*[contains(., 'Добавить')]"));
+
+        // Используем JavascriptExecutor для клика по элементу
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", submitButton);
+
+        // Находим элемент "Добавить" и также нажимаем на него с помощью JavascriptExecutor
+//        WebElement addButton = getDriver().findElement(By.xpath("//*[@class='AddTypesOfWorkModal__buttons'][contains(., 'Добавить')]"));
+//        js.executeScript("arguments[0].click();", addButton);
 
         return this;
     }
@@ -166,7 +208,8 @@ public class TypesWorkSidebarPage extends BasePage {
     @Name("чек бокс вид работ")
     public TypesWorkSidebarPage btnCheckboxTypesWorkClick() throws InterruptedException {
         Thread.sleep(300);
-        getDriver().findElement(By.xpath("//*[@class='ant-table-tbody']/*[contains(.,'" + nameTypesWork + "')]/.//*[@id='CheckboxComponent'] | (//*[@class='ant-table-tbody']/*[contains(.,'" + nameTypesWork + "')]/.//*[@id='CheckboxComponent'])[2] | (//*[@class='ant-table-tbody']/*[contains(.,'" + nameTypesWork + "')]/.//*[@id='CheckboxComponent'])[3]")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-table-row ant-table-row-level-0'][contains(., '" + NAME_TYPES_WORK3 + "')]//*[@id='CheckboxComponent-check']" +
+                "| (//*[@class='ant-table-row ant-table-row-level-0'][contains(., 'создание вида работ')]//*[@id='CheckboxComponent-check'])[2]")).click();
 
         return this;
     }
@@ -174,8 +217,8 @@ public class TypesWorkSidebarPage extends BasePage {
     @Name("чек бокс множественное добавление вид работ")
     public TypesWorkSidebarPage pluralTypesWorkClick() throws InterruptedException {
         Thread.sleep(300);
-        getDriver().findElement(By.xpath("(//*[@class='ant-table-tbody']/.//*[@id='CheckboxComponent'])[3]")).click();
-        getDriver().findElement(By.xpath("(//*[@class='ant-table-tbody']/.//*[@id='CheckboxComponent'])[4]")).click();
+        getDriver().findElement(By.xpath("(//*[@class='ant-table-tbody']/.//*[@id='CheckboxComponent'])[1]")).click();
+        getDriver().findElement(By.xpath("(//*[@class='ant-table-tbody']/.//*[@id='CheckboxComponent'])[2]")).click();
 
         return this;
     }
@@ -193,6 +236,20 @@ public class TypesWorkSidebarPage extends BasePage {
 
     }
 
+    @Name("созданный вид работ")
+    public String getNewWorkRemoveText() throws InterruptedException {
+        Thread.sleep(300);
+        return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])[contains(., '" + NAME_TYPES_WORK3 + " Remove Name" +"')]")).getText();
+
+    }
+
+    @Name("созданный вид работ")
+    public String getNewWorkText3() throws InterruptedException {
+        Thread.sleep(300);
+        return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])[contains(., '" + NAME_TYPES_WORK3 + "')]")).getText();
+
+    }
+
     @Name("message удалить вид работ")
     public String getMessageDeleteWorkText() throws InterruptedException {
         Thread.sleep(300);
@@ -202,8 +259,9 @@ public class TypesWorkSidebarPage extends BasePage {
 
     @Name("ввод в поиск вид работ")
     public TypesWorkSidebarPage searchWorkText(String name) {
-        getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).click();
-        getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).sendKeys(name);
+        getDriver().findElement(By.xpath("//input[@class='ant-input ant-input-lg']")).sendKeys(name);
+//        getDriver().findElement(By.xpath("//*[@class='ant-table-row ant-table-row-level-0'][contains(., '" + nameTypesWork + "')]//*[@id='CheckboxComponent-check']")).click();
+//        getDriver().findElement(By.xpath("(//input[@class='ant-input'])[2]")).sendKeys(name);
         return this;
     }
 }

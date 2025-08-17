@@ -94,9 +94,24 @@ public class BasePage extends BaseModel {
 
     @Name("открыть Виды работ")
     public TypesWorkSidebarPage typesWorkSidebarClick() {
-        getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Виды работ')]")).click();
+        getDriver().findElement(By.xpath("//div[@class='ant-tabs-tab'][contains(.,'Виды работ')]")).click();
 
         return new TypesWorkSidebarPage(getDriver());
+    }
+
+    @Name("открыть Виды работ в библиотеке")
+    public TypesWorkLibraryPage typesWorkLibraryClick() {
+        getDriver().findElement(By.xpath("//*[@role='tab'][contains(.,'Виды работ')]")).click();
+
+        return new TypesWorkLibraryPage(getDriver());
+    }
+
+    @Name("открыть Виды библиотеку")
+    public LibraryPage libraryClick() {
+        getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Библиотека')]")).click();
+
+        return new LibraryPage(getDriver());
+
     }
 
     @Name("открыть Пользователи")
@@ -114,7 +129,8 @@ public class BasePage extends BaseModel {
     }
 
     @Name("открыть Настройки")
-    public SettingsSidebarPage settingsSidebarClick() {
+    public SettingsSidebarPage settingsSidebarClick() throws InterruptedException {
+        Thread.sleep(200);
         getDriver().findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')]")).click();
 
         return new SettingsSidebarPage(getDriver());
