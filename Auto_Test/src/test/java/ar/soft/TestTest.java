@@ -17,6 +17,7 @@ public class TestTest extends BaseTest {
                  .btnCheckboxUserClick();
         testPage.newNameCheckClick2.click();
         ActionT.OneClick.clickAndEnterTextDeleteLineBreak(testPage.newNameCheckClick,  " Remove Name");
+        ActionT.OneClick.click(testPage.newNameCheckClick);
 
     }
 

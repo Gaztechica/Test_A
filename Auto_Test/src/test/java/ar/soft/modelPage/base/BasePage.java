@@ -4,6 +4,8 @@ import ar.soft.modelPage.*;
 import jdk.jfr.Name;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
+import ru.qa.methods.ActionT;
+
 import java.util.concurrent.TimeUnit;
 import static ar.soft.runner.BaseTest.*;
 
@@ -114,6 +116,7 @@ public class BasePage extends BaseModel {
 
     @Name("открыть Виды работ в библиотеке")
     public TypesWorkLibraryPage typesWorkLibraryClick() {
+//        ActionT.OneClick.click("//*[@role='tab'][contains(.,'Виды работ')]");
         getDriver().findElement(By.xpath("//*[@role='tab'][contains(.,'Виды работ')]")).click();
 
         return new TypesWorkLibraryPage(getDriver());

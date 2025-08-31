@@ -1,7 +1,6 @@
 package ar.soft;
 
 import ar.soft.modelPage.TypesWorkLibraryPage;
-import ar.soft.modelPage.TypesWorkSidebarPage;
 import ar.soft.runner.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -174,20 +173,20 @@ public class TypesWorkAdminTest extends BaseTest {
         Assert.assertEquals(delWork, "Вид работ успешно удалены из проекта");
     }
 
-//    @Test(priority = 12,
-//            description = "перебор поля единицы измерения вида работ")
-//    public void createTypesWorkAdmin6() throws InterruptedException {
-//        String Work2 = new TypesWorkLibraryPage(getDriver())
-//                .libraryClick()
-//                .typesWorkLibraryClick()
-//                .btnCreateTypesWorkClick()
-//                .inputNameTypesWorkClick(NAME_TYPES_WORK3)
-//                .unitMeasurementClick()
-//                .btnSubmitTypesWorkClick()
-//                .getNewWorkText();
-//
-//        Assert.assertEquals(Work2, NAME_TYPES_WORK3);
-//    }
+    @Test(priority = 12,
+            description = "перебор поля единицы измерения вида работ")
+    public void createTypesWorkAdmin6() throws InterruptedException {
+        String Work2 = new TypesWorkLibraryPage(getDriver())
+                .libraryClick()
+                .typesWorkLibraryClick()
+                .btnCreateTypesWorkClick()
+                .inputNameTypesWorkClick(NAME_TYPES_WORK3)
+                .unitMeasurementClick()
+                .btnSubmitTypesWorkClick()
+                .getNewWorkText();
+
+        Assert.assertEquals(Work2, NAME_TYPES_WORK3);
+    }
 
 
 
