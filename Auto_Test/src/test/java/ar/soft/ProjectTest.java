@@ -2,10 +2,19 @@ package ar.soft;
 
 import ar.soft.modelPage.ProjectPage;
 import ar.soft.runner.BaseTest;
-import org.junit.Assert;
-//import org.junit.Test;
-import org.openqa.selenium.*;
+//import org.junit.Assert;
+import io.qameta.allure.Allure;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
+import org.testng.Assert;
+import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
+import ru.qa.elements.Button;
+import ru.qa.methods.WaitT;
+
+import static java.lang.Character.getName;
+
 
 public class ProjectTest extends BaseTest {
 
@@ -55,9 +64,7 @@ public class ProjectTest extends BaseTest {
 
 //        String newProgectName = driver.findElement(NEW_PROJEСT_NAME_TEXT).getText();
 
-
-
-    @Test(priority = 4,
+    @Test(priority = 3,
             description = "Проект - переименование проекта")
     public void removeProject() {
         new ProjectPage(driver)
@@ -100,12 +107,29 @@ public class ProjectTest extends BaseTest {
     public void searcherProject() {
         String projl = new ProjectPage(getDriver())
                 .logoProject()
-                .searchProject()
-                .inputSearchNameProject().searchProjectText();
+//                .searchProject()
+                .selectCompletedClick()
+                .inputSearchNameProject()
+                .searchProjectText();
 
 
         Assert.assertEquals(projl, "админ");
     }
+
+//    @Test(priority = 7,
+//            description = "Проект - поиск проекта")
+//    public void selectCompletedProject() {
+//        ProjectPage projectPage = new ProjectPage(getDriver());
+//        projectPage.selectCompletedClick.
+////                ActionT.OneClick.clickClearEnterValue2(iTableComponentPropertiesPage.blueEditorTextBox, "10");
+//        projectPage.selectCompletedClick.clickElement();
+//
+////        Assert.assertEquals(projl, "админ");
+//    }
+
+
+
+
     //     редактирование/удаление\цвет кнопки \ цвет строки при наведении \
 
 //    @Test(priority = 3,

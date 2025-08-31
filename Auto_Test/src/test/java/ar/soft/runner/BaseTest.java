@@ -28,7 +28,7 @@ public abstract class BaseTest {
 //    public void Armw() {
 //    final String URL = "http://23.105.246.172:5000/login";
 //    }
-//    public static final String URL = "http://23.105.246.201:5000/login";                 //stage
+//    public static final String URL = "http://46.173.28.231:3000/login";                 //stage
 //    public static final String URL_REGISTRATION = "http://23.105.246.201:5000/registration";                 //stage
     public static final String URL = "http://31.129.109.20:5000/login";               // test
     public static final String URL_REGISTRATION = "http://31.129.109.20:5000/registration";               // test

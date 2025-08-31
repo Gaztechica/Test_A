@@ -1,12 +1,20 @@
 package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
+import io.qameta.allure.Allure;
 import jdk.jfr.Name;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.qa.elements.Button;
+import ru.qa.methods.ActionT;
+import ru.qa.methods.WaitT;
+
+import javax.print.attribute.standard.MediaSize;
+
+import static java.lang.Character.getName;
 
 public class ProjectPage extends BasePage {
 
@@ -25,6 +33,22 @@ public class ProjectPage extends BasePage {
 //        btnCreateProject.click();
 //        return this;
 //    }
+
+
+
+
+
+//    @Name("кнопка Завершенные")
+//    @FindBy(xpath = "//div[@class='ant-tabs-tab-btn'][contains(., 'Завершенные')]")
+//    private WebElement selectCompletedClick;
+
+    @Name("кнопка Завершенные")
+    public ProjectPage selectCompletedClick() {
+        ActionT.OneClick.click("//div[@class='ant-tabs-tab-btn'][contains(., 'Завершенные')]");
+
+//        selectCompletedClick();
+        return this;
+    }
 
     @Name("кнопка создать Проект")
     public ProjectPage btnCreateProject() {

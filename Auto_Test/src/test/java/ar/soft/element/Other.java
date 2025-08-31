@@ -3,8 +3,8 @@
 //import io.qameta.allure.Allure;
 //import io.qameta.allure.Step;
 //import org.openqa.selenium.interactions.Actions;
-//import ru.cbgr.qa.turbo.methods.WaitT;
-//import ru.cbgr.qa.turbo.service.TurboNavigation;
+//import ru.cbgr.qa.methods.ru.qa.WaitT;
+//import ru.cbgr.qa.service.ru.qa.TurboNavigation;
 //import io.qameta.allure.Allure;
 //import io.qameta.allure.Step;
 //import org.openqa.selenium.interactions.Actions;
