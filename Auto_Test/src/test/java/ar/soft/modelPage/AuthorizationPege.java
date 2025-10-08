@@ -34,6 +34,13 @@ public class AuthorizationPege extends BasePage {
     }
 
     @Name("кнопка Продолжить")
+    public AuthorizationPege btnContinues() {
+        getDriver().findElement(By.xpath("//button[@type='submit'][contains(.,'Продолжить')]")).click();
+
+        return this;
+    }
+
+    @Name("кнопка Продолжить")
     public AuthorizationPege btnContinueR() {
         getDriver().findElement(By.xpath("//button[@type='submit'][contains(.,'Продолжить')]")).click();
 
@@ -104,12 +111,22 @@ public class AuthorizationPege extends BasePage {
 
     @Name("GET_ERROR_TEXT")
     public String getEmailError() {
-        return getDriver().findElement(By.xpath("//input[@id='basic_email']")).getAttribute("border-color: #ff4d4f;");
+        return getDriver().findElement(By.xpath("//input[@id='RestorePassword_email']")).getAttribute("border-color: #ff4d4f;");
+    }
+
+    @Name("GET_ERROR_TEXT")
+    public String getPasswordError() {
+        return getDriver().findElement(By.xpath("//input[@class='ant-input']")).getAttribute("border-color: #ff4d4f;");
+    }
+
+    @Name("GET_ERROR_TEXT")
+    public String getEmailError2() {
+        return getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getAttribute("border-color: #ff4d4f;");
     }
 
     @Name("Пользователь не найден, попробуйте снова")
     public String getRestoreEmailError() {
-        return getDriver().findElement(By.xpath("//div[@class='ant-message-custom-content ant-message-error']")).getText();
+        return getDriver().findElement(By.xpath("//div[@class='ant-typography p_r RestorePassword__form-userNotFound']")).getText();
     }
 
     @Name("администратора, который не добавлен в проект")
