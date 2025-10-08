@@ -1,4 +1,4 @@
-package ar.soft;
+package ar.soft.AT.ProjectSettings;
 
 import ar.soft.modelPage.SettingsSidebarPage;
 import ar.soft.modelPage.base.BasePage;
@@ -7,7 +7,7 @@ import org.testng.Assert;
 //import org.junit.Assert;
 import org.testng.annotations.Test;
 
-public class SettingsSidebarTest extends BaseTest {
+public class SettingsProjectTest extends BaseTest {
 
     @Test(priority = 1,
             description = "изменить проект")
@@ -56,6 +56,5 @@ public class SettingsSidebarTest extends BaseTest {
 
         Assert.assertEquals(getMessageDelete, "Проект успешно удален");
     }
-
 
 }
