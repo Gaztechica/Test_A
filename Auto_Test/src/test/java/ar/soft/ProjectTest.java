@@ -69,16 +69,15 @@ public class ProjectTest extends BaseTest {
     public void removeProject() {
         new ProjectPage(driver)
                 .btnCreateProject();
+
         driver.findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("1Новый проект");
         driver.findElement(By.xpath("//input[@id='CreateProjectForm_city']")).sendKeys("Самара");
 //
 //        driver.findElement(By.xpath("//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary '][contains(.,'Отменить')]")).click();
-
 //        driver.findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])[2]")).click();
 //        driver.findElement(By.xpath("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r']")).click();
 //        driver.findElement(NEW_PROJEСT_NAME_TEXT).click();
 //        driver.findElement(By.xpath("//div[@class='CustomLogo']")).click();
-
 
         driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_country\"]")).sendKeys("РФ");
         driver.findElement(By.xpath("//*[@id=\"CreateProjectForm_street\"]")).sendKeys("Победы");
@@ -103,6 +102,63 @@ public class ProjectTest extends BaseTest {
     }
 
     @Test(priority = 6,
+            description = "Завершение Проекта")
+    public void completedProject() {
+
+        String sendProject = new ProjectPage(getDriver())
+//                .project()
+                .ellipsisProject()
+                .ellipsisProjectClick()
+                .inputPasswordProject()
+                .sendProjectText();
+
+        Assert.assertEquals(sendProject, "Проект успешно завершен");
+    }
+
+    @Test(priority = 7,
+            description = "Восстановить Проект")
+    public void restoreProject() throws InterruptedException {
+
+        String sendProject = new ProjectPage(getDriver())
+                .restoreProjectClick()
+                .ellipsisProject()
+                .ellipsisProjectClick()
+                .ellipsisProjectClick2()
+                .sendProjectText2();
+
+        Assert.assertEquals(sendProject, "Проект успешно восстановлен");
+    }
+
+    @Test(priority = 8,
+            description = "Завершение Проекта ПКМ")
+    public void completedPKMProject() {
+
+        String sendProject = new ProjectPage(getDriver())
+//                .project()
+//                .ellipsisProject()
+                .restorePKMProjectClick()
+                .ellipsisProjectClick()
+                .inputPasswordProject()
+                .sendProjectText();
+
+        Assert.assertEquals(sendProject, "Проект успешно завершен");
+    }
+
+    @Test(priority = 9,
+            description = "Восстановить Проект ПКМ")
+    public void restorePKMProject() throws InterruptedException {
+
+        String sendProject = new ProjectPage(getDriver())
+                .restoreProjectClick()
+                .ellipsisPKMProjectClick()
+                .ellipsisProjectClick()
+                .ellipsisProjectClick2()
+                .sendProjectText2();
+
+        Assert.assertEquals(sendProject, "Проект успешно восстановлен");
+    }
+
+    @Test(priority = 22,
             description = "Проект - поиск проекта")
     public void searcherProject() {
         String projl = new ProjectPage(getDriver())

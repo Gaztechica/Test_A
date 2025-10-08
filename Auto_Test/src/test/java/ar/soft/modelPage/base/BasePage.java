@@ -159,6 +159,14 @@ public class BasePage extends BaseModel {
         return new ProjectPage(getDriver());
     }
 
+    @Name("троеточие Проекта")
+    public ProjectPage ellipsisProject() {
+        getDriver().findElement(By.xpath("//*[@class='ant-table-row ant-table-row-level-0'][contains(.,'11AAНовый проект')]//*[@class='Checklists__info-iconBlock']")).click();
+
+        return new ProjectPage(getDriver());
+    }
+
+
     @Name("Пользователь не найден, попробуйте снова")
     public String getRegistrationText() {
         return getDriver().findElement(By.xpath("//h3[@class='ant-typography h3_sb Login__title-text']")).getText();
