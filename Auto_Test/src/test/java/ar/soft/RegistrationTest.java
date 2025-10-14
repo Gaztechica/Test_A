@@ -19,13 +19,13 @@ public class RegistrationTest extends BaseTest {
 
     @Test(priority = 2,
             description = "Ввод некорректной почты при регистрации - красная рамка")
-    public void ппbadEmailTest() {
+    public void badEmailTest() {
         driver.get(URL_REGISTRATION);
          new AuthorizationPege(getDriver())
                 .inputMail("armtset.qwe")
                 .btnCheckbox()
                 .btnContinue()
-                .getEmailError();
+                .getEmailError3();
 //        String getRestoreEmailError = new AuthorizationPege(getDriver())             возможно убрали функционал
 //                .getRestoreEmailError();
 
@@ -41,7 +41,7 @@ public class RegistrationTest extends BaseTest {
                 .inputMail(EMAIL)
                 .btnCheckbox()
                 .btnContinue()
-                .getRestoreEmailError();
+                .getRestoreEmailError2();
 
         Assert.assertEquals("Пользователь с таким e-mail уже существует", "Пользователь с таким e-mail уже существует");
     }
@@ -58,7 +58,6 @@ public class RegistrationTest extends BaseTest {
                 .btnContinueR()
                 .getEmailPas();
 
-//        Assert.assertEquals(getEmail, "Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");
         Assert.assertEquals(getEmail, "Мы отправили по адресу " + EMAIL + " ссылку для восстановления доступа");
     }
 
@@ -72,10 +71,9 @@ public class RegistrationTest extends BaseTest {
                 .forgotYourPassword()
                 .inputMailRestore(EMAIL)
                 .btnCheckbox()
-                .btnContinue()
+                .btnContinues()
                 .getEmailPas();
 
-//        Assert.assertEquals(getEmail, "Мы отправили по адресу f.ff.1980@list.ru ссылку для восстановления доступа");            //test
         Assert.assertEquals(getEmail, "Мы отправили по адресу " + EMAIL + " ссылку для восстановления доступа");
         Thread.sleep(61000);
         String againGetEmail = new AuthorizationPege(getDriver())

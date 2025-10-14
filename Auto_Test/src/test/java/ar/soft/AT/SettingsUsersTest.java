@@ -20,7 +20,7 @@ public class SettingsUsersTest extends BaseTest {
         SettingsUsersPage settingsUsersPage = new SettingsUsersPage(getDriver());
         settingsUsersPage.usersClick.click();
         settingsUsersPage.addButtonClick.click();
-        settingsUsersPage.searchUsersClick.sendKeys("наблюдатель");
+        settingsUsersPage.searchUsersClick.sendKeys("a123EvgenTest");
         settingsUsersPage.checkUsersClick.click();
         settingsUsersPage.btnButtonClick.click();
         Thread.sleep(300);
@@ -36,11 +36,29 @@ public class SettingsUsersTest extends BaseTest {
                 .settingsSidebarClick();
         SettingsUsersPage settingsUsersPage = new SettingsUsersPage(getDriver());
         settingsUsersPage.usersClick.click();
-        Thread.sleep(500);
-
         settingsUsersPage.newUsersCheck2.click();
+        Thread.sleep(800);
+        settingsUsersPage.btnButtonDeleteClick.click();
+
+        AssertionT.Element.elementDisplayed(settingsUsersPage.messageCheck);
+//        Thread.sleep(500);
+//        AssertionT.Element.elementNotAttachedToPage(settingsUsersPage.newUsersCheck);
+    }
+
+    @Test(priority = 3,
+            description = "множественное приглашение пользователя в проект")
+    public void addUsersProject() throws InterruptedException {
+        new SettingsUsersPage(getDriver())
+                .project()
+                .settingsSidebarClick();
+        SettingsUsersPage settingsUsersPage = new SettingsUsersPage(getDriver());
+        settingsUsersPage.usersClick.click();
+        settingsUsersPage.addButtonClick.click();
+        settingsUsersPage.searchUsersClick.sendKeys("Наблюдательный");
+        settingsUsersPage.checkUsersClick.click();
+        settingsUsersPage.btnButtonClick.click();
         Thread.sleep(300);
 
-        AssertionT.Element.elementIsInvisibilityOnPage(settingsUsersPage.newUsersCheck);
+        AssertionT.Element.elementDisplayed(settingsUsersPage.newUsersCheck);
     }
 }
