@@ -6,8 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="fix RegistrationTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/SettingsUsersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/SettingsUsersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AuthorizationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RegistrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/AuthorizationPege.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/AuthorizationPege.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectSettings/SettingsUsersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectSettings/SettingsUsersPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,6 +294,8 @@
     "TestNG.ProjectTest.sidebarProgect.executor": "Run",
     "TestNG.ProjectTest.sidebarProject.executor": "Run",
     "TestNG.ProjectTest.testHrefPolitiCopi.executor": "Run",
+    "TestNG.RegistrationTest.againRestorePasswordTest.executor": "Run",
+    "TestNG.RegistrationTest.badEmailTest.executor": "Run",
     "TestNG.RegistrationTest.executor": "Run",
     "TestNG.RegistrationTest.restorePasswordTest.executor": "Run",
     "TestNG.RegistrationTest.ппbadEmailTest.executor": "Run",
@@ -309,11 +314,15 @@
     "TestNG.SettingsSidebarTest.removeProjectTest.executor": "Run",
     "TestNG.SettingsSidebarTest.settingsTest.executor": "Run",
     "TestNG.SettingsTest.settingsTest.executor": "Run",
+    "TestNG.SettingsUsersTest.addUsersProject.executor": "Run",
     "TestNG.SettingsUsersTest.createTypesWorkAdmin.executor": "Run",
+    "TestNG.SettingsUsersTest.createUsersProject.executor": "Run",
     "TestNG.SettingsUsersTest.deleteUsersProject.executor": "Run",
+    "TestNG.SettingsUsersTest.executor": "Run",
     "TestNG.TestTest.createTypesWork.executor": "Run",
     "TestNG.TypesWorkAdminTest.createTypesWorkAdmin.executor": "Run",
     "TestNG.TypesWorkAdminTest.createTypesWorkAdmin2.executor": "Run",
+    "TestNG.TypesWorkAdminTest.createTypesWorkAdmin3.executor": "Run",
     "TestNG.TypesWorkAdminTest.createTypesWorkAdmin5.executor": "Run",
     "TestNG.TypesWorkAdminTest.deleteBasketTypesWork.executor": "Run",
     "TestNG.TypesWorkAdminTest.deletePKMTypesWork.executor": "Run",
@@ -388,7 +397,7 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "081025",
+    "git-widget-placeholder": "091025",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/main/java",
     "project.structure.last.edited": "Modules",
@@ -412,8 +421,8 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\cucumber" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AuthorizationTest.badEmailTest">
-    <configuration name="AuthorizationTest.againRestorePasswordTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.SettingsUsersTest.deleteUsersProject">
+    <configuration name="ApiTest.restAssured2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -422,16 +431,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
-      <option name="METHOD_NAME" value="againRestorePasswordTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.ApiTest" />
+      <option name="METHOD_NAME" value="restAssured2Test" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationTest.badEmailTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -441,62 +448,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
-      <option name="METHOD_NAME" value="badEmailTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTest.notEmailTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
-      <option name="METHOD_NAME" value="notEmailTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTest.notPasswordTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
-      <option name="METHOD_NAME" value="notPasswordTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTest.notProjectsAdminTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
-      <option name="METHOD_NAME" value="notProjectsAdminTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -578,13 +530,66 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SettingsUsersTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.SettingsUsersTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SettingsUsersTest.createUsersProject" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.SettingsUsersTest" />
+      <option name="METHOD_NAME" value="createUsersProject" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SettingsUsersTest.deleteUsersProject" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.SettingsUsersTest" />
+      <option name="METHOD_NAME" value="deleteUsersProject" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AuthorizationTest.badEmailTest" />
-        <item itemvalue="TestNG.AuthorizationTest.notPasswordTest" />
-        <item itemvalue="TestNG.AuthorizationTest.notEmailTest" />
-        <item itemvalue="TestNG.AuthorizationTest.againRestorePasswordTest" />
-        <item itemvalue="TestNG.AuthorizationTest.notProjectsAdminTest" />
+        <item itemvalue="TestNG.SettingsUsersTest.deleteUsersProject" />
+        <item itemvalue="TestNG.SettingsUsersTest.createUsersProject" />
+        <item itemvalue="TestNG.SettingsUsersTest" />
+        <item itemvalue="JUnit.ApiTest.restAssured2Test" />
+        <item itemvalue="TestNG.AuthorizationTest" />
       </list>
     </recent_temporary>
   </component>

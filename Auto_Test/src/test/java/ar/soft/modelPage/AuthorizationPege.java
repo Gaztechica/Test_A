@@ -115,6 +115,11 @@ public class AuthorizationPege extends BasePage {
     }
 
     @Name("GET_ERROR_TEXT")
+    public String getEmailError3() {
+        return getDriver().findElement(By.xpath("//input[@id='basic_email']")).getAttribute("border-color: #ff4d4f;");
+    }
+
+    @Name("GET_ERROR_TEXT")
     public String getPasswordError() {
         return getDriver().findElement(By.xpath("//input[@class='ant-input']")).getAttribute("border-color: #ff4d4f;");
     }
@@ -127,6 +132,11 @@ public class AuthorizationPege extends BasePage {
     @Name("Пользователь не найден, попробуйте снова")
     public String getRestoreEmailError() {
         return getDriver().findElement(By.xpath("//div[@class='ant-typography p_r RestorePassword__form-userNotFound']")).getText();
+    }
+
+    @Name("Пользователь с таким e-mail уже существует")
+    public String getRestoreEmailError2() {
+        return getDriver().findElement(By.xpath("//*[@class='ant-message-custom-content ant-message-error']")).getText();
     }
 
     @Name("администратора, который не добавлен в проект")

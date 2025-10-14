@@ -37,13 +37,21 @@ public class SettingsUsersPage extends BasePage {
     @FindBy(xpath = "//*[@class='ant-btn ant-btn-primary primaryButton big colorPrimary '][contains(.,'Добавить')]")
     public WebElement btnButtonClick;
 
-    @Name("Пользователь отображается в проекте")
-    @FindBy(xpath = "//*[@class='ant-table-cell'][contains(.,'Администраторов')]")
-    public WebElement newUsersCheck;
+    @Name("кнопка Удалить из проекта")
+    @FindBy(xpath = "//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Удалить из проекта')]")
+    public WebElement btnButtonDeleteClick;
 
     @Name("Пользователь отображается в проекте")
-    @FindBy(xpath = "//*[@class='ant-table-row ant-table-row-level-0']//*[@data-testid='Text'][contains(.,'наблюдатель')]" + "//*[@class='ContentProjectUsers__iconBlock']")
+    @FindBy(xpath = "//*[@class='ant-table-cell'][contains(.,'a123EvgenTest')]")
+    public WebElement newUsersCheck;
+
+    @Name("иконка корзины")
+    @FindBy(xpath = "//*[@class='ant-table-row ant-table-row-level-0'][contains(., 'a123EvgenTest')]//*[@class='ContentProjectUsers__iconBlock']")
     public WebElement newUsersCheck2;
+
+    @Name("message Пользователь успешно удален из проекта")
+    @FindBy(xpath = "//*[@class='ant-message-custom-content ant-message-success'][contains(., 'Пользователь успешно удален из проекта')]")
+    public WebElement messageCheck;
 
 
 
