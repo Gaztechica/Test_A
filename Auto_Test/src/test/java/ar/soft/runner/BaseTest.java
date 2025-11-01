@@ -22,7 +22,6 @@ public abstract class BaseTest {
 
 //    public void XRBP() {
 //        String URL = "http://31.129.103.215:3000/login";
-//
 //    }
 //
 //    public void Armw() {
@@ -37,11 +36,29 @@ public abstract class BaseTest {
     public static final String INPUT_PASSWORD = "//input[@class='ant-input']";
     public static final String INPUT_EMAIL = "//input[@class='ant-input primaryInput  not-entered']";
     public static final String BTN_PASSWORD = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']";
-    public static final String EMAIL = "f.ff.1980@list.ru";                          // test
+
+//===========================    EMAIL ==================================
+            public static final String EMAIL = "f.ff.1980@list.ru";                          // test
 //    public static final String EMAIL = "yevgeniy.gor.90@mail.ru";                          // test
 //    public static final String EMAIL = "jartestaw@bk.ru";                          // stage
-    public static final String NOT_EMAIL = "";
-//    public static final String EMAIL = "akhilgov@spgr.ru";                          // stage
+
+//===========================    ADMIN_EMAIL ==================================
+    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";                // test
+//    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";                        // test
+//    public static final String ADMIN_EMAIL = "durtobelmu@gufum.com";                // stage
+
+//===========================    INSPECTOR_EMAIL ==================================
+public static final String INSPECTOR_EMAIL = "cil2e@mailtub.com";                // test
+    //    public static final String ADMIN_EMAIL = "bukkosefyu@gufum.com";                        // test
+//    public static final String ADMIN_EMAIL = "e4lya@belgianairways.com";                // stage
+
+
+    //===========================    ADMIN_EMAIL ==================================
+//    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";                // test
+//    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";                        // test
+//    public static final String ADMIN_EMAIL = "durtobelmu@gufum.com";                // stage
+
+    //    public static final String EMAIL = "akhilgov@spgr.ru";                          // stage
 //    public static final String PASSWORD = "qwert12345";                                 // test/
     public static final String PASSWORD = "012345678";                                 // test/
     public static final String NOT_PASSWORD = "";

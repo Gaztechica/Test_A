@@ -4,18 +4,19 @@ import ar.soft.element.WaitT;
 import ar.soft.modelPage.base.BasePage;
 import io.qameta.allure.Step;
 import jdk.jfr.Name;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
+import static ar.soft.InspectSidebarTest.NAME_DRAFT_INSPECT;
+import static ar.soft.InspectSidebarTest.NAME_RENAME_INSPECT;
 import static ar.soft.driver.WebDriverSetup.getDriverInstance;
+import static org.openqa.selenium.By.xpath;
 
 public class InspectSidebarPage extends BasePage {
 
@@ -27,35 +28,139 @@ public class InspectSidebarPage extends BasePage {
     private WebElement createI;
 
     @Name("кнопка создать новую инспекцию")
-    @FindBy(xpath="//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
     private WebElement createInspectClick;
 
     @Name("название инспекции")
-    public InspectSidebarPage inspectName() {
-        getDriver().findElement(By.xpath("//input[@id='CreateDraftInspectionModal_name']")).sendKeys("новая инспекция");
+    public InspectSidebarPage inspectName(String name) {
+        getDriver().findElement(By.xpath("//input[@id='CreateDraftInspectionModal_name']")).sendKeys(name);
+
+        return this;
+    }
+
+    @Name("ввод названия инспекции")
+    public InspectSidebarPage inspectRename(String name) {
+        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput InspectionDrawer__editInput-title not-entered']")).sendKeys(Keys.CONTROL + "A");
+        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput InspectionDrawer__editInput-title not-entered']")).sendKeys(Keys.DELETE);
+        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput InspectionDrawer__editInput-title not-entered']")).sendKeys(name);
 
         return this;
     }
 
     @Name("кнопка создать инспекцию")
-    public InspectSidebarPage btncreateInspectClick() {
+    public InspectSidebarPage btnCreateInspectClick() {
         getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
 
         return this;
     }
 
-    @Name("переименование инспекции")
-    public InspectSidebarPage inspectRename() {
-        getDriver().findElement(By.xpath("//input[@id='CreateDraftInspectionModal_name']")).sendKeys("inspectName");
+    @Name("кнопка удалить инспекцию")
+    public InspectSidebarPage btnDeleteInspectClick() {
+        getDriver().findElement(By.xpath("//*[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
+
+        return this;
+    }
+
+    @Name("кнопка подтвердить удалить вид работ")
+    public InspectSidebarPage btnSetDeleteInspectClick() throws InterruptedException {
+        Thread.sleep(300);
+        getDriver().findElement(By.xpath("//button[@type='button']/span[contains(.,'Подтвердить')]/..")).click();
+
+        return this;
+    }
+
+    @Name("чек бокс инспекции")
+    public InspectSidebarPage btnCheckboxChecklistsClick() throws InterruptedException {
+        Thread.sleep(300);
+        getDriver().findElement(By.xpath("//*[@class='ant-table-tbody']/*[contains(.,'" + NAME_DRAFT_INSPECT + "')]/.//*[@id='CheckboxComponent'] " +
+                "| (//*[@class='ant-table-tbody']/*[contains(.,'" + NAME_DRAFT_INSPECT + "')]/.//*[@id='CheckboxComponent'])[2] " +
+                "| (//*[@class='ant-table-tbody']/*[contains(.,'" + NAME_DRAFT_INSPECT + "')]/.//*[@id='CheckboxComponent'])[3]")).click();
+
+        return this;
+    }
+
+    @Name("выбор инспекции")
+    public InspectSidebarPage selectInspect() {
+        getDriver().findElement(By.xpath("//*[@class='ant-dropdown-trigger'][contains(.,'" + NAME_DRAFT_INSPECT + "')]")).click();
+//        getDriver().findElement(By.xpath("//*[@class='ant-dropdown-trigger'][contains(.,'"+ NAME_DRAFT_INSPECT+"')]")).sendKeys(name);
+
+        return this;
+    }
+
+    @Name("Организация в инспекции")
+    public InspectSidebarPage inspectOrganization(String name) {
+        getDriver().findElement(By.xpath("(//*[@class='buttonSimple  RemarkDrawer__btn'])[2]")).click();
+        getDriver().findElement(By.xpath("//*[@placeholder='Найти организацию']")).sendKeys(name);
+        getDriver().findElement(By.xpath("//*[@class='ant-table-cell AddListModal__cell']//*[@data-testid='Text'][contains(., 'TEST!1')]")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')] | (//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')])[2] | " +
+                "(//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')])[3]")).click();
+
+        return this;
+    }
+
+    @Name("кнопка вложение Добавить '+")
+    public InspectSidebarPage btnAddMediaClick() {
+        getDriver().findElement(By.xpath("//*[@class='InspectionDrawer__media-header']//*[@type='button']")).click();
+
+        return this;
+    }
+
+    @Name("Добавить чек лист'+")
+    public InspectSidebarPage addChecklistClick() {
+        getDriver().findElement(By.xpath("//*[@class='InspectionDrawer__checklist-header']//*[@type='button']")).click();
+        getDriver().findElement(By.xpath("//*[@data-testid='Text'][contains(., 'новый чек-лист')]")).click();
+
+        return this;
+    }
+
+    @Name("Проверить чек лист'+")
+    public InspectSidebarPage checkChecklistClick() {
+        getDriver().findElement(By.xpath("//*[@data-testid='Text'][contains(., 'новый чек-лист')]")).click();
+        getDriver().findElement(By.xpath("//*[@data-testid='Text'][contains(., 'новый чек-лист')]")).click();
+        getDriver().findElement(By.xpath("//*[@data-testid='Text'][contains(., 'новый чек-лист')]")).click();
+        getDriver().findElement(By.xpath("//*[@data-testid='Text'][contains(., 'новый чек-лист')]")).click();
+
+        return this;
+    }
+
+    @Name("Добавить местоположение '+")
+    public InspectSidebarPage addLocationClick() {
+        getDriver().findElement(By.xpath("//*[@class='InspectionDrawer__locations-header']//*[@type='button']")).click();
+        WebElement submitButton2 = getDriver().findElement(xpath("//button[contains(., 'Местоположение')]"));
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", submitButton2);
+//        getDriver().findElement(By.xpath("//*[@class='buttonSimple  InspectionDrawer__btn'][contains(., 'Местоположение')]")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-typography p_r'][contains(., 'подвал')]")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')]")).click();
 
         return this;
     }
 
     @Name("Вид работ в инспекции")
-    public InspectSidebarPage inspectTypesWork() {
-        getDriver().findElement(By.xpath("//input[@id='rc_select_3']")).sendKeys("А-1 Монтаж системы отопления" + Keys.ENTER);
+    public InspectSidebarPage inspectTypesWork(String name) {
+        getDriver().findElement(By.xpath("//*[@class='buttonSimple  RemarkDrawer__btn']")).sendKeys(name );
+        getDriver().findElement(By.xpath("//*[@class='ant-table-cell AddListModal__cell']//*[@data-testid='Text'][contains(., 'новый вид работ')]")).click();
+        getDriver().findElement(By.xpath("(//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')])[2]")).click();
 
         return this;
+    }
+
+    @Name("message Черновик успешно создан")
+    public String getMessageCreateDraftInspectText() throws InterruptedException {
+        Thread.sleep(100);
+        return getDriver().findElement(xpath("//*[@class='ant-message-custom-content ant-message-success']")).getText();
+    }
+
+    @Name("message Черновик успешно создан")
+    public String getMessageCreateDraftInspectText2() throws InterruptedException {
+        Thread.sleep(100);
+        return getDriver().findElement(xpath("//*[@class='ant-message-custom-content ant-message-success']")).getText();
+    }
+
+    @Name("отображение Черновика в таблице")
+    public String getCreateDraftInspectText() throws InterruptedException {
+        Thread.sleep(100);
+        return getDriver().findElement(xpath("//*[@class='ant-dropdown-trigger'][contains(.,'" + NAME_RENAME_INSPECT + LocalDate.now() + "')]")).getText();
     }
 
     @Name("Чек лист в инспекции")

@@ -11,6 +11,8 @@ import static ar.soft.TypesWorkSidebarTest.NAME_TYPES_WORK;
 
 public class SettingsUsersTest extends BaseTest {
 
+    public final static String NAME_USER = "a123EvgenTest";
+
     @Test(priority = 1,
             description = "приглашение пользователя в проект")
     public void createUsersProject() throws InterruptedException {
@@ -20,7 +22,7 @@ public class SettingsUsersTest extends BaseTest {
         SettingsUsersPage settingsUsersPage = new SettingsUsersPage(getDriver());
         settingsUsersPage.usersClick.click();
         settingsUsersPage.addButtonClick.click();
-        settingsUsersPage.searchUsersClick.sendKeys("a123EvgenTest");
+        settingsUsersPage.searchUsersClick.sendKeys(NAME_USER);
         settingsUsersPage.checkUsersClick.click();
         settingsUsersPage.btnButtonClick.click();
         Thread.sleep(300);
