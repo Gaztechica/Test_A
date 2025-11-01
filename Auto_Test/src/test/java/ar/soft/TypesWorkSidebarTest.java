@@ -40,7 +40,7 @@ public class TypesWorkSidebarTest extends BaseTest {
                 .dropRemoveTypesWorkClick()
                 .clearNameTypesWorkClick()
                 .inputNewNameTypesWorkClick()
-                .unitRemoveMeasurementClick()
+                .unitRemoveMeasurementClick(NAME_TYPES_WORK + " Remove Name")
                 .getNewWorkText();
 
         Assert.assertEquals(newNameWork, NAME_TYPES_WORK + " Remove Name");

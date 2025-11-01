@@ -146,8 +146,10 @@ public class TypesWorkSidebarPage extends BasePage {
     }
 
     @Name("поле единицы измерения вида работ")
-    public TypesWorkSidebarPage unitRemoveMeasurementClick() {
-        getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+    public TypesWorkSidebarPage unitRemoveMeasurementClick(String name) {
+        getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).sendKeys(Keys.CONTROL + "A");
+        getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).sendKeys(Keys.DELETE);
+        getDriver().findElement(By.xpath("//input[@id='EditTypesOfWorkModal_name']")).sendKeys(name + Keys.ENTER);
 
         return this;
     }

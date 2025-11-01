@@ -8,9 +8,12 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/SettingsUsersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/SettingsUsersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AuthorizationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RegistrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/RegistrationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/AuthorizationPege.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/AuthorizationPege.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/InspectSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/InspectSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/TypesWorkSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectSettings/SettingsUsersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectSettings/SettingsUsersPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TypesWorkSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TypesWorkSidebarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,6 +224,7 @@
     "TestNG.AutorisationApiTest.checkAuthorizationNoOwnerPasswordTest.executor": "Run",
     "TestNG.AutorisationApiTest.checkAutorisationIdTest4.executor": "Run",
     "TestNG.AutorisationApiTest.checkOwnerAuthorizationTest.executor": "Run",
+    "TestNG.AutorisationApiTest.executor": "Run",
     "TestNG.AutorisationApiTest.restAssured2Test.executor": "Run",
     "TestNG.AutorisationTest.check1234AutorisationIdTest3.executor": "Run",
     "TestNG.AutorisationTest.check123oo4AutorisationIdTest3.executor": "Run",
@@ -253,7 +257,9 @@
     "TestNG.DashboardsSidebarTest.dashboardsTest.executor": "Run",
     "TestNG.DashboardsTest.cumulativeTest.executor": "Run",
     "TestNG.DashboardsTest.dashboardsTest.executor": "Run",
+    "TestNG.InspectSidebarTest.createDraftInspect.executor": "Run",
     "TestNG.InspectSidebarTest.createInspect.executor": "Run",
+    "TestNG.InspectSidebarTest.deleteInspect.executor": "Run",
     "TestNG.InspectSidebarTest.executor": "Run",
     "TestNG.InspectSidebarTest.renameInspect.executor": "Run",
     "TestNG.InspectSidebarTest.renameInspect2.executor": "Run",
@@ -397,7 +403,7 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "091025",
+    "git-widget-placeholder": "011025",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/main/java",
     "project.structure.last.edited": "Modules",
@@ -421,40 +427,7 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\cucumber" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.SettingsUsersTest.deleteUsersProject">
-    <configuration name="ApiTest.restAssured2Test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.ApiTest" />
-      <option name="METHOD_NAME" value="restAssured2Test" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.InspectSidebarTest.createInspect">
     <configuration name="Dialogs" type="TestNG" nameIsGenerated="true">
       <module name="AutoTest" />
       <shortenClasspath name="NONE" />
@@ -530,34 +503,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SettingsUsersTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="InspectSidebarTest.createInspect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.AT.*" />
+          <option name="PATTERN" value="ar.soft.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.SettingsUsersTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SettingsUsersTest.createUsersProject" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.SettingsUsersTest" />
-      <option name="METHOD_NAME" value="createUsersProject" />
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.InspectSidebarTest" />
+      <option name="METHOD_NAME" value="createInspect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -565,17 +521,71 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SettingsUsersTest.deleteUsersProject" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="InspectSidebarTest.deleteInspect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.AT.*" />
+          <option name="PATTERN" value="ar.soft.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.SettingsUsersTest" />
-      <option name="METHOD_NAME" value="deleteUsersProject" />
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.InspectSidebarTest" />
+      <option name="METHOD_NAME" value="deleteInspect" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTest.completedProject" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
+      <option name="METHOD_NAME" value="completedProject" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTest.restorePKMProject" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
+      <option name="METHOD_NAME" value="restorePKMProject" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTest.restoreProject" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.ProjectTest" />
+      <option name="METHOD_NAME" value="restoreProject" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -585,11 +595,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.SettingsUsersTest.deleteUsersProject" />
-        <item itemvalue="TestNG.SettingsUsersTest.createUsersProject" />
-        <item itemvalue="TestNG.SettingsUsersTest" />
-        <item itemvalue="JUnit.ApiTest.restAssured2Test" />
-        <item itemvalue="TestNG.AuthorizationTest" />
+        <item itemvalue="TestNG.InspectSidebarTest.createInspect" />
+        <item itemvalue="TestNG.ProjectTest.restoreProject" />
+        <item itemvalue="TestNG.ProjectTest.completedProject" />
+        <item itemvalue="TestNG.ProjectTest.restorePKMProject" />
+        <item itemvalue="TestNG.InspectSidebarTest.deleteInspect" />
       </list>
     </recent_temporary>
   </component>
@@ -608,14 +618,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00074" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1713126198131</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1713126198132</updated>
     </task>
     <task id="LOCAL-00075" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -1001,7 +1003,15 @@
       <option name="project" value="LOCAL" />
       <updated>1759946369956</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="fix RegistrationTest">
+      <option name="closed" value="true" />
+      <created>1760427352523</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1760427352524</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1050,7 +1060,8 @@
     <MESSAGE value="Merge pull request #114 from Gaztechica/07062025&#10;&#10;i" />
     <MESSAGE value="fix TypesWorkSidebarTest + new TypesWork" />
     <MESSAGE value="new SettingsUsersTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="new SettingsUsersTest" />
+    <MESSAGE value="fix RegistrationTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix RegistrationTest" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

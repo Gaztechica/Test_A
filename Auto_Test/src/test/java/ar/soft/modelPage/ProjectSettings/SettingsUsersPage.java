@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import static ar.soft.AT.SettingsUsersTest.NAME_USER;
 import static ar.soft.TypesWorkSidebarTest.NAME_TYPES_WORK;
 
 public class SettingsUsersPage extends BasePage {
@@ -42,11 +43,11 @@ public class SettingsUsersPage extends BasePage {
     public WebElement btnButtonDeleteClick;
 
     @Name("Пользователь отображается в проекте")
-    @FindBy(xpath = "//*[@class='ant-table-cell'][contains(.,'a123EvgenTest')]")
+    @FindBy(xpath = "//*[@class='ant-table-cell'][contains(.,'"+ NAME_USER+"')]")
     public WebElement newUsersCheck;
 
     @Name("иконка корзины")
-    @FindBy(xpath = "//*[@class='ant-table-row ant-table-row-level-0'][contains(., 'a123EvgenTest')]//*[@class='ContentProjectUsers__iconBlock']")
+    @FindBy(xpath = "//*[@class='ant-table-row ant-table-row-level-0'][contains(., '"+ NAME_USER+"')]//*[@class='ContentProjectUsers__iconBlock']")
     public WebElement newUsersCheck2;
 
     @Name("message Пользователь успешно удален из проекта")
