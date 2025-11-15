@@ -92,7 +92,7 @@ public class ApiTest {
 
     @Test
     public void restAssured2Test() {
-        RestAssured.when().post("http://23.105.246.172:5000/login")
+        RestAssured.when().post("http://62.113.97.50:8081/account/login")
                 .then()
                 .statusCode(200)
                 .body("count", Matchers.equalTo(1302),

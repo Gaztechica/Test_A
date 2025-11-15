@@ -1,6 +1,7 @@
 package ar.soft.runner;
 
 //import arSoft.runner.FilterForTest.FilterForTests;
+
 import ar.soft.modelPage.AuthorizationPege;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Assert;
@@ -27,42 +28,58 @@ public abstract class BaseTest {
 //    public void Armw() {
 //    final String URL = "http://23.105.246.172:5000/login";
 //    }
-//    public static final String URL = "http://46.173.28.231:3000/login";                 //stage
+//    public static final String URL = "http://46.173.28.231:3000/login";                                      //stage
 //    public static final String URL_REGISTRATION = "http://23.105.246.201:5000/registration";                 //stage
-    public static final String URL = "http://31.129.109.20:5000/login";               // test
-    public static final String URL_REGISTRATION = "http://31.129.109.20:5000/registration";               // test
+    public static final String URL = "http://31.129.109.20:5000/login";                                        // test
+//    public static final String URL = "https://arm.vr-arsoft.com/login";                                        // прод
+    public static final String URL_REGISTRATION = "http://31.129.109.20:5000/registration";                   // test
 //    public static final String URL_XRBP = "http://31.129.103.215:3000/login";
 
     public static final String INPUT_PASSWORD = "//input[@class='ant-input']";
     public static final String INPUT_EMAIL = "//input[@class='ant-input primaryInput  not-entered']";
     public static final String BTN_PASSWORD = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']";
 
-//===========================    EMAIL ==================================
-            public static final String EMAIL = "f.ff.1980@list.ru";                          // test
-//    public static final String EMAIL = "yevgeniy.gor.90@mail.ru";                          // test
-//    public static final String EMAIL = "jartestaw@bk.ru";                          // stage
-
-//===========================    ADMIN_EMAIL ==================================
-    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";                // test
-//    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";                        // test
-//    public static final String ADMIN_EMAIL = "durtobelmu@gufum.com";                // stage
-
-//===========================    INSPECTOR_EMAIL ==================================
-public static final String INSPECTOR_EMAIL = "cil2e@mailtub.com";                // test
-    //    public static final String ADMIN_EMAIL = "bukkosefyu@gufum.com";                        // test
-//    public static final String ADMIN_EMAIL = "e4lya@belgianairways.com";                // stage
-
+    //===========================    EMAIL ==================================
+    public static final String EMAIL = "f.ff.1980@list.ru";                                                   // test
+//    public static final String EMAIL = "yevgeniy.gor.90@mail.ru";                                           // test
+//    public static final String EMAIL = "jartestaw@bk.ru";                                                   // stage
+public static final String OWNER = "Владелец";
 
     //===========================    ADMIN_EMAIL ==================================
-//    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";                // test
-//    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";                        // test
-//    public static final String ADMIN_EMAIL = "durtobelmu@gufum.com";                // stage
+    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";                                          // test
+//    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";                                               // test
+//    public static final String ADMIN_EMAIL = "durtobelmu@gufum.com";                                        // stage
+    public static final String ADMIN = "Администратор проекта";
 
-    //    public static final String EMAIL = "akhilgov@spgr.ru";                          // stage
-//    public static final String PASSWORD = "qwert12345";                                 // test/
-    public static final String PASSWORD = "012345678";                                 // test/
+    //===========================    INSPECTOR_EMAIL ==================================
+    public static final String INSPECTOR_EMAIL = "cil2e@mailtub.com";                                         // test
+//    public static final String ADMIN_EMAIL = "bukkosefyu@gufum.com";                                    // test
+//    public static final String ADMIN_EMAIL = "e4lya@belgianairways.com";                                    // stage
+public static final String INSPECTOR= "Инспектор";
+
+    //===========================     SUBCONTRACTOR_EMAIL ==================================
+//    public static final String SUBCONTRACTOR_EMAIL = "d8q2s@fthcapital.com";                                  // test
+    public static final String SUBCONTRACTOR_EMAIL = "kkk.k.82@list.ru";                                    // test
+//    public static final String SUBCONTRACTOR_EMAIL = "mestenurta@gufum.com";                                // stage
+public static final String SUBCONTRACTOR = "Подрядчик";
+
+    //===========================      OBSERVER_EMAIL ==================================
+    public static final String OBSERVER_EMAIL = "cecily16432@lu1f.cse445.com";                                // test
+//    public static final String OBSERVER_EMAIL = "o_o_2025@bk.ru";                                       // test
+//    public static final String OBSERVER_EMAIL = "murkegotri@gufum.com";                                     // stage
+public static final String OBSERVER = "Наблюдатель";
+
+    // ===========================      VISOR_EMAIL ==================================
+    public static final String VISOR_EMAIL = "vognofurdu@gufum.com";                                          // test
+    //    public static final String VISOR_EMAIL = "kpvnvlilz9@xkxkud.com";                                   // test
+    public static final String WISOR = "Супервизор";
+
+
+//    public static final String EMAIL = "akhilgov@spgr.ru";                                              // stage
+//    public static final String PASSWORD = "qwert12345";                                                     // test
+    public static final String PASSWORD = "012345678";                                                        // test
     public static final String NOT_PASSWORD = "";
-    public static final String PASSWORD_N = "qwerty123";                                // stage
+    public static final String PASSWORD_N = "qwerty123";                                                      // stage
 
     public final static String USER = "//input[@class='ant-input']";
     public static final String CHECKBOX = "//div[@id='CheckboxComponent']";
@@ -93,7 +110,7 @@ public static final String INSPECTOR_EMAIL = "cil2e@mailtub.com";               
 
     @AfterMethod
     protected void afterMethod(Method method) {
-        //        для пакетного прогона тестов
+//                для пакетного прогона тестов
 //        driver.quit();
     }
 

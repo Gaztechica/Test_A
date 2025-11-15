@@ -2,15 +2,17 @@ package ar.soft;
 
 import ar.soft.modelPage.TypesWorkLibraryPage;
 import ar.soft.runner.BaseTest;
+import org.junit.jupiter.api.DisplayName;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static ar.soft.TypesWorkSidebarTest.*;
+import static ar.soft.AT.ProjectSettingsTest.TypesWorkSidebarTest.*;
 
 public class TypesWorkAdminTest extends BaseTest {
 
     @Test(priority = 1,
             description = "создание вида работ")
+    @DisplayName("создание вида работ")
     public void createTypesWorkAdmin() throws InterruptedException {
         String Work2 = new TypesWorkLibraryPage(getDriver())
                 .libraryClick()

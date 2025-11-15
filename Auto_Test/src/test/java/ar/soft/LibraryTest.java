@@ -40,6 +40,16 @@ public class LibraryTest extends BaseTest {
     }
 
     @Test
+    public void libraryChecListCreate2() {
+        new LibraryPage(driver)
+                .libraryClick()
+                .buttonChecListCreateClick()
+                .inspectTypesWork()
+                .buttonChecklistAdd();
+
+    }
+
+    @Test
     public void libraryChecListImport() {
         new LibraryPage(driver)
                 .libraryClick()

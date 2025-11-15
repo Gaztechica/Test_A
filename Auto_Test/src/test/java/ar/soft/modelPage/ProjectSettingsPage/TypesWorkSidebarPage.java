@@ -1,11 +1,11 @@
-package ar.soft.modelPage;
+package ar.soft.modelPage.ProjectSettingsPage;
 
 import ar.soft.modelPage.base.BasePage;
 import jdk.jfr.Name;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
-import static ar.soft.TypesWorkSidebarTest.NAME_TYPES_WORK3;
+import static ar.soft.AT.ProjectSettingsTest.TypesWorkSidebarTest.*;
 
 public class TypesWorkSidebarPage extends BasePage {
 
@@ -17,7 +17,7 @@ public class TypesWorkSidebarPage extends BasePage {
 
     @Name("чек бокс добавление вида работ")
     public TypesWorkSidebarPage btnCheckboxAddTypesWorkClick() {
-        getDriver().findElement(By.xpath("//*[@class='ant-table-row ant-table-row-level-0'][contains(., '" + nameTypesWork + "')]//*[@id='CheckboxComponent-check']")).click();
+        getDriver().findElement(By.xpath("(//*[@class='ant-table-row ant-table-row-level-0'][contains(., '" + nameTypesWork + "')]//*[@id='CheckboxComponent-check'])[2]")).click();
 
         return this;
     }
@@ -210,8 +210,8 @@ public class TypesWorkSidebarPage extends BasePage {
     @Name("чек бокс вид работ")
     public TypesWorkSidebarPage btnCheckboxTypesWorkClick() throws InterruptedException {
         Thread.sleep(300);
-        getDriver().findElement(By.xpath("//*[@class='ant-table-row ant-table-row-level-0'][contains(., '" + NAME_TYPES_WORK3 + "')]//*[@id='CheckboxComponent-check']" +
-                "| (//*[@class='ant-table-row ant-table-row-level-0'][contains(., 'создание вида работ')]//*[@id='CheckboxComponent-check'])[2]")).click();
+        getDriver().findElement(By.xpath("(//*[@class='ant-table-row ant-table-row-level-0'][contains(., '" + NAME_TYPES_WORK3 + "')]//*[@id='CheckboxComponent-check'])[3]" +
+                "| (//*[@class='ant-table-row ant-table-row-level-0'][contains(., 'создание вида работ')]//*[@id='CheckboxComponent-check'])[4]")).click();
 
         return this;
     }
@@ -219,8 +219,8 @@ public class TypesWorkSidebarPage extends BasePage {
     @Name("чек бокс множественное добавление вид работ")
     public TypesWorkSidebarPage pluralTypesWorkClick() throws InterruptedException {
         Thread.sleep(300);
-        getDriver().findElement(By.xpath("(//*[@class='ant-table-tbody']/.//*[@id='CheckboxComponent'])[1]")).click();
         getDriver().findElement(By.xpath("(//*[@class='ant-table-tbody']/.//*[@id='CheckboxComponent'])[2]")).click();
+        getDriver().findElement(By.xpath("(//*[@class='ant-table-tbody']/.//*[@id='CheckboxComponent'])[3]")).click();
 
         return this;
     }
@@ -234,7 +234,13 @@ public class TypesWorkSidebarPage extends BasePage {
     @Name("созданный вид работ")
     public String getNewWorkText() throws InterruptedException {
         Thread.sleep(300);
-        return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])[contains(., '" + nameTypesWork + "')]")).getText();
+        return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])[contains(., '" + NAME_TYPES_WORK + "')]")).getText();
+
+    }
+    @Name("созданный вид работ")
+    public String getRenameWorkText() throws InterruptedException {
+        Thread.sleep(300);
+        return getDriver().findElement(By.xpath("(//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'])[contains(., '" + RENAME_TYPES_WORK + "')]")).getText();
 
     }
 

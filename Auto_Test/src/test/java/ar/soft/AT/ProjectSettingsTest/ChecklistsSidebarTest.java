@@ -1,39 +1,33 @@
-package ar.soft;
+package ar.soft.AT.ProjectSettingsTest;
 
 import ar.soft.element.ActionT;
-import ar.soft.element.WaitT;
-import ar.soft.modelPage.ChecklistsSidebarPage;
+import ar.soft.modelPage.ProjectSettingsPage.ChecklistsSidebarPage;
 import ar.soft.runner.BaseTest;
-import io.qameta.allure.Allure;
-import io.qameta.allure.Step;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.time.Duration;
-
-import static ar.soft.driver.WebDriverSetup.getDriverInstance;
 import static ar.soft.element.ActionT.OneClick.clickAndHold;
 
 public class ChecklistsSidebarTest extends BaseTest {
 
     // сообщение нет шага подтверждения удаления
     String nameChecklists = "новый чек-лист";
+    String checklists = "ЧЛ/021 - Система отопления";
 
     @Test(priority = 1,
             description = "добавить чек-лист в проект")
     public void removeChecklistsProjectTest() throws InterruptedException {
         String newChecklistsText = new ChecklistsSidebarPage(getDriver())
                 .project()
+                .settingsSidebarClick()
                 .сhecklistsClick()
                 .btnAddChecklists()
-                .inputNameChecklists()
+                .inputNameChecklists(checklists)
                 .btnCheckboxChecklists()
                 .btnAddNewChecklists()
                 .newChecklistsText();
 
-        Assert.assertEquals(newChecklistsText, "ЧЛ/021 - Система отопления");
+        Assert.assertEquals(newChecklistsText, checklists);
     }
 
     @Test(priority = 3,
@@ -41,12 +35,13 @@ public class ChecklistsSidebarTest extends BaseTest {
     public void searchChecklistsProjectTest() throws InterruptedException {
         String newsearchChecklistsText = new ChecklistsSidebarPage(getDriver())
                 .project()
+                .settingsSidebarClick()
                 .сhecklistsClick()
                 .btnSearchChecklists()
                 .inputSearchChecklists()
                 .newChecklistsText();
 
-        Assert.assertEquals(newsearchChecklistsText, "ЧЛ/021 - Система отопления");
+        Assert.assertEquals(newsearchChecklistsText, checklists);
     }
 
     @Test(priority = 6,
@@ -54,6 +49,7 @@ public class ChecklistsSidebarTest extends BaseTest {
     public void deleteChecklistsProjectTest() throws InterruptedException {
         String delWork = new ChecklistsSidebarPage(getDriver())
                 .project()
+                .settingsSidebarClick()
                 .сhecklistsClick()
                 .btnRemoveChecklistsClick()
                 .selectDeleteChecklistsClick()
@@ -69,6 +65,7 @@ public class ChecklistsSidebarTest extends BaseTest {
         new ChecklistsSidebarPage(getDriver())
 //        String delWork = new ChecklistsSidebarPage(getDriver())
                 .project()
+                .settingsSidebarClick()
                 .сhecklistsClick()
                 .btnRemoveChecklistsClick()
                 .selectDeleteChecklistsClick()
@@ -82,6 +79,7 @@ public class ChecklistsSidebarTest extends BaseTest {
     public void removeChecklistsProjectTest3() throws InterruptedException {
         new ChecklistsSidebarPage(getDriver())
                 .project()
+                .settingsSidebarClick()
                 .сhecklistsClick()
                 .btnRemoveChecklistsClick()
                 .dropRemoveChecklistsClick();
@@ -101,6 +99,7 @@ public class ChecklistsSidebarTest extends BaseTest {
     public void pluralChecklistsProjectTest() throws InterruptedException {
         String Work = new ChecklistsSidebarPage(getDriver())
                 .project()
+                .settingsSidebarClick()
                 .сhecklistsClick()
                 .btnAddChecklists()
                 .pluralChecklistsClick()
@@ -115,13 +114,14 @@ public class ChecklistsSidebarTest extends BaseTest {
     public void removePKMChecklistsProjectTest() throws InterruptedException {
         new ChecklistsSidebarPage(getDriver())
                 .project()
+                .settingsSidebarClick()
                 .сhecklistsClick()
                 .btnRemovePRMChecklistsClick()
                 .dropRemoveChecklistsClick();
         ChecklistsSidebarPage checklistsSidebarPage = new ChecklistsSidebarPage(getDriver());
         ActionT.OneClick.clickAndEnterTextDeleteLineBreak(checklistsSidebarPage.newNameChecklistsClick2, nameChecklists + " Remove Name");
         String delWork = new ChecklistsSidebarPage(getDriver())
-              .btnSaveChecklistsClick()
+                .btnSaveChecklistsClick()
                 .getNewChecklistsText();
 
         Assert.assertEquals(delWork, nameChecklists + " Remove Name");
@@ -132,6 +132,7 @@ public class ChecklistsSidebarTest extends BaseTest {
     public void deletePKMChecklistsProjectTest() throws InterruptedException {
         String delChecklistsText = new ChecklistsSidebarPage(getDriver())
                 .project()
+                .settingsSidebarClick()
                 .сhecklistsClick()
                 .dropDeletePKMChecklistsClick()
                 .selectDeleteChecklistsClick()
@@ -146,6 +147,7 @@ public class ChecklistsSidebarTest extends BaseTest {
     public void deleteBasketChecklistsProjectTest() throws InterruptedException {
         String delChecklistsText = new ChecklistsSidebarPage(getDriver())
                 .project()
+                .settingsSidebarClick()
                 .сhecklistsClick()
                 .pluralChecklistsClick()
                 .deleteBasketChecklistsClick()
@@ -160,6 +162,7 @@ public class ChecklistsSidebarTest extends BaseTest {
     public void searchChecklistsProjectTest2() throws InterruptedException {
         String Work = new ChecklistsSidebarPage(getDriver())
                 .project()
+                .settingsSidebarClick()
                 .сhecklistsClick()
                 .search(nameChecklists + " Remove Name")
                 .getNewChecklistsText();

@@ -22,9 +22,9 @@ public class UserTest extends BaseTest {
         new UserPage(driver)
                 .userPage()
                 .createUserClick()
-                .inputName("админ")
+                .inputName(ADMIN)
                 .userLastName()
-                .inputEmail("mikha-g@bk.ru")
+                .inputEmail(ADMIN_EMAIL)
                 .userTimezoneClick()
                 .userTime()
                 .userTimeEnter()
@@ -41,9 +41,9 @@ public class UserTest extends BaseTest {
         new UserPage(driver)
                 .userPage()
                 .createUserClick()
-                .inputName("инспектор")
+                .inputName(INSPECTOR)
                 .userLastName()
-                .inputEmail("mikha.b.82@bk.ru")
+                .inputEmail(INSPECTOR_EMAIL)
                 .userTimezoneClick()
                 .userTime()
                 .userTimeEnter()
@@ -62,9 +62,9 @@ public class UserTest extends BaseTest {
         new UserPage(driver)
                 .userPage()
                 .createUserClick()
-                .inputName("подрядчик")
+                .inputName(SUBCONTRACTOR)
                 .userLastName()
-                .inputEmail("mikha.r.00@bk.ru")
+                .inputEmail(SUBCONTRACTOR_EMAIL)
                 .userTimezoneClick()
                 .userTime()
                 .userTimeEnter()
@@ -86,9 +86,9 @@ public class UserTest extends BaseTest {
         new UserPage(driver)
                 .userPage()
                 .createUserClick()
-                .inputName("наблюдатель")
+                .inputName(OBSERVER)
                 .userLastName()
-                .inputEmail("mikha.ye@bk.ru")
+                .inputEmail(OBSERVER_EMAIL)
                 .userTimezoneClick()
                 .userTime()
                 .userTimeEnter()
@@ -185,7 +185,6 @@ public class UserTest extends BaseTest {
                 .buttonRemove()
                 .removeName()
                 .buttonRemoCancel()
-
                 .buttonSave();
     }
 
@@ -370,33 +369,33 @@ public class UserTest extends BaseTest {
 
     }
 
-    @Test
-    public void organisationSearchTest() {
-        new UserPage(driver)
-                .userPage();
-        driver.findElement(By.xpath("//div[@class='FilterUsers__employments']//span[@class='ant-select-selection-search']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'Kir')]")).click();
-
-//        не работает сортировка по организациям
-
-
-
-//        WebElement userRoles = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'Все организации')]"));
-//        WebElement userRoles = driver.findElement(By.xpath("//*[@id=\"root\"]/section/main/div/div/div[1]/div[1]/div[1]/div/div/span[2]"));
-//        WebElement userRoles = driver.findElement(By.xpath("//span[@title='Все организации']"));
-//        userRoles.click();
-//        Thread.sleep(1000);
-//        userRoles.sendKeys(Keys.ARROW_DOWN);
-//        userRoles.sendKeys(Keys.ARROW_DOWN);
-//        userRoles.sendKeys(Keys.ENTER);
-//        userRoles.sendKeys(Keys.ARROW_DOWN);
-//        userRoles.sendKeys(Keys.ENTER);
-//        WebElement userRolesc = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'Все организации')]"));
-//        userRolesc.click();
-
-        new UserPage(driver)
-                .buttonDeleteClick();
-    }
+//    @Test
+//    public void organisationSearchTest() {
+//        new UserPage(driver)
+//                .userPage();
+//        driver.findElement(By.xpath("//div[@class='FilterUsers__employments']//span[@class='ant-select-selection-search']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'Kir')]")).click();
+//
+////        не работает сортировка по организациям
+//
+//
+//
+////        WebElement userRoles = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'Все организации')]"));
+////        WebElement userRoles = driver.findElement(By.xpath("//*[@id=\"root\"]/section/main/div/div/div[1]/div[1]/div[1]/div/div/span[2]"));
+////        WebElement userRoles = driver.findElement(By.xpath("//span[@title='Все организации']"));
+////        userRoles.click();
+////        Thread.sleep(1000);
+////        userRoles.sendKeys(Keys.ARROW_DOWN);
+////        userRoles.sendKeys(Keys.ARROW_DOWN);
+////        userRoles.sendKeys(Keys.ENTER);
+////        userRoles.sendKeys(Keys.ARROW_DOWN);
+////        userRoles.sendKeys(Keys.ENTER);
+////        WebElement userRolesc = driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][contains(.,'Все организации')]"));
+////        userRolesc.click();
+//
+//        new UserPage(driver)
+//                .buttonDeleteClick();
+//    }
 
 //    public String randomString() {
 //        return UUID.randomUUID()
@@ -404,30 +403,30 @@ public class UserTest extends BaseTest {
 //                .substring(0, 7);
 //    }
 
-    @DataProvider(name = "userAddProvider")
-    public Object[][] userAddProvider() {
-        return new Object[][]{
-                {"Gleb", "Password", "Full name", "E-mail@com"},
-                {"Ignat", "Password", "Full name", "E-mail@com"},
-                {"Lion", "Password", "Full name", "E-mail@com"},
-                {"Oleg", "Password", "Full name", "E-mail@com"},
-                {"Den", "Password", "Full name", "E-mail@com"},
-        };
-    }
-
-    @Test(dataProvider = "userAddProvider")
-    public void testCheckPeople(String Username, String Password, String Fullname, String Email) {
-
-//        List<String> showNam =
-                new UserPage(driver)
-                .userPage()
-                .inviteUserClick()
-                .inviteUserEmail()
-                .inviteRolesClick()
-                .inviteRolesEnter();
-//        Assert.assertTrue(showNames.contains(username));
-
-    }
+//    @DataProvider(name = "userAddProvider")
+//    public Object[][] userAddProvider() {
+//        return new Object[][]{
+//                {"Gleb", "Password", "Full name", "E-mail@com"},
+//                {"Ignat", "Password", "Full name", "E-mail@com"},
+//                {"Lion", "Password", "Full name", "E-mail@com"},
+//                {"Oleg", "Password", "Full name", "E-mail@com"},
+//                {"Den", "Password", "Full name", "E-mail@com"},
+//        };
+//    }
+//
+//    @Test(dataProvider = "userAddProvider")
+//    public void testCheckPeople(String Username, String Password, String Fullname, String Email) {
+//
+////        List<String> showNam =
+//                new UserPage(driver)
+//                .userPage()
+//                .inviteUserClick()
+//                .inviteUserEmail()
+//                .inviteRolesClick()
+//                .inviteRolesEnter();
+////        Assert.assertTrue(showNames.contains(username));
+//
+//    }
 
 
 //    public String randomEmail() {

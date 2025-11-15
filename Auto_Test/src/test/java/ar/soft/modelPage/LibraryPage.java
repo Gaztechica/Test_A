@@ -1,6 +1,7 @@
 package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
+import jdk.jfr.Name;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
 
@@ -169,6 +170,18 @@ public class LibraryPage extends BasePage {
         buttonChecklistRemove.click();
         return this;
     }
+
+    @Name("Вид работ в инспекции")
+    public LibraryPage inspectTypesWork() {
+        getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("name" );
+        getDriver().findElement(By.xpath("//button[@class='CreateChecklist__addCategoryButton']")).click();
+        getDriver().findElement(By.xpath("//textarea[@class='ant-input primaryInput  not-entered']")).sendKeys("name2" );
+        getDriver().findElement(By.xpath("//textarea[@class='ant-input primaryInput createCategoryModal__input not-entered']")).sendKeys("name22" );
+        getDriver().findElement(By.xpath("(//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')])[2]")).click();
+
+        return this;
+    }
+
 
 //    public LibraryPage URL() throws InterruptedException {
 //        getDriver().get(URL);

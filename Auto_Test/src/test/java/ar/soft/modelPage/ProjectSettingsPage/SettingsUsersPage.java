@@ -1,16 +1,12 @@
-package ar.soft.modelPage.ProjectSettings;
+package ar.soft.modelPage.ProjectSettingsPage;
 
-import ar.soft.modelPage.TypesWorkLibraryPage;
 import ar.soft.modelPage.base.BasePage;
 import jdk.jfr.Name;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
-import org.testng.annotations.Test;
 
 import static ar.soft.AT.SettingsUsersTest.NAME_USER;
-import static ar.soft.TypesWorkSidebarTest.NAME_TYPES_WORK;
 
 public class SettingsUsersPage extends BasePage {
 

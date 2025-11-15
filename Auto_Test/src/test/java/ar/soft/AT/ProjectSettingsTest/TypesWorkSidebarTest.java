@@ -1,6 +1,6 @@
-package ar.soft;
+package ar.soft.AT.ProjectSettingsTest;
 
-import ar.soft.modelPage.TypesWorkSidebarPage;
+import ar.soft.modelPage.ProjectSettingsPage.TypesWorkSidebarPage;
 import ar.soft.runner.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -11,6 +11,7 @@ public class TypesWorkSidebarTest extends BaseTest {
 //         сортировка смена цвета стрелки и смена значений
 
     public final static String NAME_TYPES_WORK = "новый вид работ";
+    public final static String RENAME_TYPES_WORK = "переименованный вид работ";
     public final static String NAME_TYPES_WORK2 = "вид работ";
     public final static String NAME_TYPES_WORK3 = "создание вида работ";
 
@@ -29,23 +30,6 @@ public class TypesWorkSidebarTest extends BaseTest {
         Assert.assertEquals(Work, NAME_TYPES_WORK);
     }
 
-    @Test(priority = 3,
-            description = "редактировать вид работ")
-    public void removeTypesWork() throws InterruptedException {
-        String newNameWork = new TypesWorkSidebarPage(getDriver())
-                .project()
-                .settingsSidebarClick()
-                .typesWorkSidebarClick()
-                .btnRemoveTypesWorkClick()
-                .dropRemoveTypesWorkClick()
-                .clearNameTypesWorkClick()
-                .inputNewNameTypesWorkClick()
-                .unitRemoveMeasurementClick(NAME_TYPES_WORK + " Remove Name")
-                .getNewWorkText();
-
-        Assert.assertEquals(newNameWork, NAME_TYPES_WORK + " Remove Name");
-    }
-
     @Test(priority = 2,
             description = "отменить удалить вид работ")
     public void cancelDeleteTypesWork() throws InterruptedException {
@@ -62,16 +46,33 @@ public class TypesWorkSidebarTest extends BaseTest {
         Assert.assertEquals(delWork, NAME_TYPES_WORK);
     }
 
-    @Test(priority = 7,
-            description = "удалить вид работ")
-    public void deleteTypesWork() throws InterruptedException {
+    @Test(priority = 3,
+            description = "редактировать вид работ")
+    public void removeTypesWork() throws InterruptedException {
+        String newNameWork = new TypesWorkSidebarPage(getDriver())
+                .project()
+                .settingsSidebarClick()
+                .typesWorkSidebarClick()
+                .btnRemoveTypesWorkClick()
+                .dropRemoveTypesWorkClick()
+                .clearNameTypesWorkClick()
+                .inputNewNameTypesWorkClick()
+                .unitRemoveMeasurementClick(RENAME_TYPES_WORK)
+                .getRenameWorkText();
+
+        Assert.assertEquals(newNameWork, RENAME_TYPES_WORK);
+    }
+
+        @Test(priority = 4,
+            description = "удалить ПКМ вид работ")
+    public void deletePKMTypesWork() throws InterruptedException {
 //        new TypesWorkSidebarPage(getDriver())
         String delWork = new TypesWorkSidebarPage(getDriver())
                 .project()
                 .settingsSidebarClick()
                 .typesWorkSidebarClick()
-                .btnRemoveTypesWorkClick()
-                .dropDeleteTypesWorkClick()
+                .dropDeletePKMTypesWorkClick()
+                .selectDeleteTypesWorkClick()
                 .btnSetDeleteTypesWorkClick()
                 .getMessageDeleteWorkText();
 
@@ -111,16 +112,16 @@ public class TypesWorkSidebarTest extends BaseTest {
         Assert.assertEquals(delWork, NAME_TYPES_WORK);
     }
 
-    @Test(priority = 4,
-            description = "удалить ПКМ вид работ")
-    public void deletePKMTypesWork() throws InterruptedException {
+    @Test(priority = 7,
+            description = "удалить вид работ")
+    public void deleteTypesWork() throws InterruptedException {
 //        new TypesWorkSidebarPage(getDriver())
         String delWork = new TypesWorkSidebarPage(getDriver())
                 .project()
                 .settingsSidebarClick()
                 .typesWorkSidebarClick()
-                .dropDeletePKMTypesWorkClick()
-                .selectDeleteTypesWorkClick()
+                .btnRemoveTypesWorkClick()
+                .dropDeleteTypesWorkClick()
                 .btnSetDeleteTypesWorkClick()
                 .getMessageDeleteWorkText();
 
@@ -170,7 +171,7 @@ public class TypesWorkSidebarTest extends BaseTest {
                 .btnSetDeleteTypesWorkClick()
                 .getMessageDeleteWorkText();
 
-        Assert.assertEquals(delWork, "Вид работ успешно удалены из проекта");
+        Assert.assertEquals(delWork, "Вид работ успешно удален из проекта");
     }
 
 

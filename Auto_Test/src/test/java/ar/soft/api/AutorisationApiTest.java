@@ -6,6 +6,8 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
+import org.hamcrest.Matchers;
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.extension.MediaType;
 import org.junit.runner.Request;
 import org.testng.Assert;
@@ -23,16 +25,20 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class AutorisationApiTest {
 
-    private final static String URL_API = "http://23.111.202.224:8081/account/";
+    private final static String URL_API = "http://62.113.97.50:8081/account";
+    private final static String URL_API22 = "http://62.113.97.50:8081/account/password/send/{email}";
+    //    private final static String URL_API = "http://23.111.202.224:8081/account/";
     private final static String URL_API2 = "http://23.111.202.224:8081/account/password/send";
     //    private final static String URL2 = "http://23.105.246.172:5000/";
-    private final static String URL2 = "https://reqres.in/api/users";
+    private final static String URL2 = "https://reqres.in/";
+//    private final static String URL2 = "https://reqres.in/api/users";
+
 
     @Story("Авторизация и получение токена")
     @Description("Авторизация и получение токена")
     @Test(priority = 1, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью владельца")
-    public void checkOwnerAuthorizationTest() {
+    public void checkAccountLoginTest() {
         Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("email", EMAIL);
@@ -48,9 +54,104 @@ public class AutorisationApiTest {
         JsonPath jsonPath = response.jsonPath();
         int id = jsonPath.get("data.id");
         String name = jsonPath.get("data.name");
+        String email = jsonPath.get("data.email");
+//        String token = jsonPath.get("token.token");
+        String token = response.getBody().jsonPath().get("token").toString();
         Assert.assertEquals(359, id);
         Assert.assertEquals("Елизавета", name);
+        Assert.assertEquals("f.ff.1980@list.ru", email);
+        Assert.assertEquals(token, token);
+//
+//        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+//        List<UserData> users = given()
+//                .when().log().all()
+//                .contentType(ContentType.JSON)
+//                .header("Authorization", "Bearer_" + token)
+//                .get("info")
+//                .then().log().all()
+//                .extract().body().jsonPath().getList("data", UserData.class);
     }
+
+    @Story("Авторизация и получение токена")
+    @Description("вывести информацию о своем аккаунте")
+    @Test(priority = 2, groups = {"10.5", "1"},
+            description = "")
+    public void checkAccountInfoTests() {
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Map<String, String> user = new HashMap<>();
+        user.put("email", EMAIL);
+        user.put("password", PASSWORD);
+        Response response = given()
+                .body(user)
+                .when()
+                .post("login")
+                .then().log().all()
+                .extract().response();
+        JsonPath jsonPath = response.jsonPath();
+        int id = jsonPath.get("data.id");
+        String name = jsonPath.get("data.name");
+        String email = jsonPath.get("data.email");
+//        String token = jsonPath.get("token.token");
+        String token = response.getBody().jsonPath().get("token").toString();
+        Assert.assertEquals(359, id);
+        Assert.assertEquals("Елизавета", name);
+        Assert.assertEquals("f.ff.1980@list.ru", email);
+        Assert.assertEquals(token, token);
+
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+//        Map<String, String> user2 = new HashMap<>();
+        Response response2 = given()
+                .when().log().all()
+                .contentType(ContentType.JSON)
+                .header("Authorization", "Bearer_" + token)
+                .get("info")
+                .then().log().all()
+                .extract().response();
+        jsonPath = response2.jsonPath();
+        int ids = jsonPath.get("data.id");
+        String names = jsonPath.get("data.name");
+        Assert.assertEquals(359, ids);
+    }
+
+    @Story("Авторизация и получение токена")
+    @Description("вывести всех пользователей по организации")
+    @Test(priority = 3, groups = {"10.5", "Dialogs"},
+            description = "Авторизация под ролью владельца")
+    public void checkAccountOrganizationTests() {
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Map<String, String> user = new HashMap<>();
+        user.put("email", EMAIL);
+        user.put("password", PASSWORD);
+        Response response = given()
+                .body(user)
+                .when()
+                .post("login")
+                .then()
+                .extract().response();
+        JsonPath jsonPath = response.jsonPath();
+        String token = response.getBody().jsonPath().get("token").toString();
+
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+//        Map<String, String> user2 = new HashMap<>();
+        Response response2 = given()
+                .when().log().all()
+                .contentType(ContentType.JSON)
+                .header("Authorization", "Bearer_" + token)
+                .get("organization")
+                .then().log().all()
+                .body("totalElements", Matchers.equalTo(59))
+                .body("totalElements", equalTo(59))
+                .body("domain[0].email", equalTo("1аye21vtcmvg@mail.ru"))
+                .body("domain[9].email", equalTo("d8q2s@fthcapital.com"))
+                .extract().response();
+        jsonPath = response2.jsonPath();
+        int ids = jsonPath.get("totalElements");
+//        String email = jsonPath.get("$.domain.id[0]");
+        Assert.assertEquals(59, ids);
+//                Assert.assertEquals(785, email);
+//                Assert.assertEquals("d8q2s@fthcapital.com", email);
+    }
+
 
     @Story("Авторизация и получение токена")
     @Description("Авторизация и получение токена")
@@ -65,6 +166,30 @@ public class AutorisationApiTest {
                 .body(user)
                 .when()
                 .post("login")
+                .then().log().all()
+//                .body("data.id", equalTo(117))                  проверка по простому
+//                .body("data.name", equalTo("Александр"))
+                .extract().response();
+        JsonPath jsonPath = response.jsonPath();
+        int id = jsonPath.get("data.id");
+        String name = jsonPath.get("data.name");
+        Assert.assertEquals(647, id);
+        Assert.assertEquals("Семен", name);
+    }
+
+    @Story("Авторизация и получение токена")
+    @Description("Авторизация и получение токена")
+    @Test(priority = 3, groups = {"10.5", "Dialogs"},
+            description = "Авторизация под ролью Admin")
+    public void checkAdminAuthorizationTest2() {
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Map<String, String> user = new HashMap<>();
+        user.put("email", "batrayilto@gufum.com");
+        user.put("password", PASSWORD);
+        Response response = given()
+                .body(user)
+                .when()
+                .get("activity")
                 .then().log().all()
 //                .body("data.id", equalTo(117))                  проверка по простому
 //                .body("data.name", equalTo("Александр"))
@@ -174,8 +299,8 @@ public class AutorisationApiTest {
     public void check878865AdminAuthorizationTest() {
         Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
-        user.put("email", EMAIL); //"name": "string",
-        user.put("password", PASSWORD);    //"projectId": 504
+        user.put("email", EMAIL);                                              //"name": "string",
+        user.put("password", PASSWORD);                                        //"projectId": 504
         Response response = given()
                 .body(user)
                 .when()
@@ -185,6 +310,8 @@ public class AutorisationApiTest {
         JsonPath jsonPath = response.jsonPath();
         String token = jsonPath.get("token");
         Assert.assertEquals(token, token);
+
+//      //  Response response = request.post("http://*********/api/token"); String token = response.getBody().jsonpath().get("token").toString()
 
 //        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
 //        Map<String, String> user = new HashMap<>();
@@ -225,15 +352,44 @@ public class AutorisationApiTest {
     }
 
     @Test
-    public void checkAutorisationIdTest() {
+    public void checkAutorisationIdTest(String token) {
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        List<UserData> users = given()
+                .when().log().all()
+                .contentType(ContentType.JSON)
+                .header("Authorization", "Bearer_" + token)
+                .get("/info")
+                .then().log().all()
+                .extract().body().jsonPath().getList("data", UserData.class);
+
+
+    }
+
+    @Test
+    public void checkAutorisationIdTest21() {
         Specification.intansSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
         List<UserData> users = given()
-                .when()
-//                .contentType(ContentType.JSON)
+                .when().log().all()
+                .contentType(ContentType.JSON)
                 .get("api/users?page=2")
                 .then().log().all()
                 .extract().body().jsonPath().getList("data", UserData.class);
-//        int f = 0;
+        int f = 0;
+        int gf = 0;
+
+    }
+
+    @Test
+    public void checkAutorisationIdTestp() {
+//        Specification.intansSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
+        List<UserData> users = given()
+                .when().log().all()
+                .contentType(ContentType.JSON)
+                .get(URL2 + "api/users?page=2")
+                .then().log().all()
+                .extract().body().jsonPath().getList("data", UserData.class);
+        users.forEach(x -> Assert.assertTrue(x.getAvatar().contains(x.getId().toString())));
+        int f = 0;
     }
 
     @Test
@@ -275,18 +431,7 @@ public class AutorisationApiTest {
                 .body("id", equalTo(4))
                 .body("token", equalTo("QpwL5tke4Pnpja7X4"));
 
-//        Integer id = 4;
-//        String token = "QpwL5tke4Pnpja7X4";
-//        Register user = new Register("eve.holt@reqres.in", "pistol");
-//        SucessReg regId = given()
-//                .body(user)
-//                .when()
-////                .contentType(ContentType.JSON)
-//                .post("api/register")
-//                .then().log().all()
-//                .extract().as(SucessReg.class);
-//        Assert.assertEquals(id, regId.getId());
-//        Assert.assertEquals(token, regId.getToken());
+
     }
 
     @Test
@@ -356,6 +501,41 @@ public class AutorisationApiTest {
     }
 
     @Test
+    @DisplayName("23")
+    public void простойТест() {
+        RestAssured.given()
+                .log().all()
+                .contentType(ContentType.JSON)
+//                .pathParam("info")
+                .when()
+                .post(URL_API);
+//        Integer id = 117;
+//        String token = "eyJhbGciOiJIUzI1NiJ9";
+//        Register user = new Register("yevgeniy.gor.90@mail.ru", "qwert12345");
+        given()
+//        SucessReg regId = given()
+//                .body(user)
+                .then()
+                .log().all()
+                .statusCode(200);
+
+    }
+
+    @Test
+    @DisplayName("23")
+    public void простойТест2() {
+        RestAssured.given()
+                .log().all()
+                .contentType(ContentType.JSON)
+                .when()
+                .get(URL_API + "/info")
+                .then()
+                .log().all()
+                .statusCode(200);
+
+    }
+
+    @Test
     public void checkAutorisationIdTest3() {
 //        Specification.intansSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
 //        List<UserData> users = given()
@@ -384,10 +564,10 @@ public class AutorisationApiTest {
                 .header("Authorization", "Bearer ")
                 .contentType(ContentType.JSON)
                 .when()
-                        .get(URL2)
-                        .then()
-                        .statusCode(200)
-                        .extract().jsonPath().getString("data[0].last_name"));
+                .get(URL2)
+                .then()
+                .statusCode(200)
+                .extract().jsonPath().getString("data[0].last_name"));
         Assert.assertEquals(value, "Lawson", "1234567");
     }
 
@@ -402,8 +582,8 @@ public class AutorisationApiTest {
                 .when()
                 .get(URL2)
                 .prettyPeek()
-                        .body()
-                        .jsonPath();
+                .body()
+                .jsonPath();
 //        Assert.assertEquals(value, get("data[0].last_name"), "Lawson", "1234567");
     }
 
@@ -448,7 +628,7 @@ public class AutorisationApiTest {
                 .body("{\n" +
                         "             \"name\": uuuuuu,\n" +
                         "             \"job\": \"string\",\n" +
-                                     "}")
+                        "}")
                 .post(URL2)
                 .prettyPeek()
                 .body()

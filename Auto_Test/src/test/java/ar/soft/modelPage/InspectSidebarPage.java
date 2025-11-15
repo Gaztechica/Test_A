@@ -130,6 +130,14 @@ public class InspectSidebarPage extends BasePage {
         return this;
     }
 
+    @Name("выбор инспекции")
+    public InspectSidebarPage selectAllFieldInspect() {
+        getDriver().findElement(By.xpath("//*[@class='ant-dropdown-trigger'][contains(.,'" + NAME_DRAFT_INSPECT_FILLED + "')]")).click();
+//        getDriver().findElement(By.xpath("//*[@class='ant-dropdown-trigger'][contains(.,'"+ NAME_DRAFT_INSPECT+"')]")).sendKeys(name);
+
+        return this;
+    }
+
     @Name("Организация в инспекции")
     public InspectSidebarPage inspectOrganization(String name) {
         getDriver().findElement(By.xpath("(//*[@class='buttonSimple  RemarkDrawer__btn'])[2]")).click();
@@ -169,7 +177,8 @@ public class InspectSidebarPage extends BasePage {
         JavascriptExecutor js = (JavascriptExecutor) getDriver();
         js.executeScript("arguments[0].click();", submitButton2);
 //        getDriver().findElement(By.xpath("//*[@class='buttonSimple  InspectionDrawer__btn'][contains(., 'Местоположение')]")).click();
-        getDriver().findElement(By.xpath("//*[@class='ant-typography p_r'][contains(., 'подвал')]/..")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-typography p_r'][contains(., 'подвал')] | //*[@class='ant-typography p_r'][contains(., 'подвал')]/.. " +
+                "| //*[@class='ant-typography p_r'][contains(., 'подвал')]/../../..//*")).click();
         getDriver().findElement(By.xpath("(//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')])[3]")).click();
 
         return this;
@@ -222,6 +231,12 @@ public class InspectSidebarPage extends BasePage {
     public String getRenameDraftInspectText() throws InterruptedException {
         Thread.sleep(100);
         return getDriver().findElement(xpath("//*[@class='ant-input primaryInput InspectionDrawer__editInput-title entered']")).getText();
+    }
+
+    @Name("Опубликовать Черновик успешно")
+    public String getFilledDraftInspectText() throws InterruptedException {
+        Thread.sleep(100);
+        return getDriver().findElement(xpath("//*[@type='button'][contains(., 'Опубликовать')]//*")).getText();
     }
 
     @Name("message Черновик успешно создан")

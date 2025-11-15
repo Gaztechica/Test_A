@@ -1,10 +1,12 @@
 package ar.soft.modelPage.base;
 
 import ar.soft.modelPage.*;
+import ar.soft.modelPage.ProjectSettingsPage.ChecklistsSidebarPage;
+import ar.soft.modelPage.ProjectSettingsPage.SettingsSidebarPage;
+import ar.soft.modelPage.ProjectSettingsPage.TypesWorkSidebarPage;
 import jdk.jfr.Name;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
-import ru.qa.methods.ActionT;
 
 import java.util.concurrent.TimeUnit;
 import static ar.soft.runner.BaseTest.*;
@@ -102,7 +104,7 @@ public class BasePage extends BaseModel {
 
     @Name("открыть Чек-листы")
     public ChecklistsSidebarPage сhecklistsClick() {
-        getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Чек-листы')]")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-tabs-tab-btn'][contains(.,'Чек-листы')]")).click();
 
         return new ChecklistsSidebarPage(getDriver());
     }
@@ -147,7 +149,7 @@ public class BasePage extends BaseModel {
     @Name("открыть Настройки")
     public SettingsSidebarPage settingsSidebarClick() throws InterruptedException {
         Thread.sleep(200);
-        getDriver().findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')]")).click();
+        getDriver().findElement(By.xpath("//a[@style='color: inherit;'][contains(.,'Настройки')] | //a[@style='color: inherit;']//*[contains(.,'Настройки')]")).click();
 
         return new SettingsSidebarPage(getDriver());
     }

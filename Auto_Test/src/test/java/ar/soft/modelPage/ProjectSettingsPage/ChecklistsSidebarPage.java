@@ -1,6 +1,5 @@
-package ar.soft.modelPage;
+package ar.soft.modelPage.ProjectSettingsPage;
 
-import ar.soft.ChecklistsSidebarTest;
 import ar.soft.element.WaitT;
 import ar.soft.modelPage.base.BasePage;
 import io.qameta.allure.Allure;
@@ -13,8 +12,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 
-import static java.lang.Character.getName;
-
 public class ChecklistsSidebarPage extends BasePage {
 
     String nameChecklists = "новый чек-лист";
@@ -25,14 +22,16 @@ public class ChecklistsSidebarPage extends BasePage {
 
     @Name("кнопка добавить")
     public ChecklistsSidebarPage btnAddChecklists() {
-        getDriver().findElement(By.xpath("//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+        getDriver().findElement(By.xpath("//*[@type='button'][contains(.,'Добавить')]")).click();
+//        getDriver().findElement(By.xpath("//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
         return this;
     }
 
     @Name("ввод имени чек-листа")
-    public ChecklistsSidebarPage inputNameChecklists() throws InterruptedException {
+    public ChecklistsSidebarPage inputNameChecklists(String name) throws InterruptedException {
         Thread.sleep(200);
-        getDriver().findElement(By.xpath("//*[@class='ant-input-affix-wrapper primaryInput  not-entered']/input")).sendKeys(" Система отопления");
+        getDriver().findElement(By.xpath("//*[@class='ant-input ant-input-lg']")).sendKeys(name);
+//        getDriver().findElement(By.xpath("//*[@class='ant-input-affix-wrapper primaryInput  not-entered']/input")).sendKeys(" Система отопления");
         Thread.sleep(400);
 
         return this;
@@ -77,7 +76,7 @@ public class ChecklistsSidebarPage extends BasePage {
 
     @Name("кнопка отменить удалить чек-лист из проекта")
     public ChecklistsSidebarPage btnDeleteCancelChecklists() {
-        getDriver().findElement(By.xpath("//*[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")).click();
+        getDriver().findElement(By.xpath("(//*[@type='button']//*[contains(., 'Отменить')])[2]")).click();
         return this;
     }
 
@@ -239,8 +238,8 @@ public class ChecklistsSidebarPage extends BasePage {
     @Name("поле Добавить категорию")
     public ChecklistsSidebarPage categoryItemNameClick(String name) {
         getDriver().findElement(By.xpath("//*[@class='EditProjectCheckList__categoryItemName']")).click();
-        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput  not-entered']")).sendKeys(name);
-        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput createCategoryModal__input not-entered']")).sendKeys(name);
+        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput  entered']")).sendKeys(name);
+        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput createCategoryModal__input entered']")).sendKeys(name);
         getDriver().findElement(By.xpath("(//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '])[2]")).click();
 
         return this;
