@@ -7,9 +7,8 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
 
-import static ar.soft.TypesWorkSidebarTest.NAME_TYPES_WORK3;
+import static ar.soft.AT.ProjectSettingsTest.TypesWorkSidebarTest.NAME_TYPES_WORK3;
 import static org.openqa.selenium.By.xpath;
 
 public class TypesWorkLibraryPage extends BasePage {
@@ -227,7 +226,7 @@ public class TypesWorkLibraryPage extends BasePage {
 
     @Name("message удалить вид работ")
     public String getMessageDeleteWorkText() throws InterruptedException {
-        Thread.sleep(100);
+        Thread.sleep(200);
         return getDriver().findElement(xpath("//*[@class='ant-message-custom-content ant-message-success']")).getText();
 
     }

@@ -1,4 +1,4 @@
-package ar.soft.modelPage;
+package ar.soft.modelPage.ProjectSettingsPage;
 
 import ar.soft.modelPage.base.BasePage;
 import jdk.jfr.Name;
@@ -100,13 +100,13 @@ public class SettingsSidebarPage extends BasePage {
     }
 
     public SettingsSidebarPage DeleteSettingsClick() {
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')]")).click();
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Подтвердить')] | //*[@type='button'][contains(.,'Подтвердить')]")).click();
 
         return this;
     }
 
     public SettingsSidebarPage btnDeleteSettingsClick() {
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorRed ']")).click();
+        getDriver().findElement(By.xpath("//*[@type='button'][contains(.,'Удалить')] | //*[@type='button']//*[contains(.,'Удалить')]")).click();
 
         return this;
     }
@@ -117,7 +117,7 @@ public class SettingsSidebarPage extends BasePage {
     }
 
     public String getMessageAddNoticeText() throws InterruptedException {
-        Thread.sleep(100);
+        Thread.sleep(200);
         return getDriver().findElement(By.xpath("//div[@class='ant-message-notice-content']//span[contains(.,'Проект успешно изменен')] | //div[@class='ant-message-notice-content'][contains(.,'Проект успешно изменен')]")).getText();
 //        return getDriver().findElement(By.xpath("//div[@class='ant-message-notice-content'][contains(.,'Проект успешно изменен')]")).getText();
     }

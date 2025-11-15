@@ -1,13 +1,9 @@
 package ar.soft.AT;
 
-import ar.soft.modelPage.ProjectSettings.SettingsUsersPage;
-import ar.soft.modelPage.TypesWorkLibraryPage;
+import ar.soft.modelPage.ProjectSettingsPage.SettingsUsersPage;
 import ar.soft.runner.BaseTest;
-import org.testng.Assert;
 import org.testng.annotations.Test;
 import ru.qa.methods.AssertionT;
-
-import static ar.soft.TypesWorkSidebarTest.NAME_TYPES_WORK;
 
 public class SettingsUsersTest extends BaseTest {
 

@@ -1,6 +1,6 @@
-package ar.soft.AT.ProjectSettings;
+package ar.soft.AT.ProjectSettingsTest;
 
-import ar.soft.modelPage.SettingsSidebarPage;
+import ar.soft.modelPage.ProjectSettingsPage.SettingsSidebarPage;
 import ar.soft.modelPage.base.BasePage;
 import ar.soft.runner.BaseTest;
 import org.testng.Assert;

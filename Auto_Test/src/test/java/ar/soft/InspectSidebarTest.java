@@ -45,7 +45,7 @@ public class InspectSidebarTest extends BaseTest {
 
     @Test(priority = 3,
             description = "создать черновик инспекции со всеми заполненными обязательными полями")
-    public void createInspect() throws InterruptedException {
+    public void createAllFieldInspect() throws InterruptedException {
         String createInspect = new InspectSidebarPage(getDriver())
                 .project()
                 .inspectSidebarClick()
@@ -58,9 +58,9 @@ public class InspectSidebarTest extends BaseTest {
                 .addChecklistClick()
                 .checkChecklistClick()
                 .addLocationClick()
-                .getRenameDraftInspectText();
+                .getFilledDraftInspectText();
 
-        Assert.assertEquals(createInspect, NAME_DRAFT_INSPECT);
+        Assert.assertEquals(createInspect, "Опубликовать");
     }
 
     @Test(priority = 4,
@@ -75,6 +75,17 @@ public class InspectSidebarTest extends BaseTest {
     }
 
     @Test(priority = 5,
+            description = "удалить черновик инспекции со всеми заполненными обязательными полями")
+    public void deleteAllFieldInspect() throws InterruptedException {
+        new InspectSidebarPage(getDriver())
+                .project()
+                .inspectSidebarClick()
+                .selectAllFieldInspect()
+                .btnDeleteInspectClick()
+                .btnSetDeleteInspectClick();
+    }
+
+    @Test(priority = 6,
             description = "опубликовать черновик инспекции")
     public void filledInspect() throws InterruptedException {
         String createDraftInspect = new InspectSidebarPage(getDriver())
@@ -88,7 +99,7 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createDraftInspect, "Черновик успешно создан");
     }
 
-    @Test(priority = 6,
+    @Test(priority = 7,
             description = "Завершить инспекцию")
     public void filledDraftInspect() throws InterruptedException {
         String createDraftInspect = new InspectSidebarPage(getDriver())
@@ -101,7 +112,7 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createDraftInspect, "Инспекция завершена");
     }
 
-    @Test(priority = 7,
+    @Test(priority = 8,
             description = "Вернуть в работу инспекцию")
     public void backWorkInspect() throws InterruptedException {
         String createDraftInspect = new InspectSidebarPage(getDriver())
@@ -113,4 +124,15 @@ public class InspectSidebarTest extends BaseTest {
 
         Assert.assertEquals(createDraftInspect, "Завершить");
     }
+
+//    @Test(priority = 9,
+//            description = "удалить черновик инспекции")
+//    public void deleteInspect4() throws InterruptedException {
+//        new InspectSidebarPage(getDriver())
+//                .project()
+//                .inspectSidebarClick()
+//                .selectInspect()
+//                .btnDeleteInspectClick()
+//                .btnSetDeleteInspectClick();
+//    }
 }

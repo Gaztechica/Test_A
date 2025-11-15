@@ -36,7 +36,7 @@ public class AuthorizationTest extends BaseTest {
                 .selectProfile()
                 .roleProfile();
 
-        Assert.assertEquals(role, "Владелец");
+        Assert.assertEquals(role, OWNER);
     }
 
 //    @Story("Проверка заполнения ключа при выборе значения EnumFormat из выпадающего списка")
@@ -72,7 +72,7 @@ public class AuthorizationTest extends BaseTest {
                 .selectProfile()
                 .roleProfile();
 
-        Assert.assertEquals(roleAdmin, "Администратор проекта");
+        Assert.assertEquals(roleAdmin, ADMIN);
     }
 
     @Test(priority = 3, groups = "Dialogs",
@@ -89,7 +89,7 @@ public class AuthorizationTest extends BaseTest {
                 .selectProfile()
                 .roleProfile();
 
-        Assert.assertEquals(roleAdmin, "Инспектор");
+        Assert.assertEquals(roleAdmin, INSPECTOR);
     }
 
     @Test(priority = 4, groups = {"10.5", "Dialogs"},
@@ -98,9 +98,7 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
-               .inputMail("d8q2s@fthcapital.com")          //test
-//                .inputMail("kkk.k.82@list.ru")          //test
-//                .inputMail("mestenurta@gufum.com")
+                .inputMail(SUBCONTRACTOR_EMAIL)
                 .inputPassword(PASSWORD)
                 .btnCheckbox()
                 .btnSubmit()
@@ -108,7 +106,7 @@ public class AuthorizationTest extends BaseTest {
                 .selectProfile()
                 .roleProfile();
 
-        Assert.assertEquals(roleAdmin, "Подрядчик");
+        Assert.assertEquals(roleAdmin, SUBCONTRACTOR);
     }
 
     @Test(priority = 5, groups = {"10.5", "Dialogs"},
@@ -117,9 +115,7 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
-                .inputMail("cecily16432@lu1f.cse445.com")               //test
-//             .inputMail("o_o_2025@bk.ru")               //test
-//                .inputMail("murkegotri@gufum.com")
+                .inputMail(OBSERVER_EMAIL)
                 .inputPassword(PASSWORD)
                 .btnCheckbox()
                 .btnSubmit()
@@ -127,7 +123,7 @@ public class AuthorizationTest extends BaseTest {
                 .selectProfile()
                 .roleProfile();
 
-        Assert.assertEquals(roleAdmin, "Наблюдатель");
+        Assert.assertEquals(roleAdmin, OBSERVER);
     }
 
     @Test(priority = 6, groups = {"10.5", "Dialogs"},
@@ -136,8 +132,7 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String roleAdmin = new AuthorizationPege(getDriver())
-                .inputMail("vognofurdu@gufum.com")     //test
-//                .inputMail("kpvnvlilz9@xkxkud.com")
+                .inputMail(VISOR_EMAIL)
                 .inputPassword(PASSWORD)
                 .btnCheckbox()
                 .btnSubmit()
@@ -145,7 +140,7 @@ public class AuthorizationTest extends BaseTest {
                 .selectProfile()
                 .roleProfile();
 
-        Assert.assertEquals(roleAdmin, "Супервизор");
+        Assert.assertEquals(roleAdmin, WISOR);
     }
 
 //    @Test(priority = 9,
@@ -426,10 +421,6 @@ public class AuthorizationTest extends BaseTest {
 //
 //        Assert.assertEquals(driver.findElement(GET_EMAIL_TEXT).getText(), "Неправильный логин или пароль");
 //    }
-
-
-
-
 
 
 //    добавить куки почты и вводить полученное письмо для замены пароля
