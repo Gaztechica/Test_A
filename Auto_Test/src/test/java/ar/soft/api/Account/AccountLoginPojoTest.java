@@ -50,7 +50,7 @@ public class AccountLoginPojoTest extends Login {
                 .statusCode(200);
         Pet actual = response.as(Pet.class);
 
-//        Assert.assertEquals(actual, pet);
+        Assert.assertEquals(actual, pet);
 //                .extract().response();
 
         JsonPath jsonPath = response.jsonPath();
@@ -65,6 +65,28 @@ public class AccountLoginPojoTest extends Login {
         Assert.assertEquals("Елизавета", name);
         Assert.assertEquals("f.ff.1980@list.ru", email);
         Assert.assertEquals(token, token);
+    }
+
+    @Story("Авторизация и получение токена")
+    @Description("Авторизация и получение токена")
+    @Test(priority = 1, groups = {"10.5", "Dialogs"},
+            description = "Авторизация под ролью владельца")
+    public void checkAccountLoginTest2() {
+        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Response response2 = given()
+                .when().log().all()
+                .contentType(ContentType.JSON)
+                .header("Authorization", "Bearer_" + token)
+                .get("account/info")
+                .then().log().all()
+                .extract().response();
+        Pet actual = response2.as(Pet.class);
+
+        Assert.assertEquals(actual, pet);
+        JsonPath jsonPath = response2.jsonPath();
+        int ids = jsonPath.get("data.id");
+        String names = jsonPath.get("data.name");
+        Assert.assertEquals(359, ids);
     }
 
     @Story("вывести информацию о своем аккаунте")

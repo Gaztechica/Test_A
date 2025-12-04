@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Тестирование компонентов платформы">
+<!--    <listeners>-->
+<!--        <listener class-name="ru.cbgr.qa.turbo.service.ErrorTestListener"/>-->
+<!--    </listeners>-->
+
+<!--    <test name="IChart">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IChart.IChart1Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IChart.IChart2Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IChart.IChart3Tests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Chart.IAxis">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ChartIAxis.Chart1Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ChartIAxis.Chart1STests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ChartIAxis.Chart2Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ChartIAxis.Chart2STests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ChartIAxis.Chart3Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ChartIAxis.Chart3STests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IGroupOnlyResize">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.OnlyResize.IGroup1OnlyResizeTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.OnlyResize.IGroup2OnlyResizeTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.OnlyResize.IGroup3OnlyResizeTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.OnlyResize.IGroup4OnlyResizeTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.OnlyResize.IGroup11OnlyResizeTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IGroup">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IGroup.IGroup1Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IGroup.IGroup2Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IGroup.IGroup3Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IGroup.IGroup4Tests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ICardFile">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ICardFile.ICardFileTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ICardFile.ICardFileWithoutChangingDataTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IButton">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IButton.IButtonTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IReportFrame">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IReportFrame.CheckClarifyingReportTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IReportFrame.IReportFrameElementTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IReportFrame.TestTurns1Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IReportFrame.TestTurns2Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IReportFrame.TestTurns3Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IReportFrame.TestTurns4Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IReportFrame.TestTurns5Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IReportFrame.TestTurns6Tests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IJSControl">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IJSControl.IJSControlEdgeTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IJSControl.IJSControlIETests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IRadioButton">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IRadioButton.IRadioButtonTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ToolbarElement">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ToolbarElement.ChangeOurCompanyTest"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ToolbarElement.SearchInMenuSectionTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="CanvasGrid">-->
+<!--        <classes>-->
+<!--&lt;!&ndash;            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CanvasGrid.GridExceliteTests"/>&ndash;&gt;-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CanvasGrid.GridTestFrmTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CanvasGrid.GridTimesheetTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CanvasGrid.GridVacationPlanTest"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CanvasGrid.GridSaveValuesAfterUpdatingTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.autotestIGridExample.IGridTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Dialog">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs1Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs2Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs3Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs4Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs5Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs6Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs7Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs8Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs8STests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs9Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs9STests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs10Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs11Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs11STests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs12Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs13Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs14Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs15Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs16Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs17STests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs18Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs19STests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs20Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.Dialog.Dialogs21STests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ContextError">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.AutotestEx.ContextError.ContextErrorTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IEdit">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEdit.IEditCalendarTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEdit.IEditCellFormatsTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEdit.IEditColorTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEdit.IEditEnumFormatTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEdit.IEditErrorTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEdit.IEditInputTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEdit.IEditValueTypeTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEdit.IEditEnterValueInControlWithoutSelectFromListTests"/>-->
+<!--            &lt;!&ndash;  <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEdit.IEditDifferentUserWorkWithInputField"/>&ndash;&gt;-->
+
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IEditNew">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEditNew.IEditComponentProperties"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEditNew.IEditComponentPropertiesCommon"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEditNew.IEditComponentPropertiesLook"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IEditEx">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEditEx.IEditExColorTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEditEx.IEditExErrorTest"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEditEx.IEditExInputTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEditEx.IEditExInputSTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IGrid">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IGrid.IGridColorTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IGrid.IGridErrorTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IGrid.IGridInputTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IGrid.IGrid4Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IGrid.IGridClickReactionTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IGrid.IGridMultilevelHeaderTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IGrid.IGridWithIconTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.autotestIGridExample.IGridContextMenuTest"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.autotestIGridExample.IGridMultipleDeletion1Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.autotestIGridExample.IGridMultipleDeletion2Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.autotestIGridExample.IGridMultipleDeletion3Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.autotestIGridExample.IGridMultipleDeletion4Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.autotestIGridExample.IGridTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IListEdit">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IListEdit.IListEditColorTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IListEdit.IListEditErrorTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IListEdit.IListEditInputTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IListEdit.IListEditInputSTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ITable">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ITable.ITable.ITableResizeColumnsTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ITable.ITable.ITableResizeColumns2Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ITable.ITable.ITableResizeColumns3Tests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ITable.ITable1.ITable1TableRowTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ITable.ITable1.ITable1ValuesTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ITable.ITable1.ITable1ValuesSTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ITable.ITable2.ITable2SortTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ITable.ITable2.ITable2TableRowTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ITable.ITable2.ITable2ValuesTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ITable.ITable2.ITable2ValuesSTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ITable.ITable5.ITable5TableRowTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="NewITable">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ITable.NewITable.ITableComponentProperties"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IHeader">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IHeader.IHeaderClickTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IHeader.IHeaderColorTests"/>-->
+<!--           &lt;!&ndash; <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IHeader.IHeaderWrapTests"/>&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="INode">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.INode.INodeErrorTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.INode.INodeInputTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.INode.INodeColorTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IPicture">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IPicture.IPictureTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IListButton">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IListButton.IListButtonTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IListButton.IListButtonSTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IPopupMenu">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IPopupMenu.IPopupMenuTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IColorEdit">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IColorEdit.IColorEditTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IJumpButton">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IJumpButton.IJumpButtonColorTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IJumpButton.IJumpButtonErrorTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IJumpButton.IJumpButtonInputTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IColumnsGroup">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IColumnsGroup.IColumnsGroupChangeTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IColumnsGroup.IColumnsGroupErrorTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IColumnsGroup.IColumnsGroupValuesTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ICheckBox">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ICheckBox.ICheckBoxTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ICardTree">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ICardTree.ICardTreeColorTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.ICardTree.ICardTreeInfoTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IClassesTree">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IClassesTree.IClassesTreeTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="JDiagram">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.CtrlJs.JDiagram.JDiagramImageTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.CtrlJs.JDiagram.JDiagramTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="KeepMounted">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.KeepMounted.KeepMountedTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IStatic">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IStatic.IStaticTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="JscGantt">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.InfoBoardCtrl.JscGantt.JscGanttTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.InfoBoardCtrl.JscGantt.JscGantt2Tests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IPasswordEdit">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IPasswordEdit.IPasswordEditTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IBrowser">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IBrowser.IBrowserTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IFrame">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IFrame.IFrameTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IFrame.IFrameCheckSaveSizeTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="CardForm">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CardForm.CardFormTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CardForm.CardOrderApplyFilterWithConditionTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CardForm.CardOrderSortDeadlineTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CardForm.CardOrderSortDocIDTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CardForm.CardOrderTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CardForm.CardOrderUnCorrectDateValueTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CardForm.NumericFilterTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CardForm.CardOrderApplyUnFilterWithConditionTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CardForm.UnFilterChangeSearchLocationTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.CardForm.CardOrderCheckFilterTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="TestForms">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.refInPlaceCardTests.RefInPlaceCardTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.refInPlaceCardTests.RefCardTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test name="IComponentTree">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IComponentTree.IComponentTreeTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IBox">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IBox.IBoxTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IBox.IBoxAbilityToPlaceButtonTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Task Generator">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.TaskGenerator.TaskGeneratorTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ErrorDemo">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ErrorDemo.FrameVisibilityTest"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ErrorDemo.DisplayingZeroFromNumericFieldTest"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ErrorDemo.DrawingTableTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="ICardFileWithDifferentTypesOfFields">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ICardFileWithDifferentTypesOfFields.ICardFileWithDifferentTypesOfFieldsTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ICardFileWithDifferentTypesOfFields.ICardFileWithEditingTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="IEditReplacement">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ComCtrl.IEdit.IEditReplacementTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Create and delete users groups">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.Administration.CreateUsersGroup"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.Administration.DeleteUsersGroup"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="JKanban">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.InfoBoardCtrl.JKanban.JKanbanTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.InfoBoardCtrl.JKanban.JKanban2Tests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+
+<!--    <test name="Service">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.ServiceTests.ItemsWorkSpaceTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Documents">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.Documents.SplitterTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Report">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.Report.ReverseSignTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Admin">-->
+<!--        <classes>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.Administration.UserRoleTests"/>-->
+<!--            <class name="ru.cbgr.qa.turbo.platform.Administration.CreatingDatabaseTests"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+</suite>

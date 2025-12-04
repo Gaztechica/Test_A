@@ -58,7 +58,8 @@ public class BasePage extends BaseModel {
     @Name("Электронная почта")
     public AuthorizationPege inputMail(String mail) {
 //    public BasePage inputMail() {
-        getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys(mail);
+        getDriver().findElement(By.xpath("//input[@data-test-id='login-page-mail-input']")).sendKeys(mail);
+//        getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys(mail);
 
 //        return new AutorisaitionPege(getDriver());
         return new AuthorizationPege(getDriver());
@@ -206,21 +207,21 @@ public class BasePage extends BaseModel {
 
 
 
-    public BasePage login()throws InterruptedException {
-//        URL.click();
-//        INPUT_EMAIL.sendKeys(EMAIL);
-//        INPUT_PASSWORD.sendKeys(PASSWORD);
-//        BTN_PASSWORD.click();
-        getDriver().get(URL);
-        getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
-        getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-        getDriver().manage().window().setSize(new Dimension(1920,1080));
-        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
-
-        return this;
-    }
+//    public BasePage login()throws InterruptedException {
+////        URL.click();
+////        INPUT_EMAIL.sendKeys(EMAIL);
+////        INPUT_PASSWORD.sendKeys(PASSWORD);
+////        BTN_PASSWORD.click();
+//        getDriver().get(URL);
+//        getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+//        getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+//        getDriver().manage().window().setSize(new Dimension(1920,1080));
+//        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+//        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
+//        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
+//
+//        return this;
+//    }
 
 //    @AfterMethod
 //    public void into() {
