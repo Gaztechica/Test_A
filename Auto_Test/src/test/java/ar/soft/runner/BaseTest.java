@@ -8,9 +8,7 @@ import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.lang.reflect.Method;
 import java.time.Duration;
@@ -36,26 +34,31 @@ public abstract class BaseTest {
 //    public static final String URL_XRBP = "http://31.129.103.215:3000/login";
 
     public static final String INPUT_PASSWORD = "//input[@class='ant-input']";
-    public static final String INPUT_EMAIL = "//input[@class='ant-input primaryInput  not-entered']";
+    public static final String INPUT_EMAIL = "//input[@data-test-id='login-page-mail-input']";
+//    public static final String INPUT_EMAIL = "//input[@class='ant-input primaryInput  not-entered']";
     public static final String BTN_PASSWORD = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']";
 
+
     //===========================    EMAIL ==================================
-    public static final String EMAIL = "f.ff.1980@list.ru";                                                   // test
-//    public static final String EMAIL = "yevgeniy.gor.90@mail.ru";                                           // test
+//    public static final String EMAIL = "f.ff.1980@list.ru";                                                   // test
+    public static final String EMAIL = "yevgeniy.gor.90@mail.ru";                                           // test
 //    public static final String EMAIL = "jartestaw@bk.ru";                                                   // stage
 public static final String OWNER = "Владелец";
 
+
     //===========================    ADMIN_EMAIL ==================================
-    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";                                          // test
-//    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";                                               // test
+//    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";                                          // test
+    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";                                             // test
 //    public static final String ADMIN_EMAIL = "durtobelmu@gufum.com";                                        // stage
     public static final String ADMIN = "Администратор проекта";
 
+
     //===========================    INSPECTOR_EMAIL ==================================
-    public static final String INSPECTOR_EMAIL = "cil2e@mailtub.com";                                         // test
-//    public static final String ADMIN_EMAIL = "bukkosefyu@gufum.com";                                    // test
-//    public static final String ADMIN_EMAIL = "e4lya@belgianairways.com";                                    // stage
+//    public static final String INSPECTOR_EMAIL = "cil2e@mailtub.com";                                         // test
+    public static final String INSPECTOR_EMAIL = "bukkosefyu@gufum.com";                                    // test
+//    public static final String INSPECTOR_EMAIL = "e4lya@belgianairways.com";                                    // stage
 public static final String INSPECTOR= "Инспектор";
+
 
     //===========================     SUBCONTRACTOR_EMAIL ==================================
 //    public static final String SUBCONTRACTOR_EMAIL = "d8q2s@fthcapital.com";                                  // test
@@ -63,21 +66,26 @@ public static final String INSPECTOR= "Инспектор";
 //    public static final String SUBCONTRACTOR_EMAIL = "mestenurta@gufum.com";                                // stage
 public static final String SUBCONTRACTOR = "Подрядчик";
 
+
     //===========================      OBSERVER_EMAIL ==================================
-    public static final String OBSERVER_EMAIL = "cecily16432@lu1f.cse445.com";                                // test
-//    public static final String OBSERVER_EMAIL = "o_o_2025@bk.ru";                                       // test
+//    public static final String OBSERVER_EMAIL = "cecily16432@lu1f.cse445.com";                                // test
+    public static final String OBSERVER_EMAIL = "o_o_2025@bk.ru";                                       // test
 //    public static final String OBSERVER_EMAIL = "murkegotri@gufum.com";                                     // stage
 public static final String OBSERVER = "Наблюдатель";
 
+
     // ===========================      VISOR_EMAIL ==================================
-    public static final String VISOR_EMAIL = "vognofurdu@gufum.com";                                          // test
-    //    public static final String VISOR_EMAIL = "kpvnvlilz9@xkxkud.com";                                   // test
+//    public static final String VISOR_EMAIL = "vognofurdu@gufum.com";                                          // test
+        public static final String VISOR_EMAIL = "kpvnvlilz9@xkxkud.com";                                   // test
     public static final String WISOR = "Супервизор";
 
 
-//    public static final String EMAIL = "akhilgov@spgr.ru";                                              // stage
-//    public static final String PASSWORD = "qwert12345";                                                     // test
-    public static final String PASSWORD = "012345678";                                                        // test
+//    public static final String EMAIL = "akhilgov@spgr.ru";                                                  // stage
+//
+//
+// ===========================      PASSWORD ==================================
+    public static final String PASSWORD = "qwert12345";                                                     // test
+//    public static final String PASSWORD = "012345678";                                                        // test
     public static final String NOT_PASSWORD = "";
     public static final String PASSWORD_N = "qwerty123";                                                      // stage
 
@@ -92,15 +100,15 @@ public static final String OBSERVER = "Наблюдатель";
 
     public WebDriver driver = new ChromeDriver();
 
-    @BeforeMethod
-    protected void beforeMethod(Method method) {
-//        для пакетного прогона тестов
-//       driver = new ChromeDriver();
-//        getDriver().get(URL);
-//        getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
-//        getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
-//        getDriver().manage().window().setSize(new Dimension(1920,1080));
-    }
+//    @BeforeMethod
+//    protected void beforeMethod(Method method) {
+////        для пакетного прогона тестов
+////       driver = new ChromeDriver();
+////        getDriver().get(URL);
+////        getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
+////        getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
+////        getDriver().manage().window().setSize(new Dimension(1920,1080));
+//    }
 
 //    public void log() {
 //        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
@@ -163,13 +171,13 @@ public static final String OBSERVER = "Наблюдатель";
         getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         getDriver().manage().window().setSize(new Dimension(1920, 1080));
 //        driver.manage().window().setSize(new Dimension(1900, 1000));
-        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-        getDriver().findElement(By.xpath(CHECKBOX)).click();
-        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
+//        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
+//        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
+//        getDriver().findElement(By.xpath(CHECKBOX)).click();
+//        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
         new AuthorizationPege(getDriver())
-//                .inputMail(EMAIL)
-//                .inputPassword(PASSWORD)
+                .inputMail(EMAIL)
+                .inputPassword(PASSWORD)
                 .btnCheckbox()
                 .btnSubmit();
 //        driver.quit();
@@ -333,5 +341,47 @@ public static final String OBSERVER = "Наблюдатель";
 //
 //        String getPoliticaUser = driver.findElement(GET_USER_MANUAL).getText();
 //        Assert.assertEquals("Руководство пользователя", getPoliticaUser);
+//    }
+
+//    public class TestLifecycleExample {
+//        @BeforeSuite
+//        public void beforeSuite() {
+//            System.out.println("⚡ @BeforeSuite: Выполняется перед всей сьютой тестов");
+//        }
+//
+//        @AfterSuite
+//        public void afterSuite() {
+//            System.out.println("🔻 @AfterSuite: Выполняется после всей сьюты тестов");
+//        }
+//
+//        @BeforeClass
+//        public void beforeClass() {
+//            System.out.println("🚀 @BeforeClass: Выполняется перед тестами в этом классе");
+//        }
+//
+//        @AfterClass
+//        public void afterClass() {
+//            System.out.println("🏁 @AfterClass: Выполняется после тестов в этом классе");
+//        }
+//
+//        @BeforeMethod
+//        public void beforeMethod() {
+//            System.out.println("🔄 @BeforeMethod: Выполняется перед каждым тестом");
+//        }
+//
+//        @AfterMethod
+//        public void afterMethod() {
+//            System.out.println("✅ @AfterMethod: Выполняется после каждого теста");
+//        }
+//
+//        @Test
+//        public void test1() {
+//            System.out.println("🟢 test1 выполняется");
+//        }
+//
+//        @Test
+//        public void test2() {
+//            System.out.println("🟢 test2 выполняется");
+//        }
 //    }
 }

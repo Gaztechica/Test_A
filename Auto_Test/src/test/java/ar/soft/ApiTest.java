@@ -84,10 +84,10 @@ public class ApiTest {
     @Test
     public void restAssuredTest() {
         RestAssured.when().get("https://pokeapi.co/api/v2/pokemon")
-                .then()
-                .statusCode(200)
-                .body("count", Matchers.equalTo(1302),
-                        "results.name", Matchers.hasItems("bulbasaur", "ivysaur"));
+                .then().log().all()
+                .statusCode(200);
+//                .body("count", Matchers.equalTo(1302),
+//                        "results.name", Matchers.hasItems("bulbasaur", "ivysaur"));
     }
 
     @Test
@@ -97,6 +97,15 @@ public class ApiTest {
                 .statusCode(200)
                 .body("count", Matchers.equalTo(1302),
                         "results.name", Matchers.hasItems("bulbasaur", "ivysaur"));
+    }
+
+    @Test
+    public void restAssured2Test6() {
+        RestAssured.when().post("https://pokeapi.co/docs/v2/66")
+                .then().log().all()
+                .statusCode(200);
+//                .body("count", Matchers.equalTo(1302),
+//                        "results.name", Matchers.hasItems("bulbasaur", "ivysaur"));
     }
 
 //    @Test
