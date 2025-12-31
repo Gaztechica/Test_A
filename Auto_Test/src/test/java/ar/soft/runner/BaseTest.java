@@ -19,6 +19,64 @@ import java.util.concurrent.TimeUnit;
 //@Liisteners({FilterForTests.class})
 public abstract class BaseTest {
 
+    public WebDriver driver = new ChromeDriver();
+    public static final String INPUT_PASSWORD = "//input[@class='ant-input']";
+    public static final String INPUT_EMAIL = "//input[@data-test-id='login-page-mail-input']";
+    //    public static final String INPUT_EMAIL = "//input[@class='ant-input primaryInput  not-entered']";
+    public static final String BTN_PASSWORD = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']";
+
+    public static final String OWNER = "Владелец";
+    public static final String ADMIN = "Администратор проекта";
+    public static final String SUBCONTRACTOR = "Подрядчик";
+    public static final String INSPECTOR = "Инспектор";
+    public static final String OBSERVER = "Наблюдатель";
+    public static final String WISOR = "Супервизор";
+
+
+//=========================== test yevgeniy.gor.90@mail.ru==================================
+
+    public static final String URL = "http://31.129.109.20:5000/login";
+    public static final String URL_REGISTRATION = "http://31.129.109.20:5000/registration";
+
+
+    public static final String EMAIL = "yevgeniy.gor.90@mail.ru";
+    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";
+    public static final String INSPECTOR_EMAIL = "bukkosefyu@gufum.com";
+    public static final String SUBCONTRACTOR_EMAIL = "kkk.k.82@list.ru";
+    public static final String OBSERVER_EMAIL = "o_o_2025@bk.ru";
+    public static final String VISOR_EMAIL = "fefyevipsa@gufum.com";
+    public static final String PASSWORD = "qwert12345";
+
+
+//=========================== test f.ff.1980@list.ru ==================================
+
+//    public static final String EMAIL = "f.ff.1980@list.ru";
+//    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";
+//    public static final String INSPECTOR_EMAIL = "cil2e@mailtub.com";
+//    public static final String SUBCONTRACTOR_EMAIL = "d8q2s@fthcapital.com";
+//    public static final String OBSERVER_EMAIL = "cecily16432@lu1f.cse445.com";
+//    public static final String VISOR_EMAIL = "vognofurdu@gufum.com";
+
+//    public static final String PASSWORD = "012345678";
+
+
+//=========================== stage ==================================
+
+//    public static final String URL = "http://46.173.28.231:3000/login";
+//    public static final String URL_REGISTRATION = "http://23.105.246.201:5000/registration";
+//
+//    public static final String EMAIL = "jartestaw@bk.ru";
+//    public static final String EMAIL = "akhilgov@spgr.ru";
+//    public static final String ADMIN_EMAIL = "durtobelmu@gufum.com";
+//    public static final String INSPECTOR_EMAIL = "e4lya@belgianairways.com";
+//    public static final String SUBCONTRACTOR_EMAIL = "mestenurta@gufum.com";
+//    public static final String OBSERVER_EMAIL = "murkegotri@gufum.com";
+//    public static final String VISOR_EMAIL = "kpvnvlilz9@xkxkud.com";                                   // test
+
+
+//=========================== XRBP ==================================
+
+//    public static final String URL_XRBP = "http://31.129.103.215:3000/login";
 //    public void XRBP() {
 //        String URL = "http://31.129.103.215:3000/login";
 //    }
@@ -26,66 +84,16 @@ public abstract class BaseTest {
 //    public void Armw() {
 //    final String URL = "http://23.105.246.172:5000/login";
 //    }
-//    public static final String URL = "http://46.173.28.231:3000/login";                                      //stage
-//    public static final String URL_REGISTRATION = "http://23.105.246.201:5000/registration";                 //stage
-    public static final String URL = "http://31.129.109.20:5000/login";                                        // test
-//    public static final String URL = "https://arm.vr-arsoft.com/login";                                        // прод
-    public static final String URL_REGISTRATION = "http://31.129.109.20:5000/registration";                   // test
-//    public static final String URL_XRBP = "http://31.129.103.215:3000/login";
-
-    public static final String INPUT_PASSWORD = "//input[@class='ant-input']";
-    public static final String INPUT_EMAIL = "//input[@data-test-id='login-page-mail-input']";
-//    public static final String INPUT_EMAIL = "//input[@class='ant-input primaryInput  not-entered']";
-    public static final String BTN_PASSWORD = "//button[@class='ant-btn ant-btn-default authButton big colorPrimary ']";
-
-
-    //===========================    EMAIL ==================================
-//    public static final String EMAIL = "f.ff.1980@list.ru";                                                   // test
-    public static final String EMAIL = "yevgeniy.gor.90@mail.ru";                                           // test
-//    public static final String EMAIL = "jartestaw@bk.ru";                                                   // stage
-public static final String OWNER = "Владелец";
-
-
-    //===========================    ADMIN_EMAIL ==================================
-//    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";                                          // test
-    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";                                             // test
-//    public static final String ADMIN_EMAIL = "durtobelmu@gufum.com";                                        // stage
-    public static final String ADMIN = "Администратор проекта";
-
-
-    //===========================    INSPECTOR_EMAIL ==================================
-//    public static final String INSPECTOR_EMAIL = "cil2e@mailtub.com";                                         // test
-    public static final String INSPECTOR_EMAIL = "bukkosefyu@gufum.com";                                    // test
-//    public static final String INSPECTOR_EMAIL = "e4lya@belgianairways.com";                                    // stage
-public static final String INSPECTOR= "Инспектор";
-
-
-    //===========================     SUBCONTRACTOR_EMAIL ==================================
-//    public static final String SUBCONTRACTOR_EMAIL = "d8q2s@fthcapital.com";                                  // test
-    public static final String SUBCONTRACTOR_EMAIL = "kkk.k.82@list.ru";                                    // test
-//    public static final String SUBCONTRACTOR_EMAIL = "mestenurta@gufum.com";                                // stage
-public static final String SUBCONTRACTOR = "Подрядчик";
-
-
-    //===========================      OBSERVER_EMAIL ==================================
-//    public static final String OBSERVER_EMAIL = "cecily16432@lu1f.cse445.com";                                // test
-    public static final String OBSERVER_EMAIL = "o_o_2025@bk.ru";                                       // test
-//    public static final String OBSERVER_EMAIL = "murkegotri@gufum.com";                                     // stage
-public static final String OBSERVER = "Наблюдатель";
-
-
-    // ===========================      VISOR_EMAIL ==================================
-//    public static final String VISOR_EMAIL = "vognofurdu@gufum.com";                                          // test
-        public static final String VISOR_EMAIL = "kpvnvlilz9@xkxkud.com";                                   // test
-    public static final String WISOR = "Супервизор";
-
-
-//    public static final String EMAIL = "akhilgov@spgr.ru";                                                  // stage
 //
-//
+
+
+//=========================== прод ==================================
+
+//    public static final String URL = "https://arm.vr-arsoft.com/login";
+
+// ===========================      VISOR_EMAIL ==================================
 // ===========================      PASSWORD ==================================
-    public static final String PASSWORD = "qwert12345";                                                     // test
-//    public static final String PASSWORD = "012345678";                                                        // test
+
     public static final String NOT_PASSWORD = "";
     public static final String PASSWORD_N = "qwerty123";                                                      // stage
 
@@ -98,7 +106,6 @@ public static final String OBSERVER = "Наблюдатель";
     private final By GET_BOT = By.xpath("//span[@dir='auto']");
     private final By GET_SUPPORT = By.xpath("//h1[@variant='display-3']");
 
-    public WebDriver driver = new ChromeDriver();
 
 //    @BeforeMethod
 //    protected void beforeMethod(Method method) {

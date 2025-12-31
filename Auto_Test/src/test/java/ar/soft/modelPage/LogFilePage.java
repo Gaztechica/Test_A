@@ -7,6 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
+import static ar.soft.runner.BaseTest.EMAIL;
+
 public class LogFilePage extends BasePage {
 
     public LogFilePage(WebDriver driver) {
@@ -16,11 +18,12 @@ public class LogFilePage extends BasePage {
     @FindBy(xpath = "//a[@href='/logfiles']")
     private WebElement btnLogFile;
 
-    @FindBy(xpath = "//img[@class='project__image']") // заменил 29.06.24 не удалял
+    @FindBy(xpath = "//*[@class='Log__info-iconBlock']") // заменил 29.06.24 не удалял
 //    @FindBy(xpath = "//img[@src='/static/media/Basket.8774715cc0eccb962b78054dc111a9a8.svg']")
     private WebElement iconDeleteLogFile;
 
-    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']")
+//    @FindBy(xpath = "//button[@type='button']//span[contains(.,'Отменить')]")
+    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']//span")
     private WebElement btnCanselDeleteLogFile;
 
     @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']//span")
@@ -70,7 +73,7 @@ public class LogFilePage extends BasePage {
     }
 
     public String logNameText() {
-        return getDriver().findElement(By.xpath("//*[@data-testid='Text'][contains(., 'f.ff.1980@list.ru')]")).getText();
+        return getDriver().findElement(By.xpath("//*[@data-test-id='text'][contains(., '" + EMAIL + "')]")).getText();
     }
 
 //    public LogFilePage logName() {

@@ -5,13 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="fix apiTest">
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/PlatformV1ng.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/Test.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginPojoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginPojoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AuthorizationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/LogFilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/LogFilePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -450,7 +446,7 @@
     &quot;TestNG.ar.soft.SettingsSidebarTest and 4 more.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.remarcTest.remarcTest.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;171125&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;011225&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/resources&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
@@ -478,7 +474,7 @@
       <recent name="ar.soft.modelPage" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AuthorizationTest.adminAuthorizationTest">
+  <component name="RunManager" selected="TestNG.AuthorizationTest.ownerAuthorizationTest">
     <configuration name="AuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -490,24 +486,6 @@
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTest.adminAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
-      <option name="METHOD_NAME" value="adminAuthorizationTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -643,13 +621,30 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="InspectSidebarTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.InspectSidebarTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AuthorizationTest.adminAuthorizationTest" />
         <item itemvalue="TestNG.AuthorizationTest.ownerAuthorizationTest" />
-        <item itemvalue="TestNG.AuthorizationTest.observerAuthorizationTest" />
         <item itemvalue="TestNG.AuthorizationTest" />
+        <item itemvalue="TestNG.AuthorizationTest.observerAuthorizationTest" />
         <item itemvalue="TestNG.AuthorizationTest.visorAuthorizationTest" />
+        <item itemvalue="TestNG.InspectSidebarTest" />
       </list>
     </recent_temporary>
   </component>
@@ -668,14 +663,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00076" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1714937107730</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1714937107730</updated>
     </task>
     <task id="LOCAL-00077" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -1061,7 +1048,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762239970573</updated>
     </task>
-    <option name="localTasksCounter" value="125" />
+    <task id="LOCAL-00125" summary="fix apiTest">
+      <option name="closed" value="true" />
+      <created>1764834809093</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1764834809095</updated>
+    </task>
+    <option name="localTasksCounter" value="126" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1112,7 +1107,8 @@
     <MESSAGE value="new SettingsUsersTest" />
     <MESSAGE value="fix RegistrationTest" />
     <MESSAGE value="fix InspectSidebarTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix InspectSidebarTest" />
+    <MESSAGE value="fix apiTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix apiTest" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_ownerAuthorizationTest.ic" NAME="AuthorizationTest.ownerAuthorizationTest Coverage Results" MODIFIED="1747742779332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
