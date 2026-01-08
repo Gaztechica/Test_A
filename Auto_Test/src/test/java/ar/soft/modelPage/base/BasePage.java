@@ -1,6 +1,7 @@
 package ar.soft.modelPage.base;
 
 import ar.soft.modelPage.*;
+import ar.soft.modelPage.FileSPage.FilePage;
 import ar.soft.modelPage.ProjectSettingsPage.ChecklistsSidebarPage;
 import ar.soft.modelPage.ProjectSettingsPage.SettingsSidebarPage;
 import ar.soft.modelPage.ProjectSettingsPage.TypesWorkSidebarPage;
@@ -101,6 +102,13 @@ public class BasePage extends BaseModel {
         getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Инспекции')]")).click();
 
         return new InspectSidebarPage(getDriver());
+    }
+
+    @Name("открыть Файлы")
+    public FilePage fileSidebarClick() {
+        getDriver().findElement(By.xpath("//span[@class='ant-menu-title-content'][contains(.,'Файлы')]")).click();
+
+        return new FilePage(getDriver());
     }
 
     @Name("открыть Чек-листы")
