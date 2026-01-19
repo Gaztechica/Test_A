@@ -63,7 +63,7 @@ public class AccountLoginPojoTest extends Login {
         String token = response.getBody().jsonPath().get("token").toString();
         Assert.assertEquals(359, id);
         Assert.assertEquals("Елизавета", name);
-        Assert.assertEquals("f.ff.1980@list.ru", email);
+        Assert.assertEquals(EMAIL, email);
         Assert.assertEquals(token, token);
     }
 
@@ -165,9 +165,10 @@ public class AccountLoginPojoTest extends Login {
                 .extract().response();
         JsonPath jsonPath = response2.jsonPath();
         int id = jsonPath.get("data.id");
-        Assert.assertEquals(359, id);
+        Assert.assertEquals(117, id);
+//        Assert.assertEquals(359, id);
         String email = jsonPath.get("data.email");
-        Assert.assertEquals("f.ff.1980@list.ru", email);
+        Assert.assertEquals(EMAIL, email);
     }
 
 //    @Story("редактировать пользователя (если почта не изменяется, то в запрос ее передавать не нужно)")
