@@ -255,7 +255,22 @@ public class ActionT {
                 webElement.sendKeys(RETURN);
             }
         }
+
+        @Step("Кликнуть на поле очистить и ввести текст: '{text}'")
+        public static void clickAndEnterTextDeleteLineBreak(WebElement webElement, String text) {
+            log.info("Нажать на поле и ввести текст " + text);
+            webElement.click();
+            WaitT.littleWait(200);
+
+            SendAction.selectDeleteText(webElement);
+            WaitT.littleWait(200);
+            for (int i = 0; i < 1; i++) {
+                webElement.sendKeys(text);
+            }
+        }
+
     }
+
 
     /** Двойной клик на элемент */
     public static class DoubleClick {
@@ -424,6 +439,13 @@ public class ActionT {
         @Step("Выделение текста в поле")
         public static void selectText(WebElement webElement) {
             webElement.sendKeys(Keys.CONTROL + "a");
+        }
+
+        /** Выделение текста в поле */
+        @Step("Выделение текста и удаление в поле")
+        public static void selectDeleteText(WebElement webElement) {
+            webElement.sendKeys(Keys.CONTROL + "a");
+            webElement.sendKeys(DELETE);
         }
 
         /** Отправка изображения в поле ввода <input> */

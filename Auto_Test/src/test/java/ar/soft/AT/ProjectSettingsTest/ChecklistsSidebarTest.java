@@ -1,12 +1,13 @@
 package ar.soft.AT.ProjectSettingsTest;
 
-import ar.soft.element.ActionT;
+//import ar.soft.element.ActionT;
 import ar.soft.modelPage.ProjectSettingsPage.ChecklistsSidebarPage;
 import ar.soft.runner.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import ru.qa.methods.ActionT;
 
-import static ar.soft.element.ActionT.OneClick.clickAndHold;
+//import static ar.soft.element.ActionT.OneClick.clickAndHold;
 
 public class ChecklistsSidebarTest extends BaseTest {
 

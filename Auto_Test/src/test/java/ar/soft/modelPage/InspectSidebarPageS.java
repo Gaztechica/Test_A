@@ -1,6 +1,6 @@
 package ar.soft.modelPage;
 
-import ar.soft.element.WaitT;
+//import ar.soft.element.WaitT;
 import ar.soft.modelPage.base.BasePage;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static ar.soft.InspectSidebarTest.*;
-import static ar.soft.driver.WebDriverSetup.getDriverInstance;
+//import static ar.soft.driver.WebDriverSetup.getDriverInstance;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.page;
 import static org.openqa.selenium.By.xpath;
