@@ -1,9 +1,10 @@
 package ar.soft;
 
-import ar.soft.element.ActionT;
+//import ar.soft.element.ActionT;
 import ar.soft.modelPage.TestPage;
 import ar.soft.runner.BaseTest;
 import org.testng.annotations.Test;
+import ru.qa.methods.ActionT;
 
 import java.util.HashMap;
 
@@ -16,6 +17,7 @@ public class TestTest extends BaseTest {
                  .btnAddCheck()
                  .btnCheckboxUserClick();
         testPage.newNameCheckClick2.click();
+//        ActionT.OneClick.clickAndEnterTextDeleteLineBreak(testPage.newNameCheckClick,  " Remove Name");
         ActionT.OneClick.clickAndEnterTextDeleteLineBreak(testPage.newNameCheckClick,  " Remove Name");
         ActionT.OneClick.click(testPage.newNameCheckClick);
 

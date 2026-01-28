@@ -1,6 +1,6 @@
 package ar.soft.modelPage;
 
-import ar.soft.element.WaitT;
+//import ar.soft.element.WaitT;
 import ar.soft.modelPage.base.BasePage;
 import io.qameta.allure.Step;
 import jdk.jfr.Name;
@@ -8,14 +8,16 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.testng.Assert;
+import ru.qa.methods.WaitT;
 
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
 import static ar.soft.InspectSidebarTest.*;
-import static ar.soft.driver.WebDriverSetup.getDriverInstance;
+//import static ar.soft.driver.WebDriverSetup.getDriverInstance;
 import static org.openqa.selenium.By.xpath;
+import static ru.qa.driver.WebDriverSetup.getDriverInstance;
 
 public class InspectSidebarPage extends BasePage {
 

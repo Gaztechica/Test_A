@@ -1,6 +1,6 @@
 package ar.soft.modelPage.ProjectSettingsPage;
 
-import ar.soft.element.WaitT;
+//import ar.soft.element.WaitT;
 import ar.soft.modelPage.base.BasePage;
 import io.qameta.allure.Allure;
 import io.qameta.allure.Step;
@@ -11,6 +11,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import ru.qa.methods.WaitT;
 
 public class ChecklistsSidebarPage extends BasePage {
 
