@@ -65,13 +65,27 @@ public abstract class BaseTest {
 //    public static final String URL = "http://46.173.28.231:3000/login";
 //    public static final String URL_REGISTRATION = "http://23.105.246.201:5000/registration";
 //
-//    public static final String EMAIL = "jartestaw@bk.ru";
 //    public static final String EMAIL = "akhilgov@spgr.ru";
 //    public static final String ADMIN_EMAIL = "durtobelmu@gufum.com";
 //    public static final String INSPECTOR_EMAIL = "e4lya@belgianairways.com";
 //    public static final String SUBCONTRACTOR_EMAIL = "mestenurta@gufum.com";
 //    public static final String OBSERVER_EMAIL = "murkegotri@gufum.com";
 //    public static final String VISOR_EMAIL = "kpvnvlilz9@xkxkud.com";                                   // test
+//    public static final String PASSWORD = "qwerty123";
+
+
+    //=========================== stage "ГК Спектрум" ==================================
+
+//    public static final String URL = "http://46.173.28.231:3000/login";
+//    public static final String URL_REGISTRATION = "http://23.105.246.201:5000/registration";
+//
+//    public static final String EMAIL = "jartestaw@bk.ru";
+//    public static final String ADMIN_EMAIL = "armtset18@bk.ru";
+//    public static final String INSPECTOR_EMAIL = "armtset52@bk.ru";
+//    public static final String SUBCONTRACTOR_EMAIL = "qwtesttq@bk.ru";
+//    public static final String OBSERVER_EMAIL = "saohhpoug@asjjasfqw.wy";
+//    public static final String VISOR_EMAIL = "anjzxphye@uwqr.em";                                   // test
+//    public static final String PASSWORD = "qwerty123";
 
 
 //=========================== XRBP ==================================

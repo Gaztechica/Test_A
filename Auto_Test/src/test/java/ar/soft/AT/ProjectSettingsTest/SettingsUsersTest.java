@@ -1,4 +1,4 @@
-package ar.soft.AT;
+package ar.soft.AT.ProjectSettingsTest;
 
 import ar.soft.modelPage.ProjectSettingsPage.SettingsUsersPage;
 import ar.soft.runner.BaseTest;
@@ -10,7 +10,7 @@ public class SettingsUsersTest extends BaseTest {
     public final static String NAME_USER = "a123EvgenTest";
 
     @Test(priority = 1,
-            description = "приглашение пользователя в проект")
+            description = "Добавление пользователя в проект")
     public void createUsersProject() throws InterruptedException {
         new SettingsUsersPage(getDriver())
                 .project()
@@ -44,7 +44,7 @@ public class SettingsUsersTest extends BaseTest {
     }
 
     @Test(priority = 3,
-            description = "множественное приглашение пользователя в проект")
+            description = "множественное добавление пользователя в проект")
     public void addUsersProject() throws InterruptedException {
         new SettingsUsersPage(getDriver())
                 .project()

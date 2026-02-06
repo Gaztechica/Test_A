@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import static ar.soft.AT.SettingsUsersTest.NAME_USER;
+import static ar.soft.AT.ProjectSettingsTest.SettingsUsersTest.NAME_USER;
 
 public class SettingsUsersPage extends BasePage {
 
