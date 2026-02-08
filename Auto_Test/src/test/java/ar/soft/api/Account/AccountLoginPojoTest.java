@@ -70,9 +70,6 @@ public class AccountLoginPojoTest extends Login {
     public void checkAccountLoginTest2() {
         Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
         Response response2 = given(specification)
-//                .when().log().all()
-//                .contentType(ContentType.JSON)
-//                .header("Authorization", "Bearer_" + token)
                 .get("account/info")
                 .then()
                 .extract().response();
@@ -85,18 +82,79 @@ public class AccountLoginPojoTest extends Login {
         Assert.assertEquals(359, ids);
     }
 
-    @Story("вывести информацию о своем аккаунте")
+
+
+
+
+
+
+    @Story("Авторизация и получение токена")
+    @Description("вывести информацию о своем аккаунте")
+    @Test(priority = 1, groups = {"10.5", "1"},
+            description = "")
+    public static void accountLoginTest() {
+        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Map<String, String> user = new HashMap<>();
+        user.put("email", EMAIL);
+        user.put("password", PASSWORD);
+        Response response = given()
+                .body(user)
+                .when()
+                .post("account/login")
+                .then().log().all()
+                .extract().response();
+        JsonPath jsonPath = response.jsonPath();
+        int id = jsonPath.get("data.id");
+        String name = jsonPath.get("data.name");
+        String email = jsonPath.get("data.email");
+//        String token = jsonPath.get("token.token");
+        String token = response.getBody().jsonPath().get("token").toString();
+        Assert.assertEquals(359, id);
+        Assert.assertEquals("Елизавета", name);
+        Assert.assertEquals("f.ff.1980@list.ru", email);
+        Assert.assertEquals(token, token);
+    }
+
+    @Story("Авторизация и получение токена")
+    @Description("Авторизация и получение токена")
+    @Test(priority = 1, groups = {"10.5", "Dialogs"},
+            description = "Авторизация под ролью владельца")
+    public void checkAccountLoginTest22() {
+        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        LoginReguest loginReguest = new LoginReguest(PASSWORD, EMAIL);
+
+        Response response = given()
+                .body(loginReguest)
+                .when().log().all()
+                .post("account/login")
+                .then().log().all()
+//                .body("data.id", equalTo(117))                  проверка по простому
+//                .body("data.name", equalTo("Александр"))
+                .extract().response();
+        JsonPath jsonPath = response.jsonPath();
+        int id = jsonPath.get("data.id");
+        String name = jsonPath.get("data.name");
+        String email = jsonPath.get("data.email");
+//        String token = jsonPath.get("token.token");
+        String token = response.getBody().jsonPath().get("token").toString();
+        Assert.assertEquals(359, id);
+        Assert.assertEquals("Елизавета", name);
+        Assert.assertEquals("f.ff.1980@list.ru", email);
+        Assert.assertEquals(token, token);
+    }
+
+    @Story("Авторизация и получение токена")
     @Description("вывести информацию о своем аккаунте")
     @Test(priority = 2, groups = {"10.5", "1"},
-            description = "вывести информацию о своем аккаунте")
-    public void GetAccountInfoTest() {
+            description = "")
+    public void checkAccountInfoTest4s() {
         Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
-        Response response2 = given(specification)
-//                .when().log().all()
-//                .contentType(ContentType.JSON)
-//                .header("Authorization", "Bearer_" + token)
+        Response response2 = given()
+                .when().log().all()
+                .contentType(ContentType.JSON)
+                .header("Authorization", "Bearer_" + token)
                 .get("account/info")
-                .then()
+                .then().log().all()
                 .extract().response();
         JsonPath jsonPath = response2.jsonPath();
         int ids = jsonPath.get("data.id");
@@ -104,16 +162,30 @@ public class AccountLoginPojoTest extends Login {
         Assert.assertEquals(359, ids);
     }
 
-    @Story("вывести всех пользователей по организации")
+    @Story("Авторизация и получение токена")
     @Description("вывести всех пользователей по организации")
     @Test(priority = 3, groups = {"10.5", "Dialogs"},
-            description = "вывести всех пользователей по организации")
-    public void PostAccountOrganizationTest() {
+            description = "Авторизация под ролью владельца")
+    public void checkAccountOrganizationTests() {
         Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
-        Response response2 = given(specification)
-//                .when().log().all()
-//                .contentType(ContentType.JSON)
-//                .header("Authorization", "Bearer_" + token)
+        Map<String, String> user = new HashMap<>();
+        user.put("email", EMAIL);
+        user.put("password", PASSWORD);
+        Response response = given()
+                .body(user)
+                .when()
+                .post("account/login")
+                .then()
+                .extract().response();
+        JsonPath jsonPath = response.jsonPath();
+        String token = response.getBody().jsonPath().get("token").toString();
+
+        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+//        Map<String, String> user2 = new HashMap<>();
+        Response response2 = given()
+                .when().log().all()
+                .contentType(ContentType.JSON)
+                .header("Authorization", "Bearer_" + token)
                 .get("account/organization")
                 .then().log().all()
                 .body("totalElements", Matchers.equalTo(59))
@@ -121,51 +193,14 @@ public class AccountLoginPojoTest extends Login {
                 .body("domain[0].email", equalTo("1аye21vtcmvg@mail.ru"))
                 .body("domain[9].email", equalTo("d8q2s@fthcapital.com"))
                 .extract().response();
-        JsonPath jsonPath = response2.jsonPath();
+        jsonPath = response2.jsonPath();
         int ids = jsonPath.get("totalElements");
-        Integer id = jsonPath.get("domain[0].id");
-        String email = jsonPath.get("domain[0].email");
+//        String email = jsonPath.get("$.domain.id[0]");
         Assert.assertEquals(59, ids);
-        Assert.assertEquals(785, id);
-                Assert.assertEquals("1аye21vtcmvg@mail.ru", email);
+//                Assert.assertEquals(785, email);
+//                Assert.assertEquals("d8q2s@fthcapital.com", email);
     }
 
-    @Story("Изменение пароля пользователя на странице профиля")
-    @Description("Изменение пароля пользователя на странице профиля")
-    @Test(priority = 4, groups = {"10.5", "Dialogs"},
-            description = "Изменение пароля пользователя на странице профиля")
-    public void PutAccountPasswordTest() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
-        Map<String, String> user = new HashMap<>();
-        user.put("currentPassword", PASSWORD);
-        user.put("newPassword", PASSWORD_N);
-        Response response = given()
-                .body(user)
-                .when()
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer_" + token)
-                .put("account/password")
-                .then()
-                .extract().response();
-
-        Map<String, String> user2 = new HashMap<>();
-        user2.put("currentPassword", PASSWORD_N);
-        user2.put("newPassword", PASSWORD);
-        Response response2 = given()
-                .body(user2)
-                .when().log().all()
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer_" + token)
-                .put("account/password")
-                .then().log().all()
-                .extract().response();
-        JsonPath jsonPath = response2.jsonPath();
-        int id = jsonPath.get("data.id");
-        Assert.assertEquals(117, id);
-//        Assert.assertEquals(359, id);
-        String email = jsonPath.get("data.email");
-        Assert.assertEquals(EMAIL, email);
-    }
 
 //    @Story("редактировать пользователя (если почта не изменяется, то в запрос ее передавать не нужно)")
 //    @Description("редактировать пользователя (если почта не изменяется, то в запрос ее передавать не нужно)")

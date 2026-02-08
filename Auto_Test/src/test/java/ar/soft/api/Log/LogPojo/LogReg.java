@@ -1,4 +1,4 @@
-package ar.soft.api.LogPojo;
+package ar.soft.api.Log.LogPojo;
 
 public class LogReg {
 
