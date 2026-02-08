@@ -1,4 +1,4 @@
-package ar.soft.api.LogPojo;
+package ar.soft.api.Log.LogPojo;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;

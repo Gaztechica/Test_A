@@ -1,4 +1,4 @@
-package ar.soft.api.LogPojo;
+package ar.soft.api.Log.LogPojo;
 
 import ar.soft.api.Account.AccountLoginPojo;
 import ar.soft.api.Account.LoginReguest;

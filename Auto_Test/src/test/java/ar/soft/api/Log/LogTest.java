@@ -1,21 +1,18 @@
 package ar.soft.api.Log;
 
 import ar.soft.api.Account.Login;
-import ar.soft.api.Account.LoginReguest;
-import ar.soft.api.Account.Pet;
-import ar.soft.api.LogPojo.*;
+import ar.soft.api.Log.LogPojo.DelLog;
+import ar.soft.api.Log.LogPojo.LogReg;
+import ar.soft.api.Log.LogPojo.LogRes;
+//import ar.soft.api.LogPojo.*;
 import ar.soft.api.Specification;
-import com.fasterxml.jackson.annotation.JacksonInject;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
-import io.restassured.RestAssured;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import static ar.soft.api.Account.Login.URL_API;
-import static ar.soft.runner.BaseTest.*;
 import static io.restassured.RestAssured.given;
 import static org.bouncycastle.asn1.cmc.CMCStatus.success;
 
@@ -45,7 +42,7 @@ public class LogTest extends Login {
     @Description("вывести информацию о своем аккаунте")
     @Test(priority = 2, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
-    public void    postLogTest() {
+    public void postLogTest() {
         Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
         LogRes logRes = given(specification)
                 .body(logReg)
@@ -61,7 +58,7 @@ public class LogTest extends Login {
             description = "вывести информацию о своем аккаунте")
     public void postLogTest2() {
         Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
-        Response response= given(specification)
+        Response response = given(specification)
                 .body(logReg)
                 .post("/log" + contextOrganizationId)
                 .then()
@@ -70,53 +67,45 @@ public class LogTest extends Login {
         JsonPath jsonPath = response.jsonPath();
         logId = jsonPath.get("data.id");
         Assert.assertEquals(logId, logId);
-//                jsonPath().get("data.id");
-
-
-//        logId = response.getBody();
-//        logId = ress.setId();
-        System.out.println("=====logId=====   " + logId);
 
         DelLog delLog = given(specification)
                 .delete("/log/" + logId + contextOrganizationId)
                 .then()
                 .extract().response().as(DelLog.class);
         Assert.assertEquals(success, success);
-
-
-           }
-
-    @Story("Сохранить логи аккаунта по id")
-    @Description("вывести информацию о своем аккаунте")
-    @Test(priority = 2, groups = {"10.5", "1"},
-            description = "вывести информацию о своем аккаунте")
-    public void postLogTest3() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
-        Response response= given(specification)
-                .body(logReg)
-                .post("/log" + contextOrganizationId)
-                .then()
-                .extract().response();
-//                .extract().response().as(LogRes.class);
-        
-        JsonPath jsonPath = response.jsonPath();
-        logId = jsonPath.get("data.id");
-        Assert.assertEquals(logId, logId);
-//                jsonPath().get("data.id");
-
-
-//        logId = response.getBody();
-//        logId = ress.setId();
-        System.out.println("=====logId=====   " + logId);
-
-        DelLog delLog = given(specification)
-                .delete("/log/" + logId + contextOrganizationId)
-                .then()
-                .extract().response().as(DelLog.class);
-        Assert.assertEquals(success, success);
-
-
     }
+
+//    @Story("Сохранить логи аккаунта по id")
+//    @Description("вывести информацию о своем аккаунте")
+//    @Test(priority = 2, groups = {"10.5", "1"},
+//            description = "вывести информацию о своем аккаунте")
+//    public void postLogTest3() {
+//        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+//        Response response = given(specification)
+//                .body(logReg)
+//                .post("/log" + contextOrganizationId)
+//                .then()
+//                .extract().response();
+////                .extract().response().as(LogRes.class);
+//
+//        JsonPath jsonPath = response.jsonPath();
+//        logId = jsonPath.get("data.id");
+//        Assert.assertEquals(logId, logId);
+////                jsonPath().get("data.id");
+//
+//
+////        logId = response.getBody();
+////        logId = ress.setId();
+//        System.out.println("=====logId=====   " + logId);
+//
+//        DelLog delLog = given(specification)
+//                .delete("/log/" + logId + contextOrganizationId)
+//                .then()
+//                .extract().response().as(DelLog.class);
+//        Assert.assertEquals(success, success);
+//
+//
+//    }
 //    @Story("Удалить логи аккаунта по id")
 //    @Description("вывести информацию о своем аккаунте")
 //    @Test(priority = 3, groups = {"10.5", "1"},
@@ -128,9 +117,7 @@ public class LogTest extends Login {
 //                .delete("/log/" + (LogRes.class)
 //                .then()
 //                .extract().response();
-//
-//
-//    }
+//   }
 
     @Story("Удалить логи аккаунта по id")
     @Description("вывести информацию о своем аккаунте")
@@ -138,7 +125,6 @@ public class LogTest extends Login {
             description = "вывести информацию о своем аккаунте")
     public void deleteLogTest2() {
         Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
-
 
         Response response = given(specification)
                 .delete("/log/" + logId + contextOrganizationId)
