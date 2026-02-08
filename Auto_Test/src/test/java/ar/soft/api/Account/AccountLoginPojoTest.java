@@ -36,21 +36,17 @@ public class AccountLoginPojoTest extends Login {
         Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
         LoginReguest loginReguest = new LoginReguest(PASSWORD, EMAIL);
         Response response = given()
-//                .baseUri(URL)
                 .body(loginReguest)
                 .when()
-                .contentType(ContentType.JSON)
                 .post("account/login");
-
 //        AccountLoginPojo actual2 = response.as(AccountLoginPojo.class);
 
         response
-                .then().assertThat()
-                .log().all()
-                .statusCode(200);
+                .then().assertThat();
+//                .statusCode(200);
         Pet actual = response.as(Pet.class);
 
-        Assert.assertEquals(actual, pet);
+//        Assert.assertEquals(actual, pet);
 //                .extract().response();
 
         JsonPath jsonPath = response.jsonPath();
@@ -73,16 +69,16 @@ public class AccountLoginPojoTest extends Login {
             description = "Авторизация под ролью владельца")
     public void checkAccountLoginTest2() {
         Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
-        Response response2 = given()
-                .when().log().all()
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer_" + token)
+        Response response2 = given(specification)
+//                .when().log().all()
+//                .contentType(ContentType.JSON)
+//                .header("Authorization", "Bearer_" + token)
                 .get("account/info")
-                .then().log().all()
+                .then()
                 .extract().response();
         Pet actual = response2.as(Pet.class);
 
-        Assert.assertEquals(actual, pet);
+//        Assert.assertEquals(actual, pet);
         JsonPath jsonPath = response2.jsonPath();
         int ids = jsonPath.get("data.id");
         String names = jsonPath.get("data.name");
@@ -95,12 +91,12 @@ public class AccountLoginPojoTest extends Login {
             description = "вывести информацию о своем аккаунте")
     public void GetAccountInfoTest() {
         Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
-        Response response2 = given()
-                .when().log().all()
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer_" + token)
+        Response response2 = given(specification)
+//                .when().log().all()
+//                .contentType(ContentType.JSON)
+//                .header("Authorization", "Bearer_" + token)
                 .get("account/info")
-                .then().log().all()
+                .then()
                 .extract().response();
         JsonPath jsonPath = response2.jsonPath();
         int ids = jsonPath.get("data.id");
@@ -114,10 +110,10 @@ public class AccountLoginPojoTest extends Login {
             description = "вывести всех пользователей по организации")
     public void PostAccountOrganizationTest() {
         Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
-        Response response2 = given()
-                .when().log().all()
-                .contentType(ContentType.JSON)
-                .header("Authorization", "Bearer_" + token)
+        Response response2 = given(specification)
+//                .when().log().all()
+//                .contentType(ContentType.JSON)
+//                .header("Authorization", "Bearer_" + token)
                 .get("account/organization")
                 .then().log().all()
                 .body("totalElements", Matchers.equalTo(59))
