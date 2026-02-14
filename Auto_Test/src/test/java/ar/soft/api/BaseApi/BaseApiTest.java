@@ -1,15 +1,12 @@
-package ar.soft.api.Account;
+package ar.soft.api.BaseApi;
 
+import ar.soft.api.Account.LoginReguest;
 import ar.soft.api.Specification;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import io.restassured.builder.RequestSpecBuilder;
-import io.restassured.http.ContentType;
-import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.junit.jupiter.api.BeforeAll;
-import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -19,10 +16,10 @@ import static ar.soft.runner.BaseTest.PASSWORD;
 import static io.netty.handler.codec.http.HttpHeaders.addHeader;
 import static io.restassured.RestAssured.given;
 
-public class Login {
+public class BaseApiTest {
 
     public final static String URL_API = "http://62.113.97.50:8081";
-    public final static String URL = "http://62.113.97.50:8081";
+//    public final static String URL = "http://62.113.97.50:8081";
 
     public static String token;
 
@@ -32,7 +29,7 @@ public class Login {
     @Test(priority = 1, groups = {"10.5", "1"},
             description = "")
     public static void accountLoginTest() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         LoginReguest loginReguest = new LoginReguest(PASSWORD, EMAIL);
 
         Response response = given()

@@ -1,10 +1,11 @@
 package ar.soft.api.Log.LogPojo;
 
+import ar.soft.api.BaseApi.BaseApiTest;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class LogRes  {
+public class LogRes  extends BaseApiTest {
 
     private String creationDate;
     private String data;
@@ -46,6 +47,7 @@ public class LogRes  {
         this.accountEmail = accountEmail;
     }
 
+    @JsonProperty("id")
     public Integer getId() {
         return id;
     }

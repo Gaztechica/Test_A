@@ -1,5 +1,6 @@
 package ar.soft.api.Account;
 
+import ar.soft.api.BaseApi.BaseApiTest;
 import ar.soft.api.Specification;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
@@ -17,7 +18,7 @@ import static ar.soft.runner.BaseTest.*;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class AccountLoginPojoTest extends Login {
+public class AccountLoginPojoTest extends BaseApiTest {
 
 //    private final static String URL = "http://62.113.97.50:8081/account";
 
@@ -81,12 +82,6 @@ public class AccountLoginPojoTest extends Login {
         String names = jsonPath.get("data.name");
         Assert.assertEquals(359, ids);
     }
-
-
-
-
-
-
 
     @Story("Авторизация и получение токена")
     @Description("вывести информацию о своем аккаунте")
