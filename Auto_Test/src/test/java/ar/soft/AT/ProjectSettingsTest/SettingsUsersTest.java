@@ -4,6 +4,7 @@ import ar.soft.modelPage.ProjectSettingsPage.SettingsUsersPage;
 import ar.soft.runner.BaseTest;
 import org.testng.annotations.Test;
 import ru.qa.methods.AssertionT;
+import ru.qa.methods.WaitT;
 
 public class SettingsUsersTest extends BaseTest {
 
@@ -21,7 +22,8 @@ public class SettingsUsersTest extends BaseTest {
         settingsUsersPage.searchUsersClick.sendKeys(NAME_USER);
         settingsUsersPage.checkUsersClick.click();
         settingsUsersPage.btnButtonClick.click();
-        Thread.sleep(300);
+//        Thread.sleep(300);
+        WaitT.littleWait(300);
 
         AssertionT.Element.elementDisplayed(settingsUsersPage.newUsersCheck);
     }
@@ -35,7 +37,9 @@ public class SettingsUsersTest extends BaseTest {
         SettingsUsersPage settingsUsersPage = new SettingsUsersPage(getDriver());
         settingsUsersPage.usersClick.click();
         settingsUsersPage.newUsersCheck2.click();
-        Thread.sleep(800);
+//        Thread.sleep(800);
+        WaitT.littleWait(800);
+
         settingsUsersPage.btnButtonDeleteClick.click();
 
         AssertionT.Element.elementDisplayed(settingsUsersPage.messageCheck);

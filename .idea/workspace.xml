@@ -5,16 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="refactor Test">
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/FileTest/FileSTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryPojo/DirectDel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryPojo/DirectoryReg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryPojo/DirectoryRes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/Pojjjj.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklisPojo/ChecklistGreateReg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklisPojo/ChecklistReg.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklisPojo/ChecklistRes.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklistTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/jsonLog.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/ProjectSettingsTest/SettingsUsersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/ProjectSettingsTest/SettingsUsersTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginPojoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginPojoTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/BaseApi/BaseApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/AutorisationApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/AutorisationApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/LogReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/LogReg.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/LogRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/LogRes.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/LogPojo/AuthReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/AuthReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/LogPojo/AuthRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/AuthRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/LogPojo/DelLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/DelLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/LogPojo/LogReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/LogReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/LogPojo/LogRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/LogRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/LogPojo/Ress.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/Ress.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Specification.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FileSPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FileSPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -279,6 +292,9 @@
     "TestNG.AutorisationTest.checkAutorisationIdTest.executor": "Run",
     "TestNG.AutorisationTest.checkAutorisationIdTest3.executor": "Run",
     "TestNG.AutorisationTest.executor": "Run",
+    "TestNG.ChecklistTest.getChecklistTest.executor": "Run",
+    "TestNG.ChecklistTest.getLogTest.executor": "Run",
+    "TestNG.ChecklistTest.getLogTest2.executor": "Run",
     "TestNG.ChecklistsSidebarTest.cancelDeleteChecklistsProjectTest.executor": "Run",
     "TestNG.ChecklistsSidebarTest.deleteBasketChecklistsProjectTest.executor": "Run",
     "TestNG.ChecklistsSidebarTest.deleteChecklistsProjectTest.executor": "Run",
@@ -298,8 +314,12 @@
     "TestNG.DashboardsSidebarTest.dashboardsTest.executor": "Run",
     "TestNG.DashboardsTest.cumulativeTest.executor": "Run",
     "TestNG.DashboardsTest.dashboardsTest.executor": "Run",
+    "TestNG.DirectoryTest.deleteDirectory.executor": "Run",
+    "TestNG.DirectoryTest.getDirectory.executor": "Run",
+    "TestNG.DirectoryTest.postDirectory.executor": "Run",
     "TestNG.FileSTest.checkNameTest.executor": "Run",
     "TestNG.FileSTest.checkSelectPartitionParamName.executor": "Run",
+    "TestNG.FileSTest.createFolderTest.executor": "Run",
     "TestNG.FileSTest.executor": "Run",
     "TestNG.FileTest.checkNameTest.executor": "Run",
     "TestNG.FileTest.createFolderTest.executor": "Run",
@@ -336,9 +356,12 @@
     "TestNG.LogTest.PostLogTest2.executor": "Run",
     "TestNG.LogTest.deleteLogTest2.executor": "Run",
     "TestNG.LogTest.executor": "Run",
+    "TestNG.LogTest.getLogTest.executor": "Run",
+    "TestNG.LogTest.getLogTest2.executor": "Run",
     "TestNG.LogTest.logTest.executor": "Run",
     "TestNG.LogTest.postLogTest.executor": "Run",
     "TestNG.LogTest.postLogTest2.executor": "Run",
+    "TestNG.LogTest.postLogTest3.executor": "Run",
     "TestNG.Login.accountLoginTest.executor": "Run",
     "TestNG.Login.checkAccountInfoTest.executor": "Run",
     "TestNG.Login.checkAccountInfoTests.executor": "Run",
@@ -475,7 +498,7 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "080226",
+    "git-widget-placeholder": "08022026",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java",
     "project.structure.last.edited": "Modules",
@@ -499,100 +522,13 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\cucumber" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ar.soft.AT.FileTest" />
+      <recent name="ar.soft.api.DirectoryPojo" />
       <recent name="ar.soft.api.Account" />
       <recent name="ar.soft.modelPage" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AccountLoginTest">
-    <configuration name="AccountLoginTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.api.Account.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.api.Account" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.api.Account.AccountLoginTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountLoginTest.accountAuthTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.api.Account.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.api.Account" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.api.Account.AccountLoginTest" />
-      <option name="METHOD_NAME" value="accountAuthTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountLoginTest.accountOrganizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.api.Account.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.api.Account" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.api.Account.AccountLoginTest" />
-      <option name="METHOD_NAME" value="accountOrganizationTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AccountLoginTest.putAccountPasswordTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.api.Account.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.api.Account" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.api.Account.AccountLoginTest" />
-      <option name="METHOD_NAME" value="putAccountPasswordTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTest.ownerAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
-      <option name="METHOD_NAME" value="ownerAuthorizationTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.FileSTest.createFolderTest">
     <configuration name="Dialogs" type="TestNG" nameIsGenerated="true">
       <module name="AutoTest" />
       <shortenClasspath name="NONE" />
@@ -668,13 +604,103 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="DirectoryTest.deleteDirectory" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.api.Directory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.api.Directory" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.api.Directory.DirectoryTest" />
+      <option name="METHOD_NAME" value="deleteDirectory" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DirectoryTest.getDirectory" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.api.Directory.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.api.Directory" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.api.Directory.DirectoryTest" />
+      <option name="METHOD_NAME" value="getDirectory" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileSTest.createFolderTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.FileTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.FileTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.FileTest.FileSTest" />
+      <option name="METHOD_NAME" value="createFolderTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileTest.createFolderTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.FileTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.FileTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.FileTest.FileTest" />
+      <option name="METHOD_NAME" value="createFolderTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SettingsUsersTest.createUsersProject" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.ProjectSettingsTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.ProjectSettingsTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.ProjectSettingsTest.SettingsUsersTest" />
+      <option name="METHOD_NAME" value="createUsersProject" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AccountLoginTest" />
-        <item itemvalue="TestNG.AccountLoginTest.accountAuthTest" />
-        <item itemvalue="TestNG.AccountLoginTest.putAccountPasswordTest" />
-        <item itemvalue="TestNG.AccountLoginTest.accountOrganizationTest" />
-        <item itemvalue="TestNG.AuthorizationTest.ownerAuthorizationTest" />
+        <item itemvalue="TestNG.FileSTest.createFolderTest" />
+        <item itemvalue="TestNG.FileTest.createFolderTest" />
+        <item itemvalue="TestNG.SettingsUsersTest.createUsersProject" />
+        <item itemvalue="TestNG.DirectoryTest.deleteDirectory" />
+        <item itemvalue="TestNG.DirectoryTest.getDirectory" />
       </list>
     </recent_temporary>
   </component>

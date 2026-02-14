@@ -13,8 +13,6 @@ public class FileTest extends BaseTest {
     @Test(priority = 1,
             description = "создать ")
     public void createFolderTest() throws InterruptedException {
-//        SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
-//        new FilePage(getDriver())
         String filePage = new FilePage(getDriver())
                 .project()
                 .fileSidebarClick()
@@ -25,10 +23,6 @@ public class FileTest extends BaseTest {
                 .checkCreateFolder();
 
         Assert.assertEquals(filePage, "новая папка");
-
-//        var page = new FileSPage(getDriver());
-//        page.fileAddButton.click();
-//        WaitT.littleWait(500);
     }
 
     @Test(priority = 2,

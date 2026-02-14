@@ -1,26 +1,24 @@
 package ar.soft.api.Account;
 
+import ar.soft.api.BaseApi.BaseApiTest;
 import ar.soft.api.Specification;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
-import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
-import org.junit.jupiter.api.BeforeAll;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.HashMap;
 import java.util.Map;
 
-import static ar.soft.api.Account.Login.token;
 import static ar.soft.runner.BaseTest.*;
 import static ar.soft.runner.BaseTest.PASSWORD_N;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
-public class AccountLoginTest extends Login {
+public class AccountLoginTest extends BaseApiTest {
 
     @Story("Авторизация и получение токена")
     @Description("Авторизация и получение токена")

@@ -21,6 +21,7 @@ public class Specification {
     public static ResponseSpecification responseSpecOk200() {
         return new ResponseSpecBuilder()
                 .expectStatusCode(200)
+                .log(LogDetail.ALL)
                 .build();
     }
 

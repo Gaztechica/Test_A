@@ -8,16 +8,15 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.hamcrest.Matchers;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.extension.MediaType;
-import org.junit.runner.Request;
+//import org.junit.jupiter.api.extension.MediaType;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
-import java.net.http.HttpResponse;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import static ar.soft.api.BaseApi.BaseApiTest.URL_API;
 import static ar.soft.runner.BaseTest.*;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
@@ -25,7 +24,7 @@ import static org.hamcrest.Matchers.notNullValue;
 
 public class AutorisationApiTest {
 
-    private final static String URL_API = "http://62.113.97.50:8081/account";
+//    private final static String URL_API = "http://62.113.97.50:8081/account";
     private final static String URL_API22 = "http://62.113.97.50:8081/account/password/send/{email}";
     //    private final static String URL_API = "http://23.111.202.224:8081/account/";
     private final static String URL_API2 = "http://23.111.202.224:8081/account/password/send";

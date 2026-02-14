@@ -1,5 +1,8 @@
 package ar.soft.api.Log.LogPojo;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class LogReg {
 
     private String creationDate;
