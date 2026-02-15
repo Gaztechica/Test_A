@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="add DirectoryTest, ChecklistTest, FileSTest">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/InspectSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/Inspection/InspectSidebarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPageS.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPageS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" afterDir="false" />
-    </list>
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="refactor InspectSidebarTest" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -707,14 +701,6 @@
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
     </task>
-    <task id="LOCAL-00080" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1715195889085</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1715195889085</updated>
-    </task>
     <task id="LOCAL-00081" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
       <created>1715202130692</created>
@@ -1099,7 +1085,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770554344495</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="refactor InspectSidebarTest">
+      <option name="closed" value="true" />
+      <created>1771170976623</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1771170976624</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1127,7 +1121,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" />
     <MESSAGE value="Merge remote-tracking branch 'origin/main4' into main4" />
     <MESSAGE value="Merge pull request #86 from Gaztechica/86&#10;&#10;86" />
     <MESSAGE value="Merge pull request #88 from Gaztechica/регресс-от-27.06.24&#10;&#10;Merge pull request #79 from Gaztechica/78" />
@@ -1152,7 +1145,8 @@
     <MESSAGE value="Merge pull request #127 from Gaztechica/10012026&#10;&#10;f" />
     <MESSAGE value="add TestApi and Test" />
     <MESSAGE value="add Log Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Log Test" />
+    <MESSAGE value="refactor InspectSidebarTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor InspectSidebarTest" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_ownerAuthorizationTest.ic" NAME="AuthorizationTest.ownerAuthorizationTest Coverage Results" MODIFIED="1747742779332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
