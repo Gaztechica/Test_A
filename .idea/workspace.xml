@@ -6,10 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="add DirectoryTest, ChecklistTest, FileSTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/InspectSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/Inspection/InspectSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/Inspection/InspectSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/Inspection/InspectSidebarTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPageS.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPageS.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -312,6 +310,7 @@
     "TestNG.InspectSidebarTest.createDraftNewInspect.executor": "Run",
     "TestNG.InspectSidebarTest.createInspect.executor": "Run",
     "TestNG.InspectSidebarTest.createRequiredFieldInspect.executor": "Run",
+    "TestNG.InspectSidebarTest.createRequiredFieldInspect2.executor": "Run",
     "TestNG.InspectSidebarTest.createRequiredFieldNewInspect.executor": "Run",
     "TestNG.InspectSidebarTest.deleteAllFieldInspect.executor": "Run",
     "TestNG.InspectSidebarTest.deleteInspect.executor": "Run",
@@ -319,6 +318,7 @@
     "TestNG.InspectSidebarTest.filledDraftInspect.executor": "Run",
     "TestNG.InspectSidebarTest.filledInspect.executor": "Run",
     "TestNG.InspectSidebarTest.filledNewInspect.executor": "Run",
+    "TestNG.InspectSidebarTest.labelInspect.executor": "Run",
     "TestNG.InspectSidebarTest.renameInspect.executor": "Run",
     "TestNG.InspectSidebarTest.renameInspect2.executor": "Run",
     "TestNG.LibraryTest.dashboardsTest.executor": "Run",
@@ -486,7 +486,7 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "140226",
+    "git-widget-placeholder": "150226",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java",
     "project.structure.last.edited": "Modules",
@@ -516,7 +516,7 @@
       <recent name="ar.soft.modelPage" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.InspectSidebarTest">
+  <component name="RunManager" selected="TestNG.InspectSidebarTest.labelInspect">
     <configuration name="Dialogs" type="TestNG" nameIsGenerated="true">
       <module name="AutoTest" />
       <shortenClasspath name="NONE" />
@@ -609,7 +609,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InspectSidebarTest.createAllFieldInspect" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="InspectSidebarTest.backWorkInspect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -619,7 +619,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
-      <option name="METHOD_NAME" value="createAllFieldInspect" />
+      <option name="METHOD_NAME" value="backWorkInspect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -627,7 +627,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InspectSidebarTest.deleteAllFieldInspect" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="InspectSidebarTest.createDraftInspect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -637,7 +637,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
-      <option name="METHOD_NAME" value="deleteAllFieldInspect" />
+      <option name="METHOD_NAME" value="createDraftInspect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -645,7 +645,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InspectSidebarTest.deleteInspect" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="InspectSidebarTest.labelInspect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -655,7 +655,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
-      <option name="METHOD_NAME" value="deleteInspect" />
+      <option name="METHOD_NAME" value="labelInspect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -663,7 +663,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InspectSidebarTest.filledInspect" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="InspectSidebarTest.renameInspect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -673,7 +673,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
-      <option name="METHOD_NAME" value="filledInspect" />
+      <option name="METHOD_NAME" value="renameInspect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -683,11 +683,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.InspectSidebarTest.labelInspect" />
+        <item itemvalue="TestNG.InspectSidebarTest.renameInspect" />
+        <item itemvalue="TestNG.InspectSidebarTest.createDraftInspect" />
         <item itemvalue="TestNG.InspectSidebarTest" />
-        <item itemvalue="TestNG.InspectSidebarTest.filledInspect" />
-        <item itemvalue="TestNG.InspectSidebarTest.deleteAllFieldInspect" />
-        <item itemvalue="TestNG.InspectSidebarTest.deleteInspect" />
-        <item itemvalue="TestNG.InspectSidebarTest.createAllFieldInspect" />
+        <item itemvalue="TestNG.InspectSidebarTest.backWorkInspect" />
       </list>
     </recent_temporary>
   </component>
