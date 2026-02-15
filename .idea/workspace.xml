@@ -4,30 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="refactor Test">
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/FileTest/FileSTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryPojo/DirectDel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryPojo/DirectoryReg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryPojo/DirectoryRes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/Pojjjj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklisPojo/ChecklistGreateReg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklisPojo/ChecklistReg.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklisPojo/ChecklistRes.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklistTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/jsonLog.json" afterDir="false" />
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="add DirectoryTest, ChecklistTest, FileSTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/ProjectSettingsTest/SettingsUsersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/ProjectSettingsTest/SettingsUsersTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginPojoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginPojoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/BaseApi/BaseApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/AutorisationApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/AutorisationApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/LogReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/LogReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/LogRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/LogRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Specification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FileSPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FileSPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/InspectSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/Inspection/InspectSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPageS.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPageS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -327,10 +309,16 @@
     "TestNG.InspectSidebarTest.backWorkInspect.executor": "Run",
     "TestNG.InspectSidebarTest.createAllFieldInspect.executor": "Run",
     "TestNG.InspectSidebarTest.createDraftInspect.executor": "Run",
+    "TestNG.InspectSidebarTest.createDraftNewInspect.executor": "Run",
     "TestNG.InspectSidebarTest.createInspect.executor": "Run",
+    "TestNG.InspectSidebarTest.createRequiredFieldInspect.executor": "Run",
+    "TestNG.InspectSidebarTest.createRequiredFieldNewInspect.executor": "Run",
+    "TestNG.InspectSidebarTest.deleteAllFieldInspect.executor": "Run",
     "TestNG.InspectSidebarTest.deleteInspect.executor": "Run",
     "TestNG.InspectSidebarTest.executor": "Run",
     "TestNG.InspectSidebarTest.filledDraftInspect.executor": "Run",
+    "TestNG.InspectSidebarTest.filledInspect.executor": "Run",
+    "TestNG.InspectSidebarTest.filledNewInspect.executor": "Run",
     "TestNG.InspectSidebarTest.renameInspect.executor": "Run",
     "TestNG.InspectSidebarTest.renameInspect2.executor": "Run",
     "TestNG.LibraryTest.dashboardsTest.executor": "Run",
@@ -498,7 +486,7 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "08022026",
+    "git-widget-placeholder": "140226",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java",
     "project.structure.last.edited": "Modules",
@@ -528,7 +516,7 @@
       <recent name="ar.soft.modelPage" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FileSTest.createFolderTest">
+  <component name="RunManager" selected="TestNG.InspectSidebarTest">
     <configuration name="Dialogs" type="TestNG" nameIsGenerated="true">
       <module name="AutoTest" />
       <shortenClasspath name="NONE" />
@@ -604,17 +592,34 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DirectoryTest.deleteDirectory" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="InspectSidebarTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.api.Directory.*" />
+          <option name="PATTERN" value="ar.soft.AT.Inspection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.api.Directory" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.api.Directory.DirectoryTest" />
-      <option name="METHOD_NAME" value="deleteDirectory" />
+      <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InspectSidebarTest.createAllFieldInspect" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.Inspection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
+      <option name="METHOD_NAME" value="createAllFieldInspect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -622,17 +627,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DirectoryTest.getDirectory" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="InspectSidebarTest.deleteAllFieldInspect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.api.Directory.*" />
+          <option name="PATTERN" value="ar.soft.AT.Inspection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.api.Directory" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.api.Directory.DirectoryTest" />
-      <option name="METHOD_NAME" value="getDirectory" />
+      <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
+      <option name="METHOD_NAME" value="deleteAllFieldInspect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -640,17 +645,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSTest.createFolderTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="InspectSidebarTest.deleteInspect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.AT.FileTest.*" />
+          <option name="PATTERN" value="ar.soft.AT.Inspection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.FileTest" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.FileTest.FileSTest" />
-      <option name="METHOD_NAME" value="createFolderTest" />
+      <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
+      <option name="METHOD_NAME" value="deleteInspect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -658,35 +663,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileTest.createFolderTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="InspectSidebarTest.filledInspect" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.AT.FileTest.*" />
+          <option name="PATTERN" value="ar.soft.AT.Inspection.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.FileTest" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.FileTest.FileTest" />
-      <option name="METHOD_NAME" value="createFolderTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SettingsUsersTest.createUsersProject" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.ProjectSettingsTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.ProjectSettingsTest" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.ProjectSettingsTest.SettingsUsersTest" />
-      <option name="METHOD_NAME" value="createUsersProject" />
+      <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
+      <option name="METHOD_NAME" value="filledInspect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -696,11 +683,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FileSTest.createFolderTest" />
-        <item itemvalue="TestNG.FileTest.createFolderTest" />
-        <item itemvalue="TestNG.SettingsUsersTest.createUsersProject" />
-        <item itemvalue="TestNG.DirectoryTest.deleteDirectory" />
-        <item itemvalue="TestNG.DirectoryTest.getDirectory" />
+        <item itemvalue="TestNG.InspectSidebarTest" />
+        <item itemvalue="TestNG.InspectSidebarTest.filledInspect" />
+        <item itemvalue="TestNG.InspectSidebarTest.deleteAllFieldInspect" />
+        <item itemvalue="TestNG.InspectSidebarTest.deleteInspect" />
+        <item itemvalue="TestNG.InspectSidebarTest.createAllFieldInspect" />
       </list>
     </recent_temporary>
   </component>

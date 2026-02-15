@@ -6,22 +6,13 @@ import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import jdk.jfr.Name;
 import org.openqa.selenium.*;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
-import org.testng.Assert;
 
 import java.time.Duration;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.List;
 
-import static ar.soft.InspectSidebarTest.*;
 //import static ar.soft.driver.WebDriverSetup.getDriverInstance;
 import static com.codeborne.selenide.Selenide.$x;
 import static com.codeborne.selenide.Selenide.page;
-import static org.openqa.selenium.By.xpath;
 
 public class InspectSidebarPageS extends BasePage {
 
