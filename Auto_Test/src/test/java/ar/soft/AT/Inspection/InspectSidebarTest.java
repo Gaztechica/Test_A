@@ -31,6 +31,21 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createDraftInspect, "Черновик успешно создан");
     }
 
+    @Test(priority = 2,
+            description = "Добавить метку в черновик инспекции")
+    public void labelInspect() throws InterruptedException {
+        String renameInspects = new InspectSidebarPage(getDriver())
+                .project()
+                .inspectSidebarClick()
+                .selectInspect()
+                .addLocationsClick()
+                .addPlanClick()
+                .addLabelClick()
+                .getRenameDraftInspectText();
+
+        Assert.assertEquals(renameInspects, NAME_RENAME_INSPECT + LocalDate.now());
+    }
+
     // нет алерта об удалении?
     @Test(priority = 2,
             description = "удалить черновик инспекции")
@@ -42,7 +57,6 @@ public class InspectSidebarTest extends BaseTest {
                 .btnDeleteInspectClick()
                 .btnSetDeleteInspectClick();
     }
-
 
     @Test(priority = 3,
             description = "создать черновик инспекции со всеми заполненными полями кроме вложения")
@@ -68,7 +82,7 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createInspect, "Опубликовать");
     }
 
-    @Test(priority = 5,
+    @Test(priority = 4,
             description = "удалить черновик инспекции со всеми заполненными полями")
     public void deleteAllFieldInspect() throws InterruptedException {
         new InspectSidebarPage(getDriver())
@@ -79,7 +93,7 @@ public class InspectSidebarTest extends BaseTest {
                 .btnSetDeleteInspectClick();
     }
 
-    @Test(priority = 2,
+    @Test(priority = 5,
             description = "создать черновик инспекции со всеми заполненными обязательными полями")
     public void createRequiredFieldInspect() throws InterruptedException {
         String createInspect = new InspectSidebarPage(getDriver())
@@ -144,51 +158,54 @@ public class InspectSidebarTest extends BaseTest {
 //        Assert.assertEquals(createInspect, "Опубликовать");
 //    }
 
-//    @Test(priority = 2,
-//            description = "переименовать черновик инспекции")
-//    public void renameInspect() throws InterruptedException {
-//        String renameInspects = new InspectSidebarPage(getDriver())
-//                .project()
-//                .inspectSidebarClick()
-//                .selectInspect()
-//                .inspectRename(NAME_RENAME_INSPECT + LocalDate.now())
-//                .getRenameDraftInspectText();
-//
-//        Assert.assertEquals(renameInspects, NAME_RENAME_INSPECT + LocalDate.now());
-//    }
-
-
-
-
 
     @Test(priority = 6,
+            description = "создать черновик инспекции со всеми заполненными обязательными полями")
+    public void createRequiredFieldInspect2() throws InterruptedException {
+        String createInspect = new InspectSidebarPage(getDriver())
+                .project()
+                .inspectSidebarClick()
+                .createInspectClick()
+                .inspectName(NAME_DRAFT_INSPECT_FILLED_REQUIRED)
+                .btnCreateInspectClick()
+                .inspectTypesWork(TAPE_WORK_INSPECT)
+                .inspectOrganization(ORGANIZATION_INSPECT)
+                .inspectTypeControl()
+                .addChecklistClick()
+                .checkChecklistClick()
+                .addLocationClick()
+                .getFilledDraftInspectText();
+
+        Assert.assertEquals(createInspect, "Опубликовать");
+    }
+
+    @Test(priority = 7,
             description = "опубликовать черновик инспекции")
     public void filledInspect() throws InterruptedException {
         String createDraftInspect = new InspectSidebarPage(getDriver())
                 .project()
                 .inspectSidebarClick()
-                .filledInspect(NAME_RENAME_INSPECT + LocalDate.now())
+                .filledInspect(NAME_DRAFT_INSPECT_FILLED_REQUIRED)
                 .btnFilledInspect()
-
                 .getMessageFilledDraftInspectText();
 
-        Assert.assertEquals(createDraftInspect, "Черновик успешно создан");
+        Assert.assertEquals(createDraftInspect, "Инспекция опубликована");
     }
 
-    @Test(priority = 7,
+    @Test(priority = 8,
             description = "Завершить инспекцию")
     public void filledDraftInspect() throws InterruptedException {
         String createDraftInspect = new InspectSidebarPage(getDriver())
                 .project()
                 .inspectSidebarClick()
-                .selectCompleteInspect(NAME_RENAME_INSPECT + LocalDate.now())
+                .selectCompleteInspect(NAME_DRAFT_INSPECT_FILLED_REQUIRED)
                 .btnCompleteInspect()
                 .getMessageFilledInspectText();
 
         Assert.assertEquals(createDraftInspect, "Инспекция завершена");
     }
 
-    @Test(priority = 8,
+    @Test(priority = 9,
             description = "Вернуть в работу инспекцию")
     public void backWorkInspect() throws InterruptedException {
         String createDraftInspect = new InspectSidebarPage(getDriver())
@@ -201,25 +218,27 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createDraftInspect, "Завершить");
     }
 
-    @Test(priority = 2,
-            description = "Редактировать черновик инспекции в новом окне с заполнением обязательных полей в новом окне")
-    public void createDraftNewInspect() throws InterruptedException {
-        String createDraftNewInspect = new InspectSidebarPage(getDriver())
-                .project()
-                .inspectSidebarClick()
-                .selectInspect()
-                .btnNewClick()
-                .inspectTypesWork(TAPE_WORK_INSPECT)
-                .inspectNewOrganization2()
-//                .inspectNewOrganization(ORGANIZATION_INSPECT)
-//                .inspectTypeNewControl()
-//                .addChecklistNewClick()
-//                .checkChecklistClick()
-//                .addLocationClick()
-                .getFilledDraftInspectText();
 
-        Assert.assertEquals(createDraftNewInspect, "Опубликовать");
-    }
+
+//    @Test(priority = 10,
+//            description = "Редактировать черновик инспекции в новом окне с заполнением обязательных полей в новом окне")
+//    public void createDraftNewInspect() throws InterruptedException {
+//        String createDraftNewInspect = new InspectSidebarPage(getDriver())
+//                .project()
+//                .inspectSidebarClick()
+//                .selectInspect()
+//                .btnNewClick()
+//                .inspectTypesWork(TAPE_WORK_INSPECT)
+//                .inspectNewOrganization2()
+////                .inspectNewOrganization(ORGANIZATION_INSPECT)
+////                .inspectTypeNewControl()
+////                .addChecklistNewClick()
+////                .checkChecklistClick()
+////                .addLocationClick()
+//                .getFilledDraftInspectText();
+//
+//        Assert.assertEquals(createDraftNewInspect, "Опубликовать");
+//    }
 
 
 //    @Test(priority = 9,

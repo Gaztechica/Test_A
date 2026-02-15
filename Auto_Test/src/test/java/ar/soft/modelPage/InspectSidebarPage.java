@@ -96,14 +96,14 @@ public class InspectSidebarPage extends BasePage {
 
     @Name("выбрать в таблице инспекцию")
     public InspectSidebarPage filledInspect(String name) {
-        getDriver().findElement(By.xpath("//*[@class='ant-dropdown-trigger'][contains(., '" + NAME_DRAFT_INSPECT_FILLED + "')]/..")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-dropdown-trigger'][contains(., '" + NAME_DRAFT_INSPECT_FILLED_REQUIRED + "')]/..")).click();
 
         return this;
     }
 
     @Name("выбрать в таблице Завершенную инспекцию")
     public InspectSidebarPage selectCompleteInspect(String name) {
-        getDriver().findElement(By.xpath("//*[@class='ant-dropdown-trigger'][contains(., '" + NAME_OT_INSPECT_FILLED + "')]/..")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-dropdown-trigger'][contains(., '" + NAME_DRAFT_INSPECT_FILLED_REQUIRED + "')]/..")).click();
 
         return this;
     }
@@ -259,6 +259,40 @@ public class InspectSidebarPage extends BasePage {
         return this;
     }
 
+    @Name("Добавить местоположение '+")
+    public InspectSidebarPage addLocationsClick() {
+        getDriver().findElement(By.xpath("//*[@class='InspectionDrawer__locations-header']//*[@type='button']")).click();
+        WebElement submitButton2 = getDriver().findElement(xpath("//button[contains(., 'Местоположение')]"));
+        JavascriptExecutor js = (JavascriptExecutor) getDriver();
+        js.executeScript("arguments[0].click();", submitButton2);
+        WaitT.littleWait(300);
+//        getDriver().findElement(By.xpath("//*[@class='buttonSimple  InspectionDrawer__btn'][contains(., 'Местоположение')]")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-typography p_r'][contains(., 'подвал')] | //*[@class='ant-typography p_r'][contains(., 'подвал')]/.. " +
+                "| //*[@class='ant-typography p_r'][contains(., 'подвал')]/../../..//*")).click();
+        getDriver().findElement(By.xpath("(//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')])")).click();
+
+        return this;
+    }
+
+    @Name("Добавить План")
+    public InspectSidebarPage addPlanClick() {
+        getDriver().findElement(By.xpath("//*[@class='buttonSimple  InspectionDrawer__btn'][contains(., 'План')]")).click();
+        getDriver().findElement(By.xpath("//*[@class='PlanCard__img']")).click();
+        getDriver().findElement(By.xpath("(//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')])")).click();
+
+       return this;
+    }
+
+    @Name("Добавить метку")
+    public InspectSidebarPage addLabelClick() {
+        getDriver().findElement(By.xpath("//*[@class='ant-btn ant-btn-default iconSecondaryButton big colorPrimary ']")).click();
+        getDriver().findElement(By.xpath("//*[@class='Plan__addMark']")).click();
+        getDriver().findElement(By.xpath("//*[@class='RndComponent__button ok']")).click();
+        getDriver().findElement(By.xpath("//*[@class='RndComponent__save']")).click();
+
+       return this;
+    }
+
     @Name("Вид работ в инспекции")
     public InspectSidebarPage inspectTypesWork(String name) {
         getDriver().findElement(By.xpath("//*[@class='buttonSimple  RemarkDrawer__btn']")).sendKeys(name );
@@ -290,26 +324,29 @@ public class InspectSidebarPage extends BasePage {
 
     @Name("message Черновик успешно создан")
     public String getMessageCreateDraftInspectText() throws InterruptedException {
-        Thread.sleep(100);
+        WaitT.littleWait(500);
+
         return getDriver().findElement(xpath("//*[@class='ant-message-custom-content ant-message-success']")).getText();
     }
 
     @Name("message инспекция опубликована")
     public String getMessageFilledDraftInspectText() throws InterruptedException {
-        Thread.sleep(100);
+        WaitT.littleWait(500);
+
         return getDriver().findElement(xpath("//*[@class='ant-message-custom-content ant-message-success']")).getText();
     }
 
     @Name("message инспекция опубликована")
     public String getMessageFilledInspectText() throws InterruptedException {
-        Thread.sleep(100);
+        WaitT.littleWait(500);
+
         return getDriver().findElement(xpath("//*[@class='InspectionContent__finished'][contains(., 'Инспекция завершена')]")).getText();
     }
 
     @Name("message инспекция опубликована")
     public String getMessageFilledInspectsText() throws InterruptedException {
-        Thread.sleep(100);
-        return getDriver().findElement(xpath("//*[@type='button']//*[contains(., 'Завершить')]")).getText();
+        WaitT.littleWait(500);
+        return getDriver().findElement(xpath("//*[@type='button']//*[contains(., 'Завершить')]/..")).getText();
     }
 
     @Name("переименован Черновик успешно")
