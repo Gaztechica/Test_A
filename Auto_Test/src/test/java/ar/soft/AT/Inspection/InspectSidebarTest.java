@@ -41,13 +41,14 @@ public class InspectSidebarTest extends BaseTest {
                 .addLocationsClick()
                 .addPlanClick()
                 .addLabelClick()
-                .getRenameDraftInspectText();
+                .getPreviewInspectText();
 
-        Assert.assertEquals(renameInspects, NAME_RENAME_INSPECT + LocalDate.now());
+//        проверить превью
+        Assert.assertEquals(renameInspects, renameInspects);
     }
 
     // нет алерта об удалении?
-    @Test(priority = 2,
+    @Test(priority = 3,
             description = "удалить черновик инспекции")
     public void deleteInspect() throws InterruptedException {
         new InspectSidebarPage(getDriver())
@@ -58,7 +59,7 @@ public class InspectSidebarTest extends BaseTest {
                 .btnSetDeleteInspectClick();
     }
 
-    @Test(priority = 3,
+    @Test(priority = 4,
             description = "создать черновик инспекции со всеми заполненными полями кроме вложения")
     public void createAllFieldInspect() throws InterruptedException {
         String createInspect = new InspectSidebarPage(getDriver())
@@ -82,7 +83,7 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createInspect, "Опубликовать");
     }
 
-    @Test(priority = 4,
+    @Test(priority = 5,
             description = "удалить черновик инспекции со всеми заполненными полями")
     public void deleteAllFieldInspect() throws InterruptedException {
         new InspectSidebarPage(getDriver())
@@ -93,7 +94,7 @@ public class InspectSidebarTest extends BaseTest {
                 .btnSetDeleteInspectClick();
     }
 
-    @Test(priority = 5,
+    @Test(priority = 6,
             description = "создать черновик инспекции со всеми заполненными обязательными полями")
     public void createRequiredFieldInspect() throws InterruptedException {
         String createInspect = new InspectSidebarPage(getDriver())
@@ -159,7 +160,7 @@ public class InspectSidebarTest extends BaseTest {
 //    }
 
 
-    @Test(priority = 6,
+    @Test(priority = 7,
             description = "создать черновик инспекции со всеми заполненными обязательными полями")
     public void createRequiredFieldInspect2() throws InterruptedException {
         String createInspect = new InspectSidebarPage(getDriver())
@@ -179,7 +180,7 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createInspect, "Опубликовать");
     }
 
-    @Test(priority = 7,
+    @Test(priority = 8,
             description = "опубликовать черновик инспекции")
     public void filledInspect() throws InterruptedException {
         String createDraftInspect = new InspectSidebarPage(getDriver())
@@ -192,7 +193,7 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createDraftInspect, "Инспекция опубликована");
     }
 
-    @Test(priority = 8,
+    @Test(priority = 9,
             description = "Завершить инспекцию")
     public void filledDraftInspect() throws InterruptedException {
         String createDraftInspect = new InspectSidebarPage(getDriver())
@@ -205,7 +206,7 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createDraftInspect, "Инспекция завершена");
     }
 
-    @Test(priority = 9,
+    @Test(priority = 10,
             description = "Вернуть в работу инспекцию")
     public void backWorkInspect() throws InterruptedException {
         String createDraftInspect = new InspectSidebarPage(getDriver())

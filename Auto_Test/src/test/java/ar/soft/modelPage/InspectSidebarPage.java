@@ -1,6 +1,7 @@
 package ar.soft.modelPage;
 
 //import ar.soft.element.WaitT;
+
 import ar.soft.modelPage.ProjectSettingsPage.TypesWorkSidebarPage;
 import ar.soft.modelPage.base.BasePage;
 import io.qameta.allure.Step;
@@ -110,9 +111,10 @@ public class InspectSidebarPage extends BasePage {
 
     @Name("ввод названия инспекции")
     public InspectSidebarPage inspectRename(String name) {
-        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput InspectionDrawer__editInput-title not-entered']")).sendKeys(Keys.CONTROL + "A");
-        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput InspectionDrawer__editInput-title not-entered']")).sendKeys(Keys.DELETE);
-        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput InspectionDrawer__editInput-title not-entered']")).sendKeys(name);
+        WaitT.littleWait(500);
+        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput InspectionDrawer__editInput-title entered']")).sendKeys(Keys.CONTROL + "A");
+//        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput InspectionDrawer__editInput-title entered']")).sendKeys(Keys.DELETE);
+        getDriver().findElement(By.xpath("//*[@class='ant-input primaryInput InspectionDrawer__editInput-title entered']")).sendKeys(name);
 
         return this;
     }
@@ -120,7 +122,7 @@ public class InspectSidebarPage extends BasePage {
     @Name("кнопка создать инспекцию")
     public InspectSidebarPage btnCreateInspectClick() {
         WaitT.littleWait(300);
-                getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
+        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
 
         return this;
     }
@@ -276,26 +278,29 @@ public class InspectSidebarPage extends BasePage {
 
     @Name("Добавить План")
     public InspectSidebarPage addPlanClick() {
+        WaitT.littleWait(500);
         getDriver().findElement(By.xpath("//*[@class='buttonSimple  InspectionDrawer__btn'][contains(., 'План')]")).click();
         getDriver().findElement(By.xpath("//*[@class='PlanCard__img']")).click();
         getDriver().findElement(By.xpath("(//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')])")).click();
 
-       return this;
+        return this;
     }
 
     @Name("Добавить метку")
     public InspectSidebarPage addLabelClick() {
+        WaitT.littleWait(500);
         getDriver().findElement(By.xpath("//*[@class='ant-btn ant-btn-default iconSecondaryButton big colorPrimary ']")).click();
+        WaitT.littleWait(500);
         getDriver().findElement(By.xpath("//*[@class='Plan__addMark']")).click();
         getDriver().findElement(By.xpath("//*[@class='RndComponent__button ok']")).click();
         getDriver().findElement(By.xpath("//*[@class='RndComponent__save']")).click();
 
-       return this;
+        return this;
     }
 
     @Name("Вид работ в инспекции")
     public InspectSidebarPage inspectTypesWork(String name) {
-        getDriver().findElement(By.xpath("//*[@class='buttonSimple  RemarkDrawer__btn']")).sendKeys(name );
+        getDriver().findElement(By.xpath("//*[@class='buttonSimple  RemarkDrawer__btn']")).sendKeys(name);
         WaitT.littleWait(500);
         getDriver().findElement(By.xpath("//*[@class='ant-table-cell AddListModal__cell']//*[@data-test-id='text'][contains(., 'новый вид работ')]")).click();
         getDriver().findElement(By.xpath("(//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')])")).click();
@@ -316,7 +321,7 @@ public class InspectSidebarPage extends BasePage {
     @Name("Вид контроля в инспекции")
     public InspectSidebarPage inspectTypeNewControl() {
         WaitT.littleWait(500);
-                getDriver().findElement(By.xpath("//*[@class='ant-select-selection-search-input']")).click();
+        getDriver().findElement(By.xpath("//*[@class='ant-select-selection-search-input']")).click();
         getDriver().findElement(By.xpath("//*[@title='ОТ, ПБ и ООС'][contains(., 'ОТ, ПБ и ООС')]")).click();
 
         return this;
@@ -324,7 +329,7 @@ public class InspectSidebarPage extends BasePage {
 
     @Name("message Черновик успешно создан")
     public String getMessageCreateDraftInspectText() throws InterruptedException {
-        WaitT.littleWait(500);
+        WaitT.littleWait(800);
 
         return getDriver().findElement(xpath("//*[@class='ant-message-custom-content ant-message-success']")).getText();
     }
@@ -343,16 +348,22 @@ public class InspectSidebarPage extends BasePage {
         return getDriver().findElement(xpath("//*[@class='InspectionContent__finished'][contains(., 'Инспекция завершена')]")).getText();
     }
 
-    @Name("message инспекция опубликована")
+    @Name("message в инспекции отображается кнопка завершить")
     public String getMessageFilledInspectsText() throws InterruptedException {
-        WaitT.littleWait(500);
+        WaitT.littleWait(800);
         return getDriver().findElement(xpath("//*[@type='button']//*[contains(., 'Завершить')]/..")).getText();
     }
 
     @Name("переименован Черновик успешно")
-    public String getRenameDraftInspectText() throws InterruptedException {
+    public String getRenameDraftInspectText() {
         WaitT.littleWait(500);
         return getDriver().findElement(xpath("//*[@class='ant-input primaryInput InspectionDrawer__editInput-title entered']")).getText();
+    }
+
+    @Name("отображение метки на превью")
+    public String getPreviewInspectText() {
+        WaitT.littleWait(500);
+        return getDriver().findElement(xpath("//*[@class='PlanMarker__icon']")).getText();
     }
 
     @Name("Опубликовать Черновик успешно")
