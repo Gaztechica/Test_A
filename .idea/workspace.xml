@@ -5,10 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="add DirectoryTest, ChecklistTest, FileSTest">
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/Test/Interfeys.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/Inspection/InspectSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/Inspection/InspectSidebarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -487,7 +485,7 @@
     &quot;TestNG.ar.soft.SettingsSidebarTest and 4 more.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.remarcTest.remarcTest.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;15022026&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;110326&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
@@ -517,7 +515,42 @@
       <recent name="ar.soft.modelPage" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.InspectSidebarTest.backWorkInspect">
+  <component name="RunManager" selected="TestNG.AuthorizationTest">
+    <configuration name="AuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationTest.adminAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
+      <option name="METHOD_NAME" value="adminAuthorizationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="AuthorizationTest.ownerAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -529,6 +562,42 @@
       <option name="PACKAGE_NAME" value="ar.soft" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
       <option name="METHOD_NAME" value="ownerAuthorizationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationTest.subcontractorAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
+      <option name="METHOD_NAME" value="subcontractorAuthorizationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationTest.visorAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AuthorizationTest" />
+      <option name="METHOD_NAME" value="visorAuthorizationTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -611,85 +680,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InspectSidebarTest.backWorkInspect" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.Inspection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
-      <option name="METHOD_NAME" value="backWorkInspect" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InspectSidebarTest.createAllFieldInspect" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.Inspection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
-      <option name="METHOD_NAME" value="createAllFieldInspect" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InspectSidebarTest.createDraftInspect" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.Inspection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
-      <option name="METHOD_NAME" value="createDraftInspect" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InspectSidebarTest.filledDraftInspect" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.Inspection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.Inspection" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.Inspection.InspectSidebarTest" />
-      <option name="METHOD_NAME" value="filledDraftInspect" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.InspectSidebarTest.backWorkInspect" />
-        <item itemvalue="TestNG.InspectSidebarTest.filledDraftInspect" />
-        <item itemvalue="TestNG.InspectSidebarTest.createAllFieldInspect" />
-        <item itemvalue="TestNG.InspectSidebarTest.createDraftInspect" />
+        <item itemvalue="TestNG.AuthorizationTest" />
+        <item itemvalue="TestNG.AuthorizationTest.visorAuthorizationTest" />
+        <item itemvalue="TestNG.AuthorizationTest.subcontractorAuthorizationTest" />
         <item itemvalue="TestNG.AuthorizationTest.ownerAuthorizationTest" />
+        <item itemvalue="TestNG.AuthorizationTest.adminAuthorizationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -708,14 +705,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00080" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1715195889085</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1715195889085</updated>
     </task>
     <task id="LOCAL-00081" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -1101,7 +1090,15 @@
       <option name="project" value="LOCAL" />
       <updated>1770554344495</updated>
     </task>
-    <option name="localTasksCounter" value="129" />
+    <task id="LOCAL-00129" summary="fix InspectSidebarTest">
+      <option name="closed" value="true" />
+      <created>1773202830937</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1773202830938</updated>
+    </task>
+    <option name="localTasksCounter" value="130" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1148,13 +1145,13 @@
     <MESSAGE value="fix TypesWorkSidebarTest + new TypesWork" />
     <MESSAGE value="new SettingsUsersTest" />
     <MESSAGE value="fix RegistrationTest" />
-    <MESSAGE value="fix InspectSidebarTest" />
     <MESSAGE value="fix apiTest" />
     <MESSAGE value="Add FileTest" />
     <MESSAGE value="Merge pull request #127 from Gaztechica/10012026&#10;&#10;f" />
     <MESSAGE value="add TestApi and Test" />
     <MESSAGE value="add Log Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="add Log Test" />
+    <MESSAGE value="fix InspectSidebarTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix InspectSidebarTest" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_ownerAuthorizationTest.ic" NAME="AuthorizationTest.ownerAuthorizationTest Coverage Results" MODIFIED="1747742779332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
