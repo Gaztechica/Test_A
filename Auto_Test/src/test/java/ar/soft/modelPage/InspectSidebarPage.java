@@ -31,7 +31,7 @@ public class InspectSidebarPage extends BasePage {
     private WebElement createI;
 
     @Name("кнопка создать новую инспекцию")
-    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
+    @FindBy(xpath = "//button[@data-test-id='inspections-create-btn-button']")
     private WebElement createInspectClick;
 
     @Name("название инспекции")
@@ -122,7 +122,7 @@ public class InspectSidebarPage extends BasePage {
     @Name("кнопка создать инспекцию")
     public InspectSidebarPage btnCreateInspectClick() {
         WaitT.littleWait(300);
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
+        getDriver().findElement(By.xpath("//button[@data-test-id='inspections-create-inspection-submit-button']")).click();
 
         return this;
     }
