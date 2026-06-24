@@ -22,8 +22,8 @@ public class TestApi {
         private final String URL = "https://fakerapi.it/api/v1/";
 
 
-        // Кейс 1. Получение данных книг по заголовку и проверка плученного залоговка в body
-        @ParameterizedTest //параметризованный тест - аннатация @ParameterizedTest
+        // Кейс 1. Получение данных книг по заголовку и проверка полученного заголовка в body
+        @ParameterizedTest //параметризованный тест - аннотация @ParameterizedTest
         @MethodSource("dataForGetCharacterByBookTitleAndCheckBookTitle")
         //генератор / поставщик тестовых данных для параметризованного теста
         // отправка запроса данных и получение ответа
