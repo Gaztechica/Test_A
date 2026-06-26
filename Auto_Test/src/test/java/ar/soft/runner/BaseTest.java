@@ -44,7 +44,7 @@ public abstract class BaseTest {
     public static final String INSPECTOR_EMAIL = "bukkosefyu@gufum.com";
     public static final String SUBCONTRACTOR_EMAIL = "kkk.k.82@list.ru";
     public static final String OBSERVER_EMAIL = "o_o_2025@bk.ru";
-//    public static final String VISOR_EMAIL = "fefyevipsa@gufum.com";
+    public static final String VISOR_EMAIL = "fefyevipsa@gufum.com";
     public static final String PASSWORD = "qwert12345";
 
 
