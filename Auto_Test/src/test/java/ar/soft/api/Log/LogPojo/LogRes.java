@@ -4,6 +4,8 @@ import ar.soft.api.BaseApi.BaseApiTest;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import java.util.Objects;
+
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class LogRes  extends BaseApiTest {
 
@@ -65,5 +67,17 @@ public class LogRes  extends BaseApiTest {
         this.accountId = accountId;
         this.accountEmail = accountEmail;
         this.id = id;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof LogRes logRes)) return false;
+        return Objects.equals(getCreationDate(), logRes.getCreationDate()) && Objects.equals(getData(), logRes.getData()) && Objects.equals(getAccountId(), logRes.getAccountId()) && Objects.equals(getAccountEmail(), logRes.getAccountEmail()) && Objects.equals(getId(), logRes.getId());
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(getCreationDate(), getData(), getAccountId(), getAccountEmail(), getId());
     }
 }

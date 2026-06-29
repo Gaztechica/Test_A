@@ -25,7 +25,7 @@ public class AccountLoginTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью владельца")
     public void accountAuthTest() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         LoginReguest loginReguest = new LoginReguest(PASSWORD, EMAIL);
         Response response = given()
                 .body(loginReguest)
@@ -48,7 +48,7 @@ public class AccountLoginTest extends BaseApiTest {
     @Test(priority = 2, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void accountInfoTest() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Response response2 = given(specification)
                 .get("account/info")
                 .then()
@@ -64,7 +64,7 @@ public class AccountLoginTest extends BaseApiTest {
     @Test(priority = 3, groups = {"10.5", "Dialogs"},
             description = "вывести всех пользователей по организации")
     public void accountOrganizationTest() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Response response2 = given(specification)
                 .get("account/organization")
                 .then().log().all()
@@ -87,7 +87,7 @@ public class AccountLoginTest extends BaseApiTest {
     @Test(priority = 4, groups = {"10.5", "Dialogs"},
             description = "Изменение пароля пользователя на странице профиля")
     public void putAccountPasswordTest() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("currentPassword", PASSWORD);
         user.put("newPassword", PASSWORD_N);

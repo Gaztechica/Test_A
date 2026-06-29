@@ -34,7 +34,7 @@ public class AccountLoginPojoTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью владельца")
     public void checkAccountLoginTest() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         LoginReguest loginReguest = new LoginReguest(PASSWORD, EMAIL);
         Response response = given()
                 .body(loginReguest)
@@ -69,7 +69,7 @@ public class AccountLoginPojoTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью владельца")
     public void checkAccountLoginTest2() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Response response2 = given(specification)
                 .get("account/info")
                 .then()
@@ -88,7 +88,7 @@ public class AccountLoginPojoTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "1"},
             description = "")
     public static void accountLoginTest() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("email", EMAIL);
         user.put("password", PASSWORD);
@@ -115,7 +115,7 @@ public class AccountLoginPojoTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью владельца")
     public void checkAccountLoginTest22() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         LoginReguest loginReguest = new LoginReguest(PASSWORD, EMAIL);
 
         Response response = given()
@@ -143,7 +143,7 @@ public class AccountLoginPojoTest extends BaseApiTest {
     @Test(priority = 2, groups = {"10.5", "1"},
             description = "")
     public void checkAccountInfoTest4s() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Response response2 = given()
                 .when().log().all()
                 .contentType(ContentType.JSON)
@@ -162,7 +162,7 @@ public class AccountLoginPojoTest extends BaseApiTest {
     @Test(priority = 3, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью владельца")
     public void checkAccountOrganizationTests() {
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("email", EMAIL);
         user.put("password", PASSWORD);
@@ -175,7 +175,7 @@ public class AccountLoginPojoTest extends BaseApiTest {
         JsonPath jsonPath = response.jsonPath();
         String token = response.getBody().jsonPath().get("token").toString();
 
-        Specification.intansSpec(Specification.requestSpec(URL), Specification.responseSpecOk200());
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
 //        Map<String, String> user2 = new HashMap<>();
         Response response2 = given()
                 .when().log().all()

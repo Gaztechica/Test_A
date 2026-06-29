@@ -8,6 +8,7 @@ import ar.soft.api.Log.LogPojo.LogRes;
 import ar.soft.api.Specification;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
+import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
@@ -72,6 +73,28 @@ public class LogTest extends BaseApiTest {
                 .extract().response().body()
                 .as(LogRes.class);
         Assert.assertEquals(logRes, logReg);
+    }
+
+    @Story("Сохранить логи аккаунта по id")
+    @Description("вывести информацию о своем аккаунте")
+    @Test(priority = 2, groups = {"10.5", "1"},
+            description = "вывести информацию о своем аккаунте")
+    public void postLogTest55555() {
+        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Response response = given(specification)
+                .body(logReg)
+                .contentType(ContentType.JSON)
+                .post("/log" + contextOrganizationId);
+
+        LogReg actual = response.as(LogReg.class);
+        Assert.assertEquals(actual, logReg);
+
+        response
+//                .then().body(JsonSchemaValidator.matchesJsonSchema())
+                .then().assertThat().statusCode(200);
+//                .extract().response().body()
+//                .as(LogRes.class);
+//        Assert.assertEquals(actual, logReg);
     }
 
     @Story("Сохранить логи аккаунта по id")
