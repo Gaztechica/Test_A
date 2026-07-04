@@ -27,7 +27,7 @@ public class DirectoryTest extends BaseApiTest {
     public static final String contextProjectId = "?contextProjectId=893";
     public static final String successDirect = "object deleted";
     DirectoryReg directCreate = new DirectoryReg("Test test", 893, id);
-    DirectRename directRename2 = new DirectRename(directId, "Test 123", 893, id);
+//    DirectRename directRename2 = new DirectRename(directId, "Test 123", 893, id);
     DirectRename directRename = new DirectRename(direct, "Test 123", 893, id);
 
     @Story("")
@@ -93,7 +93,7 @@ public class DirectoryTest extends BaseApiTest {
     public void renameDirectory() {
         Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         DirectRename rename = given(specification)
-                .body(directRename2)
+                .body(directRename)
                 .contentType(ContentType.JSON)
                 .put("/directory/edit" + contextProjectId)
                 .then()
