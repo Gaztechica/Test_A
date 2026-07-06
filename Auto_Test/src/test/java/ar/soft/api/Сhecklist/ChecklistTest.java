@@ -19,6 +19,22 @@ import static io.restassured.RestAssured.given;
 public class ChecklistTest extends BaseApiTest {
 
     Integer id;
+    Integer idd;
+//    ChecklistGreateReg body = new ChecklistGreateReg(359, "kkkkkkkk",
+//            "description", 000,
+//            "categoryDtoList": [
+//    {
+//        "number": 1,
+//            "name": "88",
+//            "description": "",
+//            "checkListId": 0,
+//            "parentCategoryNumber": null,
+//            "descendantCategoriesId": [],
+//        "status": "EMPTY",
+//            "links": []
+//    }
+//    ]
+//});
 
 //    ArrayList<ChecklistGreateReg.CategoryDtoList> categoryDtoList = ArrayList<ChecklistGreateReg.CategoryDtoList>;
 //    ChecklistGreateReg.Root root = ChecklistGreateReg(117, "newChecklist", false, categoryDtoList)
@@ -84,12 +100,13 @@ public class ChecklistTest extends BaseApiTest {
     public void deleteChecklistTest() {
         Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Response response = given(specification)
+//                .body()
                 .post("/checklist/create" + contextOrganizationId)
                 .then()
                 .extract().response();
         JsonPath jsonPath = response.jsonPath();
-        id = jsonPath.get("domain[0].id");
-        Assert.assertEquals(id, id);
+        idd = jsonPath.get("domain[0].id");
+        Assert.assertEquals(idd, id);
 
 //        DelLog delLog = given(specification)
 //                .delete("/checklist1/" + id + contextOrganizationId)
