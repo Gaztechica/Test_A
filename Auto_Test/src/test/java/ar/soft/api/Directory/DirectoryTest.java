@@ -5,8 +5,7 @@ import ar.soft.api.Directory.DirectoryPojo.DirectDel;
 import ar.soft.api.Directory.DirectoryPojo.DirectRename;
 import ar.soft.api.Directory.DirectoryPojo.DirectoryReg;
 import ar.soft.api.Directory.DirectoryPojo.DirectoryRes;
-import ar.soft.api.Log.LogPojo.DelLog;
-import ar.soft.api.Specification;
+import ar.soft.api.BaseApi.Specification;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import io.restassured.http.ContentType;
@@ -16,7 +15,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.bouncycastle.asn1.cmc.CMCStatus.success;
 
 public class DirectoryTest extends BaseApiTest {
 

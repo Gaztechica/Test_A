@@ -1,16 +1,13 @@
 package ar.soft.modelPage.base;
 
+import ar.soft.modelPage.ProjectSettingsPage.TypesWorkSidebarPage;
 import ar.soft.modelPage.*;
 import ar.soft.modelPage.FileSPage.FilePage;
 import ar.soft.modelPage.ProjectSettingsPage.ChecklistsSidebarPage;
 import ar.soft.modelPage.ProjectSettingsPage.SettingsSidebarPage;
-import ar.soft.modelPage.ProjectSettingsPage.TypesWorkSidebarPage;
 import jdk.jfr.Name;
 import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindBy;
-
-import java.util.concurrent.TimeUnit;
-import static ar.soft.runner.BaseTest.*;
 
 public class BasePage extends BaseModel {
 

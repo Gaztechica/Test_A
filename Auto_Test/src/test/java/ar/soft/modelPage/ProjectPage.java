@@ -1,19 +1,12 @@
 package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
-import io.qameta.allure.Allure;
 import jdk.jfr.Name;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.FindBy;
-import ru.qa.elements.Button;
 import ru.qa.methods.ActionT;
-import ru.qa.methods.WaitT;
-
-import javax.print.attribute.standard.MediaSize;
 
 import static ar.soft.runner.BaseTest.PASSWORD;
-import static java.lang.Character.getName;
 import static org.openqa.selenium.By.xpath;
 
 public class ProjectPage extends BasePage {
@@ -52,7 +45,7 @@ public class ProjectPage extends BasePage {
 
     @Name("кнопка создать Проект")
     public ProjectPage btnCreateProject() {
-        getDriver().findElement(xpath("//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")).click();
+        getDriver().findElement(xpath("//button[@data-test-id='project-page-button']")).click();
         return this;
     }
 
@@ -70,7 +63,9 @@ public class ProjectPage extends BasePage {
 
     @Name("название Проекта")
     public ProjectPage inputNameProject() {
-        getDriver().findElement(xpath("//input[@class='ant-input primaryInput  not-entered']")).sendKeys("11AAНовый проект");
+//        getDriver().findElement(xpath("//div[@class='EllipsisInput']")).click();
+        getDriver().findElement(xpath("//*[@data-test-id='page-create-project-1-ellipsis-text']")).click();
+        getDriver().findElement(xpath("//*[@data-test-id='page-create-project-1-ellipsis-text']")).sendKeys("Test проект");
         return this;
     }
 

@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
-import static ar.soft.AT.ProjectSettingsTest.TypesWorkSidebarTest.NAME_TYPES_WORK3;
+import static ar.soft.AT.UI.ProjectSettingsTest.TypesWorkSidebarTest.NAME_TYPES_WORK3;
 import static org.openqa.selenium.By.xpath;
 
 public class TypesWorkLibraryPage extends BasePage {

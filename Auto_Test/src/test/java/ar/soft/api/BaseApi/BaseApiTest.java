@@ -1,7 +1,6 @@
 package ar.soft.api.BaseApi;
 
 import ar.soft.api.Account.LoginReguest;
-import ar.soft.api.Specification;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import io.restassured.builder.RequestSpecBuilder;
