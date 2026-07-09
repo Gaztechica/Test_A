@@ -1,5 +1,6 @@
 package ar.soft.api;
 
+import ar.soft.api.BaseApi.Specification;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import io.restassured.RestAssured;

@@ -1,11 +1,5 @@
 package ar.soft.cucumber;
 
-import ar.soft.modelPage.HomePage;
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import org.testng.Assert;
-
 public class FreestyleSteps {
 
 //    private HomePage homePage;

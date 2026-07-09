@@ -5,7 +5,7 @@ import jdk.jfr.Name;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 
-import static ar.soft.AT.ProjectSettingsTest.TypesWorkSidebarTest.*;
+import static ar.soft.AT.UI.ProjectSettingsTest.TypesWorkSidebarTest.*;
 
 public class TypesWorkSidebarPage extends BasePage {
 

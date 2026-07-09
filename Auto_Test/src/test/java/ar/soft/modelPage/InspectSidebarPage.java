@@ -2,7 +2,6 @@ package ar.soft.modelPage;
 
 //import ar.soft.element.WaitT;
 
-import ar.soft.modelPage.ProjectSettingsPage.TypesWorkSidebarPage;
 import ar.soft.modelPage.base.BasePage;
 import io.qameta.allure.Step;
 import jdk.jfr.Name;
@@ -16,7 +15,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ar.soft.AT.Inspection.InspectSidebarTest.*;
+import static ar.soft.AT.UI.Inspection.InspectSidebarTest.*;
 //import static ar.soft.driver.WebDriverSetup.getDriverInstance;
 import static org.openqa.selenium.By.xpath;
 import static ru.qa.driver.WebDriverSetup.getDriverInstance;
@@ -31,7 +30,7 @@ public class InspectSidebarPage extends BasePage {
     private WebElement createI;
 
     @Name("кнопка создать новую инспекцию")
-    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
+    @FindBy(xpath = "//button[@data-test-id='inspections-create-btn-button']")
     private WebElement createInspectClick;
 
     @Name("название инспекции")
@@ -122,7 +121,7 @@ public class InspectSidebarPage extends BasePage {
     @Name("кнопка создать инспекцию")
     public InspectSidebarPage btnCreateInspectClick() {
         WaitT.littleWait(300);
-        getDriver().findElement(By.xpath("//button[@class='ant-btn ant-btn-primary primaryButton big colorPrimary ']")).click();
+        getDriver().findElement(By.xpath("//button[@data-test-id='inspections-create-inspection-submit-button']")).click();
 
         return this;
     }

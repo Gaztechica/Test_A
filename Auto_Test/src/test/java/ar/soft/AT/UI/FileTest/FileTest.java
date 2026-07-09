@@ -1,0 +1,45 @@
+package ar.soft.AT.UI.FileTest;
+
+import ar.soft.modelPage.FileSPage.FilePage;
+import ar.soft.runner.BaseTest;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+
+public class FileTest extends BaseTest {
+
+    @Test(priority = 1,
+            description = "создать ")
+    public void createFolderTest() throws InterruptedException {
+        String filePage = new FilePage(getDriver())
+                .project()
+                .fileSidebarClick()
+                .folderAdd()
+                .folderSelect()
+                .folderName("новая папка")
+                .folderAdd2()
+                .checkCreateFolder();
+
+        Assert.assertEquals(filePage, "новая папка");
+    }
+
+    @Test(priority = 2,
+            description = "переименовать папку")
+    public void removeFolderTest() throws InterruptedException {
+        String filePage2 = new FilePage(getDriver())
+                .project()
+                .fileSidebarClick()
+                .btnRemovePRMFolderClick()
+                .btnRename()
+                .folderRename("Переименовал папку")
+                .btnSave()
+
+//                .folderAdd()
+//                .folderSelect()
+//                .folderName("новая папка")
+//                .folderAdd2()
+                .checkCreateFolder();
+
+        Assert.assertEquals(filePage2, "Переименовал папку");
+    }
+}

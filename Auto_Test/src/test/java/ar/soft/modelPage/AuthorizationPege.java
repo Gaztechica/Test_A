@@ -1,7 +1,6 @@
 package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
-import io.qameta.allure.Allure;
 import jdk.jfr.Name;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

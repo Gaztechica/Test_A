@@ -3,8 +3,6 @@ package ar.soft.runner;
 //import arSoft.runner.FilterForTest.FilterForTests;
 
 import ar.soft.modelPage.AuthorizationPege;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,8 +10,6 @@ import org.testng.annotations.*;
 
 import java.lang.reflect.Method;
 import java.time.Duration;
-import java.util.ArrayList;
-import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
 //@Liisteners({FilterForTests.class})
@@ -39,25 +35,25 @@ public abstract class BaseTest {
     public static final String URL_REGISTRATION = "http://31.129.109.20:3000/registration";
 
 
-    public static final String EMAIL = "yevgeniy.gor.90@mail.ru";
-    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";
-    public static final String INSPECTOR_EMAIL = "bukkosefyu@gufum.com";
-    public static final String SUBCONTRACTOR_EMAIL = "kkk.k.82@list.ru";
-    public static final String OBSERVER_EMAIL = "o_o_2025@bk.ru";
-    public static final String VISOR_EMAIL = "fefyevipsa@gufum.com";
-    public static final String PASSWORD = "qwert12345";
+//    public static final String EMAIL = "yevgeniy.gor.90@mail.ru";
+//    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";
+//    public static final String INSPECTOR_EMAIL = "bukkosefyu@gufum.com";
+//    public static final String SUBCONTRACTOR_EMAIL = "kkk.k.82@list.ru";
+//    public static final String OBSERVER_EMAIL = "o_o_2025@bk.ru";
+//    public static final String VISOR_EMAIL = "fefyevipsa@gufum.com";
+//    public static final String PASSWORD = "qwert12345";
 
 
 //=========================== test f.ff.1980@list.ru ==================================
 
-//    public static final String EMAIL = "f.ff.1980@list.ru";
-//    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";
-//    public static final String INSPECTOR_EMAIL = "cil2e@mailtub.com";
-//    public static final String SUBCONTRACTOR_EMAIL = "d8q2s@fthcapital.com";
-//    public static final String OBSERVER_EMAIL = "cecily16432@lu1f.cse445.com";
-//    public static final String VISOR_EMAIL = "vognofurdu@gufum.com";
-//
-//    public static final String PASSWORD = "012345678";
+    public static final String EMAIL = "f.ff.1980@list.ru";
+    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";
+    public static final String INSPECTOR_EMAIL = "cil2e@mailtub.com";
+    public static final String SUBCONTRACTOR_EMAIL = "d8q2s@fthcapital.com";
+    public static final String OBSERVER_EMAIL = "cecily16432@lu1f.cse445.com";
+    public static final String VISOR_EMAIL = "vognofurdu@gufum.com";
+
+    public static final String PASSWORD = "012345678";
 
 
 //=========================== stage ==================================

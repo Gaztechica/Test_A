@@ -1,7 +1,7 @@
 package ar.soft.api.Account;
 
 import ar.soft.api.BaseApi.BaseApiTest;
-import ar.soft.api.Specification;
+import ar.soft.api.BaseApi.Specification;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import io.restassured.path.json.JsonPath;

@@ -2,8 +2,6 @@ package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
 import jdk.jfr.Name;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

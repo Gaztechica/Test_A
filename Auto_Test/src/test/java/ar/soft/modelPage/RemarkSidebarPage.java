@@ -7,8 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import java.security.Key;
-
 public class RemarkSidebarPage extends BasePage {
 
     public RemarkSidebarPage(WebDriver driver) {

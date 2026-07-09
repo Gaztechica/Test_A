@@ -15,22 +15,22 @@ public class LogFilePage extends BasePage {
         super(driver);
     }
 
-    @FindBy(xpath = "//a[@href='/logfiles']")
+    @FindBy(xpath = "//*[@data-test-id='admin-panel-menu-link-3']/../..")
     private WebElement btnLogFile;
 
     @FindBy(xpath = "//*[@class='Log__info-iconBlock']") // заменил 29.06.24 не удалял
 //    @FindBy(xpath = "//img[@src='/static/media/Basket.8774715cc0eccb962b78054dc111a9a8.svg']")
     private WebElement iconDeleteLogFile;
 
-//    @FindBy(xpath = "//button[@type='button']//span[contains(.,'Отменить')]")
-    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default cleanButton big colorPrimary ']//span")
+    @FindBy(xpath = "//button[@type='button']//span[contains(.,'Отменить')]")
+//    @FindBy(xpath = "//button[@data-test-id='log-page-modal-1-button']//span")
     private WebElement btnCanselDeleteLogFile;
 
-    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']//span")
+    @FindBy(xpath = "//button[@data-test-id='log-page-modal-3-button']")
     private WebElement btnDeleteLogFile;
 
 //    @FindBy(xpath = "//input[@id='rc_select_3']")
-    @FindBy(xpath = "//input[@class='ant-select-selection-search-input']")
+    @FindBy(xpath = "//*[@class='ant-select-selector']")
     private WebElement searchLogFile;
 
 //    @FindBy(xpath = "")).getText();
@@ -67,13 +67,19 @@ public class LogFilePage extends BasePage {
     public LogFilePage searchLogFile() {
         searchLogFile.sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN,
                 Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN,
-                Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+                Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ARROW_DOWN,
+                Keys.ARROW_DOWN,Keys.ENTER);
+
+        return this;
+    }
+    public LogFilePage searchInputLogFile() {
+        searchLogFile.sendKeys(EMAIL , Keys.ENTER);
 
         return this;
     }
 
     public String logNameText() {
-        return getDriver().findElement(By.xpath("//*[@data-test-id='text'][contains(., '" + EMAIL + "')]")).getText();
+        return getDriver().findElement(By.xpath("//*[@data-test-id='log-page-content-4-0-text'][contains(., '" + EMAIL + "')]")).getText();
     }
 
 //    public LogFilePage logName() {

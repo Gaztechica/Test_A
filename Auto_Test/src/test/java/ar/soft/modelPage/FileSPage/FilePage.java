@@ -1,9 +1,6 @@
 package ar.soft.modelPage.FileSPage;
 
-import ar.soft.modelPage.InspectSidebarPage;
-import ar.soft.modelPage.TypesWorkLibraryPage;
 import ar.soft.modelPage.base.BasePage;
-import com.codeborne.selenide.SelenideElement;
 import jdk.jfr.Name;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -11,7 +8,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 
 
-import static com.codeborne.selenide.Selenide.$x;
 import static org.openqa.selenium.By.xpath;
 
 public class FilePage extends BasePage {
@@ -23,6 +19,12 @@ public class FilePage extends BasePage {
     @Name("кнопка добавить")
     public FilePage folderAdd() {
         getDriver().findElement(By.xpath("//*[@data-test-id='button'][contains(., 'Добавить')]")).click();
+
+        return this;
+    }
+    @Name("кнопка Сохранить")
+    public FilePage btnSave() {
+        getDriver().findElement(By.xpath("//*[@data-test-id='button'][contains(., 'Сохранить')]")).click();
 
         return this;
     }
@@ -55,10 +57,23 @@ public class FilePage extends BasePage {
 
         return this;
     }
+    @Name("выбрать Переименовать")
+    public FilePage btnRename() {
+        getDriver().findElement(By.xpath("(//span[@class='ant-dropdown-menu-title-content'][contains(., 'Переименовать')])[1]")).click();
+
+        return this;
+    }
 
     @Name("название папки")
     public FilePage folderName(String name) {
         getDriver().findElement(By.xpath("//*[@id='CreateFolderModal_title']")).sendKeys(name);
+
+        return this;
+    }
+
+    @Name("Переименовал папку")
+    public FilePage folderRename(String name) {
+        getDriver().findElement(By.xpath("//*[@id='RenameModal_title']")).sendKeys(name);
 
         return this;
     }

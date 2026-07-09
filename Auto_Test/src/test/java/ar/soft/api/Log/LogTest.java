@@ -5,21 +5,16 @@ import ar.soft.api.Log.LogPojo.DelLog;
 import ar.soft.api.Log.LogPojo.LogReg;
 import ar.soft.api.Log.LogPojo.LogRes;
 //import ar.soft.api.LogPojo.*;
-import ar.soft.api.Specification;
+import ar.soft.api.BaseApi.Specification;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import io.restassured.http.ContentType;
-import io.restassured.module.jsv.JsonSchemaValidator;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
-import org.openqa.selenium.json.Json;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-import java.util.List;
-
 import static io.restassured.RestAssured.given;
-import static org.bouncycastle.asn1.cmc.CMCStatus.success;
 
 public class LogTest extends BaseApiTest {
 
