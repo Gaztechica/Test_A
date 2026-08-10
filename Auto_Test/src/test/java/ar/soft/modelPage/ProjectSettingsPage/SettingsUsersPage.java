@@ -18,8 +18,16 @@ public class SettingsUsersPage extends BasePage {
     @FindBy(xpath = "//div[@class='ant-tabs-tab'][contains(.,'Пользователи')]")
     public WebElement usersClick;
 
+    @Name("Настройка проекта пользователи")
+    @FindBy(xpath = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'test Regress')]")
+    public WebElement projectClick;
+
+    @Name("Настройка проекта пользователи")
+    @FindBy(xpath = "//a[@style='color: inherit;'][contains(.,'Настройки')] | //a[@style='color: inherit;']//*[contains(.,'Настройки')]")
+    public WebElement settingsSidebarClick;
+
     @Name("кнопка добавить пользователя")
-    @FindBy(xpath = "//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(.,'Добавить')]")
+    @FindBy(xpath = "//*[@data-test-id='button'][contains(.,'Добавить')]")
     public WebElement addButtonClick;
 
     @Name("поиск пользователя")
@@ -27,15 +35,19 @@ public class SettingsUsersPage extends BasePage {
     public WebElement searchUsersClick;
 
     @Name("чек бокс выбора пользователя")
-    @FindBy(xpath = "(//*[@class='CheckboxComponent__square-check'])[2]")
+    @FindBy(xpath = "(//*[@class='CheckboxComponent__square-check'])[6]")
     public WebElement checkUsersClick;
 
+    @Name("чек бокс выбора пользователя")
+    @FindBy(xpath = "(//*[@class='CheckboxComponent__square-check'])[7]")
+    public WebElement checkUserClick;
+
     @Name("кнопка добавить")
-    @FindBy(xpath = "//*[@class='ant-btn ant-btn-primary primaryButton big colorPrimary '][contains(.,'Добавить')]")
+    @FindBy(xpath = "(//*[@data-test-id='button'][contains(.,'Добавить')])[2]")
     public WebElement btnButtonClick;
 
     @Name("кнопка Удалить из проекта")
-    @FindBy(xpath = "//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Удалить из проекта')]")
+    @FindBy(xpath = "//*[@data-test-id='project-users-content-modal-3-button'][contains(., 'Удалить из проекта')]")
     public WebElement btnButtonDeleteClick;
 
     @Name("Пользователь отображается в проекте")

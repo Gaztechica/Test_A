@@ -1,12 +1,14 @@
 package ar.soft.AT.UI.FileTest;
 
 import ar.soft.modelPage.FileSPage.FilePage;
+import ar.soft.modelPage.ProjectSettingsPage.SettingsUsersPage;
 import ar.soft.runner.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
-
 public class FileTest extends BaseTest {
+
+    public final static String REMOVE_FOLDER = "Переименовал папку";
 
     @Test(priority = 1,
             description = "создать ")
@@ -31,15 +33,26 @@ public class FileTest extends BaseTest {
                 .fileSidebarClick()
                 .btnRemovePRMFolderClick()
                 .btnRename()
-                .folderRename("Переименовал папку")
+                .folderRename(REMOVE_FOLDER)
                 .btnSave()
-
-//                .folderAdd()
-//                .folderSelect()
-//                .folderName("новая папка")
-//                .folderAdd2()
                 .checkCreateFolder();
 
-        Assert.assertEquals(filePage2, "Переименовал папку");
+        Assert.assertEquals(filePage2, REMOVE_FOLDER);
+    }
+
+    @Test(priority = 3,
+            description = "Добавление пользователя в проект")
+    public void createUsersProject() throws InterruptedException {
+        String filePage = new FilePage(getDriver())
+                .project()
+                .fileSidebarClick()
+                .btnDeletePRMFolderClick()
+                .btnDelete()
+                .btnConfirm()
+                .mecConfirm();
+
+
+        Assert.assertEquals(filePage, "Папка успешно удалена из проекта");
+
     }
 }

@@ -15,7 +15,8 @@ public class FileSTest extends BaseTest {
     public void createFolderTest() throws InterruptedException {
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 //        new FilePage(getDriver())
-        var page = new FileSPage(getDriver());
+//        var page = new FileSPage(getDriver());
+        FileSPage page = new FileSPage(getDriver());
         page.projectS.click();
         page.fileSidebarS.click();
         page.folderAddS.click();

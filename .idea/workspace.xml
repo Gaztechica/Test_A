@@ -4,50 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="add ChecklistTest">
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/OKS/OksPojo/CreateOks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/OKS/OksPojo/DeleteOks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/OKS/OksPojo/GetParam.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/OKS/OksPojo/RecDelOks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/OKS/OksPojo/RemoteOkS.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/OKS/OksPojo/ResCreateOks.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/OKS/OksTest.java" afterDir="false" />
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="fix InspectSidebarTest22">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/TestApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/api/TestApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Account/AccountPojo/AccountLoginPojo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginPojoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Account/AccountLoginPojoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/AccountLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/AccountLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/JwtToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/BaseApi/JwtToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/Log.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Account/Log.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/LoginReguest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Account/AccountPojo/LoginReguest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/Pet.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/api/Pet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/TokenResponce.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Account/AccountPojo/TokenResponce.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Account/TokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/BaseApi/TokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/AutorisationApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/AutorisationApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/BaseApi/BaseApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/BaseApi/BaseApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/BaseApi/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/BaseApi/Specification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryPojo/DirectDel.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Directory/DirectoryPojo/DirectDel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryPojo/DirectRename.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Directory/DirectoryPojo/DirectRename.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryPojo/DirectoryReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Directory/DirectoryPojo/DirectoryReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryPojo/DirectoryRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Directory/DirectoryPojo/DirectoryRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Directory/DirectoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Directory/DirectoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/AuthReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Log/LogPojo/AuthReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/AuthRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Log/LogPojo/AuthRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/DelLog.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Log/LogPojo/DelLog.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/LogReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Log/LogPojo/LogReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/LogRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Log/LogPojo/LogRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/Pojjjj.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Log/LogPojo/Pojjjj.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogPojo/Ress.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Log/LogPojo/Ress.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Log/LogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Log/LogTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Register.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/api/Register.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/RegresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/api/RegresTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/SucessReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/api/SucessReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/UserData.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/api/UserData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklisPojo/ChecklistGreateReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Сhecklist/ChecklisPojo/ChecklistGreateReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklisPojo/ChecklistGreateRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Сhecklist/ChecklisPojo/ChecklistGreateRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklisPojo/ChecklistReg.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Сhecklist/ChecklisPojo/ChecklistReg.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklisPojo/ChecklistRes.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Сhecklist/ChecklisPojo/ChecklistRes.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/api/Сhecklist/ChecklistTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Сhecklist/ChecklistTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/ProjectSettingsTest/SettingsUsersTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/ProjectSettingsTest/SettingsUsersTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FileSPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FileSPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectSettingsPage/SettingsUsersPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectSettingsPage/SettingsUsersPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -545,7 +509,7 @@
     &quot;TestNG.ar.soft.SettingsSidebarTest and 4 more.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.remarcTest.remarcTest.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;090726&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;07082026&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
@@ -569,85 +533,14 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\cucumber" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ar.soft.AT.UI.Rr" />
       <recent name="ar.soft.AT.API.Directory.DirectoryPojo" />
       <recent name="ar.soft.api.Сhecklist.ChecklisPojo" />
       <recent name="ar.soft.AT.FileTest" />
       <recent name="ar.soft.api.DirectoryPojo" />
-      <recent name="ar.soft.api.Account" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AuthorizationTest.ownerAuthorizationTest">
-    <configuration name="AuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTest.adminAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
-      <option name="METHOD_NAME" value="adminAuthorizationTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTest.inspectorAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
-      <option name="METHOD_NAME" value="inspectorAuthorizationTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTest.ownerAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
-      <option name="METHOD_NAME" value="ownerAuthorizationTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.FileTest.createUsersProject">
     <configuration name="Dialogs" type="TestNG" nameIsGenerated="true">
       <module name="AutoTest" />
       <shortenClasspath name="NONE" />
@@ -723,16 +616,87 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="InspectSidebarTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FileTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.Inspection.*" />
+          <option name="PATTERN" value="ar.soft.AT.UI.FileTest.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.Inspection" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.Inspection.InspectSidebarTest" />
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileTest.createFolderTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.FileTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileTest" />
+      <option name="METHOD_NAME" value="createFolderTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileTest.createUsersProject" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.FileTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileTest" />
+      <option name="METHOD_NAME" value="createUsersProject" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileTest.removeFolderTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.FileTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileTest" />
+      <option name="METHOD_NAME" value="removeFolderTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SettingsUsersTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.ProjectSettingsTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.ProjectSettingsTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.ProjectSettingsTest.SettingsUsersTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -742,11 +706,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AuthorizationTest.ownerAuthorizationTest" />
-        <item itemvalue="TestNG.AuthorizationTest" />
-        <item itemvalue="TestNG.AuthorizationTest.inspectorAuthorizationTest" />
-        <item itemvalue="TestNG.AuthorizationTest.adminAuthorizationTest" />
-        <item itemvalue="TestNG.InspectSidebarTest" />
+        <item itemvalue="TestNG.FileTest.createUsersProject" />
+        <item itemvalue="TestNG.FileTest" />
+        <item itemvalue="TestNG.FileTest.removeFolderTest" />
+        <item itemvalue="TestNG.FileTest.createFolderTest" />
+        <item itemvalue="TestNG.SettingsUsersTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1214,10 +1178,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="add ChecklistTest" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_ownerAuthorizationTest.ic" NAME="AuthorizationTest.ownerAuthorizationTest Coverage Results" MODIFIED="1747742779332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_adminAuthorizationTest.ic" NAME="AuthorizationTest.adminAuthorizationTest Coverage Results" MODIFIED="1747916205562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ar.soft.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_adminAuthorizationTest.ic" NAME="AuthorizationTest.adminAuthorizationTest Coverage Results" MODIFIED="1747916205562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_ownerAuthorizationTest.ic" NAME="AuthorizationTest.ownerAuthorizationTest Coverage Results" MODIFIED="1747742779332" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>ar.soft.*</FILTER>
     </SUITE>
   </component>

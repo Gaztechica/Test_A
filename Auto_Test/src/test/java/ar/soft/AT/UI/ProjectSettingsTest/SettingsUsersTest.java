@@ -8,15 +8,14 @@ import ru.qa.methods.WaitT;
 
 public class SettingsUsersTest extends BaseTest {
 
-    public final static String NAME_USER = "a123EvgenTest";
+    public final static String NAME_USER = "TestTest";
 
     @Test(priority = 1,
             description = "Добавление пользователя в проект")
     public void createUsersProject() throws InterruptedException {
-        new SettingsUsersPage(getDriver())
-                .project()
-                .settingsSidebarClick();
         SettingsUsersPage settingsUsersPage = new SettingsUsersPage(getDriver());
+        settingsUsersPage.projectClick.click();
+        settingsUsersPage.settingsSidebarClick.click();
         settingsUsersPage.usersClick.click();
         settingsUsersPage.addButtonClick.click();
         settingsUsersPage.searchUsersClick.sendKeys(NAME_USER);
@@ -31,10 +30,9 @@ public class SettingsUsersTest extends BaseTest {
     @Test(priority = 2,
             description = "удаление пользователя из проекта")
     public void deleteUsersProject() throws InterruptedException {
-        new SettingsUsersPage(getDriver())
-                .project()
-                .settingsSidebarClick();
         SettingsUsersPage settingsUsersPage = new SettingsUsersPage(getDriver());
+        settingsUsersPage.projectClick.click();
+        settingsUsersPage.settingsSidebarClick.click();
         settingsUsersPage.usersClick.click();
         settingsUsersPage.newUsersCheck2.click();
 //        Thread.sleep(800);
@@ -50,13 +48,13 @@ public class SettingsUsersTest extends BaseTest {
     @Test(priority = 3,
             description = "множественное добавление пользователя в проект")
     public void addUsersProject() throws InterruptedException {
-        new SettingsUsersPage(getDriver())
-                .project()
-                .settingsSidebarClick();
         SettingsUsersPage settingsUsersPage = new SettingsUsersPage(getDriver());
+        settingsUsersPage.projectClick.click();
+        settingsUsersPage.settingsSidebarClick.click();
         settingsUsersPage.usersClick.click();
         settingsUsersPage.addButtonClick.click();
-        settingsUsersPage.searchUsersClick.sendKeys("Наблюдательный");
+        settingsUsersPage.checkUserClick.click();
+        settingsUsersPage.searchUsersClick.sendKeys(NAME_USER);
         settingsUsersPage.checkUsersClick.click();
         settingsUsersPage.btnButtonClick.click();
         Thread.sleep(300);

@@ -14,7 +14,7 @@ public class FileSPage extends BasePage {
 
 //   создать и  добавить базовую страницу и баз тест для логирования на селениде
     public  SelenideElement
-            projectS = $x("////div[@data-test-id='project-page-name-4-text'][contains(.,'11AAНовый проект')]"),
+            projectS = $x("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'test Regress')]"),
 //            projectS = $x("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'11AAНовый проект')]"),
             fileSidebarS = $x("//span[@class='ant-menu-title-content'][contains(.,'Файлы')]"),
             folderAddS = $x("//*[@data-test-id='button'][contains(., 'Добавить')]"),
