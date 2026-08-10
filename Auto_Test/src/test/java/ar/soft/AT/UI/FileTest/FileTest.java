@@ -51,6 +51,7 @@ public class FileTest extends BaseTest {
                 .btnConfirm()
                 .mecConfirm();
 
+
         Assert.assertEquals(filePage, "Папка успешно удалена из проекта");
 
     }
