@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="fix InspectSidebarTest22">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
-    </list>
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="fix InspectSidebarTest22" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -724,14 +721,6 @@
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
     </task>
-    <task id="LOCAL-00083" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1715801353203</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1715801353204</updated>
-    </task>
     <task id="LOCAL-00084" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
       <created>1715801440406</created>
@@ -1116,7 +1105,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783586482106</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="fix InspectSidebarTest22">
+      <option name="closed" value="true" />
+      <created>1786599314203</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1786599314203</updated>
+    </task>
+    <option name="localTasksCounter" value="133" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1144,7 +1141,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Merge pull request #88 from Gaztechica/регресс-от-27.06.24&#10;&#10;Merge pull request #79 from Gaztechica/78" />
     <MESSAGE value="Merge pull request #79 from Gaztechica/78&#10;&#10;78" />
     <MESSAGE value="Merge pull request #79 from Gaztechica&#10;InspectSidebarTest" />
     <MESSAGE value="LogFileTest_logSearchTest" />
@@ -1169,7 +1165,8 @@
     <MESSAGE value="add DirectoryTest, ChecklistTest, FileSTest" />
     <MESSAGE value="hhhh" />
     <MESSAGE value="add ChecklistTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ChecklistTest" />
+    <MESSAGE value="fix InspectSidebarTest22" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix InspectSidebarTest22" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_adminAuthorizationTest.ic" NAME="AuthorizationTest.adminAuthorizationTest Coverage Results" MODIFIED="1747916205562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
