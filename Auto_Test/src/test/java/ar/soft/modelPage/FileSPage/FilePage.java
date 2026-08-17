@@ -3,12 +3,13 @@ package ar.soft.modelPage.FileSPage;
 import ar.soft.modelPage.base.BasePage;
 import jdk.jfr.Name;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import ru.qa.methods.WaitT;
 
 
+import static ar.soft.AT.UI.FileTest.FileTest.NEW_FOLDER;
 import static ar.soft.AT.UI.FileTest.FileTest.REMOVE_FOLDER;
 import static org.openqa.selenium.By.xpath;
 import static org.openqa.selenium.Keys.LEFT_CONTROL;
@@ -33,9 +34,33 @@ public class FilePage extends BasePage {
         return this;
     }
 
-    @Name("кнопка Сохранить")
+    @Name("кнопка переместить подтверждение")
+    public FilePage btnMovingSave() {
+        getDriver().findElement(By.xpath("//*[@data-test-id='button'][contains(., 'Переместить')]")).click();
+
+        return this;
+    }
+
+    @Name("кнопка добавить2")
+    public FilePage folderMoving() {
+        WaitT.littleWait(200);
+        getDriver().findElement(By.xpath("//*[@class='ant-tree-title'][contains(., '11')]")).click();
+
+        return this;
+    }
+
+    @Name("кнопка Переместить")
+    public FilePage btnMoving() {
+        WaitT.littleWait(300);
+        getDriver().findElement(By.xpath("(//span[@class='ant-dropdown-menu-title-content'][contains(., 'Переместить')])[1]")).click();
+
+        return this;
+    }
+
+    @Name("кнопка Подтвердить")
     public FilePage btnConfirm() {
-        getDriver().findElement(By.xpath("//*[@data-test-id='modal-3-button']"));
+        WaitT.littleWait(200);
+        getDriver().findElement(By.xpath("//*[@data-test-id='modal-3-button']")).click();
 
         return this;
     }
@@ -49,23 +74,23 @@ public class FilePage extends BasePage {
 
     @Name("check новая папка")
     public String checkCreateFolder() throws InterruptedException {
-        Thread.sleep(100);
-        return getDriver().findElement(xpath("//*[@data-test-id='text'][contains(., 'новая папка')]")).getText();
+        WaitT.littleWait(300);
+        return getDriver().findElement(xpath("//*[@data-test-id='text'][contains(., '" + NEW_FOLDER + "')]")).getText();
     }
 
     @Name("кнопка редактировать ПKM название папки")
     public FilePage btnRemovePRMFolderClick() {
         Actions actions = new Actions(getDriver());
-        WebElement btnElement = getDriver().findElement(xpath("//*[@data-test-id='text'][contains(., 'новая папка')]"));
+        WebElement btnElement = getDriver().findElement(xpath("//*[@data-test-id='text'][contains(., '" + NEW_FOLDER + "')]"));
         actions.contextClick(btnElement)
                 .perform();
         return this;
     }
 
-    @Name("кнопка Удалить ПKM")
-    public FilePage btnDeletePRMFolderClick() {
+    @Name("вызов контекстного меню ПKM")
+    public FilePage btnPRMFolderClick() {
         Actions actions = new Actions(getDriver());
-        WebElement btnElement = getDriver().findElement(xpath("//*[@data-test-id='text'][contains(., '"+ REMOVE_FOLDER +"')]"));
+        WebElement btnElement = getDriver().findElement(xpath("//*[@data-test-id='text'][contains(., '" + REMOVE_FOLDER + "')]"));
         actions.contextClick(btnElement)
                 .perform();
         return this;
@@ -85,9 +110,23 @@ public class FilePage extends BasePage {
         return this;
     }
 
+    @Name("выбрать Переместить")
+    public FilePage selectMoving () {
+        getDriver().findElement(By.xpath("//*[@class='ant-tree-title'][contains (., '" + REMOVE_FOLDER + "')]")).click();
+
+        return this;
+    }
+
     @Name("выбрать Удалить")
     public FilePage btnDelete() {
         getDriver().findElement(By.xpath("(//span[@class='ant-dropdown-menu-title-content'][contains(., 'Удалить')])[1]")).click();
+
+        return this;
+    }
+
+    @Name("выбрать Открыть")
+    public FilePage btnOpen() {
+        getDriver().findElement(By.xpath("(//span[@class='ant-dropdown-menu-title-content'][contains(., 'Открыть')])[1]")).click();
 
         return this;
     }
@@ -107,8 +146,21 @@ public class FilePage extends BasePage {
         return this;
     }
 
-    @Name("Папка успешно удалена из проекта")
+    @Name("Алерт")
     public String mecConfirm() {
+        WaitT.littleWait(400);
+        return getDriver().findElement(By.xpath("//*[@class='ant-message-notice-content']")).getText();
+    }
+
+    @Name("Папка открыта в проекте")
+    public String mecOpenFolder() {
+        WaitT.littleWait(200);
+        return getDriver().findElement(By.xpath("//*[@class='ant-empty-description']")).getText();
+    }
+
+    @Name("")
+    public String mecMovingFolder() {
+        WaitT.littleWait(200);
         return getDriver().findElement(By.xpath("//*[@class='ant-message-notice-content']")).getText();
     }
 }

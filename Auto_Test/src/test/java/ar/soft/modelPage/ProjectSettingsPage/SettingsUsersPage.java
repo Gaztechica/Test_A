@@ -18,9 +18,7 @@ public class SettingsUsersPage extends BasePage {
     @FindBy(xpath = "//div[@class='ant-tabs-tab'][contains(.,'Пользователи')]")
     public WebElement usersClick;
 
-    @Name("Настройка проекта пользователи")
-    @FindBy(xpath = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'test Regress')]")
-    public WebElement projectClick;
+
 
     @Name("Настройка проекта пользователи")
     @FindBy(xpath = "//a[@style='color: inherit;'][contains(.,'Настройки')] | //a[@style='color: inherit;']//*[contains(.,'Настройки')]")

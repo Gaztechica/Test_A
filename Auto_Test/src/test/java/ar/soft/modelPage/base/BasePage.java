@@ -34,6 +34,10 @@ public class BasePage extends BaseModel {
         return this;
     }
 
+    @Name("Настройка проекта пользователи")
+    @FindBy(xpath = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'test Regress')]")
+    public WebElement projectClick;
+
     @Name("открыть Замечания")
     public RemarkSidebarPage remarkSidebarClick() {
         remark.click();

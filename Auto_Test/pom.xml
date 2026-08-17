@@ -33,7 +33,8 @@
 
         <!-- DEPENDENCIES -->
         <!-- selenium -->
-        <selenium.version>4.12.1</selenium.version>
+        <selenium.version>4.28.0</selenium.version>
+<!--        <selenium.version>4.12.1</selenium.version>-->
         <webdrivermanager.version>5.9.2</webdrivermanager.version>
 
         <!-- asserts -->
@@ -62,6 +63,12 @@
     </properties>
 
     <dependencies>
+
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-handler-codec-http</artifactId>
+            <version>4.1.100.Final</version>
+        </dependency>
 
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
