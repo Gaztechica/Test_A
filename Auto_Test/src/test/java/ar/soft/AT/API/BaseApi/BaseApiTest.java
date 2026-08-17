@@ -9,10 +9,8 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-
 import static ar.soft.runner.BaseTest.EMAIL;
 import static ar.soft.runner.BaseTest.PASSWORD;
-import static io.netty.handler.codec.http.HttpHeaders.addHeader;
 import static io.restassured.RestAssured.given;
 
 public class BaseApiTest {
