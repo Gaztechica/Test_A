@@ -19,6 +19,8 @@ public class InspectSidebarTest extends BaseTest {
     public final static String TAPE_WORK_INSPECT = "новый вид работ";
     public final static String ORGANIZATION_INSPECT = "TEST!1";
 
+    @Story("создать черновик инспекции")
+    @Description("создать черновик инспекции")
     @Test(priority = 1,
             description = "создать черновик инспекции")
     public void createDraftInspect() throws InterruptedException {
@@ -33,7 +35,7 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createDraftInspect, "Черновик успешно создан");
     }
 
-    @Story("стори Добавить метку в черновик инспекции")
+    @Story("Добавить метку в черновик инспекции")
     @Description("Добавить метку в черновик инспекции")
     @Test(priority = 2,
             description = "Добавить метку в черновик инспекции")
@@ -52,6 +54,8 @@ public class InspectSidebarTest extends BaseTest {
     }
 
     // нет алерта об удалении?
+    @Story("удалить черновик инспекции")
+    @Description("удалить черновик инспекции")
     @Test(priority = 3,
             description = "удалить черновик инспекции")
     public void deleteInspect() throws InterruptedException {
@@ -63,6 +67,8 @@ public class InspectSidebarTest extends BaseTest {
                 .btnSetDeleteInspectClick();
     }
 
+    @Story("создать черновик инспекции со всеми заполненными полями кроме вложения")
+    @Description("создать черновик инспекции со всеми заполненными полями кроме вложения")
     @Test(priority = 4,
             description = "создать черновик инспекции со всеми заполненными полями кроме вложения")
     public void createAllFieldInspect() throws InterruptedException {
@@ -87,6 +93,8 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createInspect, "Опубликовать");
     }
 
+    @Story("удалить черновик инспекции со всеми заполненными полями")
+    @Description("удалить черновик инспекции со всеми заполненными полями")
     @Test(priority = 5,
             description = "удалить черновик инспекции со всеми заполненными полями")
     public void deleteAllFieldInspect() throws InterruptedException {
@@ -98,6 +106,8 @@ public class InspectSidebarTest extends BaseTest {
                 .btnSetDeleteInspectClick();
     }
 
+    @Story("создать черновик инспекции со всеми заполненными обязательными полями")
+    @Description("создать черновик инспекции со всеми заполненными обязательными полями")
     @Test(priority = 6,
             description = "создать черновик инспекции со всеми заполненными обязательными полями")
     public void createRequiredFieldInspect() throws InterruptedException {
@@ -118,6 +128,8 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createInspect, "Опубликовать");
     }
 
+//    @Story("CardForm - Проверка убирается левое меню выбора картотеки")
+//    @Description("CardForm - Проверка убирается левое меню выбора картотеки")
     //    @Test(priority = 3,
 //            description = "Редактировать черновик инспекции со всеми заполненными обязательными полями в новом окне")
 //    public void createRequiredFieldNewInspect() throws InterruptedException {
@@ -139,6 +151,8 @@ public class InspectSidebarTest extends BaseTest {
 //        Assert.assertEquals(createInspect, "Опубликовать");
 //    }
 
+//    @Story("CardForm - Проверка убирается левое меню выбора картотеки")
+//    @Description("CardForm - Проверка убирается левое меню выбора картотеки")
 //    @Test(priority = 3,
 //            description = "создать черновик инспекции со всеми заполненными полями кроме вложения в новом окне")
 //    public void createAllFieldNewInspect() throws InterruptedException {
@@ -163,7 +177,8 @@ public class InspectSidebarTest extends BaseTest {
 //        Assert.assertEquals(createInspect, "Опубликовать");
 //    }
 
-
+    @Story("создать черновик инспекции со всеми заполненными обязательными полями")
+    @Description("создать черновик инспекции со всеми заполненными обязательными полями")
     @Test(priority = 7,
             description = "создать черновик инспекции со всеми заполненными обязательными полями")
     public void createRequiredFieldInspect2() throws InterruptedException {
@@ -184,6 +199,8 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createInspect, "Опубликовать");
     }
 
+    @Story("опубликовать черновик инспекции")
+    @Description("опубликовать черновик инспекции")
     @Test(priority = 8,
             description = "опубликовать черновик инспекции")
     public void filledInspect() throws InterruptedException {
@@ -197,6 +214,8 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createDraftInspect, "Инспекция опубликована");
     }
 
+    @Story("Завершить инспекцию")
+    @Description("Завершить инспекцию")
     @Test(priority = 9,
             description = "Завершить инспекцию")
     public void filledDraftInspect() throws InterruptedException {
@@ -210,6 +229,8 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createDraftInspect, "Инспекция завершена");
     }
 
+    @Story("Вернуть в работу инспекцию")
+    @Description("Вернуть в работу инспекцию")
     @Test(priority = 10,
             description = "Вернуть в работу инспекцию")
     public void backWorkInspect() throws InterruptedException {
@@ -224,7 +245,8 @@ public class InspectSidebarTest extends BaseTest {
     }
 
 
-
+//    @Story("CardForm - Проверка убирается левое меню выбора картотеки")
+//    @Description("CardForm - Проверка убирается левое меню выбора картотеки")
 //    @Test(priority = 10,
 //            description = "Редактировать черновик инспекции в новом окне с заполнением обязательных полей в новом окне")
 //    public void createDraftNewInspect() throws InterruptedException {
@@ -245,7 +267,8 @@ public class InspectSidebarTest extends BaseTest {
 //        Assert.assertEquals(createDraftNewInspect, "Опубликовать");
 //    }
 
-
+//    @Story("CardForm - Проверка убирается левое меню выбора картотеки")
+//    @Description("CardForm - Проверка убирается левое меню выбора картотеки")
 //    @Test(priority = 9,
 //            description = "опубликовать черновик инспекции в новом окне")
 //    public void filledNewInspect() throws InterruptedException {
@@ -261,6 +284,8 @@ public class InspectSidebarTest extends BaseTest {
 //    }
 
     // пкм удалить
+//    @Story("CardForm - Проверка убирается левое меню выбора картотеки")
+//    @Description("CardForm - Проверка убирается левое меню выбора картотеки")
 //    @Test(priority = 9,
 //            description = "удалить черновик инспекции")
 //    public void deleteInspect4() throws InterruptedException {

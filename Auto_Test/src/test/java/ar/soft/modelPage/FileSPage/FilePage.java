@@ -16,6 +16,7 @@ import ru.qa.methods.WaitT;
 
 import java.time.Duration;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import static ar.soft.AT.UI.FileTest.FileTest.NEW_FOLDER;
@@ -29,10 +30,19 @@ public class FilePage extends BasePage {
     public FilePage(WebDriver driver) {
         super(driver);
     }
-public final By columnNameList = By.xpath("//*[@class='ant-dropdown-trigger dropdown-icon']");
+
+    public final By columnNameList = By.xpath("//*[@class='ant-dropdown-trigger dropdown-icon']");
+
     @Name("кнопка добавить")
     public FilePage folderAdd() {
         getDriver().findElement(By.xpath("//*[@data-test-id='button'][contains(., 'Добавить')]")).click();
+
+        return this;
+    }
+
+    @Name("кнопка троеточие")
+    public FilePage ellipsisButton() {
+        getDriver().findElement(By.xpath("//*[@class='ContentFileStorage__content-iconBlock']")).click();
 
         return this;
     }
@@ -106,6 +116,15 @@ public final By columnNameList = By.xpath("//*[@class='ant-dropdown-trigger drop
         return this;
     }
 
+    @Name("вызов контекстного меню ПKM")
+    public FilePage btnPRMClick() {
+        Actions actions = new Actions(getDriver());
+        WebElement btnElement = getDriver().findElement(xpath("//*[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r ContentFileStorage__content-title']"));
+        actions.contextClick(btnElement)
+                .perform();
+        return this;
+    }
+
     @Name("выбрать кнопку")
     public FilePage folderSelect() {
         getDriver().findElement(By.xpath("//*[@data-test-id='text'][contains(., 'Папка')]")).click();
@@ -121,7 +140,7 @@ public final By columnNameList = By.xpath("//*[@class='ant-dropdown-trigger drop
     }
 
     @Name("выбрать Переместить")
-    public FilePage selectMoving () {
+    public FilePage selectMoving() {
         getDriver().findElement(By.xpath("//*[@class='ant-tree-title'][contains (., '" + REMOVE_FOLDER + "')]")).click();
 
         return this;
@@ -174,6 +193,18 @@ public final By columnNameList = By.xpath("//*[@class='ant-dropdown-trigger drop
         return getDriver().findElement(By.xpath("//*[@class='ant-message-notice-content']")).getText();
     }
 
+    @Name("")
+    public List<String> mecMovilngFolder() {
+        WaitT.littleWait(200);
+        return Collections.singletonList(getDriver().findElement(xpath("//*[@class='ant-dropdown Dropdown undefined ant-dropdown-placement-rightTop ']//*[@data-test-id='text']")).getText());
+    }
+
+//    @Name("")
+//    public String mecMovingpFolder() {
+//        WaitT.littleWait(200);
+//        return getDriver().findElement(By.xpath("//*[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r ContentFileStorage__content-title']")).click();
+//    }
+
 //    public List<String> getTextItemsSidePanel() {
 //        List<String> textValue = new ArrayList<>();
 //        for (WebElement item : itemsSidePanel) {
@@ -185,19 +216,26 @@ public final By columnNameList = By.xpath("//*[@class='ant-dropdown-trigger drop
 
     @Name("список контекстного меню")
     @FindBy(xpath = "//*[@class='ant-dropdown Dropdown undefined ant-dropdown-placement-rightTop ']//*[@data-test-id='text']")
-    public List<WebElement> jenkinsVersionButton;
+    public List<WebElement> nameButton;
 
-    public FilePage goAboutJenkinsPage() {
+    public List<String> getNameButtonText() {
+        return nameButton.stream().map(WebElement::getText).toList();
+    }
+
+    @Name("список кнопок в троеточие")
+    @FindBy(xpath = "//*[@class='ant-dropdown Dropdown undefined ant-dropdown-placement-leftTop ']//*[@data-test-id='text']")
+    public List<WebElement> nameButtonEllipsis;
+
+    public List<String> getNameButtonEllipsisText() {
+        return nameButtonEllipsis.stream().map(WebElement::getText).toList();
+    }
+
+    public FilePage goAboutJenkins() {
 //        jenkinsVersionButton.click();
 //        aboutJenkinsButton.click();
 
         return this;
     }
-
-    public List<String> getTabBarText() {
-        return jenkinsVersionButton.stream().map(WebElement::getText).toList();
-    }
-
 //    public Container.Self clickJenkinsVersionButton() {
 //        getWait10().until(ExpectedConditions.elementToBeClickable(jenkinsVersionButton)).click();
 //
@@ -258,5 +296,5 @@ public final By columnNameList = By.xpath("//*[@class='ant-dropdown-trigger drop
                 textList.add(text);
             }
         }
-}
+    }
 }

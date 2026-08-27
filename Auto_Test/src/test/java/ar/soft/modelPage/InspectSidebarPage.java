@@ -270,7 +270,7 @@ public class InspectSidebarPage extends BasePage {
 //        getDriver().findElement(By.xpath("//*[@class='buttonSimple  InspectionDrawer__btn'][contains(., 'Местоположение')]")).click();
         getDriver().findElement(By.xpath("//*[@class='ant-typography p_r'][contains(., 'подвал')] | //*[@class='ant-typography p_r'][contains(., 'подвал')]/.. " +
                 "| //*[@class='ant-typography p_r'][contains(., 'подвал')]/../../..//*")).click();
-        getDriver().findElement(By.xpath("(//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')])")).click();
+        getDriver().findElement(By.xpath("//*[@data-test-id='inspection-content-inspection-locations-inspection-locations-add-location-submit-btn-button']")).click();
 
         return this;
     }
@@ -278,9 +278,9 @@ public class InspectSidebarPage extends BasePage {
     @Name("Добавить План")
     public InspectSidebarPage addPlanClick() {
         WaitT.littleWait(500);
-        getDriver().findElement(By.xpath("//*[@class='buttonSimple  InspectionDrawer__btn'][contains(., 'План')]")).click();
+        getDriver().findElement(By.xpath("//*[@data-test-id='text'][contains(., 'План')]")).click();
         getDriver().findElement(By.xpath("//*[@class='PlanCard__img']")).click();
-        getDriver().findElement(By.xpath("(//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')])")).click();
+        getDriver().findElement(By.xpath("//*[@data-test-id='inspection-content-inspection-locations-inspection-locations-add-plan-submit-btn-button']")).click();
 
         return this;
     }
@@ -288,7 +288,7 @@ public class InspectSidebarPage extends BasePage {
     @Name("Добавить метку")
     public InspectSidebarPage addLabelClick() {
         WaitT.littleWait(500);
-        getDriver().findElement(By.xpath("//*[@class='ant-btn ant-btn-default iconSecondaryButton big colorPrimary ']")).click();
+        getDriver().findElement(By.xpath("//*[@data-test-id='inspection-content-inspection-locations-locations-mark-btn-button']")).click();
         WaitT.littleWait(500);
         getDriver().findElement(By.xpath("//*[@class='Plan__addMark']")).click();
         getDriver().findElement(By.xpath("//*[@class='RndComponent__button ok']")).click();
