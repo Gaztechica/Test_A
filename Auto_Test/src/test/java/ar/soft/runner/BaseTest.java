@@ -38,26 +38,25 @@ public abstract class BaseTest {
     public static final String URL_REGISTRATION = "http://31.129.109.20:3000/registration";
 
 
-    public static final String EMAIL = "yevgeniy.gor.90@mail.ru";
-    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";
-    public static final String INSPECTOR_EMAIL = "bukkosefyu@gufum.com";
-    public static final String SUBCONTRACTOR_EMAIL = "kkk.k.82@list.ru";
-    public static final String OBSERVER_EMAIL = "o_o_2025@bk.ru";
-    public static final String VISOR_EMAIL = "fefyevipsa@gufum.com";
-    public static final String PASSWORD = "qwert12345";
+//    public static final String EMAIL = "yevgeniy.gor.90@mail.ru";
+//    public static final String ADMIN_EMAIL = "mikha-g@bk.ru";
+//    public static final String INSPECTOR_EMAIL = "bukkosefyu@gufum.com";
+//    public static final String SUBCONTRACTOR_EMAIL = "kkk.k.82@list.ru";
+//    public static final String OBSERVER_EMAIL = "o_o_2025@bk.ru";
+//    public static final String VISOR_EMAIL = "fefyevipsa@gufum.com";
+//    public static final String PASSWORD = "qwert12345";
 
 
 //=========================== test f.ff.1980@list.ru ==================================
 
-//    public static final String EMAIL = "f.ff.1980@list.ru";
-//    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";
-//    public static final String INSPECTOR_EMAIL = "cil2e@mailtub.com";
-//    public static final String SUBCONTRACTOR_EMAIL = "d8q2s@fthcapital.com";
-//    public static final String OBSERVER_EMAIL = "cecily16432@lu1f.cse445.com";
-//    public static final String VISOR_EMAIL = "vognofurdu@gufum.com";
-//
-//    public static final String PASSWORD = "012345678";
+    public static final String EMAIL = "f.ff.1980@list.ru";
+    public static final String ADMIN_EMAIL = "batrayilto@gufum.com";
+    public static final String INSPECTOR_EMAIL = "cil2e@mailtub.com";
+    public static final String SUBCONTRACTOR_EMAIL = "d8q2s@fthcapital.com";
+    public static final String OBSERVER_EMAIL = "cecily16432@lu1f.cse445.com";
+    public static final String VISOR_EMAIL = "vognofurdu@gufum.com";
 
+    public static final String PASSWORD = "012345678";
 
 //=========================== stage ==================================
 
@@ -72,7 +71,6 @@ public abstract class BaseTest {
 //    public static final String VISOR_EMAIL = "kpvnvlilz9@xkxkud.com";                                   // test
 //    public static final String PASSWORD = "qwerty123";
 
-
     //=========================== stage "ГК Спектрум" ==================================
 
 //    public static final String URL = "http://46.173.28.231:3000/login";
@@ -85,7 +83,6 @@ public abstract class BaseTest {
 //    public static final String OBSERVER_EMAIL = "saohhpoug@asjjasfqw.wy";
 //    public static final String VISOR_EMAIL = "anjzxphye@uwqr.em";                                   // test
 //    public static final String PASSWORD = "qwerty123";
-
 
 //=========================== XRBP ==================================
 
@@ -113,7 +110,6 @@ public abstract class BaseTest {
 
     public static final String NOT_PASSWORD = "";
     public static final String PASSWORD_N = "qwerty123";                                                      // stage
-
     public final static String USER = "//input[@class='ant-input']";
     public static final String CHECKBOX = "//div[@id='CheckboxComponent']";
     private final By GET_POLITIC = By.xpath("//h1[@class='ant-typography h1_sb']");
@@ -194,17 +190,14 @@ public abstract class BaseTest {
         getDriver().manage().timeouts().pageLoadTimeout(25, TimeUnit.SECONDS);
         getDriver().manage().timeouts().implicitlyWait(25, TimeUnit.SECONDS);
         getDriver().manage().window().setSize(new Dimension(1920, 1080));
-//        driver.manage().window().setSize(new Dimension(1900, 1000));
-//        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(EMAIL);
-//        getDriver().findElement(By.xpath(INPUT_PASSWORD)).sendKeys(PASSWORD);
-//        getDriver().findElement(By.xpath(CHECKBOX)).click();
-//        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
+
         new AuthorizationPege(getDriver())
                 .inputMail(EMAIL)
                 .inputPassword(PASSWORD)
                 .btnCheckbox()
                 .btnSubmit();
 //        driver.quit();
+
 //         ===================== смена языка ===================
 //        driver.findElement(By.xpath("//h2[@class='ant-typography h2_sb']")).click();
 //        driver.findElement(By.xpath("//div[@class='ant-typography p_r Profile__item'][contains(.,'Профиль')]")).click();

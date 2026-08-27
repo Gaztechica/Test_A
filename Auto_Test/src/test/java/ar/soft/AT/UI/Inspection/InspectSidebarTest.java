@@ -2,6 +2,8 @@ package ar.soft.AT.UI.Inspection;
 
 import ar.soft.modelPage.InspectSidebarPage;
 import ar.soft.runner.BaseTest;
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -31,6 +33,8 @@ public class InspectSidebarTest extends BaseTest {
         Assert.assertEquals(createDraftInspect, "Черновик успешно создан");
     }
 
+    @Story("стори Добавить метку в черновик инспекции")
+    @Description("Добавить метку в черновик инспекции")
     @Test(priority = 2,
             description = "Добавить метку в черновик инспекции")
     public void labelInspect() throws InterruptedException {
