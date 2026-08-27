@@ -55,7 +55,7 @@ public class AuthorizationPege extends BasePage {
 
     @Name("кнопка профиль")
     public AuthorizationPege btnProfile() {
-        getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_sb']")).click();
+        getDriver().findElement(By.xpath("//*[@data-test-id='admin-panel-profile-icon-container'] | //*[@data-test-id='admin-panel-profile-icon-container']")).click();
 
         return this;
     }

@@ -13,7 +13,7 @@ import org.testng.annotations.*;
 public class AuthorizationTest extends BaseTest {
 
     private final By GET_ERROR_TEXT = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
-    private final By GET_EMAIL_TEXT = By.xpath("//div[@class='ant-typography p_r RestorePassword__form-userNotFound']");
+    private final By GET_EMAIL_TEXT = By.xpath("//div[@data-test-id='login-page-error']");
     private final By GET_PASSWORD = By.xpath("//h2[@class='ant-typography h2_m SendSuccessBlock__text'][contains(.,'Мы отправили по адресу')]");
     public static final String NEGA_EMAIL = "yyyyyyyyyyyyyy@mail.ru";
 
@@ -402,19 +402,16 @@ public class AuthorizationTest extends BaseTest {
 //        };
 //    }
 //
-//    @Ignore
 //    @Test(priority = 9,
 //            description = "Ввод не подтвержденной почты при авторизации", dataProvider = "randomEmail")
-//    public void testRandomEmai(String name) {
+//    public void testRandomEmail(String name) {
 //        driver.get(URL);
 //
-////        new HomePage(driver)
-////                .inputMail(EMAIL);
-//
-//        driver.findElement(By.xpath(INPUT_EMAIL)).click();
-//        driver.findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
-//
-//        driver.findElement(By.xpath(BTN_PASSWORD)).click();
+//        new AuthorizationPege(getDriver())
+//                .inputMail(name)
+//                .inputPassword(PASSWORD)
+//                .btnCheckbox()
+//                .btnSubmit();
 //
 //        Assert.assertEquals(driver.findElement(GET_EMAIL_TEXT).getText(), "Неправильный логин или пароль");
 //    }

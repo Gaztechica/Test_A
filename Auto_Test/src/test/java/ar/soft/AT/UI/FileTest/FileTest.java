@@ -2,8 +2,11 @@ package ar.soft.AT.UI.FileTest;
 
 import ar.soft.modelPage.FileSPage.FilePage;
 import ar.soft.runner.BaseTest;
-import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.List;
+
+import static org.testng.Assert.assertEquals;
 
 public class FileTest extends BaseTest {
 
@@ -22,7 +25,7 @@ public class FileTest extends BaseTest {
                 .folderAdd2()
                 .checkCreateFolder();
 
-        Assert.assertEquals(filePage, NEW_FOLDER);
+        assertEquals(filePage, NEW_FOLDER);
     }
 
     @Test(priority = 2,
@@ -37,7 +40,7 @@ public class FileTest extends BaseTest {
                 .folderAdd2()
                 .mecConfirm();
 
-        Assert.assertEquals(filePage, "Папка успешно добавлена в проект");
+        assertEquals(filePage, "Папка успешно добавлена в проект");
     }
 
         @Test(priority = 3,
@@ -52,7 +55,7 @@ public class FileTest extends BaseTest {
                 .btnSave()
                 .mecConfirm();
 
-        Assert.assertEquals(filePage2, "Название папки успешно изменено");
+        assertEquals(filePage2, "Название папки успешно изменено");
     }
 
     @Test(priority = 4,
@@ -65,7 +68,7 @@ public class FileTest extends BaseTest {
                 .btnOpen()
                 .mecOpenFolder();
 
-        Assert.assertEquals(fileOpen, "Нет данных");
+        assertEquals(fileOpen, "Нет данных");
     }
 
     @Test(priority = 5,
@@ -79,23 +82,62 @@ public class FileTest extends BaseTest {
                 .btnConfirm()
                 .mecConfirm();
 
-        Assert.assertEquals(filePage, "Папка успешно удалена из проекта");
+        assertEquals(filePage, "Папка успешно удалена из проекта");
     }
 
-    @Test(priority = 6,
-            description = "Перемещение папки в родительскую папку через контекстное меню")
-    public void movingTheParentFolderTest() throws InterruptedException {
-        String folderMoving = new FilePage(getDriver())
-                .project()
-                .fileSidebarClick()
-                .btnRemovePRMFolderClick()
-                .btnMoving()
-                .folderMoving()
-                .btnMovingSave()
-                .mecConfirm();
+//    @Test
+//    public void testVerify7ItemsSidePanelDetailsPage() {
+//        final List<String> itemsExpected = new ArrayList<>(Arrays.asList("Status", "Changes", "Workspace", "Build Now", "Configure", "Delete Project", "Rename"));
+//
+//        TestUtils.createFreestyleProject(this, PROJECT_NAME, true);
+//
+//        List<String> itemsActual = new HomePage(getDriver())
+//                .clickJobByName(PROJECT_NAME, new FreestyleProjectDetailsPage(getDriver()))
+//                .getTextItemsSidePanel();
+//
+//        assertEquals(itemsActual, itemsExpected);
+//    }
 
-        Assert.assertEquals(folderMoving, "Папка успешно перемещена");
+//    @Test(priority = 6,
+//            description = "Перемещение папки в родительскую папку через контекстное меню")
+//    public void movingTheParentFolderTest() throws InterruptedException {
+//        String folderMoving = new FilePage(getDriver())
+//                .project()
+//                .fileSidebarClick()
+//                .clickAndCheckSortColumn(new FilePage());
+//
+//        Assert.assertEquals(folderMoving, "Папка успешно перемещена");
+//    }
+
+    @Test(dependsOnMethods = "testVerifyClickabilityOfRestAPILink")
+    public void testJenkinsVersionListTabBar() {
+        final List<String> expectedListTabBar = List.of(
+                "Открыть",
+                "Переименовать",
+                "Переместить",
+                "Удалить");
+
+        List<String> tabBarList = new FilePage(getDriver())
+                .goAboutJenkinsPage()
+                .getTabBarText();
+
+        assertEquals(tabBarList, expectedListTabBar);
     }
+
+//    @Test(dependsOnMethods = "testJenkinsVersionStatusUserPageClick")
+//    public void testCheckTippyBox() {
+//        final List<String> expectedMenu = List.of(
+//                "Открыть",
+//                "Переименовать",
+//                "Переместить",
+//                "Удалить");
+//
+//        List<String> actualMenu = new HomePage(getDriver())
+//                .clickJenkinsVersionButton()
+//                .getVersionJenkinsTippyBoxText();
+//
+//        Assert.assertEquals(actualMenu, expectedMenu);
+//    }
 
 //    @Test(priority = 7,
 //            description = "Перемещение папки в корневую папку через контекстное меню")

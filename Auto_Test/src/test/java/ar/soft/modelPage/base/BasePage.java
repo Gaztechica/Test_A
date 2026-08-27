@@ -18,7 +18,7 @@ public class BasePage extends BaseModel {
     }
 
 
-    @Name("открыть проект-11AAНовый проект")
+    @Name("открыть проект - test Regress")
 //    @FindBy(xpath = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'1Новый проект')]")
     @FindBy(xpath = "//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'test Regress')]")
     private WebElement project;
@@ -27,7 +27,7 @@ public class BasePage extends BaseModel {
     @FindBy(xpath = "//span[@class='ant-menu-title-content'][contains(.,'Замечания')]")
     private WebElement remark;
 
-    @Name("открыть проект-1Новый проект")
+    @Name("открыть проект test Regress")
     public BasePage project() {
         project.click();
 
