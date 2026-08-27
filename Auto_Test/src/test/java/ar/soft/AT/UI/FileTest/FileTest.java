@@ -2,7 +2,10 @@ package ar.soft.AT.UI.FileTest;
 
 import ar.soft.modelPage.FileSPage.FilePage;
 import ar.soft.runner.BaseTest;
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import org.testng.annotations.Test;
+
 import java.util.List;
 
 import static org.testng.Assert.assertEquals;
@@ -12,6 +15,8 @@ public class FileTest extends BaseTest {
     public final static String NEW_FOLDER = "Новая папка";
     public final static String REMOVE_FOLDER = "Переименовал папку";
 
+    @Story("Добавление новой папки в реестр")
+    @Description("Добавление новой папки в реестр")
     @Test(priority = 1,
             description = "Добавление новой папки в реестр")
     public void addFolderTest() throws InterruptedException {
@@ -27,6 +32,8 @@ public class FileTest extends BaseTest {
         assertEquals(filePage, NEW_FOLDER);
     }
 
+    @Story("Добавление новой папки")
+    @Description("Добавление новой папки")
     @Test(priority = 2,
             description = "Добавление новой папки")
     public void createFolderTest() throws InterruptedException {
@@ -42,6 +49,8 @@ public class FileTest extends BaseTest {
         assertEquals(filePage, "Папка успешно добавлена в проект");
     }
 
+    @Story("Переименовать папку через контекстное меню")
+    @Description("Переименовать папку через контекстное меню")
         @Test(priority = 3,
             description = "Переименовать папку через контекстное меню")
     public void removeFolderTest() throws InterruptedException {
@@ -57,6 +66,8 @@ public class FileTest extends BaseTest {
         assertEquals(filePage2, "Название папки успешно изменено");
     }
 
+    @Story("Открытие папки через выпадающее меню")
+    @Description("Открытие папки через выпадающее меню")
     @Test(priority = 4,
             description = "Открытие папки через выпадающее меню")
     public void openFolderTest() throws InterruptedException {
@@ -70,6 +81,8 @@ public class FileTest extends BaseTest {
         assertEquals(fileOpen, "Нет данных");
     }
 
+    @Story("удаление папки через контекстное меню без файлов внутри")
+    @Description("удаление папки через контекстное меню без файлов внутри")
     @Test(priority = 5,
             description = "удаление папки через контекстное меню без файлов внутри")
     public void deleteFolderTest() throws InterruptedException {
@@ -82,6 +95,45 @@ public class FileTest extends BaseTest {
                 .mecConfirm();
 
         assertEquals(filePage, "Папка успешно удалена из проекта");
+    }
+
+    @Story("Проверить кнопки в контекстном меню")
+    @Description("Проверить кнопки в контекстном меню")
+    @Test(priority = 6,
+            description = "Проверить кнопки в контекстном меню")
+    public void checkButtonTest() {
+        final List<String> expectedListTabBar = List.of(
+                "Открыть",
+                "Переименовать",
+                "Переместить",
+                "Удалить");
+        new FilePage(getDriver())
+                .project()
+                .fileSidebarClick();
+
+        List<String> tabBarList = new FilePage(getDriver())
+                .btnPRMClick()
+                .getNameButtonText();
+
+        assertEquals(tabBarList, expectedListTabBar);
+    }
+
+    @Story("Проверить кнопки в троеточие")
+    @Description("Проверить кнопки в троеточие")
+    @Test(priority = 7,
+            description = "Проверить кнопки в троеточие")
+    public void checkButtonEllipsisTest() {
+        final List<String> expectedListTabBar = List.of(
+                "Открыть", "Переименовать", "Переместить", "Удалить");
+        new FilePage(getDriver())
+                .project()
+                .fileSidebarClick();
+
+        List<String> tabBarList = new FilePage(getDriver())
+                .ellipsisButton()
+                .getNameButtonEllipsisText();
+
+        assertEquals(tabBarList, expectedListTabBar);
     }
 
 //    @Test
@@ -108,35 +160,7 @@ public class FileTest extends BaseTest {
 //        Assert.assertEquals(folderMoving, "Папка успешно перемещена");
 //    }
 
-    @Test(dependsOnMethods = "testVerifyClickabilityOfRestAPILink")
-    public void testJenkinsVersionListTabBar() {
-        final List<String> expectedListTabBar = List.of(
-                "Открыть",
-                "Переименовать",
-                "Переместить",
-                "Удалить");
 
-        List<String> tabBarList = new FilePage(getDriver())
-                .goAboutJenkinsPage()
-                .getTabBarText();
-
-        assertEquals(tabBarList, expectedListTabBar);
-    }
-
-//    @Test(dependsOnMethods = "testJenkinsVersionStatusUserPageClick")
-//    public void testCheckTippyBox() {
-//        final List<String> expectedMenu = List.of(
-//                "Открыть",
-//                "Переименовать",
-//                "Переместить",
-//                "Удалить");
-//
-//        List<String> actualMenu = new HomePage(getDriver())
-//                .clickJenkinsVersionButton()
-//                .getVersionJenkinsTippyBoxText();
-//
-//        Assert.assertEquals(actualMenu, expectedMenu);
-//    }
 
 //    @Test(priority = 7,
 //            description = "Перемещение папки в корневую папку через контекстное меню")

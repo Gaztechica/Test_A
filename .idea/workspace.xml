@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="update mvn">
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="refactor FileTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/Inspection/InspectSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/Inspection/InspectSidebarTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -318,6 +319,7 @@
     "TestNG.FileSTest.createFolderTest.executor": "Run",
     "TestNG.FileSTest.executor": "Run",
     "TestNG.FileTest.addFolderTest.executor": "Run",
+    "TestNG.FileTest.checkButtonEllipsisTest.executor": "Run",
     "TestNG.FileTest.checkNameTest.executor": "Run",
     "TestNG.FileTest.createFolderTest.executor": "Run",
     "TestNG.FileTest.createUsersProject.executor": "Run",
@@ -327,6 +329,8 @@
     "TestNG.FileTest.movingTheParentFolderTest.executor": "Run",
     "TestNG.FileTest.openFolderTest.executor": "Run",
     "TestNG.FileTest.removeFolderTest.executor": "Run",
+    "TestNG.FileTest.testJenkinsVersionListTabBar.executor": "Run",
+    "TestNG.FileTest.testJenkinsVersionListTabBarTest.executor": "Run",
     "TestNG.InspectSidebarTest.backWorkInspect.executor": "Run",
     "TestNG.InspectSidebarTest.createAllFieldInspect.executor": "Run",
     "TestNG.InspectSidebarTest.createDraftInspect.executor": "Run",
@@ -516,7 +520,7 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "270826",
+    "git-widget-placeholder": "27082026",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java",
     "project.structure.last.edited": "Modules",
@@ -547,24 +551,7 @@
       <recent name="ar.soft.api.DirectoryPojo" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FileTest">
-    <configuration name="ChecklistsSidebarTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.ProjectSettingsTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.ProjectSettingsTest" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.ProjectSettingsTest.ChecklistsSidebarTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.FileTest.checkButtonEllipsisTest">
     <configuration name="Dialogs" type="TestNG" nameIsGenerated="true">
       <module name="AutoTest" />
       <shortenClasspath name="NONE" />
@@ -640,24 +627,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileSTest.createFolderTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.FileTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileSTest" />
-      <option name="METHOD_NAME" value="createFolderTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="FileTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -675,7 +644,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileTest.addFolderTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FileTest.checkButtonEllipsisTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -685,7 +654,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileTest" />
-      <option name="METHOD_NAME" value="addFolderTest" />
+      <option name="METHOD_NAME" value="checkButtonEllipsisTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -693,7 +662,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileTest.openFolderTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="FileTest.testJenkinsVersionListTabBar" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -703,7 +672,43 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileTest" />
-      <option name="METHOD_NAME" value="openFolderTest" />
+      <option name="METHOD_NAME" value="testJenkinsVersionListTabBar" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FileTest.testJenkinsVersionListTabBarTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.FileTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileTest" />
+      <option name="METHOD_NAME" value="testJenkinsVersionListTabBarTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="InspectSidebarTest.labelInspect" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.Inspection.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.Inspection" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.Inspection.InspectSidebarTest" />
+      <option name="METHOD_NAME" value="labelInspect" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -713,11 +718,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.FileTest.checkButtonEllipsisTest" />
+        <item itemvalue="TestNG.FileTest.testJenkinsVersionListTabBar" />
+        <item itemvalue="TestNG.FileTest.testJenkinsVersionListTabBarTest" />
         <item itemvalue="TestNG.FileTest" />
-        <item itemvalue="TestNG.FileSTest.createFolderTest" />
-        <item itemvalue="TestNG.FileTest.openFolderTest" />
-        <item itemvalue="TestNG.ChecklistsSidebarTest" />
-        <item itemvalue="TestNG.FileTest.addFolderTest" />
+        <item itemvalue="TestNG.InspectSidebarTest.labelInspect" />
       </list>
     </recent_temporary>
   </component>
@@ -736,14 +741,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00084" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1715801440406</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1715801440406</updated>
     </task>
     <task id="LOCAL-00085" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -1129,7 +1126,15 @@
       <option name="project" value="LOCAL" />
       <updated>1786971200056</updated>
     </task>
-    <option name="localTasksCounter" value="133" />
+    <task id="LOCAL-00133" summary="refactor FileTest">
+      <option name="closed" value="true" />
+      <created>1787854930217</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1787854930217</updated>
+    </task>
+    <option name="localTasksCounter" value="134" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1157,7 +1162,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Merge pull request #79 from Gaztechica/78&#10;&#10;78" />
     <MESSAGE value="Merge pull request #79 from Gaztechica&#10;InspectSidebarTest" />
     <MESSAGE value="LogFileTest_logSearchTest" />
     <MESSAGE value="TypesWorkSidebarTest" />
@@ -1182,7 +1186,8 @@
     <MESSAGE value="hhhh" />
     <MESSAGE value="add ChecklistTest" />
     <MESSAGE value="update mvn" />
-    <option name="LAST_COMMIT_MESSAGE" value="update mvn" />
+    <MESSAGE value="refactor FileTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor FileTest" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_adminAuthorizationTest.ic" NAME="AuthorizationTest.adminAuthorizationTest Coverage Results" MODIFIED="1747916205562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
