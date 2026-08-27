@@ -1,16 +1,26 @@
 package ar.soft.modelPage.FileSPage;
 
 import ar.soft.modelPage.base.BasePage;
+import com.codeborne.selenide.ElementsCollection;
+import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebDriverRunner;
+import io.qameta.allure.Step;
 import jdk.jfr.Name;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import ru.qa.methods.WaitT;
 
+import java.time.Duration;
+import java.util.ArrayList;
+import java.util.List;
 
 import static ar.soft.AT.UI.FileTest.FileTest.NEW_FOLDER;
 import static ar.soft.AT.UI.FileTest.FileTest.REMOVE_FOLDER;
+import static com.codeborne.selenide.Selenide.$x;
 import static org.openqa.selenium.By.xpath;
 import static org.openqa.selenium.Keys.LEFT_CONTROL;
 
@@ -19,7 +29,7 @@ public class FilePage extends BasePage {
     public FilePage(WebDriver driver) {
         super(driver);
     }
-
+public final By columnNameList = By.xpath("//*[@class='ant-dropdown-trigger dropdown-icon']");
     @Name("кнопка добавить")
     public FilePage folderAdd() {
         getDriver().findElement(By.xpath("//*[@data-test-id='button'][contains(., 'Добавить')]")).click();
@@ -163,4 +173,90 @@ public class FilePage extends BasePage {
         WaitT.littleWait(200);
         return getDriver().findElement(By.xpath("//*[@class='ant-message-notice-content']")).getText();
     }
+
+//    public List<String> getTextItemsSidePanel() {
+//        List<String> textValue = new ArrayList<>();
+//        for (WebElement item : itemsSidePanel) {
+//            textValue.add(item.getText());
+//        }
+//
+//        return textValue;
+//    }
+
+    @Name("список контекстного меню")
+    @FindBy(xpath = "//*[@class='ant-dropdown Dropdown undefined ant-dropdown-placement-rightTop ']//*[@data-test-id='text']")
+    public List<WebElement> jenkinsVersionButton;
+
+    public FilePage goAboutJenkinsPage() {
+//        jenkinsVersionButton.click();
+//        aboutJenkinsButton.click();
+
+        return this;
+    }
+
+    public List<String> getTabBarText() {
+        return jenkinsVersionButton.stream().map(WebElement::getText).toList();
+    }
+
+//    public Container.Self clickJenkinsVersionButton() {
+//        getWait10().until(ExpectedConditions.elementToBeClickable(jenkinsVersionButton)).click();
+//
+//        return (Container.Self)this;
+//    }
+//
+//    public List<String> getVersionJenkinsTippyBoxText() {
+//        getWait10().until(ExpectedConditions.visibilityOf(tippyBox));
+//
+//        return jenkinsVersionButton.stream().map(WebElement::getText).toList();
+//    }
+
+//    @Step("Метод для проверки ожидаемого перечня команд в контексном меню")
+//    public void checkCommandList(List<String> commands) {
+//        columnNameList.findElement().click();
+//        for (String command : commands) {
+//            $(byText(command)).shouldBe(visible);
+//        }
+//    }
+
+//    @Step("Метод для проверки ожидаемого перечня команд в контексном меню")
+//    public void checkCommandList(List<String> commands) {
+//        columnNameList.first().contextClick();
+//        for (String command : commands) {
+//            $(byText(command)).shouldBe(visible);
+//        }
+//    }
+
+    @Step("Проверяем сортировку элементов колонки")
+    public void clickAndCheckSortColumn(SelenideElement header, ElementsCollection columnElement) {
+        // Кликаем на заголовок для сортировки
+        header.click();
+
+        // Ожидаем, пока иконка сортировки станет видимой
+        $x("//*[@data-test-id='data-sort-item-text'][contains (., 'Название')]")
+                .as("Сортировка А-Я").click();
+//                .shouldBe(visible, Duration.ofSeconds(10));
+
+        // Ожидаем, пока элементы на странице отсортируются
+        WebDriverWait wait = new WebDriverWait(WebDriverRunner.getWebDriver(), Duration.ofSeconds(10));
+        wait.until(driver -> {
+            List<String> currentTexts = columnElement.texts();
+            int sortedPairsCount = 0;
+            for (int i = 1; i < currentTexts.size(); i++) {
+                if (currentTexts.get(i - 1).compareToIgnoreCase(currentTexts.get(i)) <= 0) {
+                    sortedPairsCount++; // Увеличиваем счетчик, если порядок правильный
+                }
+            }
+            // Проверяем, что больше половины пар отсортировано
+            return sortedPairsCount >= (currentTexts.size() - 1) / 2;
+        });
+
+        // Собираем тексты элементов, исключая ненужные
+        List<String> textList = new ArrayList<>();
+        for (SelenideElement element : columnElement) {
+            String text = element.getText();
+            if (!text.contains("_") && !text.contains("ЯЯЯЯ") && !text.isEmpty()) {
+                textList.add(text);
+            }
+        }
+}
 }

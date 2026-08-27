@@ -11,13 +11,11 @@ abstract class BaseModel {
     private WebDriverWait wait2;
     private WebDriverWait wait5;
     private WebDriverWait wait10;
-
     private final WebDriver driver;
 
     public BaseModel(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
-
     }
 
     protected WebDriver getDriver() {
@@ -46,6 +44,5 @@ abstract class BaseModel {
         }
 
         return wait10;
-
     }
 }
