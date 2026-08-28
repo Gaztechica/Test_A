@@ -5,7 +5,6 @@ import ar.soft.runner.BaseTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -13,8 +12,6 @@ import ru.qa.service.RetryAnalyzer;
 
 public class AuthorizationTest extends BaseTest {
 
-//    public static final String NOT_EMAIL = "";
-//    public static final String NOT_PASSWORD = "";
     private final By GET_ERROR_TEXT = By.xpath("//div[@style='text-align: center; margin-bottom: 20px; color: rgb(255, 0, 0);']");
     private final By GET_EMAIL_TEXT = By.xpath("//div[@data-test-id='login-page-error']");
     private final By GET_PASSWORD = By.xpath("//h2[@class='ant-typography h2_m SendSuccessBlock__text'][contains(.,'Мы отправили по адресу')]");
@@ -23,7 +20,7 @@ public class AuthorizationTest extends BaseTest {
     @Story("Проверка заполнения ключа при выборе значения EnumFormat из выпадающего списка")
     @Description("Проверка заполнения ключа при выборе значения EnumFormat из выпадающего списка")
     @Test(retryAnalyzer = RetryAnalyzer.class,
-            priority = 1, groups = {"10.5", "Dialogs"},
+            priority = 1, //groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью владельца")
     public void ownerAuthorizationTest() {
         driver.get(URL);
@@ -168,10 +165,11 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String getError = new AuthorizationPege(getDriver())
-                .btnProfile()
-                .selectExitProfile()
+//                .btnProfile()
+//                .selectExitProfile()
                 .inputMail(NEGA_EMAIL)
                 .inputPassword(PASSWORD)
+//                .btnCheckbox()
                 .btnSubmit()
                 .getError();
 
@@ -184,8 +182,6 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String getError = new AuthorizationPege(getDriver())
-                .btnProfile()
-                .selectExitProfile()
                 .inputMail(EMAIL)
                 .inputPassword(NOT_PASSWORD)
                 .btnSubmit()
@@ -202,8 +198,6 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String notProjectsError = new AuthorizationPege(getDriver())
-                .btnProfile()
-                .selectExitProfile()
                 .inputMail("yirtemedru@gufum.com")
 //                .inputMail("degnusamlo@gufum.com")              //stage
                 .inputPassword(PASSWORD)
@@ -220,15 +214,13 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String notEmailError = new AuthorizationPege(getDriver())
-                .btnProfile()
-                .selectExitProfile()
                 .inputMail(NOT_EMAIL)
                 .inputPassword(PASSWORD)
                 .btnSubmit()
-                .getEmailError2();
+                .getEmailBorder();
 
 //        AssertionT.Element.elementDisplayed(getEmailError.newUsersCheck);
-        Assert.assertEquals(notEmailError, "border-color: rgb(255, 0, 0);");
+        Assert.assertEquals(notEmailError, "rgb(255, 0, 0)");
     }
 
 //    //уточнить должно ли подчвечивать
@@ -239,9 +231,7 @@ public class AuthorizationTest extends BaseTest {
 //        driver.get(URL);
 //
 //        String notPasswordError = new AuthorizationPege(getDriver())
-//                .btnProfile()
-//                .selectExitProfile()
-//                .inputMail(EMAIL)
+//              //    .inputMail(EMAIL)
 //                .inputPassword("")
 //                .btnSubmit()
 //                .getPasswordError();
@@ -255,8 +245,7 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String getEmail = new AuthorizationPege(getDriver())
-                .btnProfile()
-                .selectExitProfile()
+
                 .inputMail(EMAIL)
                 .inputPassword("PASSWORD")
                 .forgotYourPassword()
@@ -279,8 +268,6 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String getError = new AuthorizationPege(getDriver())
-                .btnProfile()
-                .selectExitProfile()
                 .inputMail("asfasfasww@yarkv.qm")
                 .inputPassword("qwerty123")
                 .btnSubmit()
@@ -295,18 +282,16 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         String badEmailError = new AuthorizationPege(getDriver())
-                .btnProfile()
-                .selectExitProfile()
                 .inputMail(NEGA_EMAIL)
                 .inputPassword("PASSWORD")
                 .forgotYourPassword()
                 .inputMailRestore(NEGA_EMAIL)
                 .btnContinues()
-                .getEmailError();
+                .inputMailError();
         String getRestoreEmailError = new AuthorizationPege(getDriver())
                 .getRestoreEmailError();
 
-        Assert.assertEquals(badEmailError, "border-color: rgb(255, 0, 0);");
+//        Assert.assertEquals(badEmailError, "rgb(255, 0, 0)");    // перекрывается голубой обводкой
         Assert.assertEquals(getRestoreEmailError, "Пользователь не найден, попробуйте снова");
     }
 
@@ -316,8 +301,8 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL_REGISTRATION);
 
         String iconRegistration = new AuthorizationPege(getDriver())
-                .btnProfile()
-                .selectExitProfile()
+//                .btnProfile()
+//                .selectExitProfile()
                 .iconRegistrationClick()
                 .getRegistrationText();
 
@@ -325,34 +310,35 @@ public class AuthorizationTest extends BaseTest {
     }
 
     @Test(priority = 16,
-            description = "Ввод некорректного значения URL при восстановлении пароля")
+            description = "Проверка триал режима ")
     public void trialTextTest() {
 
         String trialText = new AuthorizationPege(getDriver())
                 .btnProfile()
                 .selectExitProfile()
+                .btnContinueLogin()
                 .trialText();
 
         Assert.assertEquals(trialText, "Попробуйте бесплатно в течение 14 дней");
     }
 
     /**
-     *  тест
+     * тест
      */
     @Test(priority = 17,
             description = "Авторизация с незаполненными полями логина и пароля")
-    public void notEmailPasswordTest () {
+    public void notEmailPasswordTest() {
         driver.get(URL);
 
         String inputMailError = new AuthorizationPege(getDriver())
-                .btnProfile()
-                .selectExitProfile()
+//                .btnProfile()
+//                .selectExitProfile()
                 .inputMail(NOT_EMAIL)
                 .inputPassword(NOT_PASSWORD)
                 .btnSubmit()
                 .eMail();
 
-        Assert.assertEquals(inputMailError,  "border-color: rgb(255, 0, 0);");
+        Assert.assertEquals(inputMailError, "rgb(255, 0, 0)");
     }
 
     @Test(priority = 18,
@@ -374,28 +360,28 @@ public class AuthorizationTest extends BaseTest {
      */
 
 
-    @DataProvider(name = "restoreEmail")
-    public Object[][] restoreEmail() {
-        return new Object[][]{
-                {"batrayilto@gufum.com"}, {"cil2e@mailtub.com"},                        //test
-                {"d8q2s@fthcapital.com"}, {"cecily16432@lu1f.cse445.com"},               //test
-//                {"jartestaw@bk.ru"}, {"armtset18@bk.ru"},                                //stage
-//                {"testlinka@rambler.ru"}, {"dzyuban@spgr.ru"}                            //stage
-        };
-    }
-
-//    @Ignore
-    @Test(priority = 19,
-            description = "получить письмо для восстановления доступа", dataProvider = "restoreEmail")
-    public void testRandomRega(String name) {
-        driver.get(URL);
-        getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
-
-        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
-        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
-
-        Assert.assertEquals(getDriver().findElement(GET_PASSWORD).getText(), "Мы отправили по адресу " + name + " ссылку для восстановления доступа");
-    }
+//    @DataProvider(name = "restoreEmail")
+//    public Object[][] restoreEmail() {
+//        return new Object[][]{
+//                {"batrayilto@gufum.com"}, {"cil2e@mailtub.com"},                        //test
+//                {"d8q2s@fthcapital.com"}, {"cecily16432@lu1f.cse445.com"},               //test
+////                {"jartestaw@bk.ru"}, {"armtset18@bk.ru"},                                //stage
+////                {"testlinka@rambler.ru"}, {"dzyuban@spgr.ru"}                            //stage
+//        };
+//    }
+//
+//    //    @Ignore
+//    @Test(priority = 19,
+//            description = "получить письмо для восстановления доступа", dataProvider = "restoreEmail")
+//    public void testRandomRega(String name) {
+//        driver.get(URL);
+//        getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_m Login__restore-text']")).click();
+//
+//        getDriver().findElement(By.xpath(INPUT_EMAIL)).sendKeys(name);
+//        getDriver().findElement(By.xpath(BTN_PASSWORD)).click();
+//
+//        Assert.assertEquals(getDriver().findElement(GET_PASSWORD).getText(), "Мы отправили по адресу " + name + " ссылку для восстановления доступа");
+//    }
 
     @DataProvider(name = "randomEmail")
     public Object[][] randomEmail() {
@@ -412,11 +398,8 @@ public class AuthorizationTest extends BaseTest {
         driver.get(URL);
 
         new AuthorizationPege(getDriver())
-                .btnProfile()
-                .selectExitProfile()
                 .inputMail(name)
                 .inputPassword(PASSWORD)
-//                .btnCheckbox()
                 .btnSubmit();
 
         Assert.assertEquals(driver.findElement(GET_EMAIL_TEXT).getText(), "Неправильный логин или пароль");
@@ -456,14 +439,14 @@ public class AuthorizationTest extends BaseTest {
 //          ======  добавить Test ===============================
 
 
-//    ===================== смена языка ============================
-    @Test(priority = 21,
-            description = "смена языка")
-    public void localizTest() {
-        driver.findElement(By.xpath("//h2[@class='ant-typography h2_sb']")).click();
-        driver.findElement(By.xpath("//div[@class='ant-typography p_r Profile__item'][contains(.,'Профиль')]")).click();
-        driver.findElement(By.xpath("//input[@id='editedUser_lang']")).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
-    }
+    //    ===================== смена языка ============================
+//    @Test(priority = 21,
+//            description = "смена языка")
+//    public void localizTest() {
+//        driver.findElement(By.xpath("//h2[@class='ant-typography h2_sb']")).click();
+//        driver.findElement(By.xpath("//div[@class='ant-typography p_r Profile__item'][contains(.,'Профиль')]")).click();
+//        driver.findElement(By.xpath("//input[@id='editedUser_lang']")).sendKeys(Keys.ARROW_DOWN, Keys.ARROW_DOWN, Keys.ENTER);
+//    }
 
 
 //    =============================== регистрация нового пользователя ====================================

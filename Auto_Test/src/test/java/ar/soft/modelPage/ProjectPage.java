@@ -2,9 +2,15 @@ package ar.soft.modelPage;
 
 import ar.soft.modelPage.base.BasePage;
 import jdk.jfr.Name;
-import org.openqa.selenium.*;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import ru.qa.methods.ActionT;
+
+import java.util.List;
 
 import static ar.soft.runner.BaseTest.PASSWORD;
 import static org.openqa.selenium.By.xpath;
@@ -17,9 +23,21 @@ public class ProjectPage extends BasePage {
         super(driver);
     }
 
-//    @Name("кнопка создать Проект")
-//    @FindBy(xpath = "//button[@class='ant-btn ant-btn-default primaryButton big colorPrimary ']")
-//    private WebElement btnCreateProject;
+    @Name("Список вкладок в админ панели")
+    @FindBy(xpath = "//span[@class='ant-menu-title-content']")
+    public List<WebElement> nameButton;
+
+    public List<String> getNameButtonText() {
+        return nameButton.stream().map(WebElement::getText).toList();
+    }
+
+    @Name("Список столбцов в таблице")
+    @FindBy(xpath = "//*[@class='ant-typography span_m project__title']")
+    public List<WebElement> nameButtonTable;
+
+    public List<String> getNameButtonTableText() {
+        return nameButtonTable.stream().map(WebElement::getText).toList();
+    }
 //
 //    @Name("кнопка создать Проект")
 //    public ProjectPage btnCreateProject() {
