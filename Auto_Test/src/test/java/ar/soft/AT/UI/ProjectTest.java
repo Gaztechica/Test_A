@@ -2,10 +2,15 @@ package ar.soft.AT.UI;
 
 import ar.soft.modelPage.ProjectPage;
 import ar.soft.runner.BaseTest;
-//import org.junit.Assert;
+import io.qameta.allure.Description;
+import io.qameta.allure.Story;
 import org.openqa.selenium.By;
-import org.testng.annotations.Test;
 import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.util.List;
+
+import static org.testng.Assert.assertEquals;
 
 
 public class ProjectTest extends BaseTest {
@@ -150,7 +155,7 @@ public class ProjectTest extends BaseTest {
         Assert.assertEquals(sendProject, "Проект успешно восстановлен");
     }
 
-    @Test(priority = 22,
+    @Test(priority = 10,
             description = "Проект - поиск проекта")
     public void searcherProject() {
         String projl = new ProjectPage(getDriver())
@@ -162,6 +167,34 @@ public class ProjectTest extends BaseTest {
 
 
         Assert.assertEquals(projl, "админ");
+    }
+
+    @Story("Проверить вкладки в админ панели")
+    @Description("Проверить вкладки в админ панели")
+    @Test(priority = 11,
+            description = "Проверить вкладки в админ панели")
+    public void checkButtonTest() {
+        final List<String> expectedListTabBar = List.of(
+                "Проекты", "Пользователи", "Библиотека", "Лог-файлы", "3D", "Аналитика");
+
+        List<String> tabBarList = new ProjectPage(getDriver())
+                .getNameButtonText();
+
+        assertEquals(tabBarList, expectedListTabBar);
+    }
+
+    @Story("Проверить название столбцов в таблице")
+    @Description("Проверить название столбцов в таблице")
+    @Test(priority = 12,
+            description = "Проверить название столбцов в таблице")
+    public void checkButtonTableTest() {
+        final List<String> expectedListTabBar = List.of(
+                "НАЗВАНИЕ", "КОД ПРОЕКТА", "ГОРОД", "ПОЧТОВЫЙ ИНДЕКС");
+
+        List<String> tabBarList = new ProjectPage(getDriver())
+                .getNameButtonTableText();
+
+        assertEquals(tabBarList, expectedListTabBar);
     }
 
 //    @Test(priority = 7,

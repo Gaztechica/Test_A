@@ -4,17 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="refactor InspectSidebarTest, add metod STREAM">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_08_2026_027_22_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_08_2026_027_22_21__Changes_.xml" afterDir="false" />
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="refactor LogFile, add FileTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/AuthorizationTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileSTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/ProjectTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/AuthorizationPege.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/AuthorizationPege.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FilePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/LogFilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/LogFilePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -402,6 +397,8 @@
     "TestNG.ProjectTest.SidebarProgect.executor": "Run",
     "TestNG.ProjectTest.cancelCreateProgectTest.executor": "Run",
     "TestNG.ProjectTest.cancelCreateProjectTest.executor": "Run",
+    "TestNG.ProjectTest.checkButtonEllipsisTest.executor": "Run",
+    "TestNG.ProjectTest.checkButtonTableTest.executor": "Run",
     "TestNG.ProjectTest.completedPKMProject.executor": "Run",
     "TestNG.ProjectTest.completedProject.executor": "Run",
     "TestNG.ProjectTest.createCancelProgect.executor": "Run",
@@ -533,7 +530,7 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "280826",
+    "git-widget-placeholder": "28082026",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java",
     "project.structure.last.edited": "Modules",
@@ -564,7 +561,7 @@
       <recent name="ar.soft.api.DirectoryPojo" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AuthorizationTest.visorAuthorizationTest">
+  <component name="RunManager" selected="TestNG.ProjectTest.checkButtonTableTest">
     <configuration name="AuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -582,7 +579,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationTest.regNegaTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthorizationTest.ownerAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -592,7 +589,7 @@
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
-      <option name="METHOD_NAME" value="regNegaTest" />
+      <option name="METHOD_NAME" value="ownerAuthorizationTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -600,7 +597,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationTest.visorAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DashboardsSidebarTest.dashboardsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -609,8 +606,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
-      <option name="METHOD_NAME" value="visorAuthorizationTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.DashboardsSidebarTest" />
+      <option name="METHOD_NAME" value="dashboardsTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -693,7 +690,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectTest.checkButtonEllipsisTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -702,15 +699,16 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.RegistrationTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.ProjectTest" />
+      <option name="METHOD_NAME" value="checkButtonEllipsisTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegistrationTest.trialTextTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ProjectTest.checkButtonTableTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -719,8 +717,8 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.RegistrationTest" />
-      <option name="METHOD_NAME" value="trialTextTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.ProjectTest" />
+      <option name="METHOD_NAME" value="checkButtonTableTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -730,11 +728,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AuthorizationTest.visorAuthorizationTest" />
-        <item itemvalue="TestNG.RegistrationTest.trialTextTest" />
-        <item itemvalue="TestNG.RegistrationTest" />
+        <item itemvalue="TestNG.ProjectTest.checkButtonTableTest" />
+        <item itemvalue="TestNG.ProjectTest.checkButtonEllipsisTest" />
+        <item itemvalue="TestNG.DashboardsSidebarTest.dashboardsTest" />
         <item itemvalue="TestNG.AuthorizationTest" />
-        <item itemvalue="TestNG.AuthorizationTest.regNegaTest" />
+        <item itemvalue="TestNG.AuthorizationTest.ownerAuthorizationTest" />
       </list>
     </recent_temporary>
   </component>
@@ -753,14 +751,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00085" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1715802906786</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1715802906786</updated>
     </task>
     <task id="LOCAL-00086" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -1146,7 +1136,15 @@
       <option name="project" value="LOCAL" />
       <updated>1787854930217</updated>
     </task>
-    <option name="localTasksCounter" value="134" />
+    <task id="LOCAL-00134" summary="refactor LogFile, add FileTest">
+      <option name="closed" value="true" />
+      <created>1787922510469</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1787922510470</updated>
+    </task>
+    <option name="localTasksCounter" value="135" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1174,7 +1172,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Merge pull request #79 from Gaztechica&#10;InspectSidebarTest" />
     <MESSAGE value="LogFileTest_logSearchTest" />
     <MESSAGE value="TypesWorkSidebarTest" />
     <MESSAGE value="AuthorizationTest" />
@@ -1199,7 +1196,8 @@
     <MESSAGE value="add ChecklistTest" />
     <MESSAGE value="update mvn" />
     <MESSAGE value="refactor FileTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor FileTest" />
+    <MESSAGE value="refactor LogFile, add FileTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor LogFile, add FileTest" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_adminAuthorizationTest.ic" NAME="AuthorizationTest.adminAuthorizationTest Coverage Results" MODIFIED="1747916205562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

@@ -34,6 +34,13 @@ public class AuthorizationPege extends BasePage {
         return this;
     }
 
+    @Name("кнопка Зарегистрироваться")
+    public AuthorizationPege btnContinueLogin() {
+        getDriver().findElement(By.xpath("//h2[@data-test-id='login-page-sign-up-text'][contains(.,'Зарегистрироваться')]")).click();
+
+        return this;
+    }
+
     @Name("кнопка Продолжить")
     public AuthorizationPege btnContinues() {
         WaitT.littleWait(200);
@@ -59,7 +66,7 @@ public class AuthorizationPege extends BasePage {
     @Name("кнопка профиль")
     public AuthorizationPege btnProfile() {
         WaitT.littleWait(500);
-        getDriver().findElement(By.xpath("//*[@data-test-id='admin-panel-profile-icon-container'] | //*[@data-test-id='admin-panel-profile-icon-container']")).click();
+        getDriver().findElement(By.xpath("//*[@data-test-id='admin-panel-profile-icon-container']/h2 | //*[@data-test-id='admin-panel-profile-icon-container']")).click();
 
         return this;
     }
@@ -127,7 +134,7 @@ public class AuthorizationPege extends BasePage {
     }
     @Name("Электронная почта")
     public String eMail() {
-        return getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getAttribute("border-color");
+        return getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getCssValue("border-color");
     }
 
     @Name("GET_ERROR_TEXT")
@@ -135,14 +142,16 @@ public class AuthorizationPege extends BasePage {
         return getDriver().findElement(By.xpath("//input[@id='basic_email']")).getAttribute("border-color: #ff4d4f;");
     }
 
-    @Name("GET_ERROR_TEXT")
+    @Name("поле пароль красная обводка")
     public String getPasswordError() {
         return getDriver().findElement(By.xpath("//input[@class='ant-input']")).getAttribute("border-color: #ff4d4f;");
     }
 
-    @Name("GET_ERROR_TEXT")
-    public String getEmailError2() {
-        return getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getAttribute("border-color: #ff4d4f;");
+    @Name("поле mail красная обводка")
+    public String getEmailBorder() {
+        WaitT.littleWait(400);
+//        return getDriver().findElement(By.xpath("//input[@data-test-id='login-page-mail-input']")).getAttribute("border-color");
+        return getDriver().findElement(By.xpath("//input[@data-test-id='login-page-mail-input']")).getCssValue("border-color");
     }
 
     @Name("Пользователь не найден, попробуйте снова")
@@ -167,7 +176,7 @@ public class AuthorizationPege extends BasePage {
 
     @Name("Поле “Электронная почта” подсвечено красной обводкой")
     public String inputMailError() {
-        return getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getAttribute("border-color");
+        return getDriver().findElement(By.xpath("//input[@data-test-id='restore-password-email-input']")).getCssValue("border-color");
 //        return getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getAttribute("value style");
     }
 
