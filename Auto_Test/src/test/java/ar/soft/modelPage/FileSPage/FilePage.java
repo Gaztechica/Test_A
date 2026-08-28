@@ -230,12 +230,24 @@ public class FilePage extends BasePage {
         return nameButtonEllipsis.stream().map(WebElement::getText).toList();
     }
 
-    public FilePage goAboutJenkins() {
-//        jenkinsVersionButton.click();
-//        aboutJenkinsButton.click();
+    //видны ли в данный момент на веб-странице все элементы коллекции
+//    public Boolean getNameButtonEllipsisText() {
+//        return nameButtonEllipsis.stream().allMatch(WebElement::isDisplayed);
+//
+//    }
 
-        return this;
-    }
+//    наиболее эффективный способ проверить, выбран ли каждый элемент в списке
+//    public Boolean areAllCheckboxesSelected() {
+//
+//        return allCheckboxesList.stream().allMatch(WebElement::isSelected);
+//    }
+
+//    public FilePage goAboutJenkins() {
+////        jenkinsVersionButton.click();
+////        aboutJenkinsButton.click();
+//
+//        return this;
+//    }
 //    public Container.Self clickJenkinsVersionButton() {
 //        getWait10().until(ExpectedConditions.elementToBeClickable(jenkinsVersionButton)).click();
 //

@@ -108,6 +108,7 @@ public abstract class BaseTest {
 // ===========================      VISOR_EMAIL ==================================
 // ===========================      PASSWORD ==================================
 
+    public static final String NOT_EMAIL = "";
     public static final String NOT_PASSWORD = "";
     public static final String PASSWORD_N = "qwerty123";                                                      // stage
     public final static String USER = "//input[@class='ant-input']";
@@ -275,10 +276,10 @@ public abstract class BaseTest {
 //        driver.findElement(By.xpath("//span[@class='ant-select-selection-item'][@title='20']")).click();
 //        driver.findElement(By.xpath("//div[@class='ant-select-item-option-content'][contains(.,'10')]")).click();
 //    }
-
-
-    // ================================== ссылки =====================================================
-
+//
+//
+////     ================================== ссылки =====================================================
+//
 //    @Test(priority = 4,
 //            description = "Политика конфиденциальности")
 //    public void hrefPolitic() {

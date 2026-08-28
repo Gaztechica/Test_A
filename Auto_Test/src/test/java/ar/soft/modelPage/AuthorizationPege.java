@@ -4,6 +4,7 @@ import ar.soft.modelPage.base.BasePage;
 import jdk.jfr.Name;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import ru.qa.methods.WaitT;
 
 public class AuthorizationPege extends BasePage {
 
@@ -20,6 +21,7 @@ public class AuthorizationPege extends BasePage {
 
     @Name("кнопка Checkbox")
     public AuthorizationPege btnCheckbox() {
+        WaitT.littleWait(300);
         getDriver().findElement(By.xpath("//*[@id='CheckboxComponent-check']")).click();
 
         return this;
@@ -34,6 +36,7 @@ public class AuthorizationPege extends BasePage {
 
     @Name("кнопка Продолжить")
     public AuthorizationPege btnContinues() {
+        WaitT.littleWait(200);
         getDriver().findElement(By.xpath("//button[@type='submit'][contains(.,'Продолжить')]")).click();
 
         return this;
@@ -55,6 +58,7 @@ public class AuthorizationPege extends BasePage {
 
     @Name("кнопка профиль")
     public AuthorizationPege btnProfile() {
+        WaitT.littleWait(500);
         getDriver().findElement(By.xpath("//*[@data-test-id='admin-panel-profile-icon-container'] | //*[@data-test-id='admin-panel-profile-icon-container']")).click();
 
         return this;
@@ -62,7 +66,16 @@ public class AuthorizationPege extends BasePage {
 
     @Name("выбрать профиль ")
     public AuthorizationPege selectProfile() {
+        WaitT.littleWait(500);
         getDriver().findElement(By.xpath("//div[@class='ant-typography p_r Profile__item']")).click();
+
+        return this;
+    }
+
+    @Name("выбрать Выйти из аккаунта ")
+    public AuthorizationPege selectExitProfile() {
+        WaitT.littleWait(500);
+        getDriver().findElement(By.xpath("//*[@class='ant-typography p_r Profile__item'][contains(.,'Выйти из аккаунта')]")).click();
 
         return this;
     }
@@ -112,6 +125,10 @@ public class AuthorizationPege extends BasePage {
     public String getEmailError() {
         return getDriver().findElement(By.xpath("//input[@id='RestorePassword_email']")).getAttribute("border-color: #ff4d4f;");
     }
+    @Name("Электронная почта")
+    public String eMail() {
+        return getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getAttribute("border-color");
+    }
 
     @Name("GET_ERROR_TEXT")
     public String getEmailError3() {
@@ -154,12 +171,12 @@ public class AuthorizationPege extends BasePage {
 //        return getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getAttribute("value style");
     }
 
-    @Name("Электронная почта")
-    public AuthorizationPege eMail() {
-//    public BasePage inputMail() {
-        getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getAttribute("border-color");
-
-//        return new AutorisaitionPege(getDriver());
-        return this;
-    }
+//    @Name("Электронная почта")
+//    public AuthorizationPege eMail() {
+////    public BasePage inputMail() {
+//        getDriver().findElement(By.xpath("//input[@class='ant-input primaryInput  not-entered']")).getAttribute("border-color");
+//
+////        return new AutorisaitionPege(getDriver());
+//        return this;
+//    }
 }

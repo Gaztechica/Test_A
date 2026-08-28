@@ -30,7 +30,7 @@ public class LogFilePage extends BasePage {
     private WebElement btnDeleteLogFile;
 
 //    @FindBy(xpath = "//input[@id='rc_select_3']")
-    @FindBy(xpath = "//*[@class='ant-select-selector']")
+    @FindBy(xpath = "//*[@class='ant-select-selector']//input")
     private WebElement searchLogFile;
 
 //    @FindBy(xpath = "")).getText();

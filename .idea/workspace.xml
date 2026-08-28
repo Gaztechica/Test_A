@@ -4,12 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="refactor FileTest">
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="refactor InspectSidebarTest, add metod STREAM">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_08_2026_027_22_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_08_2026_027_22_21__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/AuthorizationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileSTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/Inspection/InspectSidebarTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/Inspection/InspectSidebarTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/AuthorizationPege.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/AuthorizationPege.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FilePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/InspectSidebarPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/LogFilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/LogFilePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/base/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,10 +173,12 @@
     "JUnit.UserTest.userSearchTest.executor": "Run",
     "JUnit.UserTest.userTestAdmin.executor": "Run",
     "JUnit.UserTest.userTestInspektor.executor": "Run",
+    "JUnit.ar.soft.AT.UI.Inspection.* and 2 more.executor": "Run",
     "Maven.AutoTest [clean].executor": "Run",
     "Maven.AutoTest [io.qameta.allure:allure-maven:2.12.0:report].executor": "Run",
     "Maven.AutoTest [io.qameta.allure:allure-maven:2.12.0:serve].executor": "Run",
     "Maven.AutoTest [org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean].executor": "Run",
+    "Maven.AutoTest [test].executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG.AccountLoginPojoTest.GetAccountInfoTest.executor": "Run",
@@ -207,6 +214,7 @@
     "TestNG.AuthorizationTest.hrefSupport.executor": "Run",
     "TestNG.AuthorizationTest.iconARMobileTest.executor": "Run",
     "TestNG.AuthorizationTest.inspectorAuthorizationTest.executor": "Run",
+    "TestNG.AuthorizationTest.logoTest.executor": "Run",
     "TestNG.AuthorizationTest.noProjectAuthorizationTest.executor": "Run",
     "TestNG.AuthorizationTest.notEmailPasswordTest.executor": "Run",
     "TestNG.AuthorizationTest.notEmailTest.executor": "Run",
@@ -218,6 +226,7 @@
     "TestNG.AuthorizationTest.ownerAuthorization2Test.executor": "Run",
     "TestNG.AuthorizationTest.ownerAuthorizationTest.executor": "Run",
     "TestNG.AuthorizationTest.passwordTest.executor": "Run",
+    "TestNG.AuthorizationTest.poginacyaTest.executor": "Run",
     "TestNG.AuthorizationTest.regEmailNegaTest.executor": "Run",
     "TestNG.AuthorizationTest.regNegaTest.executor": "Run",
     "TestNG.AuthorizationTest.regaTest.executor": "Run",
@@ -320,6 +329,7 @@
     "TestNG.FileSTest.executor": "Run",
     "TestNG.FileTest.addFolderTest.executor": "Run",
     "TestNG.FileTest.checkButtonEllipsisTest.executor": "Run",
+    "TestNG.FileTest.checkButtonTest.executor": "Run",
     "TestNG.FileTest.checkNameTest.executor": "Run",
     "TestNG.FileTest.createFolderTest.executor": "Run",
     "TestNG.FileTest.createUsersProject.executor": "Run",
@@ -413,6 +423,7 @@
     "TestNG.RegistrationTest.badEmailTest.executor": "Run",
     "TestNG.RegistrationTest.executor": "Run",
     "TestNG.RegistrationTest.restorePasswordTest.executor": "Run",
+    "TestNG.RegistrationTest.trialTextTest.executor": "Run",
     "TestNG.RegistrationTest.ппbadEmailTest.executor": "Run",
     "TestNG.RegistrationTest.ррbadEmailTest.executor": "Run",
     "TestNG.RegresTest.checkAutorisationIdTesedtp.executor": "Run",
@@ -505,6 +516,8 @@
     "TestNG.UserTest.userInviteNabludately.executor": "Run",
     "TestNG.UserTest.userInvitePodraydchic.executor": "Run",
     "TestNG.UserTest.userSearchTest.executor": "Run",
+    "TestNG.ar.soft.AT.UI.FileTest.FileTest and 15 more.executor": "Run",
+    "TestNG.ar.soft.AT.UI.FileTest.FileTest and 5 more.executor": "Run",
     "TestNG.ar.soft.AuthorizationTest and 11 more.executor": "Run",
     "TestNG.ar.soft.AuthorizationTest,logoTest and 15 more.executor": "Run",
     "TestNG.ar.soft.AutorisaitionTest,elementPageTest and 9 more.executor": "Run",
@@ -520,7 +533,7 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "27082026",
+    "git-widget-placeholder": "280826",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java",
     "project.structure.last.edited": "Modules",
@@ -551,7 +564,60 @@
       <recent name="ar.soft.api.DirectoryPojo" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.FileTest.checkButtonEllipsisTest">
+  <component name="RunManager" selected="TestNG.AuthorizationTest.visorAuthorizationTest">
+    <configuration name="AuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationTest.regNegaTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
+      <option name="METHOD_NAME" value="regNegaTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationTest.visorAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
+      <option name="METHOD_NAME" value="visorAuthorizationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Dialogs" type="TestNG" nameIsGenerated="true">
       <module name="AutoTest" />
       <shortenClasspath name="NONE" />
@@ -627,16 +693,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.FileTest.*" />
+          <option name="PATTERN" value="ar.soft.AT.UI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileTest" />
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.RegistrationTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -644,71 +710,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FileTest.checkButtonEllipsisTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="RegistrationTest.trialTextTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.FileTest.*" />
+          <option name="PATTERN" value="ar.soft.AT.UI.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileTest" />
-      <option name="METHOD_NAME" value="checkButtonEllipsisTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileTest.testJenkinsVersionListTabBar" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.FileTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileTest" />
-      <option name="METHOD_NAME" value="testJenkinsVersionListTabBar" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="FileTest.testJenkinsVersionListTabBarTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.FileTest.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileTest" />
-      <option name="METHOD_NAME" value="testJenkinsVersionListTabBarTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="InspectSidebarTest.labelInspect" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.Inspection.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.Inspection" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.Inspection.InspectSidebarTest" />
-      <option name="METHOD_NAME" value="labelInspect" />
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.RegistrationTest" />
+      <option name="METHOD_NAME" value="trialTextTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -718,11 +730,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.FileTest.checkButtonEllipsisTest" />
-        <item itemvalue="TestNG.FileTest.testJenkinsVersionListTabBar" />
-        <item itemvalue="TestNG.FileTest.testJenkinsVersionListTabBarTest" />
-        <item itemvalue="TestNG.FileTest" />
-        <item itemvalue="TestNG.InspectSidebarTest.labelInspect" />
+        <item itemvalue="TestNG.AuthorizationTest.visorAuthorizationTest" />
+        <item itemvalue="TestNG.RegistrationTest.trialTextTest" />
+        <item itemvalue="TestNG.RegistrationTest" />
+        <item itemvalue="TestNG.AuthorizationTest" />
+        <item itemvalue="TestNG.AuthorizationTest.regNegaTest" />
       </list>
     </recent_temporary>
   </component>
