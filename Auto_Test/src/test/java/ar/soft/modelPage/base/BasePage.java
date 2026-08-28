@@ -180,12 +180,12 @@ public class BasePage extends BaseModel {
     }
 
 
-    @Name("Пользователь не найден, попробуйте снова")
+    @Name("Войдите в аккаунт")
     public String getRegistrationText() {
         return getDriver().findElement(By.xpath("//h3[@class='ant-typography h3_sb Login__title-text']")).getText();
     }
 
-    @Name("Попробуйте бесплатно в течении 7 дней")
+    @Name("Попробуйте бесплатно в течении 14 дней")
     public String trialText() {
         return getDriver().findElement(By.xpath("//h2[@class='ant-typography h2_m Registration__title-subtitleText']")).getText();
     }

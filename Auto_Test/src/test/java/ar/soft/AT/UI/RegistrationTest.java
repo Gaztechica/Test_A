@@ -83,6 +83,16 @@ public class RegistrationTest extends BaseTest {
         Assert.assertEquals(againGetEmail, "Мы отправили по адресу " + EMAIL + " ссылку для восстановления доступа");
     }
 
+    @Test(priority = 6,
+            description = "Нажать ссылку “Загрузите на Google Play”")
+    public void GooglePlayTest() {
+        driver.get(URL_REGISTRATION);
+        String trialText = new AuthorizationPege(getDriver())
+                .trialText();
+
+        Assert.assertEquals(trialText, "Попробуйте бесплатно в течение 14 дней");
+    }
+
     /**
      * дописать тест
      */
@@ -107,14 +117,6 @@ public class RegistrationTest extends BaseTest {
     /**
      * дописать тест
      */
-    @Test(priority = 20,
-            description = "Нажать ссылку “Загрузите на Google Play”")
-    public void GooglePlayTest() {
-        driver.get(URL_REGISTRATION);
-        String trialText = new AuthorizationPege(getDriver())
-                .trialText();
 
-        Assert.assertEquals(trialText, "Попробуйте бесплатно в течение 14 дней");
-    }
 
 }

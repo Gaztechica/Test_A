@@ -102,7 +102,7 @@ public class FileTest extends BaseTest {
     @Test(priority = 6,
             description = "Проверить кнопки в контекстном меню")
     public void checkButtonTest() {
-        final List<String> expectedListTabBar = List.of(
+        final List<String> expectedListBar = List.of(
                 "Открыть",
                 "Переименовать",
                 "Переместить",
@@ -115,7 +115,7 @@ public class FileTest extends BaseTest {
                 .btnPRMClick()
                 .getNameButtonText();
 
-        assertEquals(tabBarList, expectedListTabBar);
+        assertEquals(tabBarList, expectedListBar);
     }
 
     @Story("Проверить кнопки в троеточие")
@@ -177,6 +177,6 @@ public class FileTest extends BaseTest {
 //        Assert.assertEquals(folderMoving, "Папка успешно перемещена");
 //    }
 
-//    Открытие папки через троеточие, удаление, удаление с файлами внутри, переименование, перемещение в родит, перемещ в корневую
-//    проверить список контекстное меню, сортировка, поиск, добавление файлов, перемещение файлов, удаление файлов
+//    Открытие папки через троеточие, удаление, удаление с файлами внутри, переименование, перемещение в родит, перемещ в корневую,
+//    сортировка, поиск, добавление файлов, перемещение файлов, удаление файлов
 }
