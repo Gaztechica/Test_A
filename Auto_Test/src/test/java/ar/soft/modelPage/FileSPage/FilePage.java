@@ -17,6 +17,7 @@ import ru.qa.methods.WaitT;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 import static ar.soft.AT.UI.FileTest.FileTest.NEW_FOLDER;
@@ -230,6 +231,35 @@ public class FilePage extends BasePage {
         return nameButtonEllipsis.stream().map(WebElement::getText).toList();
     }
 
+    @Name("Столбец название в таблице")
+    public FilePage selectNameClick() {
+        getDriver().findElement(xpath("//*[@data-test-id='data-sort-item-text']")).click();
+
+        return this;
+    }
+
+    @Name("Список столбцов в таблице")
+    @FindBy(xpath = "//*[@class='ant-table-row ant-table-row-level-0']")
+    public List<WebElement> itemNameTable;
+
+    public List<String> getSortedItemNameList () {
+
+        return itemNameTable.stream()
+                .map(WebElement::getText)
+                .map(String::toLowerCase)
+                .sorted(Comparator.reverseOrder())
+                .toList();
+    }
+
+    public List<String> getItemNameList() {
+        WaitT.littleWait(200);
+        List<String> updatesPluginsList = itemNameTable.stream()
+                .map(WebElement::getText)
+                .map(String::toLowerCase)
+                .toList();
+
+        return updatesPluginsList;
+    }
     //видны ли в данный момент на веб-странице все элементы коллекции
 //    public Boolean getNameButtonEllipsisText() {
 //        return nameButtonEllipsis.stream().allMatch(WebElement::isDisplayed);

@@ -197,6 +197,37 @@ public class ProjectTest extends BaseTest {
         assertEquals(tabBarList, expectedListTabBar);
     }
 
+    @Story("Проверить сортировку столбцов в таблице")
+    @Description("Проверить сортировку столбцов в таблице")
+    @Test(priority = 13,
+            description = "Проверить сортировку столбцов в таблице")
+    public void checkButtonTableSortTest() {
+        new ProjectPage(getDriver())
+                .selectNameClick();
+
+        List<String> updatesPluginsList = new ProjectPage(getDriver())
+                .selectNameClick()
+                .getItemNameList();
+
+        List<String> sortedUpdatesPlaginsList = new ProjectPage(getDriver())
+                .getSortedItemNameList();
+
+        Assert.assertEquals(sortedUpdatesPlaginsList, updatesPluginsList);
+    }
+
+//    @Test(dependsOnMethods = "testCreateNewNodeWithValidNameFromManageJenkinsPage")
+//    public void testSortNodesInReverseOrder() {
+//        final List<String> expectedSortedNodes = List.of("NewNode", "Built-In Node");
+//
+//        List<String> actualSortedNodes = new ProjectPage(getDriver())
+//                .goNodesListPage()
+//                .clickSortByNameButton()
+//                .getNodeList();
+//
+//        Assert.assertEquals(actualSortedNodes, expectedSortedNodes);
+//    }
+
+
 //    @Test(priority = 7,
 //            description = "Проект - поиск проекта")
 //    public void selectCompletedProject() {
