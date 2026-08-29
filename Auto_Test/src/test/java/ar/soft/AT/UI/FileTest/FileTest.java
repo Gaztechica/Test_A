@@ -4,6 +4,7 @@ import ar.soft.modelPage.FileSPage.FilePage;
 import ar.soft.runner.BaseTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import java.util.List;
@@ -134,6 +135,25 @@ public class FileTest extends BaseTest {
                 .getNameButtonEllipsisText();
 
         assertEquals(tabBarList, expectedListTabBar);
+    }
+
+    @Story("Проверить сортировку столбцов в таблице")
+    @Description("Проверить сортировку столбцов в таблице")
+    @Test(priority = 8,
+            description = "Проверить сортировку столбцов в таблице")
+    public void checkButtonTableSortTest() {
+        new FilePage(getDriver())
+                .project()
+                .fileSidebarClick();
+
+        List<String> updatesPluginsList = new FilePage(getDriver())
+                .selectNameClick()
+                .getItemNameList();
+
+        List<String> sortedUpdatesPlaginsList = new FilePage(getDriver())
+                .getSortedItemNameList();
+
+        Assert.assertEquals(sortedUpdatesPlaginsList, updatesPluginsList);
     }
 
 //    @Test

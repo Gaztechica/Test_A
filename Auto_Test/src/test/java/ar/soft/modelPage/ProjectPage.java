@@ -9,7 +9,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import ru.qa.methods.ActionT;
+import ru.qa.methods.WaitT;
 
+import java.util.Comparator;
 import java.util.List;
 
 import static ar.soft.runner.BaseTest.PASSWORD;
@@ -35,8 +37,31 @@ public class ProjectPage extends BasePage {
     @FindBy(xpath = "//*[@class='ant-typography span_m project__title']")
     public List<WebElement> nameButtonTable;
 
+    @Name("Список столбцов в таблице")
+    @FindBy(xpath = "//*[@class='ant-table-row ant-table-row-level-0']")
+    public List<WebElement> itemNameTable;
+
     public List<String> getNameButtonTableText() {
         return nameButtonTable.stream().map(WebElement::getText).toList();
+    }
+
+    public List<String> getSortedItemNameList () {
+
+        return itemNameTable.stream()
+                .map(WebElement::getText)
+                .map(String::toLowerCase)
+                .sorted(Comparator.reverseOrder())
+                .toList();
+    }
+
+    public List<String> getItemNameList() {
+        WaitT.littleWait(800);
+        List<String> updatesPluginsList = itemNameTable.stream()
+                .map(WebElement::getText)
+                .map(String::toLowerCase)
+                .toList();
+
+        return updatesPluginsList;
     }
 //
 //    @Name("кнопка создать Проект")
@@ -49,9 +74,17 @@ public class ProjectPage extends BasePage {
 
 
 
-//    @Name("кнопка Завершенные")
-//    @FindBy(xpath = "//div[@class='ant-tabs-tab-btn'][contains(., 'Завершенные')]")
-//    private WebElement selectCompletedClick;
+//    @Name("Столбец название в таблице")
+//    @FindBy(xpath = "//*[@data-test-id='project-page-name-title-data-sort-item-text']")
+//    public WebElement selectNameClick;
+
+    @Name("Столбец название в таблице")
+        public ProjectPage selectNameClick() {
+        WaitT.littleWait(500);
+        getDriver().findElement(xpath("//*[@data-test-id='project-page-name-title-data-sort-item-text']")).click();
+
+          return this;
+    }
 
     @Name("кнопка Завершенные")
     public ProjectPage selectCompletedClick() {

@@ -6,9 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="refactor LogFile, add FileTest">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/AuthorizationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/AuthorizationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/ProjectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/AuthorizationPege.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/AuthorizationPege.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FilePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FilePage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectPage.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -324,6 +324,7 @@
     "TestNG.FileSTest.executor": "Run",
     "TestNG.FileTest.addFolderTest.executor": "Run",
     "TestNG.FileTest.checkButtonEllipsisTest.executor": "Run",
+    "TestNG.FileTest.checkButtonTableSortTest.executor": "Run",
     "TestNG.FileTest.checkButtonTest.executor": "Run",
     "TestNG.FileTest.checkNameTest.executor": "Run",
     "TestNG.FileTest.createFolderTest.executor": "Run",
@@ -398,6 +399,7 @@
     "TestNG.ProjectTest.cancelCreateProgectTest.executor": "Run",
     "TestNG.ProjectTest.cancelCreateProjectTest.executor": "Run",
     "TestNG.ProjectTest.checkButtonEllipsisTest.executor": "Run",
+    "TestNG.ProjectTest.checkButtonTableSortTest.executor": "Run",
     "TestNG.ProjectTest.checkButtonTableTest.executor": "Run",
     "TestNG.ProjectTest.completedPKMProject.executor": "Run",
     "TestNG.ProjectTest.completedProject.executor": "Run",
@@ -530,7 +532,7 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "28082026",
+    "git-widget-placeholder": "290826",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java",
     "project.structure.last.edited": "Modules",
@@ -561,42 +563,7 @@
       <recent name="ar.soft.api.DirectoryPojo" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ProjectTest.checkButtonTableTest">
-    <configuration name="AuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="AuthorizationTest.ownerAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
-      <option name="METHOD_NAME" value="ownerAuthorizationTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.FileTest.checkButtonTableSortTest">
     <configuration name="DashboardsSidebarTest.dashboardsTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -690,6 +657,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FileTest.checkButtonTableSortTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.FileTest.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.FileTest" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.FileTest.FileTest" />
+      <option name="METHOD_NAME" value="checkButtonTableSortTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="ProjectTest.checkButtonEllipsisTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -701,6 +686,24 @@
       <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
       <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.ProjectTest" />
       <option name="METHOD_NAME" value="checkButtonEllipsisTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProjectTest.checkButtonTableSortTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.ProjectTest" />
+      <option name="METHOD_NAME" value="checkButtonTableSortTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -728,11 +731,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.FileTest.checkButtonTableSortTest" />
+        <item itemvalue="TestNG.ProjectTest.checkButtonTableSortTest" />
         <item itemvalue="TestNG.ProjectTest.checkButtonTableTest" />
         <item itemvalue="TestNG.ProjectTest.checkButtonEllipsisTest" />
         <item itemvalue="TestNG.DashboardsSidebarTest.dashboardsTest" />
-        <item itemvalue="TestNG.AuthorizationTest" />
-        <item itemvalue="TestNG.AuthorizationTest.ownerAuthorizationTest" />
       </list>
     </recent_temporary>
   </component>
