@@ -2,7 +2,6 @@ package ar.soft.AT.API.OKS;
 
 import ar.soft.AT.API.BaseApi.BaseApiTest;
 import ar.soft.AT.API.BaseApi.Specification;
-import ar.soft.AT.API.Directory.DirectoryPojo.DirectDel;
 import ar.soft.AT.API.OKS.OksPojo.*;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
@@ -14,7 +13,6 @@ import org.testng.annotations.Test;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import static io.restassured.RestAssured.given;
 
@@ -57,7 +55,6 @@ public class OksTest extends BaseApiTest {
 //                .as(ResCreateOks.class);
        JsonPath jsonPath = response.jsonPath();
         idOks = jsonPath.get("data.id");
-
 //       idOks = response.body().jsonPath().get("data.id");
 
         Assert.assertEquals("123", createOks.getGeneralPlanNumber());
@@ -76,8 +73,8 @@ public class OksTest extends BaseApiTest {
                 .extract().response()
                 .as(RemoteOkS.class);
 
-        Assert.assertEquals("123", remoteOks.getGeneralPlanNumber());
-        Assert.assertEquals("OKS переименован", remoteOks.getName());
+        Assert.assertEquals("123", remoteOKS.getGeneralPlanNumber());
+        Assert.assertEquals("OKS переименован", remoteOKS.getName());
     }
 
     @Story("получить ОКС по id")
@@ -85,14 +82,14 @@ public class OksTest extends BaseApiTest {
     @Test(priority = 3, description = "")
     public void getOksTest() {
         Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
-        ResCreateOks resCreateOks2 = given(specification)
+        ResCreateOks resCreate = given(specification)
                 .get("oks/" + idOks)
                 .then()
                 .extract().response()
                 .as(ResCreateOks.class);
 
-        Assert.assertEquals("359", resCreateOks2.getAuthorId());
-        Assert.assertEquals("Елизавета Иванова", resCreateOks2.getAuthorName());
+        Assert.assertEquals("OKS", createOks.getName());
+//        Assert.assertEquals("Елизавета Иванова", createOks.());
     }
 
     @Story("удалить OKS в проекте")

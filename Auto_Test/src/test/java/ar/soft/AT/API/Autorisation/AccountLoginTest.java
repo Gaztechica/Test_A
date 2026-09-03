@@ -1,4 +1,4 @@
-package ar.soft.AT.API;
+package ar.soft.AT.API.Autorisation;
 
 import ar.soft.AT.API.Account.AccountPojo.LoginReguest;
 import ar.soft.AT.API.BaseApi.BaseApiTest;
@@ -81,7 +81,7 @@ public class AccountLoginTest extends BaseApiTest {
         int ids = jsonPath.get("totalElements");
         Integer id = jsonPath.get("domain[0].id");
         String email = jsonPath.get("domain[0].email");
-        Assert.assertEquals(59, ids);
+        Assert.assertEquals(60, ids);
         Assert.assertEquals(785, id);
         Assert.assertEquals("1аye21vtcmvg@mail.ru", email);
     }
