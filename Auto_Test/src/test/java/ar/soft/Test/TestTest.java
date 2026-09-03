@@ -16,6 +16,7 @@ public class TestTest extends BaseTest {
         TestPage testPage = new TestPage(getDriver())
                  .btnAddCheck()
                  .btnCheckboxUserClick();
+        testPage.newNameCheckClick2.doubleClick();
         testPage.newNameCheckClick2.click();
 //        ActionT.OneClick.clickAndEnterTextDeleteLineBreak(testPage.newNameCheckClick,  " Remove Name");
         ActionT.OneClick.clickAndEnterTextDeleteLineBreak(testPage.newNameCheckClick,  " Remove Name");

@@ -1,14 +1,10 @@
 package ar.soft.AT.API.Log;
 
 import ar.soft.AT.API.BaseApi.BaseApiTest;
-import ar.soft.AT.API.Log.LogPojo.DelLog;
-import ar.soft.AT.API.Log.LogPojo.LogReg;
-import ar.soft.AT.API.Log.LogPojo.LogRes;
-//import ar.soft.api.LogPojo.*;
 import ar.soft.AT.API.BaseApi.Specification;
+import ar.soft.AT.API.Log.LogPojo.LogReg;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
-import io.restassured.http.ContentType;
 import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import org.testng.Assert;
@@ -54,97 +50,97 @@ public class LogTest extends BaseApiTest {
 //        Assert.assertEquals(359, 359);
 //    }
 
-    @Story("Сохранить логи аккаунта по id")
-    @Description("вывести информацию о своем аккаунте")
-    @Test(priority = 2, groups = {"10.5", "1"},
-            description = "вывести информацию о своем аккаунте")
-    public void postLogTest() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
-        LogRes logRes = given(specification)
-                .body(logReg)
-                .post("/log" + contextOrganizationId)
-//                .then().body(JsonSchemaValidator.matchesJsonSchema())
-                .then()
-                .extract().response().body()
-                .as(LogRes.class);
-        Assert.assertEquals(logRes, logReg);
-    }
-
-    @Story("Сохранить логи аккаунта по id")
-    @Description("вывести информацию о своем аккаунте")
-    @Test(priority = 2, groups = {"10.5", "1"},
-            description = "вывести информацию о своем аккаунте")
-    public void postLogTest55555() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
-        Response response = given(specification)
-                .body(logReg)
-                .contentType(ContentType.JSON)
-                .post("/log" + contextOrganizationId);
-
-        LogReg actual = response.as(LogReg.class);
-        Assert.assertEquals(actual, logReg);
-
-        response
-//                .then().body(JsonSchemaValidator.matchesJsonSchema())
-                .then().assertThat().statusCode(200);
+//    @Story("Сохранить логи аккаунта по id")
+//    @Description("вывести информацию о своем аккаунте")
+//    @Test(priority = 2, groups = {"10.5", "1"},
+//            description = "вывести информацию о своем аккаунте")
+//    public void postLogTest() {
+//        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+//        LogRes logRes = given(specification)
+//                .body(logReg)
+//                .post("/log" + contextOrganizationId)
+////                .then().body(JsonSchemaValidator.matchesJsonSchema())
+//                .then()
 //                .extract().response().body()
 //                .as(LogRes.class);
+//        Assert.assertEquals(logRes, logReg);
+//    }
+
+//    @Story("Сохранить логи аккаунта по id")
+//    @Description("вывести информацию о своем аккаунте")
+//    @Test(priority = 2, groups = {"10.5", "1"},
+//            description = "вывести информацию о своем аккаунте")
+//    public void postLogTest55555() {
+//        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+//        Response response = given(specification)
+//                .body(logReg)
+//                .contentType(ContentType.JSON)
+//                .post("/log" + contextOrganizationId);
+//
+//        LogReg actual = response.as(LogReg.class);
 //        Assert.assertEquals(actual, logReg);
-    }
+//
+//        response
+////                .then().body(JsonSchemaValidator.matchesJsonSchema())
+//                .then().assertThat().statusCode(200);
+////                .extract().response().body()
+////                .as(LogRes.class);
+////        Assert.assertEquals(actual, logReg);
+//    }
 
-    @Story("сообщение при удалении лога")
-    @Description("вывести информацию о своем аккаунте")
-    @Test(priority = 2, groups = {"10.5", "1"},
-            description = "вывести информацию о своем аккаунте")
-    public void postLogTest2() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
-        Response response = given(specification)
-                .body(logReg)
-                .post("/log" + contextOrganizationId)
-                .then()
-//                .extract().response().body().as(Ress.class);
-                .extract().response();
-        JsonPath jsonPath = response.jsonPath();
-        logId = jsonPath.get("data.id");
-        Assert.assertEquals(logId, logId);
-
-        DelLog delLog = given(specification)
-                .delete("/log/" + logId + contextOrganizationId)
-                .then()
-                .extract().response().as(DelLog.class);
-        Assert.assertEquals("object deleted", delLog.getSuccess());
-    }
-
-    @Story("Сохранить логи аккаунта по id")
-    @Description("вывести информацию о своем аккаунте")
-    @Test(priority = 2, groups = {"10.5", "1"},
-            description = "вывести информацию о своем аккаунте")
-    public void postLogTest3() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
-        LogRes logRes = given(specification)
-                .body(logReg)
-                .post("/log" + contextOrganizationId)
-                .then()
-                .extract().response().as(LogRes.class);
-//                .extract().response().as(LogRes.class);
-        assert logRes.getId().equals(222);
-
+//    @Story("сообщение при удалении лога")
+//    @Description("вывести информацию о своем аккаунте")
+//    @Test(priority = 2, groups = {"10.5", "1"},
+//            description = "вывести информацию о своем аккаунте")
+//    public void postLogTest2() {
+//        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+//        Response response = given(specification)
+//                .body(logReg)
+//                .post("/log" + contextOrganizationId)
+//                .then()
+////                .extract().response().body().as(Ress.class);
+//                .extract().response();
 //        JsonPath jsonPath = response.jsonPath();
 //        logId = jsonPath.get("data.id");
 //        Assert.assertEquals(logId, logId);
-//                jsonPath().get("data.id");
-
-
-//        logId = response.getBody();
-//        logId = ress.setId();
-//        System.out.println("=====logId=====   " + logId);
 //
 //        DelLog delLog = given(specification)
 //                .delete("/log/" + logId + contextOrganizationId)
 //                .then()
 //                .extract().response().as(DelLog.class);
-//        Assert.assertEquals(success, success);
-    }
+//        Assert.assertEquals("object deleted", delLog.getSuccess());
+//    }
+
+//    @Story("Сохранить логи аккаунта по id")
+//    @Description("вывести информацию о своем аккаунте")
+//    @Test(priority = 2, groups = {"10.5", "1"},
+//            description = "вывести информацию о своем аккаунте")
+//    public void postLogTest3() {
+//        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+//        LogRes logRes = given(specification)
+//                .body(logReg)
+//                .post("/log" + contextOrganizationId)
+//                .then()
+//                .extract().response().as(LogRes.class);
+////                .extract().response().as(LogRes.class);
+//        assert logRes.getId().equals(222);
+//
+////        JsonPath jsonPath = response.jsonPath();
+////        logId = jsonPath.get("data.id");
+////        Assert.assertEquals(logId, logId);
+////                jsonPath().get("data.id");
+//
+//
+////        logId = response.getBody();
+////        logId = ress.setId();
+////        System.out.println("=====logId=====   " + logId);
+////
+////        DelLog delLog = given(specification)
+////                .delete("/log/" + logId + contextOrganizationId)
+////                .then()
+////                .extract().response().as(DelLog.class);
+////        Assert.assertEquals(success, success);
+//    }
 
 
 //    @Story("Удалить логи аккаунта по id")

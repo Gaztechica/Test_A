@@ -47,4 +47,15 @@ public class BaseApiTest {
                 .addHeader("Authorization", "Bearer_" + token)
                 .build();
     }
+
+//    private RequestSpecification getBaseSpecification() {
+//        return new RequestSpecBuilder()
+//                .addHeader("Authorization", "Bearer_" + token)
+//                .setBasePath()
+//                .build();
+//    }
+//    protected RequestSpecification getSpecification(String body) {
+//        return specification
+//
+//    }
 }

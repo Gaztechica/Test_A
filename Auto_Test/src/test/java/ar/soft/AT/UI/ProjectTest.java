@@ -7,6 +7,8 @@ import io.qameta.allure.Story;
 import org.openqa.selenium.By;
 import org.testng.Assert;
 import org.testng.annotations.Test;
+import ru.qa.methods.ActionT;
+import ru.qa.methods.AssertionT;
 
 import java.util.List;
 
@@ -202,9 +204,11 @@ public class ProjectTest extends BaseTest {
     @Test(priority = 13,
             description = "Проверить сортировку столбцов в таблице")
     public void checkButtonTableSortTest() {
-        new ProjectPage(getDriver())
+        ProjectPage projectPage = new ProjectPage(getDriver())
                 .selectNameClick();
-
+        ActionT.OneClick.click(projectPage.selectNameClick4);
+        ActionT.DoubleClick.doubleClick(projectPage.selectNameClick4);
+        AssertionT.Element.checkList((List<String>) projectPage.selectNameClick4);
         List<String> updatesPluginsList = new ProjectPage(getDriver())
                 .selectNameClick()
                 .getItemNameList();
@@ -238,8 +242,6 @@ public class ProjectTest extends BaseTest {
 //
 ////        Assert.assertEquals(projl, "админ");
 //    }
-
-
 
 
     //     редактирование/удаление\цвет кнопки \ цвет строки при наведении \
@@ -345,7 +347,6 @@ public class ProjectTest extends BaseTest {
 //         driver.quit();
 //         Thread.sleep(5000);
 //    }
-
 
 
 }

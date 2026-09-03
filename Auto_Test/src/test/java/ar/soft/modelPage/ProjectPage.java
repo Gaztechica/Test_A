@@ -74,9 +74,9 @@ public class ProjectPage extends BasePage {
 
 
 
-//    @Name("Столбец название в таблице")
-//    @FindBy(xpath = "//*[@data-test-id='project-page-name-title-data-sort-item-text']")
-//    public WebElement selectNameClick;
+    @Name("Столбец название в таблице")
+    @FindBy(xpath = "//*[@data-test-id='project-page-name-title-data-sort-item-text']")
+    public WebElement selectNameClick4;
 
     @Name("Столбец название в таблице")
         public ProjectPage selectNameClick() {

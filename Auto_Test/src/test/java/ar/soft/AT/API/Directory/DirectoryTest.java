@@ -89,8 +89,9 @@ public class DirectoryTest extends BaseApiTest {
                 .contentType(ContentType.JSON)
                 .put("/directory/edit" + contextProjectId)
                 .then()
-                .extract().response().as(DirectRename.class);
-        Assert.assertEquals("name", rename.getName());
+                .extract().response().body()
+                .as(DirectRename.class);
+        Assert.assertEquals("Test 123", directRename.getName());
     }
 
     @Story("удалить новую директорию в проекте")

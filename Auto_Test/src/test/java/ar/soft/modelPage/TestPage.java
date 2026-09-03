@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import ru.qa.elements.TextBox;
 
 public class TestPage extends BasePage {
 
@@ -26,7 +27,7 @@ public class TestPage extends BasePage {
 
     @Name("referenceField")
     @FindBy(xpath = "//input[@class='ant-input']")
-    public WebElement newNameCheckClick2;
+    public TextBox newNameCheckClick2;
 
     @Name("поле ввода с примером ")
     @FindBy(xpath = " ")
