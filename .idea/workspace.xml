@@ -5,17 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="fix FileTest and ProjectTest">
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/PostgresApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/response-schema.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/users-short-schema.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_08_2026_027_22_21_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_27_08_2026_027_22_21__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/AccountLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Autorisation/AccountLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/BaseApi/BaseApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/BaseApi/BaseApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Directory/DirectoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Directory/DirectoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Log/LogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Log/LogTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/OKS/OksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/OKS/OksTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/ProjectTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/ProjectTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/TestTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/TestTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/ProjectPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TestPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/TestPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/BaseTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/ApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,10 +78,15 @@
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;Application.ElseIf.executor&quot;: &quot;Run&quot;,
     &quot;Application.Listt.executor&quot;: &quot;Run&quot;,
+    &quot;Application.PostgresApp.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ApiTest.GetUsersListWithQueryParamAndValidateSchemaTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ApiTest.createUserAndValidateSchemaTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ApiTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ApiTest.restAssured2Test.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ApiTest.restAssured2Test6.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.ApiTest.restAssuredTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ApiTest.testCreateUserAndValidateSchema.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ApiTest.testGetUsersListWithQueryParamAndValidateSchema.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.AutorisaitionTest.AutorisationTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.AutorisaitionTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.AutorisaitionTest.jhgf.executor&quot;: &quot;Run&quot;,
@@ -538,13 +540,13 @@
     &quot;TestNG.ar.soft.SettingsSidebarTest and 4 more.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor&quot;: &quot;Run&quot;,
     &quot;TestNG.remarcTest.remarcTest.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;300826&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;030926&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Новая папка/DBN-3.5.0.0.zip&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -552,8 +554,8 @@
       <recent name="ar.soft" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java" />
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\resources" />
+      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java" />
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\main\java" />
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test" />
@@ -569,38 +571,64 @@
       <recent name="ar.soft.api.DirectoryPojo" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.AuthorizationTest">
-    <configuration name="AuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.AuthorizationTest.ownerAuthorizationTest">
+    <configuration name="PostgresApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.PostgresApp" />
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.*" />
+          <option name="PATTERN" value="ar.soft.Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationTest.inspectorAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="ApiTest.GetUsersListWithQueryParamAndValidateSchemaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.*" />
+          <option name="PATTERN" value="ar.soft.Test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
-      <option name="METHOD_NAME" value="inspectorAuthorizationTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
+      <option name="PACKAGE_NAME" value="ar.soft.Test" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.ApiTest" />
+      <option name="METHOD_NAME" value="GetUsersListWithQueryParamAndValidateSchemaTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTest.createUserAndValidateSchemaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.Test" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.ApiTest" />
+      <option name="METHOD_NAME" value="createUserAndValidateSchemaTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTest.testGetUsersListWithQueryParamAndValidateSchema" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.Test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.Test" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.ApiTest" />
+      <option name="METHOD_NAME" value="testGetUsersListWithQueryParamAndValidateSchema" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -698,48 +726,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="OksTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.API.OKS.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.API.OKS" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.API.OKS.OksTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OksTest.createOksTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.API.OKS.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.API.OKS" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.API.OKS.OksTest" />
-      <option name="METHOD_NAME" value="createOksTest" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AuthorizationTest" />
         <item itemvalue="TestNG.AuthorizationTest.ownerAuthorizationTest" />
-        <item itemvalue="TestNG.AuthorizationTest.inspectorAuthorizationTest" />
-        <item itemvalue="TestNG.OksTest.createOksTest" />
-        <item itemvalue="TestNG.OksTest" />
+        <item itemvalue="Application.PostgresApp" />
+        <item itemvalue="JUnit.ApiTest.GetUsersListWithQueryParamAndValidateSchemaTest" />
+        <item itemvalue="JUnit.ApiTest.createUserAndValidateSchemaTest" />
+        <item itemvalue="JUnit.ApiTest.testGetUsersListWithQueryParamAndValidateSchema" />
       </list>
     </recent_temporary>
   </component>
