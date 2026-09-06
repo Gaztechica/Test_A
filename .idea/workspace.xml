@@ -5,32 +5,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="добавил базу Postgres">
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/DatabaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/ApiTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/AuthRequestPojo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/BasesTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/ConfigReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/configAll.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/dev.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/response-token.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/stage.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/DataUserOrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/Database/DatabaseInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/Database/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/Database/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/Database/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/Database/UserOrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/DatabaseInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/DatabaseMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/DbaseManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresUser/DatabaseInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresUser/DatabaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresUser/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresUser/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresUser/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresUser/UserOrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/Sql1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Account/AccountLoginPojoTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Account/AccountLoginPojoTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Autorisation/AccountLoginTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Autorisation/AccountLoginTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/AutorisationApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/AutorisationApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/BaseApi/BaseApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/BaseApi/BaseApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/BaseApi/Specification.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/BaseApi/Specification.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Directory/DirectoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Directory/DirectoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Log/LogTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Log/LogTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/OKS/OksTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/OKS/OksTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Сhecklist/ChecklistTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/API/Сhecklist/ChecklistTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/ApiTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/PostgresApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/api/RegresTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/api/RegresTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/ApiTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,11 +88,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.DatabaseInitializer.executor": "Run",
+    "Application.DatabaseMain.executor": "Run",
     "Application.DatabaseTest.executor": "Run",
     "Application.ElseIf.executor": "Run",
     "Application.Listt.executor": "Run",
     "Application.PostgresApp.executor": "Run",
     "Application.PostgresTest.executor": "Run",
+    "Application.Sql1.executor": "Run",
     "JUnit.ApiTest.GetUsersListWithQueryParamAndValidateSchemaTest.executor": "Run",
     "JUnit.ApiTest.createUserAndValidateSchemaTest.executor": "Run",
     "JUnit.ApiTest.executor": "Run",
@@ -227,9 +224,12 @@
     "TestNG.AccountLoginTest.putAccountPasswordTest.executor": "Run",
     "TestNG.ApiTest.AuthEndpointMatrixTest.executor": "Run",
     "TestNG.ApiTest.GetUsersListWithQueryParamAndValidateSchemaTest.executor": "Run",
+    "TestNG.ApiTest.executor": "Run",
     "TestNG.ApiTest.httpTest.executor": "Run",
     "TestNG.ApiTest.testAuthEndpointMatrix.executor": "Run",
     "TestNG.ApiTest.testAuthEndpointMatrixStatus.executor": "Run",
+    "TestNG.ApiTest.testInvalidContentType.executor": "Run",
+    "TestNG.ApiTest.testInvalidMethodGet.executor": "Run",
     "TestNG.ApiTest.testLongUsernameBoundary.executor": "Run",
     "TestNG.ApiTest.testSqlInjectionProtection.executor": "Run",
     "TestNG.ApiTest.testSqlInjectionsProtection.executor": "Run",
@@ -346,6 +346,8 @@
     "TestNG.DashboardsSidebarTest.dashboardsTest.executor": "Run",
     "TestNG.DashboardsTest.cumulativeTest.executor": "Run",
     "TestNG.DashboardsTest.dashboardsTest.executor": "Run",
+    "TestNG.DatabaseInitializer.createTables.executor": "Run",
+    "TestNG.DatabaseTest (1).executor": "Run",
     "TestNG.DatabaseTest.executor": "Run",
     "TestNG.DatabaseTest.testUserQueries.executor": "Run",
     "TestNG.DirectoryTest.createDirectory.executor": "Run",
@@ -569,7 +571,7 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "040926",
+    "git-widget-placeholder": "060926",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/resources",
     "project.structure.last.edited": "Modules",
@@ -593,97 +595,85 @@
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\cucumber" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ar.soft.Test.Postgres.PostgresUser" />
+      <recent name="ar.soft.Test.Postgres.Database" />
       <recent name="ar.soft.AT.UI.Rr" />
       <recent name="ar.soft.AT.API.Directory.DirectoryPojo" />
       <recent name="ar.soft.api.Сhecklist.ChecklisPojo" />
-      <recent name="ar.soft.AT.FileTest" />
-      <recent name="ar.soft.api.DirectoryPojo" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.ApiTest.testAuthEndpointMatrix">
-    <configuration name="ApiTest.testAuthEndpointMatrix" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.DatabaseTest (1)">
+    <configuration name="DatabaseMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.Postgres.DatabaseMain" />
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.Test.RestfulBooker.*" />
+          <option name="PATTERN" value="ar.soft.Test.Postgres.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.RestfulBooker.ApiTest" />
-      <option name="METHOD_NAME" value="testAuthEndpointMatrix" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Sql1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.Postgres.Sql1" />
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.Test.Postgres.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.Test.Postgres.PostgresUser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.Test.Postgres.PostgresUser" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.Postgres.PostgresUser.DatabaseTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiTest.testAuthEndpointMatrixStatus" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DatabaseTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.Test.RestfulBooker.*" />
+          <option name="PATTERN" value="ar.soft.Test.Postgres.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test.RestfulBooker" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.RestfulBooker.ApiTest" />
-      <option name="METHOD_NAME" value="testAuthEndpointMatrixStatus" />
-      <option name="TEST_OBJECT" value="METHOD" />
+      <option name="PACKAGE_NAME" value="ar.soft.Test.Postgres" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.Postgres.DatabaseTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiTest.testLongUsernameBoundary" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="DatabaseTest.testUserQueries" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.Test.RestfulBooker.*" />
+          <option name="PATTERN" value="ar.soft.Test.Postgres.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test.RestfulBooker" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.RestfulBooker.ApiTest" />
-      <option name="METHOD_NAME" value="testLongUsernameBoundary" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApiTest.testSqlInjectionProtection" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.Test.RestfulBooker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test.RestfulBooker" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.RestfulBooker.ApiTest" />
-      <option name="METHOD_NAME" value="testSqlInjectionProtection" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ApiTest.testSqlInjectionsProtection" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.Test.RestfulBooker.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test.RestfulBooker" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.RestfulBooker.ApiTest" />
-      <option name="METHOD_NAME" value="testSqlInjectionsProtection" />
+      <option name="PACKAGE_NAME" value="ar.soft.Test.Postgres" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.Postgres.DatabaseTest" />
+      <option name="METHOD_NAME" value="testUserQueries" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -768,11 +758,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.ApiTest.testAuthEndpointMatrix" />
-        <item itemvalue="TestNG.ApiTest.testSqlInjectionsProtection" />
-        <item itemvalue="TestNG.ApiTest.testSqlInjectionProtection" />
-        <item itemvalue="TestNG.ApiTest.testAuthEndpointMatrixStatus" />
-        <item itemvalue="TestNG.ApiTest.testLongUsernameBoundary" />
+        <item itemvalue="TestNG.DatabaseTest (1)" />
+        <item itemvalue="Application.DatabaseMain" />
+        <item itemvalue="Application.Sql1" />
+        <item itemvalue="TestNG.DatabaseTest" />
+        <item itemvalue="TestNG.DatabaseTest.testUserQueries" />
       </list>
     </recent_temporary>
   </component>
