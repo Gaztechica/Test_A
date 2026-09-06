@@ -6,12 +6,15 @@
   </component>
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseAssistantManager">
     <assistants>
       <assistant-state connection-id="8520747b-47c8-4662-8516-4a2660f9e785" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
+        <messages />
+      </assistant-state>
+      <assistant-state connection-id="45f288cf-a54f-4232-bd07-57c0b4d5d7dc" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
         <messages />
       </assistant-state>
     </assistants>
@@ -28,8 +31,8 @@
 --DROP TABLE IF EXISTS public.orders;
 --DROP TABLE IF EXISTS public.users;
 --
-DROP TABLE IF EXISTS public.orders CASCADE;
-DROP TABLE IF EXISTS public.users CASCADE;
+drop TABLE IF EXISTS public.orders CASCADE;
+drop TABLE IF EXISTS public.users CASCADE;
 
 
 -- 2. Создаем таблицу пользователей (явно указывая public)
@@ -45,7 +48,7 @@ create table public.users (
 create table public.orders (
     id serial primary key,                         
     user_id int not null,                          
-    amount numeric(10, 2) not null,                
+    amount numeric(10, 5) not null,                
     status varchar(20) default 'pending',          
     created_at timestamp default current_timestamp, 
     
@@ -53,13 +56,16 @@ create table public.orders (
 );
 
 -- ==========================================
--- НАПОЛНЕНИЕ ДАННЫМИ (тоже через public)
+-- НАПОЛНЕНИЕ ДАННЫМИ (через public)
 -- ==========================================
 
 insert into public.users (names, email, status, created_at) values
 ('Алексей Иванов', 'alex@example.com', 'active', now() - interval '10 days'),
 ('Мария Петрова', 'maria@example.com', 'active', now() - interval '5 days'),
 ('Иван Сидоров', 'ivan@example.com', 'suspended', now() - interval '1 day');
+('Игорь Сидоров', 'igor@example.com', 'suspended', now() - interval '1 day');
+('Коля Сидоров', 'in@test.com', 'suspended', now() - interval '1 day');
+('Иван Васин', 'an@test.com', 'suspended', now() - interval '1 day');
 
 insert into public.orders (user_id, amount, status, created_at) values
 (1, 1500.00, 'paid', now() - interval '9 days'),
@@ -68,22 +74,65 @@ insert into public.orders (user_id, amount, status, created_at) values
 (2, 990.00, 'paid', now() - interval '2 days'),
 (3, 5000.00, 'cancelled', now() - interval '12 hours');
 
-SELECT * FROM public.users;
+select * from public.users;
 
-SELECT * FROM public.users;
+select * from public.users;
 
 -- Посмотреть все заказы
-SELECT * FROM public.orders;
+select * from public.orders;
 
 -- Объединенный запрос (Пользователи и их заказы)
-SELECT 
-    u.id AS user_id, 
+select 
+    u.id as user_id, 
     u.names, 
-    o.id AS order_id, 
+    o.id as order_id, 
     o.amount, 
-    o.status AS order_status
-FROM public.users u
-LEFT JOIN public.orders o ON u.id = o.user_id;]]></console>
+    o.status as order_status
+from public.users u
+left join public.orders o on u.id = o.user_id;
+
+select 
+    u.id as user_id, 
+    u.names as user_name, 
+    u.email,
+    o.id as order_id, 
+    o.amount as order_amount, 
+    o.status as order_status,
+    o.created_at as order_date
+from public.users u
+left join public.orders o on u.id = o.user_id
+order by u.id, o.created_at desc;
+
+
+SELECT * FROM public.users WHERE email LIKE '%@test.com%';
+
+
+SELECT * FROM public.users 
+WHERE status = 'active' AND created_at >= NOW() - INTERVAL '7 days';
+
+
+SELECT DISTINCT u.* FROM public.users u
+JOIN public.orders o ON u.id = o.user_id
+WHERE o.amount > 1000;
+
+
+--BEGIN;
+
+INSERT INTO public.users (names, email, status) 
+VALUES ('Новый Юзер', 'new@test.com', 'active');
+
+-- Используем currval или аналог для получения ID только что созданного юзера в Postgres
+INSERT INTO public.orders (user_id, amount, status) 
+VALUES (currval('public.users_id_seq'), 2500.00, 'pending');
+COMMIT;
+
+
+UPDATE public.orders 
+SET status = 'completed' 
+WHERE user_id = (SELECT id FROM public.users WHERE email = 'user1@test.com');
+
+
+DELETE FROM public.users WHERE email LIKE '%@test.com';]]></console>
       <console name="Connection 1" type="STANDARD" schema="postgres" session="Main"><![CDATA[-- 1. Удаляем таблицы, если они существовали ранее (для чистоты перезапуска)
 --DROP TABLE IF EXISTS orders;
 --DROP TABLE IF EXISTS users;
@@ -159,10 +208,7 @@ LEFT JOIN orders o ON u.id = o.user_id;]]></console>
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="8520747b-47c8-4662-8516-4a2660f9e785" object-ref="consoles/Connection 1" />
-      <object connection-id="8520747b-47c8-4662-8516-4a2660f9e785" object-ref="consoles/Connection" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="8520747b-47c8-4662-8516-4a2660f9e785" />

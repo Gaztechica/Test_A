@@ -48,7 +48,7 @@ public class ChecklistTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void getChecklistTestPojo() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         ChecklistRes checklistRes = given(specification)
                 .get("/checklist" + contextOrganizationId)
                 .then()
@@ -62,7 +62,7 @@ public class ChecklistTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void getChecklistTest() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Response response = given(specification)
                 .get("/checklist" + contextOrganizationId)
                 .then()
@@ -83,7 +83,7 @@ public class ChecklistTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void postLogTest() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Response response = given(specification)
                 .get("/checklist" + contextOrganizationId)
                 .then()

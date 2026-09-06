@@ -31,7 +31,7 @@ public class Specification {
                 .build();
     }
 
-    public static void intansSpec(RequestSpecification requst, ResponseSpecification responce) {
+    public static void intransSpec(RequestSpecification requst, ResponseSpecification responce) {
         RestAssured.requestSpecification = requst;
         RestAssured.responseSpecification = responce;
     }

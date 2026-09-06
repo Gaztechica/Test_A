@@ -45,7 +45,7 @@ public class AutorisationApiTest {
     @Test(priority = 1, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью владельца")
     public void checkAccountLoginTest() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("email", EMAIL);
         user.put("password", PASSWORD);
@@ -83,7 +83,7 @@ public class AutorisationApiTest {
     @Test(priority = 2, groups = {"10.5", "1"},
             description = "")
     public void checkAccountInfoTests() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("email", EMAIL);
         user.put("password", PASSWORD);
@@ -104,7 +104,7 @@ public class AutorisationApiTest {
         Assert.assertEquals("f.ff.1980@list.ru", email);
         Assert.assertEquals(token, token);
 
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
 //        Map<String, String> user2 = new HashMap<>();
         Response response2 = given()
                 .when().log().all()
@@ -124,7 +124,7 @@ public class AutorisationApiTest {
     @Test(priority = 3, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью владельца")
     public void checkAccountOrganizationTests() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("email", EMAIL);
         user.put("password", PASSWORD);
@@ -137,7 +137,7 @@ public class AutorisationApiTest {
         JsonPath jsonPath = response.jsonPath();
         String token = response.getBody().jsonPath().get("token").toString();
 
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
 //        Map<String, String> user2 = new HashMap<>();
         Response response2 = given()
                 .when().log().all()
@@ -164,7 +164,7 @@ public class AutorisationApiTest {
     @Test(priority = 2, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью Admin")
     public void checkAdminAuthorizationTest() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("email", "batrayilto@gufum.com");
         user.put("password", PASSWORD);
@@ -188,7 +188,7 @@ public class AutorisationApiTest {
     @Test(priority = 3, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью Admin")
     public void checkAdminAuthorizationTest2() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("email", "batrayilto@gufum.com");
         user.put("password", PASSWORD);
@@ -225,7 +225,7 @@ public class AutorisationApiTest {
 //                .body("violation.error", equalTo("Wrong email or password"));
 
 
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         List<UserData> users = given()
                 .when()
                 .post("password/send")
@@ -264,7 +264,7 @@ public class AutorisationApiTest {
     @Test(priority = 3, groups = {"10.5", "Dialogs"},
             description = "Проверка на 400 при Авторизации с пустом password")
     public void checkAuthorizationNoOwnerPasswordTest() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk400());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk400());
         Map<String, String> user = new HashMap<>();
         user.put("email", "yevgeniy.gor.90@mail.ru");
         user.put("password", "");
@@ -282,7 +282,7 @@ public class AutorisationApiTest {
     @Test(priority = 4, groups = {"10.5", "Dialogs"},
             description = "Проверка на 400 при Авторизации с пустом password")
     public void checkA222utorisation23331IdTest() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk400());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk400());
         Map<String, String> user = new HashMap<>();
         user.put("email", "yevgeniy.gor.90@mail.ru");
         user.put("password", "qwert12i345");
@@ -303,7 +303,7 @@ public class AutorisationApiTest {
     @Test(priority = 2, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью Admin")
     public void check878865AdminAuthorizationTest() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("email", EMAIL);                                              //"name": "string",
         user.put("password", PASSWORD);                                        //"projectId": 504
@@ -340,7 +340,7 @@ public class AutorisationApiTest {
     @Test(priority = 2, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью Admin")
     public void check8765AdminAuthorizationTest() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("name", "string"); //"name": "string",
         user.put("projectId", "504");    //"projectId": 504
@@ -359,7 +359,7 @@ public class AutorisationApiTest {
 
     @Test
     public void checkAutorisationIdTest(String token) {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         List<UserData> users = given()
                 .when().log().all()
                 .contentType(ContentType.JSON)
@@ -373,7 +373,7 @@ public class AutorisationApiTest {
 
     @Test
     public void checkAutorisationIdTest21() {
-        Specification.intansSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
         List<UserData> users = given()
                 .when().log().all()
                 .contentType(ContentType.JSON)
@@ -400,7 +400,7 @@ public class AutorisationApiTest {
 
     @Test
     public void checkAutorisationId22Test() {
-        Specification.intansSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
         Response response = given()
                 .when()
 //                .contentType(ContentType.JSON)
@@ -425,7 +425,7 @@ public class AutorisationApiTest {
 
     @Test
     public void checkAutorisation21IdTest() {
-        Specification.intansSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("email", "eve.holt@reqres.in");
         user.put("password", "pistol");
@@ -442,7 +442,7 @@ public class AutorisationApiTest {
 
     @Test
     public void checkAutorisationIdTest2() {
-        Specification.intansSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
         Integer id = 4;
         String token = "QpwL5tke4Pnpja7X4";
         Register user = new Register("eve.holt@reqres.in", "pistol");
@@ -460,7 +460,7 @@ public class AutorisationApiTest {
 
     @Test
     public void checkA22utorisation2333IdTest() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk400());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk400());
         Map<String, String> user = new HashMap<>();
         user.put("email", "yevgeniy.gor.90@mail.ru");
         user.put("password", "");
@@ -476,7 +476,7 @@ public class AutorisationApiTest {
 
     @Test
     public void checkAutorisationIdTest4() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Integer id = 117;
         String token = "eyJhbGciOiJIUzI1NiJ9";
         Register user = new Register("yevgeniy.gor.90@mail.ru", "qwert12345");
