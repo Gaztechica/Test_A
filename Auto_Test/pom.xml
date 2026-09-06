@@ -270,9 +270,17 @@
         <testResources>
             <testResource>
                 <directory>src/test/resources</directory>
-                <filtering>false</filtering>
+                <!-- Включаем фильтрацию, чтобы переменные ${...} заменялись на свойства из профайла -->
+                <filtering>true</filtering>
             </testResource>
         </testResources>
+
+<!--        <testResources>-->
+<!--            <testResource>-->
+<!--                <directory>src/test/resources</directory>-->
+<!--                <filtering>false</filtering>-->
+<!--            </testResource>-->
+<!--        </testResources>-->
 
         <plugins>
             <plugin>
@@ -344,7 +352,38 @@
 
     </build>
 
+
+
     <profiles>
+
+            <!-- ... ваши зависимости (Rest Assured, TestNG и т.д.) ... -->
+
+
+                <!-- Профайл для DEV стенда (сделан активным по умолчанию) -->
+                <profile>
+                    <id>dev</id>
+                    <activation>
+                        <activeByDefault>true</activeByDefault>
+                    </activation>
+                    <properties>
+                        <env.base.url>https://example.com</env.base.url>
+                        <env.auth.username>dev_admin</env.auth.username>
+                        <env.auth.password>dev_password123</env.auth.password>
+                    </properties>
+                </profile>
+
+                <!-- Профайл для STAGE стенда -->
+                <profile>
+                    <id>stage</id>
+                    <properties>
+                        <env.base.url>https://herokuapp.com</env.base.url>
+                        <env.auth.username>admin</env.auth.username>
+                        <env.auth.password>password123</env.auth.password>
+                    </properties>
+                </profile>
+
+
+
         <profile>
             <!-- указание каким юзером запускать тесты
              ВКЛЮЧАЕТСЯ ТОЛЬКО ОДИН ЮЗЕР
@@ -355,7 +394,11 @@
             </properties>
         </profile>
     </profiles>
+
+
+
 </project>
+
 
 
         <!--    <properties>-->

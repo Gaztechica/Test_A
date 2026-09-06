@@ -24,7 +24,7 @@ public class LogTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void getLogTest() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Response response = given(specification)
                 .get("/log" + pageable)
                 .then()
@@ -161,7 +161,7 @@ public class LogTest extends BaseApiTest {
     @Test(priority = 3, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void deleteLogTest2() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
 
         Response response = given(specification)
                 .delete("/log/" + logId + contextOrganizationId)

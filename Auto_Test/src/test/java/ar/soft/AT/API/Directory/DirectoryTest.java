@@ -33,7 +33,7 @@ public class DirectoryTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void getDirectory() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Response response = given(specification)
                 .get("/directory/" + id + contextProjectId)
                 .then()
@@ -49,7 +49,7 @@ public class DirectoryTest extends BaseApiTest {
     @Test(priority = 2, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void createDirectory() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         DirectoryRes directoryRes = given(specification)
                 .body(directCreate)
                 .post("/directory/create" + contextProjectId)
@@ -67,7 +67,7 @@ public class DirectoryTest extends BaseApiTest {
     @Test(priority = 3, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void postDirector() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Response response = given(specification)
                 .body(directCreate)
                 .post("/directory/create" + contextProjectId)
@@ -83,7 +83,7 @@ public class DirectoryTest extends BaseApiTest {
     @Test(priority = 4, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void renameDirectory() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         DirectRename rename = given(specification)
                 .body(directRename)
                 .contentType(ContentType.JSON)
@@ -99,7 +99,7 @@ public class DirectoryTest extends BaseApiTest {
     @Test(priority = 5, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void deleteDirectory() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         DirectDel directDel = given(specification)
                 .delete("/directory/delete/" + directId + contextProjectId)
                 .then()

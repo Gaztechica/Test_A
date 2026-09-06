@@ -1,4 +1,4 @@
-package ar.soft.Test;
+package ar.soft.Test.Postgres;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -6,21 +6,20 @@ import java.sql.SQLException;
 
 public class PostgresApp {
 
-    // 1. Константы для подключения (укажите свои данные)
-    private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "Postgres"; // Ваш пароль от БД
+    protected static final String URL = "jdbc:postgresql://localhost:5432/postgres";
+    protected static final String USER = "postgres";
+    protected static final String PASSWORD = "Postgres";
 
     public static void main(String[] args) {
-        // 2. Открываем соединение с БД
+        //  Открываем соединение с БД
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             System.out.println("Соединение с PostgreSQL успешно установлено!");
 
             // Выполняем операции
-            createTable(connection);
-            insertUser(connection, "Иван Иванов", "ivan@example.com");
-            insertUser(connection, "Петр Петров", "petr@example.com");
-            readUsers(connection);
+//            createTable(connection);
+//            insertUser(connection, "Иван Иванов", "ivan@example.com");
+//            insertUser(connection, "Петр Петров", "petr@example.com");
+//            readUsers(connection);
 
         } catch (SQLException e) {
             System.err.println("Ошибка при работе с базой данных:");

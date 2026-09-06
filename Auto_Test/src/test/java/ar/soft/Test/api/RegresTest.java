@@ -28,7 +28,7 @@ public class RegresTest {
 
     @Test
     public void checkAutorisationIdTesedtp() {
-        Specification.intansSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
         Integer id = 4;
         String token = "QpwL5tke4Pnpja7X4";
         Register user = new Register("eve.holt@reqres.in", "pistol");

@@ -26,7 +26,7 @@ public class BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "1"},
             description = "")
     public static void accountLoginTest() {
-        Specification.intansSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         LoginReguest loginReguest = new LoginReguest(PASSWORD, EMAIL);
 
         Response response = given()
