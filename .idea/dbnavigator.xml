@@ -9,6 +9,24 @@
     <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
+  <component name="DBNavigator.Project.DataExportManager">
+    <export-instructions>
+      <create-header value="true" />
+      <friendly-headers value="false" />
+      <quote-values-containing-separator value="true" />
+      <quote-all-values value="false" />
+      <value-separator value="" />
+      <begin-quote value="&quot;" />
+      <end-quote value="&quot;" />
+      <file-name value="orders.sql" />
+      <file-location value="D:\хорольский" />
+      <scope value="GLOBAL" />
+      <destination value="FILE" />
+      <format value="SQL" />
+      <charset value="windows-1251" />
+      <charset value="windows-1251" />
+    </export-instructions>
+  </component>
   <component name="DBNavigator.Project.DatabaseAssistantManager">
     <assistants>
       <assistant-state connection-id="8520747b-47c8-4662-8516-4a2660f9e785" default-profile-name="" selected-profile-name="" selected-model-name="" assistant-type="GENERIC" selected-action="SHOW_SQL" availability="UNAVAILABLE" acknowledgement="NONE">
@@ -74,6 +92,11 @@ insert into public.orders (user_id, amount, status, created_at) values
 (2, 990.00, 'paid', now() - interval '2 days'),
 (3, 5000.00, 'cancelled', now() - interval '12 hours');
 
+-- ==========================================
+-- ЗАПРОСЫ ПО ТРЕБОВАНИЯМ ЗАДАЧИ
+-- ==========================================
+
+-- Просмотр базовых таблиц
 select * from public.users;
 
 -- Посмотреть все заказы
@@ -101,7 +124,7 @@ from public.users u
 left join public.orders o on u.id = o.user_id
 order by u.id, o.created_at desc;
 
-
+-- Найти пользователя по части почты (LIKE '%@test%')
 SELECT * FROM public.users WHERE email LIKE '%@test.com%';
 
 
@@ -135,7 +158,7 @@ WHERE user_id = (SELECT id FROM public.users WHERE email = 'alex@example.com');
 
 DELETE FROM public.users WHERE email LIKE '%@test%';
 
-
+-- Проверка оставшихся таблиц в схеме public
 SELECT table_name 
 FROM information_schema.tables 
 WHERE table_schema = 'public';
@@ -214,21 +237,30 @@ VALUES (LASTVAL(), 2500.00, 'pending');
 
 COMMIT;
 
--- Обновить статус заказа по email пользователя (используем существующий alex@example.com)
+
 UPDATE public.orders 
 SET status = 'completed' 
 WHERE user_id = (SELECT id FROM public.users WHERE email = 'alex@example.com');
 
--- Удалить тестовые данные по определённому признаку (содержат @test)
+
 DELETE FROM public.users WHERE email LIKE '%@test%';
 
--- Проверка оставшихся таблиц в схеме public
+
 SELECT table_name 
 FROM information_schema.tables 
 WHERE table_schema = 'public';
 
 
+SELECT pg_terminate_backend(pid)
+FROM pg_stat_activity
+WHERE datname = 'postgres'
+  AND pid <> pg_backend_pid();
 
+
+SELECT pg_terminate_backend(pid)
+FROM pg_stat_activity
+WHERE datname = 'postgres' 
+  AND pid <> pg_backend_pid();
 
 
 
@@ -309,14 +341,16 @@ LEFT JOIN orders o ON u.id = o.user_id;]]></console>
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="8520747b-47c8-4662-8516-4a2660f9e785" object-ref="consoles/Connection" />
-    </open-files>
+    <open-files />
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="8520747b-47c8-4662-8516-4a2660f9e785" />
     <connection id="45f288cf-a54f-4232-bd07-57c0b4d5d7dc" />
     <connection id="9e9ae870-afdf-453b-bc7e-aae233721056" />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="8520747b-47c8-4662-8516-4a2660f9e785" dataset="public.users" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="8520747b-47c8-4662-8516-4a2660f9e785" dataset="public.orders" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />

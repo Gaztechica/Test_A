@@ -4,27 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="добавил базу Postgres">
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/DataUserOrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/Database/DatabaseInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/Database/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/Database/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/Database/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/Database/UserOrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/DatabaseInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/DatabaseMain.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/DbaseManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresUser/DatabaseInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresUser/DatabaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresUser/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresUser/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresUser/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresUser/UserOrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/Sql1.java" afterDir="false" />
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="add DatabaseTest">
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD/DatabaseInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD/DatabaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD/SqlQueries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD/UserOrderDao.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD2/DatabaseInitializer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD2/DatabaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD2/Order.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD2/SqlQueries.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD2/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD2/UserOrderDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/Postgres/PostgresApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/ApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/For.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/For.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,7 +50,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="060926" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -93,6 +88,7 @@
     "Application.DatabaseTest.executor": "Run",
     "Application.ElseIf.executor": "Run",
     "Application.Listt.executor": "Run",
+    "Application.Main.executor": "Run",
     "Application.PostgresApp.executor": "Run",
     "Application.PostgresTest.executor": "Run",
     "Application.Sql1.executor": "Run",
@@ -348,6 +344,7 @@
     "TestNG.DashboardsTest.dashboardsTest.executor": "Run",
     "TestNG.DatabaseInitializer.createTables.executor": "Run",
     "TestNG.DatabaseTest (1).executor": "Run",
+    "TestNG.DatabaseTest (2).executor": "Run",
     "TestNG.DatabaseTest.executor": "Run",
     "TestNG.DatabaseTest.testUserQueries.executor": "Run",
     "TestNG.DirectoryTest.createDirectory.executor": "Run",
@@ -571,9 +568,9 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "060926",
+    "git-widget-placeholder": "070926",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/resources",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java/ar/soft/Test",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -585,51 +582,26 @@
       <recent name="ar.soft" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\Test" />
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\resources" />
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java" />
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\main\java" />
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
-      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\cucumber" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ar.soft.Test.BD2" />
+      <recent name="ar.soft.Test.BD" />
       <recent name="ar.soft.Test.Postgres.PostgresUser" />
       <recent name="ar.soft.Test.Postgres.Database" />
       <recent name="ar.soft.AT.UI.Rr" />
-      <recent name="ar.soft.AT.API.Directory.DirectoryPojo" />
-      <recent name="ar.soft.api.Сhecklist.ChecklisPojo" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DatabaseTest (1)">
-    <configuration name="DatabaseMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.Postgres.DatabaseMain" />
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.Test.Postgres.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Sql1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.Postgres.Sql1" />
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.Test.Postgres.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DatabaseTest (1)" type="TestNG" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="TestNG.DatabaseTest">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.Postgres.PostgresUser.Main" />
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -637,8 +609,55 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test.Postgres.PostgresUser" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.Postgres.PostgresUser.DatabaseTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AuthorizationTest.ownerAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.AT.UI.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
+      <option name="METHOD_NAME" value="ownerAuthorizationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DatabaseTest (2)" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.Test.BD.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.Test.BD" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.BD.DatabaseTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -650,31 +669,13 @@
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.Test.Postgres.*" />
+          <option name="PATTERN" value="ar.soft.Test.BD2.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test.Postgres" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.Postgres.DatabaseTest" />
+      <option name="PACKAGE_NAME" value="ar.soft.Test.BD2" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.BD2.DatabaseTest" />
       <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DatabaseTest.testUserQueries" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.Test.Postgres.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test.Postgres" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.Postgres.DatabaseTest" />
-      <option name="METHOD_NAME" value="testUserQueries" />
-      <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
       <method v="2">
@@ -758,11 +759,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DatabaseTest (1)" />
-        <item itemvalue="Application.DatabaseMain" />
-        <item itemvalue="Application.Sql1" />
         <item itemvalue="TestNG.DatabaseTest" />
-        <item itemvalue="TestNG.DatabaseTest.testUserQueries" />
+        <item itemvalue="TestNG.DatabaseTest (2)" />
+        <item itemvalue="TestNG.AuthorizationTest" />
+        <item itemvalue="TestNG.AuthorizationTest.ownerAuthorizationTest" />
+        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -781,14 +782,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00088" summary="Merge remote-tracking branch 'origin/main4' into main4">
-      <option name="closed" value="true" />
-      <created>1715865767686</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1715865767686</updated>
     </task>
     <task id="LOCAL-00089" summary="Merge remote-tracking branch 'origin/main4' into main4">
       <option name="closed" value="true" />
@@ -1174,7 +1167,15 @@
       <option name="project" value="LOCAL" />
       <updated>1788527501405</updated>
     </task>
-    <option name="localTasksCounter" value="137" />
+    <task id="LOCAL-00137" summary="add DatabaseTest">
+      <option name="closed" value="true" />
+      <created>1788731486737</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1788731486737</updated>
+    </task>
+    <option name="localTasksCounter" value="138" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1202,7 +1203,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="AuthorizationTest" />
     <MESSAGE value="Registration" />
     <MESSAGE value="фреймворк" />
     <MESSAGE value="фреймворк2" />
@@ -1227,7 +1227,8 @@
     <MESSAGE value="refactor LogFile, add FileTest" />
     <MESSAGE value="fix FileTest and ProjectTest" />
     <MESSAGE value="добавил базу Postgres" />
-    <option name="LAST_COMMIT_MESSAGE" value="добавил базу Postgres" />
+    <MESSAGE value="add DatabaseTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="add DatabaseTest" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_adminAuthorizationTest.ic" NAME="AuthorizationTest.adminAuthorizationTest Coverage Results" MODIFIED="1747916205562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
