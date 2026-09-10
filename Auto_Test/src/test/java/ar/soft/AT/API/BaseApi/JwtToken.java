@@ -5,8 +5,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-import static ar.soft.runner.BaseTest.EMAIL;
-import static ar.soft.runner.BaseTest.PASSWORD;
+import static ar.soft.AT.UI.tests.baseTest.BaseTest.EMAIL;
+import static ar.soft.AT.UI.tests.baseTest.BaseTest.PASSWORD;
 
 public class JwtToken {
 

@@ -46,7 +46,7 @@ public class OksTest extends BaseApiTest {
     @Description("")
     @Test(priority = 1, description = "")
     public void createOksTest() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.responseSpecOk200();
         Response response = given(specification)
                 .body(createOks)
                 .post("oks/create/" + ProjectId)
@@ -65,7 +65,7 @@ public class OksTest extends BaseApiTest {
     @Description("")
     @Test(priority = 2, description = "")
     public void remoteOksTest() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.responseSpecOk200();
         RemoteOkS remoteOks = given(specification)
                 .body(remoteOKS)
                 .put("oks/edit/" + idOks)
@@ -81,7 +81,7 @@ public class OksTest extends BaseApiTest {
     @Description("")
     @Test(priority = 3, description = "")
     public void getOksTest() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.responseSpecOk200();
         ResCreateOks resCreate = given(specification)
                 .get("oks/" + idOks)
                 .then()
@@ -96,7 +96,7 @@ public class OksTest extends BaseApiTest {
     @Description("")
     @Test(priority = 4, description = "")
     public void deleteDirectory() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+         Specification.responseSpecOk200();
         DeleteOks deleteOks = given(specification)
                 .body(bodyJson)
 //                .body("ids: " + numb)
@@ -111,7 +111,7 @@ public class OksTest extends BaseApiTest {
     @Description("")
     @Test(priority = 5, description = "")
     public void getAllOksTest() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+         Specification.responseSpecOk200();
          GetParam getParam2 = given(specification)
                 .queryParam("projectId", getParam)
                 .get("oks" )

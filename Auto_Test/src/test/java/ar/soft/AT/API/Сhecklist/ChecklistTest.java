@@ -42,13 +42,12 @@ public class ChecklistTest extends BaseApiTest {
 //            "2026-02-09T15:33:25.303106", null, [])
 
 
-
     @Story("Получить все чек-листы")
     @Description("вывести информацию о своем аккаунте")
     @Test(priority = 1, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void getChecklistTestPojo() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.responseSpecOk200();
         ChecklistRes checklistRes = given(specification)
                 .get("/checklist" + contextOrganizationId)
                 .then()
@@ -62,7 +61,7 @@ public class ChecklistTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void getChecklistTest() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.responseSpecOk200();
         Response response = given(specification)
                 .get("/checklist" + contextOrganizationId)
                 .then()
@@ -83,7 +82,7 @@ public class ChecklistTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void postLogTest() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.responseSpecOk200();
         Response response = given(specification)
                 .get("/checklist" + contextOrganizationId)
                 .then()

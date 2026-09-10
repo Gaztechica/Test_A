@@ -1,7 +1,8 @@
 package ar.soft.AT.API.Autorisation;
 
-import ar.soft.AT.API.Account.AccountPojo.LoginReguest;
 import ar.soft.AT.API.BaseApi.BaseApiTest;
+import ar.soft.AT.API.BaseApi.ConfigReader;
+import ar.soft.AT.API.BaseApi.LoginRequests;
 import ar.soft.AT.API.BaseApi.Specification;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
@@ -14,8 +15,7 @@ import org.testng.annotations.Test;
 import java.util.HashMap;
 import java.util.Map;
 
-import static ar.soft.runner.BaseTest.*;
-import static ar.soft.runner.BaseTest.PASSWORD_N;
+import static ar.soft.AT.UI.tests.baseTest.BaseTest.*;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 
@@ -29,10 +29,15 @@ public class AccountLoginTest extends BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "Dialogs"},
             description = "Авторизация под ролью владельца")
     public void accountAuthTest() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
-        LoginReguest loginReguest = new LoginReguest(PASSWORD, EMAIL);
+       Specification.responseSpecOk200();
+//        LoginReguests loginReguest = new LoginReguests(PASSWORD, EMAIL);
+        LoginRequests loginRequests = new LoginRequests(
+                ConfigReader.get("auth.email"),
+                ConfigReader.get("auth.password")
+        );
         Response response = given()
-                .body(loginReguest)
+
+                .body(loginRequests)
                 .when()
                 .post("account/login");
 
@@ -44,7 +49,7 @@ public class AccountLoginTest extends BaseApiTest {
         String email = jsonPath.get("data.email");
         Assert.assertEquals(359, id);
         Assert.assertEquals("Елизавета", name);
-        Assert.assertEquals(EMAIL, email);
+        Assert.assertEquals(ConfigReader.get("auth.email"), email);
     }
 
     @Story("вывести информацию о своем аккаунте")
@@ -52,7 +57,7 @@ public class AccountLoginTest extends BaseApiTest {
     @Test(priority = 2, groups = {"10.5", "1"},
             description = "вывести информацию о своем аккаунте")
     public void accountInfoTest() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.responseSpecOk200();
         Response response2 = given(specification)
                 .get("account/info")
                 .then()
@@ -68,7 +73,7 @@ public class AccountLoginTest extends BaseApiTest {
     @Test(priority = 3, groups = {"10.5", "Dialogs"},
             description = "вывести всех пользователей по организации")
     public void accountOrganizationTest() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+        Specification.responseSpecOk200();
         Response response2 = given(specification)
                 .get("account/organization")
                 .then().log().all()

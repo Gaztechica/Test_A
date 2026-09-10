@@ -6,8 +6,8 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
-import static ar.soft.runner.BaseTest.EMAIL;
-import static ar.soft.runner.BaseTest.PASSWORD;
+import static ar.soft.AT.UI.tests.baseTest.BaseTest.EMAIL;
+import static ar.soft.AT.UI.tests.baseTest.BaseTest.PASSWORD;
 import static io.restassured.RestAssured.given;
 
 public class TokenService {
