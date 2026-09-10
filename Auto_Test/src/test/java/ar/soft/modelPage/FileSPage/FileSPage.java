@@ -1,21 +1,13 @@
 package ar.soft.modelPage.FileSPage;
 
-import ar.soft.modelPage.base.BasePage;
 import com.codeborne.selenide.SelenideElement;
-import org.openqa.selenium.WebDriver;
 
 import static com.codeborne.selenide.Selenide.$x;
 
-public class FileSPage extends BasePage {
+public class FileSPage {
 
-    public FileSPage(WebDriver driver) {
-        super(driver);
-    }
-
-//   создать и  добавить базовую страницу и баз тест для логирования на селениде
-    public  SelenideElement
+    public SelenideElement
             projectS = $x("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'test Regress')]"),
-//            projectS = $x("//div[@class='ant-typography ant-typography-ellipsis ant-typography-single-line ant-typography-ellipsis-single-line p_r'][contains(.,'11AAНовый проект')]"),
             fileSidebarS = $x("//span[@class='ant-menu-title-content'][contains(.,'Файлы')]"),
             folderAddS = $x("//*[@data-test-id='button'][contains(., 'Добавить')]"),
             folderSelectS = $x("//*[@data-test-id='text'][contains(., 'Папка')]"),
@@ -23,4 +15,35 @@ public class FileSPage extends BasePage {
             inputReportsButton = $x("//button[@data-testid='Button8']").as("Ввод (InputReportsNS)"),
             fileAddButton = $x("(//*[@class='ant-btn ant-btn-default primaryButton big colorPrimary '][contains(., 'Добавить')])[2]")
                     .as("кнопка добавить");
+
+
+    public void projectS() {
+        projectS.click();
+    }
+
+    public void fileSidebarS() {
+        fileSidebarS.click();
+    }
+
+    public void folderAddS() {
+        folderAddS.click();
+    }
+
+    public void folderSelectS() {
+        folderSelectS.click();
+    }
+
+    public void folderNameS() {
+        folderNameS.click();
+    }
+
+    public void inputReportsButton() {
+        inputReportsButton.click();
+    }
+
+    public void fileAddButton() {
+        fileAddButton.click();
+    }
+
+
 }

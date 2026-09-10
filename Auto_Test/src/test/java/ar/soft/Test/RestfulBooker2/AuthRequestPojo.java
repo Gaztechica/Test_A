@@ -1,4 +1,4 @@
-package ar.soft.Test.RestfulBooker;
+package ar.soft.Test.RestfulBooker2;
 
 public class AuthRequestPojo {
 
