@@ -21,7 +21,7 @@ import java.util.List;
 import java.util.Map;
 
 import static ar.soft.AT.API.BaseApi.BaseApiTest.URL_API;
-import static ar.soft.runner.BaseTest.*;
+import static ar.soft.AT.UI.tests.baseTest.BaseTest.*;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;

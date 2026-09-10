@@ -1,8 +1,8 @@
 package ar.soft.Test;
 
 //import ar.soft.element.ActionT;
-import ar.soft.modelPage.TestPage;
-import ar.soft.runner.BaseTest;
+import ar.soft.AT.UI.modelPage.TestPage;
+import ar.soft.AT.UI.tests.baseTest.BaseTest;
 import org.testng.annotations.Test;
 import ru.qa.methods.ActionT;
 

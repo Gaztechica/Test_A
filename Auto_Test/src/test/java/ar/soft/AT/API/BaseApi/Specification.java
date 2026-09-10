@@ -10,6 +10,12 @@ import io.restassured.specification.ResponseSpecification;
 
 public class Specification {
 
+    // 1. Основной метод для дефолтного URL (используется в 90% тестов)
+    public static RequestSpecification requestSpec() {
+        return requestSpec(ConfigReader.getBaseUri()); // берем из вашего конфига
+    }
+
+    // 2. Метод с параметром (для кастомных URL, если понадобятся)
     public static RequestSpecification requestSpec(String url) {
         return new RequestSpecBuilder()
                 .setBaseUri(url)

@@ -1,6 +1,5 @@
 package ar.soft.AT.API.BaseApi;
 
-import ar.soft.AT.API.Account.AccountPojo.LoginReguest;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;
 import io.restassured.builder.RequestSpecBuilder;
@@ -9,15 +8,14 @@ import io.restassured.specification.RequestSpecification;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import static ar.soft.runner.BaseTest.EMAIL;
-import static ar.soft.runner.BaseTest.PASSWORD;
 import static io.restassured.RestAssured.given;
 
 public class BaseApiTest {
 
-    public final static String URL_API = "http://62.113.97.50:8081";
-//    public final static String URL = "http://62.113.97.50:8081";
+//    public final static String URL_API = "http://62.113.97.50:8081";
+    public final static String URL_API = ConfigReader.getBaseUri();
 
+    public RequestSpecification specification;
     public static String token;
 
     @BeforeMethod
@@ -27,10 +25,14 @@ public class BaseApiTest {
             description = "")
     public static void accountLoginTest() {
         Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
-        LoginReguest loginReguest = new LoginReguest(PASSWORD, EMAIL);
+//        LoginReguest loginReguest = new LoginReguest(PASSWORD, EMAIL);
+        LoginRequests loginRequests = new LoginRequests(
+                ConfigReader.get("auth.email"),
+                ConfigReader.get("auth.password")
+        );
 
         Response response = given()
-                .body(loginReguest)
+                .body(loginRequests)
                 .when()
                 .post("account/login")
                 .then().log().all()
@@ -38,7 +40,6 @@ public class BaseApiTest {
         token = response.getBody().jsonPath().get("token").toString();
     }
 
-    public RequestSpecification specification;
 
     @BeforeMethod
     @Test

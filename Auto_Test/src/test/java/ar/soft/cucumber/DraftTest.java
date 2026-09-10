@@ -1,7 +1,7 @@
 //package ar.soft;
 //
 //import ar.soft.modelPage.ProgectPage;
-//import ar.soft.runner.BaseTest;
+//import ar.soft.AT.UI.tests.baseTest.BaseTest;
 //import org.junit.Ignore;
 //import org.junit.Test;
 //import org.openqa.selenium.*;
