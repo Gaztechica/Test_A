@@ -1,4 +1,4 @@
-package ar.soft.Test.RestfulBooker;
+package ar.soft.Test.RestfulBooker2;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

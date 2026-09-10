@@ -5,21 +5,46 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="add DatabaseTest">
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD/DatabaseInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD/DatabaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD/SqlQueries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD/UserOrderDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD2/DatabaseInitializer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD2/DatabaseTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD2/Order.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD2/SqlQueries.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD2/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/BD2/UserOrderDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/steps/FileSSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/steps/SauceDemoSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/BaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/ReqBaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/ReqResTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker2/ApiTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker2/ConfigReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemo2/baseTest/SelenideBaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemo2/baseTest/SeleniumBaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemo2/pages/SelenideLoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemo2/pages/SeleniumLoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemo2/tests/SelenideLoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemo2/tests/SeleniumLoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemo2/utils/ConfigReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemoSelenide/baseTest/SelenideBaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemoSelenide/baseTest/SeleniumBaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemoSelenide/pages/CartPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemoSelenide/pages/CheckoutPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemoSelenide/pages/ProductsPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemoSelenide/pages/SelenideLoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemoSelenide/pages/SeleniumLoginPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemoSelenide/steps/SauceDemoSteps.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemoSelenide/tests/SelenideLoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemoSelenide/tests/SeleniumLoginTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/SauceDemoSelenide/utils/ConfigReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/ConfigReader.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/runner/SelenideBaseTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/arSelenide.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/saucedemo.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_09_2026_007_1_59__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_09_2026_007_1_59__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_09_2026_007_2_00__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_07_09_2026_007_2_00__Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/For.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/For.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileSTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest/FileSTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/ApiTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/AuthRequestPojo.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker2/AuthRequestPojo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/BasesTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker2/BasesTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/ConfigReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/Test/RestfulBooker/ConfigReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FileSPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/java/ar/soft/modelPage/FileSPage/FileSPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Auto_Test/src/test/resources/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/src/test/resources/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,7 +75,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="060926" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,6 +93,9 @@
         <option name="url" value="https://github.com/Gaztechica/Test_A.git" />
       </UrlAndAccount>
     </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
@@ -159,6 +187,8 @@
     "JUnit.RegaTest.passwordTest.executor": "Run",
     "JUnit.RegaTest.randomAutorisationTest.executor": "Run",
     "JUnit.RegaTest.regNegaTest.executor": "Run",
+    "JUnit.SelenideLoginTest (1).executor": "Run",
+    "JUnit.SelenideLoginTest.executor": "Run",
     "JUnit.TokenService.reguestWithJwtToken.executor": "Run",
     "JUnit.UserTest.UserCreateAdmin.executor": "Run",
     "JUnit.UserTest.UserCreateNabludatelyAdd.executor": "Run",
@@ -568,9 +598,9 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "070926",
+    "git-widget-placeholder": "080926",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java/ar/soft/Test",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java/ar/soft/AT/UI/FileTest",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -582,47 +612,79 @@
       <recent name="ar.soft" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\Test" />
+      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\AT\UI\FileTest" />
+      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\AT\UI" />
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\resources" />
-      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java" />
-      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\main\java" />
+      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\Test" />
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\cucumber" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ar.soft.runner" />
       <recent name="ar.soft.Test.BD2" />
       <recent name="ar.soft.Test.BD" />
       <recent name="ar.soft.Test.Postgres.PostgresUser" />
       <recent name="ar.soft.Test.Postgres.Database" />
-      <recent name="ar.soft.AT.UI.Rr" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.DatabaseTest">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.Postgres.PostgresUser.Main" />
+  <component name="RunManager" selected="TestNG.ApiTest">
+    <configuration name="SelenideLoginTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.Test.Postgres.PostgresUser.*" />
+          <option name="PATTERN" value="ar.soft.Test.SauceDemoSelenide.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.Test.SauceDemoSelenide.tests" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.SauceDemoSelenide.tests.SelenideLoginTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="SelenideLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.*" />
+          <option name="PATTERN" value="ar.soft.Test.SauceDemo2.tests.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
+      <option name="PACKAGE_NAME" value="ar.soft.Test.SauceDemo.tests" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.SauceDemo2.tests.SelenideLoginTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SeleniumLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.Test.SauceDemo2.tests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.Test.SauceDemo.tests" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.SauceDemo2.tests.SeleniumLoginTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="AutoTest" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ar.soft.Test.RestfulBooker.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ar.soft.Test.RestfulBooker" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.RestfulBooker.ApiTest" />
       <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
@@ -642,40 +704,6 @@
       <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.AuthorizationTest" />
       <option name="METHOD_NAME" value="ownerAuthorizationTest" />
       <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DatabaseTest (2)" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.Test.BD.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test.BD" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.BD.DatabaseTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="DatabaseTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.Test.BD2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test.BD2" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.BD2.DatabaseTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
       <properties />
       <listeners />
       <method v="2">
@@ -759,11 +787,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.DatabaseTest" />
-        <item itemvalue="TestNG.DatabaseTest (2)" />
-        <item itemvalue="TestNG.AuthorizationTest" />
+        <item itemvalue="TestNG.ApiTest" />
+        <item itemvalue="JUnit.SelenideLoginTest (1)" />
         <item itemvalue="TestNG.AuthorizationTest.ownerAuthorizationTest" />
-        <item itemvalue="Application.Main" />
+        <item itemvalue="JUnit.SeleniumLoginTest" />
+        <item itemvalue="JUnit.SelenideLoginTest" />
       </list>
     </recent_temporary>
   </component>
