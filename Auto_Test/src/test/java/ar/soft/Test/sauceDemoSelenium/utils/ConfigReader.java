@@ -1,4 +1,4 @@
-package ar.soft.AT.UI.config;
+package ar.soft.Test.sauceDemoSelenium.utils;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -8,13 +8,13 @@ public class ConfigReader {
     private static final Properties properties = new Properties();
 
     static {
-        try (InputStream input = ConfigReader.class.getClassLoader().getResourceAsStream("arSelenide.properties")) {
+        try (InputStream input = ConfigReader.class.getClassLoader().getResourceAsStream("saucedemo.properties")) {
             if (input == null) {
-                throw new RuntimeException("Не удалось найти файл arSelenide.properties в папке ресурсов!");
+                throw new RuntimeException("Не удалось найти файл saucedemo.properties в папке ресурсов!");
             }
             properties.load(input);
         } catch (IOException e) {
-            throw new RuntimeException("Ошибка при чтении файла arSelenide.properties", e);
+            throw new RuntimeException("Ошибка при чтении файла saucedemo.properties", e);
         }
     }
 

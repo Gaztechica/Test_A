@@ -1,4 +1,4 @@
-package ar.soft.AT.UI.steps;
+package ar.soft.Test.sauceDemo.SauceDemoSelenide.steps;
 
 
 import ar.soft.Test.sauceDemo.SauceDemoSelenide.pages.CartPage;
@@ -12,7 +12,11 @@ public class SauceDemoSteps {
     private final CartPage cartPage = new CartPage();
     private final CheckoutPage checkoutPage = new CheckoutPage();
 
-
+    public void login(String username, String password) {
+        loginPage.enterUsername(username);
+        loginPage.enterPassword(password);
+        loginPage.clickLogin();
+    }
 
     public void addTwoItemsToCartAndGoToCart() {
         productsPage.addBackpackToCart();

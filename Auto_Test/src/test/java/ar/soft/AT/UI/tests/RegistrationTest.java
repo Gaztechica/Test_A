@@ -1,6 +1,6 @@
 package ar.soft.AT.UI.tests;
 
-import ar.soft.AT.UI.modelPage.AuthorizationPege;
+import ar.soft.AT.UI.modelPage.authorization.AuthorizationPege;
 import ar.soft.AT.UI.tests.baseTest.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.Test;

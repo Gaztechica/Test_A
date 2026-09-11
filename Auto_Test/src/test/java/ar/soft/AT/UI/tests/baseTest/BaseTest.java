@@ -2,7 +2,7 @@ package ar.soft.AT.UI.tests.baseTest;
 
 //import arSoft.runner.FilterForTest.FilterForTests;
 
-import ar.soft.AT.UI.modelPage.AuthorizationPege;
+import ar.soft.AT.UI.modelPage.authorization.AuthorizationPege;
 import ar.soft.runner.ProjectUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;

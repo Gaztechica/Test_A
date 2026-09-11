@@ -1,6 +1,6 @@
 package ar.soft.AT.UI.tests.authorization;
 
-import ar.soft.AT.UI.modelPage.AuthorizationPege;
+import ar.soft.AT.UI.modelPage.authorization.AuthorizationPege;
 import ar.soft.AT.UI.tests.baseTest.BaseTest;
 import io.qameta.allure.Description;
 import io.qameta.allure.Story;

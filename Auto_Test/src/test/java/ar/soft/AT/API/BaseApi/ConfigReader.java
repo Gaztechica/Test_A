@@ -18,12 +18,12 @@ public class ConfigReader {
         }
     }
 
-    // Ваш универсальный метод остается на месте
+    //  универсальный метод
     public static String get(String key) {
         return properties.getProperty(key);
     }
 
-    // --- НОВЫЕ УДОБНЫЕ МЕТОДЫ ДЛЯ ВАШИХ ПАРАМЕТРОВ ---
+    // --- НОВЫЕ УДОБНЫЕ МЕТОДЫ ДЛЯ ПАРАМЕТРОВ ---
 
     public static String getBaseUri() {
         return get("base.uri");
