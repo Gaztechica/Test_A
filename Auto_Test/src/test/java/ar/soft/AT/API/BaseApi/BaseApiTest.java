@@ -12,9 +12,7 @@ import static io.restassured.RestAssured.given;
 
 public class BaseApiTest {
 
-//    public final static String URL_API = "http://62.113.97.50:8081";
     public final static String URL_API = ConfigReader.getBaseUri();
-
     public RequestSpecification specification;
     public static String token;
 

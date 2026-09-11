@@ -2,6 +2,7 @@ package ar.soft.AT.UI.modelPage.base;
 
 import ar.soft.AT.UI.modelPage.*;
 import ar.soft.AT.UI.modelPage.FileSPage.FilePage;
+import ar.soft.AT.UI.modelPage.authorization.AuthorizationPege;
 import ar.soft.AT.UI.modelPage.projectSettingsPage.ChecklistsSidebarPage;
 import ar.soft.AT.UI.modelPage.projectSettingsPage.SettingsSidebarPage;
 import ar.soft.AT.UI.modelPage.projectSettingsPage.TypesWorkSidebarPage;
