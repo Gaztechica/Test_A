@@ -1,8 +1,10 @@
 package ar.soft.Test.sauceDemoSelenium.tests;
 
+import ar.soft.Test.sauceDemo.steps.SauceDemoSteps;
+import ar.soft.Test.sauceDemoSelenium.baseTest.SeleniumBaseTest;
 import org.junit.jupiter.api.Test;
-import sauceDemoSelenium.baseTest.SeleniumBaseTest;
-import sauceDemoSelenium.steps.SauceDemoSteps;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class SeleniumLoginTest extends SeleniumBaseTest {
 

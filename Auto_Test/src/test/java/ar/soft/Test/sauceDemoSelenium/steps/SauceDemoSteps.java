@@ -1,8 +1,8 @@
 package ar.soft.Test.sauceDemoSelenium.steps;
 
+import ar.soft.Test.sauceDemo.utils.ConfigReader;
+import ar.soft.Test.sauceDemoSelenium.pages.SeleniumLoginPage;
 import org.openqa.selenium.WebDriver;
-import sauceDemoSelenium.pages.SeleniumLoginPage;
-import sauceDemoSelenium.utils.ConfigReader;
 
 public class SauceDemoSteps {
     private final WebDriver driver;

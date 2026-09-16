@@ -2,11 +2,10 @@ package ar.soft.Test.herokuTables;
 
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.ValueSource;
-import sauceDemoSelenium.baseTest.SeleniumBaseTest;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class HerokuTablesTest extends SeleniumBaseTest {
+public class HerokuTablesTest extends BaseTest {
 
     @ParameterizedTest(name = "Проверка локатора: {0}")
     @ValueSource(strings = {
