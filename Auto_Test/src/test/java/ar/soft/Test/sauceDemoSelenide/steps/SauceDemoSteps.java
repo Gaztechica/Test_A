@@ -1,9 +1,9 @@
 package ar.soft.Test.sauceDemoSelenide.steps;
 
-import sauceDemoSelenide.pages.CartPage;
-import sauceDemoSelenide.pages.CheckoutPage;
-import sauceDemoSelenide.pages.ProductsPage;
-import sauceDemoSelenide.pages.SelenideLoginPage;
+import ar.soft.Test.sauceDemo.SauceDemoSelenide.pages.CartPage;
+import ar.soft.Test.sauceDemo.SauceDemoSelenide.pages.CheckoutPage;
+import ar.soft.Test.sauceDemo.SauceDemoSelenide.pages.ProductsPage;
+import ar.soft.Test.sauceDemo.SauceDemoSelenide.pages.SelenideLoginPage;
 
 public class SauceDemoSteps {
     private final SelenideLoginPage loginPage = new SelenideLoginPage();

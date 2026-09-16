@@ -1,8 +1,10 @@
 package ar.soft.AT.UI.tests.baseTest;
 
 import ar.soft.AT.UI.config.ConfigReader;
-import ar.soft.AT.UI.steps.authSteps.AuthSteps;
+import ar.soft.AT.UI.modelPage.authorization.AuthorizationsSPage;
 import com.codeborne.selenide.Configuration;
+import com.codeborne.selenide.Selenide;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 
@@ -17,17 +19,61 @@ public class SelenideBaseTest {
         Configuration.browser = "chrome";
         Configuration.timeout = 5000;
         Configuration.holdBrowserOpen = true;
+
+//        // получаем токен один раз перед тестами ВАЖНО: Запрещаем Selenide закрывать браузер между тестами,
+//        // иначе при запуске второго теста сессия сотрется
+//        Configuration.holdBrowserOpen = true;
+//
+//        // 2. Получаем токен авторизации через Rest Assured
+//        String token = AuthSteps.getToken();
+//
+//        // 3. Принудительно открываем фронтенд для инициализации LocalStorage
+//        String baseUrl = ConfigReader.get("arSelenide.url");
+//        open(baseUrl + "/login");
+//
+//        // 4. Записываем токен в LocalStorage один раз для ВСЕГО прогона тестов
+//        Selenide.localStorage().setItem("token", token);
+//
+//        // 5. Освежаем страницу, чтобы войти в систему
+//        Selenide.refresh();
     }
+
+//    //получаем токен через Апи и переходим в вэб
+//    @BeforeEach
+//    void loginViaApi() {
+//        // 1. Быстро получаем токен с бэкенда через Rest Assured
+//        String token = AuthSteps.getToken();
+//
+//        // 2. Открываем фронтенд, чтобы инициализировать контекст LocalStorage для этого домена
+//        String baseUrl = ConfigReader.get("arSelenide.url");
+//        open(baseUrl + "/login");
+//
+//        // 3. Записываем токен напрямую в LocalStorage браузера
+//        // Замените первый аргумент "token" на точное имя ключа вашего приложения, если оно отличается
+//        com.codeborne.selenide.Selenide.localStorage().setItem("token", token);
+//
+//        // 4. Освежаем страницу — скрипты фронтенда увидят токен и пропустят нас в личный кабинет!
+//        com.codeborne.selenide.Selenide.refresh();
+//    }
+
 
     // НОВЫЙ МЕТОД: будет запускаться строго ПЕРЕД КАЖДЫМ @Test
     @BeforeEach
     public void setUpLogin() {
         open(ConfigReader.get("arSelenide.url"));
 
-        AuthSteps steps = new AuthSteps();
+        AuthorizationsSPage steps = new AuthorizationsSPage();
         steps.login(
                 ConfigReader.get("arSelenide.email"),
                 ConfigReader.get("arSelenide.password")
         );
+    }
+
+    @AfterEach
+    void tearDown() {
+        // Очищаем куки и локальное хранилище после каждого теста,
+        // чтобы гарантировать изоляцию (следующий тест начнется с "чистого листа")
+        Selenide.clearBrowserCookies();
+        Selenide.clearBrowserLocalStorage();
     }
 }

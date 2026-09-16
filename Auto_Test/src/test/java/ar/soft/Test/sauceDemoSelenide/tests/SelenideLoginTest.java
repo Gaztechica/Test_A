@@ -1,8 +1,9 @@
 package ar.soft.Test.sauceDemoSelenide.tests;
 
+
+import ar.soft.Test.sauceDemoSelenide.baseTest.SelenideBaseTest;
+import ar.soft.Test.sauceDemoSelenide.steps.SauceDemoSteps;
 import org.junit.jupiter.api.Test;
-import sauceDemoSelenide.baseTest.SelenideBaseTest;
-import sauceDemoSelenide.steps.SauceDemoSteps;
 
 public class SelenideLoginTest extends SelenideBaseTest {
 
