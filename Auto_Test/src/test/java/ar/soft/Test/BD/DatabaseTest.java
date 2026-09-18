@@ -10,9 +10,18 @@ import java.util.concurrent.Callable;
 
 public class DatabaseTest {
 
-    private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
-    private static final String USER = "postgres";
-    private static final String PASSWORD = "Postgres";
+////    Postgres локально
+//    private static final String URL = "jdbc:postgresql://localhost:5432/postgres";
+//    private static final String USER = "postgres";
+//    private static final String PASSWORD = "Postgres";
+
+    // Динамически определяем хост: если тесты запущены в Docker, используем имя сервиса, иначе — localhost
+    private static final String DB_HOST = System.getenv("DOCKER_ENV") != null ? "postgres" : "localhost";
+
+    // Параметры подключения из docker-compose.yml
+    private static final String URL = "jdbc:postgresql://" + DB_HOST + ":5432/test_db";
+    private static final String USER = "test_user";
+    private static final String PASSWORD = "test_password";
 
     private Connection connection;
     private UserOrderDao dao;

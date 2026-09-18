@@ -4,6 +4,8 @@ import ar.soft.AT.UI.config.ConfigReader;
 import ar.soft.AT.UI.modelPage.authorization.AuthorizationsSPage;
 import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
+import com.codeborne.selenide.logevents.SelenideLogger;
+import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -19,6 +21,12 @@ public class SelenideBaseTest {
         Configuration.browser = "chrome";
         Configuration.timeout = 5000;
         Configuration.holdBrowserOpen = true;
+
+        // Включаем логгер, который сам будет делать скриншоты при падениях
+        SelenideLogger.addListener("AllureSelenide", new AllureSelenide()
+                .screenshots(true)
+                .savePageSource(false) // по желанию: сохранять ли HTML-код страницы
+        );
 
 //        // получаем токен один раз перед тестами ВАЖНО: Запрещаем Selenide закрывать браузер между тестами,
 //        // иначе при запуске второго теста сессия сотрется
@@ -36,7 +44,7 @@ public class SelenideBaseTest {
 //
 //        // 5. Освежаем страницу, чтобы войти в систему
 //        Selenide.refresh();
-    }
+}
 
 //    //получаем токен через Апи и переходим в вэб
 //    @BeforeEach
@@ -57,23 +65,23 @@ public class SelenideBaseTest {
 //    }
 
 
-    // НОВЫЙ МЕТОД: будет запускаться строго ПЕРЕД КАЖДЫМ @Test
-    @BeforeEach
-    public void setUpLogin() {
-        open(ConfigReader.get("arSelenide.url"));
+// НОВЫЙ МЕТОД: будет запускаться строго ПЕРЕД КАЖДЫМ @Test
+@BeforeEach
+public void setUpLogin() {
+    open(ConfigReader.get("arSelenide.url"));
 
-        AuthorizationsSPage steps = new AuthorizationsSPage();
-        steps.login(
-                ConfigReader.get("arSelenide.email"),
-                ConfigReader.get("arSelenide.password")
-        );
-    }
+    AuthorizationsSPage steps = new AuthorizationsSPage();
+    steps.login(
+            ConfigReader.get("arSelenide.email"),
+            ConfigReader.get("arSelenide.password")
+    );
+}
 
-    @AfterEach
-    void tearDown() {
-        // Очищаем куки и локальное хранилище после каждого теста,
-        // чтобы гарантировать изоляцию (следующий тест начнется с "чистого листа")
-        Selenide.clearBrowserCookies();
-        Selenide.clearBrowserLocalStorage();
-    }
+@AfterEach
+void tearDown() {
+    // Очищаем куки и локальное хранилище после каждого теста,
+    // чтобы гарантировать изоляцию (следующий тест начнется с "чистого листа")
+    Selenide.clearBrowserCookies();
+    Selenide.clearBrowserLocalStorage();
+}
 }
