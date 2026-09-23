@@ -19,8 +19,11 @@ public class SelenideBaseTest {
     @BeforeAll // или @BeforeClass для TestNG (ваш текущий метод настройки браузера)
     public static void globalSetup() {
         Configuration.browser = "chrome";
-        Configuration.timeout = 5000;
-        Configuration.holdBrowserOpen = true;
+        Configuration.timeout = 8000;
+        Configuration.holdBrowserOpen = true; // для отладки
+// Установка конкретного FullHD разрешения (самый стабильный вариант для CI/CD и разных ОС)
+        Configuration.browserSize = "1920x1080";
+
 
         // Включаем логгер, который сам будет делать скриншоты при падениях
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide()

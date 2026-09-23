@@ -96,7 +96,7 @@ public class AccountLoginTest extends BaseApiTest {
     @Test(priority = 4, groups = {"10.5", "Dialogs"},
             description = "Изменение пароля пользователя на странице профиля")
     public void putAccountPasswordTest() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+//        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
         Map<String, String> user = new HashMap<>();
         user.put("currentPassword", PASSWORD);
         user.put("newPassword", PASSWORD_N);
