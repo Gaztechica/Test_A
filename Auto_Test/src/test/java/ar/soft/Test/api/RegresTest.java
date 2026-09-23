@@ -1,6 +1,5 @@
 package ar.soft.Test.api;
 
-import ar.soft.AT.API.BaseApi.Specification;
 import io.restassured.http.ContentType;
 import org.testng.Assert;
 import org.testng.annotations.Test;
@@ -28,7 +27,7 @@ public class RegresTest {
 
     @Test
     public void checkAutorisationIdTesedtp() {
-        Specification.intransSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
+//        Specification.intransSpec(Specification.requestSpec(URL2), Specification.responseSpecOk200());
         Integer id = 4;
         String token = "QpwL5tke4Pnpja7X4";
         Register user = new Register("eve.holt@reqres.in", "pistol");

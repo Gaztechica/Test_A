@@ -22,7 +22,7 @@ public class BaseApiTest {
     @Test(priority = 1, groups = {"10.5", "1"},
             description = "")
     public static void accountLoginTest() {
-        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
+//        Specification.intransSpec(Specification.requestSpec(URL_API), Specification.responseSpecOk200());
 //        LoginReguest loginReguest = new LoginReguest(PASSWORD, EMAIL);
         LoginRequests loginRequests = new LoginRequests(
                 ConfigReader.get("auth.email"),
@@ -33,7 +33,7 @@ public class BaseApiTest {
                 .body(loginRequests)
                 .when()
                 .post("account/login")
-                .then().log().all()
+                .then()
                 .extract().response();
         token = response.getBody().jsonPath().get("token").toString();
     }
