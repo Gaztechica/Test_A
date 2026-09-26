@@ -18,6 +18,17 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -64,6 +75,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "TestNG.AuthorizationTest.ownerAuthorizationTest.executor": "Run",
+    "git-widget-placeholder": "260926",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/User/IdeaProjects/AutoTest/src/test/java",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test",
@@ -202,6 +214,19 @@
       <option name="presentableId" value="Default" />
       <updated>1708069850641</updated>
     </task>
+    <task id="LOCAL-00001" summary="add action">
+      <option name="closed" value="true" />
+      <created>1790454182700</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1790454182700</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add action" />
+    <option name="LAST_COMMIT_MESSAGE" value="add action" />
   </component>
 </project>
