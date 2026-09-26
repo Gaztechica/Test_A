@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org",
+  "title": "ResponseDirectoryDto",
+  "type": "object",
+  "required": ["timestamp", "success", "data"],
+  "properties": {
+    "timestamp": { "type": "string" },
+    "success": { "type": "string", "enum": ["true", "false"] },
+    "error": { "type": ["string", "null"] },
+    "description": { "type": ["string", "null"] },
+    "token": { "type": ["string", "null"] },
+    "refreshToken": { "type": ["string", "null"] },
+    "pages": { "type": ["integer", "null"] },
+    "data": {
+      "type": "object",
+      "required": ["id", "name", "projectId"],
+      "properties": {
+        "id": { "type": "integer" },
+        "name": { "type": "string" },
+        "projectId": { "type": "integer" },
+        "parentDirectoryId": { "type": ["integer", "null"] },
+        "descendantDirectories": {
+          "type": "array",
+          "items": {}
+        },
+        "filesInDirectory": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "name"],
+            "properties": {
+              "id": { "type": "integer" },
+              "name": { "type": "string" },
+              "version": { "type": "integer" },
+              "type": { "type": "string" },
+              "fileExtension": { "type": "string" },
+              "fileSize": { "type": "integer" },
+              "creationDate": { "type": "string" },
+              "downloadLink": { "type": "string" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

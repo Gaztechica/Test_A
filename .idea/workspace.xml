@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="refactor API Test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/.gitignore" afterDir="false" />
-    </list>
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="add action" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,7 +34,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="1" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -579,7 +576,7 @@
     "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
     "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
     "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "170926",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java/ar/soft/Test",
     "project.structure.last.edited": "Modules",
@@ -771,10 +768,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="TestNG.AuthorizationTest.ownerAuthorizationTest" />
-        <item itemvalue="JUnit.HerokuTablesTest" />
-        <item itemvalue="JUnit.SeleniumLoginTest" />
-        <item itemvalue="TestNG.ApiTest" />
         <item itemvalue="TestNG.AuthorizationTest" />
+        <item itemvalue="TestNG.ApiTest" />
+        <item itemvalue="JUnit.SeleniumLoginTest" />
+        <item itemvalue="JUnit.HerokuTablesTest" />
       </list>
     </recent_temporary>
   </component>
@@ -793,30 +790,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
-    </task>
-    <task id="LOCAL-00093" summary="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
-      <option name="closed" value="true" />
-      <created>1719503728636</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1719503728639</updated>
-    </task>
-    <task id="LOCAL-00094" summary="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
-      <option name="closed" value="true" />
-      <created>1719808218698</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1719808218698</updated>
-    </task>
-    <task id="LOCAL-00095" summary="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
-      <option name="closed" value="true" />
-      <created>1721733485578</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1721733485578</updated>
     </task>
     <task id="LOCAL-00096" summary="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
       <option name="closed" value="true" />
@@ -1186,7 +1159,31 @@
       <option name="project" value="LOCAL" />
       <updated>1790168112207</updated>
     </task>
-    <option name="localTasksCounter" value="142" />
+    <task id="LOCAL-00142" summary="refactor API Test">
+      <option name="closed" value="true" />
+      <created>1790429076385</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1790429076387</updated>
+    </task>
+    <task id="LOCAL-00143" summary="add action">
+      <option name="closed" value="true" />
+      <created>1790429502074</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1790429502075</updated>
+    </task>
+    <task id="LOCAL-00144" summary="add action">
+      <option name="closed" value="true" />
+      <created>1790429986016</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1790429986016</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1214,7 +1211,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="fix LogFilePage" />
     <MESSAGE value="fix TypesWorkSidebarTest" />
     <MESSAGE value="Merge pull request #114 from Gaztechica/07062025&#10;&#10;i" />
     <MESSAGE value="fix TypesWorkSidebarTest + new TypesWork" />
@@ -1239,7 +1235,8 @@
     <MESSAGE value="refactor Selenide Test" />
     <MESSAGE value="refactor Postgres Test" />
     <MESSAGE value="refactor API Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor API Test" />
+    <MESSAGE value="add action" />
+    <option name="LAST_COMMIT_MESSAGE" value="add action" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_adminAuthorizationTest.ic" NAME="AuthorizationTest.adminAuthorizationTest Coverage Results" MODIFIED="1747916205562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
