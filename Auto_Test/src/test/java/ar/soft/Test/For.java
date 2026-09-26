@@ -7,6 +7,9 @@ public class For {
 
 
 
+
+
+
         /**
          * for each  массивы
           */

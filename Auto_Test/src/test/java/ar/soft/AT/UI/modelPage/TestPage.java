@@ -1,0 +1,41 @@
+package ar.soft.AT.UI.modelPage;
+
+import ar.soft.AT.UI.modelPage.base.BasePage;
+import jdk.jfr.Name;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import ru.qa.elements.TextBox;
+
+public class TestPage extends BasePage {
+
+    public TestPage(WebDriver driver) {
+        super(driver);
+    }
+
+    @Name("кнопка ")
+    public TestPage btnAddCheck() {
+        getDriver().findElement(By.xpath(" ")).click();
+
+        return this;
+    }
+
+    @Name("referenceField")
+    @FindBy(xpath = "//input[@class='ant-input']")
+    public WebElement newNameCheckClick;
+
+    @Name("referenceField")
+    @FindBy(xpath = "//input[@class='ant-input']")
+    public TextBox newNameCheckClick2;
+
+    @Name("поле ввода с примером ")
+    @FindBy(xpath = " ")
+    private WebElement btnCheckboxUser;
+
+    public TestPage btnCheckboxUserClick() {
+        btnCheckboxUser.click();
+
+        return this;
+    }
+}
