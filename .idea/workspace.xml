@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f5b750ed-fc1b-4401-8007-6f4dc00fd1ef" name="Changes" comment="" />
+    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="add action" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +22,9 @@
   &quot;associatedIndex&quot;: 1
 }</component>
   <component name="ProjectId" id="2cRMHBBpoIrjcissMjle212zbYa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -60,9 +63,10 @@
     "JUnit.UserTest.UserTestPodraydchiAdd.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.AuthorizationTest.ownerAuthorizationTest.executor": "Run",
     "kotlin-language-version-configured": "true",
     "last_directory_selection": "C:/Users/User/IdeaProjects/AutoTest/src/test/java",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/JenkinsQA_07",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test",
     "onboarding.tips.debug.path": "C:/Users/User/IdeaProjects/AutoTest/src/main/java/org/example/Main.java",
     "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices"
   },
@@ -78,6 +82,7 @@
       <recent name="arSoft.runner" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
       <recent name="C:\Users\User\IdeaProjects\AutoTest\src\imgs" />
       <recent name="C:\Users\User\IdeaProjects\AutoTest\src\main\resources" />
     </key>
@@ -89,7 +94,7 @@
       <recent name="arSoft.runner" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.RegaTest.UserCreateAdminSearch">
+  <component name="RunManager" selected="TestNG.AuthorizationTest.ownerAuthorizationTest">
     <configuration name="RegaTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
@@ -153,29 +158,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RegaTest.UserTestNabludately" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="AuthorizationTest.ownerAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="ar.soft.*" />
+          <option name="PATTERN" value="ar.soft.AT.UI.tests.authorization.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.RegaTest" />
-      <option name="METHOD_NAME" value="UserTestNabludately" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.tests.authorization" />
+      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.tests.authorization.AuthorizationTest" />
+      <option name="METHOD_NAME" value="ownerAuthorizationTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AuthorizationTest.ownerAuthorizationTest" />
         <item itemvalue="JUnit.RegaTest.UserCreateAdminSearch" />
         <item itemvalue="JUnit.RegaTest.AdminPanelTest" />
         <item itemvalue="JUnit.RegaTest" />
         <item itemvalue="JUnit.RegaTest.UserSearchTest" />
-        <item itemvalue="JUnit.RegaTest.UserTestNabludately" />
       </list>
     </recent_temporary>
   </component>
