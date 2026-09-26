@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org",
+  "title": "UsersShortListWithMetaResponse",
+  "type": "object",
+  "required": [
+    "page",
+    "per_page",
+    "total",
+    "total_pages",
+    "data",
+    "support"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "page": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "per_page": {
+      "type": "integer",
+      "minimum": 5
+    },
+    "total": {
+      "type": "integer",
+      "minimum": 5
+    },
+    "total_pages": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "email",
+          "first_name",
+          "last_name",
+          "avatar"
+        ],
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "integer",
+            "minimum": 5
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "first_name": {
+            "type": "string"
+          },
+          "last_name": {
+            "type": "string"
+          },
+          "avatar": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    },
+    "support": {
+      "type": "object",
+      "required": [
+        "url",
+        "text"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "text": {
+          "type": "string"
+        }
+      }
+    },
+    "_meta": {
+      "type": "object",
+      "required": [
+        "powered_by"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "powered_by": {
+          "type": "string"
+        },
+        "docs_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "upgrade_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "example_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "variant": {
+          "type": "string"
+        },
+        "message": {
+          "type": "string"
+        },
+        "context": {
+          "type": "string"
+        },
+        "cta": {
+          "type": "object",
+
+          "required": [
+            "label",
+            "url"
+          ],
+          "additionalProperties": false,
+          "properties": {
+            "label": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string",
+              "format": "uri"
+            }
+          }
+        }
+      }
+    }
+  }
+}

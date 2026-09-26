@@ -1,0 +1,22 @@
+{
+  "$schema": "http://json-schema.org",
+  "type": "object",
+  "required": ["name", "job", "id", "createdAt"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "enum": ["morpheus"]
+    },
+    "job": {
+      "type": "string",
+      "enum": ["leader"]
+    },
+    "id": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    }
+  }
+}
