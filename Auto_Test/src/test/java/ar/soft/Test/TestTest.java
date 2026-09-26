@@ -10,7 +10,6 @@ import java.util.HashMap;
 
 public class TestTest extends BaseTest {
 
-
     @Test
     public void createTypesWork() throws InterruptedException {
         TestPage testPage = new TestPage(getDriver())

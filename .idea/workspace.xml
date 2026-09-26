@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d26dfe4e-1c86-4e4a-be09-775e75ae6a94" name="Changes" comment="refactor API Test">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Auto_Test/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Auto_Test/.gitignore" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,595 +68,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "Application.DatabaseInitializer.executor": "Run",
-    "Application.DatabaseMain.executor": "Run",
-    "Application.DatabaseTest.executor": "Run",
-    "Application.ElseIf.executor": "Run",
-    "Application.Listt.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.PostgresApp.executor": "Run",
-    "Application.PostgresTest.executor": "Run",
-    "Application.Sql1.executor": "Run",
-    "JUnit.ApiTest.GetUsersListWithQueryParamAndValidateSchemaTest.executor": "Run",
-    "JUnit.ApiTest.createUserAndValidateSchemaTest.executor": "Run",
-    "JUnit.ApiTest.executor": "Run",
-    "JUnit.ApiTest.restAssured2Test.executor": "Run",
-    "JUnit.ApiTest.restAssured2Test6.executor": "Run",
-    "JUnit.ApiTest.restAssuredTest.executor": "Run",
-    "JUnit.ApiTest.testCreateUserAndValidateSchema.executor": "Run",
-    "JUnit.ApiTest.testGetUsersListWithQueryParamAndValidateSchema.executor": "Run",
-    "JUnit.AuthorizationSTest.authorizationTest.executor": "Run",
-    "JUnit.AuthorizationSTest.executor": "Run",
-    "JUnit.AuthorizationSTest.testEndToEndPurchaseFlow.executor": "Run",
-    "JUnit.AutorisaitionTest.AutorisationTest.executor": "Run",
-    "JUnit.AutorisaitionTest.executor": "Run",
-    "JUnit.AutorisaitionTest.jhgf.executor": "Run",
-    "JUnit.AutorisaitionTest.regCoogiTest.executor": "Run",
-    "JUnit.AutorisaitionTest.regEmailNegaTest.executor": "Run",
-    "JUnit.AutorisaitionTest.regNegaTest.executor": "Run",
-    "JUnit.AutorisaitionTest.regaTest.executor": "Run",
-    "JUnit.AutorisaitionTest.removePaswordTest.executor": "Run",
-    "JUnit.AutorisaitionTest.restorePasswordTest.executor": "Run",
-    "JUnit.AutorisationTest.checkA222utorisation23331IdTest.executor": "Run",
-    "JUnit.AutorisationTest.checkA22utorisation23331IdTest.executor": "Run",
-    "JUnit.AutorisationTest.checkAutorisation1IdTest.executor": "Run",
-    "JUnit.AutorisationTest.checkAutorisation21IdTest.executor": "Run",
-    "JUnit.AutorisationTest.checkAutorisation23331IdTest.executor": "Run",
-    "JUnit.AutorisationTest.checkAutorisationId22Test.executor": "Run",
-    "JUnit.AutorisationTest.checkAutorisationIdTest.executor": "Run",
-    "JUnit.AutorisationTest.checkAutorisationIdTest2.executor": "Run",
-    "JUnit.AutorisationTest.checkAutorisationIdTest3.executor": "Run",
-    "JUnit.AutorisationTest.checkAutorisationIdTest4.executor": "Run",
-    "JUnit.AutorisationTest.executor": "Run",
-    "JUnit.AutorisationTest.restAssured2Test.executor": "Run",
-    "JUnit.BibliotekaTest.BibliotekaTest.executor": "Run",
-    "JUnit.DirectoryTests.createAndThenDeleteDirectorySuccessTest.executor": "Run",
-    "JUnit.DirectoryTests.createNewDirectoryAndValidateResponseTest.executor": "Run",
-    "JUnit.DirectoryTests.deleteDirectorySuccessTest.executor": "Run",
-    "JUnit.DirectoryTests.editDirectorySuccessTest.executor": "Run",
-    "JUnit.DirectoryTests.editNewDirectoryAndValidateResponseTest.executor": "Run",
-    "JUnit.DirectoryTests.executor": "Run",
-    "JUnit.DraftTest.passwordTest.executor": "Run",
-    "JUnit.DynamicLoadingTest.executor": "Run",
-    "JUnit.FileSTest.createFolderTest.executor": "Run",
-    "JUnit.HerokuTablesTest.executor": "Run",
-    "JUnit.JwtToken.executor": "Run",
-    "JUnit.JwtToken.reguestWithJwtToken.executor": "Run",
-    "JUnit.LibraryTest.HrefPolitic.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListCreate.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListDelete.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListImport.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListRemove.executor": "Run",
-    "JUnit.LibraryTest.libraryChecListRemovt.executor": "Run",
-    "JUnit.LibraryTest.libraryClick.executor": "Run",
-    "JUnit.LibraryTest.normativeDocDeleteTest.executor": "Run",
-    "JUnit.LogFileTest.cancelLogDelTest.executor": "Run",
-    "JUnit.LogFileTest.logDelTest.executor": "Run",
-    "JUnit.LogFileTest.logSerchTest.executor": "Run",
-    "JUnit.LogTest.logTest.executor": "Run",
-    "JUnit.ParameterizedDirectoryNegativeTests.executor": "Run",
-    "JUnit.ParameterizedDirectoryTests.createDirectoryValidNamesTest.executor": "Run",
-    "JUnit.ParameterizedDirectoryTests.executor": "Run",
-    "JUnit.ProjectTest.HrefBot.executor": "Run",
-    "JUnit.ProjectTest.HrefPolitic.executor": "Run",
-    "JUnit.ProjectTest.HrefPoliticUser.executor": "Run",
-    "JUnit.ProjectTest.ProjectTest.executor": "Run",
-    "JUnit.ProjectTest.RegNegaTest.executor": "Run",
-    "JUnit.ProjectTest.RegasTest.executor": "Run",
-    "JUnit.ProjectTest.UserTestPodraydchic.executor": "Run",
-    "JUnit.ProjectTest.cancelCreateProgectTest.executor": "Run",
-    "JUnit.ProjectTest.createProgect.executor": "Run",
-    "JUnit.ProjectTest.executor": "Run",
-    "JUnit.ProjectTest.hrefBot.executor": "Run",
-    "JUnit.ProjectTest.hrefPolitic.executor": "Run",
-    "JUnit.ProjectTest.hrefPoliticUser.executor": "Run",
-    "JUnit.ProjectTest.poginacyaTest.executor": "Run",
-    "JUnit.ProjectTest.projectTest.executor": "Run",
-    "JUnit.ProjectTest.testHrefPolitiCopi.executor": "Run",
-    "JUnit.ProjectTest.userTestAdmin.executor": "Run",
-    "JUnit.RegaTest.RegasTest.executor": "Run",
-    "JUnit.RegaTest.autorisationTest.executor": "Run",
-    "JUnit.RegaTest.passwordTest.executor": "Run",
-    "JUnit.RegaTest.randomAutorisationTest.executor": "Run",
-    "JUnit.RegaTest.regNegaTest.executor": "Run",
-    "JUnit.SelenideLoginTest (1).executor": "Run",
-    "JUnit.SelenideLoginTest.executor": "Run",
-    "JUnit.SeleniumLoginTest (1).executor": "Run",
-    "JUnit.SeleniumLoginTest.executor": "Run",
-    "JUnit.TokenService.reguestWithJwtToken.executor": "Run",
-    "JUnit.UserTest.UserCreateAdmin.executor": "Run",
-    "JUnit.UserTest.UserCreateNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.UserCreatePodraydchicAdd.executor": "Run",
-    "JUnit.UserTest.UserInviteAdmin.executor": "Run",
-    "JUnit.UserTest.UserRemove.executor": "Run",
-    "JUnit.UserTest.UserSearchTest.executor": "Run",
-    "JUnit.UserTest.UserTestInspektor.executor": "Run",
-    "JUnit.UserTest.UserTestNabludately.executor": "Run",
-    "JUnit.UserTest.UserTestNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.UserTestPodraydchic.executor": "Run",
-    "JUnit.UserTest.executor": "Run",
-    "JUnit.UserTest.userCreaNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.userCreateAdmin.executor": "Run",
-    "JUnit.UserTest.userCreateAdminSearch.executor": "Run",
-    "JUnit.UserTest.userCreateDelete.executor": "Run",
-    "JUnit.UserTest.userCreateInspektor.executor": "Run",
-    "JUnit.UserTest.userCreateNabludately.executor": "Run",
-    "JUnit.UserTest.userCreateNabludatelyAdd.executor": "Run",
-    "JUnit.UserTest.userCreatePodraydchiAdd.executor": "Run",
-    "JUnit.UserTest.userCreatePodraydchic.executor": "Run",
-    "JUnit.UserTest.userCreatePodraydchicAdd.executor": "Run",
-    "JUnit.UserTest.userCreateRemove.executor": "Run",
-    "JUnit.UserTest.userInviteAdmin.executor": "Run",
-    "JUnit.UserTest.userInviteInspektor.executor": "Run",
-    "JUnit.UserTest.userInviteNabludately.executor": "Run",
-    "JUnit.UserTest.userInvitePodraydchic.executor": "Run",
-    "JUnit.UserTest.userSearchTest.executor": "Run",
-    "JUnit.UserTest.userTestAdmin.executor": "Run",
-    "JUnit.UserTest.userTestInspektor.executor": "Run",
-    "JUnit.ar.soft.AT.UI.Inspection.* and 2 more.executor": "Run",
-    "Maven.AutoTest [clean].executor": "Run",
-    "Maven.AutoTest [io.qameta.allure:allure-maven:2.12.0:report].executor": "Run",
-    "Maven.AutoTest [io.qameta.allure:allure-maven:2.12.0:serve].executor": "Run",
-    "Maven.AutoTest [org.apache.maven.plugins:maven-clean-plugin:3.1.0:clean].executor": "Run",
-    "Maven.AutoTest [test].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "TestNG.AccountLoginPojoTest.GetAccountInfoTest.executor": "Run",
-    "TestNG.AccountLoginPojoTest.PostAccountOrganizationTest.executor": "Run",
-    "TestNG.AccountLoginPojoTest.PutAccountPasswordTest.executor": "Run",
-    "TestNG.AccountLoginPojoTest.PutAccountTest.executor": "Run",
-    "TestNG.AccountLoginPojoTest.checkAccountInfoTests.executor": "Run",
-    "TestNG.AccountLoginPojoTest.checkAccountLoginTest.executor": "Run",
-    "TestNG.AccountLoginPojoTest.checkAccountLoginTest2.executor": "Run",
-    "TestNG.AccountLoginPojoTest.checkAccountOrganizationTest.executor": "Run",
-    "TestNG.AccountLoginPojoTest.checkAccountOrganizationTests.executor": "Run",
-    "TestNG.AccountLoginPojoTest.executor": "Run",
-    "TestNG.AccountLoginPojoTest.renameAccountPasswordTest.executor": "Run",
-    "TestNG.AccountLoginTest.accountAuthTest.executor": "Run",
-    "TestNG.AccountLoginTest.accountInfoTest.executor": "Run",
-    "TestNG.AccountLoginTest.accountLoginTest.executor": "Run",
-    "TestNG.AccountLoginTest.accountOrganizationTest.executor": "Run",
-    "TestNG.AccountLoginTest.checkAccountInfoTest4s.executor": "Run",
-    "TestNG.AccountLoginTest.checkAccountInfoTests.executor": "Run",
-    "TestNG.AccountLoginTest.checkAccountLoginTest.executor": "Run",
-    "TestNG.AccountLoginTest.checkAccountOrganizationTests.executor": "Run",
-    "TestNG.AccountLoginTest.executor": "Run",
-    "TestNG.AccountLoginTest.putAccountPasswordTest.executor": "Run",
-    "TestNG.ApiTest.AuthEndpointMatrixTest.executor": "Run",
-    "TestNG.ApiTest.GetUsersListWithQueryParamAndValidateSchemaTest.executor": "Run",
-    "TestNG.ApiTest.executor": "Run",
-    "TestNG.ApiTest.httpTest.executor": "Run",
-    "TestNG.ApiTest.testAuthEndpointMatrix.executor": "Run",
-    "TestNG.ApiTest.testAuthEndpointMatrixStatus.executor": "Run",
-    "TestNG.ApiTest.testInvalidContentType.executor": "Run",
-    "TestNG.ApiTest.testInvalidMethodGet.executor": "Run",
-    "TestNG.ApiTest.testLongUsernameBoundary.executor": "Run",
-    "TestNG.ApiTest.testSqlInjectionProtection.executor": "Run",
-    "TestNG.ApiTest.testSqlInjectionsProtection.executor": "Run",
-    "TestNG.AuthorizationApiTest.authorizationTest.executor": "Run",
-    "TestNG.AuthorizationTest.GooglePlayTest.executor": "Run",
-    "TestNG.AuthorizationTest.adminAuthorizationTest.executor": "Run",
-    "TestNG.AuthorizationTest.againRestorePasswordTest.executor": "Run",
-    "TestNG.AuthorizationTest.badEmailTest.executor": "Run",
-    "TestNG.AuthorizationTest.executor": "Run",
-    "TestNG.AuthorizationTest.hrefBot.executor": "Run",
-    "TestNG.AuthorizationTest.hrefPolitic.executor": "Run",
-    "TestNG.AuthorizationTest.hrefPoliticUser.executor": "Run",
-    "TestNG.AuthorizationTest.hrefSupport.executor": "Run",
-    "TestNG.AuthorizationTest.iconARMobileTest.executor": "Run",
-    "TestNG.AuthorizationTest.inspectorAuthorizationTest.executor": "Run",
-    "TestNG.AuthorizationTest.logoTest.executor": "Run",
-    "TestNG.AuthorizationTest.noProjectAuthorizationTest.executor": "Run",
-    "TestNG.AuthorizationTest.notEmailPasswordTest.executor": "Run",
-    "TestNG.AuthorizationTest.notEmailTest.executor": "Run",
-    "TestNG.AuthorizationTest.notPasswordTest.executor": "Run",
-    "TestNG.AuthorizationTest.notProjectsAdminTest.executor": "Run",
-    "TestNG.AuthorizationTest.notProjectsError.executor": "Run",
-    "TestNG.AuthorizationTest.notRegisteredEmailTest.executor": "Run",
-    "TestNG.AuthorizationTest.observerAuthorizationTest.executor": "Run",
-    "TestNG.AuthorizationTest.ownerAuthorization2Test.executor": "Run",
-    "TestNG.AuthorizationTest.ownerAuthorizationTest.executor": "Run",
-    "TestNG.AuthorizationTest.passwordTest.executor": "Run",
-    "TestNG.AuthorizationTest.poginacyaTest.executor": "Run",
-    "TestNG.AuthorizationTest.regEmailNegaTest.executor": "Run",
-    "TestNG.AuthorizationTest.regNegaTest.executor": "Run",
-    "TestNG.AuthorizationTest.regaTest.executor": "Run",
-    "TestNG.AuthorizationTest.removePasswordTest.executor": "Run",
-    "TestNG.AuthorizationTest.restorePasswordTest.executor": "Run",
-    "TestNG.AuthorizationTest.restoreTest.executor": "Run",
-    "TestNG.AuthorizationTest.subcontractorAuthorizationTest.executor": "Run",
-    "TestNG.AuthorizationTest.testRandomEmai.executor": "Run",
-    "TestNG.AuthorizationTest.testRandomEmail.executor": "Run",
-    "TestNG.AuthorizationTest.testRandomRega.executor": "Run",
-    "TestNG.AuthorizationTest.trialTextTest.executor": "Run",
-    "TestNG.AuthorizationTest.visorAuthorizationTest.executor": "Run",
-    "TestNG.AutorisaitionTest.executor": "Run",
-    "TestNG.AutorisaitionTest.hrefPolitic.executor": "Run",
-    "TestNG.AutorisaitionTest.localizTest.executor": "Run",
-    "TestNG.AutorisaitionTest.randomAutorisationTest.executor": "Run",
-    "TestNG.AutorisaitionTest.regEmailNegaTest.executor": "Run",
-    "TestNG.AutorisaitionTest.regNegaTest.executor": "Run",
-    "TestNG.AutorisaitionTest.regaTest.executor": "Run",
-    "TestNG.AutorisaitionTest.removePasswordTest.executor": "Run",
-    "TestNG.AutorisaitionTest.restorePasswordTest.executor": "Run",
-    "TestNG.AutorisaitionTest.restoreTest.executor": "Run",
-    "TestNG.AutorisaitionTest.testHrefPolitiCopi.executor": "Run",
-    "TestNG.AutorisaitionTest.testRandomEmai.executor": "Run",
-    "TestNG.AutorisaitionTest.testRandomRega.executor": "Run",
-    "TestNG.AutorisaitionTest.testUserRole.executor": "Run",
-    "TestNG.AutorisationApiTest.check1232rr3oo4AutorisationIdTest3.executor": "Run",
-    "TestNG.AutorisationApiTest.check1234AutorisationIdTest3.executor": "Run",
-    "TestNG.AutorisationApiTest.check123oo4AutorisationIdTest30.executor": "Run",
-    "TestNG.AutorisationApiTest.check12rr3oo4AutorisationIdTest3.executor": "Run",
-    "TestNG.AutorisationApiTest.check8765AdminAuthorizationTest.executor": "Run",
-    "TestNG.AutorisationApiTest.check878865AdminAuthorizationTest.executor": "Run",
-    "TestNG.AutorisationApiTest.checkA222utorisation23331IdTest.executor": "Run",
-    "TestNG.AutorisationApiTest.checkA22utorisation2333IdTest.executor": "Run",
-    "TestNG.AutorisationApiTest.checkAccountLoginTest.executor": "Run",
-    "TestNG.AutorisationApiTest.checkAccountOrganizationTests.executor": "Run",
-    "TestNG.AutorisationApiTest.checkAdmin8AuthorizationTest.executor": "Run",
-    "TestNG.AutorisationApiTest.checkAdminAuthorizationTest.executor": "Run",
-    "TestNG.AutorisationApiTest.checkAuthorizationNoOwnerPasswordTest.executor": "Run",
-    "TestNG.AutorisationApiTest.checkAutorisationId22Test.executor": "Run",
-    "TestNG.AutorisationApiTest.checkAutorisationIdTest.executor": "Run",
-    "TestNG.AutorisationApiTest.checkAutorisationIdTest4.executor": "Run",
-    "TestNG.AutorisationApiTest.checkAutorisationIdTestp (1).executor": "Debug",
-    "TestNG.AutorisationApiTest.checkAutorisationIdTestp.executor": "Debug",
-    "TestNG.AutorisationApiTest.checkOwnerAuthorizationTest.executor": "Run",
-    "TestNG.AutorisationApiTest.checkOwnerAuthorizationTests.executor": "Run",
-    "TestNG.AutorisationApiTest.executor": "Run",
-    "TestNG.AutorisationApiTest.restAssured2Test.executor": "Run",
-    "TestNG.AutorisationApiTest.restAssured2Test2.executor": "Run",
-    "TestNG.AutorisationApiTest.простойТест.executor": "Run",
-    "TestNG.AutorisationApiTest.простойТест2.executor": "Run",
-    "TestNG.AutorisationTest.check1234AutorisationIdTest3.executor": "Run",
-    "TestNG.AutorisationTest.check123oo4AutorisationIdTest3.executor": "Run",
-    "TestNG.AutorisationTest.check123oo4AutorisationIdTest30.executor": "Run",
-    "TestNG.AutorisationTest.check12rr3oo4AutorisationIdTest3.executor": "Run",
-    "TestNG.AutorisationTest.check8765AdminAuthorizationTest.executor": "Run",
-    "TestNG.AutorisationTest.check878865AdminAuthorizationTest.executor": "Run",
-    "TestNG.AutorisationTest.checkAdmin8AuthorizationTest.executor": "Run",
-    "TestNG.AutorisationTest.checkAutorisation2333IdTest.executor": "Run",
-    "TestNG.AutorisationTest.checkAutorisationId22Test.executor": "Run",
-    "TestNG.AutorisationTest.checkAutorisationIdTest.executor": "Run",
-    "TestNG.AutorisationTest.checkAutorisationIdTest3.executor": "Run",
-    "TestNG.AutorisationTest.executor": "Run",
-    "TestNG.BaseApiTest.accountLoginTest.executor": "Run",
-    "TestNG.BaseApiTest.executor": "Run",
-    "TestNG.ChecklistTest.deleteChecklistTest.executor": "Run",
-    "TestNG.ChecklistTest.executor": "Run",
-    "TestNG.ChecklistTest.getChecklistTest.executor": "Run",
-    "TestNG.ChecklistTest.getChecklistTestPojo.executor": "Run",
-    "TestNG.ChecklistTest.getLogTest.executor": "Run",
-    "TestNG.ChecklistTest.getLogTest2.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.cancelDeleteChecklistsProjectTest.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.deleteBasketChecklistsProjectTest.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.deleteChecklistsProjectTest.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.deleteChecklistsProjectTest2.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.deletePKMChecklistsProjectTest.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.pluralChecklistsProjectTest.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.removeChecklistsProjectTest.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.removeChecklistsProjectTest2.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.removeChecklistsProjectTest21.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.removeChecklistsProjectTest3.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.removePKMChecklistsProjectTest.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.removeProjectTest.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.searchChecklistsProjectTest.executor": "Run",
-    "TestNG.ChecklistsSidebarTest.searchChecklistsProjectTest2.executor": "Run",
-    "TestNG.DashboardsSidebarTest.cumulativeTest.executor": "Run",
-    "TestNG.DashboardsSidebarTest.dashboardsTest.executor": "Run",
-    "TestNG.DashboardsTest.cumulativeTest.executor": "Run",
-    "TestNG.DashboardsTest.dashboardsTest.executor": "Run",
-    "TestNG.DatabaseInitializer.createTables.executor": "Run",
-    "TestNG.DatabaseTest (1).executor": "Run",
-    "TestNG.DatabaseTest (2).executor": "Run",
-    "TestNG.DatabaseTest.executor": "Run",
-    "TestNG.DatabaseTest.testUserQueries.executor": "Run",
-    "TestNG.DirectoryTest.createDirectory.executor": "Run",
-    "TestNG.DirectoryTest.deleteDirectory.executor": "Run",
-    "TestNG.DirectoryTest.executor": "Run",
-    "TestNG.DirectoryTest.getDirectory.executor": "Run",
-    "TestNG.DirectoryTest.postDirector.executor": "Run",
-    "TestNG.DirectoryTest.postDirectory.executor": "Run",
-    "TestNG.DirectoryTest.renameDirectory.executor": "Run",
-    "TestNG.FileSTest.checkNameTest.executor": "Run",
-    "TestNG.FileSTest.checkSelectPartitionParamName.executor": "Run",
-    "TestNG.FileSTest.createFolderTest.executor": "Run",
-    "TestNG.FileSTest.executor": "Run",
-    "TestNG.FileTest.addFolderTest.executor": "Run",
-    "TestNG.FileTest.checkButtonEllipsisTest.executor": "Run",
-    "TestNG.FileTest.checkButtonTableSortTest.executor": "Run",
-    "TestNG.FileTest.checkButtonTest.executor": "Run",
-    "TestNG.FileTest.checkNameTest.executor": "Run",
-    "TestNG.FileTest.createFolderTest.executor": "Run",
-    "TestNG.FileTest.createUsersProject.executor": "Run",
-    "TestNG.FileTest.createUsersProject1.executor": "Run",
-    "TestNG.FileTest.deleteFolderTest.executor": "Run",
-    "TestNG.FileTest.executor": "Run",
-    "TestNG.FileTest.movingTheParentFolderTest.executor": "Run",
-    "TestNG.FileTest.openFolderTest.executor": "Run",
-    "TestNG.FileTest.removeFolderTest.executor": "Run",
-    "TestNG.FileTest.testJenkinsVersionListTabBar.executor": "Run",
-    "TestNG.FileTest.testJenkinsVersionListTabBarTest.executor": "Run",
-    "TestNG.InspectSidebarTest.backWorkInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.createAllFieldInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.createDraftInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.createDraftNewInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.createInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.createRequiredFieldInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.createRequiredFieldInspect2.executor": "Run",
-    "TestNG.InspectSidebarTest.createRequiredFieldNewInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.deleteAllFieldInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.deleteInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.executor": "Run",
-    "TestNG.InspectSidebarTest.filledDraftInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.filledInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.filledNewInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.labelInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.renameInspect.executor": "Run",
-    "TestNG.InspectSidebarTest.renameInspect2.executor": "Run",
-    "TestNG.LibraryTest.dashboardsTest.executor": "Run",
-    "TestNG.LibraryTest.executor": "Run",
-    "TestNG.LibraryTest.libraryChecListCreate.executor": "Run",
-    "TestNG.LibraryTest.libraryChecListCreate2.executor": "Run",
-    "TestNG.LibraryTest.libraryChecListDelete.executor": "Run",
-    "TestNG.LibraryTest.libraryChecListImport.executor": "Run",
-    "TestNG.LibraryTest.libraryChecListRemove.executor": "Run",
-    "TestNG.LibraryTest.normativeDocDeleteTest.executor": "Run",
-    "TestNG.LogFileTest.cancelLogDelTest.executor": "Run",
-    "TestNG.LogFileTest.executor": "Run",
-    "TestNG.LogFileTest.hrefPolitic.executor": "Run",
-    "TestNG.LogFileTest.localizTest.executor": "Run",
-    "TestNG.LogFileTest.logDelTest.executor": "Run",
-    "TestNG.LogFileTest.logSearchTest.executor": "Run",
-    "TestNG.LogFileTest.logSerchTest.executor": "Run",
-    "TestNG.LogFileTest.logoTest.executor": "Run",
-    "TestNG.LogTest.DeleteLogTest.executor": "Run",
-    "TestNG.LogTest.GetAccountInfoTest.executor": "Run",
-    "TestNG.LogTest.GetLogTest.executor": "Run",
-    "TestNG.LogTest.PostLogTest.executor": "Run",
-    "TestNG.LogTest.PostLogTest2.executor": "Run",
-    "TestNG.LogTest.deleteLogTest2.executor": "Run",
-    "TestNG.LogTest.executor": "Run",
-    "TestNG.LogTest.getLogTest.executor": "Run",
-    "TestNG.LogTest.getLogTest2.executor": "Run",
-    "TestNG.LogTest.logTest.executor": "Run",
-    "TestNG.LogTest.postLogTest.executor": "Run",
-    "TestNG.LogTest.postLogTest2.executor": "Run",
-    "TestNG.LogTest.postLogTest3.executor": "Run",
-    "TestNG.LogTest.postLogTest55555.executor": "Run",
-    "TestNG.Login.accountLoginTest.executor": "Run",
-    "TestNG.Login.checkAccountInfoTest.executor": "Run",
-    "TestNG.Login.checkAccountInfoTests.executor": "Run",
-    "TestNG.OksTest.createOksTest.executor": "Run",
-    "TestNG.OksTest.deleteDirectory.executor": "Run",
-    "TestNG.OksTest.executor": "Run",
-    "TestNG.OksTest.getAllOksTest.executor": "Run",
-    "TestNG.OksTest.getOksTest.executor": "Run",
-    "TestNG.OksTest.remoteOksTest.executor": "Run",
-    "TestNG.ProjectTest.ConstructorProgect.executor": "Run",
-    "TestNG.ProjectTest.RemoveProgect.executor": "Run",
-    "TestNG.ProjectTest.SidebarProgect.executor": "Run",
-    "TestNG.ProjectTest.cancelCreateProgectTest.executor": "Run",
-    "TestNG.ProjectTest.cancelCreateProjectTest.executor": "Run",
-    "TestNG.ProjectTest.checkButtonEllipsisTest.executor": "Run",
-    "TestNG.ProjectTest.checkButtonTableSortTest.executor": "Run",
-    "TestNG.ProjectTest.checkButtonTableTest.executor": "Run",
-    "TestNG.ProjectTest.completedPKMProject.executor": "Run",
-    "TestNG.ProjectTest.completedProject.executor": "Run",
-    "TestNG.ProjectTest.createCancelProgect.executor": "Run",
-    "TestNG.ProjectTest.createProgect.executor": "Run",
-    "TestNG.ProjectTest.createProject.executor": "Run",
-    "TestNG.ProjectTest.executor": "Run",
-    "TestNG.ProjectTest.hrefPolitic.executor": "Run",
-    "TestNG.ProjectTest.openProject.executor": "Run",
-    "TestNG.ProjectTest.poginacyaTest.executor": "Run",
-    "TestNG.ProjectTest.removeProgect.executor": "Run",
-    "TestNG.ProjectTest.removeProject.executor": "Run",
-    "TestNG.ProjectTest.restorePKMProject.executor": "Run",
-    "TestNG.ProjectTest.restoreProject.executor": "Run",
-    "TestNG.ProjectTest.searcherProject.executor": "Run",
-    "TestNG.ProjectTest.sidebarProgect.executor": "Run",
-    "TestNG.ProjectTest.sidebarProject.executor": "Run",
-    "TestNG.ProjectTest.testHrefPolitiCopi.executor": "Run",
-    "TestNG.RegistrationTest.againRestorePasswordTest.executor": "Run",
-    "TestNG.RegistrationTest.badEmailTest.executor": "Run",
-    "TestNG.RegistrationTest.executor": "Run",
-    "TestNG.RegistrationTest.restorePasswordTest.executor": "Run",
-    "TestNG.RegistrationTest.trialTextTest.executor": "Run",
-    "TestNG.RegistrationTest.ппbadEmailTest.executor": "Run",
-    "TestNG.RegistrationTest.ррbadEmailTest.executor": "Run",
-    "TestNG.RegresTest.checkAutorisationIdTesedtp.executor": "Run",
-    "TestNG.RegresTest.checkAutorisationIdTestp.executor": "Debug",
-    "TestNG.RemarcSidebarTest.addRemarkTest.executor": "Run",
-    "TestNG.RemarcSidebarTest.executor": "Run",
-    "TestNG.RemarcSidebarTest.remarkTest.executor": "Run",
-    "TestNG.RemarcSidebarTest.КemarcTest.executor": "Run",
-    "TestNG.RemarcTest.КemarcTest.executor": "Run",
-    "TestNG.SettingsProjectTest.cancelDeleteProjectTest.executor": "Run",
-    "TestNG.SettingsProjectTest.deleteProgectTest.executor": "Run",
-    "TestNG.SettingsProjectTest.executor": "Run",
-    "TestNG.SettingsProjectTest.removeProjectTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.cancelDeleteProgectTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.cancelDeleteProjectTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.deleteProgectTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.removeProgectTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.removeProjectTest.executor": "Run",
-    "TestNG.SettingsSidebarTest.settingsTest.executor": "Run",
-    "TestNG.SettingsTest.settingsTest.executor": "Run",
-    "TestNG.SettingsUsersTest.addUsersProject.executor": "Run",
-    "TestNG.SettingsUsersTest.createTypesWorkAdmin.executor": "Run",
-    "TestNG.SettingsUsersTest.createUsersProject.executor": "Run",
-    "TestNG.SettingsUsersTest.deleteUsersProject.executor": "Run",
-    "TestNG.SettingsUsersTest.executor": "Run",
-    "TestNG.TestTest.createTypesWork.executor": "Run",
-    "TestNG.TokenService.getJwtService.executor": "Run",
-    "TestNG.TokenService.getJwtServices.executor": "Run",
-    "TestNG.TokenService.getJwtServices2.executor": "Run",
-    "TestNG.TypesWorkAdminTest.createTypesWorkAdmin.executor": "Run",
-    "TestNG.TypesWorkAdminTest.createTypesWorkAdmin2.executor": "Run",
-    "TestNG.TypesWorkAdminTest.createTypesWorkAdmin3.executor": "Run",
-    "TestNG.TypesWorkAdminTest.createTypesWorkAdmin5.executor": "Run",
-    "TestNG.TypesWorkAdminTest.deleteBasketTypesWork.executor": "Run",
-    "TestNG.TypesWorkAdminTest.deletePKMTypesWork.executor": "Run",
-    "TestNG.TypesWorkAdminTest.deleteTypesWork.executor": "Run",
-    "TestNG.TypesWorkAdminTest.executor": "Run",
-    "TestNG.TypesWorkAdminTest.removePKMTypesWork.executor": "Run",
-    "TestNG.TypesWorkAdminTest.removeTypesWork.executor": "Run",
-    "TestNG.TypesWorkAdminTest.searchTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.AddTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.CreateTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.addCheckboxTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.addTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.cancelDeleteTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.createTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.deleteBasketTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.deletePKMTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.deleteTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.pluralTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.removePKMTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.removeTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.searchTypesWork.executor": "Run",
-    "TestNG.TypesWorkSidebarTest.searchTypesWork2.executor": "Run",
-    "TestNG.UserJoiningRequestsTest.executor": "Run",
-    "TestNG.UserJoiningRequestsTest.requestAddUser.executor": "Run",
-    "TestNG.UserJoiningRequestsTest.requestUser.executor": "Run",
-    "TestNG.UserSidebarTest.addUserTest.executor": "Run",
-    "TestNG.UserSidebarTest.addUserToProjectTest.executor": "Run",
-    "TestNG.UserSidebarTest.btnCancelDeleteUserTest.executor": "Run",
-    "TestNG.UserSidebarTest.cancelDeleteUserFromProjectTest.executor": "Run",
-    "TestNG.UserSidebarTest.deleteTest.executor": "Run",
-    "TestNG.UserSidebarTest.deleteUserFromProjectTest.executor": "Run",
-    "TestNG.UserSidebarTest.deleteUserTest.executor": "Run",
-    "TestNG.UserSidebarTest.executor": "Run",
-    "TestNG.UserTest.elementPageTest.executor": "Run",
-    "TestNG.UserTest.executor": "Run",
-    "TestNG.UserTest.organisationSearchTest.executor": "Run",
-    "TestNG.UserTest.poginacyaTest.executor": "Run",
-    "TestNG.UserTest.requestUser.executor": "Run",
-    "TestNG.UserTest.testCheckPeople.executor": "Run",
-    "TestNG.UserTest.testHrefPolitiCopi.executor": "Run",
-    "TestNG.UserTest.userCancelDelete.executor": "Run",
-    "TestNG.UserTest.userCreaNabludatelyAdd.executor": "Run",
-    "TestNG.UserTest.userCreateAdmi.executor": "Run",
-    "TestNG.UserTest.userCreateAdmin.executor": "Run",
-    "TestNG.UserTest.userCreateAdminSearch.executor": "Run",
-    "TestNG.UserTest.userCreateDelete.executor": "Run",
-    "TestNG.UserTest.userCreateInspektor.executor": "Run",
-    "TestNG.UserTest.userCreateNabludately.executor": "Run",
-    "TestNG.UserTest.userCreateNabludatelyAdd.executor": "Run",
-    "TestNG.UserTest.userCreatePodraydchiAdd.executor": "Run",
-    "TestNG.UserTest.userCreatePodraydchic.executor": "Run",
-    "TestNG.UserTest.userCreatePodraydchicAdd.executor": "Run",
-    "TestNG.UserTest.userCreateRemove.executor": "Run",
-    "TestNG.UserTest.userInviteAdmin.executor": "Run",
-    "TestNG.UserTest.userInviteInspektor.executor": "Run",
-    "TestNG.UserTest.userInviteNabludately.executor": "Run",
-    "TestNG.UserTest.userInvitePodraydchic.executor": "Run",
-    "TestNG.UserTest.userSearchTest.executor": "Run",
-    "TestNG.ar.soft.AT.UI.FileTest.FileTest and 15 more.executor": "Run",
-    "TestNG.ar.soft.AT.UI.FileTest.FileTest and 5 more.executor": "Run",
-    "TestNG.ar.soft.AuthorizationTest and 11 more.executor": "Run",
-    "TestNG.ar.soft.AuthorizationTest,logoTest and 15 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,elementPageTest and 9 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,hrefBot and 10 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 10 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,hrefPolitic and 9 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,hrefPoliticUser and 10 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 10 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,poginacyaTest and 9 more.executor": "Run",
-    "TestNG.ar.soft.AutorisaitionTest,testHrefPolitiCopi and 10 more.executor": "Run",
-    "TestNG.ar.soft.InspectSidebarTest and 9 more.executor": "Run",
-    "TestNG.ar.soft.LogFileTest and 1 more.executor": "Run",
-    "TestNG.ar.soft.SettingsSidebarTest and 4 more.executor": "Run",
-    "TestNG.ar.soft.UserJoiningRequestsTest and 2 more.executor": "Run",
-    "TestNG.remarcTest.remarcTest.executor": "Run",
-    "git-widget-placeholder": "170926",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/Test_Ar/Auto_Test/src/test/java/ar/soft/Test",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
-  }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="CreateClassDialog.RecentsKey">
-      <recent name="ar.soft" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\Test" />
-      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test" />
-      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\resources" />
-      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\AT\UI\FileTest" />
-      <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\AT\UI" />
+
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\Test_Ar\Auto_Test\src\test\java\ar\soft\cucumber" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="ar.soft.AT.UI.steps" />
-      <recent name="ar.soft.Test.herokuTables" />
-      <recent name="ar.soft.AT.API.BaseApi" />
-      <recent name="ar.soft.runner" />
-      <recent name="ar.soft.Test.BD2" />
-    </key>
-  </component>
-  <component name="RunManager" selected="TestNG.AuthorizationTest.ownerAuthorizationTest">
-    <configuration name="HerokuTablesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.Test.herokuTables.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test.herokuTables" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.herokuTables.HerokuTablesTest" />
-      <option name="TEST_OBJECT" value="class" />
+
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SeleniumLoginTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.Test.sauceDemoSelenium.tests.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test.sauceDemoSelenium.tests" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.sauceDemoSelenium.tests.SeleniumLoginTest" />
-      <option name="TEST_OBJECT" value="class" />
+main
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ApiTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.Test.RestfulBooker2.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.Test.RestfulBooker2" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.Test.RestfulBooker2.ApiTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+n
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
+>>> main
       <module name="AutoTest" />
       <extension name="coverage">
         <pattern>
@@ -666,26 +99,14 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.tests.authorization" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.tests.authorization.AuthorizationTest" />
-      <option name="TEST_OBJECT" value="CLASS" />
+>>> main
       <properties />
       <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="AuthorizationTest.ownerAuthorizationTest" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="AutoTest" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ar.soft.AT.UI.tests.authorization.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ar.soft.AT.UI.tests.authorization" />
-      <option name="MAIN_CLASS_NAME" value="ar.soft.AT.UI.tests.authorization.AuthorizationTest" />
-      <option name="METHOD_NAME" value="ownerAuthorizationTest" />
+>>> main
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -770,11 +191,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="TestNG.AuthorizationTest.ownerAuthorizationTest" />
-        <item itemvalue="JUnit.HerokuTablesTest" />
-        <item itemvalue="JUnit.SeleniumLoginTest" />
-        <item itemvalue="TestNG.ApiTest" />
-        <item itemvalue="TestNG.AuthorizationTest" />
+<>>>> main
       </list>
     </recent_temporary>
   </component>
@@ -794,6 +211,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710135242978</updated>
     </task>
+ main
     <task id="LOCAL-00093" summary="Merge pull request #79 from Gaztechica/78&#10;&#10;78">
       <option name="closed" value="true" />
       <created>1719503728636</created>
@@ -1050,143 +468,7 @@
       <option name="project" value="LOCAL" />
       <updated>1762239970573</updated>
     </task>
-    <task id="LOCAL-00125" summary="fix apiTest">
-      <option name="closed" value="true" />
-      <created>1764834809093</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1764834809095</updated>
-    </task>
-    <task id="LOCAL-00126" summary="Add FileTest">
-      <option name="closed" value="true" />
-      <created>1767901896271</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1767901896275</updated>
-    </task>
-    <task id="LOCAL-00127" summary="add TestApi and Test">
-      <option name="closed" value="true" />
-      <created>1769600451036</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1769600451036</updated>
-    </task>
-    <task id="LOCAL-00128" summary="add Log Test">
-      <option name="closed" value="true" />
-      <created>1770554344494</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1770554344495</updated>
-    </task>
-    <task id="LOCAL-00129" summary="fix InspectSidebarTest">
-      <option name="closed" value="true" />
-      <created>1773202830937</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1773202830938</updated>
-    </task>
-    <task id="LOCAL-00130" summary="hhhh">
-      <option name="closed" value="true" />
-      <created>1783188033963</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1783188033964</updated>
-    </task>
-    <task id="LOCAL-00131" summary="создал пакет UI">
-      <option name="closed" value="true" />
-      <created>1783586482106</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1783586482106</updated>
-    </task>
-    <task id="LOCAL-00132" summary="update mvn">
-      <option name="closed" value="true" />
-      <created>1786971200055</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1786971200056</updated>
-    </task>
-    <task id="LOCAL-00133" summary="refactor FileTest">
-      <option name="closed" value="true" />
-      <created>1787854930217</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1787854930217</updated>
-    </task>
-    <task id="LOCAL-00134" summary="refactor LogFile, add FileTest">
-      <option name="closed" value="true" />
-      <created>1787922510469</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1787922510470</updated>
-    </task>
-    <task id="LOCAL-00135" summary="fix FileTest and ProjectTest">
-      <option name="closed" value="true" />
-      <created>1788034333870</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1788034333876</updated>
-    </task>
-    <task id="LOCAL-00136" summary="добавил базу Postgres">
-      <option name="closed" value="true" />
-      <created>1788527501404</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1788527501405</updated>
-    </task>
-    <task id="LOCAL-00137" summary="add DatabaseTest">
-      <option name="closed" value="true" />
-      <created>1788731486737</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1788731486737</updated>
-    </task>
-    <task id="LOCAL-00138" summary="add Selenide Test">
-      <option name="closed" value="true" />
-      <created>1789032952821</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1789032952823</updated>
-    </task>
-    <task id="LOCAL-00139" summary="refactor Selenide Test">
-      <option name="closed" value="true" />
-      <created>1789125302774</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1789125302774</updated>
-    </task>
-    <task id="LOCAL-00140" summary="refactor Postgres Test">
-      <option name="closed" value="true" />
-      <created>1789714365977</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1789714365978</updated>
-    </task>
-    <task id="LOCAL-00141" summary="refactor API Test">
-      <option name="closed" value="true" />
-      <created>1790168112206</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1790168112207</updated>
-    </task>
-    <option name="localTasksCounter" value="142" />
+main
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1214,32 +496,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+ main
     <MESSAGE value="fix LogFilePage" />
     <MESSAGE value="fix TypesWorkSidebarTest" />
     <MESSAGE value="Merge pull request #114 from Gaztechica/07062025&#10;&#10;i" />
     <MESSAGE value="fix TypesWorkSidebarTest + new TypesWork" />
     <MESSAGE value="new SettingsUsersTest" />
     <MESSAGE value="fix RegistrationTest" />
-    <MESSAGE value="fix apiTest" />
-    <MESSAGE value="Add FileTest" />
-    <MESSAGE value="Merge pull request #127 from Gaztechica/10012026&#10;&#10;f" />
-    <MESSAGE value="add TestApi and Test" />
-    <MESSAGE value="add Log Test" />
     <MESSAGE value="fix InspectSidebarTest" />
-    <MESSAGE value="add DirectoryTest, ChecklistTest, FileSTest" />
-    <MESSAGE value="hhhh" />
-    <MESSAGE value="add ChecklistTest" />
-    <MESSAGE value="update mvn" />
-    <MESSAGE value="refactor FileTest" />
-    <MESSAGE value="refactor LogFile, add FileTest" />
-    <MESSAGE value="fix FileTest and ProjectTest" />
-    <MESSAGE value="добавил базу Postgres" />
-    <MESSAGE value="add DatabaseTest" />
-    <MESSAGE value="add Selenide Test" />
-    <MESSAGE value="refactor Selenide Test" />
-    <MESSAGE value="refactor Postgres Test" />
-    <MESSAGE value="refactor API Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactor API Test" />
+main
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Test_Ar$AuthorizationTest_adminAuthorizationTest.ic" NAME="AuthorizationTest.adminAuthorizationTest Coverage Results" MODIFIED="1747916205562" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
