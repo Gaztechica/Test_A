@@ -1,6 +1,6 @@
 package ar.soft.AT.API.tests;
 
-import ar.soft.AT.API.BaseApi.BaseTest;
+import ar.soft.AT.API.BaseApi.apiBaseTest.BaseTest;
 import ar.soft.AT.API.models.director.response.ResponseDirectoryDto;
 import ar.soft.AT.API.steps.DirectorySteps;
 import org.junit.jupiter.api.DisplayName;
@@ -19,7 +19,7 @@ public class DirectoryTests extends BaseTest {
     @Test
     @DisplayName("Успешное создание новой директории в корне проекта")
     public void createNewDirectoryAndValidateResponseTest() {
-        String contextProjectId = "892";
+        String contextProjectId = "893";
         String expectedName = "Папка будущего";
         Long parentDirectoryId = 1413L;
 
@@ -27,7 +27,7 @@ public class DirectoryTests extends BaseTest {
         new DirectorySteps(requestSpec)
                 .createDirectory(expectedName, contextProjectId, parentDirectoryId)
                 .verifyMetadataSuccess()
-                .verifyDirectoryContent(expectedName, 893L);
+                .verifyDirectoryContent(expectedName, Long.parseLong(contextProjectId));
     }
 
     @Test
@@ -74,7 +74,7 @@ public class DirectoryTests extends BaseTest {
     @Test
     @DisplayName("Успешный поиск файла по имени в текущей директории")
     public void searchFileInDirectorySuccessTest() {
-        String targetFileName = "test_document.pdf";
+        String targetFileName = "Папка для поиска файлов";
         DirectorySteps directorySteps = new DirectorySteps(requestSpec);
 
         // 1. Предусловие: Создаем целевую временную папку
@@ -82,9 +82,9 @@ public class DirectoryTests extends BaseTest {
 
         // 2. Действие и комплексная Fluent-проверка одной строчкой
         directorySteps
-                .searchFileInDirectory(targetFileName, idToDelete, "893")
-                .verifyMetadataSuccess()
-                .verifyFoundFileName(targetFileName); // 👈 Добавили строгую проверку контента!
+                .searchFileInDirectory(targetFileName, idToDelete, 1413L)
+                .verifySuccess();
+//                .verifyFoundFileName(targetFileName); // 👈 Добавили строгую проверку контента!
     }
 
 

@@ -1,6 +1,6 @@
 package ar.soft.AT.API.Directory;
 
-import ar.soft.AT.API.BaseApi.BaseTest;
+import ar.soft.AT.API.BaseApi.apiBaseTest.BaseTest;
 import ar.soft.AT.API.BaseApi.Specification;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +10,7 @@ public class FolderTests extends BaseTest {
 
 //    @Test
 //    public void createFolderSuccessTest() {
-//        FolderRequest folderData = new FolderRequest("Новая Папка");
+//         folderData = new FolderRequest("Новая Папка");
 //
 //        given()
 //                .spec(requestSpec) // 👈 Цепочка: Передаем готовую спецификацию с токеном из BaseTest
@@ -24,7 +24,7 @@ public class FolderTests extends BaseTest {
 
     @Test
     public void getFolderWithCustomUrlTest() {
-        // Пример на случай, если одному тесту понадобился совершенно другой микросервис
+
         String alternativeUrl = "https://another-service.com";
 
         given()

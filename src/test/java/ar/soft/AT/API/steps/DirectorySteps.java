@@ -23,7 +23,7 @@ public class DirectorySteps {
     public DirectorySteps createDirectory(String name, String projectId, Long parentId) {
         DirectoryRequest body = DirectoryRequest.builder()
                 .name(name)
-                .projectId(projectId)
+                .projectId(Long.parseLong(projectId))
                 .parentDirectoryId(parentId)
                 .build();
 
@@ -47,6 +47,15 @@ public class DirectorySteps {
         step("API Шаг: Проверить успешный статус операции в ответе", () -> {
             assertThat(lastResponse).as("Ответ сервера пустой").isNotNull();
             assertThat(lastResponse.success()).isEqualTo("object has been added to the catalog");
+            assertThat(lastResponse.error()).isNull();
+        });
+        return this;
+    }
+
+    public DirectorySteps verifySuccess() {
+        step("API Шаг: Проверить успешный статус операции в ответе", () -> {
+            assertThat(lastResponse).as("Ответ сервера пустой").isNotNull();
+            assertThat(lastResponse.success()).isEqualTo("found");
             assertThat(lastResponse.error()).isNull();
         });
         return this;
@@ -91,8 +100,6 @@ public class DirectorySteps {
         return this;
     }
 
-
-
     public DirectorySteps verifyDeleteSuccess(String expectedMessage) {
         step("API Шаг: Проверить, что в ответе вернулось сообщение об успешном удалении", () -> {
             assertThat(lastResponse).as("Ответ сервера после удаления пустой").isNotNull();
@@ -112,7 +119,7 @@ public class DirectorySteps {
         DirectoryRequest editBody = DirectoryRequest.builder()
                 .id(directoryId) // Передаем ID папки, которую хотим изменить
                 .name(newName)
-                .projectId(projectId)
+                .projectId(Long.parseLong(projectId))
                 .parentDirectoryId(parentId)
                 .build();
 
@@ -131,20 +138,21 @@ public class DirectorySteps {
         return this;
     }
 
-    public DirectorySteps searchFileInDirectory(String fileName, Long currentDirectoryId, String projectId) {
+    public DirectorySteps searchFileInDirectory(String fileName, Long newDirectoryId, Long currentDirectoryId) {
         FileSearchRequest searchBody = FileSearchRequest.builder()
                 .name(fileName)
+                .newDirectoryId(newDirectoryId)
                 .currentDirectoryId(currentDirectoryId)
                 .build();
 
         lastResponse = step("API Шаг: Найти файл '" + fileName + "' в директории ID: " + currentDirectoryId, () ->
                 given()
                         .spec(spec)
-                        .queryParam("contextProjectId", projectId)
+                        .queryParam("contextProjectId", newDirectoryId)
                         .body(searchBody)
                         .when()
                         .post("/directory/file") // 👈 Вызов эндпоинта поиска из Swagger
-                        .then()
+                        .then().log().all()
                         .statusCode(200)
                         .extract()
                         .as(ResponseDirectoryDto.class)
@@ -173,11 +181,6 @@ public class DirectorySteps {
         });
     }
 
-
-
-
-
-
     public void deleteDirectorySilently(Long directoryId, Long projectId) {
         step("Очистка данных: Удалить временную директорию с ID: " + directoryId, () ->
                 given()
@@ -191,12 +194,11 @@ public class DirectorySteps {
         );
     }
 
-
     // 🌟 НОВЫЙ ХЕЛПЕР: Возвращает полный объект ответа для тестов валидации
     public ResponseDirectoryDto createDirectoryAndReturnResponse(String name, String projectId, Long parentId) {
         DirectoryRequest body = DirectoryRequest.builder()
                 .name(name)
-                .projectId(projectId)
+                .projectId(Long.parseLong(projectId))
                 .parentDirectoryId(parentId)
                 .build();
 
