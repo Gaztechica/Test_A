@@ -1,6 +1,6 @@
 package ar.soft.AT.API.tests;
 
-import ar.soft.AT.API.BaseApi.BaseTest;
+import ar.soft.AT.API.BaseApi.apiBaseTest.BaseTest;
 import ar.soft.AT.API.models.director.request.DirectoryRequest;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.params.ParameterizedTest;
@@ -28,7 +28,7 @@ public class ParameterizedDirectoryNegativeTests extends BaseTest {
 
         DirectoryRequest directoryBody = DirectoryRequest.builder()
                 .name(finalName)
-                .projectId("893")
+                .projectId(contextProjectId)
                 .parentDirectoryId(1413L)
                 .build();
 
