@@ -22,7 +22,8 @@ public class DirectoryTest extends BaseApiTest {
     int parentDirectory;
     Integer directId;
     public Integer direct = 4507;
-    public static final String contextProjectId = "?contextProjectId=893";
+    public static final String contextProjectId = "893";
+//    public static final String contextProjectId = "?contextProjectId=893";
     public static final String successDirect = "object deleted";
     DirectoryReg directCreate = new DirectoryReg("Test test", 893, id);
     //    DirectRename directRename2 = new DirectRename(directId, "Test 123", 893);
@@ -35,7 +36,8 @@ public class DirectoryTest extends BaseApiTest {
     public void getDirectory() {
         Specification.responseSpecOk200();
         Response response = given(specification)
-                .get("/directory/" + id + contextProjectId)
+                .queryParam("id", id + "contextProjectId", contextProjectId)
+                .get("/directory/")
                 .then()
                 .extract().response();
         JsonPath jsonPath = response.jsonPath();
@@ -51,8 +53,9 @@ public class DirectoryTest extends BaseApiTest {
     public void createDirectory() {
         Specification.responseSpecOk200();
         DirectoryRes directoryRes = given(specification)
+                .queryParam(contextProjectId)
                 .body(directCreate)
-                .post("/directory/create" + contextProjectId)
+                .post("/directory/create")
                 .then()
                 .extract().response().body()
                 .as(DirectoryRes.class);

@@ -5,6 +5,7 @@ import io.restassured.RestAssured;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 
 public class BaseTest {
@@ -35,5 +36,15 @@ public class BaseTest {
                 .setContentType(ContentType.JSON)
                 .addHeader("Authorization", "Bearer " + token)
                 .build();
+
+        RestAssured.requestSpecification = requestSpec;
+    }
+
+    @AfterEach
+    public void tearDown() {
+        // 🌟 Гарантированно возвращаем тип контента в JSON для глобальной спецификации
+        if (RestAssured.requestSpecification != null) {
+            RestAssured.requestSpecification.contentType(ContentType.JSON);
+        }
     }
 }
