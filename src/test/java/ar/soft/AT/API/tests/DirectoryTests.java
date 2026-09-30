@@ -6,6 +6,8 @@ import ar.soft.AT.API.steps.DirectorySteps;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 import static io.qameta.allure.Allure.step;
 import static io.restassured.RestAssured.given;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -23,7 +25,6 @@ public class DirectoryTests extends BaseTest {
         String expectedName = "Папка будущего";
         Long parentDirectoryId = 1413L;
 
-        // Инициализируем и запускаем непрерывную Fluent-цепочку
         new DirectorySteps(requestSpec)
                 .createDirectory(expectedName, contextProjectId, parentDirectoryId)
                 .verifyMetadataSuccess()
@@ -42,7 +43,7 @@ public class DirectoryTests extends BaseTest {
         // 2. Запускаем цепочку редактирования и проверок
         directorySteps
                 .editDirectory(idToDelete, newFolderName, "893", 1413L) // Меняем имя
-                .verifyEditMetadataSuccess() // Базовая проверка (что ответ успешный)
+                .verifyUpdatedSuccess() // Базовая проверка (что ответ успешный)
                 .verifyDirectoryContent(newFolderName, contextProjectId); // Проверяем, что имя изменилось на новое
     }
 
@@ -70,24 +71,45 @@ public class DirectoryTests extends BaseTest {
 //        }
 //    }
 
+    @Test
+    @DisplayName("Успешная загрузка бинарного файла через Multipart Form Data")
+    public void uploadFileSuccessTest() {
+
+        File testFile = new File("src/test/resources/test_document.xlsx");
+        var multipartSpec = requestSpec.given().contentType(io.restassured.http.ContentType.MULTIPART);
+        new DirectorySteps(multipartSpec)
+                .addFileDirectory(testFile, 2250L, 893L)
+                .verifyUpdatedSuccess();
+    }
 
     @Test
     @DisplayName("Успешный поиск файла по имени в текущей директории")
     public void searchFileInDirectorySuccessTest() {
-        String targetFileName = "Папка для поиска файлов";
+        String targetFileName = "test_document.xlsx";
         DirectorySteps directorySteps = new DirectorySteps(requestSpec);
 
-        // 1. Предусловие: Создаем целевую временную папку
-        idToDelete = directorySteps.createTemporaryDirectory("Папка для поиска файлов", contextProjectId, 1413L);
-
-        // 2. Действие и комплексная Fluent-проверка одной строчкой
         directorySteps
-                .searchFileInDirectory(targetFileName, idToDelete, 1413L)
-                .verifySuccess();
-//                .verifyFoundFileName(targetFileName); // 👈 Добавили строгую проверку контента!
+                .searchFileInDirectory(targetFileName, null, 1413L)
+                .verifySuccess()
+                .verifySearchFileName(targetFileName);
     }
 
+    @Test
+    @DisplayName("Успешное редактирование названия file")
+    public void editFileSuccessTest() {
+        String newFileName = "Отредактированная папка";
+        java.io.File testFile = new java.io.File("src/test/resources/test_document.xlsx");
+        var multipartSpec = requestSpec.given().contentType(io.restassured.http.ContentType.MULTIPART);
+        new DirectorySteps(multipartSpec);
+        DirectorySteps directorySteps = new DirectorySteps(requestSpec);
 
+        // Вызываем хелпер и сохраняем ID файла в переменную
+        Long uploadedFileId = directorySteps.addFileDirectoryAndReturnId(testFile, 1413L, 893L);
+
+        directorySteps
+                .editFileDirectory(uploadedFileId, newFileName, 1413L, 893L)
+                .verifyUpdatedSuccess();
+    }
 
 
 
@@ -111,16 +133,16 @@ public class DirectoryTests extends BaseTest {
 
         // 3. Проверки бизнес-данных в стиле Fluent Assertions (AssertJ)
         step("Проверить структуру и данные в ответе сервера", () -> {
-            assertThat(response.success()).isEqualTo("object has been added to the catalog");
-            assertThat(response.error()).isNull();
+            assertThat(response.getSuccess()).isEqualTo("object has been added to the catalog");
+            assertThat(response.getError()).isNull();
 
-            assertThat(response.data())
+            assertThat(response.getData())
                     .as("Объект 'data' в ответе не должен быть пустым")
                     .isNotNull();
 
-            if (response.data() != null) {
-                assertThat(response.data().name()).isEqualTo(expectedName);
-                assertThat(response.data().projectId()).isEqualTo(893L);
+            if (response.getData() != null) {
+                assertThat(response.getData().getName()).isEqualTo(expectedName);
+                assertThat(response.getData().getProjectId()).isEqualTo(893L);
             }
         });
     }
@@ -128,7 +150,6 @@ public class DirectoryTests extends BaseTest {
 //            assertThat(response.data().projectId()).isEqualTo(893L);
 ////            assertThat(response.data().projectId()).isEqualTo(contextProjectId);
 //            assertThat(response.data().filesInDirectory()).isEmpty(); // Ожидаем, что новая папка пустая
-
 
     @Test
     @DisplayName("Успешное удаление созданной директории")
@@ -157,12 +178,10 @@ public class DirectoryTests extends BaseTest {
 
         // 4. Проверка бизнес-логики ответа после удаления
         step("Проверить, что в ответе вернулось сообщение об успешном удалении", () -> {
-            assertThat(deleteResponse.success()).contains("object deleted"); // Подстройте под реальный ответ бэка
-            assertThat(deleteResponse.error()).isNull();
+            assertThat(deleteResponse.getSuccess()).contains("object deleted"); // Подстройте под реальный ответ бэка
+            assertThat(deleteResponse.getError()).isNull();
         });
     }
-
-
 
     @Test
     @DisplayName("Успешное удаление созданной директории")
