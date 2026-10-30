@@ -97,7 +97,7 @@ public class DirectoryTests extends BaseTest {
     @Test
     @DisplayName("Успешное редактирование названия file")
     public void editFileSuccessTest() {
-        String newFileName = "Отредактированная папка";
+        String newFileName = "Отредактированный document.xlsx";
         java.io.File testFile = new java.io.File("src/test/resources/test_document.xlsx");
         var multipartSpec = requestSpec.given().contentType(io.restassured.http.ContentType.MULTIPART);
         new DirectorySteps(multipartSpec);
