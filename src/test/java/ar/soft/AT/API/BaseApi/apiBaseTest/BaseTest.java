@@ -7,6 +7,10 @@ import io.restassured.http.ContentType;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import io.restassured.config.ObjectMapperConfig;
+import io.restassured.config.RestAssuredConfig;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 public class BaseTest {
     // Спецификация для авторизованных запросов (с токеном)
@@ -38,6 +42,16 @@ public class BaseTest {
                 .build();
 
         RestAssured.requestSpecification = requestSpec;
+
+        RestAssured.config = RestAssuredConfig.config().objectMapperConfig(
+                ObjectMapperConfig.objectMapperConfig().jackson2ObjectMapperFactory(
+                        (cls, charset) -> {
+                            ObjectMapper mapper = new ObjectMapper();
+                            mapper.registerModule(new JavaTimeModule()); // Регистрируем модуль дат
+                            return mapper;
+                        }
+                )
+        );
     }
 
     @AfterEach
@@ -47,4 +61,7 @@ public class BaseTest {
             RestAssured.requestSpecification.contentType(ContentType.JSON);
         }
     }
+
+
+
 }
